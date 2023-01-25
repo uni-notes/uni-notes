@@ -27,14 +27,12 @@ Weigh the waste generated every day and make an entry in the table given below b
 |  7   | 8.2.2022 |              160              |                277                |    437    |
 
 Average waste generated per day(g)
+
 $$
 \begin{align}
-&=
-\frac{
-	359 + 458 + 414 + 457 + 432 + 377 + 437
-}{
-	7
-} \\&= \frac{2934}{7} \\&= 419.143 \ \text{g}
+&= \frac{359 + 458 + 414 + 457 + 432 + 377 + 437}{7} \\
+&= \frac{2934}{7} \\
+&= 419.143 \ \text{g}
 \end{align}
 $$
 
@@ -42,51 +40,51 @@ $$
 
 1. The Population of U.A.E is say 9.7 million and if everyone is going to generate average waste like you, calculate how much waste will be generated in a day?
    
-   **Answer**
-   $$
-   \begin{align}
-   &= 9.7 \times 10^6 \times 419.143\\   &= 4065.6871 \times 10^6 \\   &= 4.0657 \ \text{Gg}
-   \end{align}
-   $$
+**Answer**
+$$
+\begin{align}
+&= 9.7 \times 10^6 \times 419.143\\   &= 4065.6871 \times 10^6 \\   &= 4.0657 \ \text{Gg}
+\end{align}
+$$
    
 2. Almost all plastic products are made from fossil fuels and refining those fuels into plastics is an energy-intensive process that is driving up global emissions. If about 6 kg $\ce{CO2}$ is released per kg of plastic during its production, calculate the amount of $\ce{CO2}$ released for the avg weight of plastic you have collected per day.
 
-   **Answer**
+**Answer**
 
-     - Amount of CO2 per Day
-     $$
-      \begin{align}
-      &= 6\times \text{average of } m( \text{plastic} ) \\      &= 6 \times 419.143 \\      &= 2514.858 \text{\ g}
-      \end{align}
-     $$
-      
-     - Amount of CO2 released per year by you (just by wasting plastics)
-    $$
-     \begin{align}
-     &= 365 \times \text{amount per day} \\     &= 365 \times 2514.858 \\     &= 917.92 \times 10^3 \text{\ g} \\     &= 917.92 \text{\ kg}
-     \end{align}
-     
+- Amount of CO2 per Day
+
+$$
+\begin{align}
+&= 6\times \text{average of } m( \text{plastic} ) \\      &= 6 \times 419.143 \\      &= 2514.858 \text{\ g}
+\end{align}
+$$
+
+- Amount of CO2 released per year by you (just by wasting plastics)
+
+$$
+\begin{align}
+&= 365 \times \text{amount per day} \\     &= 365 \times 2514.858 \\     &= 917.92 \times 10^3 \text{\ g} \\     &= 917.92 \text{\ kg}
+\end{align}
 $$
 
 3. Plastic takes around 500 to 1000 years to completely degrade. Plastics used by us till date still exists somewhere on the planet. Many People out of ignorance end up burning plastic waste to manage it. If 1g of plastic waste on burning produces 0.5mg of PAH, calculate the amount of PAH generated on an average per day by you.
 
-   **Answer**
-   $$
-   \begin{align}
-   \text{Ratio} &= \frac{0.5 \text{ mg of PAH} }{1 \text{ g of plastic waste} } \\   &= 0.5 \times 10^{-3} \\   
-   \text{PAH produced/day} &= \text{Ratio$\times m$(plastic/day)} \\   &= 0.5 \times 10^{-3} \times 419.143 \text{\ g} \\   &= 209.572 \times 10^-3 \text{\ g} \\   &= 209.572 \text{\ mg}
-   \end{align}
-   
+**Answer**
+$$
+\begin{align}
+\text{Ratio} &= \frac{0.5 \text{ mg of PAH} }{1 \text{ g of plastic waste} } \\   &= 0.5 \times 10^{-3} \\   
+\text{PAH produced/day} &= \text{Ratio$\times m$(plastic/day)} \\   &= 0.5 \times 10^{-3} \times 419.143 \text{\ g} \\   &= 209.572 \times 10^-3 \text{\ g} \\   &= 209.572 \text{\ mg}
+\end{align}
 $$
 
 4. What is PAH and How they affect our health?
 
-   **Answer**
-   PAH are **Polycyclic Aromatic Hydrocarbons**, which occur naturally in coal, crude oil, and gasoline. They are emitted when coal, oil, gas, wood, garbage, and tobacco are burned. PAHs generated from these sources can bind to or form small particles in the air. High-temperature cooking will form PAHs in meat and in other foods.
+**Answer**
+PAH are **Polycyclic Aromatic Hydrocarbons**, which occur naturally in coal, crude oil, and gasoline. They are emitted when coal, oil, gas, wood, garbage, and tobacco are burned. PAHs generated from these sources can bind to or form small particles in the air. High-temperature cooking will form PAHs in meat and in other foods.
 
-   Breathing air contaminated with motor vehicle exhaust, cigarette smoke, wood smoke, or fumes from asphalt roads are common ways exposure occurs. People take in PAHs when they eat grilled or charred meats or foods or foods on which PAH particles have settled from the air.
+Breathing air contaminated with motor vehicle exhaust, cigarette smoke, wood smoke, or fumes from asphalt roads are common ways exposure occurs. People take in PAHs when they eat grilled or charred meats or foods or foods on which PAH particles have settled from the air.
 
-   Large amounts of naphthalene in air can irritate eyes and breathing passages. Workers who have been exposed to large amounts of naphthalene from skin contact with the liquid form and from breathing naphthalene vapor have developed blood and liver abnormalities. Several of the PAHs and some specific mixtures of PAHs are considered to be cancer-causing chemicals.
+Large amounts of naphthalene in air can irritate eyes and breathing passages. Workers who have been exposed to large amounts of naphthalene from skin contact with the liquid form and from breathing naphthalene vapor have developed blood and liver abnormalities. Several of the PAHs and some specific mixtures of PAHs are considered to be cancer-causing chemicals.
 
 ## Part 3
 
