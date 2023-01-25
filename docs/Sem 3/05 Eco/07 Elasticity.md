@@ -23,9 +23,9 @@ $$
 \begin{align}
 
 e_x^p
-%&= \frac{(x' - x)/x}{(p' - p)/p} \\&= \frac{\% \Delta x}{\% \Delta p} \\&= \frac{\color{red} \Delta x/x}{\color{orange} \Delta p/p} \\
-&= \frac{\color{red} \Delta x}{\color{orange} \Delta p}
-\frac{\color{orange} p}{\color{red}{x}}
+%&= \frac{(x' - x)/x}{(p' - p)/p} \\&= \frac{\% \Delta x}{\% \Delta p} \\&= \frac{\color{orange} \Delta x/x}{\color{orange} \Delta p/p} \\
+&= \frac{\color{orange} \Delta x}{\color{orange} \Delta p}
+\frac{\color{orange} p}{\color{orange}{x}}
 \end{align}
 $$
 
@@ -70,9 +70,9 @@ $$
 \begin{align}
 
 e_{x_1}^{p_2} 
-%&= \frac{(x' - x)/x}{(p' - p)/p} \\&= \frac{\% \Delta x_1}{\% \Delta p_2} \\&= \frac{\color{red} \Delta x_1/x_1}{\color{orange} \Delta p_2/p_2} \\
-&= \frac{\color{red} \Delta x_1}{\color{orange} \Delta p_2}
-\frac{\color{orange} p_2}{\color{red}{x_1}}
+%&= \frac{(x' - x)/x}{(p' - p)/p} \\&= \frac{\% \Delta x_1}{\% \Delta p_2} \\&= \frac{\color{orange} \Delta x_1/x_1}{\color{orange} \Delta p_2/p_2} \\
+&= \frac{\color{orange} \Delta x_1}{\color{orange} \Delta p_2}
+\frac{\color{orange} p_2}{\color{orange}{x_1}}
 \end{align}
 $$
 
@@ -236,9 +236,9 @@ $$
 \begin{align}
 
 e_x^m
-%&= \frac{(x' - x)/x}{(p' - p)/p} \\&= \frac{\% \Delta x}{\% \Delta m} \\&= \frac{\color{red} \Delta x/x}{\color{orange} \Delta m/m} \\
-&= \frac{\color{red} \Delta x}{\color{orange} \Delta m}
-\frac{\color{orange} m}{\color{red}{x}}
+%&= \frac{(x' - x)/x}{(p' - p)/p} \\&= \frac{\% \Delta x}{\% \Delta m} \\&= \frac{\color{orange} \Delta x/x}{\color{orange} \Delta m/m} \\
+&= \frac{\color{orange} \Delta x}{\color{orange} \Delta m}
+\frac{\color{orange} m}{\color{orange}{x}}
 \end{align}
 $$
 

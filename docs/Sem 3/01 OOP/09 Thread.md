@@ -57,7 +57,7 @@ The initial run takes place based on priority ensuring that each task gets run f
 In the following example, let’s say that priority is $T_2 > T_4 > T_3 > T_1$,
 
 $$
-\color{green}
+\color{hotpink}
 \underbrace{
 \underset{4s}{\fbox{$T_2$}}
 \underset{4s}{\fbox{$T_4$}}

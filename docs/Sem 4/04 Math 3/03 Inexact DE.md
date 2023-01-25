@@ -14,7 +14,7 @@ $$
 
 |      |                  Case 1                   |                  Case 2                  |
 | :--: | :---------------------------------------: | :--------------------------------------: |
-|      | $\dfrac{M_y - N_x}{\color{red}-M} = h(y)$ | $\dfrac{M_y - N_x}{\color{red}N} = g(x)$ |
+|      | $\dfrac{M_y - N_x}{\color{orange}-M} = h(y)$ | $\dfrac{M_y - N_x}{\color{orange}N} = g(x)$ |
 |  IF  |         $e^{\int h(y) \cdot dy}$          |         $e^{\int g(x) \cdot dx}$         |
 
 3. Multiply both sides of $\eqref{de}$:

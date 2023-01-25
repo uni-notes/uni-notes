@@ -78,13 +78,13 @@ JComponent --> JLabel & JButton & x[many more...]
 ```
 
 $$
-\color{green}
+\color{hotpink}
 \fbox{$
 \underset{
 \color{orange}
 \fbox{$
 \underset{
-\color{red}
+\color{orange}
 \fbox{Components}
 }
 {Panel}
