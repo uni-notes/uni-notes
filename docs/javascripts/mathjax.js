@@ -5,7 +5,6 @@ window.MathJax = {
 			'[tex]/color',
 			'[tex]/cases',
 			'[tex]/mhchem',
-			'[tex]/textmacros'
 		]
 	},
 	tex: {
@@ -17,7 +16,6 @@ window.MathJax = {
 				'textmacros'
 			]
 		},
-		tags: 'ams',
 		inlineMath: [
 			["\\(", "\\)"],
 			["$", "$"]
