@@ -10,7 +10,6 @@ If $f(t)$ is a function with period T, then
 
 $$
 f(t+nT) = f(t) \quad \forall n
-
 $$
 
 |             Function             |      Period       |
@@ -160,7 +159,6 @@ u' v_2 -
 u'' v_3 -
 \ldots -
 u^{(n-1)} v_n
-
 $$
 
 |          Term          |     Meaning     |

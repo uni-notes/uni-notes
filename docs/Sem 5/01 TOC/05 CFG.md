@@ -72,7 +72,6 @@ $$
 
 $$
 L(G) \subseteq \Sigma^*
-
 $$
 
 ```mermaid

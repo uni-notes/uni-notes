@@ -141,12 +141,10 @@ eg: $(D_6, /)$
 
 $$
 \left(P(S), \sube\right)\\A, B \in P(S): A \lor B = A \cup B, A \land B = A \cap B
-
 $$
 
 $$
 \left(P(S), \supseteq \right)\\A, B \in P(S): A \lor B = A \cap B, A \land B = A \cup B
-
 $$
 
 $$

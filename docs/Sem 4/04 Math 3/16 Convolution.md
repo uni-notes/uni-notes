@@ -4,7 +4,6 @@ $$
 f(t) \star g(t)
 = \int\limits_0^\infty
 f(t-\tau) g(\tau) \cdot d\tau
-
 $$
 
 $$

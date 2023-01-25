@@ -48,9 +48,9 @@ Uses Decision Tree
 - collect votes from every tree in the forest
 
 - Use majority voting to decide class label
-  $$
+   $$
   y = \frac{1}{n} \sum_i y_i
-  $$
+   $$
 
 ## Ada Boost
 
@@ -69,53 +69,37 @@ Level of tree $\le$ 3 (max 2 root nodes)
    1. Find mis-classified points
 
    2. Get error rate for each stump
-      
-
-$$
+     $$
       {\Large \epsilon} = \sum_\text{wrong} w_i
       
-
 $$
 
 3. Pick lowest error rate classifier
 
-4. 
-
-$$
+4. $$
    \alpha = \frac{1}{2} \ \log \left|\frac{1-\epsilon}{\epsilon}\right|
    
-
 $$
 
-5. 
-
-$$
+5. $$
    f(x) = \sum_{i=1}^T \alpha_i \ h_i(x)
    
-
 $$
 
      - $f(x)$ is the final function
      - $h_i(x)$ is the hypothesis function of each ada boost iteration
 
-6. 
-
-$$
+6. $$
    w_\text{new} = 
    \begin{cases}
    \dfrac{w_\text{old}}{2(1-\epsilon)} & \text{✅ Point Classified Correctly}  \\   \dfrac{w_\text{old}}{2 \epsilon} & \text{❌ Point Misclassified}
    \end{cases}
    
-
 $$
 
 7. Repeat steps 2-6 until sufficient accuracy is obtained
 
 8. Find the final value
-   
-
-$$
+   $$
    y = \frac{1}{n} \sum_i w_i y_i
-   
-
-$$
+   $$

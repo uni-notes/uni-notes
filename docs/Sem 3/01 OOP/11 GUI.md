@@ -90,7 +90,6 @@ $$
 {Panel}
 $}}
 {\text{Frame}}
-
 $}
 $$
 

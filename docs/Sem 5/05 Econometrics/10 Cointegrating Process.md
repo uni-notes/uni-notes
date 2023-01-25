@@ -24,9 +24,7 @@ eg:
 - Dubai and Sharjah rent
 - GCC stock markets
 
-Consider $x, z$ which are both $I(1)$ processes; $x_t$ and $z_t$ are cointegrated processes $\iff u_t$ is stationary process, 
-
-$$
+Consider $x, z$ which are both $I(1)$ processes; $x_t$ and $z_t$ are cointegrated processes $\iff u_t$ is stationary process,$$
 \begin{align}
 z_t &= \alpha_1 x + u_t & \text{(Long-Term Specification)} \\
 \implies
@@ -114,7 +112,6 @@ Let’s say we have 2 variables $x, y$. We can check if $x$ granger causes $y$
 
 $$
 y_t = \beta_1 y_{t-1} + \beta_2 x_{t-1} + u_t
-
 $$
 
 ### Hypotheses

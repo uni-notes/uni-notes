@@ -93,9 +93,7 @@ Assign the minimum key to the character with the maximum frequency.
 3. Generate key/code of tree, taking left as 0 and right as 1
 
 4. Calculate the average no of code/key using
-   
-
-$$
+   $$
    \text{Average Code Size} =
    \frac{
    \sum\limits_i \text{Frequency}_i * \text{No of Bits}_i
@@ -103,7 +101,6 @@ $$
    \sum\limits_i \text{Frequency}_i
    }
    
-
 $$
 
 ### Example

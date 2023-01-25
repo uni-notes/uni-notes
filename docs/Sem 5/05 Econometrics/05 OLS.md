@@ -39,13 +39,10 @@ $$
 
 3. Rearrange the terms
 
-4. 
-
-$$
+4. $$
    \sum y_i = n \hat \beta_1 + \hat \beta_2 \sum x_i \\   
    \sum y_i x_i = n \hat \beta_1 + \hat \beta_2 \sum x_i
    
-
 $$
 
 ## Assumptions of OLS & Classical Regression
@@ -81,9 +78,7 @@ $$
      - Residual series should be independent of other residual series
 
      - For any 2 values $x_i$ and $x_j$, the correlation between $u_i$ and $u_j$ is $0$
-     
-
-$$
+    $$
      \text{cov}(u_i, u_j | x_i, x_j) \\     = E
      \Big \{
      [u_i - E(u_i) | x_1],
@@ -94,9 +89,7 @@ $$
      \Big \} \\     \Big(
      E(u_i) = E(u_j) = 0
      \Big)
-     
-
-$$
+    $$
    
      - If we plot the scatter plot between $u_i$ and $u_j$, there should be no sign of correlation
    
@@ -108,12 +101,9 @@ $$
 
      - No relationship between error term and independent variables
 
-     - 
-
-$$
+     -$$
      \text{Cov}(u_i, x_i) = 0
      
-
 $$
 
      - If there is correlation, then we cannot correctly obtain coefficients
@@ -335,7 +325,6 @@ ESS = Explained sum of squares
 
 $$
 \hat {\beta_2}^2 \sum x_i^2
-
 $$
 
 $$
@@ -384,7 +373,6 @@ R^2_\text{Adjusted}
 = 1 - \left[
 \frac{(1-R^2)(n-1)}{(n-k-1)}
 \right]
-
 $$
 
 - $k =$ no of independent variables
@@ -392,7 +380,6 @@ $$
 
 $$
 R^2_\text{Adj} \in [0, 1]
-
 $$
 
 The reason why the formula is so complicated, rather than just dividing by $k$, is because we want the range of adjusted $R^2$ to also be $[0, 1]$
@@ -405,14 +392,12 @@ Inflation rate something
 
 $$
 I_t = \beta_1 + \beta_2 (\pi_t - \pi_t^*) + e_t
-
 $$
 
 ### Money Supply
 
 $$
 I_t = \beta_1 + \beta_2 M_t + e_t
-
 $$
 
 ## Correlation Coefficent

@@ -2,7 +2,6 @@
 
 $$
 y'' + py' + qy = 0
-
 $$
 
 where $p, q$ are constants
@@ -16,7 +15,6 @@ y' = m \cdot e^{mx} \\y' = m^2 \cdot e^{mx} \\
 \implies
 (m^2 \cdot e^{mx}) + p(m \cdot e^{mx}) + qe^{mx} = 0 \\
 e^{mx} ( m^2 + pm + q ) = 0 \\
-
 $$
 
 ### Auxiliary equation
@@ -25,7 +23,6 @@ $$
 e^{mx} \ne 0 \\
 \implies
 ( m^2 + pm + q ) = 0
-
 $$
 
 Solve this to get the value(s) of unknown $m$

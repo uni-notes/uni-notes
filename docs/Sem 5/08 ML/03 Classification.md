@@ -192,7 +192,6 @@ Something $= \frac{- w_0}{||w||}$
 
 $$
 y_k(x) = {w_k}^T x + {w_k}_0
-
 $$
 
 $$
@@ -230,20 +229,13 @@ It is also used a pre-processing step for ML application
      - $S_1 \to$ Covariance matrix for class 1
 
      - $S_2 \to$ Covariance matrix for class 2
-
-   
-
-$$
+   $$
    S_1 = \begin{bmatrix}
    \text{cov}(x_1, x_1) & \text{cov}(x_1, x_2) \\   \text{cov}(x_2, x_1) & \text{cov}(x_2, x_2)
    \end{bmatrix}
    
-
 $$
-
-   
-
-$$
+   $$
    \text{Cov}(x_j, x_k) = 
    \frac{1}{n_j - 1}
    \sum_{i=1, x \in C_j}^{n_1}
@@ -253,18 +245,14 @@ $$
    \sum_{i=1, x \in C_1}^{n_1}
    (x_i - \mu_1)^2
    
-
 $$
 
 2. Find between-class scatter matrix
-   
-
-$$
+   $$
    S_B =
    (\mu_1 - \mu_2)
    (\mu_1 - \mu_2)^T
    
-
 $$
 
 3. Find [Eigen Value](#Eigen Value)
@@ -274,12 +262,9 @@ $$
 5. Generate LDA Projection [Normalized Eigen Vector](#Normalized Eigen Vector)
 
 6. Generate LDA score (projected value) in reduced dimensions
-    
-
-$$
+   $$
     \text{LDA Score} = x_1 v_1 + x_2 v_2
     
-
 $$
 
 ### Eigen Value
@@ -287,7 +272,6 @@ $$
 $$
 | A - \lambda I | = 0 \\
 |S_w^{-1} S_B - \lambda I| = 0
-
 $$
 
 - $\lambda =$ Eigen Value(s)
@@ -306,7 +290,6 @@ $$
 (S_w^{-1} S_B - \lambda I) 
 \textcolor{hotpink}{V}
 = 0
-
 $$
 
 - $\lambda =$ Highest eigen value
@@ -547,7 +530,6 @@ $$
 \frac{-1}{n} \sum \Big[
 y \log(\hat y) + (1-y) \log (1 - \hat y)
 \Big]
-
 $$
 
 ## Decision Trees
@@ -559,20 +541,15 @@ $$
 1. Pick an independent variable
 
 2. Find Entropy of all classes of that independent variable
-   
-
-$$
+   $$
    H(C_i) =
    -P_\text{Pos} \log_2 (P_\text{Pos})
    -P_\text{Neg} \log_2 (P_\text{Neg})
    
-
 $$
 
 3. Calculate gain of each independent variable for current set/subset of data
-   
-
-$$
+   $$
    \begin{align}
    &\text{Gain}\Big(
    	\text{Value}(C_1), C_2
@@ -585,7 +562,6 @@ $$
    \right]
    \end{align}
    
-
 $$
 
 4. Pick the independent variable with the highest gain

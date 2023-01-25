@@ -98,15 +98,14 @@ There are multiple outcomes possible, and there exists an underlying probability
 - Variance $\ne$ 0
 - Skewness = 0
   
-  $$
+   $$
 	\tilde{\mu}_3=\frac{\sum_i^N\left(X_i-\bar{X}\right)^3}{(N-1) * \sigma^3}
-  $$
+   $$
 
 - Kurtosis = 3
-
-  $$
+   $$
   Kurt = \frac{\mu_4}{\sigma^4}
-  $$
+   $$
 
 ## Systematic Event
 
@@ -139,7 +138,6 @@ Assuming Consumption $\propto$ Income
 
 $$
 C = c + kI
-
 $$
 
 - $C$ is the total consumption

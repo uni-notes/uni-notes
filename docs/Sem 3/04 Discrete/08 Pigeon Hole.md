@@ -25,6 +25,6 @@ A function from a finite set to a *smaller* finite set cannot be one-one, and he
 
 Minimum no of objects $n$ to be distributed among $k$ boxes such that $r$ objects must be in one of the boxes is given by $n = k(r-1) + 1$
 
-here, $r \le \lceil \frac {n}{k} \rceil$
+here, $r \le \lceil \frac{n}{k} \rceil$
 
 This is reversed statement of Pigeon Hole statements

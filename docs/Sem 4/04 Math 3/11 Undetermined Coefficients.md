@@ -31,7 +31,6 @@ If $y_g$ and the trial particular solution are similar
 
 $$
 x e^x ( A \cos x + B \sin x) \to x \phi
-
 $$
 
 ### Example

@@ -40,6 +40,7 @@ Total Time
 
 No of T states in each cycle = 4
 Duration of each T state = 1 Time Period = $\frac{1}{\nu}$
+
 ## 2 memory operations
 1. Read (Data/Instruction)
 2. Write (Data)

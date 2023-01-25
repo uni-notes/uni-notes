@@ -53,4 +53,4 @@ However, converse isn't necessarily true - the above 3 features don't necessaril
 
 For every V:(i,j) where i = indegree and j = outdegree of vertex V.
 
-Then degree spectrum of the graph $= \{ (i,j) | i=\rm{indegree}, j = \rm{outdegree} \}$
+Then degree spectrum of the graph $= \{ (i,j) | i=\text{indegree}, j = \text{outdegree} \}$

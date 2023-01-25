@@ -87,23 +87,16 @@ any of the above can replace free variable
    
 4. $\exists i$
 
-   1.    
-
-$$
+   1. $$
          \frac{
          \phi[t/x]
          }{\exists x \quad \phi} \quad
          \exists x \quad i
-         
-
-$$
+		 $$
    
-   2.    We can deduce $\exist x \quad \phi$ whenever we have $\phi[t/x]$; $t$ has to be free for $x$ in $\phi$
+   2. We can deduce $\exist x \quad \phi$ whenever we have $\phi[t/x]$; $t$ has to be free for $x$ in $\phi$
 5. $\exists e$
-
-   1. 
-
-$$
+   1. $$
       \frac{
         \exists x \ \phi \quad
         \begin{bmatrix}
@@ -112,9 +105,7 @@ $$
         }
         {\chi} \quad
         \exists x \quad e
-      
-
-$$
+     $$
    
    2. if $\exists x \quad \phi$ is true, there should be atleast one value of $x$ for which $\phi$ is true
    
@@ -123,9 +114,11 @@ $$
    4. Substituting $x_0$ for $x$, we arrive at formula $\chi$
    
    5. we then conclude $\chi$
+
 ### Quantifier equivalences
 
 1. De-Morgan’s rule
+
    convert bw $\forall$ and $\exists$ when there is negation
      - $\lnot \forall x (\phi) \dashv \vdash \exists x (\lnot \phi)$
      - $\lnot \exists x (\phi) \dashv \vdash \forall x (\lnot \phi)$

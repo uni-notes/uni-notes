@@ -11,26 +11,18 @@ $$
 1. Now, $y$ is a function of $z$, which in turn is a function of $x$
 
 1. Put the following substitutions; Refer to [Custom Operators](#Custom Operators)
-   
-
-$$
+   $$
    \begin{align}
    xD &= \theta \\   x^2 D^2 &= \theta(\theta - 1)
    \end{align}
-   
-
-$$
+   $$
    
 1. Equation $\eqref{gen}$ becomes
-   
-
-$$
+   $$
    \begin{align}
    \Big( \theta(\theta - 1) + p \theta + q \Big)y &= 0 \\   \theta(\theta - 1) + p \theta + q &= 0 & (y \ne 0)
    \end{align}
-   
-
-$$
+   $$
    
 1. Put $\theta^2 \to m^2, \theta \to m$
 
@@ -57,6 +49,5 @@ $$
 
 $$
 x Dy = \theta y \implies xD = \theta
-
 $$
 

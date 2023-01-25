@@ -164,7 +164,6 @@ No of bits for set index = $2^N$
 
 $$
 \text{Mapped Set} = \text{Address } \% \ N
-
 $$
 
 [LRU Replacement](#LRU Replacement)

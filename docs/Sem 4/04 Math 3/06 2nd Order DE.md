@@ -12,7 +12,6 @@ If $y(x)$ is the solution, then it is given by
 
 $$
 y(x) = y_g + y_p
-
 $$
 
 ### Reduced Equation 

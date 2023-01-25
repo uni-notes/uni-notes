@@ -51,22 +51,17 @@ Consider this DE
 
 $$
 (\ y + y \cos(xy)  \ )dx + (\ x + x \cos(xy) \ ) = 0
-
 $$
 
 1. Check if the given DE is exact
 
 2. Put integration sign for both sides
-   
-
-$$
+   $$
    \int (\ y + y \cos(xy)  \ )dx
    +
    \int(\ x + x \cos(xy) \ )
    = \int 0
-   
-
-$$
+   $$
    
 3. Simplifications
    1. Treat $y$ as a constant in the $dx$ integral
@@ -77,18 +72,12 @@ $$
       - $x \cos(x) \to 0$
       - $y + y \cos(x) \to y$
    
-   
-
-$$
+   $$
    \int (\  y + y \cos(xy) \ ) dx + \int (0 + 0) dy = c
-   
-
-$$
+   $$
    
 4. Integrate
-   
-
-$$
+   $$
    \begin{align}
    
    yx + y \left( \frac{ \sin xy }{ y } \right) &= c \\   
@@ -96,7 +85,6 @@ $$
    
    \end{align}
    
-
 $$
 
 ## Exact DE Formulae
@@ -118,7 +106,7 @@ $$
 $$
 \begin{align}
 d\left(\log{ |\frac{x|{y}} }\right)
-&= \frac{1}{\frac{x}{y}} \left( \frac{y dx - x dy}{y^2} \right) \\&= \frac{y dx - x dy}{xy} \\d\left( \log | \frac{y|{x} } \right) &= \frac {xdy - ydx}{xy}
+&= \frac{1}{\frac{x}{y}} \left( \frac{y dx - x dy}{y^2} \right) \\&= \frac{y dx - x dy}{xy} \\d\left( \log | \frac{y|{x} } \right) &= \frac{xdy - ydx}{xy}
 \end{align}
 $$
 

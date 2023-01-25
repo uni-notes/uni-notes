@@ -18,7 +18,7 @@ $$
 \begin{align}
 E(\bar x) &= \mu, E(s^2) = \sigma^2 , E(s) = \sigma \\
 s^2 &= \frac{\sigma^2}{n} , s = \frac{\sigma}{\sqrt n} \\
-z_\text{sample} &= \frac {\bar x - \mu}{ \sigma/\sqrt n }
+z_\text{sample} &= \frac{\bar x - \mu}{ \sigma/\sqrt n }
 \end{align}
 $$
 
@@ -82,8 +82,8 @@ $$
 $$
 \begin{align}
 \sigma^2 &= \left[
-\frac {(n-1)s^2}{\chi^2_{(n-1), (\alpha/\small 2)}},
-\frac {(n-1)s^2}{\chi^2_{(n-1), (1-\alpha/\small 2)}}
+\frac{(n-1)s^2}{\chi^2_{(n-1), (\alpha/\small 2)}},
+\frac{(n-1)s^2}{\chi^2_{(n-1), (1-\alpha/\small 2)}}
 \right] \\
 \sigma &= \sqrt {\sigma^2}
 \end{align}

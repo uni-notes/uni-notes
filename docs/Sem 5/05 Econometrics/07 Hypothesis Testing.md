@@ -121,7 +121,6 @@ $$
 
 $$
 t = 0 \implies \hat \beta_2 = \beta_2
-
 $$
 
 ## p-Value

@@ -133,7 +133,6 @@ where $m$ is constant coefficient called as root/indical/initial value. This is 
 
 $$
 m(m-1) + p m + q = 0
-
 $$
 
 where $p$ and $q$ are limits from $\eqref{limits}$

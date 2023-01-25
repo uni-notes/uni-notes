@@ -533,9 +533,7 @@ END //
 
 DELIMITER ;
 
-DELIMITER 
-
-$$
+DELIMITER$$
 
 CREATE FUNCTION get_customer_balance(p_customer_id INT, p_effective_date DATETIME) RETURNS DECIMAL(5,2)
     DETERMINISTIC
@@ -574,15 +572,11 @@ BEGIN
     AND payment.customer_id = p_customer_id;
 
   RETURN v_rentfees + v_overfees - v_payments;
-END 
-
-$$
+END$$
 
 DELIMITER ;
 
-DELIMITER 
-
-$$
+DELIMITER$$
 
 CREATE PROCEDURE film_in_stock(IN p_film_id INT, IN p_store_id INT, OUT p_film_count INT)
 READS SQL DATA
@@ -599,15 +593,11 @@ BEGIN
      AND store_id = p_store_id
      AND inventory_in_stock(inventory_id)
      INTO p_film_count;
-END 
-
-$$
+END$$
 
 DELIMITER ;
 
-DELIMITER 
-
-$$
+DELIMITER$$
 
 CREATE PROCEDURE film_not_in_stock(IN p_film_id INT, IN p_store_id INT, OUT p_film_count INT)
 READS SQL DATA
@@ -624,15 +614,11 @@ BEGIN
      AND store_id = p_store_id
      AND NOT inventory_in_stock(inventory_id)
      INTO p_film_count;
-END 
-
-$$
+END$$
 
 DELIMITER ;
 
-DELIMITER 
-
-$$
+DELIMITER$$
 
 CREATE FUNCTION inventory_held_by_customer(p_inventory_id INT) RETURNS INT
 READS SQL DATA
@@ -646,15 +632,11 @@ BEGIN
   AND inventory_id = p_inventory_id;
 
   RETURN v_customer_id;
-END 
-
-$$
+END$$
 
 DELIMITER ;
 
-DELIMITER 
-
-$$
+DELIMITER$$
 
 CREATE FUNCTION inventory_in_stock(p_inventory_id INT) RETURNS BOOLEAN
 READS SQL DATA
@@ -683,9 +665,7 @@ BEGIN
     ELSE
       RETURN TRUE;
     END IF;
-END 
-
-$$
+END$$
 
 DELIMITER ;
 

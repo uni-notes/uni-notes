@@ -22,7 +22,6 @@ Same meaning
 $$
 E(y|x_i)
 = \beta_0 + \beta_1 x_i
-
 $$
 
 ## Population
@@ -52,7 +51,6 @@ It is always linear wrt hyper-parameters, but may/may not be linear wrt variable
 
 $$
 y_t = e^\alpha x^\beta_t e^{u_t} \iff \ln y_t = \alpha + \beta \ln x_t + u_t
-
 $$
 
 One more thing in slide
@@ -61,7 +59,6 @@ Some models cannot be changed;  they are intrinsically non-linear
 
 $$
 y_t = \alpha + x^{\color{orange} \beta}_t + u_t
-
 $$
 
 ## Stochastic Specification of PRF

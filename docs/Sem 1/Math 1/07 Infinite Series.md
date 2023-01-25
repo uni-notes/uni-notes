@@ -26,7 +26,7 @@ Consider series $\sum\limits_{n = 1}^\infty a_n = a_1 + a_2 + \dots + a_n$. This
 
 We use the following tests.
 
-## $n^\rm{th}$ Term Test
+## $n^\text{th}$ Term Test
 
 $$
 \lim\limits_{n \to \infty} a_n = 
@@ -48,7 +48,7 @@ $$
 
 $$
 \begin{align}
-\lim\limits_{n \to \infty} \frac { \ln |n| }{n} &= 0 \\(\ln |n| \text{ always} &< n, \text{ so den reaches } \infty \text{ faster} ) \\
+\lim\limits_{n \to \infty} \frac{ \ln \|n\| }{n} &= 0 \\(\ln \|n\| \text{ always} &< n, \text{ so den reaches } \infty \text{ faster} ) \\
 \lim\limits_{n \to \infty} x^{\frac 1n} &= 1 \\
 \lim\limits_{n \to \infty} n^{\frac 1n} &= 1 \\(x^0 = n^0 &= 1) \\
 \lim\limits_{n \to \infty} \left( 1 + \frac x n \right)^n &= e^x \\
@@ -104,7 +104,7 @@ Let $\lim\limits_{n \to \infty} (a_n)^\frac1n = k$
 
 ## Limit Comparison Test
 
-Best used when $a_n$ is a fraction of polynomial, ie $a_n = \frac {P(n)}{Q(n)}$, where $P, Q$ are polynomials in terms of $n$
+Best used when $a_n$ is a fraction of polynomial, ie $a_n = \frac{P(n)}{Q(n)}$, where $P, Q$ are polynomials in terms of $n$
 
 Let
 
@@ -121,7 +121,7 @@ Let
     | :-----: | :-------: |
     |  $> 1$  | converges |
     | $\le 1$ | diverges  |
-- $\lim\limits_{n \to \infty} \frac {a_n}{b_n} = k$
+- $\lim\limits_{n \to \infty} \frac{a_n}{b_n} = k$
 
 Then
 

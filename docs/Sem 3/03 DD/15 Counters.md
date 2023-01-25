@@ -408,7 +408,6 @@ because of the given next states for the unused states, we cannot write it as do
 
 $$
 D_1 = Q_3' Q_2' Q_1' \\D_2 = Q_3' Q_2' Q_1 \\D_3 = Q_3' Q_2 Q_1'
-
 $$
 
 Using a JK counter, count $3, 4, 6, 7, 3, \dots$

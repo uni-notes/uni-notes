@@ -11,8 +11,8 @@ $$
 }{
 	n \ \sum x^2 - \Big( \sum x \Big)^2
 } \\b_0 &= \bar y - b_1 \bar x \\
-\bar x &= \frac {\sum x} n \\
-\bar y &= \frac {\sum y} n
+\bar x &= \frac{\sum x} n \\
+\bar y &= \frac{\sum y} n
 \end{align}
 $$
 

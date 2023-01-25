@@ -31,7 +31,6 @@ $$
 \fbox{r}
 \fbox{parent}
 \notag
-
 $$
 
 ## Insertion

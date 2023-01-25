@@ -92,12 +92,12 @@ Provided the limit exists, the partial derivative of $f$ wrt $x$ is denoted and 
 
 $$
 \begin{align}
-\frac {\partial f}{\partial x} &=
+\frac{\partial f}{\partial x} &=
 \lim_{\Delta x \to 0}
-\frac { f(x + \Delta x, \ y) - f(x, y) }{\Delta x} \\
-\frac {\partial f}{\partial y} &=
+\frac{ f(x + \Delta x, \ y) - f(x, y) }{\Delta x} \\
+\frac{\partial f}{\partial y} &=
 \lim_{\Delta y \to 0}
-\frac { f(x, \ y + \Delta y) - f(x, y) }{\Delta y}
+\frac{ f(x, \ y + \Delta y) - f(x, y) }{\Delta y}
 \end{align}
 $$
 
@@ -105,10 +105,10 @@ We define higher order partial derivatives as
 
 $$
 \begin{align}
-f_x &= \frac {\partial^2 f}{\partial x^2}
-&= \frac {\partial}{\partial x}\left[ \frac {\partial f}{\partial x} \right] \\
-f_{xy} &=\frac {\partial^2 f}{\partial x \partial y}
-&= \frac {\partial}{\partial x}\left[ \frac {\partial f}{\partial y} \right] \\f_{xy} &= f_{yx} \\f_{xx} &= (f_x)_x
+f_x &= \frac{\partial^2 f}{\partial x^2}
+&= \frac{\partial}{\partial x}\left[ \frac{\partial f}{\partial x} \right] \\
+f_{xy} &=\frac{\partial^2 f}{\partial x \partial y}
+&= \frac{\partial}{\partial x}\left[ \frac{\partial f}{\partial y} \right] \\f_{xy} &= f_{yx} \\f_{xx} &= (f_x)_x
 \end{align}
 $$
 
@@ -126,24 +126,24 @@ If $w = f(x, y)$ a function where $x, y$ are themselves functions of
 
 - an independent parameter $t$
   
-  $$
-  \frac {dw}{dt} =
-  \left( \frac {\partial w}{\partial x} \cdot \frac {dx}{dt} \right) +
-  \left( \frac {\partial w}{\partial y} \cdot \frac {dy}{dt} \right)
-  $$
+   $$
+  \frac{dw}{dt} =
+  \left( \frac{\partial w}{\partial x} \cdot \frac{dx}{dt} \right) +
+  \left( \frac{\partial w}{\partial y} \cdot \frac{dy}{dt} \right)
+   $$
 
 - 2 independent parameters $u, v$
   
 	$$
   \begin{align}
-  \frac {\partial w}{\partial u} &=
-  \left( \frac {\partial w}{\partial x} \cdot \frac {\partial x}{\partial u} \right) +
-  \left( \frac {\partial w}{\partial y} \cdot \frac {\partial y}{\partial u} \right) \\  
-  \frac {\partial w}{\partial v} &=
-  \left( \frac {\partial w}{\partial x} \cdot \frac {\partial x}{\partial v} \right) +
-  \left( \frac {\partial w}{\partial y} \cdot \frac {\partial y}{\partial v} \right)
+  \frac{\partial w}{\partial u} &=
+  \left( \frac{\partial w}{\partial x} \cdot \frac{\partial x}{\partial u} \right) +
+  \left( \frac{\partial w}{\partial y} \cdot \frac{\partial y}{\partial u} \right) \\  
+  \frac{\partial w}{\partial v} &=
+  \left( \frac{\partial w}{\partial x} \cdot \frac{\partial x}{\partial v} \right) +
+  \left( \frac{\partial w}{\partial y} \cdot \frac{\partial y}{\partial v} \right)
   \end{align}
-  $$
+   $$
 
 ## Implicit Differentiation
 
@@ -154,7 +154,7 @@ Differentiating partially wrt $x$
 $$
 \begin{align}
 \frac{\partial f}{\partial x} +
-\left( \frac {\partial f}{\partial y} \cdot \frac{dy}{dx} \right)
+\left( \frac{\partial f}{\partial y} \cdot \frac{dy}{dx} \right)
 &= 0 \\
 \implies \frac{dy}{dx} &=
 \frac{-\partial f / \partial x}{\partial f / \partial y} \\&= \frac{- f_x}{f_y}

@@ -2,7 +2,6 @@
 
 $$
 y^{(n)} + \dots + py' + qy = 0
-
 $$
 
 Solve using the same method as [Constant Coefficient](08 Constant Coefficient.md)

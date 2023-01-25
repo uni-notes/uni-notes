@@ -35,7 +35,6 @@ $$
 Special type of [Homogeneous Expression](#Homogeneous Expression)
 $$
 M dx + N dy = 0
-
 $$
 
 If both $M(x, y)$ and $N(x,y)$ are homogeneous of the same degree.
@@ -44,7 +43,7 @@ $$
 \begin{align}
 \frac{dy}{dx} &= \frac{- M(x, y)}{N(x, y)} \\
 \text{Let }  v &= \frac{y}{x} \implies y = vx \\
-\frac{dy}{dx} &= v + x \frac {dv}{dx}
+\frac{dy}{dx} &= v + x \frac{dv}{dx}
 \end{align}
 $$
 

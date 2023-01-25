@@ -123,7 +123,6 @@ Subset of candidate key can derive non-prime attributes
 
 $$
 p \to np
-
 $$
 
 ### Transitive Dependency
@@ -132,7 +131,6 @@ Non prime attributes gives non-prime
 
 $$
 np \to np
-
 $$
 
 ### Full Dependency
@@ -143,7 +141,6 @@ Subset of candidate key cannot derive non-prime attributes
 
 $$
 f(a, b) = y \implies f(a) \ne y, f(b) \ne y
-
 $$
 
 ## Normal Forms

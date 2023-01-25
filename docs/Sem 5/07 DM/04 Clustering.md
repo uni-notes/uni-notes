@@ -102,7 +102,6 @@ Also, we have squared euclidean distance, which is used sometimes
 $$
 d(x, y) =
 \sum_{k=1}^n |a_k - b_k|^2
-
 $$
 
 ## Properties of Distance Metrics
@@ -154,7 +153,6 @@ xy
 ||x||
 &= \sqrt{\sum_{i=1}^n x_i^2}
 \end{align} 
-
 $$
 
 | $\cos (x, y)$ | Interpretation              |
@@ -173,7 +171,6 @@ $$
 ||d_1|| \ \ ||d_2||
 }
 \sum_{i=1}^n d_1 d_2
-
 $$
 
 ### Tanimatto Coefficient/Extended Jaccard Coefficient

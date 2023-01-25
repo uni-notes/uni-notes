@@ -34,7 +34,7 @@ $$
 	359 + 458 + 414 + 457 + 432 + 377 + 437
 }{
 	7
-} \\&= \frac{2934}{7} \\&= 419.143 \ \rm{g}
+} \\&= \frac{2934}{7} \\&= 419.143 \ \text{g}
 \end{align}
 $$
 
@@ -43,54 +43,40 @@ $$
 1. The Population of U.A.E is say 9.7 million and if everyone is going to generate average waste like you, calculate how much waste will be generated in a day?
    
    **Answer**
-   
-
-$$
+   $$
    \begin{align}
-   &= 9.7 \times 10^6 \times 419.143\\   &= 4065.6871 \times 10^6 \\   &= 4.0657 \ \rm{Gg}
+   &= 9.7 \times 10^6 \times 419.143\\   &= 4065.6871 \times 10^6 \\   &= 4.0657 \ \text{Gg}
    \end{align}
-   
-
-$$
+   $$
    
 2. Almost all plastic products are made from fossil fuels and refining those fuels into plastics is an energy-intensive process that is driving up global emissions. If about 6 kg $\ce{CO2}$ is released per kg of plastic during its production, calculate the amount of $\ce{CO2}$ released for the avg weight of plastic you have collected per day.
 
    **Answer**
 
      - Amount of CO2 per Day
-      
-
-$$
+     $$
       \begin{align}
-      &= 6\times \text{average of } m( \text{plastic} ) \\      &= 6 \times 419.143 \\      &= 2514.858 \rm{\ g}
+      &= 6\times \text{average of } m( \text{plastic} ) \\      &= 6 \times 419.143 \\      &= 2514.858 \text{\ g}
       \end{align}
-      
-
-$$
+     $$
       
      - Amount of CO2 released per year by you (just by wasting plastics)
-     
-
-$$
+    $$
      \begin{align}
-     &= 365 \times \text{amount per day} \\     &= 365 \times 2514.858 \\     &= 917.92 \times 10^3 \rm{\ g} \\     &= 917.92 \rm{\ kg}
+     &= 365 \times \text{amount per day} \\     &= 365 \times 2514.858 \\     &= 917.92 \times 10^3 \text{\ g} \\     &= 917.92 \text{\ kg}
      \end{align}
      
-
 $$
 
 3. Plastic takes around 500 to 1000 years to completely degrade. Plastics used by us till date still exists somewhere on the planet. Many People out of ignorance end up burning plastic waste to manage it. If 1g of plastic waste on burning produces 0.5mg of PAH, calculate the amount of PAH generated on an average per day by you.
 
    **Answer**
-   
-
-$$
+   $$
    \begin{align}
    \text{Ratio} &= \frac{0.5 \text{ mg of PAH} }{1 \text{ g of plastic waste} } \\   &= 0.5 \times 10^{-3} \\   
-   \text{PAH produced/day} &= \text{Ratio$\times m$(plastic/day)} \\   &= 0.5 \times 10^{-3} \times 419.143 \rm{\ g} \\   &= 209.572 \times 10^-3 \rm{\ g} \\   &= 209.572 \rm{\ mg}
+   \text{PAH produced/day} &= \text{Ratio$\times m$(plastic/day)} \\   &= 0.5 \times 10^{-3} \times 419.143 \text{\ g} \\   &= 209.572 \times 10^-3 \text{\ g} \\   &= 209.572 \text{\ mg}
    \end{align}
    
-
 $$
 
 4. What is PAH and How they affect our health?

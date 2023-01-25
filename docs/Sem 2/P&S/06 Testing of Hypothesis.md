@@ -21,9 +21,9 @@ $$
 
 | $\sigma^2$ |   $n$    |    Test Statistic/Probability Distribution     |
 | :--------: | :------: | :--------------------------------------------: |
-|   known    |   any    | $z_c = \frac {\bar x - \mu_0}{\sigma/\sqrt n}$ |
-|  unknown   |  $>30$   |  $z_c = \frac {\bar x - \mu_0}{s/ \sqrt n}$   |
-|  unknown   | $\le 30$ |  $t_c = \frac {\bar x - \mu_0}{s / \sqrt n}$  |
+|   known    |   any    | $z_c = \frac{\bar x - \mu_0}{\sigma/\sqrt n}$ |
+|  unknown   |  $>30$   |  $z_c = \frac{\bar x - \mu_0}{s/ \sqrt n}$   |
+|  unknown   | $\le 30$ |  $t_c = \frac{\bar x - \mu_0}{s / \sqrt n}$  |
 
 ### Critical Region
 
@@ -39,7 +39,7 @@ $$
 
 $$
 \begin{align}
-H_0: p &= p_0 & &\text{(Null Hypothesis)} \\H_1: p &< p_0, p \ne p_0, p > p_0 & &\text{(Alternative Hypothesis)} \\z_c &= \frac {\hat p - p_0}{
+H_0: p &= p_0 & &\text{(Null Hypothesis)} \\H_1: p &< p_0, p \ne p_0, p > p_0 & &\text{(Alternative Hypothesis)} \\z_c &= \frac{\hat p - p_0}{
 	\sqrt{ \frac{p_0(1-p_0)}{n} }
 } & & \hat p = \frac x n = \text{Estimated value of } p\\
 \end{align}

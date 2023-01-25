@@ -100,12 +100,9 @@ Every layer feeds forward to the next layer (backward/self-loop is not allowed)
 
 For an input layer with $n$ nodes, we will have
 
-- 
-
-$$
+-$$
  hidden layers
     - 
-
 $$
 
 - $W_i$ is the weights to layer $i$
@@ -164,9 +161,7 @@ Assume
 
 1. Find $\frac{\partial J}{\partial y}$
 
-2. 
-
-$$
+2. $$
    \begin{align}
    \frac{\partial J}{\partial a}
    &= \frac{\partial J}{\partial y} \frac{\partial y}{\partial a} \\   
@@ -174,28 +169,21 @@ $$
    \frac{\partial J}{\partial \theta}
    &= \frac{\partial J}{\partial a} \frac{\partial a}{\partial \theta} \\   \end{align}
    
-
 $$
 
-3. 
-
-$$
+3. $$
    \begin{align}
    \nabla J_\text{outputLayer}
    &= \frac{\partial J}{\partial x} \\   &= \frac{\partial J}{\partial \theta} \frac{\partial \theta}{\partial x}
    \end{align}
    
-
 $$
 
 4. 
 
-5. 
-
-$$
+5. $$
    \theta_\text{new} = \theta_\text{old} - \eta \ \nabla J
    
-
 $$
 
 ### MLP

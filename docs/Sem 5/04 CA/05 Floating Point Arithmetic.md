@@ -240,7 +240,7 @@ main:
   syscall
 ```
 
-### $\rm{°F \to °C}$
+### $\text{°F \to °C}$
 
 ```assembly
 .data

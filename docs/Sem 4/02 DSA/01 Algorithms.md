@@ -136,9 +136,7 @@ we neglect the constant factors
 
 is the most commonly-used notation
 
-**examples:** 
-
-$$
+**examples:**$$
 O(1) < O(\log n) < O(n) < O(n \log n) < O(n^2 \log n) < O(n^2) < \dots < O(2^n), O(e^n)
 $$
 
@@ -176,15 +174,11 @@ for(int i = 0; i<n; i++)
 1. Summations
 
 2. Log formulae
-   
-
-$$
+   $$
    \begin{align}
    \log xy  &= \log x + \log y \\   \log \left( \frac{x}{y} \right) &= \log x - \log y \\   \log x^n &= n \log x
    \end{align}
-   
-
-$$
+   $$
    
 3. Proof Techniques
 

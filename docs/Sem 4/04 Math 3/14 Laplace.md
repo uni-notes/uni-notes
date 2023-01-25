@@ -42,9 +42,7 @@ $$
 | Situation          |                              LT                              |                             ILT                              |
 | ------------------ | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | Constant Coeffient |                $L\Big(k f(t) \Big) = k L(t)$                 |          $L^{-1}(k s) = k L^{-1} \Big( F(s) \Big) $          |
-| Sum                | $L \Big( f(t) \pm g(t) \Big) = L \Big( f(t) \Big) \pm L \Big( g(t) \Big)$ | 
-
-$$
+| Sum                | $L \Big( f(t) \pm g(t) \Big) = L \Big( f(t) \Big) \pm L \Big( g(t) \Big)$ |$$
 L^{-1} \Big( F(s) \pm G(s) \Big) = L^{-1} \Big( F(s) \Big) \pm L^{-1} \Big( G(s) \Big)
 $$
  |
@@ -107,7 +105,6 @@ $$
 
 $$
 \Gamma(x) = \int_0^\infty e^{-x} x^{n-1} dx
-
 $$
 
 ### Properties

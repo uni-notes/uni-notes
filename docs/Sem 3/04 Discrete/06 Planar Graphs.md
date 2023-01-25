@@ -156,7 +156,7 @@ no proof for this
 6. every $k$ chromatic graph $(\chi(G) = k)$ has atleast $k$ vertices such that the $deg(v_i) \ge k-1$
 7. For any graph $G, \chi(G) \le 1 + \Delta(G)$
    $\Delta(G)$ is the largest degree of any vertex in G
-8. $\chi(G) \ge \frac {|V|}{ |V| - \delta(G) }$
+8. $\chi(G) \ge \frac{|V|}{ |V| - \delta(G) }$
    $\delta(G)$ is the largest degree of any vertex in G
 
 ## Properties of chromatic number

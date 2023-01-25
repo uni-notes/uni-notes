@@ -103,7 +103,6 @@ Rule is desirable such that it covers most of the +ve examples and none/very few
 
 $$
 \underbrace{\phantom{\text{Empty Antecedent}}}_\text{Empty Antecedent} \to y_0
-
 $$
 
 Keep refining this initial seed rule, by adding more conjucts
@@ -112,7 +111,6 @@ Keep refining this initial seed rule, by adding more conjucts
 
 $$
 \text{1 example of } y_0 \to y_0
-
 $$
 
 Keep refining this initial seed rule, by removing conjucts

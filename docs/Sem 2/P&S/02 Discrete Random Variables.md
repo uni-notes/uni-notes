@@ -31,8 +31,8 @@ $$
 |       $E(x)$        |   $\mu$    |     $\sum x \cdot f(x)$     |
 |      $E(x^2)$       |            |    $\sum x^2 \cdot f(x)$    |
 |       $V(x)$        | $\sigma^2$ |     $E(x^2) - [E(x)]^2$     |
-|    $\rm{SD}(x)$     |  $\sigma$  |       $\sqrt {V(x)}$        |
-| Normalised Variable |    $z$     | $\dfrac{x - E(x)}{\rm{SD}}$ |
+|    $\text{SD}(x)$     |  $\sigma$  |       $\sqrt {V(x)}$        |
+| Normalised Variable |    $z$     | $\dfrac{x - E(x)}{\text{SD}}$ |
 
 $$
 \begin{align}
@@ -45,8 +45,8 @@ $$
 | Distribution   |                                                      |                            $f(x)$                            |            $\mu$             |                            $V(x)$                            |
 | -------------- | ---------------------------------------------------- | :----------------------------------------------------------: | :--------------------------: | :----------------------------------------------------------: |
 | Binomial       | - 2 outcomes<br />- independent and identical trials |              $nC_x \cdot p^x \cdot (1-p)^{n-x}$              |             $np$             |                          $np(1-p)$                           |
-| Hypergeometric | dependent trials without replacement                 | $f(x) = \frac {MC_x \times (N-M) C_{(n-x)} }{NC_n} \\
-\rm{max}\Big(0, n- (N-m) \Big) \le x \le \rm{min}(n, M)$ | $n \left(\dfrac M N \right)$ | $\left( \dfrac{N-n}{N-1} \right) \cdot n \cdot \dfrac M N \left( 1 - \dfrac M N \right)$ |
+| Hypergeometric | dependent trials without replacement                 | $f(x) = \frac{MC_x \times (N-M) C_{(n-x)} }{NC_n} \\
+\text{max}\Big(0, n- (N-m) \Big) \le x \le \text{min}(n, M)$ | $n \left(\dfrac M N \right)$ | $\left( \dfrac{N-n}{N-1} \right) \cdot n \cdot \dfrac M N \left( 1 - \dfrac M N \right)$ |
 | Poisson        | discrete phenomenon in continuous interval           |    $\dfrac {e^{-\mu} \times \mu^x}{x!}, \mu = \alpha t$     |          $\alpha t$          |                          $\alpha t$                          |
 
 ### Rate Parameter $(\alpha)$

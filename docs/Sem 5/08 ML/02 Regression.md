@@ -4,7 +4,6 @@ is the process of predicting continuous values.
 
 $$
 \hat y = \theta_0 + \theta_1 x_1
-
 $$
 
 - $\theta_0$ is the value of $y$ when $x_1=0$
@@ -59,7 +58,7 @@ The pivot point of the best fit line are $(\bar x, \bar y)$; which are the avera
 This is used for interpretation of the regression
 
 $$
-\rm{SEE} =
+\text{SEE} =
 \sqrt{\frac{
 \sum(\hat y - y)^2
 }{
@@ -135,7 +134,6 @@ For this course, this is the max they can ask
 
 $$
 y = b_0 + b_1 x_1 + b_2 x_2
-
 $$
 
 $$
@@ -193,7 +191,6 @@ $| |$ is called as ‘nom’?
 
 $$
 ||w^2|| = \sum |w^2|
-
 $$
 
 ## RSS
@@ -209,7 +206,6 @@ y_i -
 \beta_0 + \sum_{j=1}^m \beta_j x_{ij}
 \right)
 \right)^2
-
 $$
 
 ## Hyperparameters

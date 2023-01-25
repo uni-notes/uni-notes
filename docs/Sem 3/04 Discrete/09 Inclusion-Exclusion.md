@@ -27,14 +27,11 @@ Formulae
 
 1. $n(A \cup B) = n(A) + n(B) - n(A \cap B)$
 
-2. 
-
-$$
+2. $$
    \begin{align}
    n(A \cup B \cup C)&= n(A) + n(B) + n(C) \\   & \qquad - n(A \cap B) - n(B \cap C) - n(A \cap C) \\   & \qquad + n(A \cap B \cap C)
    \end{align}
    
-
 $$
 
 3. $A' = S - A$
@@ -102,7 +99,6 @@ x_1 a_1, x_2 a_2, \dots, x_n a_n
 }
 \iff
 x_1 + x_2 + \dots + x_n = r
-
 $$
 
 ## Derangement

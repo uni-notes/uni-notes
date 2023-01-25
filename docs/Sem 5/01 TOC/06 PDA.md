@@ -87,7 +87,7 @@ This is because
 $$
 \begin{align}
 L
-=& \{a^n b^n \} - \{a^{50} b^{50} \} \\=& \{a^n b^n \} \cap \{a^{50} b^{50} \}' & & \Big( A-B = A \cap B' \Big) \\=& \text{CFL} \cap \text{RL} && {\Big(\rm{(RL)' \to RL }\Big)} \\
+=& \{a^n b^n \} - \{a^{50} b^{50} \} \\=& \{a^n b^n \} \cap \{a^{50} b^{50} \}' & & \Big( A-B = A \cap B' \Big) \\=& \text{CFL} \cap \text{RL} && {\Big(\text{(RL)' \to RL }\Big)} \\
 \implies & \text{CFL}
 \end{align}
 $$
@@ -274,7 +274,7 @@ q3 --->
 |"&epsilon;, $ &rarr; &epsilon;"| q6
 ```
 
-### PDA for $G = \{S \to \rm 0TS1 | 1T0 , T \to 1 \}$
+### PDA for $G = \{S \to \text{0TS1} | 1T0 , T \to 1 \}$
 
 ```mermaid
 flowchart LR

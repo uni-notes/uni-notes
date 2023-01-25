@@ -51,7 +51,6 @@ In this course, we are assuming that
 
 $$
 d = p
-
 $$
 
 ## CPU/Processor Utilization
@@ -59,7 +58,7 @@ $$
 $$
 \begin{align}
 U
-&= \frac{t}{\rm{p}} \\&= \frac{\text{Execution Time}}{\text{Period}}
+&= \frac{t}{\text{p}} \\&= \frac{\text{Execution Time}}{\text{Period}}
 \end{align}
 $$
 
@@ -154,7 +153,6 @@ Tasks must announce their deadlines to scheduler, when it becomes runnable
 
 $$
 U \le 1
-
 $$
 
 ## Priority-Based Pre-emptive Scheduler

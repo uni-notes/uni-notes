@@ -32,13 +32,9 @@ it’s like a reality in Rick and Morty. We can assume every thing that can/cann
 
 5. Necessity and impossibility are not symbolically contradictory
    (look at the position of the $\lnot$ symbol)
-   
-
-$$
+   $$
    \begin{align}
    &\Box(\phi) \\   \underbrace{}_\text{not here}
    &\Box ( \lnot \phi)
    \end{align}
-   
-
-$$
+   $$

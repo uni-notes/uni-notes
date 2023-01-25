@@ -61,7 +61,7 @@ Technique to store values in a more accessible form.
 ### Load Factor
 
 $$
-\rm{LF} = \frac{R}{}
+\text{LF} = \frac{R}{}
 $$
 
 where $R$ means Records

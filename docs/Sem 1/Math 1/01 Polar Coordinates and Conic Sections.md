@@ -65,7 +65,7 @@ $P(r, \theta)$ and $P'(r, - \theta)$ lie on same graph
 | Symmetry about | Vary theta                                  | $P(r, \theta)$ lies on the same graph as | or $P(r, \theta)$ lies on the same graph as |
 | -------------- | ------------------------------------------- | ---------------------------------------- | ------------------------------------------- |
 | X-axis         | $0 \le \theta \le \pi$                      | $P'(r, -\theta)$                         | $P'(-r, \pi -\theta)$                       |
-| Y-axis         | $\frac {-\pi} 2 \le \theta \le \frac \pi 2$ | $P'(-r, -\theta)$                        | $P'(r, \pi -\theta)$                        |
+| Y-axis         | $\frac{-\pi} 2 \le \theta \le \frac \pi 2$ | $P'(-r, -\theta)$                        | $P'(r, \pi -\theta)$                        |
 | Origin         | $0 \le \theta \le \frac \pi 2$              | $P'(-r, \theta)$                         | $P'(r, \pi + \theta)$                       |
 
 ## Shapes
@@ -97,7 +97,7 @@ n, &  n = \text{odd} \\2n, & n = \text{even}
 \dfrac \pi {2n} & r = a \textcolor{red}{\sin} (n \theta)
 \end{cases} \\
 \text{Length of petals} &= a \\
-\text{Angular Gap between axes of petals} &= \frac {2 \pi}{N}
+\text{Angular Gap between axes of petals} &= \frac{2 \pi}{N}
 \end{align}
 $$
 
@@ -151,6 +151,7 @@ A = \frac12 \int\limits_{\theta = \alpha}^\beta
 r^2
 \cdot d\theta
 $$
+
 For area bounded by the curves $r_1 = f_1(\theta), r_2 = f_2(\theta), \alpha \le \theta \le \beta$ such that $r_1 < r_2$
 
 $$
@@ -168,7 +169,7 @@ L =
 \int\limits_{\theta = \alpha}^\beta
 \sqrt{ r^2 + (r')^2 }
 \cdot d\theta \qquad
-\left[ r' = \frac {dr}{d \theta} \right]
+\left[ r' = \frac{dr}{d \theta} \right]
 $$
 
 ## Conic Sections

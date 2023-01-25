@@ -11,7 +11,7 @@ because displacement s = $\int$ velocity = $\int$ speed x direction
 **Note**
 
 1. We aevaluate the integral by converting the integral in terms of a parameter $t$, or writing in terms of any one variable $x$ or $y$ or $z$ alone
-2. A curve is smooth if $\frac {d \vec r}{dt} \ne 0$ and $\frac {d \vec r}{dt}$ is a constant
+2. A curve is smooth if $\frac{d \vec r}{dt} \ne 0$ and $\frac{d \vec r}{dt}$ is a constant
 3. A closed curve which doesn’t cross itself is called a simple closed curve
 4. If $C$ is a simple closed curve enclosing a region $R$, then +ve direction is that direction through which one walks such that the enclosed region on their **left**
 
@@ -51,7 +51,6 @@ A force $\vec F = M \hat i + N \hat j + P \vec k$ is conservative
    $$
 
 3. If $C$ is any path joining A and B
-
    $$
    \begin{align}
    W &= \int\limits_C \vec F \cdot d \vec r \\   &= \phi(B) - \phi(A)
@@ -80,7 +79,7 @@ $$
 \iiint (\text{div } \vec F) \ dv \\
 \text{where }
 (\text{div } \vec F) &= \nabla \cdot \vec F \\&= \frac{\partial M}{\partial x} + \frac{\partial N}{\partial y} + \frac{\partial P}{\partial z} \\
-\vec n &= \frac {\nabla \phi}{ |\nabla \phi| } \\&\text{(unit outward-drawn normal vector to surface S)}\\
+\vec n &= \frac{\nabla \phi}{ |\nabla \phi| } \\&\text{(unit outward-drawn normal vector to surface S)}\\
 \phi &= \phi(x, y, z) \\&\text{(equation of surface S)}
 \end{align}
 $$

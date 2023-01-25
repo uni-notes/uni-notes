@@ -26,7 +26,6 @@ $$
 
 $$
 y'' + \lambda y = 0 \\P(x) = 1 \\Q(x) = 1 \\R(x) = 0
-
 $$
 
 ### Legendre Equation

@@ -32,8 +32,7 @@ $$
 **Probability of A given B** is the probability of A occuring given that A has already occured
 
 $$
-P(A|B) = \frac {P(A \cap B)}{P(B)} \quad P(B) \ne 0
-
+P(A|B) = \frac{P(A \cap B)}{P(B)} \quad P(B) \ne 0
 $$
 
 ## Bayes’ Theorem
@@ -53,7 +52,7 @@ $$
 $$
 \begin{align}
 P(A_1|B)
-&= \frac {P(A_1 \cap B)}{P(B)} \\&= \frac {P(B | A_1) \cdot P(A_1)}{\sum\limits_{i=1}^{n} P(B|A_i) \cdot P(A_i)} \\
+&= \frac{P(A_1 \cap B)}{P(B)} \\&= \frac{P(B | A_1) \cdot P(A_1)}{\sum\limits_{i=1}^{n} P(B|A_i) \cdot P(A_i)} \\
 \end{align}
 $$
 

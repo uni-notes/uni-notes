@@ -75,8 +75,8 @@ $$
 
 Choose between
 
-- $\rm{PC = (PC + 4)}$
-- $\rm{PC = (PC + 4) + \ \ Imm<<2}$
+- $\text{PC = (PC + 4)}$
+- $\text{PC = (PC + 4) + \ \ Imm<<2}$
 
 ![image-20221106235657682](assets/image-20221106235657682.png)
 

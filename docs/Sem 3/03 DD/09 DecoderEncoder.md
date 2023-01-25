@@ -153,7 +153,6 @@ $$
 16/ \textcolor{orange}4 = 4, 
 4/ \textcolor{orange} 1 = 1 \\
 req = 4 + 1 = 5
-
 $$
 
 we need 5 decoders in total

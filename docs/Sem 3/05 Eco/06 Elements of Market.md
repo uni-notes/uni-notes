@@ -82,7 +82,6 @@ x_1 =
 \pm \alpha_4 M^e
 \pm \alpha_5 p^e
 + \alpha_6 A
-
 $$
 
 ### Income and Wealth
@@ -238,7 +237,6 @@ summation of supplies of commodity by different firms at particular prices
 
 $$
 S = \beta_1 + \beta_2 P + \beta_3 F + \beta_4 T + \beta_5 E
-
 $$
 
 ### Cost of Production

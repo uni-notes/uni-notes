@@ -45,7 +45,6 @@ P_n(x) =
 \left[
 	\frac{d^n}{d x^n} (x^2 - 1)^n
 \right]
-
 $$
 
 $$
@@ -58,14 +57,12 @@ $$
 
 $$
 (1-2xt + t^2)^{-1/2} = \sum\limits_{n=0}^\infty P_n (x) t^n \\|t| < 1 \\|x| \le 1
-
 $$
 
 ## Binomial Expansion
 
 $$
 (1+t^2)^{-1/2} =
-
 $$
 
 ## Legendre Series

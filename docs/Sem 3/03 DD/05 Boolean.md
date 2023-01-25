@@ -2,57 +2,13 @@
 
 | Law             | Formula                                                      |
 | --------------- | ------------------------------------------------------------ |
-| Complementation | 
-
-$$
-\bar0 = 1 \\
-\bar1 = 0 \\
-\bar{\bar{x}} = x
-
-$$
-              |
-| and             | 
-
-$$
-x \cdot 1 = x \\ x \cdot 0 = 0 \\ x \cdot x = x \\ x \cdot \bar x = 0
-
-$$
- |
-| or              | 
-
-$$
-x + 0 = x \\ x + 1 = 1 \\ x + x = x \\ x + \bar x = 1
-
-$$
-    |
-| commutative     | 
-
-$$
-x + y = y + x \\ xy = yx
-
-$$
-                                 |
-| Associative     | 
-
-$$
-x+(y+z) = (x+y)+z \\ x(yz) = (xy) z
-
-$$
-                      |
-| Distributive    | 
-
-$$
-x(y+z) = xy + xz \\ x + yz = (x+y)(x+z)
-$$
-                  |
-| Demorgan's      | 
-
-$$
-\overline{x+y} = \bar x \cdot \bar y \\
-\overline{x \cdot y} = \bar x + \bar y
-
-$$
- |
+| Complementation | $$\bar0 = 1 \\ \bar1 = 0 \\ \bar{\bar{x}} = x$$              |
+| and             | $$x \cdot 1 = x \\ x \cdot 0 = 0 \\ x \cdot x = x \\ x \cdot \bar x = 0$$|
+| or              | $$x + 0 = x \\ x + 1 = 1 \\ x + x = x \\ x + \bar x = 1$$    |
+| commutative     | $$x + y = y + x \\ xy = yx$$                                 |
+| Associative     | $$x+(y+z) = (x+y)+z \\ x(yz) = (xy) z$$                      |
+| Distributive    | $$x(y+z) = xy + xz \\ x + yz = (x+y)(x+z)$$                  |
+| Demorgan's      | $$\overline{x+y} = \bar x \cdot \bar y \\ \overline{x \cdot y} = \bar x + \bar y$$ |
 
 ## Duality Principle
 
@@ -73,7 +29,10 @@ Sum of Product
 
 Represented by NAND gate
 
-$f(a,b,c) = ab + bc \\ g(a,b,c) = a'b+b'c$
+$$
+f(a,b,c) = ab + bc \\
+g(a,b,c) = a'b + b'c
+$
 
 ### POS ($\pi$)
 

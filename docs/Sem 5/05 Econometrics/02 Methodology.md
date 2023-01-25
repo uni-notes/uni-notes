@@ -99,7 +99,6 @@ The real world is complex and continuously changing, but human knowledge is limi
 
 $$
 y = \beta_1 + \beta_2 x + u
-
 $$
 
 - $y$ is actual value of the dependent variable

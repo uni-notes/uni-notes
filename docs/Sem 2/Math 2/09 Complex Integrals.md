@@ -9,8 +9,8 @@ maximum value / upper bound of integral
 $$
 \left| \int_C f(z) \ dz \right|
 \le M \times L
-
 $$
+
 where
 
 - $M =$ max value of $f(z)$

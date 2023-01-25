@@ -18,8 +18,8 @@
 |     Term      | Meaning                     |                Formula                |
 | :-----------: | --------------------------- | :-----------------------------------: |
 | $h_\text{fg}$ | latent heat of vaporisation |    $h_g - h_f$<br />(or use table)    |
-|  $\Delta h$   | specific heat extracted     |         $m \times h_\rm{fg}$          |
-|      $x$      | Quality Fraction            | $\frac {m_\text{vap}}{m_\text{tot}}$ |
+|  $\Delta h$   | specific heat extracted     |         $m \times h_\text{fg}$          |
+|      $x$      | Quality Fraction            | $\frac{m_\text{vap}}{m_\text{tot}}$ |
 
 ### Compressed liquid
 
@@ -37,9 +37,9 @@ $$
 \begin{align}
 PV 
 &= mRT \\&= n R_u T \\
-m &= \frac {PV}{RT} \\
-\rho &= \frac {P}{RT} \\
-R &= \frac {R_u}{M}, M = \text{Molar Mass (kg/mol)} \\
+m &= \frac{PV}{RT} \\
+\rho &= \frac{P}{RT} \\
+R &= \frac{R_u}{M}, M = \text{Molar Mass (kg/mol)} \\
 R_u
 &= 0.8314 \ \mathrm{kJ/mol \cdot K} \\&= 8.314  \ \mathrm{J/mol \cdot K} \\
 \end{align}

@@ -31,7 +31,6 @@ $$
 \fbox 1
 \fbox 0
 \fbox 1
-
 $$
 
 Input and output can be serial/parallel

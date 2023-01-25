@@ -22,9 +22,7 @@ a set of programs
   Kernel means most important part of any computing system/programming environment
     - Kernel is system software which is part of operating system
     - Kernel provides interface between hardware and software components
-  
-
-$$
+ $$
 \fbox{
 System, Application Software
 $\fbox{
@@ -117,7 +115,7 @@ Each ISR requires 4 bytes
   followed by
 - 2 bytes of CS
 
-If the starting address of IVT is $\rm{00000_H}$, then the ending address is $\rm{003FF_H}$
+If the starting address of IVT is $\text{00000_H}$, then the ending address is $\text{003FF_H}$
 
 ![Explain the interrupt structure of 8086 with its IVT.](assets/HisVM1S.png)
 

@@ -219,7 +219,7 @@ Time between starting of execution of a program and its completion
    
    ![image-20230101134404020](assets/image-20230101134404020.png)
    
-   Answer $= \rm{4D6EA_H}$
+   Answer $= \text{4D6EA_H}$
 9. Differentiate between multi-programming & multi-processing
      - Multi-programming means running multiple programs, using only 1 processor
      - Multi-processing means running one or more programs, using multiple processors

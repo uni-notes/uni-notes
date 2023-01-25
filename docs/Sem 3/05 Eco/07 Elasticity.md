@@ -23,7 +23,7 @@ $$
 \begin{align}
 
 e_x^p
-%&= \frac{(x' - x)/x}{(p' - p)/p} \\&= \frac{\% \Delta x}{\% \Delta p} \\&= \frac {\color{red} \Delta x/x}{\color{orange} \Delta p/p} \\
+%&= \frac{(x' - x)/x}{(p' - p)/p} \\&= \frac{\% \Delta x}{\% \Delta p} \\&= \frac{\color{red} \Delta x/x}{\color{orange} \Delta p/p} \\
 &= \frac{\color{red} \Delta x}{\color{orange} \Delta p}
 \frac{\color{orange} p}{\color{red}{x}}
 \end{align}
@@ -54,7 +54,7 @@ $\pi_1 = f_1(R, \dots), \pi_2 = f_2(R, \dots),$ where
 - R = revenue (incorporates pricing of both companies)
 
 Now
-- if $\frac {\delta \pi_2}{\delta \pi_1} = 0,$ perfectly competitive market
+- if $\frac{\delta \pi_2}{\delta \pi_1} = 0,$ perfectly competitive market
   the profits of one company is independent of the profits of another company
     - eg: agricultural farmers
 - else imperfect market
@@ -70,7 +70,7 @@ $$
 \begin{align}
 
 e_{x_1}^{p_2} 
-%&= \frac{(x' - x)/x}{(p' - p)/p} \\&= \frac{\% \Delta x_1}{\% \Delta p_2} \\&= \frac {\color{red} \Delta x_1/x_1}{\color{orange} \Delta p_2/p_2} \\
+%&= \frac{(x' - x)/x}{(p' - p)/p} \\&= \frac{\% \Delta x_1}{\% \Delta p_2} \\&= \frac{\color{red} \Delta x_1/x_1}{\color{orange} \Delta p_2/p_2} \\
 &= \frac{\color{red} \Delta x_1}{\color{orange} \Delta p_2}
 \frac{\color{orange} p_2}{\color{red}{x_1}}
 \end{align}
@@ -165,8 +165,7 @@ basically finding the relationship bw TR and demand
 
 $$
 TR = xp \\
-\frac {\partial (TR)}{\partial p} = x[e_x^{p} + 1]
-
+\frac{\partial (TR)}{\partial p} = x[e_x^{p} + 1]
 $$
 
 Changes in total revenue depends on
@@ -186,7 +185,7 @@ reduction in price is pointless, and increase in price is good for profits
 
 ### Unitary Elastic
 
-$|e| = 1 \to \frac {\partial (xp)}{\partial p} = 0$
+$|e| = 1 \to \frac{\partial (xp)}{\partial p} = 0$
 
 graph is vertical line parallel to price
 
@@ -237,7 +236,7 @@ $$
 \begin{align}
 
 e_x^m
-%&= \frac{(x' - x)/x}{(p' - p)/p} \\&= \frac{\% \Delta x}{\% \Delta m} \\&= \frac {\color{red} \Delta x/x}{\color{orange} \Delta m/m} \\
+%&= \frac{(x' - x)/x}{(p' - p)/p} \\&= \frac{\% \Delta x}{\% \Delta m} \\&= \frac{\color{red} \Delta x/x}{\color{orange} \Delta m/m} \\
 &= \frac{\color{red} \Delta x}{\color{orange} \Delta m}
 \frac{\color{orange} m}{\color{red}{x}}
 \end{align}
@@ -277,7 +276,7 @@ let $v$ be the value
 $$
 \begin{align}
 \% \text{ change}
-&= \frac {\Delta v}{v_\text{avg}} \\v'&= \frac{|\Delta v|}{
+&= \frac{\Delta v}{v_\text{avg}} \\v'&= \frac{|\Delta v|}{
 (v_1 + v_2)/2
 }
 \end{align}

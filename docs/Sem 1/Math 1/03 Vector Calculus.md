@@ -28,18 +28,18 @@ $r(t)$ is continuous @ $t = t_0$ if
 ## Derivative
 
 $$
-\frac {dr}{dt} =
-\lim_{\Delta t \to 0} \frac {
+\frac{dr}{dt} =
+\lim_{\Delta t \to 0} \frac{
 	\vec r(t + \Delta t) - \vec r(t)
 }{\Delta t}
 $$
 
 | Quantity     |                                |                             |
 | ------------ | ------------------------------ | --------------------------- |
-| Velocity     | $\frac {d \vec r}{d t}$        |                             |
-| Acceleration | $\frac {d \vec V}{d t}$        | $\frac {d^2 \vec r}{d t^2}$ |
+| Velocity     | $\frac{d \vec r}{d t}$        |                             |
+| Acceleration | $\frac{d \vec V}{d t}$        | $\frac{d^2 \vec r}{d t^2}$ |
 | Speed        | $|\vec V|$                 |                             |
-| Direction    | $\frac {\vec V}{\|\vec V\|}$ |                             |
+| Direction    | $\frac{\vec V}{\|\vec V\|}$ |                             |
 
 ### Note
 
@@ -47,10 +47,10 @@ Velocity = Speed $\times$ Direction
 
 The path of a particle is said to be smooth if
 
-1. $\frac {d \vec r}{d t} \ne 0$
-2. $\frac {d \vec r}{d t}$ is continuous
+1. $\frac{d \vec r}{d t} \ne 0$
+2. $\frac{d \vec r}{d t}$ is continuous
 
-If $\vec u$ is a vector of constant length, then $\vec u \cdot \frac {d \vec u}{d t} = 0$
+If $\vec u$ is a vector of constant length, then $\vec u \cdot \frac{d \vec u}{d t} = 0$
 (circle, perpendicular, cos 90 = 0)
 
 The path of a particle is gievn by eliminating the parameter $t$ from $x, y, z$
@@ -113,9 +113,9 @@ $$
 
 | Vector | Symbol |                                                              |                                 |
 | :--------------------------- | :------: | :----------------------------------------------------------: | :-----------------------------: |
-| Unit Tangent Vector          | $\hat T$ | $\frac{ \frac {d \vec r}{dt} }{ |\frac {d \vec r|{dt}} }$ | $\frac {\vec V}{|\vec V|}$ |
-| Principle Unit Normal Vector | $\hat N$ | $\frac{ \frac {d \vec T}{dt} }{ |\frac {d \vec T|{dt}} }$ |                                 |
-| Curvature <br />Rate of change in direction of curve, wrt arc length |   $k$    |                    $\frac{d \vec T}{d s}$                    | $\frac {1}{\|\vec V\|} \cdot |\frac {d \hat T|{dt}}$ |
+| Unit Tangent Vector          | $\hat T$ | $\frac{ \frac{d \vec r}{dt} }{ |\frac{d \vec r|{dt}} }$ | $\frac{\vec V}{|\vec V|}$ |
+| Principle Unit Normal Vector | $\hat N$ | $\frac{ \frac{d \vec T}{dt} }{ |\frac{d \vec T|{dt}} }$ |                                 |
+| Curvature <br />Rate of change in direction of curve, wrt arc length |   $k$    |                    $\frac{d \vec T}{d s}$                    | $\frac{1}{\|\vec V\|} \cdot |\frac{d \hat T|{dt}}$ |
 | Radius of Curvature | $\rho$ | $\frac 1 k$ |  |
 
 Curvature @ any point on a
@@ -129,7 +129,7 @@ If $\vec a = a_t \cdot \hat T + a_N \cdot \hat N$, then
 
 | Component  | Symbol |                        |                                    |
 | ---------- | :----: | :--------------------: | :--------------------------------: |
-| Tangential | $a_T$  | $\frac {d|V|}{dt}$ |                                    |
+| Tangential | $a_T$  | $\frac{d|V|}{dt}$ |                                    |
 | Normal     | $a_N$  |     $k |V|^2$      | $\sqrt{ |\vec a|^2 - {a_T}^2}$ |
 
 ### Note

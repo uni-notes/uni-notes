@@ -56,14 +56,11 @@ Autoregressive Moving Average Model
 ARMA$(p, q)$ model means that there are __ involved in the ARMA model
 
 - $p$ autoregressive lags
-- $q$ moving averages lags 
-
-$$
+- $q$ moving averages lags$$
 \text{ARMA}(p, q) =
 \sum_{i=1}^{p} \alpha_i y_{t-i} +
 \sum_{i=1}^{q} \beta_i u_{t-i} +
 u_t
-
 $$
 
 ## ARIMA Process
@@ -79,7 +76,6 @@ $$
 \sum_{i=1}^p \alpha_i \Delta^d y_{t-1} +
 \sum_{i=1}^q \beta_i u_{t-1} +
 u_t
-
 $$
 
 If $y_t$ is an integrated series of order($\textcolor{hotpink}{1}$), then we can use ARIMA$(1, \textcolor{hotpink}{1}, 1)$
@@ -87,7 +83,6 @@ If $y_t$ is an integrated series of order($\textcolor{hotpink}{1}$), then we can
 $$
 \Delta y_t =
 \alpha_1 y_{t-1} + \beta_1 u_{t-1} + u_t
-
 $$
 
 ## Box-Jenkins Decision Tree
@@ -165,7 +160,6 @@ Consider the following regression
 
 $$
 y_t = \alpha_1 x + u_t
-
 $$
 
 ## Spurious Regression
@@ -188,7 +182,6 @@ If $R^2 >$ DW Statistic
 
 $$
 y_t = \alpha_1 z_t + u_t
-
 $$
 
 | $y_t$ | $z_t$ | Conclusion                                                   |

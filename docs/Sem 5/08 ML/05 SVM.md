@@ -32,24 +32,17 @@ We can derive through linear-programming
 2. Find support vectors (points that are on border of other class)
 
 3. Find augmented vectors with bias = 1
-   
-
-$$
+   $$
    s_1 = \begin{pmatrix} 0 \\ 1 \end{pmatrix}
    \implies
    \tilde{s_1} = \begin{pmatrix} 0 \\ 1 \end{pmatrix}
-   
-
-$$
+   $$
    
 4. Find values of $\alpha$, assuming that
 
      - $+ve = +1$
      - $-ve = -1$
-
-   
-
-$$
+   $$
    \begin{align}
    \alpha_1 \tilde{s_1} \cdot \tilde{s_1} +
    \alpha_2 \tilde{s_2} \cdot \tilde{s_1} +
@@ -63,17 +56,12 @@ $$
    &= 1
    \end{align}
    
-
 $$
 
 5. Find $w_i$
-   
-
-$$
+   $$
    w_i =
-   
-
-$$
+   $$
    
 6. 
 

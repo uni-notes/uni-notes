@@ -88,7 +88,6 @@ For eg, long-term injury
 
 $$
 y_t = \beta_0 + \beta_1 y_{t-1} + \beta_2 B_t
-
 $$
 
 ### Trend
@@ -109,7 +108,6 @@ Model becomes
 
 $$
 y_t = \beta_0 + \beta_1 y_{t-1} + \beta_2 t
-
 $$
 
 ### Seasonality/Periodicity
@@ -127,7 +125,6 @@ Finance industry has ‘anomalies’
 
 $$
 y_t = \beta_0 + \beta_1 y_{t-1} + \beta_2 S_t
-
 $$
 
 ### Volatility
@@ -157,21 +154,15 @@ AutoRegressive Conditional Heteroschedacity models
 
 2. Calculate $\hat u_t$
 
-3. 
-
-$$
+3. $$
    y_t = u_t \implies \sigma^2 (y_t) = \sigma^2 (u_t)
    
-
 $$
 
 4. So our model becomes
-   
-
-$$
+   $$
    (u_t)^2 = \lambda_0 + \lambda_1 (u_{t-1})^2 + \dots
    
-
 $$
 
 5. 
@@ -190,7 +181,6 @@ $$
 
 $$
 y_t = \rho_1 y_{t-1} + \rho_2 y_{t-2} + u_t
-
 $$
 
 Here, $\rho_1$ and $\rho_2$ are partial-autocorrelation coefficient of $y_{t-1}$ and $y_{t-2}$ on $y_t$
@@ -235,7 +225,6 @@ Earlier past is less important compared to recent past. Less susceptible to perm
 $$
 y_t = \beta_1 y_{t-1} + u_t \\
 0 < |\beta_1| < 1
-
 $$
 
 This is basically a wave (for eg, sound-wave), and $\beta$ is basically the amplitude of the wave
@@ -316,7 +305,6 @@ $$
 
 $$
 E[(y_t - y_0)^2] = t \sigma^2
-
 $$
 
 Volatility increases over time
@@ -339,12 +327,10 @@ $$
 
 $$
 E(y_t) = t \beta_0 + y_0
-
 $$
 
 $$
 E[(y_t - t\beta_0 - y_0)^2] = t \sigma^2
-
 $$
 
 Volatility increases over time
@@ -369,7 +355,6 @@ $\beta_1$ is deterministic = stochastic = non-random
 
 $$
 E(y_t) = t \beta_0 + \beta_1 \sum_{i=1}^t i + y_0
-
 $$
 
 $$
@@ -377,7 +362,6 @@ E\Big[
 (y_t = t \beta_0 - \beta_1 \sum_{i=1}^t i - y_0 )^2
 \Big]
 = t \sigma^2
-
 $$
 
 #### Random Walk w/ drift and non-deterministic trend
@@ -453,7 +437,6 @@ If both $x_t$ and $y_t$ have equal trends, then no need to de-trend, as both the
 
 $$
 y_t = \textcolor{hotpink}{\beta_1} y_{t-1} + u_t
-
 $$
 
 | $\textcolor{hotpink}{\beta_1}$ | $\gamma$ | Process        |

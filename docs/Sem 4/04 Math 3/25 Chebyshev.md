@@ -11,9 +11,7 @@ $x = \pm 1$ are the regular singular points of $\eqref{de}$
 
 are solutions of Chebyshev DE
 
-Using Frobenius method near $x=1$, we get the solution 
-
-$$
+Using Frobenius method near $x=1$, we get the solution$$
 T_n = F \left( n, -n, \frac{1}{2}, \frac{1-x}{2} \right)
 \label{sol}
 $$
@@ -24,7 +22,6 @@ Using transformation $x=\cos \theta$ in $\eqref{de}$, we get another solution
 
 $$
 T_n = \cos(n \theta), \quad \theta = \cos^{-1}x
-
 $$
 
 ## Euler’s Theorem

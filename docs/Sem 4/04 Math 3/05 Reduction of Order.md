@@ -2,7 +2,6 @@
 
 $$
 F(x, y, y', y'') = 0
-
 $$
 
 This is for variable coefficients.
