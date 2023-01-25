@@ -343,9 +343,9 @@ Imagine an auction
 
 |              | Supply const       | Supply inc              | Supply dec              |
 | ------------ | ------------------ | ----------------------- | ----------------------- |
-| demand const | P same<br />Q same | P down<br />Q up        | P up<br />Q down        |
-| demand inc   | P up<br />Q up     | P ambiguous<br />Q up   | P up<br />Q ambiguous   |
-| demand dec   | P down<br />Q down | P down<br />Q ambiguous | P ambiguous<br />Q down |
+| demand const | P same<br />Q same | P ⬇<br />Q ⬆            | P ⬆<br />Q ⬇            |
+| demand inc   | P ⬆<br />Q ⬆       | P ambiguous<br />Q ⬆    | P ⬆<br />Q ambiguous    |
+| demand dec   | P ⬇<br />Q ⬇       | P ⬇<br />Q ambiguous    | P ambiguous<br />Q ⬇    |
 
 ambiguous –> it depends on the relative change bw the supply and demand
 
