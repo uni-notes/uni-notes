@@ -1,21 +1,21 @@
-site_url: https://AhmedThahir.github.io/Uni_Notes
+site_url: https://uni-notes.netlify.app
 site_name: Uni Notes
 site_author: Ahmed Thahir
 site_description: >-
-  Ahmed Thahir's notes taken over the years
+  Ahmed Thahir's notes taken over the years, now featuring others' as well :)
 # Repository
-repo_name: ahmedthahir/Uni_Notes
-repo_url: https://github.com/ahmedthahir/Uni_Notes
+repo_name: Uni Notes
+repo_url: https://github.com/uni-notes/uni-notes
 edit_uri: edit/main/docs/
 
 # Copyright
-# copyright: Copyright &copy; 2016 - 2023 Martin Donath
+# copyright: Copyright &copy; 2023 Ahmed Thahir
 
 # Configuration
 theme:
   name: material
+  custom_dir: overrides
   font: false
-  # custom_dir: material/.overrides
   features:
     # - announce.dismiss
     # - content.action.view
@@ -24,7 +24,7 @@ theme:
     - content.code.copy
     # - content.tabs.link
     - content.tooltips
-    # - header.autohide
+    - header.autohide
     # - navigation.expand
     - navigation.footer
     - navigation.indexes
@@ -56,14 +56,16 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: assets/favicon.png
+  logo: icons/logo-512.png
+  favicon: icons/logo-36.png
   icon:
     logo: logo
 
 # Plugins
 plugins:
   - search:
-      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+      lang: en
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;' #'[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - minify:
       minify_html: true
       minify_js: true
@@ -86,7 +88,8 @@ plugins:
         - CONTRIBUTING.md
 
 # Customization
-# extra:
+extra:
+  generator: false
 #   analytics:
 #     provider: google
 #     property: !ENV GOOGLE_ANALYTICS_KEY
@@ -145,14 +148,21 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
 
-extra_javascript:
-  - javascripts/mathjax.js
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+extra_css:
+  - stylesheets/custom.css
+  # - stylesheets/katex.min.css
+
+# extra_javascript:
+#   - javascripts/register_service_worker.js
+#   - javascripts/katex.min.js
+#   - javascripts/custom.js
+#   - javascripts/quicklink_lower_case.js
+
+  # - javascripts/mathjax.js
+  # - https://polyfill.io/v3/polyfill.min.js?features=es6
+  # - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  
   # - javascripts/tex-mml-chtml.js
   # - javascripts/mathjax_mhchem.js
   # - javascripts/mathjax_color.js
   # - javascripts/mathjax_cases.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-
-extra_css:
-  - stylesheets/styles.css

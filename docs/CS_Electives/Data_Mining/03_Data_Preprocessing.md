@@ -61,7 +61,7 @@ e[Evaluate results] -->|Increase Sample Size| s
 e -->|Best Result Obtained| st[/Stop/]
 ```
 
-![sample_evaluation](assets/sample_evaluation.svg){ loading=lazy }
+![sample_evaluation](../assets/sample_evaluation.svg){ loading=lazy }
 
 ### Data Augmentation
 
@@ -83,6 +83,30 @@ The new features are called as **Principal Components**
 - Linear combinations of original attributes
 - Perpendicular to each other
 - Capture maximum amount of variance of data
+
+(LDA is labelled data, PCA is for unlabelled data)
+
+### Steps
+
+1. Same steps as LDA (Linear Discriminant Analysis)
+
+2. Choose the best Principal Component
+
+3. $$
+   \begin{aligned}
+   P_{ij} &= {\text{PC}_i}^T
+   \begin{bmatrix}
+   x_j - \bar x \\
+   y_j - \bar y
+   \end{bmatrix} \\
+   i &= \text{Which PC we are using} \\
+   j &\in [1, n] \\   n &= \text{Sample Size}
+   \end{aligned}
+   $$
+
+4. Now use this $P$ vector as the new reduced dimension feature
+
+
 
 ### SVD
 

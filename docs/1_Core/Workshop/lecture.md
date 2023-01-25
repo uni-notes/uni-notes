@@ -8,9 +8,6 @@ Machining : The process of removing unwated material from the surface of a mater
 Forming : The process which involves the deformation of a substance by going beyond its yeild strength to obtain desired shape.  
 Powder Metallurgy : Fine powdered materials are pressed into desired shapes + heated and are placd in controlled environements to bond and get the finished product.  
 Joining : Two or more pieced are joined together to produce the required shape. Two types are permenant joining and temporary joining.   
-
----
-
 ## Ch2 Engineering Materials:
 
 Loading : Tensile Loading (pull) + Compressive Loading (Push)
@@ -35,9 +32,6 @@ Creep vs Fatigue :
 
 - Creep: Time-dependent failure due to prolonged time under load. 
 - Fatigue: Unexpected and sudden failure that can occur under the yield point.
-
----
-
 ## Ch3 Measurments in Manufacturing:
 
 Metrology : Science and process of ensuring the measurement meets specified degrees of both accuracy and precision. 
@@ -57,9 +51,6 @@ Precision : The closeness of two or measured values to each other.
 Tolerance : The permissible deviation of a dimension from the desired size is known as tolerance. 
 
 Surface Finish : The amount of geometric irregularities produced on the surface of a component during a manufacturing process.  
-
----
-
 ## Ch4 Material Removal Process:
 
 

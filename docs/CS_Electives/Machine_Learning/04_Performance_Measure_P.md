@@ -4,19 +4,19 @@ Cost/Loss Functions
 
 ### Regression
 
-|                  Metric                   |                           Formula                            | Preferred Value | About |
-| :---------------------------------------: | :----------------------------------------------------------: | :-------------: |:-------------:|
-|       MSE<br />(Mean Squared Error)       |        $\frac{1}{n} \sum_{i=1}^n (\hat y_i - y_i)^2$         |  $\downarrow$   ||
-|      MAE<br />(Mean Absolute Error)       |       $\frac{1}{n} \sum_{i=1}^n \| \hat y_i - y_i \|$        |  $\downarrow$   ||
-|      MAPE<br />(Mean Absolute Percentage Error)       |       $\frac{1}{n} \sum_{i=1}^n \| \frac{ \hat y_i - y_i }{y_i} \|$        |  $\downarrow$   ||
-|      WMAPE<br />(Weighted Mean Absolute Percentage Error)       |       $\frac{1}{n} \frac{ \sum_{i=1}^n \| \hat y_i - y_i \| }{\sum_{i=1}^n \| y_i \|}$        |  $\downarrow$   ||
-|    RMSE<br />(Root Mean Square Error)     |     $\sqrt{\frac{1}{n} \sum_{i=1}^n (\hat y_i - y_i)^2}$     |  $\downarrow$   |Penalizes outliers|
-|    RAE<br />(Relative Absolute Error)     | $\dfrac{\sum_{i=1}^n \| \hat y_i - y_i \|}{\sum_{i=1}^n \| \bar y - y_i \|}$ |  $\downarrow$   ||
-|    RSS<br />(Residual Sum of Squares)     | $\sum_{i=1}^n \left( y_i - \left( \beta_0 + \sum_{j=1}^m \beta_j x_{ij} \right) \right)^2$ |                 ||
-|     RSE<br />(Relative Square Error)      | $\dfrac{\sum_{i=1}^n  (\hat y_i - y_i)^2 }{\sum_{i=1}^n (\bar y - y_i)^2 }$ |                 ||
-| $R^2$<br />(Coefficient of Determination) |                       $1 - \text{RSE}$                       |   $\uparrow$    ||
-|                   Bayes                   |               Error incurred by an ideal model               |  $\downarrow$   ||
-|   SEE<br />(Standard Error of Estimate)   |          $\sqrt{\dfrac{ \sum(\hat y - y)^2}{n-2}}$           |  $\downarrow$   ||
+|                        Metric                        |                           Formula                            | Preferred Value |    Unit     |     Range     | Advantages<br />✅                          | Disadvantages<br />❌               | Comment |
+| :--------------------------------------------------: | :----------------------------------------------------------: | :-------------: | :---------: | :-----------: | ------------------------------------------ | ---------------------------------- | :------ |
+|            MAE<br />(Mean Absolute Error)            |       $\frac{1}{n} \sum_{i=1}^n \| \hat y_i - y_i \|$        |  $\downarrow$   | Unit of $y$ | $[0, \infty)$ | Insensitive to outliers                    | Does not penalize large deviations |         |
+|            MSE<br />(Mean Squared Error)             |        $\frac{1}{n} \sum_{i=1}^n (\hat y_i - y_i)^2$         |  $\downarrow$   | Unit of $y$ | $[0, \infty)$ | Penalizes large deviations                 | Sensitive to outliers              |         |
+|          RMSE<br />(Root Mean Square Error)          |                     $\sqrt{\text{MSE}}$                      |   Same as MSE   | Unit of $y$ | $[0, \infty)$ | Same as MSE                                | Same as MSE                        |         |
+|      MAPE<br />(Mean Absolute Percentage Error)      | $\frac{1}{n} \sum_{i=1}^n \| \frac{ \hat y_i - y_i }{y_i} \|$ |  $\downarrow$   |      %      | $[0, \infty)$ | Easy to understand                         | Division by 0 error when $y_i=0$   |         |
+| WMAPE<br />(Weighted Mean Absolute Percentage Error) | $\frac{1}{n} \frac{ \sum_{i=1}^n \| \hat y_i - y_i \| }{\sum_{i=1}^n \| y_i \|}$ |  $\downarrow$   |      %      | $[0, \infty)$ | Avoids the  division by zero error of MAPE |                                    |         |
+|          RAE<br />(Relative Absolute Error)          | $\dfrac{\sum_{i=1}^n \| \hat y_i - y_i \|}{\sum_{i=1}^n \| \bar y - y_i \|}$ |  $\downarrow$   |      %      | $[0, \infty)$ |                                            |                                    |         |
+|           RSE<br />(Relative Square Error)           | $\dfrac{\sum_{i=1}^n  (\hat y_i - y_i)^2 }{\sum_{i=1}^n (\bar y - y_i)^2 }$ |                 |      %      | $[0, \infty)$ |                                            |                                    |         |
+|          RSS<br />(Residual Sum of Squares)          | $\sum_{i=1}^n \left( y_i - \left( \beta_0 + \sum_{j=1}^m \beta_j x_{ij} \right) \right)^2$ |                 |             |               |                                            |                                    |         |
+|      $R^2$<br />(Coefficient of Determination)       |                       $1 - \text{RSE}$                       |   $\uparrow$    |  Unitless   |   $[0, 1]$    |                                            |                                    |         |
+|                        Bayes                         |               Error incurred by an ideal model               |  $\downarrow$   |             |               |                                            |                                    |         |
+|        SEE<br />(Standard Error of Estimate)         |          $\sqrt{\dfrac{ \sum(\hat y - y)^2}{n-2}}$           |  $\downarrow$   |             |               |                                            |                                    |         |
 
 Ideal model is one that making predictions from true distribution $P(x,y)$; even such a model incurs some error due to noise/overlap in the distributions
 
@@ -40,22 +40,14 @@ We don’t test the model on the same we trained it with, because it will give h
 
 Out-of-sample accuracy is the accuracy of the model when tested when never-before-seen data.
 
+Once the model is finalized, you should train your model with the testing data afterwards.
 
-|                     | Meaning               |
-| ------------------- | --------------------- |
-| Training evaluation | In sample testing     |
-| Validation          | Out of Sample Testing |
-| Testing evaluation  |                       |
 
-### Train-Validation-Test Split
-
-The training, validation, and test sets should be mutually-exclusive, to ensure good out-of-sample accuracy. Usually split it as 60%-20%-20%
-
-Then, after evaluation you should train your model with the testing data afterwards.
-
-The size of test set is important; small test set implies statistical uncertainty around the estimated average test error, and hence cannot claim algo A is better than algo B for given task
-
-However, this will not work well all the time, as this will be dependent; especially for realtime data, where the model is sensitive to the data.
+|                     | Type          | Purpose           |
+| ------------------- | ------------- | ----------------- |
+| Training evaluation | In Sample     | ❌                 |
+| Validation          | Out of Sample | Model tuning      |
+| Testing evaluation  | Out of Sample | Model performance |
 
 ### $k$-Fold Cross Validation
 
@@ -68,7 +60,7 @@ Used when dataset is too small, and hence difficult to divide dataset into a fix
 - $k-1$ groups are used to train and evaluated on remaining group
 - Take average of all performance scores
 
-![image-20230401152950610](assets/image-20230401152950610.png){ loading:lazy }
+![image-20230401152950610](../assets/image-20230401152950610.png){ loading:lazy }
 
 ## Bias & Variance
 
@@ -96,7 +88,7 @@ Generalization improves with size of training set, until a saturation point, aft
 | Parametric     | asymptote to an error value exceeding Bayes error           |
 | Non-Parametric | better generalization until best possible error is achieved |
 
-![image-20230401142609958](assets/image-20230401142609958.png)
+![image-20230401142609958](../assets/image-20230401142609958.png)
 
 ## Fitting & Capacity
 
@@ -109,7 +101,7 @@ We can control the fitting of a model, by changing hypothesis space, and hence c
 | Variance              | ⬇️                                                            | ⬇️                   | ⬆️                                                            |
 | Steps to<br />address | Increase model complexity<br />Increase training data<br />Remove noise from data<br />Inc no of features |                     | Cross-Validation<br />More training data<br />Feature Reduction<br />Early Stopping<br />Regularization |
 
-![image-20230401140853876](assets/image-20230401140853876.png)
+![image-20230401140853876](../assets/image-20230401140853876.png)
 
 The capacity of a model increases with increased [degree of polynomial](#degree-of-polynomial)
 
@@ -123,10 +115,14 @@ This is done by adding a penalty term in the error function.
 
 |                |                   $L_1$                   |                    $L_2$                    | $L_3$                                                        |
 | -------------- | :---------------------------------------: | :-----------------------------------------: | ------------------------------------------------------------ |
-| Common Name    |                   Lasso                   |                    Rigde                    | Lasso-Ridge                                                  |
+| Common Name    |                   Lasso                   |                    Rigde                    | Elastic Net                                                  |
 |                |     Eliminates feature(s) completely      | Reduce/Normalize the effect of each feature |                                                              |
 |                |        Helps in feature selection         |         Scale down the coefficients         |                                                              |
 | Error Function | $RSS + \lambda \sum_{j=1}^m \|\beta_i \|$ |   $RSS + \lambda \sum_{j=1}^m \beta_i ^2$   | $RSS + \lambda_1 \sum_{j=1}^m  + \lambda_2 \sum_{j=1}^m \beta_i ^2$ |
+
+Contours of where the penalty is equal to 1 for the three penalties L1, L2 and elastic-net
+
+![image](https://github.com/uni-notes/uni-notes/../assets/94914628/a3bde8dd-8d3d-4b34-b5b8-cfee29c7c464)
 
 ### Bias-Variance Tradeoff
 
@@ -136,7 +132,7 @@ This is done by adding a penalty term in the error function.
 
 Relationship between error & capacity is usually U-Shaped
 
-![image-20230401141618389](assets/image-20230401141618389.png)
+![image-20230401141618389](../assets/image-20230401141618389.png)
 
 ## Degree of Polynomial
 

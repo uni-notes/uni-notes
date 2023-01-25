@@ -2,11 +2,11 @@
 
 {% block extrahead %}
 <link rel="manifest" href="{{ 'manifest.json' | url }}">
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 {% endblock %}
 
-{% block header %}
-  {{super()}}
+{% block scripts %}
+{{super()}}
+
 <script>
 
 	function load_style(href) {

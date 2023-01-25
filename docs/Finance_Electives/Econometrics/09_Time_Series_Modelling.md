@@ -209,7 +209,9 @@ where
 
 ## Simulation Models
 
-### Output Error/Simulation Model
+We do not use the observed values of the process as inputs
+
+### FIR Model
 
 Only using input features
 
@@ -220,9 +222,9 @@ $$
 
 $k$ is the no of lagged input features
 
-### Output Error Model
+### Output Error Model/Recursive Forecasting
 
-Using past estimations also
+FIR model using past estimations also. Ideally you should develop a model for this (infinite-step forecasting), and then work on using the same model for multi-step forecasting.
 
 $$
 y_t =

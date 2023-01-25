@@ -18,11 +18,13 @@ A game tree is a tree where nodes of the tree are the game states and Edges of t
 | Partially Observable |      Battleship    |       Card games   |
 
 ### Zero Sum game
+
 - In Zero-sum game each agent's gain or loss of utility is exactly balanced by the losses or gains of utility of another agent.  
 - One player of the game tries to maximize one single value, while other player tries to minimize it.
 - Examples are tic tac toe and chess.
 
 ### Mini-Max Algorithm
+
 - It is a method to determine optimal move.  
 - Utility of each node is computed bottom up from leaves toward root.  
 - At each MAX node, pick the move with maximum utility.  
@@ -30,16 +32,17 @@ A game tree is a tree where nodes of the tree are the game states and Edges of t
 
 *NOTE - We assume that the opponent we face behaves optimally, and will always perform the move that is worst for us.*
 
-![Mini-max](assets/mini-max.png)
+![Mini-max](../assets/mini-max.png)
 
 Minimax is only for deterministic, fully observable games  
 
 Mini-max algorithm is complete and optimal
 
 ### Alpha Beta Pruning
+
 - modified version of mini-max
 - Used to reduce branching factor hence handles complex games as well 
 - Maintain two parameters in depth-first search, α, the value of the best (highest) value found so far for MAX along any path and β, the best (lowest) value found along any path for MIN.
 - Prune a subtree once it is known to be worse than the current α or β.
 
-![Alpha beta pruning](assets/alpha-beta-pruning-steps.png)
+![Alpha beta pruning](../assets/alpha-beta-pruning-steps.png)
