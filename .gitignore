@@ -1,0 +1,13 @@
+.cache
+.DS_Store
+# File types to ignore
+*.exe
+*.bin
+*.jar
+*.war
+*.mp3
+*.mp4
+# Directories to ignore
+target/
+.build/
+.env/

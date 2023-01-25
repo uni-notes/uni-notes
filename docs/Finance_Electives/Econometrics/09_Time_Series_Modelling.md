@@ -4,6 +4,17 @@ For all the following models
     - Else, use non-stationary $\to$ stationary transformation
 - We drop parameters if they are significantly equal to 0
 
+## Simple/Baseline Models
+
+| Method         |                                                              | $\hat y_{t+h}, \ h>=0$                                | Appropriate for                                              |
+| -------------- | ------------------------------------------------------------ | ----------------------------------------------------- | ------------------------------------------------------------ |
+| Average        | Average of past values                                       | $\overline{ \{ y_{t-k} \} }$                          |                                                              |
+| Naive          | Last value                                                   | $y_{t-1}$                                             | Random walk process<br />(Consequence of efficient market hypothesis) |
+| Seasonal Naive | Last seasonal value                                          | ${\large y}_{t+h-mk}$<br />where $m=$ seasonal period |                                                              |
+| Drift Method   | Last value plus average change<br />Equivalent to extrapolating line between first and last point | ${\large y}_{t-1} + \overline{ \{ y_t - y_{t-1} \} }$ |                                                              |
+
+Where $k > 0$
+
 ## AR Model/Process
 
 AutoRegressive Model
@@ -141,15 +152,6 @@ Range = $\pm 2\sigma$
 
 It shows the deviations upto which the forecast is expected to deviate
 
-## Inflation-Welfare Cost Relation
-
-![inflation_welfare_costs](assets/inflation_welfare_costs.svg){ loading=lazy }
-
-|                      | Optimal Inflation Rate |
-| -------------------- | ---------------------- |
-| Developed Countries  | 2%                     |
-| Developing Countries | 4-6%                   |
-
 ## VAR
 
 Vector AutoRegression
@@ -209,7 +211,9 @@ where
 
 ## Simulation Models
 
-### Output Error/Simulation Model
+We do not use the observed values of the process as inputs
+
+### FIR Model
 
 Only using input features
 
@@ -220,9 +224,9 @@ $$
 
 $k$ is the no of lagged input features
 
-### Output Error Model
+### Output Error Model/Recursive Forecasting
 
-Using past estimations also
+FIR model using past estimations also. Ideally you should develop a model for this (infinite-step forecasting), and then work on using the same model for multi-step forecasting.
 
 $$
 y_t =

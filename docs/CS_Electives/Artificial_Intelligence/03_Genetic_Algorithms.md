@@ -1,6 +1,4 @@
-## Genetic Algorithms
-
-It is a search technique used in computing to find true or approximate solutions to optimization and search problems.
+Search technique used in computing to find true or approximate solutions to optimization and search problems.
 
 - Individual - Any possible solution
 - Population - Group of all individuals
@@ -8,7 +6,7 @@ It is a search technique used in computing to find true or approximate solutions
 - Trait - Possible features of an individual
 - Genome - Collection of all traits for an individual
 
-### Algorithm : 
+## Algorithm
 
 1. Selection  
 Choosing a subset of individuals to be mutated and copied over to next generation  

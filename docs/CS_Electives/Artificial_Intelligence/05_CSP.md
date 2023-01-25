@@ -12,11 +12,11 @@ CSPs are represented as constraint graphs,where nodes represent variables and ed
 
 Graph coloring problem :  
 
-![CSP problem](assets/CSP.png)  
+![CSP problem](../assets/CSP.png)  
 
 Corresponding constraint graph :  
 
-![CSP graph](assets/CSP_Graph.png)
+![CSP graph](../assets/CSP_Graph.png)
 
 ## Solving CSPs
 

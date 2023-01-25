@@ -44,10 +44,7 @@ Check for the following -
 - Avoid Cliches, Jargons, Foreign Words 
 - Avoid gender biased words (mankind --> humanity)
 - Avoid too many nouns (Window Sash Installation Company --> the company that installs window sashes)
-
----
-
-## Effective Sentence Making
+## Questionnaires:
 
 - Open Ended ( How would you describe this flavor of ice cream? ) 
 - Close Ended ( Do you think this ice cream is too rich in flavor? )
@@ -57,27 +54,9 @@ Check for the following -
 - Short Answer 
 - Scale
 
-1. Should not be too connotative (negative) 
-2. Precise (mention names) 
-3. Concise (difficult to approximate --> estimate) 
-4. Plainness (don't use complicated words) 
-5. Avoid Cliches, Jargons, Foreign Words 
-6. Avoid gender biased words (mankind --> humanity)
-7. Avoid too many nouns (Window Sash Installation Company --> the company that installs window sashes)
-
-## Questionnaires
-
-1. Open Ended ( How would you describe this flavor of ice cream? ) 
-2. Close Ended ( Do you think this ice cream is too rich in flavor? )
-3. Multiple Choice 
-4. Checklist
-5. Ranking 
-6. Short Answer 
-7. Scale
-
-Misc: <br>
-- Double Barreled Question : How have teachers and students reacted to the new 30min lunch break? <br>
-- Leading Question : Do you think the new cafeteria lunch menu offers a better variety of healthy foods than the old one?<br>
-- Minimum Number of Respondents is Total Size / 10<br>
+Misc points to remember: 
+- Double Barreled Question : How have teachers and students reacted to the new 30min lunch break? 
+- Leading Question : Do you think the new cafeteria lunch menu offers a better variety of healthy foods than the old one?
+- Minimum Number of Respondents is Total Size / 10
 
 ---

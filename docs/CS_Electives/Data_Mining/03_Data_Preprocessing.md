@@ -61,7 +61,7 @@ e[Evaluate results] -->|Increase Sample Size| s
 e -->|Best Result Obtained| st[/Stop/]
 ```
 
-![sample_evaluation](assets/sample_evaluation.svg){ loading=lazy }
+![sample_evaluation](../assets/sample_evaluation.svg){ loading=lazy }
 
 ### Data Augmentation
 
@@ -70,23 +70,13 @@ e -->|Best Result Obtained| st[/Stop/]
 
 ## Dimensionality Reduction Algorithms
 
-### PCA
-
-Principal Component Analysis
-
-Useful for continuous-valued attributes
-
-Uses concepts of linear algebra, such as matrices, eigen values, eigen vectors
-
-The new features are called as **Principal Components**
-
-- Linear combinations of original attributes
-- Perpendicular to each other
-- Capture maximum amount of variance of data
-
-### SVD
-
-Singular Value Decomposition
+| Technique               | Reduce dimensionality while              | Learning Type | No Hyperparameter Tuning Required | Fast | Deterministic | Linearity  |
+| ----------------------- | ---------------------------------------- | ------------- | --------------------------------- | ---- | ------------- | ---------- |
+| LDA                     | Separating pre-known classes in the data | Supervised    | ✅                                 | ✅    | ✅             | Linear     |
+| PCA/<br />SVD using PCA | Generating clusters previously not known | Unsupervised  | ✅                                 | ✅    | ✅             | Linear     |
+| MDS                     | ^^                                       | Unsupervised  | ❌                                 | ❌    | ❌             | Non-Linear |
+| t-SNE                   | ^^                                       | Unsupervised  | ❌                                 | ❌    | ❌             | Non-Linear |
+| UMAP                    | ^^                                       | Unsupervised  | ❌                                 | ✅    | ❌             | Non-Linear |
 
 ## Feature Selection
 
@@ -201,9 +191,46 @@ Then convert using binarization. But, why?
 
 ## Attribute Tranformation
 
-|                        |                             $x'$                             |                                                              |        Property         |
-| ---------------------- | :----------------------------------------------------------: | ------------------------------------------------------------ | :---------------------: |
-| Simple                 |                      $x^2, \log x, \| x \|$                      |                                                              |                         |
-| Min-Max Normalization  | $\frac{x - x_{\text{min}}}{x_{\text{max}} - x_{\text{min}}}$ | $\frac{x - x_{\text{min}}}{x_{\text{max}} - x_{\text{min}}} * ({\max}_{\text{new}} - {\min}_{\text{new}}) + {\min}_{\text{new}}$<br />I didn’t exactly understand this |     $0 \le x \le 1$     |
-| Standard Normalization |                    $\frac{x-\mu}{\sigma}$                    |                                                              | $\mu' = 0, \sigma' = 1$ |
+|                        |                             $x'$                             |        Property         |
+| ---------------------- | :----------------------------------------------------------: | :---------------------: |
+| Simple                 |                    $x^2, \log x, \vert  x  \vert$                    |                         |
+| Min-Max Normalization  | $\frac{x - x_{\text{min}}}{x_{\text{max}} - x_{\text{min}}}$ |     $0 \le x \le 1$     |
+| Standard Normalization |                    $\frac{x-\mu}{\sigma}$                    | $\mu' = 0, \sigma' = 1$ |
+
+## Target Transformation
+
+### Box-Cox/Bickel-Doksum Transformations
+
+$$
+w_t = \begin{cases}
+\log \vert y_t \vert, & \lambda = 0 \\
+\dfrac{\text{sign}(y_t) \vert y_t \vert ^\lambda - 1}{\lambda}, & \lambda \ne 0
+\end{cases}
+$$
+
+| $\lambda$      | Transformation                         |
+| -------------- | -------------------------------------- |
+| 1              | None                                   |
+| $\dfrac{1}{2}$ | Square root plus linear transformation |
+| 0              | Natural log                            |
+| -1             | Inverse plus 1                         |
+
+### Back Transformation
+
+$$
+y_t = \begin{cases}
+\exp(w_t), & \lambda = 0 \\
+\text{sign}(\lambda w_t + 1) \cdot {\vert \lambda w_t + 1 \vert}^{1/\lambda}, & \lambda \ne 0
+\end{cases}
+$$
+
+- Back-transformed point forecasts are medians
+- Back-transformed Prediction Intervals have correct coverage
+
+$$
+E[y_t] = \begin{cases}
+\exp(\mu) \left[1 + \dfrac{\sigma^2}{2} \right], & \lambda = 0 \\
+(\lambda \mu + 1)^{1/\lambda} \left[1 + \dfrac{\sigma^2 (1-\lambda)}{2(\lambda \mu + 1)^2} \right], & \lambda \ne 0
+\end{cases}
+$$
 

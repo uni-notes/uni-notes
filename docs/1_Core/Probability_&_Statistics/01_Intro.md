@@ -1,10 +1,22 @@
+# Introduction
+
+## 2 Approaches
+
+| Bayesian | Frequentist |
+| -------- | ----------- |
+|          |             |
+
 ## Formulae
 
 $$
 \begin{aligned}
-P(S) &=1 \\ 
-0 \le P(A) &\le 1\\P(A') &= 1 - P(A) \\P(A \cup B) &= P(A) + P(B) - P(A \cap B) \\P(A \cup B \cup C) &= P(A) + P(B) + P(C) - P(A \cap B) - P(B \cap C) - P(A \cap C) + P(A \cap B \cap C) \\
-P(A \cap B') &= P(A) - P(A \cap B) \\&= P(A \cup B) - P(B)
+P(S) &=1 \\
+0 \le P(A) &\le 1 \\
+P(A') &= 1 - P(A) \\
+P(A \cup B) &= P(A) + P(B) - P(A \cap B) \\
+P(A \cup B \cup C) &= P(A) + P(B) + P(C) - P(A \cap B) - P(B \cap C) - P(A \cap C) + P(A \cap B \cap C) \\
+P(A \cap B') &= P(A) - P(A \cap B) \\
+&= P(A \cup B) - P(B)
 \end{aligned}
 $$
 
@@ -34,3 +46,4 @@ $$
 $$
 P(A|B) = \frac{P(A \cap B)}{P(B)} \quad P(B) \ne 0
 $$
+

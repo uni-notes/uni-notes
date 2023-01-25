@@ -1,0 +1,4 @@
+| Input  | Output |
+| ------ | ------ |
+| Buffer | Latch  |
+

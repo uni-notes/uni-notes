@@ -1,0 +1,6 @@
+mkdocs-material
+mkdocs-minify-plugin
+mkdocs-jupyter
+git+https://github.com/ojacques/mkdocs-git-committers-plugin-2@60b1a7c
+lxml
+mkdocs-git-revision-date-localized-plugin
