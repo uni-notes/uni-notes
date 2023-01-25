@@ -1,0 +1,90 @@
+{
+  "main": {
+    "id": "8425a2f6deb6eb41",
+    "type": "split",
+    "children": [
+      {
+        "id": "0ea51e10500654cf",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2aeca9709e7798a1",
+    "type": "split",
+    "children": [
+      {
+        "id": "d1d0de5d2863c213",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f4938946b0cf7555",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "ba7cd97f6db6f13b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "cce4538375729103",
+    "type": "split",
+    "children": [
+      {
+        "id": "9c0feb70a2ceff6b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "68cbdf98d41f7238",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "0ea51e10500654cf",
+  "lastOpenFiles": [
+    "Untitled.md",
+    "03 Digital/01.md",
+    "03 Digital/00.md",
+    "03 Digital/28 Counters.md",
+    "03 Digital/29 Memory.md",
+    "04 Discrete/Report for Discrete Structures.md",
+    "01 OOP/02.md",
+    "01 OOP/19.md",
+    "01 OOP/17.md",
+    "01 OOP/16.md"
+  ]
+}
