@@ -21,7 +21,7 @@ $$
 \underbrace{\text{MOV}}_\text{Opcode}
 }
 \ \
-\textcolor{green}{
+\textcolor{hotpink}{
 \underbrace{\text{dest, src}}_\text{Operands}
 }
 $$

@@ -33,8 +33,8 @@ $$
 
 $$
 \begin{align}
-\frac{1}{D-m} R(x) &= \textcolor{orange}{e^{mx}} \int R(x) \cdot \textcolor{green}{e^{-mx}} \cdot dx \\
-\frac{1}{D+m} R(x) &= \textcolor{green}{e^{-mx}} \int R(x) \cdot \textcolor{orange}{e^{mx}} \cdot dx
+\frac{1}{D-m} R(x) &= \textcolor{orange}{e^{mx}} \int R(x) \cdot \textcolor{hotpink}{e^{-mx}} \cdot dx \\
+\frac{1}{D+m} R(x) &= \textcolor{hotpink}{e^{-mx}} \int R(x) \cdot \textcolor{orange}{e^{mx}} \cdot dx
 \end{align}
 $$
 

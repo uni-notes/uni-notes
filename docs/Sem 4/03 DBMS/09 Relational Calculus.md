@@ -30,7 +30,7 @@ $$
 \underbrace{
 	\exists b \in \text{borrower} \land \exists l \in \text{loan}
 }_\text{from}} (\\&
-\textcolor{green}{
+\textcolor{hotpink}{
 \underbrace{t.cn = b.cn}_\text{select}}
 ,\\&
 \textcolor{orange}{
@@ -47,7 +47,7 @@ $$
 \{
 \textcolor{purple}{\underbrace{<l, b, a>}_\text{select}}
 |
-\textcolor{green}{\underbrace{<l, b, a> \in \text{loan}}_\text{from}}
+\textcolor{hotpink}{\underbrace{<l, b, a> \in \text{loan}}_\text{from}}
 \and
 \textcolor{orange}{\underbrace{a > 1200}_\text{where}}
 \}

@@ -93,8 +93,8 @@ n, &  n = \text{odd} \\2n, & n = \text{even}
 \end{cases} \\
 \text{Axis of first petal } \theta &= 
 \begin{cases}
-0 &  r = a \textcolor{red}{\cos}(n \theta) \\
-\dfrac \pi {2n} & r = a \textcolor{red}{\sin} (n \theta)
+0 &  r = a \textcolor{orange}{\cos}(n \theta) \\
+\dfrac \pi {2n} & r = a \textcolor{orange}{\sin} (n \theta)
 \end{cases} \\
 \text{Length of petals} &= a \\
 \text{Angular Gap between axes of petals} &= \frac{2 \pi}{N}

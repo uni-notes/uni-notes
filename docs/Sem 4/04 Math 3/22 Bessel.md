@@ -31,10 +31,10 @@ $$
 
 $$
 \begin{align}
-J_\frac{1}{2}(x) = \sin x \sqrt{
+J_\frac{1}{2}(x) &= \sin x \sqrt{
 	\frac{2}{\pi x}
 } \\
-J_\frac{-1}{2}(x) = \cos x \sqrt{
+J_\frac{-1}{2}(x) &= \cos x \sqrt{
 	\frac{2}{\pi x}
 } \\
 J_{p-1}(x) + J_{p+1}(x) &= \frac{2p}{x} J_p(x)

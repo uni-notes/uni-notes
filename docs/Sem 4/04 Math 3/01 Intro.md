@@ -63,7 +63,7 @@ $$
 
 ## Integration Rules
 
-[Integration.md](..\..\nablae 12\Math\Integration.md)
+[Grade 12 Integration Rules](..\..\Grade 12\Math\02 Integration.md)
 
 ## Transposed Differential
 

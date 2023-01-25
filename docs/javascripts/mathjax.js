@@ -3,14 +3,16 @@ window.MathJax = {
 	loader: {load: [
 		'[tex]/color',
 		'[tex]/cases',
-		'[tex]/mhchem'
+		'[tex]/mhchem',
+		'[tex]/textmacros'
 	]},
   tex: {
 		packages: {
 			'[+]': [
 				'color',
 				'cases',
-				'mhchem'
+				'mhchem',
+				'textmacros'
 		]
 	},
     inlineMath: [
