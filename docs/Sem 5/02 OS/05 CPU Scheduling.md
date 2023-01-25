@@ -3,7 +3,7 @@
 Note that in this course, we are ==neglecting the effect of context switch==. In reality, context switch time is around $5 \micro s$
 
 - Wait $\to$ Ready
-  - Higher priority process enters Ready Queue
+    - Higher priority process enters Ready Queue
 - Current Process in the CPU goes to wait state
 - Current process terminates
 - Current process is timed-out
@@ -72,13 +72,13 @@ Ready Queue = FIFO Queue
 ### Properties
 
 - Non-interactive
-  - Not applicable for time-sharing systems
+    - Not applicable for time-sharing systems
 - Non-Preemptive Scheduling
 - High average waiting time
 - Convey effect?
   Many times resources are idle
-  - CPU
-  - I/O devices
+    - CPU
+    - I/O devices
 ## SJF
 
 Shortest Job First
@@ -89,10 +89,10 @@ Pick the process with the lowest CPU **remaining** burst time (at the moment of 
 
 - **Preemptive **(SRTF)
   Shortest remaining time first (makes sense for partially-executed programs)
-  - Reschedule every time a new task enters ready queue
+    - Reschedule every time a new task enters ready queue
   
 - **Non-Preemptive**
-  - Only prioritize once a process is completed
+    - Only prioritize once a process is completed
 ## Priority Scheduling
 
 Processes are scheduled based on a priority number alone (Burst time not involved in the scheduling calculation)
@@ -212,7 +212,7 @@ P3: 134, 162
 1. Maintain one ready queue for each type of process
 2. Process are usually classified into different types, using one of the following methods
 
-   - Method 1
+     - Method 1
 
      - foreground process
        - interactive
@@ -221,7 +221,7 @@ P3: 134, 162
      - background process
        - batch process
 
-   - Method 2
+     - Method 2
 
      - Real-Time Process
 
@@ -233,13 +233,13 @@ P3: 134, 162
 3. Assign fixed priorities to each queue
 4. Apply an appropriate **within-queue scheduling** algo
 5. Apply an appropriate **between-queue scheduling** algo
-   - Fixed-priority pre-emptive scheduling
+     - Fixed-priority pre-emptive scheduling
      - Entry of a new process into a higher priority queue will cause pre-emption
      - The higher priority ones have short burst time, so no need to worry about user delay
      - Low-priority queues do not execute unless higher priority queues are empty
        - Hence, there is possibility of starvation of batch processes
      
-   - Time Slice Scheduling
+     - Time Slice Scheduling
      - Round Robin between queues
      - Each group is given a certain amount of CPU Time
      - For eg

@@ -104,16 +104,16 @@ $$
 
 - $y$ is actual value of the dependent variable
 - $\beta_1 + \beta_2 x$ is the estimated/forecasted/predicted component of $y$
-  - $B_1$ is the value of $y$ even when $x=0$
+    - $B_1$ is the value of $y$ even when $x=0$
     It is the value of $x$, that is independent of $x$
     - For eg, consumption can be non-zero even if income is 0 (called as autonomous consumption spending)
 
-  - $B_2$ is the change in $y$ for a unit change in $x$
+    - $B_2$ is the change in $y$ for a unit change in $x$
 
 - $u$ is the residual/error/disturbance/unexplained component of $y$
-  - difference between estimated value and actual value
-  - component not explained by your initial mathematical model in terms of only $x$
-  - it is different for each point
+    - difference between estimated value and actual value
+    - component not explained by your initial mathematical model in terms of only $x$
+    - it is different for each point
 
 | Nature of $u$ | Accepted? | Note                                                         |
 | ------------- | :-------: | ------------------------------------------------------------ |
@@ -145,17 +145,17 @@ To estimate numerical values, we need data.
 Basics - Refer other notes
 
 - Cross Sectional Data
-  - Marks of all students in 1 year
+    - Marks of all students in 1 year
 
 - Time Series Data
-  - Marks of 1 student from all years
+    - Marks of 1 student from all years
 
 - Panel Data
-  - Marks of all students from all years
+    - Marks of all students from all years
 
 - Scale Data
-  - Qualitative data
-  - Ratings: Good-Poor
+    - Qualitative data
+    - Ratings: Good-Poor
 ### Sources of Data
 
 #### Primary Data
@@ -182,18 +182,18 @@ This is because, monthly data does not capture small changes appearing between 2
 We must check the following properties of the data
 
 - Verify Characteristics
-  - Mean
-  - Standard Deviation
-  - Skewness
+    - Mean
+    - Standard Deviation
+    - Skewness
 - Ensure Reliability
-  - Sensors are working correctly
-  - Calculations were made correctly
+    - Sensors are working correctly
+    - Calculations were made correctly
 
 - No Bias
-  - There should be no researcher bias
+    - There should be no researcher bias
     - Picking a particular sample
 
-  - Ensuring participants of survey have been unbiased
+    - Ensuring participants of survey have been unbiased
     - For ex: Satisfaction of students in UAE
 
 ## Sample Estimation

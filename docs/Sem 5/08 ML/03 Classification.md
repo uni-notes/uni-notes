@@ -25,9 +25,9 @@ $$
 #### Cases to use
 
 1. For 2 classes
-   - 0/1
-   - Yes/No
-   - +ve/-ve
+     - 0/1
+     - Yes/No
+     - +ve/-ve
 2. Probability of prediction is required
 3. Data is linearly-seperable
 4. Understand impact of factor?
@@ -70,7 +70,6 @@ $$
 } =
 \frac{1}{m}
 \sum (\hat y - y) x
-
 \label{idk1}
 $$
 
@@ -79,13 +78,14 @@ $$
 \nabla J(\theta)
 & \approx 1 \\
 \begin{bmatrix}
-\frac{ \partial J(\theta) }{\partial \theta_1} \\\frac{ \partial J(\theta) }{\partial \theta_2} \\\textcolor{orange}{
+\frac{ \partial J(\theta) }{\partial \theta_1} \\
+\frac{ \partial J(\theta) }{\partial \theta_2} \\
+\textcolor{orange}{
 	\frac{ \partial J(\theta) }{\partial \theta_0}
 }
 \end{bmatrix}
 &\approx 1
 \end{align}
-
 \label{idk2}
 $$
 
@@ -94,7 +94,9 @@ Using $\eqref{idk1}$ and $\eqref{idk2}$
 $$
 \nabla J(\theta) =
 \begin{bmatrix}
-\Big(\sigma(\theta^T x) - y \Big) x_1 \\\Big(\sigma(\theta^T x) - y \Big) x_2 \\\Big(\sigma(\theta^T x) - y \Big)
+\Big(\sigma(\theta^T x) - y \Big) x_1 \\
+\Big(\sigma(\theta^T x) - y \Big) x_2 \\
+\Big(\sigma(\theta^T x) - y \Big)
 \end{bmatrix}
 $$
 
@@ -215,8 +217,8 @@ It is also used a pre-processing step for ML application
 #### Goals
 
 - Find directions along which the classes are best-separated (ie, increase discriminatory information)
-  - Maximize inter-class distance
-  - Minimize intra-class distance
+    - Maximize inter-class distance
+    - Minimize intra-class distance
 - It takes into consideration the scatter(variance) **within-classes** and **between-classes**
 
 #### Steps
@@ -225,9 +227,9 @@ It is also used a pre-processing step for ML application
 
    $S_w = S_1 + S_2$
 
-   - $S_1 \to$ Covariance matrix for class 1
+     - $S_1 \to$ Covariance matrix for class 1
 
-   - $S_2 \to$ Covariance matrix for class 2
+     - $S_2 \to$ Covariance matrix for class 2
 
    
 
@@ -289,7 +291,7 @@ $$
 $$
 
 - $\lambda =$ Eigen Value(s)
-  - If we get multiple eigen values, we only take the highest eigen value
+    - If we get multiple eigen values, we only take the highest eigen value
     - It helps preserve more information. How??
 - $I =$ Identity Matrix
 
@@ -315,7 +317,8 @@ $$
 $$
 V_\text{norm} =
 \begin{bmatrix}
-\frac{v_1}{\sqrt{v_1^2 + v_2^2}} \\\frac{v_2}{\sqrt{v_1^2 + v_2^2}}
+\frac{v_1}{\sqrt{v_1^2 + v_2^2}} \\
+\frac{v_2}{\sqrt{v_1^2 + v_2^2}}
 \end{bmatrix}
 $$
 
@@ -406,12 +409,11 @@ P(C|x)
 \frac{-(x-\mu_c)^2}{2\sigma^2_c}
 \right)
 }_{\text{Likelihood}}
-
 \underbrace{P(C)|x}_{\text{Prior}}
 \end{align}
-
 \label{gc}
 $$
+
 However $\eqref{gc}$ is not used as it is; we take $\log$ on both sides and find **log likehood**
 
 $$
@@ -434,10 +436,8 @@ $$
 
 $$
 \begin{align}
-
 \ln \frac{P(C_1 | x)}{P(C_2 | x)}
 &= \ln P(C_1 | x) - \ln P(C_2 | x) \\&= \frac{-1}{2} ()
-
 \end{align}
 $$
 
@@ -488,7 +488,8 @@ classfication_report(y_test, predictions)
 $$
 \begin{align}
 \text{Total Macro Average (Recall)}
-&= \frac{\sum \text{Recall of each class}}{\text{No of classes}} \\\text{Macro Average of each class (Recall)}
+&= \frac{\sum \text{Recall of each class}}{\text{No of classes}} \\
+\text{Macro Average of each class (Recall)}
 &= \text{Recall of that class}
 \end{align}
 $$
@@ -496,7 +497,8 @@ $$
 $$
 \begin{align}
 \text{Total Macro Average (Precision)}
-&= \frac{\sum \text{Precision of each class}}{\text{No of classes}} \\\text{Macro Average of each class (Precision)}
+&= \frac{\sum \text{Precision of each class}}{\text{No of classes}} \\
+\text{Macro Average of each class (Precision)}
 &= \text{Precision of that class}
 \end{align}
 $$
@@ -504,7 +506,8 @@ $$
 $$
 \begin{align}
 \text{Total Macro Average (F1 Score)}
-&= \frac{\sum \text{F1 Score of each class}}{\text{No of classes}} \\\text{Macro Average of each class (F1 Score)}
+&= \frac{\sum \text{F1 Score of each class}}{\text{No of classes}} \\
+\text{Macro Average of each class (F1 Score)}
 &= \text{F1 Score of that class}
 \end{align}
 $$
@@ -629,8 +632,8 @@ Refer to data mining distances
 ### Disadvantages
 
 - We have to calculate the distance for all testing dataset, wrt all records of the training dataset
-  - Does not work well with large dataset
-  - Does not work well with high dimensional dataset
+    - Does not work well with large dataset
+    - Does not work well with high dimensional dataset
 - Sensitive to noisy and mssing data
 - Attributes need to scaled to prevent distance measures from being dominated by one of the attributes
 

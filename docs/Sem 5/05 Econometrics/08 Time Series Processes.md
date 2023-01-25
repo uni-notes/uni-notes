@@ -6,9 +6,9 @@ Time series variable can be
 
 - Time series at level (absolute value)
 - Difference series (relative value)
-  - First order difference $\Delta y_t = y_t - y_{t-1}$
+    - First order difference $\Delta y_t = y_t - y_{t-1}$
     - Called as ‘returns’ in finance
-  - Second order difference $(\Delta y_t)_2 = \Delta y_t - \Delta y_{t-1}$
+    - Second order difference $(\Delta y_t)_2 = \Delta y_t - \Delta y_{t-1}$
 
 ## Univariate Time Series
 
@@ -20,7 +20,7 @@ This is due to
 
 - behavioral effect
 - history/memory effect
-  - Medical industry always looks at the records of your medical history
+    - Medical industry always looks at the records of your medical history
 - Inertia of change
 
 ## Components of Time Series Processes
@@ -139,7 +139,8 @@ If the variance is heteroschedastic (changes over time), the variable is volatil
 $$
 \begin{align}
 \sigma^2_{y_t}
-&= E \Big [\Big(y_t - E(y_t) \Big)^2 \Big] \\&= E \Big [\Big(y_t - \textcolor{hotpink}{0} \Big)^2 \Big] \quad \text{(if \textcolor{hotpink}{normalized})} \\&= E [y_t^2 ] \\&= y_t^2 \\\end{align}
+&= E \Big [\Big(y_t - E(y_t) \Big)^2 \Big] \\&= E \Big [\Big(y_t - \textcolor{hotpink}{0} \Big)^2 \Big] \quad \text{(if \textcolor{hotpink}{normalized})} \\&= E [y_t^2 ] \\&= y_t^2 \\
+\end{align}
 $$
 
 $$
@@ -218,10 +219,10 @@ $$
 \begin{align}
 \text{Consider } y_t
 &= \sum \rho_i y_{t-i} + u_t \\&= \sum \textcolor{hotpink} 0 \times y_{t-i} + u_t
-\quad \text{(Independent of lags)} \\\implies y_t &= u_t \\
+\quad \text{(Independent of lags)} \\
+\implies y_t &= u_t \\
 & \text{and} \\
 E(y_t) &= \mu = 0 \\E[(y_t - \mu)^2] &= \sigma^2
-
 \end{align}
 $$
 
@@ -240,19 +241,19 @@ $$
 This is basically a wave (for eg, sound-wave), and $\beta$ is basically the amplitude of the wave
 
 - $0 < |\beta_1| < 1$
-  - Series oscillates
-  - Series has Mean-reverting tendancy
-  - Otherwise if
+    - Series oscillates
+    - Series has Mean-reverting tendancy
+    - Otherwise if
     - $|\beta_1| > 1$, it’ll be explosive (linearly-increasing/decreasing)
       - This is theoretically-possible, but not possible in real-world
 - Mean, variance and autocovariance are time-invariant
   (Mean, variance of distribution of possible outcomes, corresponding to each time period is same)
-  - Distribution of the variable remains constant for each time instant ==(not across time periods)==
-  - Basically this series have homoscedascity of time-series variable
-  - $E(y_t) = \mu$ can be zero/non-zero
-  - $E[(y_t - \mu)^2] = \sigma^2$
-  - $E[(y_t - \mu)(y_{t+k}-\mu)] = r_k$
-  - Hence, in case of any shocks, the series returns to the original
+    - Distribution of the variable remains constant for each time instant ==(not across time periods)==
+    - Basically this series have homoscedascity of time-series variable
+    - $E(y_t) = \mu$ can be zero/non-zero
+    - $E[(y_t - \mu)^2] = \sigma^2$
+    - $E[(y_t - \mu)(y_{t+k}-\mu)] = r_k$
+    - Hence, in case of any shocks, the series returns to the original
   
 
 #### Example
@@ -278,10 +279,10 @@ $$
 Will have either ==**one/both**== of the following
 
 - Mean at each time period is ==**different**== across all time periods
-  - Mean of distribution of possible outcomes corresponding to each time period is different
+    - Mean of distribution of possible outcomes corresponding to each time period is different
 
 - Variance at each time period is ==**different**== across all time periods
-  - Variance of distribution of possible outcomes corresponding to each time period is different
+    - Variance of distribution of possible outcomes corresponding to each time period is different
 
 We need to tranform this somehow, as OLS and [GMM](#GMM) cannot be used for non-stationary processes, because the properties of OLS are violated - heteroscedastic variance of error term
 #### Random Walk w/o drift (Pure random walk process)
@@ -308,7 +309,8 @@ Every value is basically the
 $$
 \begin{align}
 E(y_t)
-&= E(y_0) + E(u_1) + E(u_2) + \dots + E(u_t) \\&= y_0 + 0 \\\implies E(y_t) &= y_0
+&= E(y_0) + E(u_1) + E(u_2) + \dots + E(u_t) \\&= y_0 + 0 \\
+\implies E(y_t) &= y_0
 \end{align}
 $$
 
@@ -396,7 +398,8 @@ If the first-difference is non-stationary, we take second-difference, and so on
 
 $$
 \begin{align}
-y_t &= y_{t-1} + u_t \\\implies \Delta y_t &= \Delta y_{t-1} + u_t
+y_t &= y_{t-1} + u_t \\
+\implies \Delta y_t &= \Delta y_{t-1} + u_t
 \quad \text{(White Noise Process = Stationary)}
 \end{align}
 $$
@@ -405,7 +408,8 @@ $$
 
 $$
 \begin{align}
-y_t &= \beta_0 + y_{t-1} + u_t \\\implies \Delta y_t &= \beta_0 + \Delta y_{t-1} + u_t
+y_t &= \beta_0 + y_{t-1} + u_t \\
+\implies \Delta y_t &= \beta_0 + \Delta y_{t-1} + u_t
 \quad \text{(Stationary)}
 \end{align}
 $$
@@ -467,7 +471,8 @@ Alternatively, subtract $y_{t-1}$ on both sides of main equation
 
 $$
 \begin{align}
-y_t - y_{t-1} &= \beta_1 y_{t-1} - y_{t-1} + u_t \\y_t - y_{t-1} &= (\beta_1-1) y_{t-1} + u_t \\\Delta y_t &= \gamma y_{t-1} + u_t & (\gamma = \beta_1 - 1)
+y_t - y_{t-1} &= \beta_1 y_{t-1} - y_{t-1} + u_t \\y_t - y_{t-1} &= (\beta_1-1) y_{t-1} + u_t \\
+\Delta y_t &= \gamma y_{t-1} + u_t & (\gamma = \beta_1 - 1)
 \end{align}
 $$
 

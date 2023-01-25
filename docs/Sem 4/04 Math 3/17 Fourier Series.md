@@ -40,7 +40,6 @@ $$
 a_0 &= \frac{1}{\pi} \int\limits_{-\pi}^{\pi} f(x) \cdot dx \\
 a_n &= \frac{1}{\pi} \int\limits_{-\pi}^{\pi} f(x) \textcolor{orange}{\cos(nx)} \cdot dx \\
 b_n &= \frac{1}{\pi} \int\limits_{-\pi}^{\pi} f(x) \textcolor{orange}{\sin(nx)} \cdot dx
-
 \end{align}
 $$
 
@@ -57,9 +56,9 @@ Even though the function that the FS represents may be discontinuous, the FS its
 $$
 \text{FS}
 \stackrel{\text{converges}}{\longrightarrow}
-
 \begin{cases}
-f(a) &, a = \text{Continuous Point} \\\dfrac{f(a^-) + f(a^+)}{2} &, a = \text{Discontinuous Point}
+f(a) &, a = \text{Continuous Point} \\
+\dfrac{f(a^-) + f(a^+)}{2} &, a = \text{Discontinuous Point}
 \end{cases}
 $$
 
@@ -83,9 +82,11 @@ $$
 \begin{align}
 f(x) &= \begin{cases}
 	g_1(x), & (-a, 0) \\	g_2(x), & (0, a)
-\end{cases}\\\implies 
+\end{cases}\\
+\implies 
 f(x) &= \begin{cases}
-\text{Even}, & g_1(-x) = +g_2(x) \\\text{Odd},  & g_1(-x) = -g_2(x)
+\text{Even}, & g_1(-x) = +g_2(x) \\
+\text{Odd},  & g_1(-x) = -g_2(x)
 \end{cases}
 \end{align}
 $$

@@ -52,8 +52,8 @@ You have to be careful about interpreting the results
 
 - Nature of random sample may cause SRF to over-estimate/under-estimate
 - Biased choosing of sample
-  - Researcher chooses a particular sample
-  - For eg
+    - Researcher chooses a particular sample
+    - For eg
     - I chose Ronaldo for 2nd year study project
     - Choosing students of high attendance only
 

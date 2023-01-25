@@ -26,9 +26,9 @@ e_x^p
 %&= \frac{(x' - x)/x}{(p' - p)/p} \\&= \frac{\% \Delta x}{\% \Delta p} \\&= \frac {\color{red} \Delta x/x}{\color{orange} \Delta p/p} \\
 &= \frac{\color{red} \Delta x}{\color{orange} \Delta p}
 \frac{\color{orange} p}{\color{red}{x}}
-
 \end{align}
 $$
+
 if price of commodity changes by some $k \%$, demand for it changes by $k \times e \%$
 
 ### Types
@@ -56,9 +56,9 @@ $\pi_1 = f_1(R, \dots), \pi_2 = f_2(R, \dots),$ where
 Now
 - if $\frac {\delta \pi_2}{\delta \pi_1} = 0,$ perfectly competitive market
   the profits of one company is independent of the profits of another company
-  - eg: agricultural farmers
+    - eg: agricultural farmers
 - else imperfect market
-  - eg: aviation industry
+    - eg: aviation industry
 
 ## Cross Price Elasticity of Demand
 
@@ -73,9 +73,9 @@ e_{x_1}^{p_2}
 %&= \frac{(x' - x)/x}{(p' - p)/p} \\&= \frac{\% \Delta x_1}{\% \Delta p_2} \\&= \frac {\color{red} \Delta x_1/x_1}{\color{orange} \Delta p_2/p_2} \\
 &= \frac{\color{red} \Delta x_1}{\color{orange} \Delta p_2}
 \frac{\color{orange} p_2}{\color{red}{x_1}}
-
 \end{align}
 $$
+
 if price of another commodity changes by some $k \%$, demand of our main commodity changes by $k \times e \%$
 
 ### Sign
@@ -97,11 +97,11 @@ i’m using $|e|$ to highlight only the magnitude
 $|e| \propto n_s$
 
 - more substitutes, more elastic
-  - coke, pepsi
-  - rice, wheat
+    - coke, pepsi
+    - rice, wheat
 - no substitutes, inelastic
-  - petrol
-  - water
+    - petrol
+    - water
 
 ### Type of commodity
 
@@ -240,7 +240,6 @@ e_x^m
 %&= \frac{(x' - x)/x}{(p' - p)/p} \\&= \frac{\% \Delta x}{\% \Delta m} \\&= \frac {\color{red} \Delta x/x}{\color{orange} \Delta m/m} \\
 &= \frac{\color{red} \Delta x}{\color{orange} \Delta m}
 \frac{\color{orange} m}{\color{red}{x}}
-
 \end{align}
 $$
 
@@ -249,7 +248,7 @@ For inferior goods, $- \infty < e < 0$
 For normal goods, $0 < e < \infty$
 
 - For necessities $e \to 0$
-  - income inelastic
+    - income inelastic
 - For luxury goods, $e \to \infty$
 
 ## Relation bw Income Elasticity and Price Elasticity
@@ -293,12 +292,12 @@ Always $0 < e < \infty$
 ### perfectly inelastic
 
 - $e \propto T$
-  - sellers have small time to revise their decisions
-  - Real Estate in short run
+    - sellers have small time to revise their decisions
+    - Real Estate in short run
 
 - $e \propto \frac 1 G$
-  - or where gestation period is long(time taken to convert raw materials into final good)
-  - eg: agrigultural, large machinery
+    - or where gestation period is long(time taken to convert raw materials into final good)
+    - eg: agrigultural, large machinery
 ### Perfectly elastic
 
 perfectly competitive market
@@ -384,3 +383,4 @@ So the point elasticity of any point is
 $$
 e_\text{point} = \frac{1}{\text{Slope}} \times \frac{p}{{x}}
 $$
+

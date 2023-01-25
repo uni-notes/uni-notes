@@ -77,9 +77,11 @@ In any non-directional graph, there is an even number of vertices of odd degree
 If W: set of vertices of G with odd degree, U: set of vertices of G with even degree
 
 $$
-\sum\limits_i deg(V_i) = 2|E| \\\sum\limits_{i \in W} deg(V_i) + \underbrace{ \sum\limits_{i \in U} deg(V_i)}_\text{even} = \underbrace{2|E|}_\text{even} \\
+\sum\limits_i deg(V_i) = 2|E| \\
+\sum\limits_{i \in W} deg(V_i) + \underbrace{ \sum\limits_{i \in U} deg(V_i)}_\text{even} = \underbrace{2|E|}_\text{even} \\
 \implies \sum\limits_{i \in W} deg(V_i) \text{ is also even}
 $$
+
 But W contains all vertices with odd degree. $\therefore,$ the no of vertices in W should be even. Hence, |W| is also even.
 
 ## Cor(2)
@@ -218,15 +220,15 @@ Taking a u-v path. It can either be
 
   Proof by induction on the length of path p
 
-  - Length = 1 (basic)
+    - Length = 1 (basic)
 
     - then path p is open as it contains only one edge
 
-  - length = k, where $1 \le k \le n$ (induction hypothesis)
+    - length = k, where $1 \le k \le n$ (induction hypothesis)
 
     - assume that when the length is k, then u-v path contains a simple u-v
 
-  - length = n+1 (induction proof)
+    - length = n+1 (induction proof)
 
     - trying to prove that it contains a simple path (using the induction hypothesis)
 
@@ -247,7 +249,7 @@ Taking a u-v path. It can either be
           $v_0 - v_1 - \ldots - v_i - v_{i+1} - \ldots - v_j - v_{j+1} - \ldots - v_{n+1}$
         - remove $v_{i+1} - \ldots - v_j$ from P
 
-  - now, $v_{0} - v_1 - \ldots - v_i - v_{j+1} - \ldots - v_{n+1}$ is a simple path
+    - now, $v_{0} - v_1 - \ldots - v_i - v_{j+1} - \ldots - v_{n+1}$ is a simple path
 
 Hence, proved
 
@@ -332,12 +334,12 @@ $\bar H = G - H$
 
 - $G_1 \cap G_2$ is a graph with
 
-  - vertices set $V(G_1) \cap V(G_2)$
-  - edge set $E(G_1) \cap E(G_2)$
+    - vertices set $V(G_1) \cap V(G_2)$
+    - edge set $E(G_1) \cap E(G_2)$
 
 - $G_1 \cup G_2$ is a graph with
-  - vertices set $V(G_1) \cup V(G_2)$
-  - edge set $E(G_1) \cup E(G_2)$
+    - vertices set $V(G_1) \cup V(G_2)$
+    - edge set $E(G_1) \cup E(G_2)$
 - $\bar G \cup G = k_n$
 - $\bar G \cap G = N_7$, where $N_7$ is a null graph (with vertices but no edges)
 

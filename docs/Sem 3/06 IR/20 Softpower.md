@@ -14,12 +14,12 @@ eg:
 
 - japan is trying to stay close allies with the US
 - but doesn't always get along with them, for eg
-  - Paris Climate Agreement
-  - Recognition of Jerusalem as the capital of Israel
+    - Paris Climate Agreement
+    - Recognition of Jerusalem as the capital of Israel
 - Japan sees China’s soft power tactics as pure propaganda
 - Japan is unnotoriously closed off to outsiders
-  - they’re afraid of diluting their culture
-  - however, now it’s slowly changing cuz they’re afraid of the aging population
+    - they’re afraid of diluting their culture
+    - however, now it’s slowly changing cuz they’re afraid of the aging population
 
 ### US
 

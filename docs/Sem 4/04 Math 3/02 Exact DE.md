@@ -36,6 +36,7 @@ f_y &= N(x, y) \\
 d( f(x, y) ) &= 0 \\f(x, y) &= c
 \end{align}
 $$
+
 The final step is the general solution of the given differential equation.
 
 ## Exact DE

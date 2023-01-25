@@ -56,6 +56,7 @@ $$
 y = f(x) \\
 \text{MRT}_{x,y} = -\frac{\mathrm{d} y}{\mathrm{d} x}
 $$
+
 When we go from left to right, the slope increases from left to right, ie, cost of production of $x$ increases
 
 - $\text{MP}_k^y, \text{MP}_l^y$ increases
@@ -64,9 +65,10 @@ When we go from left to right, the slope increases from left to right, ie, cost 
 Example: if mango’s MP is 2 and apple’s MP is 4, then 4 units of apples are to be sacrificed to produce 2 units of mangoes
 
 $$
-x = l \cdot MP_l + k \cdot MP_k \\ \\
-\mathrm{d} y = \mathrm{d} l_{y}(MP_l^y) + \mathrm{d} k_y(MP_k^y) \\\mathrm{d} x = \mathrm{d} l_{x}(MP_l^x) + \mathrm{d} k_x(MP_k^x) \\ \\
-\frac{\mathrm{d} y}{\mathrm{d} x} = \frac{MP_k^y} {MP_k^x} = \frac{MP_l^y} {MP_l^x}
+x = l \cdot MP_l + k \cdot MP_k \\
+\mathrm{d} y = \mathrm{d} l_{y}(MP_l^y) + \mathrm{d} k_y(MP_k^y) \\
+\mathrm{d} x = \mathrm{d} l_{x}(MP_l^x) + \mathrm{d} k_x(MP_k^x) \\
+\frac{\mathrm{d} y}{\mathrm{d} x} = \frac{MP_k^y}{MP_k^x} = \frac{MP_l^y}{MP_l^x}
 $$
 
 ### Points on the curve

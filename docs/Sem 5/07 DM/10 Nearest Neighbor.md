@@ -12,8 +12,8 @@ Class label is the majority label of $k$ nearest neighbors
 
 - Set of labelled records
 - **Normalized** Proximity/Distance metric
-  - Min-Max normalization
-  - $Z$-normalization
+    - Min-Max normalization
+    - $Z$-normalization
 - Value of $k$ (preferably $k$ is odd)
 
 ### Steps

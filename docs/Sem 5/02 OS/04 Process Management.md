@@ -163,23 +163,23 @@ Whenever CPU requires details on any process, it will refer to PCB
 - Process id $\to$ unique number
 - PC
 - Register Contents
-  - Flag
-  - Index Pointer
-  - GPRs (General Purpose Registers)
+    - Flag
+    - Index Pointer
+    - GPRs (General Purpose Registers)
 - CPU Scheduling info
-  - Priority no
-  - Scheduling info
-  - Pointer to scheduling queues
+    - Priority no
+    - Scheduling info
+    - Pointer to scheduling queues
 - Memory management info
-  - Base register
-  - Limit register
-  - Virtual memory
+    - Base register
+    - Limit register
+    - Virtual memory
     - Page Table, Segment Table
 - Accounting info
-  - Amt of CPU Time used
+    - Amt of CPU Time used
 - I/O Info
-  - I/O devices alloted
-  - List of open file(s)
+    - I/O devices alloted
+    - List of open file(s)
 
 ## Context Switching
 
@@ -232,6 +232,7 @@ $$
 \frac{\text{Scheduling Decision Time}}{\text{Process Execution Time} + \text{Scheduling Decision Time}} \times 100 \%
 \end{align}
 $$
+
 We want to minimize this.
 
 ## Queues

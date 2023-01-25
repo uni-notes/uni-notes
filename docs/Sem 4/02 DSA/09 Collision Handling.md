@@ -34,8 +34,10 @@ use a secondary hash function $d(k)$
 
 $$
 \begin{align}
-h(k) &= k \% N \\d(k) &= q - k \% q \\\end{align}
+h(k) &= k \% N \\d(k) &= q - k \% q \\
+\end{align}
 $$
+
 where
 
 1. $q$ is prime and $q < N$

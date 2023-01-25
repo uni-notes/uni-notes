@@ -25,10 +25,10 @@ eg: people in a list
 - is a collection of elements
 - linear data structures
 - index data structures
-  - each element has its own index value referring to its position
+    - each element has its own index value referring to its position
 - can be implemented as a 
-  - static data structure, using array
-  - dynamic data structure, using linked list
+    - static data structure, using array
+    - dynamic data structure, using linked list
 
 Works with the principle of LIFO(Last in First out)
 

@@ -54,8 +54,8 @@ $w_1, w_2, \dots$ are all derived with the help of domain knowledge
 
 1. Sort data
 2. If $n=$
-   - odd: Pick the middle element
-   - even: average of 2 middle elements
+     - odd: Pick the middle element
+     - even: average of 2 middle elements
 
 ## Variance
 

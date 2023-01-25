@@ -125,9 +125,9 @@ requires
 
 2. $w$ as enabled
 
-   - 1 enabled low
+     - 1 enabled low
 
-   - 1 enabled high
+     - 1 enabled high
 | w    | x    | y    | z    | Output |
 | ---- | ---- | ---- | ---- | ------ |
 | 0    | 0    | 0    | 0    | d0     |
@@ -221,12 +221,12 @@ $E_1 = D_2+D_3, E_0 = D_1 + D_3$
 ## Valid Line
 
 - $V=0$
-  - output is invalid
-  - inputs are inactive
-  - the outputs are not inspected and hence the output will be don’t care condition
+    - output is invalid
+    - inputs are inactive
+    - the outputs are not inspected and hence the output will be don’t care condition
 - $V=1$
-  - output is valid
-  - at least 1 input is active
+    - output is valid
+    - at least 1 input is active
 
 ## Priority Encoder
 

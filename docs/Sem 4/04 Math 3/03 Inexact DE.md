@@ -3,7 +3,6 @@ Consider a 1st order inexact DE
 $$
 M(x, y) dx + N(x, y) dy = 0, \quad
 (M_y \ne N_x)
-
 \label{de}
 $$
 

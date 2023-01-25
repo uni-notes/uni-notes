@@ -23,7 +23,9 @@ $\phi_1, \phi_2, \dots, \phi_n \vdash\psi$ is called sequent
 3. $\frac{\phi}{\lnot \lnot \phi} \quad(\lnot \lnot i)$
 4. $\frac{\lnot \lnot \phi}{\phi} \quad(\lnot \lnot e)$
 5. $\frac{ 
-   \begin{bmatrix} \phi \\ \vdots \\ \psi
+   \begin{bmatrix} \phi \\
+\vdots \\
+\psi
    \end{bmatrix}
    }{\phi \to \psi} \quad (\to i)$
 6. $\frac{\phi \quad \phi \to \psi}{\psi} \quad (\to e)$
@@ -31,19 +33,27 @@ $\phi_1, \phi_2, \dots, \phi_n \vdash\psi$ is called sequent
 8. $\frac{\phi}{\phi \lor \psi}, \frac{\psi}{\phi \lor \psi} \quad (\lor i_1, \lor i_2)$
 9. $\frac{\phi \lor \psi \quad 
    \begin{bmatrix}
-   \phi \\ \vdots \\ \chi
+   \phi \\
+\vdots \\
+\chi
    \end{bmatrix}
    \begin{bmatrix}
-   \psi \\ \vdots \\ \chi
+   \psi \\
+\vdots \\
+\chi
    \end{bmatrix}
    }{\chi} \quad (\lor e)$
 10. Copy rule
 11. $\frac{\begin{bmatrix}
-    \phi \\ \vdots \\ \bot
+    \phi \\
+\vdots \\
+\bot
     \end{bmatrix}
     }{\lnot \phi} \quad (\lnot i)$
 12. $\frac{\begin{bmatrix}
-    \lnot \phi \\ \vdots \\ \bot
+    \lnot \phi \\
+\vdots \\
+\bot
     \end{bmatrix}
     }{\phi}$ PBC
 13. $\frac{\phi \quad \lnot \phi}{\bot} \quad (\lnot e)$
@@ -155,9 +165,7 @@ $$
 \underbrace{ 
 
 ( \underbrace{p}_\text{proposition} \land q \to s) 
-
 \land 
-
 \underbrace{(
 \underbrace{ p \land q \land r }_\text{assumption}\to s)}_\text{clause}
 }_\text{formula}

@@ -10,11 +10,11 @@ In polar coordinate system, we locate a point with reference to:
 Let 
 
 - $r$ - **directed** distance of the point from pole
-  - $r > 0$ forward
-  - $r < 0$ backward
+    - $r > 0$ forward
+    - $r < 0$ backward
 - $\theta$ - **directed** angle of radius vector from the initial ray
-  - $\theta < 0$ anti-clockwise
-  - $\theta > 0$ clockwise
+    - $\theta < 0$ anti-clockwise
+    - $\theta > 0$ clockwise
 - $P(r, \theta)$ - corresponding point
 
 ![Polar](img/polar.svg)
@@ -22,8 +22,7 @@ Let
 ## Circle Through Pole
 
 $$
-r = \pm a, \quad 0 \le \theta \le 2\pi
-
+r = \pm a, \quad 0 \le \theta \le 2 \pi
 $$
 
 represents a circle with center @pole and radius $a$. Sign can be either, because it is the same circle traversed in the opposite direction
@@ -32,7 +31,6 @@ represents a circle with center @pole and radius $a$. Sign can be either, becaus
 
 $$
 \theta = \theta_0, \quad - \infty < r < \infty
-
 $$
 
 ## IDK
@@ -51,7 +49,8 @@ Consider the point $P(x, y) \iff P(r, \theta)$
 $$
 \begin{align}
 x &= r \cos\theta \\y &= r \sin\theta \\
-r^2 &= x^2 + y^2 \\\theta &= \tan^{-1} \left( \frac y x \right)
+r^2 &= x^2 + y^2 \\
+\theta &= \tan^{-1} \left( \frac y x \right)
 \end{align}
 $$
 
@@ -74,8 +73,8 @@ $P(r, \theta)$ and $P'(r, - \theta)$ lie on same graph
 ### Limacon
 
 $$
-r = a \pm b \cos\theta \\\text{ or } \\r = a \pm b \sin\theta
-
+r = a \pm b \cos\theta \\
+\text{ or } \\r = a \pm b \sin\theta
 $$
 
 | $\frac a b$ | Type       |
@@ -94,7 +93,8 @@ n, &  n = \text{odd} \\2n, & n = \text{even}
 \end{cases} \\
 \text{Axis of first petal } \theta &= 
 \begin{cases}
-0 &  r = a \textcolor{red}{\cos}(n \theta) \\\dfrac \pi {2n} & r = a \textcolor{red}{\sin} (n \theta)
+0 &  r = a \textcolor{red}{\cos}(n \theta) \\
+\dfrac \pi {2n} & r = a \textcolor{red}{\sin} (n \theta)
 \end{cases} \\
 \text{Length of petals} &= a \\
 \text{Angular Gap between axes of petals} &= \frac {2 \pi}{N}
@@ -104,15 +104,14 @@ $$
 ### Lemmiscates
 
 $$
-r^2 = a \cos\theta \\\text{ or } \\r^2 = a \sin\theta \\
-
+r^2 = a \cos\theta \\
+\text{ or } \\r^2 = a \sin\theta \\
 $$
 
 ### Straight Line
 
 $$
 r \cos(\theta-\theta_0) = r_0
-
 $$
 
 - $P(r, \theta)$ is any point on given line
@@ -122,7 +121,6 @@ $$
 
 $$
 r^2 + {r_0}^2 - 2 r r_0 \cos(\theta - \theta_0) = a^2 \\
-
 $$
 
 - $P(r, \theta)$ is any point on circle
@@ -152,7 +150,6 @@ $$
 A = \frac12 \int\limits_{\theta = \alpha}^\beta
 r^2
 \cdot d\theta
-
 $$
 For area bounded by the curves $r_1 = f_1(\theta), r_2 = f_2(\theta), \alpha \le \theta \le \beta$ such that $r_1 < r_2$
 
@@ -160,7 +157,6 @@ $$
 A = \frac12 \int\limits_{\theta = \alpha}^\beta
 {r_2}^2 - {r_1}^2
 \cdot d\theta
-
 $$
 
 ## Length of curve
@@ -173,7 +169,6 @@ L =
 \sqrt{ r^2 + (r')^2 }
 \cdot d\theta \qquad
 \left[ r' = \frac {dr}{d \theta} \right]
-
 $$
 
 ## Conic Sections
@@ -181,14 +176,14 @@ $$
 Let
 
 - $P(r, \theta)$ be any point on the conic section with focus at origin
-- $e = \dfrac{ \text{Distance bw focii} } { \text{Distance bw vertices} }$
+- $e = \dfrac{ \text{Distance bw focii} }{ \text{Distance bw vertices} }$
 
 | Directrix |              $r$               |
 | :-------: | :----------------------------: |
-|  $x = a$  | $\frac{ke} {1 + e \cos\theta}$ |
-| $x = -a$  | $\frac{ke} {1 - e \cos\theta}$ |
-|  $y = a$  | $\frac{ke} {1 + e \sin\theta}$ |
-| $y = -a$  | $\frac{ke} {1 - e \sin\theta}$ |
+|  $x = a$  | $\frac{ke}{1 + e \cos\theta}$ |
+| $x = -a$  | $\frac{ke}{1 - e \cos\theta}$ |
+|  $y = a$  | $\frac{ke}{1 + e \sin\theta}$ |
+| $y = -a$  | $\frac{ke}{1 - e \sin\theta}$ |
 
 ### Shapes
 
@@ -202,5 +197,4 @@ For ellipse,
 
 $$
 k = a \left[ \frac 1 e - e \right]
-
 $$

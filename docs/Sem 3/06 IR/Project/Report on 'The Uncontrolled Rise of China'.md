@@ -77,12 +77,12 @@ In the case of the Sri Lankan port of Hambantota, China pushed Sri Lanka into bo
 Some of the known regions where China has invested in large amounts and hence under risk of these debt traps
 
 - Indian subcontinent
-  - Sri Lanka
-  - Pakistan
+    - Sri Lanka
+    - Pakistan
 - Indo-Pacific
-  - Thailand
-  - Laos
-  - Cambodia
+    - Thailand
+    - Laos
+    - Cambodia
 - All of Africa except Swaziland
 
 #### Dependence of other countries

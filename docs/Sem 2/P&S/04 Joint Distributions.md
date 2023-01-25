@@ -4,7 +4,7 @@ $$
 \begin{align}
 f(x, y)
 &= P(X=x, Y=y) \\&= P(x \cap y) \\F(x,y) &= P(X \le x, Y \le y) \\
-f(x, y) &\ge 0 \\f(x|y) &= \frac {f(x, y)} {f(y)}
+f(x, y) &\ge 0 \\f(x|y) &= \frac {f(x, y)}{f(y)}
 \end{align}
 $$
 
@@ -33,6 +33,8 @@ $$
 
 $$
 \begin{align}
-f(x,y) &= f(x) \cdot f(y) \\E(x, y) &= E(x) \cdot E(y) \\\rm{Cov}(x,y) &= 0
+f(x,y) &= f(x) \cdot f(y) \\E(x, y) &= E(x) \cdot E(y) \\
+\rm{Cov}(x,y) &= 0
 \end{align}
 $$
+

@@ -24,7 +24,8 @@ We can directly solve this by separating the variables
 
 $$
 \begin{align}
-f(x, y) &= g(x) \cdot h(y) \\ \\\frac{dy}{dx} &= g(x) \cdot h(y) \\
+f(x, y) &= g(x) \cdot h(y) \\
+\frac{dy}{dx} &= g(x) \cdot h(y) \\
 \int \frac{dy}{h(y)}  &= \int g(x) dx
 \end{align}
 $$
@@ -71,7 +72,10 @@ Be able to identify transposition to simplify
 
 $$
 \begin{align}
-d(\log x) &= \left( \frac{1}{x} \right) dx \\\text{because
+d(\log x) &= \left( \frac{1}{x} \right) dx \\
+\text{because
  }
-\frac{d(\log x)}{dx} &= \frac{1}{x} \\\end{align}
+\frac{d(\log x)}{dx} &= \frac{1}{x} \\
+\end{align}
 $$
+

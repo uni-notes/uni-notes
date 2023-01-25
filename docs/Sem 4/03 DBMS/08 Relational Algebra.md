@@ -65,7 +65,6 @@ R ÷ S = & \\
 \{ \quad
 & t[a_1,...,a_n] : \quad t \in R \\& \land \forall s \in S \Big( (t[a_1, \dots ,a_n] \cup s) \in R \Big)
 \quad \}
-
 \end{align}
 $$
 

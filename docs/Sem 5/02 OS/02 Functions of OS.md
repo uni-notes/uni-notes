@@ -3,10 +3,10 @@
 ### Process Management
 
 - Job scheduling
-  - Picks processes from job pool to be placed in PM
-  - Process = Program in its execution
+    - Picks processes from job pool to be placed in PM
+    - Process = Program in its execution
 - CPU Scheduling
-  - Pick a process from PM and allocate to CPU
+    - Pick a process from PM and allocate to CPU
 - Process Synchronization
 - Deadlock Handling
 

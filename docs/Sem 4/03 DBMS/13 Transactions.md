@@ -207,6 +207,6 @@ used by lock manager blah blah
 
 - Data item must be locked before reading/writing.
 - Should **not** try to
-  - unlock free resource
-  - lock already-locked resource
+    - unlock free resource
+    - lock already-locked resource
 

@@ -15,20 +15,24 @@ The entire distribution is divided into 2 regions
 
 $$
 \begin{align}
-H_0: \mu &= \mu_0 & &\text{(Null Hypothesis)} \\H_1: \mu &< \mu_0, \mu \ne \mu_0, \mu > \mu_0 & &\text{(Alternative Hypothesis)} \\\end{align}
+H_0: \mu &= \mu_0 & &\text{(Null Hypothesis)} \\H_1: \mu &< \mu_0, \mu \ne \mu_0, \mu > \mu_0 & &\text{(Alternative Hypothesis)} \\
+\end{align}
 $$
+
 | $\sigma^2$ |   $n$    |    Test Statistic/Probability Distribution     |
 | :--------: | :------: | :--------------------------------------------: |
 |   known    |   any    | $z_c = \frac {\bar x - \mu_0}{\sigma/\sqrt n}$ |
-|  unknown   |  $>30$   |  $z_c = \frac {\bar x - \mu_0} {s/ \sqrt n}$   |
-|  unknown   | $\le 30$ |  $t_c = \frac {\bar x - \mu_0} {s / \sqrt n}$  |
+|  unknown   |  $>30$   |  $z_c = \frac {\bar x - \mu_0}{s/ \sqrt n}$   |
+|  unknown   | $\le 30$ |  $t_c = \frac {\bar x - \mu_0}{s / \sqrt n}$  |
 
 ### Critical Region
 
 |         |                         Left-Tailed                          |                          Two-Tailed                          |                         Right-Tailed                         |
 | :-----: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 |  $H_1$  |                        $\mu < \mu_0$                         |                       $\mu \ne \mu_0$                        |                        $\mu > \mu_0$                         |
-| p-value |              $F(z_c) \\ \alpha(t-\text{dist})$               |           $2[ F(-z_c) ] \\ 2\alpha(t-\text{dist})$           |              $F(-z_c) \\ \alpha(t-\text{dist})$              |
+| p-value |              $F(z_c) \\
+\alpha(t-\text{dist})$               |           $2[ F(-z_c) ] \\ 2\alpha(t-\text{dist})$           |              $F(-z_c) \\
+\alpha(t-\text{dist})$              |
 |  Cases  | Accept $H_1$ if <br />$\begin{align} z_c &\le -z_\alpha \\ t_c &\le -t_{(n-1), \alpha} \\ p &\le \alpha \end{align}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{align} z_c \le -z_{\alpha/2} &\text{ or } z_c \ge +z_{\alpha/2}\\ t_c \le -t_{(n-1), (\alpha/2)} &\text{ or } t_c \ge +t_{(n-1), (\alpha/2)} \\ p &\le \alpha \end{align}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{align} z_c &\ge +z_\alpha \\ t_c &\ge +t_{(n-1), \alpha} \\ p &\le \alpha \end{align}$<br /><br />else accept $H_0$ |
 
 ## Proportion
@@ -37,7 +41,8 @@ $$
 \begin{align}
 H_0: p &= p_0 & &\text{(Null Hypothesis)} \\H_1: p &< p_0, p \ne p_0, p > p_0 & &\text{(Alternative Hypothesis)} \\z_c &= \frac {\hat p - p_0}{
 	\sqrt{ \frac{p_0(1-p_0)}{n} }
-} & & \hat p = \frac x n = \text{Estimated value of } p\\\end{align}
+} & & \hat p = \frac x n = \text{Estimated value of } p\\
+\end{align}
 $$
 
 ### Critical Region

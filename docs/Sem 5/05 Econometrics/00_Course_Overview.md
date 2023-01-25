@@ -13,9 +13,9 @@ Taught by Dr. Sartaj Rasool Rather
 
 - Quantification of relationships
 - Address questions like
-  - Change in revenue when price changes
-  - Change in productivity of employee when wage rate is changed
-  - How does another year of education change earnings
+    - Change in revenue when price changes
+    - Change in productivity of employee when wage rate is changed
+    - How does another year of education change earnings
 
 ## Sir’s Tips
 

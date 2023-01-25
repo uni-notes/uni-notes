@@ -132,8 +132,8 @@ Check if $U_\text{tot} \le U_\text{max}$
 
 - This is a **sufficient, but not necessary** condition
 - $U_\text{max}$ is called as
-  - Upper bound of schedulability
-  - Maximum CPU utilization bound
+    - Upper bound of schedulability
+    - Maximum CPU utilization bound
 
 ## Realtime Scheduling Gantt Chart
 
@@ -168,3 +168,4 @@ T_B = \frac{t_B}{
 1 - \sum_{i=1}^n somethign
 }
 $$
+

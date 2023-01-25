@@ -4,8 +4,8 @@ represented by
 
 $$
 I = \iint f(x, y) \ dy \ dx
-
 $$
+
 The limits of outer integral will always be constants.
 
 | Direction of entry parallel to axis | 1st Integral | 2nd Integral |
@@ -30,6 +30,7 @@ $$
 \text{where } x &= r \cos\theta, y = r \sin\theta, dA = dx \ dy
 \end{align}
 $$
+
 **Note:** First integrate wrt to $r$, then $\theta$
 
 ## Triple Integrals
@@ -38,6 +39,4 @@ represented by
 
 $$
 I = \iiint f(x, y, z) \ dz \ dy \ dx
-
 $$
-

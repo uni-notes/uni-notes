@@ -6,8 +6,8 @@ contains
 
 - fields/properties - variables
 - methods - functions
-  - constructor
-  - custom
+    - constructor
+    - custom
 - nested classes
 
 Naming convention is TitleCase

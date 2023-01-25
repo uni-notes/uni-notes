@@ -60,6 +60,7 @@ $$
 \implies L &= \lim_{(x, y) \to (x_0, y_0)} f(x, y)
 \end{align}
 $$
+
 Here, $(x, y)$ approaches $(x_0, y_0)$ in an infinite number of ways.
 
 ### 2 Path Test
@@ -93,12 +94,13 @@ $$
 \begin{align}
 \frac {\partial f}{\partial x} &=
 \lim_{\Delta x \to 0}
-\frac { f(x + \Delta x, \ y) - f(x, y) } {\Delta x} \\
+\frac { f(x + \Delta x, \ y) - f(x, y) }{\Delta x} \\
 \frac {\partial f}{\partial y} &=
 \lim_{\Delta y \to 0}
-\frac { f(x, \ y + \Delta y) - f(x, y) } {\Delta y}
+\frac { f(x, \ y + \Delta y) - f(x, y) }{\Delta y}
 \end{align}
 $$
+
 We define higher order partial derivatives as
 
 $$
@@ -116,14 +118,14 @@ If $u$ is a function
 
 $$
 u_{xx} + u_{yy} + u_{zz} = 0
-
 $$
 
 ## Chain Rule
 
 If $w = f(x, y)$ a function where $x, y$ are themselves functions of
 
-- an independent parameter $t$.
+- an independent parameter $t$
+  
   $$
   \frac {dw}{dt} =
   \left( \frac {\partial w}{\partial x} \cdot \frac {dx}{dt} \right) +
@@ -131,7 +133,8 @@ If $w = f(x, y)$ a function where $x, y$ are themselves functions of
   $$
 
 - 2 independent parameters $u, v$
-  $$
+  
+	$$
   \begin{align}
   \frac {\partial w}{\partial u} &=
   \left( \frac {\partial w}{\partial x} \cdot \frac {\partial x}{\partial u} \right) +
@@ -141,7 +144,6 @@ If $w = f(x, y)$ a function where $x, y$ are themselves functions of
   \left( \frac {\partial w}{\partial y} \cdot \frac {\partial y}{\partial v} \right)
   \end{align}
   $$
-  
 
 ## Implicit Differentiation
 
@@ -158,6 +160,7 @@ $$
 \frac{-\partial f / \partial x}{\partial f / \partial y} \\&= \frac{- f_x}{f_y}
 \end{align}
 $$
+
 If $z$ is a function of $x$ and $y$, given by an implicit relation $f(x,y,z) = 0$
 
 $$
@@ -175,7 +178,8 @@ $$
 \text{grad } f &= \nabla f \\&= f_x \cdot \hat i + f_y \cdot \hat j
 \end{align}
 $$
- $\nabla$ is the vector differential operator
+
+$\nabla$ is the vector differential operator
 
 $\nabla f$ acts along the normal at any point to the level curve of $f$
 
@@ -187,7 +191,8 @@ $$
 \begin{align}
 \text{DD} &= (D_{\hat u} f)_{P_0} \\&= \lim_{s \to 0}
 \frac{f(x_0 + su_1, y_0 + su_2) - f(x_0, y_0)}{s} \\&= \nabla f \cdot \hat u \\
-\nabla f &= ( \nabla f )_{P_0} \\\hat u &= u_1 \hat i + u_2 \hat j, \text{ unit vector in direction of } \vec a \\&= \frac{\vec A}{|\vec A|}
+\nabla f &= ( \nabla f )_{P_0} \\
+\hat u &= u_1 \hat i + u_2 \hat j, \text{ unit vector in direction of } \vec a \\&= \frac{\vec A}{|\vec A|}
 \end{align}
 $$
 
@@ -208,7 +213,6 @@ $$
 (y - y_0) {f_y}_{(P_0)} +
 (z - z_0) {f_z}_{(P_0)}
 = 0
-
 $$
 
 ## Normal Line
@@ -228,6 +232,7 @@ Let $f(x, y, z)$ be a function and $P_0(x_0, y_0, z_0)$ be any point in the doma
 $$
 L(x, y, z) = f(P_0) + (x - x_0){f_x}_{(P_0)} + (y - y_0){f_y}_{(P_0)} + (z - z_0){f_z}_{(P_0)}
 $$
+
 At all continuous points, $f$ and $L$ are the same.
 
 ## Extreme Values of a Function
@@ -256,8 +261,8 @@ $$
 | :--: | :--: | :--------: |
 | > 0  | < 0  |  Maximum   |
 | > 0  | > 0  |  Minimum   |
-| < 0  |  -   |   Saddle   |
-| = 0  |  -   | Test Fails |
+| < 0  |    -   |   Saddle   |
+| = 0  |    -   | Test Fails |
 
 **Note:** In the above table, we can replace $r$ by $t$ as well.
 
@@ -267,33 +272,23 @@ We extremise a function $f(x, y, z)$ subject to constraint/condition $\phi(x, y,
 
 1. From Lagrange’s function, $\lambda =$ Lagrange’s multiplier constant
    
-
-$$
+	 $$
    F(x, y, z) = f + \lambda \phi
-   
-
-$$
+   $$
 
 2. The extreme values are given by
    
-
-$$
+	 $$
    F_x = F_y = F_z = 0
-   
-
-$$
+   $$
 
 3. Solve the equations for $x, y, z, \lambda$
 
 **Note**
 
 1. By Lagrange’s method, we cannot find whether $f$ has a maximum or minimum
-
 2. If $f$ is to be extremised subject to constraints $\phi_1 = \phi_2 = 0$, then the Lagrange’s function becomes
    
-
-$$
+	 $$
    F = f + \lambda_1 \phi_1 + \lambda_2 \phi_2
-   
-
-$$
+   $$

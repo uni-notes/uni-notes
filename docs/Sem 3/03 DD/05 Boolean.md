@@ -5,7 +5,9 @@
 | Complementation | 
 
 $$
-\bar0 = 1 \\ \bar1 = 0 \\ \bar{\bar{x}} = x
+\bar0 = 1 \\
+\bar1 = 0 \\
+\bar{\bar{x}} = x
 
 $$
               |
@@ -46,7 +48,8 @@ $$
 | Demorgan's      | 
 
 $$
-\overline{x+y} = \bar x \cdot \bar y \\ \overline{x \cdot y} = \bar x + \bar y
+\overline{x+y} = \bar x \cdot \bar y \\
+\overline{x \cdot y} = \bar x + \bar y
 
 $$
  |
@@ -164,9 +167,9 @@ so that all the OR of all literals is 0
 
 - Any given functions can be expressed in canonical form without using truth table
 - For sum of minterms
-  - insert sum of missing literal and its complement
-  - AND operation b/w terms
-  - expand
+    - insert sum of missing literal and its complement
+    - AND operation b/w terms
+    - expand
 - For product of maxterms, insert product of missing literal and its complement with OR operation, and expand
 
 basically,

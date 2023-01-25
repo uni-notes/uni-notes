@@ -23,22 +23,22 @@ runnable --> blocked & waiting & terminate
 ```
 
 - new (born) state
-  - `start` is called implicitly(on it’s own)
+    - `start` is called implicitly(on it’s own)
 - Blocked state
-  - paused / waiting for I/O or notification
-  - short duration
+    - paused / waiting for I/O or notification
+    - short duration
 - Waiting state
-  - processor is busy
-  - when finally going to runnable, `notify() / notifyall()` method is called
+    - processor is busy
+    - when finally going to runnable, `notify() / notifyall()` method is called
 - runnable state
-  - highest-priority thread enters
+    - highest-priority thread enters
 - terminate (Dead) state
-  - thread has been processed
+    - thread has been processed
 - sleeping state
-  - `sleep(t)` is called
-  - $t$ is in ms
-  - long duration
-  - exits this state when sleep timer has expired
+    - `sleep(t)` is called
+    - $t$ is in ms
+    - long duration
+    - exits this state when sleep timer has expired
 
 ## Priorities
 
@@ -64,7 +64,6 @@ $$
 \underset{4s}{\fbox{$T_3$}}
 \underset{4s}{\fbox{$T_1$}}
 }_\text{initial run}
-
 \color{orange}
 \underbrace{
 \underset{4s}{\fbox{$T_2$}}
@@ -83,8 +82,8 @@ Both methods are pretty much identical
 
 - implementing `Runnable` (better)
 - or, extending `Thread`
-  - not recommended
-  - cuz then we can’t inherit any other class (java doesn’t support class multiple inheritance)
+    - not recommended
+    - cuz then we can’t inherit any other class (java doesn’t support class multiple inheritance)
 
 ### Implement `Runnable`
 

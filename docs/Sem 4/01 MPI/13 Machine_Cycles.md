@@ -29,8 +29,8 @@ Tutorial
 Getting from/to ==Register== does not require anything
 The number of bits readable in 1 cycle = 16bits
 1. opcode
-   - 16bits requires 2
-   - 
+     - 16bits requires 2
+     - 
 1. Reading from memory = 1
 1. Writing to memory = 1
 ## Time

@@ -3,9 +3,9 @@
 Write an algorithm and C/C++/JAVA program for the following problem:
 
 1. Create a Binary Search Tree (Ordered Binary Tree) to store `<IDNo, Name, CGPA>` for $n$ students (say $n=20$ record at least)
-   - Read from a text file
-   - Copy each record into nodes in the tree
-   - Assume IDNO is the primary key.
+     - Read from a text file
+     - Copy each record into nodes in the tree
+     - Assume IDNO is the primary key.
 2. Perform INORDER Traversal of the above tree and show output.
 3. Perform PREORDER Traversal of the above tree and show output.
 4. Perform POSTORDER Traversal of the above tree and show output.

@@ -44,14 +44,14 @@ ie the relative abundance/scarcity/productivity of labor and capital
 
 1. comp advantage in labor
 
-   - lower labor costs
+     - lower labor costs
 
-   - higher labor productivity
+     - higher labor productivity
 
 2. comp advantage in capital goods
 
-   - more available capital (infrastructure, machinery)
-   - higher capital productivity
+     - more available capital (infrastructure, machinery)
+     - higher capital productivity
 
 ## Exchange rate
 
@@ -77,8 +77,8 @@ it is due to govt intervention
 for eg, in UAE Dirham, the Central Bank of UAE
 
 - buys dollars when the value of dollars reduces
-  - in order to create a fake shortage
-  - and hence increase value
+    - in order to create a fake shortage
+    - and hence increase value
 - sells dollars when the value of dollars decreases
 
 ## Empirical Tests of the Ricardian Model

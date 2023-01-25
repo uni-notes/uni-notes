@@ -29,7 +29,8 @@ A problem that cannot be solved by a Turing Machine is **not computable**.
 | ------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Concatenation | $S_1 \cdot S_2$                                              | $S_1$ followed by $S_2$                                      |
 | Power         | $S^n$                                                        | Concatenation with itself for $n$ times                      |
-| Closure       | $\begin{align} \Sigma^+ &= \Sigma^1 \cup \Sigma^2 \cup \dots \\ \Sigma^* &= \Sigma^0 \cup \Sigma^1 \cup \Sigma^2 \cup \dots \\ &=  \{ \epsilon \} \cup \Sigma^+ \end{align}$ | Union of **infinite** concatenation with itself<br />Also called as Kleene Closure/Star |
+| Closure       | $\begin{align} \Sigma^+ &= \Sigma^1 \cup \Sigma^2 \cup \dots \\
+\Sigma^* &= \Sigma^0 \cup \Sigma^1 \cup \Sigma^2 \cup \dots \\ &=  \{ \epsilon \} \cup \Sigma^+ \end{align}$ | Union of **infinite** concatenation with itself<br />Also called as Kleene Closure/Star |
 
 ### On Languages
 

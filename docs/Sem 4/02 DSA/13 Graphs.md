@@ -24,8 +24,8 @@ More efficient, as $O(n)$
 ## Applications
 
 1. Networks
-   - Computer Networks
-   - Transportation
+     - Computer Networks
+     - Transportation
 2. Computer Vision
    Pixels
 

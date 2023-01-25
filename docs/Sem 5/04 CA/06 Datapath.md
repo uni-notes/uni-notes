@@ -98,9 +98,9 @@ Finite state machine determines what needs to be done at each step
 - Fetch
 - Decode
 - Action depends on opcode
-  - Execute
-  - Memory
-  - Writeback
+    - Execute
+    - Memory
+    - Writeback
 
 ## Single Cycle implementation
 
@@ -120,11 +120,11 @@ Too slow
 The clock cycle must have the same length for every instruction. Hence, the longest possible path in the processor determines the clock cycle
 
 - usually it is the `load` instruction, which uses five functional units in series
-  - instruction memory
-  - register file
-  - ALU
-  - data memory
-  - register file
+    - instruction memory
+    - register file
+    - ALU
+    - data memory
+    - register file
 
 Single long clock cycle makes `add` take as long as `load`
 

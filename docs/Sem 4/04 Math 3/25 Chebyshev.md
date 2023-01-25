@@ -15,9 +15,9 @@ Using Frobenius method near $x=1$, we get the solution
 
 $$
 T_n = F \left( n, -n, \frac{1}{2}, \frac{1-x}{2} \right)
-
 \label{sol}
 $$
+
 $\eqref{sol}$ is a finite polynomial of degree $n$, as $b=-n$ (-ve integer)
 
 Using transformation $x=\cos \theta$ in $\eqref{de}$, we get another solution
@@ -34,6 +34,7 @@ $$
 e^{i\theta}
 &= \cos \theta + i \sin \theta \\
 e^{ni\theta}
-&= \cos n\theta + i \sin n\theta \\&= (\cos \theta + i \sin \theta)^n \\\end{align}
+&= \cos n\theta + i \sin n\theta \\&= (\cos \theta + i \sin \theta)^n \\
+\end{align}
 $$
 

@@ -8,6 +8,7 @@ $$
 \implies m &= \frac{2}{||w||}
 \end{align}
 $$
+
 Goal is to maximize ‘margin’ $m$ (distance between classes), subject to the following constraints
 
 $$
@@ -15,6 +16,7 @@ $$
 w^t x_i + w_0 \ge 1, & x_i > 0 \\w^t x_i + w_0 \le -1, & x_i <0 
 \end{cases}
 $$
+
 In other words, we need to minimize cost function
 
 $$
@@ -42,8 +44,8 @@ $$
    
 4. Find values of $\alpha$, assuming that
 
-   - $+ve = +1$
-   - $-ve = -1$
+     - $+ve = +1$
+     - $-ve = -1$
 
    
 

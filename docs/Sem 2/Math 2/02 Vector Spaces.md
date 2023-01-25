@@ -25,8 +25,8 @@ A non-empty set $V$ with binary operations $\oplus$ and $\odot$, which satisfies
 - $R_2, R_3, R_n$
 - matrices
 - polynomials
-  - form $ax^n + bx^{n-1} + \dots + \alpha, \quad a, b \in R, \quad n \in Z$
-  - $P_n$ means degree of the polynomial $\le n$
+    - form $ax^n + bx^{n-1} + \dots + \alpha, \quad a, b \in R, \quad n \in Z$
+    - $P_n$ means degree of the polynomial $\le n$
 - continuous functions
 
 ## Subspace

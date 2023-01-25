@@ -247,15 +247,15 @@ Binding can be
 - Set of rules for associating a type with expressions
 - Used for detecting invalid operations on incompatible types
   For eg
-  - pointer + int = ✅
-  - pointer + pointer = ❌
+    - pointer + int = ✅
+    - pointer + pointer = ❌
 
 ### Type Checking
 
 - Uses property of function
 - Function maps element of one set to another set
 - For eg: Arithmetic operations are functions
-  - If $E, F$ are `int`, then $E+F$ will also be `int`
+    - If $E, F$ are `int`, then $E+F$ will also be `int`
 
 - **Strongly-typed language** is one that allows only safe expressions.
 

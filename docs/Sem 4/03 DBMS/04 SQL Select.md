@@ -143,7 +143,6 @@ $$
 \Big(
 R_1 \times R_2 \times \dots \times R_n
 \Big)
-
 \bigg)
 $$
 

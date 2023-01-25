@@ -12,11 +12,9 @@ Language translators
 - Interpretors ()
   Python, Javascript, 
 
-  
-
 - Python is dynamic
 
-  - ```python
+    - ```python
     x = "hi"
     x = 304
     
@@ -24,7 +22,7 @@ Language translators
 
 - Static (compilation)
 
-  - ```c
+    - ```c
     #include <stdio.h>
     // standard input output
     // header file
@@ -37,7 +35,7 @@ Language translators
     }
     
     def my_func():
-    	print("hi")
+      print("hi")
     ```
 
 ## Tokens
@@ -46,16 +44,16 @@ Language translators
 
 - Key words
 
-  - ```c
+    - ```c
     return
       void
     ```
 
-  - 
+    - 
 
 - Identifiers
 
-  - ```
+    - ```
     int x = 3;
     ```
 
@@ -165,8 +163,8 @@ $$
 $$
 
 - $=$ and $==$
-  - assignment
-  - equality operator
+    - assignment
+    - equality operator
 
 ```c
 const float pi = 3.14;
@@ -175,17 +173,13 @@ const float pi = 3.14;
 ## Logical Operators
 
 $$
-! \\\&\& \\||
-
+! \\
+\&\& \\
+||
 $$
 
 $$
 [!0 \&\& 1 || 3\&\&!1]
-
-$$
-
-$$
-
 $$
 
 ```c
@@ -289,7 +283,7 @@ if x == 5:
   print("block 1")
 else:
   print("no")
-	print("block 2")
+  print("block 2")
 ```
 
 ## Code Block
@@ -306,22 +300,35 @@ cooler way of doing if else
 
 ## Switch
 
+```c
+switch(s):
+{
+  case 1: something; break;
+  case 2: something; break;
+  default: something;
+}
+
+switch(s):
+{
+  case 'a': something; break;
+  case 'b': something; break;
+  default: something;
+}
+```
+
 ## Loops
 
-- 
-  - `while`
+- `while`
     - Entry-controlled loop
-    - 
-  - `do...while`
+- `do...while`
     - Exit-controlled loops
-- 
 - `for`
 
 ### Components
 
 - Initialization
-  - $n$
-  - $i$
+    - $n$
+    - $i$
 - Loop condition checked
 - Code to execute is run
 - Updation occurs
@@ -341,9 +348,9 @@ for (; ; )
 {
  
   if(i>n)
-	  break;
+    break;
   
-	// code
+  // code
   
   i++;
 }
@@ -365,7 +372,7 @@ printf("%d", i); 11
 
 ```c
 for (int i = 1, n=10; i<=n; i++)
-	printf("%d\n", i);
+  printf("%d\n", i);
 ```
 
 ```
@@ -378,12 +385,12 @@ for (int i = 1, n=10; i<=n; i++)
 
 ```c
 for (int i = 1, n=10; i<=n; i++)
-	printf("%d\n", i);
-	printf("%d\n", i);
+  printf("%d\n", i);
+  printf("%d\n", i);
 
 for (int i = 1, n=10; i<=n; i++)
 {
-	printf("%d\n", i);
+  printf("%d\n", i);
 }
 printf("%d\n", i);
 
@@ -403,8 +410,8 @@ printf("%d\n", i);
 ```c
 for (int i = 1, n=10; i<=n; i++)
 {
-	printf("%d\n", i);
-	printf("%d\n", i);
+  printf("%d\n", i);
+  printf("%d\n", i);
 }
 
 // here
@@ -425,7 +432,7 @@ for (int i = 1, n=10; i<=n; i++)
 ```c
 int i, n;
 for (i = 1, n=10; i<=n; i++);
-	printf("%d\n", i);
+  printf("%d\n", i);
 
 int i, n;
 for (i = 1, n=10; i<=n; i++)
@@ -539,12 +546,12 @@ int main()
 ## jump statements
 
 - break
-  - exits the current loop
+    - exits the current loop
 - continue
-  - skips the below code of the current iteration
-  - goes to the update segment of (for)loop
+    - skips the below code of the current iteration
+    - goes to the update segment of (for)loop
     - in other loops, it goes to condition
-  - then continues as usual
+    - then continues as usual
 
 ```c
 for (int i=1; i<=5; i++)
@@ -555,7 +562,7 @@ for (int i=1; i<=5; i++)
     printf("%d\n", i);
   }
   
- 	printf("%d\n", i);
+   printf("%d\n", i);
 }
 
 // come here
@@ -575,7 +582,7 @@ for (int i=1; i<=5; i++)
     printf("%d\n", i);
   }
   
- 	printf("%d\n", i);
+   printf("%d\n", i);
 }
 ```
 
@@ -596,7 +603,7 @@ while(i<=5)
     printf("%d\n", i);
   }
   
- 	printf("%d\n", i);
+   printf("%d\n", i);
   
   i++;
 }
@@ -618,7 +625,7 @@ do
     printf("%d\n", i);
   }
   
- 	printf("%d\n", i);
+   printf("%d\n", i);
   
   i++;
 } while(i<=5); // has terminator
@@ -744,7 +751,7 @@ for(int i=0; i<10; i++)
 ```c
 for(int i=0; i<10; i++)
 {
-	scanf("%d", array[i]); // no &
+  scanf("%d", array[i]); // no &
 }
 
 // no error
@@ -795,14 +802,14 @@ int main()
   for(int i=0; i<n; i++)
   {
     if(a[i] > 60)
-    	printf("%d", a[i]);
+      printf("%d", a[i]);
   }
-	// or
+  // or
   for(int i=0; i<n; i++)
   {
     int num = a[i];
     if(num > 60)
-    	printf("%d", num);
+      printf("%d", num);
   }
   
   return 0;

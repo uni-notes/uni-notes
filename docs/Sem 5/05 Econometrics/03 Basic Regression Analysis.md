@@ -77,9 +77,9 @@ $$
 - Systematic/Deterministic/Common/Explained component
 - Non-Systematic/Random/Disturbance component
   Incorporates
-  - effect of all omitted variables
-  - random effects
-  - effect of measurement error
+    - effect of all omitted variables
+    - random effects
+    - effect of measurement error
 
 ### Equivalency with PRF
 
@@ -93,19 +93,19 @@ $$
 ### Why do we need Stochastic Specification?
 
 - Vagueness of theory
-  - Social Sciences has no definite theory for any event
+    - Social Sciences has no definite theory for any event
 - Randomness in human behavior
 - Incorporates effect of missing data
-  - Wealth data is not as easy to get as income data
+    - Wealth data is not as easy to get as income data
 - More appropriate for inexact relatioships
 - Captures effect of omitted variables
-  - Some variables are not as important
+    - Some variables are not as important
 - Captures effect of poor proxy variables
 - Principle of Parsimony
   We usually try to limit to simple models
 - Incorrect functional form
-  - Unknown theory
-  - Linear/Non-Linear function
+    - Unknown theory
+    - Linear/Non-Linear function
 - Incorporates measurement errors
 
 ## Proxy Variable
@@ -171,7 +171,7 @@ Exogeneous vs endogeneous depends on what you assume to be the system
 2. Calculate Conditional probabilities of $y$ for different values of $x$
 3. Calculate conditional mean
 4. Calculate the weighted average using probality of occurance
-   - This is different mean from arithmetic mean(simple average)
+     - This is different mean from arithmetic mean(simple average)
 
 The expected value of unconditional random variable $y$ is ???
 

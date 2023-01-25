@@ -139,7 +139,8 @@ Synchronization Tool/Construct
 The number of process that are waiting in the semaphore queue
 
 $$
-= |\text{Semaphore Value}| \\\Big(\text{Value} \iff < 0 \Big)
+= |\text{Semaphore Value}| \\
+\Big(\text{Value} \iff < 0 \Big)
 $$
 
 ## Implementation of Counting Semaphore
@@ -155,10 +156,10 @@ typedef struct
 Assume 2 operations
 
 - `block()` suspends the process that invokes it
-  - Moves the process from run state $\to$ blocked/wait state
-  - Control is transferred to CPU scheduler, which then schedules another process instead
+    - Moves the process from run state $\to$ blocked/wait state
+    - Control is transferred to CPU scheduler, which then schedules another process instead
 - `wakeup(P)` resumes the execution of a blocked process $P$
-  - Moves the process from blocked/wait state $\to$ ready state
+    - Moves the process from blocked/wait state $\to$ ready state
 
 ```c
 P1

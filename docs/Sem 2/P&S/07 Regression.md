@@ -6,12 +6,13 @@ The estimated regression line is given by
 
 $$
 \begin{align}
-\hat y &= b_0 + b_1 x \\ \\b_1 &= \frac{
+\hat y &= b_0 + b_1 x \\b_1 &= \frac{
 	n \ \sum (xy) - \sum x \sum y
 }{
 	n \ \sum x^2 - \Big( \sum x \Big)^2
-} \\b_0 &= \bar y - b_1 \bar x \\ \\
-\bar x &= \frac {\sum x} n \\\bar y &= \frac {\sum y} n
+} \\b_0 &= \bar y - b_1 \bar x \\
+\bar x &= \frac {\sum x} n \\
+\bar y &= \frac {\sum y} n
 \end{align}
 $$
 
@@ -57,10 +58,12 @@ It has a range of $[0, 1]$. Higher the better.
 $$
 \begin{align}
 R^2 &= 1 - \frac{ \text{SS}_{res} }{ \text{SS}_{tot} } \\
-\text{SS}_\text{res} &= \sum\limits_{i=1}^n (y_i - \hat y)^2 \\\text{SS}_\text{tot} &= \sum\limits_{i=1}^n (y_i - \bar y)^2 \\
+\text{SS}_\text{res} &= \sum\limits_{i=1}^n (y_i - \hat y)^2 \\
+\text{SS}_\text{tot} &= \sum\limits_{i=1}^n (y_i - \bar y)^2 \\
 \bar y &= \frac{1}{n} \sum\limits_{i=1}^n y_i
 \end{align}
 $$
+
 where
 
 | Symbol                 | Meaning                                                      |

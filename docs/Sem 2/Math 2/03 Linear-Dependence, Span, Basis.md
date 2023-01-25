@@ -23,10 +23,7 @@ Let $\vec v = \alpha_1 u_1 + \alpha_2 u_2 + \dots + \alpha_n u_n$
 ### Working
 
 1. Column-wise
-
-2. 
-
-3. | Condition           | Solution | Conclusion |
+2. | Condition           | Solution | Conclusion |
    | ------------------- | :------: | :--------: |
    | $r(A) = r(A:B) = n$ |  unique  |    span    |
    | $r(A) = r(A:B) < n$ | infinite |    span    |
@@ -45,4 +42,4 @@ no of unknowns
 
 no of vectors in its basis
 
-dim$(\vec 0)= 0 $
+dim $(\vec 0)= 0$

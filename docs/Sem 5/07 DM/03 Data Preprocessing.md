@@ -39,8 +39,8 @@ Ensures all classes of the population are well-represented in the sample.
 #### Steps
 
 - Draw samples from each class
-  - equal samples, or
-  - proportional samples, using % of the total of all classes
+    - equal samples, or
+    - proportional samples, using % of the total of all classes
     - Gives us imbalanced dataset
 - Combine these samples into a larger sample
 
@@ -159,11 +159,11 @@ end
 
 - Feature extraction
 - Mapping data to new space
-  - Time series data $\to$ frequency domain
-  - For eg, fourier transformation
+    - Time series data $\to$ frequency domain
+    - For eg, fourier transformation
 - Feature construction
-  - Construct features from pre-existing ones
-  - Eg
+    - Construct features from pre-existing ones
+    - Eg
     - Area = length * breadth
     - Density = mass/volume
 
@@ -173,9 +173,9 @@ end
 
 2. Generate
 
-   - $n-1$ split points
+     - $n-1$ split points
 
-   - $n$ bins $\to$ inclusive intervals (specified by the analyst)
+     - $n$ bins $\to$ inclusive intervals (specified by the analyst)
 
 Then convert using binarization. But, why?
 

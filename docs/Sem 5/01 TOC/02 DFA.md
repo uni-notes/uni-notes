@@ -32,9 +32,11 @@ States are the only mechanism for a FA to “remember” what it has seen of inp
 
 $$
 \begin{align}
-\delta (q, \epsilon) &= q \\\delta^* (q, \epsilon) &= \{q, \ \dots\}
+\delta (q, \epsilon) &= q \\
+\delta^* (q, \epsilon) &= \{q, \ \dots\}
 \end{align}
 $$
+
 DFA seen as 5-Tuple
 
 $$
@@ -129,7 +131,8 @@ $$
 \begin{align}
 L& \implies
 M = ( Q, Σ, δ, q_0, F ) \\L'& \implies
-M' = ( Q, Σ, δ, q_0, Q-F ) \\\end{align}
+M' = ( Q, Σ, δ, q_0, Q-F ) \\
+\end{align}
 $$
 
 ## Reversing a regular expression

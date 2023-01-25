@@ -21,13 +21,13 @@ $$
 - States $Q$
 - Input Alphabet $\Sigma$
 - Stack Alphabet $\Gamma$
-  - $\
+    - $\
 
 $$
  marks the bottom of stack
-  - Symbols are pushed/popped to/from stack
+    - Symbols are pushed/popped to/from stack
 - Transitions
-  - If PDA is current in state $q_i$
+    - If PDA is current in state $q_i$
     - it reads $a \in \Sigma_\epsilon$ off the stack
     - it pops $b \in \Gamma_\epsilon$ off the stack
 
@@ -87,7 +87,8 @@ This is because
 $$
 \begin{align}
 L
-=& \{a^n b^n \} - \{a^{50} b^{50} \} \\=& \{a^n b^n \} \cap \{a^{50} b^{50} \}' & & \Big( A-B = A \cap B' \Big) \\=& \text{CFL} \cap \text{RL} && {\Big(\rm{(RL)' \to RL }\Big)} \\\implies & \text{CFL}
+=& \{a^n b^n \} - \{a^{50} b^{50} \} \\=& \{a^n b^n \} \cap \{a^{50} b^{50} \}' & & \Big( A-B = A \cap B' \Big) \\=& \text{CFL} \cap \text{RL} && {\Big(\rm{(RL)' \to RL }\Big)} \\
+\implies & \text{CFL}
 \end{align}
 $$
 

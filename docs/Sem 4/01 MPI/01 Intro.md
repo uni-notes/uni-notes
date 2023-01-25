@@ -11,8 +11,8 @@
 Tells the MP what actions to perform
 
 - operations
-  - logic
-  - arithmetic
+    - logic
+    - arithmetic
 - read data from input device
 - write to memory
 - reset

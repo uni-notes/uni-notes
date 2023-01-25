@@ -4,9 +4,9 @@ It is the power of firms to control their selling price. It allows them to deter
 
 - type and intensity of competition
 - costs of production
-  - this influences the type of competition in market, because it is cheaper for one firm to produce at a larger scale
-  - big companies threaten small by lowering their price, to make them run out of business; otherwise acquire their company
-  - eg: Facebook-Instagram
+    - this influences the type of competition in market, because it is cheaper for one firm to produce at a larger scale
+    - big companies threaten small by lowering their price, to make them run out of business; otherwise acquire their company
+    - eg: Facebook-Instagram
 
 Sometimes, consumer may have greater market power. This occurs when there is only a sole consumer, but many sellers
 eg: Dubai Metro
@@ -49,9 +49,9 @@ if sellers inc price, then the demand for their product becomes 0, as no one wil
 eg
 
 - agricultural industry
-  - one farmer stops producing rice does not affect other rice farmers
+    - one farmer stops producing rice does not affect other rice farmers
 - food consumption
-  - one buyer stops eating rice does not affect other buyers of rice
+    - one buyer stops eating rice does not affect other buyers of rice
 
 ## Profit Maximization
 
@@ -83,7 +83,7 @@ input mix is said to be
 - Technically efficient
   if it is impossible to maintain the same output, without keeping the same inputs
   if any input decreases, the output also decreases
-  - in india, we have a technically inefficient agricultural sector. This is proved by the fact that:
+    - in india, we have a technically inefficient agricultural sector. This is proved by the fact that:
     even though many people moved to tertiary sector, it did not affect agricultural output
 
 ## Costs

@@ -9,6 +9,7 @@ t \in \text{loan} \land
 t[\text{amount}] > 1200
 }
 $$
+
 Display loan number for every loan > $1200
 
 $$
@@ -18,6 +19,7 @@ t | \exists s \in \text{loan} ( \\&& t[\text{loanNumber}] &= s[\text{loanNumber}
 \}
 \end{align}
 $$
+
 Names of customers having loan at Perry branch ”
 
 $$
@@ -43,13 +45,14 @@ Display loans over $1200
 
 $$
 \{
-\textcolor{purple} {\underbrace{<l, b, a>}_\text{select}}
+\textcolor{purple}{\underbrace{<l, b, a>}_\text{select}}
 |
-\textcolor{green} {\underbrace{<l, b, a> \in \text{loan}}_\text{from}}
+\textcolor{green}{\underbrace{<l, b, a> \in \text{loan}}_\text{from}}
 \and
-\textcolor{orange} {\underbrace{a > 1200}_\text{where}}
+\textcolor{orange}{\underbrace{a > 1200}_\text{where}}
 \}
 $$
+
 Display names of customers having loan > $1200
 
 $$
@@ -57,3 +60,4 @@ $$
 <n> | \exists l, b, a somethign
 \}
 $$
+

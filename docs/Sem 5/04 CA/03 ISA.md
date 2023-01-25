@@ -75,9 +75,9 @@ Memory is byte-addressed
 
 - Each address identifies 8-bits
 - Words are aligned in memory
-  - Address must be a multiple of 4
+    - Address must be a multiple of 4
 - MIPS is Big/Little Endian
-  - In our course, we are taking ==little endian==
+    - In our course, we are taking ==little endian==
 
 #### Load/Store
 
@@ -289,9 +289,9 @@ exit:
 - `$a0 – $a3`: arguments (reg’s 4 – 7)
 - `$v0, $v1`: result values (reg’s 2 and 3)
 - `$t0 – $t9`: temporaries
-  - Can be overwritten by callee
+    - Can be overwritten by callee
 - `$s0 – $s7`: saved
-  - Must be saved/restored by callee
+    - Must be saved/restored by callee
 - `$gp`: global pointer for static data (reg 28)
 - `$sp`: stack pointer (reg 29)
 - `$fp`: frame pointer (reg 30)
@@ -316,7 +316,7 @@ Procedure return: jump register
 
 - Copies $ra to program counter
 - Can also be used for computed jumps
-  - e.g., for case/switch statements
+    - e.g., for case/switch statements
 
 ### Example
 

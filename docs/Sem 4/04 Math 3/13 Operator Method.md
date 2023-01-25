@@ -16,7 +16,8 @@ $$
 
 $$
 \begin{align}
-\phi(D) y &= R(x) \\\phi(D)
+\phi(D) y &= R(x) \\
+\phi(D)
 &= D^2 + pD + q \\&=(D-m_1)(D-m_2)
 \end{align}
 $$
@@ -25,13 +26,15 @@ $$
 
 $$
 \begin{align}
-\frac{1}{D} R(x) &= \int R(x) dx \\\frac{1}{D^2} R(x) &= \iint R(x) dx \cdot dx
+\frac{1}{D} R(x) &= \int R(x) dx \\
+\frac{1}{D^2} R(x) &= \iint R(x) dx \cdot dx
 \end{align}
 $$
 
 $$
 \begin{align}
-\frac{1}{D-m} R(x) &= \textcolor{orange}{e^{mx}} \int R(x) \cdot \textcolor{green}{e^{-mx}} \cdot dx \\\frac{1}{D+m} R(x) &= \textcolor{green}{e^{-mx}} \int R(x) \cdot \textcolor{orange}{e^{mx}} \cdot dx
+\frac{1}{D-m} R(x) &= \textcolor{orange}{e^{mx}} \int R(x) \cdot \textcolor{green}{e^{-mx}} \cdot dx \\
+\frac{1}{D+m} R(x) &= \textcolor{green}{e^{-mx}} \int R(x) \cdot \textcolor{orange}{e^{mx}} \cdot dx
 \end{align}
 $$
 
@@ -52,7 +55,9 @@ $$
 
 $$
 \begin{align}
-\phi'(a) &= \left\{ \frac{d \phi(D)}{dD} \right\}_{D \to a} \\\phi''(a) &= \left\{ \frac{d^2 \phi(D)}{d D^2} \right\}_{D \to a} \\f(-a^2) &= \left\{ \frac{d f(D^2)}{dD} \right\}_{D^2 \to -a^2} \\ \\f'(-a^2) &= \left\{ \frac{d^2 f(D^2)}{d D^2} \right\}_{D^2 \to -a^2} \\\end{align}
+\phi'(a) &= \left\{ \frac{d \phi(D)}{dD} \right\}_{D \to a} \\
+\phi''(a) &= \left\{ \frac{d^2 \phi(D)}{d D^2} \right\}_{D \to a} \\f(-a^2) &= \left\{ \frac{d f(D^2)}{dD} \right\}_{D^2 \to -a^2} \\f'(-a^2) &= \left\{ \frac{d^2 f(D^2)}{d D^2} \right\}_{D^2 \to -a^2} \\
+\end{align}
 $$
 
 ## Binomial Expansions
@@ -110,7 +115,8 @@ $$
 
 $$
 \begin{align}
-Dy - my &= R(x) \\\frac{dy}{dx} - my &= R(x) \\
+Dy - my &= R(x) \\
+\frac{dy}{dx} - my &= R(x) \\
 IF
 &= e^{\int P(x) dx} \\&= e^{\int -m dx} \\&= e^{-mx}
 \end{align}

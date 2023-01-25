@@ -25,6 +25,7 @@ $$
 \fbox{D} \fbox{P} \quad
 \fbox{D} \fbox{/}
 $$
+
 In the above diagram
 
 - D = data

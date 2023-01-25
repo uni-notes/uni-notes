@@ -145,10 +145,10 @@ Govt can sometimes improve market outcomes
 
    example
 
-   - national defence
-   - community services
-   - landscapes
-   - fresh air
+     - national defence
+     - community services
+     - landscapes
+     - fresh air
 
 4. Promote equality/equity
 
@@ -238,11 +238,11 @@ Measures for standard of living
 - for individuals
   comparing real personal income
 - for countries
-  - comparing real GDP
+    - comparing real GDP
     shows the employment opportunities in the country
-  - comparing real GNP (Gross National Product)
+    - comparing real GNP (Gross National Product)
     shows the status of citizens of the country
-  - per capita income and output
+    - per capita income and output
     per capita income $= \frac{income}{population}$, per capita output $= \frac{output}{population}$
     shows the average contribution of people; doesn't show income inequality though
 
@@ -431,7 +431,8 @@ inflation $\propto \frac{1}{\text{unemployment}}$
 
 $$
 \pi_t = \alpha - \beta U_t \qquad  (\pi_t = - \beta U_t + \alpha, \ y = mx+c)\\
-\text{Taking derivative wrt } \pi_t \\\beta = - \frac{d \pi_t}{dt}
+\text{Taking derivative wrt } \pi_t \\
+\beta = - \frac{d \pi_t}{dt}
 $$
 
 - $\pi_t =$ Inflation

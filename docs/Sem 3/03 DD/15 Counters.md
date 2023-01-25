@@ -144,8 +144,8 @@ not all states are used
 1. Find no of FF
    the required no of FF is the ***smallest*** $n$ that satisfies
    $N \le 2^n$, where
-   - $N =$ no of states
-   - $n =$ no of FF
+     - $N =$ no of states
+     - $n =$ no of FF
 2. Write the counting sequence of the counter
 3. Draw the truth table
 4. If necessary, find the minimal expression for *reset* condition, using KMAP
@@ -252,7 +252,8 @@ K_1 &= 1 \\
 J_2 &= Q_1 \odot M &
 K_2 &= Q_1 \odot M \\
 J_3 &= Q_2 \odot Q_1 \odot  m &
-K_3 &= Q_2 \odot Q_1 \odot  m \\\end{align}
+K_3 &= Q_2 \odot Q_1 \odot  m \\
+\end{align}
 $$
 
 ### BCD upcounter
@@ -369,7 +370,8 @@ K_1 &= 1 \\
 J_2 &= Q_3' Q_1 &
 K_2 &= Q_1 \\
 J_3 &= Q_2 Q_1 &
-K_3 &= Q_1 \\\end{align}
+K_3 &= Q_1 \\
+\end{align}
 $$
 
 |     | Unused PS<br />$Q_3 Q_2 Q_1$ | $J_3$ | $K_3$ | $J_2$ | $K_2$ | $J_1$ | $K_1$ | NS<br />$Q_3 Q_2 Q_1$ |     |

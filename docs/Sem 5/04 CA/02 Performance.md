@@ -79,8 +79,8 @@ We can improve performance by
 - Reducing number of clock cycles
 - Increasing clock rate
   However, this is not ideal, as this will increase
-  - Power consumption
-  - Heat produced
+    - Power consumption
+    - Heat produced
 
 ## CPU Clocking
 

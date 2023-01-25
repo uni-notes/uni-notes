@@ -116,8 +116,8 @@ Abstract class is a class containing abstract method
 
 - can be inherited
 - can contain constructor
-  - called when creating objects of **child** classes
-  - we cannot create objects of the abstract class itself
+    - called when creating objects of **child** classes
+    - we cannot create objects of the abstract class itself
 - can also have final methods
 
 ``` java
@@ -172,7 +172,7 @@ In new versions, we can have
 - a single interface can extend multiple interfaces (multiple inheritance)
 - can have `default` methods
 - can have `static` methods
-  - can be called just by using the interface name
+    - can be called just by using the interface name
 
 We use both `extends` and `implements` here
 

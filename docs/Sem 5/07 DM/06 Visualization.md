@@ -21,7 +21,7 @@ Each category will have a line denoting the frequency associated with that categ
 ### Continuous Data
 
 - Apply binning
-  - Usually equal-width binning
+    - Usually equal-width binning
 - Each bin will be treated as a different category
 - Now each bin will have a line denoting the frequency associated with that category
 
@@ -52,8 +52,8 @@ Useful when there aren’t many values
 
 - Split values into groups, where each group contains those values that are the same except for the last digit
 - Each group becomes a stem, while the last digit of a group are the leaves
-  - Stems will be the higher-order digits
-  - Leaves will be the lower-order digits
+    - Stems will be the higher-order digits
+    - Leaves will be the lower-order digits
 - Plot stems vertically and leaves horizontally
 
 ## Contour Plots

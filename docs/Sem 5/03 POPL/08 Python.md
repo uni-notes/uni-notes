@@ -207,8 +207,8 @@ x = tuple(x)
 - Better performance than list, as they are immutable
 - Tuple ensures write-protection of elements
 - General convention
-  - Tuples for different data types
-  - Lists for similar data types
+    - Tuples for different data types
+    - Lists for similar data types
 - Tuples that contain immutable elements can be used as key for dictionary
 
 ## Dictionaries

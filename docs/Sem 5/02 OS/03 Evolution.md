@@ -33,7 +33,7 @@ I/O Burst
 
 - Perform CPU execution and I/O concurrently
 - Multi-programming and Time Sharing
-  - Multi-programming $\ne$ Multi-Processing
+    - Multi-programming $\ne$ Multi-Processing
     - Multi-Programming means using 1 CPU and performing multiple programs concurrently
     - Multi-Processing means using multiple CPUs
 
@@ -80,8 +80,8 @@ Time between switching between 2 users
 - Job, CPU Scheduling
 - Memory Management
 - Resonable response time
-  - Using Virtual memory
-  - [Swap/Roll](#Swap/Roll)
+    - Using Virtual memory
+    - [Swap/Roll](#Swap/Roll)
 - File system and disk management
 - job sync and communication
 - Deadlocks handling
@@ -184,45 +184,45 @@ Time between starting of execution of a program and its completion
 ## Questions
 
 1. Steps when a user double clicks MS Powerpoint icon in a Windows Desktop
-   - CPU recognizes user click (Hardware Interrupt), after execution of current instruction
-   - Mode changes to kernel mode
-   - Identifies `.exe` file in secondary memory
-   - OS loads program into primary memory
-   - Allocate the CPU
-   - Hardware interrupt to display on screen
+     - CPU recognizes user click (Hardware Interrupt), after execution of current instruction
+     - Mode changes to kernel mode
+     - Identifies `.exe` file in secondary memory
+     - OS loads program into primary memory
+     - Allocate the CPU
+     - Hardware interrupt to display on screen
 2. Important activities/functions done by OS
-   - [Functions of OS](#Functions of OS)
+     - [Functions of OS](#Functions of OS)
 3. Suppose a computer system has 10000 bytes of memory available. Out of this, the OS occupies 5000bytes. Now it is required to run a program whose size is 7000bytes. Is this possible?
-   - No, it is not possible in basic computers
-   - Every program has to be loaded into primary memory for its execution
-   - The memory is split into 2 parts
+     - No, it is not possible in basic computers
+     - Every program has to be loaded into primary memory for its execution
+     - The memory is split into 2 parts
      - OS segment
      - Program segment (for loading the program)
-   - As only 5000bytes is available for the program segment, we cannot load this program, and hence we cannot run it
-   - However, we can sort this issue using virtual memory
+     - As only 5000bytes is available for the program segment, we cannot load this program, and hence we cannot run it
+     - However, we can sort this issue using virtual memory
 4. What is meant by dual mode of operation in intel CPUs
-   - To ensure better security and stricter access priveleges, the CPU has 2 modes of operations
+     - To ensure better security and stricter access priveleges, the CPU has 2 modes of operations
      - Instructions by the user are done in user mode, with lower priveleges
      - Instructions by the user are done in kernel mode, with higher priveleges
 5. Can you guess in what mode OS program is run and in what mode user program is run?
-   - Kernel mode
-   - User mode
+     - Kernel mode
+     - User mode
 6. What is the difference between hardware and software interrupt in a computer system? Can you give examples of each type.
-   - Hardware interrupt are interrupts involving I/O devices. eg: keyboard input
-   - Software interrupts do not include I/O devices. eg: Mathematical errors, rejected priviledged instructions, Exceptions
+     - Hardware interrupt are interrupts involving I/O devices. eg: keyboard input
+     - Software interrupts do not include I/O devices. eg: Mathematical errors, rejected priviledged instructions, Exceptions
 7. Why do you require a bootstrap loader?
-   - POST Diagnostics
-   - Detect and initialize devices
-   - Initialize registers and primary memory
-   - Load the kernel into primary memory
+     - POST Diagnostics
+     - Detect and initialize devices
+     - Initialize registers and primary memory
+     - Load the kernel into primary memory
 8. Using the Interrupt Vector Table (of an 8086 processor operating in real mode) shown below, determine the address of the ISR of a device with interrupt vector 42H. 
    
    ![image-20230101134404020](assets/image-20230101134404020.png)
    
    Answer $= \rm{4D6EA_H}$
 9. Differentiate between multi-programming & multi-processing
-   - Multi-programming means running multiple programs, using only 1 processor
-   - Multi-processing means running one or more programs, using multiple processors
+     - Multi-programming means running multiple programs, using only 1 processor
+     - Multi-processing means running one or more programs, using multiple processors
 
 ## System Call
 

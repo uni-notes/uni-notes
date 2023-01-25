@@ -10,7 +10,6 @@ a^2 \left(
 	\frac{\partial^2 y}{\partial x^2}
 \right)
 \end{align}
-
 \label{idk}
 $$
 
@@ -64,7 +63,6 @@ $$
 &=
 \alpha^2 \left( \frac{\partial^2 u}{\partial x^2} \right)
 \end{align}
-
 \label{2}
 $$
 
@@ -90,3 +88,4 @@ b_n
 b_n &= \frac{2}{\pi} \int\limits_0^\pi f(x) \sin(nx) dx
 \end{align}
 $$
+

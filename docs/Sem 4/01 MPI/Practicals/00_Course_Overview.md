@@ -50,8 +50,8 @@ code ends
 
 2. **Editing**
    
-   - no
-   - Dos
+     - no
+     - Dos
      1. Type `edit fileName.asm`
      1. Type your code
      1. Save your code

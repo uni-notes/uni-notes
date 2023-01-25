@@ -38,8 +38,8 @@ $$
 ### Important Results
 
 - Geometric sum $a + ar + ar^2 + \dots$
-  - converges to $\dfrac{a}{1 - r}, |r| < 1$
-  - diverges
+    - converges to $\dfrac{a}{1 - r}, |r| < 1$
+    - diverges
 
 |                  |                                             |                    Converges                     |    Diverges     |
 | :--------------: | :-----------------------------------------: | :----------------------------------------------: | :-------------: |
@@ -48,10 +48,12 @@ $$
 
 $$
 \begin{align}
-\lim\limits_{n \to \infty} \frac { \ln |n| }{n} &= 0 \\(\ln |n| \text{ always} &< n, \text{ so den reaches } \infty \text{ faster} ) \\ \\
-\lim\limits_{n \to \infty} x^{\frac 1n} &= 1 \\\lim\limits_{n \to \infty} n^{\frac 1n} &= 1 \\(x^0 = n^0 &= 1) \\ \\
-\lim\limits_{n \to \infty} \left( 1 + \frac x n \right)^n &= e^x \\\lim\limits_{n \to \infty} x^n &= 0 \text{ if } |x| < 1 \\\lim\limits_{n \to \infty} \frac{x^n}{n!} &= 0 \\(n! &> x^n),  \text{ when $n$ is large so den reaches $\infty$ faster}
-
+\lim\limits_{n \to \infty} \frac { \ln |n| }{n} &= 0 \\(\ln |n| \text{ always} &< n, \text{ so den reaches } \infty \text{ faster} ) \\
+\lim\limits_{n \to \infty} x^{\frac 1n} &= 1 \\
+\lim\limits_{n \to \infty} n^{\frac 1n} &= 1 \\(x^0 = n^0 &= 1) \\
+\lim\limits_{n \to \infty} \left( 1 + \frac x n \right)^n &= e^x \\
+\lim\limits_{n \to \infty} x^n &= 0 \text{ if } |x| < 1 \\
+\lim\limits_{n \to \infty} \frac{x^n}{n!} &= 0 \\(n! &> x^n),  \text{ when $n$ is large so den reaches $\infty$ faster}
 \end{align}
 $$
 
@@ -63,9 +65,9 @@ Let
 
 - $\sum a_n$ be a series of +ve terms
 - $a_n = f(n)$ where $f$ is
-  - continuous
-  - +ve
-  - decreasing function of $n$, for some $n \ge N$
+    - continuous
+    - +ve
+    - decreasing function of $n$, for some $n \ge N$
 
 Then by integral test, $\int\limits_N^\infty f(x) \ dx$ and $\sum\limits_N^\infty a_n$ converge/diverge together
 
@@ -109,19 +111,16 @@ Let
 - $\sum a_n$ be a series of +ve terms
 
 - $\sum b_n$ be a known series (we know if it converges/diverges)
-
-  - We choose $b_n = \dfrac{1}{n^{q-p}}$, where
+    - We choose $b_n = \dfrac{1}{n^{q-p}}$, where
 
     - P = degree of numerator
     - Q = degree of denominator
 
-  - If $b_n$ is a p-series of the form $\sum \dfrac{1}{n^p}$
+    - If $b_n$ is a p-series of the form $\sum \dfrac{1}{n^p}$
     |   $p$   |           |
     | :-----: | :-------: |
     |  $> 1$  | converges |
     | $\le 1$ | diverges  |
-    
-  
 - $\lim\limits_{n \to \infty} \frac {a_n}{b_n} = k$
 
 Then

@@ -15,8 +15,8 @@ Non-planar graphs eg
 
 - $k_5$ and larger
 - $k_{3,3}$
-  - find longest cycle
-  - draw it as a circle
+    - find longest cycle
+    - draw it as a circle
 
 ### Uses
 
@@ -34,8 +34,8 @@ cut edge is counted twice
 
 - every region will become vertices of the dual, and vice versa
   if G is primal graph and G* is the dual,
-  - $|R^*| = |V|$
-  - $|V^*| = |R|$
+    - $|R^*| = |V|$
+    - $|V^*| = |R|$
 - if 2 regions have common boundary line, then the corresponding new vertices of the dual graph will get connected to each other
 
 ### Theorems
@@ -59,8 +59,8 @@ connected planar graphs
 - $deg(v_i) \ge 3$
 - $deg(r_i) \ge 3$
 - using degree of region theorem,
-  - $3|V| \le 2|E|$
-  - $3|R| \le 2|E|$
+    - $3|V| \le 2|E|$
+    - $3|R| \le 2|E|$
 
 eg: $k_4, Q_3$
 
@@ -133,8 +133,8 @@ eg:
 - $k_n$ requires $n$ colors
 - $k_{m,n}$ requires only 2 colors
 - $C_n$ (cycle of $n$ vertices) requires
-  - 2 colors when n = even
-  - 3 colors when n = odd
+    - 2 colors when n = even
+    - 3 colors when n = odd
 
 ### Theorem
 
@@ -156,15 +156,15 @@ no proof for this
 6. every $k$ chromatic graph $(\chi(G) = k)$ has atleast $k$ vertices such that the $deg(v_i) \ge k-1$
 7. For any graph $G, \chi(G) \le 1 + \Delta(G)$
    $\Delta(G)$ is the largest degree of any vertex in G
-8. $\chi(G) \ge \frac {|V|} { |V| - \delta(G) }$
+8. $\chi(G) \ge \frac {|V|}{ |V| - \delta(G) }$
    $\delta(G)$ is the largest degree of any vertex in G
 
 ## Properties of chromatic number
 
 1. $k$-critical graph is a graph where
 
-   - $\chi(G) = k$
-   - $\chi(G-V) = k-1$
+     - $\chi(G) = k$
+     - $\chi(G-V) = k-1$
 
    possible only if $\delta(G) \ge k-1$
 
@@ -184,7 +184,7 @@ no proof for this
 6. Every tree with $|V| \le 2$ is 2-chromatic
 
 7. - $\chi(G) \ge 3 \iff$ G has a cycle of odd length
-   - $\chi(G) = 2 \iff$ G has **no** cycle of odd length
+     - $\chi(G) = 2 \iff$ G has **no** cycle of odd length
      (we already learnt this for bipartite graphs)
 
 8. Every connected k-connected graph contains a critical k-chromatic graph

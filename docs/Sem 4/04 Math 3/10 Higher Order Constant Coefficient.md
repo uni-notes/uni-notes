@@ -9,6 +9,7 @@ Solve using the same method as [Constant Coefficient](08 Constant Coefficient.md
 $$
 m^n + \dots + pm + q = 0 \label{hi}
 $$
+
 For 3 equal roots,
 
 $$

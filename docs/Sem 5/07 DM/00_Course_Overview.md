@@ -18,8 +18,8 @@ To fill in areas where traditional data analysis methods cannot be applied
 - Understand customers
 - Computer-Aided Diagnosis
 - Image
-  - Segmentation
-  - Captioning
+    - Segmentation
+    - Captioning
 - Object Detection
 
 ## Concepts of this course

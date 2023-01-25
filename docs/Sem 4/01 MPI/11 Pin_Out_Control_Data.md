@@ -72,4 +72,3 @@ Connected to [$\overline{DEN}$]($\overline{DEN}$)
 Connected to [$DT/\overline{R}$]($DT/\overline{R}$)
 
 
-

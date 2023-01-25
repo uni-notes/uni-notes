@@ -18,6 +18,7 @@ $$
 t(t-1)y'' + (1-2t)y' + n(n+1)y = 0
 \label{hyper}
 $$
+
 $\eqref{hyper}$ is a hyper-geometric function.
 
 ### Solution of $\eqref{hyper}$ near $t=0$
@@ -77,3 +78,4 @@ f(x) &= \sum_{n=0}^\infty a_n P_n(x) \\
 a_n &= \frac{2n+1}{2} \int_{-1}^1 f(x) P_n(x) dx
 \end{align}
 $$
+

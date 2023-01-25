@@ -95,10 +95,10 @@ eg:
 
 - MSP for agriculture
 - minimum wage
-  - pro
+    - pro
     - child labor dec
     - income of workers inc
-  - cons
+    - cons
     - causes unemployment
     - students drop out cuz they get tempted by the salary
     - on-job training reduces, as the companies are paying a lot, so cannot afford to waste time

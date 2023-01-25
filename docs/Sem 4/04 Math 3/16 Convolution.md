@@ -33,11 +33,14 @@ $$
 \begin{align}
 \cos(x) &= \frac{
 	e^x \textcolor{orange}{+} e^{-x}
-}{2} \\\sinh(x) &= \frac{
+}{2} \\
+\sinh(x) &= \frac{
 	e^x \textcolor{orange}{-} e^{-x}
-}{2} \\\cos(x) &= \frac{
+}{2} \\
+\cos(x) &= \frac{
 	e^{\textcolor{hotpink}{i} x} \textcolor{orange}{+} e^{-\textcolor{hotpink}{i} x}
-}{2i} \\\sin(x) &= \frac{
+}{2i} \\
+\sin(x) &= \frac{
 	e^{\textcolor{hotpink}{i} x} \textcolor{orange}{-} e^{-\textcolor{hotpink}{i} x}
 }{2i}
 \end{align}

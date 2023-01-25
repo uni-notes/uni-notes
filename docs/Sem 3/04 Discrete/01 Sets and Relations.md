@@ -170,7 +170,8 @@ $a \ R \ b \iff$ a and b belong to the same subset of P
 returns the remainder
 basically `x % m` in programming (smallest result)
 
-$x \equiv y(mod \ m), \text{ if } x = y + am, \quad  a, m \in \Z \\ \implies x \% m = y$
+$x \equiv y(mod \ m), \text{ if } x = y + am, \quad  a, m \in \Z \\
+\implies x \% m = y$
 
 eg:$12 \equiv 2 (mod \ 5), -12 = 3(mod \ 5)$
 

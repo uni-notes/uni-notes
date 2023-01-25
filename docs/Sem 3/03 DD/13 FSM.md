@@ -25,11 +25,11 @@ $NS = f(PS, ip)$
 inputs, outputs, state vars are functions of time
 
 - inputs/outputs (only small)
-  - NS $x(t), y(t)$
-  - PS $x(t+1), y(t+1)$
+    - NS $x(t), y(t)$
+    - PS $x(t+1), y(t+1)$
 - flip-flop outputs (capital or small)
-  - NS $A(t), B(t),  a(t), b(t)$
-  - PS $A(t+1), B(t+1), a(t+1), b(t+1)$
+    - NS $A(t), B(t),  a(t), b(t)$
+    - PS $A(t+1), B(t+1), a(t+1), b(t+1)$
 
 ## Characteristic Equations
 

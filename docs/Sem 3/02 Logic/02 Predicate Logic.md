@@ -77,7 +77,9 @@ any of the above can replace free variable
    
    1. $\frac{
       \begin{bmatrix}
-      x_0 \\ \vdots \\ \phi
+      x_0 \\
+\vdots \\
+\phi
       \end{bmatrix}
       }{\forall x}$
    2. assumption box
@@ -125,8 +127,8 @@ $$
 
 1. De-Morgan’s rule
    convert bw $\forall$ and $\exists$ when there is negation
-   - $\lnot \forall x (\phi) \dashv \vdash \exists x (\lnot \phi)$
-   - $\lnot \exists x (\phi) \dashv \vdash \forall x (\lnot \phi)$
+     - $\lnot \forall x (\phi) \dashv \vdash \exists x (\lnot \phi)$
+     - $\lnot \exists x (\phi) \dashv \vdash \forall x (\lnot \phi)$
 2. Distributive
    1. $\forall x (\phi) \land \forall x(\psi) \dashv \vdash \forall x (\phi \land \psi)$
    2. $\exists x (\phi) \lor \exists x (\psi) \dashv \vdash \exists(\phi \lor \psi)$

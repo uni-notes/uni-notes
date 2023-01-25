@@ -78,13 +78,13 @@ But war in Korea and Vietnam
   But they were faced with sanctions later, such as no one buying Oil from them
 - Internal Crisis in Yugoslavia
   3 countries formed
-  - Bosnia-Herzegovina
-  - Croatia
-  - Serbia
+    - Bosnia-Herzegovina
+    - Croatia
+    - Serbia
 - International Criminal Tribunal formed
   Convicted
-  - Yugoslavian President for Bosnia
-  - Sudanese President for South Sudan
+    - Yugoslavian President for Bosnia
+    - Sudanese President for South Sudan
 - International Criminal Court formed
 
 ## Court vs Tribunal

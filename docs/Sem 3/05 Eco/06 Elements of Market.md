@@ -30,8 +30,8 @@ Slope $= \frac 1 {\alpha_2}$
 $$
 \text{Demand as a function of price}\\
 \begin{align}
-D &= f(P) \\&= \alpha_1 - \alpha_2 P \\\alpha_2 &= -\frac{\partial D}{\partial P}
-
+D &= f(P) \\&= \alpha_1 - \alpha_2 P \\
+\alpha_2 &= -\frac{\partial D}{\partial P}
 \end{align}
 $$
 
@@ -39,13 +39,13 @@ $$
 - $P =$ price
 - $\alpha_1 =$ the demand even the commodity is free
 
-  - impact of all other factors that affect the demand 
+    - impact of all other factors that affect the demand 
     - income of consumers
     - advertising etc 
 - $\alpha_2 =$ sensitivity of demand with respect to price
   the no of units of demand decreases by when the price increases by 1 unit
-  - necessities have low sensitivity
-  - luxury goods have high sensitivity
+    - necessities have low sensitivity
+    - luxury goods have high sensitivity
 
 |                | Horizontal Graph                                             | Vertical Graph                                               |
 | -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -159,10 +159,10 @@ idk how to write this
 ### Expectations
 
 - expected price - what I predict to be the price of the commodity in the future
-  - if expected price > current price, then demand increases
+    - if expected price > current price, then demand increases
     - which ends up increasing the price; whether or not it would’ve happened naturally, nobody will know :laughing:
       here, our expectations clearly affects the actual outcome
-  - if expected price < current price, then demand decreases
+    - if expected price < current price, then demand decreases
 - expected income - what I predict to be my income in the future
 
 ### Market Size
@@ -297,14 +297,14 @@ we can also draw a graph and obtain the point of interception of the supply and 
 Whenever there is a disequilibrium, the market automatically adjusts the price
 
 - Surplus (excess supply/low demand) when 
-  - actual price > equilibrium price
-  - buyers do not want to buy
-  - actual price will reduce to equilibrium price automatically, as there is low demand
+    - actual price > equilibrium price
+    - buyers do not want to buy
+    - actual price will reduce to equilibrium price automatically, as there is low demand
 - Shortage (excess demand/low supply) when 
-  - actual price < equilibrium price
-  - sellers do not want to sell
+    - actual price < equilibrium price
+    - sellers do not want to sell
     - only those who are willing and able to continue buying do so; others stop buying
-  - actual price will increase to equilibrium price automatically, as there is low supply
+    - actual price will increase to equilibrium price automatically, as there is low supply
 
 Automatic market correction mechanism always occurs, given that
 
@@ -313,11 +313,11 @@ Automatic market correction mechanism always occurs, given that
 3. both buyers and sellers are equally-informed about the market
     (internet has helped with making information symmetric)
     otherwise there will be one or more of the following
-  - sellers will manipulate buyers
-  - all the sellers will be selling bad products, as it more profitable to do so
-  - company recruiters will only get bad candidates as the salary they provide will be amazing for bad candidates, but too low for good candidates
+    - sellers will manipulate buyers
+    - all the sellers will be selling bad products, as it more profitable to do so
+    - company recruiters will only get bad candidates as the salary they provide will be amazing for bad candidates, but too low for good candidates
     so only the bad candidates will end up accepting the job
-  - buyers will be hesitant to pay higher price, even when the seller is justified to ask that much
+    - buyers will be hesitant to pay higher price, even when the seller is justified to ask that much
 
 #### Govt
 

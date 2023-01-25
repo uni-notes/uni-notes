@@ -60,7 +60,8 @@ $$
 |                 $\sin(at)$                  |                    $\frac{a}{s^2 + a^2}$                     |
 |                 $\cosh(at)$                 |                    $\frac{s}{s^2 - a^2}$                     |
 |                 $\sinh(at)$                 |                    $\frac{a}{s^2 - a^2}$                     |
-|                    $t^n$                    | $\begin{cases}\dfrac{n!}{s^{n+1}}, & n \le 0\\\dfrac{\Gamma(n+1)}{s^{n+1}}, & \text{otherwise}\end{cases}$<br /><br />where $\Gamma$ is [gamma function](#Gamma Function) |
+|                    $t^n$                    | $\begin{cases}\dfrac{n!}{s^{n+1}}, & n \le 0\\
+\dfrac{\Gamma(n+1)}{s^{n+1}}, & \text{otherwise}\end{cases}$<br /><br />where $\Gamma$ is [gamma function](#Gamma Function) |
 | $e^{at} f(t)$<br />(exponent shifting rule) | $F(s \textcolor{orange}{-} a) = \Big\{ F(s) \Big\}_{s \to s-a}$ |
 |                  $u_a(t)$                   |                     $\frac{e^{-as}}{s}$                      |
 |                $\delta (t)$                 |                             $1$                              |
@@ -91,7 +92,8 @@ $$
 \begin{align}
 L\Big( \delta(t) \Big)
 &= \lim_{\epsilon \to 0} L\Big( f_\epsilon (t) \Big) \\&= \lim_{\epsilon \to 0} \left[
-	\int\limits_0^\infty e^{-st}  f_\epsilon(t) \cdot dt \\\right] \\& \dots \\&= 1
+	\int\limits_0^\infty e^{-st}  f_\epsilon(t) \cdot dt \\
+\right] \\& \dots \\&= 1
 \end{align}
 $$
 
@@ -114,10 +116,10 @@ $$
 \begin{align}
 \Gamma \left(\frac{1}{2} \right)
 &= \sqrt{\pi} \\
-
 \Gamma(n)
 &= (n-1)! \\&= (n-1) \cdot \Gamma(n-1) \\ 
-n! &= \Gamma (n+1) \\\end{align}
+n! &= \Gamma (n+1) \\
+\end{align}
 $$
 
 ## IDK

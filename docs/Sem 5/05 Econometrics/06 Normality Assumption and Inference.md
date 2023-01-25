@@ -34,8 +34,10 @@ Student’s $t$ distribution
 $$
 \begin{align}
 t
-&= \frac{\hat \beta_2 - \beta_2}{SEE} \\&= \frac{(\hat \beta_2 - \beta_2) \sqrt{\sum x_i^2} }{\hat \sigma} \\\end{align}
+&= \frac{\hat \beta_2 - \beta_2}{SEE} \\&= \frac{(\hat \beta_2 - \beta_2) \sqrt{\sum x_i^2} }{\hat \sigma} \\
+\end{align}
 $$
+
 This $t$ variable will follow $t$ distribution with $(n-2)$ degrees of freedom
 
 ## IID

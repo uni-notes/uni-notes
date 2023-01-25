@@ -66,6 +66,7 @@ $$
 n-2
 }}
 $$
+
 |  SEE  | Satisfactory? | Remark                      |
 | :---: | ------------- | --------------------------- |
 | $<=1$ | ✅             |                             |
@@ -122,7 +123,8 @@ $$
 \dots +
 \theta_n x_n \\&=\theta^T X \\
 \theta^T &= [\theta_0, \theta_1, \theta_2, \dots, \theta_n] \\X &= \begin{bmatrix}
-1 \\x_1 \\x_2 \\\dots \\x_n
+1 \\x_1 \\x_2 \\
+\dots \\x_n
 \end{bmatrix}
 \end{align}
 $$
@@ -139,10 +141,13 @@ $$
 $$
 \begin{align}
 b_1 &= \\b_2 &= \\b_0 &= \hat y - b_1 \overline{x_1} - \overline{x_2} \\
-
 \sum {x_1}^2 &=
 \sum(x_1 x_1) - \frac{\sum x_1\sum x_1}{n} \\
-\sum {x_1}^2 &= \\\sum {x_2}^2 &= \\\sum {x_1 y} &= \\\sum {x_2 y} &= \\\sum {x_1}{x_2} &= \\
+\sum {x_1}^2 &= \\
+\sum {x_2}^2 &= \\
+\sum {x_1 y} &= \\
+\sum {x_2 y} &= \\
+\sum {x_1}{x_2} &= \\
 \end{align}
 $$
 
@@ -190,6 +195,7 @@ $$
 ||w^2|| = \sum |w^2|
 
 $$
+
 ## RSS
 
 Residual Sum of Squares is a type of error.

@@ -83,8 +83,8 @@ Don’t mistake outlier for noise.
 #### Application
 
 - Credit Card Fraud Detection
-  - Collect user profile such as Name, Age, Location
-  - Collect user behavior data
+    - Collect user profile such as Name, Age, Location
+    - Collect user behavior data
 
 - Network Intrusion Detection
 - Identify anomalous behavior from surveillance camera videos

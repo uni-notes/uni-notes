@@ -29,6 +29,7 @@ $$
 f'(z) = \lim_{\Delta z \to 0} \frac{ f(z + \Delta z) - f(z) }{ \Delta z }
 \label{limit}
 $$
+
 A function is said to differentiable if $f'(z)$ is **unique**
 
 ### Analytic
@@ -47,10 +48,11 @@ $$
 u_{xx} + u_{yy} = 0
 \label{laplace}
 $$
+
 If $f(z) = u+iv$, then
 
 - $f(z)$ is analytic
-  - Put $y = 0, x = z \to f(z) = f(x)$ for shortcut
+    - Put $y = 0, x = z \to f(z) = f(x)$ for shortcut
 - real and imaginary parts are harmonic
 - $v$ is harmonic conjugate of $u$
 
@@ -58,7 +60,9 @@ If $f(z) = u+iv$, then
 
 $$
 \begin{align}
-\cos(ix) &= \cosh(x) & \sin(ix) &= i \sinh(x) \\\cosh(x) &= \frac{e^x + e^{-x}}{2} & \sinh(x) &= \frac{e^x - e^{-x}}{2} \\[\sinh(x)]' &= \cosh(x) & [\cosh(x)]' &= \sinh(x) \\\cosh^2(x) - \sinh^2(x) &= 1
+\cos(ix) &= \cosh(x) & \sin(ix) &= i \sinh(x) \\
+\cosh(x) &= \frac{e^x + e^{-x}}{2} & \sinh(x) &= \frac{e^x - e^{-x}}{2} \\[\sinh(x)]' &= \cosh(x) & [\cosh(x)]' &= \sinh(x) \\
+\cosh^2(x) - \sinh^2(x) &= 1
 \end{align}
 $$
 

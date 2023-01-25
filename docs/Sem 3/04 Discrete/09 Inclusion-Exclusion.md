@@ -65,7 +65,6 @@ $$
 + \sum\limits_{i, j, k} |A_i \cap A_j \cap A_k| \\
 & \qquad + \ldots
 + (-1)^{n-1} |A_1 \cap A_2 \cap \dots \cap A_n|
-
 \end{align}
 $$
 
@@ -86,6 +85,7 @@ $$
 &= V(n,r) \\&= (n-1+r)C_r &= (n-1+r)C_{n-1} \\&= \frac{(n-1+r)!}{r! \ (n-1)!}
 \end{align}
 $$
+
 Uses
 
 - This is the no of ways of distributing $r$ similar balls into $n$ number boxes
@@ -117,7 +117,8 @@ $D_n =$ no of derangments possible for derangement of $n$ numbers
 
 $$
 \begin{align}
-D_1 &= 0 \\D_2 &= 1 \\D_3 &= 2 \qquad \set{(3, 1, 2), (2, 3, 1)} \\\vdots & \\
+D_1 &= 0 \\D_2 &= 1 \\D_3 &= 2 \qquad \set{(3, 1, 2), (2, 3, 1)} \\
+\vdots & \\
 D_n &= n! \left[
 1- \frac{1}{1!}  + \frac{1}{2!} - \frac{1}{3!} + \dots + (-1)^n \frac{1}{n!}
 \right] \\
@@ -126,3 +127,4 @@ D_n &= n! \left[
 \right]
 \end{align}
 $$
+

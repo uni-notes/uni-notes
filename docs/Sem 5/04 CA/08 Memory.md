@@ -125,9 +125,9 @@ Take from slides
 
 1. Search the index
 2. Check validity
-   - If valid, check the tag
+     - If valid, check the tag
      - If equal tag, mark as hit
-   - If invalid, mark as miss
+     - If invalid, mark as miss
 
 ## Fully-Associative Cache
 

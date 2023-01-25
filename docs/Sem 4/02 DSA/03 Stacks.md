@@ -48,7 +48,7 @@ Algorithm isEmpty()
 |   a   |       | a         |
 |   +   | +     | a         |
 |   c   |       | ac        |
-|   -   | -     | ac+       |
+|     -   | -     | ac+       |
 
 ### Rules
 

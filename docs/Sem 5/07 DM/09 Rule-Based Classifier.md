@@ -132,7 +132,7 @@ Let
 - $k$ be number of classes
 - $f_i$ be observed frequency of class $i$ examples, that are covered by rule
 - $e_i$ be expected frequency of rule that makes random predictions
-  - Probability of $i$ x Number of records covered by rule
+    - Probability of $i$ x Number of records covered by rule
 
 $$
 \begin{align}

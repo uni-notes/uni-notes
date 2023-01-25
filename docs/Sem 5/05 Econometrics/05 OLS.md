@@ -10,6 +10,7 @@ u_i
 &= y_i - \hat y_i \\&= y_i - (\hat \beta_0 + \hat \beta_1 x_i)
 \end{align}
 $$
+
 We do **not** use just regular sum of residuals
 
 - Equal and opposite errors will cancel each other, which may lead to non-optimal SRF having total error=0
@@ -77,9 +78,9 @@ $$
    
 4. No [autocorrelation](#Autocorrelation) between $u_i$ and $u_j$
 
-   - Residual series should be independent of other residual series
+     - Residual series should be independent of other residual series
 
-   - For any 2 values $x_i$ and $x_j$, the correlation between $u_i$ and $u_j$ is $0$
+     - For any 2 values $x_i$ and $x_j$, the correlation between $u_i$ and $u_j$ is $0$
      
 
 $$
@@ -97,17 +98,17 @@ $$
 
 $$
    
-   - If we plot the scatter plot between $u_i$ and $u_j$, there should be no sign of correlation
+     - If we plot the scatter plot between $u_i$ and $u_j$, there should be no sign of correlation
    
-   - If there exists autocorrelation in time series, then we have to incorporate the lagged value of the dependent var as an explanatory var of itself
+     - If there exists autocorrelation in time series, then we have to incorporate the lagged value of the dependent var as an explanatory var of itself
    
      - Rather than $y_t=f(x_t)$, we use $y_t = f(x_t, y_{t-1})$
    
 5. No covariance/correlation between $u_i$ and $x_i$
 
-   - No relationship between error term and independent variables
+     - No relationship between error term and independent variables
 
-   - 
+     - 
 
 $$
      \text{Cov}(u_i, x_i) = 0
@@ -115,31 +116,31 @@ $$
 
 $$
 
-   - If there is correlation, then we cannot correctly obtain coefficients
+     - If there is correlation, then we cannot correctly obtain coefficients
 
 6. DOF > 1
 
-   - Degree of freedom $= n - k$, where
+     - Degree of freedom $= n - k$, where
 
      - $n =$ number of observations
 
      - $k =$ no of independent variables
 
-   - DOF = 0 leads to overfitting
+     - DOF = 0 leads to overfitting
 
 7. Good variability
 
-   - We need more variation in values of $x$
-   - Indian stock market is very volatile. But not in UAE; so it's hard to use it an independent var. Similarly, we cant use exchange rate in UAE, as it is fixed to US dollars
+     - We need more variation in values of $x$
+     - Indian stock market is very volatile. But not in UAE; so it's hard to use it an independent var. Similarly, we cant use exchange rate in UAE, as it is fixed to US dollars
 
 8. No specification bias
 
-   - We need to use the correct functional form, which is theoretically consistent
+     - We need to use the correct functional form, which is theoretically consistent
 
 9. No multi-colinearity
 
-   - Independent vars should not be correlated with each other
-   - If |correlation| > 0.5 between 2 independent vars, then we drop one of the variables
+     - Independent vars should not be correlated with each other
+     - If |correlation| > 0.5 between 2 independent vars, then we drop one of the variables
 
 ## Properties of OLS
 
@@ -153,7 +154,7 @@ $$
 -  Predicted value and residuals are not correlated with eachother
 
 -  Error terms are not correlated with values of $x$
-   -  $\sum \hat u_i x_i = 0$
+     -  $\sum \hat u_i x_i = 0$
 
 -  OLS is BLUE
    (Best Linear Unbiased Estimator)
@@ -173,18 +174,18 @@ Given the assumptions of CLRM(Classical Linear Regression Models), OLS estimator
 - $\hat \beta$ is an estimator of $\beta$
 - Linear $\hat \beta$ is a linear estimator
 - Unbiased
-  - $(E[ \hat \alpha], E[\hat \beta]) = (\alpha, \beta)$
-  - Bias is the different between the estimated value and the true value
-  - Unbiased means $(E[ \hat \alpha], E[\hat \beta]) - (\alpha, \beta) = 0$
+    - $(E[ \hat \alpha], E[\hat \beta]) = (\alpha, \beta)$
+    - Bias is the different between the estimated value and the true value
+    - Unbiased means $(E[ \hat \alpha], E[\hat \beta]) - (\alpha, \beta) = 0$
 - Best OLS estimator $\hat \beta$ has minimum variance
-  - $\sigma^2(\hat \beta) = \sigma^2(\beta)$
+    - $\sigma^2(\hat \beta) = \sigma^2(\beta)$
 - $\hat \alpha, \hat \beta$ are consistent
-  - They will converge to the true value as the sample size increases $\to \infty$
-  - ie, as sample size increases, sample estimators tend to true population parameter
+    - They will converge to the true value as the sample size increases $\to \infty$
+    - ie, as sample size increases, sample estimators tend to true population parameter
 - Efficiency
-  - Min variance
-  - Mean value = true population parameter
-  - $\therefore ,$ estimators are efficient
+    - Min variance
+    - Mean value = true population parameter
+    - $\therefore ,$ estimators are efficient
 
 ### Derivation of BLUE Properties
 
@@ -213,7 +214,7 @@ $\therefore ,$
 
 - $something = \beta_2 + \sum k_i u_i$
 - $E(\hat \beta_2) = \beta_2 + \sum k_i E(u_i)$
-  - Expectation of constant is constant
+    - Expectation of constant is constant
 - $E(\hat \beta_2) = \beta_2$
 
 $\beta_2$ is unbiased estimator
@@ -267,7 +268,6 @@ $$
 &= \frac{\sigma^2}{\sum x_i^2} \\
 \text{se}(\hat \beta_2)
 &= 
-
 \end{align}
 $$
 
@@ -278,8 +278,8 @@ $$
 $$
 
 - $n - 2 =$ Degrees of freedom
-  - We are subbing $2$ because there are 2 unknowns
-  - $\beta_0$ and $\beta_1$
+    - We are subbing $2$ because there are 2 unknowns
+    - $\beta_0$ and $\beta_1$
 
 If standard error of $\beta_0$ or $\beta_1$ or $\beta_2$, then substitute them as 0
 
@@ -341,7 +341,8 @@ $$
 $$
 \begin{align}
 R^2
-&= \frac{\text{ESS}}{\text{TSS}} \\\end{align}
+&= \frac{\text{ESS}}{\text{TSS}} \\
+\end{align}
 $$
 
 $$
@@ -360,7 +361,7 @@ $$
 #### Issues
 
 - Simple $R^2$ has a tendancy to automatically increase with more number of independent variables
-  - Not necessarily mean that the higher-dimensional model fits better, even though it has higher $R^2$
+    - Not necessarily mean that the higher-dimensional model fits better, even though it has higher $R^2$
 - Hence, we can only use for comparing fit of 2 models with the same number of independent variables
 - Hence, we cannot use $R^2$ understand if adding another independent variable actually improves the model, or is it just because of the tendancy of $R^2$ value to increase as dimensions increases
 - **Does not imply causality**
@@ -372,7 +373,7 @@ It is the same as $R^2$, but it is adjusted for number of independent varaibles
 Helps understand
 
 - if adding another independent variable is relevant
-  - If adding another independent variable increases
+    - If adding another independent variable increases
 
 - Predictive accuracy
 
@@ -422,9 +423,9 @@ Helps understand if both variables have some probability distribution
 
 $$
 r = \sqrt{R^2} \\R^2 = (r)^2
-
 \label{randr2}
 $$
+
 ==**Above equation $\refeq{randr2}$ is only for uni-variate models**==
 
 ### Correlation vs $R^2$

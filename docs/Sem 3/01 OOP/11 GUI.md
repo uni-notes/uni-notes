@@ -80,12 +80,9 @@ JComponent --> JLabel & JButton & x[many more...]
 $$
 \color{green}
 \fbox{$
-
 \underset{
-
 \color{orange}
 \fbox{$
-
 \underset{
 \color{red}
 \fbox{Components}

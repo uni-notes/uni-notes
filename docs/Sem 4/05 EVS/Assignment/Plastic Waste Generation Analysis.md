@@ -34,7 +34,7 @@ $$
 	359 + 458 + 414 + 457 + 432 + 377 + 437
 }{
 	7
-} \\&= \frac{2934} {7} \\&= 419.143 \ \rm{g}
+} \\&= \frac{2934}{7} \\&= 419.143 \ \rm{g}
 \end{align}
 $$
 
@@ -57,7 +57,7 @@ $$
 
    **Answer**
 
-   - Amount of CO2 per Day
+     - Amount of CO2 per Day
       
 
 $$
@@ -68,7 +68,7 @@ $$
 
 $$
       
-   - Amount of CO2 released per year by you (just by wasting plastics)
+     - Amount of CO2 released per year by you (just by wasting plastics)
      
 
 $$

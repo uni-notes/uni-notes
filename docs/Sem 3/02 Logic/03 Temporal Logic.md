@@ -90,7 +90,9 @@ s1 --> s[s1]
 
 $$
 \begin{align}
-\lnot AF \phi &= EG \lnot \phi \\\lnot EF \phi &= AG \lnot \phi \\\lnot AX \phi &= EX \lnot \phi \\
+\lnot AF \phi &= EG \lnot \phi \\
+\lnot EF \phi &= AG \lnot \phi \\
+\lnot AX \phi &= EX \lnot \phi \\
 AF \phi &= A[T \cup \phi] \\EF \phi &= E[T \cup \phi]
 \end{align}
 $$
@@ -99,7 +101,8 @@ $$
 
 $$
 \begin{align}
-AX \phi &= \lnot EX  \lnot \phi \\AG &=\\\end{align}
+AX \phi &= \lnot EX  \lnot \phi \\AG &=\\
+\end{align}
 $$
 
 there are more

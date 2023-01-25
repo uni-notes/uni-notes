@@ -4,8 +4,8 @@ Let $f(x, y, z)$ be a function whose domain consists of a smooth curve $C: \vec 
 
 $$
 \int\limits_C f(x, y, z) \ ds = \int\limits_C f(x, y, z) \cdot |\vec V| \ dt
-
 $$
+
 because displacement s = $\int$ velocity = $\int$ speed x direction
 
 **Note**
@@ -24,6 +24,7 @@ $$
 W &= \int\limits_C \vec F \cdot d \vec r \\&= \int\limits_C (M \ dx + N \ dy + P \ dz) \ dt
 \end{align}
 $$
+
 The above integral is also referred to as the **circulation of vector $\vec F$** in fluid flow problems.
 
 ## Conservative Forced Field
@@ -32,38 +33,30 @@ If the line integral is independent of the path of integration, then $\vec F$ is
 
 A force $\vec F = M \hat i + N \hat j + P \vec k$ is conservative
 
-1. 
-
-$$
+1. $$
    \begin{align}
-   M_y &= N_x \\   P_y &= N_z \\   P_x &= M_z
+   M_y &= N_x \\
+	 P_y &= N_z \\
+	 P_x &= M_z
    \end{align}
-   
+   $$
 
-$$
-   
 2. there exists a scalar potential function $\phi(x, y, z)$ such that
    
-
-$$
+	 $$
    \begin{align}
-   \vec F &= \nabla \phi \\   \text{where }
-   \nabla \phi &= \phi_x \hat i + \phi_y \hat j + \phi_z \hat k
+   \vec F &= \nabla \phi \\
+	 \text{where } \nabla \phi &= \phi_x \hat i + \phi_y \hat j + \phi_z \hat k
    \end{align}
-   
-
-$$
+   $$
 
 3. If $C$ is any path joining A and B
-   
 
-$$
+   $$
    \begin{align}
    W &= \int\limits_C \vec F \cdot d \vec r \\   &= \phi(B) - \phi(A)
    \end{align}
-   
-
-$$
+   $$
 
 ## Green’s Theorem in a Plane
 
@@ -98,12 +91,14 @@ If $\vec F = M \hat i + N \hat j + P \vec k$ is defined on all points on an open
 
 $$
 \begin{align}
-\int\limits_C \vec F \cdot dr &=
-\iint\limits_S (\text{curl } \vec F) \cdot \hat n \cdot ds \\
+\int \limits_C \vec F \cdot dr &=
+\iint \limits_S (\text{curl } \vec F) \cdot \hat n \cdot ds \\
 \text{where }
 (\text{curl } \vec F) &= \vec V \times \vec F \\&= \begin{vmatrix}
-\hat i & \hat j & \hat k \\\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\M & N & P
+\hat i & \hat j & \hat k \\
+\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+M & N & P
 \end{vmatrix}
-
 \end{align}
 $$
+

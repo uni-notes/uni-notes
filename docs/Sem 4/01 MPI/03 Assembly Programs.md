@@ -58,7 +58,8 @@ You **cannot** do `MOV [1234] [5678]`
 ## `INC`, `DEC`
 
 $$
-\text{INC dest} \\\text{DEC dest}
+\text{INC dest} \\
+\text{DEC dest}
 $$
 
 increments/decrements the content of the affected register by 1.

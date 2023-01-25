@@ -98,13 +98,13 @@ end
 ### Challenges
 
 - How to split training records?
-  - Find best splitting attribute (Test on Attribute)
-  - Measure for goodness of split
+    - Find best splitting attribute (Test on Attribute)
+    - Measure for goodness of split
 - Stopping conditions
   Stop at situations that result in fully-grown tree (the tree has learnt all the important characteristics, which may not be optimal; in that case we may require some other stopping conditions)
-  - When all records at a node have the same attribute value
-  - When all records at a node have the same class label value
-  - When a node receives an empty subset
+    - When all records at a node have the same attribute value
+    - When all records at a node have the same class label value
+    - When a node receives an empty subset
 
 ## Attribute Test Condition and Outcomes
 

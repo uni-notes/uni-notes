@@ -104,7 +104,7 @@ For an input layer with $n$ nodes, we will have
 
 $$
  hidden layers
-  - 
+    - 
 
 $$
 
@@ -210,12 +210,10 @@ Assume
 $$
 \begin{align}
 \text{Find } \frac{\partial J}{\partial y} & \\ 
-
 \frac{\partial J}{\partial b}
 &= \frac{\partial J}{\partial y} \frac{\partial y}{\partial b} \\
 \frac{\partial J}{\partial \beta_j}
 &= \frac{\partial J}{\partial b} \frac{\partial b}{\partial \beta_j} \\
-
 \frac{\partial J}{\partial z_j}
 &= \frac{\partial J}{\partial \beta_j} \frac{\partial \beta_j}{\partial z_j} \\
 \frac{\partial J}{\partial a_j}

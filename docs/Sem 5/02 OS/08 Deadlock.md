@@ -71,7 +71,8 @@ $$
 Let $X, Y$ be 2 vectors
 
 $$
-X \le Y \iff X[i] \le Y[i], \\\forall i \in \text{len}(X) = \text{len}(Y) \\(0, 0, 0) \le (0, 0, 1) \\(0, 1, 0) \not \le (0, 0, 1)
+X \le Y \iff X[i] \le Y[i], \\
+\forall i \in \text{len}(X) = \text{len}(Y) \\(0, 0, 0) \le (0, 0, 1) \\(0, 1, 0) \not \le (0, 0, 1)
 $$
 
 > Every element of $X$ should be smaller than/equal to every corresponding element of $Y$
@@ -88,8 +89,8 @@ $$
    If we can’t find, go to step 4
 
 3. - Work = Work + Allocation[i]
-   - Finish[i] = True
-   - Go to step 2
+     - Finish[i] = True
+     - Go to step 2
 
 4. If finish[i]==True $\forall i$, the system is in a safe state
 
@@ -103,8 +104,8 @@ Consider a Request[i] vector for process $P_i$
 
 1. Check if Request[i] $\le$ Need[i]
 
-   - if true, got to step 2
-   - else, raise error condition that $P_i$ has requested more than it needs
+     - if true, got to step 2
+     - else, raise error condition that $P_i$ has requested more than it needs
 
 2. Check if Request[i] $\le$ Available[i]
 
@@ -121,8 +122,8 @@ Consider a Request[i] vector for process $P_i$
 
 4. Run the safety algo to check if the system is in a safe state
 
-   - If safe, resources are allocated to $P_i$
-   - else, $P_i$ must wait and the old resource-allocated state is restored
+     - If safe, resources are allocated to $P_i$
+     - else, $P_i$ must wait and the old resource-allocated state is restored
 
 ## Deadlock Handling
 
@@ -157,6 +158,6 @@ Almost exactly the same as Banker’s; just that this has request instead of nee
 6. If finish[i] == false, for some $i \implies$ system is in deadlock state
    or, in other words, there is no deadlock if
 
-   - all the finish[i] = false $\forall i$
-   - we are able to derive a safe sequence with all the processes, then there is no deadlock
+     - all the finish[i] = false $\forall i$
+     - we are able to derive a safe sequence with all the processes, then there is no deadlock
 

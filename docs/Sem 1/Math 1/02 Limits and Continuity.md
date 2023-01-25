@@ -27,6 +27,7 @@ The limit is represented as
 $$
 L = \lim_{x \to {x_0}^+} f(x) = f({x_0}^+)
 $$
+
 Similarly, we define the left-hand limit
 
 While working on one-sided problms, we proceed as follows
@@ -50,8 +51,10 @@ A function $f(x)$ is continuous @ a point $x_0$ if the following conditions are 
 If $f$ and $g$ are continuous functions in a domaind D, then the following functions are also continuous in all points of F
 
 $$
-f \pm g \\fg \\\frac f g \\kf, &\text{k =  const}
+f \pm g \\fg \\
+\frac f g \\kf, &\text{k =  const}
 $$
+
 The following functions are known to be continuous in their domain of definition
 
 1. polynomial

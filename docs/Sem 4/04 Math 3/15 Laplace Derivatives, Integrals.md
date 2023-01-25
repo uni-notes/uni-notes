@@ -2,7 +2,8 @@
 
 $$
 \begin{align}
-L\{ f'(t) \} &= s F(s) - f(0) \\L\{ f''(t) \} &= s^2 F(s) - sf(0) - f'(0) \\\Big( L\{ f(t) \} &= F(s) \Big)
+L\{ f'(t) \} &= s F(s) - f(0) \\L\{ f''(t) \} &= s^2 F(s) - sf(0) - f'(0) \\
+\Big( L\{ f(t) \} &= F(s) \Big)
 \end{align}
 $$
 

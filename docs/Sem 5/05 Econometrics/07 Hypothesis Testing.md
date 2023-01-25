@@ -5,13 +5,13 @@ Hypothesis testing involves testing the following question
 ## Hypothesis
 
 - Simple Hypothesis
-  - Single Tailed
-  - $\beta_2 > 0.3$
+    - Single Tailed
+    - $\beta_2 > 0.3$
 - Composite Hypothesis
-  - 2 Tailed
-  - Bi-Directional
-  - Useful when not sure about the direction
-  - $\beta_2 \ne 0.3$
+    - 2 Tailed
+    - Bi-Directional
+    - Useful when not sure about the direction
+    - $\beta_2 \ne 0.3$
 
 ### Null Hypothesis $(H_0)$
 
@@ -47,8 +47,8 @@ $+1$ is due to intercept(constant)
 
 7. Conclusion
 
-   - If it lies within critical region, accept null hypothesis
-   - If it lies outside critical region, reject null hypothesis
+     - If it lies within critical region, accept null hypothesis
+     - If it lies outside critical region, reject null hypothesis
      - accept alternate hypothesis
      - $\beta_2$ will take the sample value
 

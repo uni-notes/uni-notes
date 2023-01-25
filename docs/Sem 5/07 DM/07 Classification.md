@@ -8,8 +8,8 @@ In a classication dataset, you have
 - Discrete Target attribute
 - Tuples/records/data objects/sample instance
   Tuple $= (x, y)$
-  - $x =$ Feature Vector
-  - $y =$ Class Label
+    - $x =$ Feature Vector
+    - $y =$ Class Label
 
 ### Task
 

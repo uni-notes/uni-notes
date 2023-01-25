@@ -159,23 +159,23 @@ $V = c_2 \oplus c_3$
 V denotes the overflow
 
 - addition
-  - M = C~0~ = 0
-  - no change to the inputs by the XOR gate
+    - M = C~0~ = 0
+    - no change to the inputs by the XOR gate
     - Eg: $B_0 \oplus 0 = B_0$
-  - S = A + B + M
+    - S = A + B + M
     = A + B + 0
     = A + B
-  - V = 0 means no overflow
-  - V = 1 means overflow
+    - V = 0 means no overflow
+    - V = 1 means overflow
 - subtraction
-  - M = C~0~ = 1
-  - the inputs will get complemented by the XOR gate
+    - M = C~0~ = 1
+    - the inputs will get complemented by the XOR gate
     - Eg:$B_0 \oplus 1 = {B_0}'$
-  - S = A + 1s comp of B + C
+    - S = A + 1s comp of B + C
     = A + 1s comp of B + 1
     = A + 2s comp of B
-  - V = 0 means no overflow
-  - V = 1 means overflow
+    - V = 0 means no overflow
+    - V = 1 means overflow
 
 ### BCD Adder
 
@@ -187,14 +187,14 @@ we use 8 4 2 1 coding method
 max possible sum of 2 BCD digits$= \underbrace{1}_\text{carry} + 9 + 9 = 19$
 
 - Sum <= 9 without carry
-  - no correction is needed
-  - 2+3 = 5
+    - no correction is needed
+    - 2+3 = 5
 - Sum > 9 without carry
-  - then add 6
-  - 5+7 = 12
+    - then add 6
+    - 5+7 = 12
 - Sum <= 9 with carry
-  - then add 6
-  - 8 + 8
+    - then add 6
+    - 8 + 8
 
 We need two 4bit parallel adders
 

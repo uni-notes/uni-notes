@@ -61,7 +61,6 @@ $$
 \begin{align}
 (1+z)^{-1} &= 1 - z + z^2 - z^3 + \dots \\(1-z)^{-1} &= 1 + z + z^2 + z^3 + \dots \\(1+z)^{-2} &= 1 - 2z + 3z^2 - 4z^3 + \dots \\(1-z)^{-2} &= 1 + 2z + 3z^2 + 4z^3 + \dots
 \end{align}
-
 \label{formula}
 $$
 

@@ -49,8 +49,8 @@ $$
 - Memory Storage = $1024 = 2^{10}$
 - address lines $n = 10$
 - Data lines $m = 8$
-  - 8 data input lines
-  - 8 data output lines
+    - 8 data input lines
+    - 8 data output lines
 
 - 1 enabled line
 
@@ -219,8 +219,8 @@ it consists of
 
 - $n$ inputs
   every input is provided with
-  - buffer
-  - inverter
+    - buffer
+    - inverter
 - $k$ AND gates
   takes care of Product terms
 - $m$ OR gates
@@ -282,8 +282,8 @@ there is no 0 for outputs
 
 - $F_1(T)$ is just the normal one
 - $F_1(c)$ means getting the same output as $F_1(T)$ with complemented inputs
-  - so we have to invert the inputs
-  - complement the entire thing
+    - so we have to invert the inputs
+    - complement the entire thing
 
 $$
 \begin{align}
@@ -300,7 +300,7 @@ We are gonna select $F_1(c)$ and $F_2(T)$, as they have the maximum no of common
 | :--: | :----------: | :----: | :---------------------------------: |
 |  1   |      AB      | 1 1 -  |                1   1                |
 |  2   |      AC      | 1 - 1  |                1   1                |
-|  3   |      BC      | - 1 1  |                1   -                |
+|  3   |      BC      | - 1 1  |                1     -                |
 |  4   |    A’B’C’    | 0 0 0  |                -   1                |
 
 ==Draw diagram==

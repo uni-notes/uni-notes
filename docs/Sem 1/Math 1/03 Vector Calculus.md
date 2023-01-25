@@ -4,7 +4,6 @@ The motion of a particle moving space is given by
 
 $$
 \vec r = x(t) \cdot \hat i + y(t) \cdot \hat j + z(t) \cdot \hat k, \\a \le t \le b, \quad a, b \in R
-
 $$
 
 ## Limits
@@ -16,7 +15,6 @@ The limit is denoted as
 
 $$
 \lim_{t \to t_0} \vec r(t) = \vec L
-
 $$
 
 ## Continuity
@@ -30,7 +28,7 @@ $r(t)$ is continuous @ $t = t_0$ if
 ## Derivative
 
 $$
-\frac {dr} {dt} =
+\frac {dr}{dt} =
 \lim_{\Delta t \to 0} \frac {
 	\vec r(t + \Delta t) - \vec r(t)
 }{\Delta t}
@@ -41,7 +39,7 @@ $$
 | Velocity     | $\frac {d \vec r}{d t}$        |                             |
 | Acceleration | $\frac {d \vec V}{d t}$        | $\frac {d^2 \vec r}{d t^2}$ |
 | Speed        | $|\vec V|$                 |                             |
-| Direction    | $\frac {\vec V}{|\vec V|}$ |                             |
+| Direction    | $\frac {\vec V}{\|\vec V\|}$ |                             |
 
 ### Note
 
@@ -61,9 +59,11 @@ eg: The path of a particle having $\vec r(t) = \cos t \cdot \hat i + \sin t \hat
 $$
 \begin{align}
 x^2 + y^2 &=
-\cos^2 t + \sin^2 t \\&= 1
+\cos^2 t + \sin^2 t \\
+&= 1
 \end{align}
 $$
+
 Therefore, this path is a circle with radius = 1
 
 ## Angle Between Vectors
@@ -76,7 +76,6 @@ $$
 }{
 	|\vec a| |\vec b|
 } \\
-
 \theta &= \cos^{-1} \left(
 \frac{
 	\vec a \cdot \vec b
@@ -97,7 +96,6 @@ If
 $$
 L = \int\limits_a^b 
 |\vec V(t)| \cdot dt
-
 $$
 
 Length is basically the integral of speed
@@ -109,16 +107,15 @@ If $\vec r(t) \quad t \ge t_0$ is a smooth curve, then arc length parameter wrt 
 $$
 L = \int\limits_{\uptau = t_0}^t 
 |\vec V(\uptau)| \cdot d \uptau
-
 $$
 
 ## Special Vectors
 
 | Vector | Symbol |                                                              |                                 |
 | :--------------------------- | :------: | :----------------------------------------------------------: | :-----------------------------: |
-| Unit Tangent Vector          | $\hat T$ | $\frac{ \frac {d \vec r}{dt} }{ |\frac {d \vec r|{dt}} }$ | $\frac {\vec V} {|\vec V|}$ |
+| Unit Tangent Vector          | $\hat T$ | $\frac{ \frac {d \vec r}{dt} }{ |\frac {d \vec r|{dt}} }$ | $\frac {\vec V}{|\vec V|}$ |
 | Principle Unit Normal Vector | $\hat N$ | $\frac{ \frac {d \vec T}{dt} }{ |\frac {d \vec T|{dt}} }$ |                                 |
-| Curvature <br />Rate of change in direction of curve, wrt arc length |   $k$    |                    $\frac{d \vec T}{d s}$                    | $\frac {1} {|\vec V|} \cdot |\frac {d \hat T|{dt}}$ |
+| Curvature <br />Rate of change in direction of curve, wrt arc length |   $k$    |                    $\frac{d \vec T}{d s}$                    | $\frac {1}{\|\vec V\|} \cdot |\frac {d \hat T|{dt}}$ |
 | Radius of Curvature | $\rho$ | $\frac 1 k$ |  |
 
 Curvature @ any point on a
@@ -128,7 +125,7 @@ Curvature @ any point on a
 
 ## Components of Vector
 
-if $\vec a = a_t \cdot \hat T + a_N \cdot \hat N$, then
+If $\vec a = a_t \cdot \hat T + a_N \cdot \hat N$, then
 
 | Component  | Symbol |                        |                                    |
 | ---------- | :----: | :--------------------: | :--------------------------------: |

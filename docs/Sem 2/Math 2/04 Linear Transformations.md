@@ -8,6 +8,7 @@ L:
 \to
 \underbrace{W}_{\text{Codomain}}
 $$
+
 ### Properies
 
 1. $L(O_u) = O_w$

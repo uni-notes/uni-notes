@@ -14,14 +14,14 @@ a set of programs
 > System software that acts as an interface between users and the hardware resources of a computing system.
 
 - Resource allocator
-  - Keeps track of
+    - Keeps track of
     - occupied/empty portions of the primary and secondary memory
     - Status of I/O Devices
 - control porgam
 - Kernel of a computing system
   Kernel means most important part of any computing system/programming environment
-  - Kernel is system software which is part of operating system
-  - Kernel provides interface between hardware and software components
+    - Kernel is system software which is part of operating system
+    - Kernel provides interface between hardware and software components
   
 
 $$
@@ -45,8 +45,8 @@ $$
 ## Hardware Resources
 
 - Memory
-  - Primary is volatile
-  - Secondary is non-volatile
+    - Primary is volatile
+    - Secondary is non-volatile
 - Processor
 - I/O Devices
 
@@ -108,6 +108,7 @@ $$
 )
 \end{align}
 $$
+
 8086 has 256 vectored interrupts
 
 Each ISR requires 4 bytes
@@ -173,9 +174,9 @@ Similar to instruction pointer of x86
 1. An interrupt that occurs in between an instruction can only happen after fetch, decode, execute, write-back of that instruction is first complete.
 2. When interrupt occurs, we need to push the following values into stack
 
-   - [PC](#Program Counter) so that we can return to the same point after finishing the interrupt
+     - [PC](#Program Counter) so that we can return to the same point after finishing the interrupt
 
-   - CPU state
+     - CPU state
      Contents of all CPU and flag registers
 3. Service the interrupt using ISR
 4. Restore processor state

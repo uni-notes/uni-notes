@@ -125,8 +125,10 @@ $$
 
 $$
 \begin{align}
-\text{Logical memory size} &= 2^\text{Size of logical address bus} \\\implies \text{Size of logical address bus} &= \log_2 (\text{Logical memory size}) \\
-\text{Physical memory size} &= 2^\text{Size of physical address bus} \\\implies \text{Size of physical address bus} &= \log_2 (\text{Physical memory size})
+\text{Logical memory size} &= 2^\text{Size of logical address bus} \\
+\implies \text{Size of logical address bus} &= \log_2 (\text{Logical memory size}) \\
+\text{Physical memory size} &= 2^\text{Size of physical address bus} \\
+\implies \text{Size of physical address bus} &= \log_2 (\text{Physical memory size})
 \end{align}
 $$
 
@@ -164,6 +166,7 @@ $$
    
 
 $$
+
 ## I Missed Something
 
 ## TLB
@@ -196,7 +199,9 @@ $$
 
 $$
 \begin{align}
-\text{Hit Time} &= \text{Time to search TLB } + & \text{Time to access memory} \\\text{Miss Time} &= \text{Time to search TLB } + & \textcolor{hotpink}{2 \times} \text{Time to access memory} \\\end{align}
+\text{Hit Time} &= \text{Time to search TLB } + & \text{Time to access memory} \\
+\text{Miss Time} &= \text{Time to search TLB } + & \textcolor{hotpink}{2 \times} \text{Time to access memory} \\
+\end{align}
 $$
 
 ## Memory Protection

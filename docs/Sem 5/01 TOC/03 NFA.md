@@ -20,10 +20,10 @@ For a state $q$ and symbol $a \in \Sigma$, NFA can have
 ### Tracing Steps
 
 - NFA splits into multiple copies of itself (threads)
-  - Each copy performs independent and parallel computation
+    - Each copy performs independent and parallel computation
 - At any instant, NFA will be in a set of states (one/more states)
 - If a copy is in a state and there is no outgoing transition, then the copy dies/crashes
-  - We discard this copy from our evaluation
+    - We discard this copy from our evaluation
 
 ### Conclusion
 
@@ -69,9 +69,9 @@ Let’s say you have 2 NFAs
 
 - Take both the NFAs
 - Introduce an extra starting state
-  - Introduce a $\epsilon$ transition **to** each of the starting states of the NFAs
+    - Introduce a $\epsilon$ transition **to** each of the starting states of the NFAs
 - Introduce an extra ending state
-  - Introduce a $\epsilon$ transition **from** each of the ending states of the NFAs
+    - Introduce a $\epsilon$ transition **from** each of the ending states of the NFAs
 
 ```mermaid
 flowchart LR

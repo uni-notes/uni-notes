@@ -2,7 +2,7 @@
 
 1. Divide dataset into subsets
 2. For each subset, apply a model
-   - This model is usually decision tree
+     - This model is usually decision tree
 3. Aggegrate the results
 
 ## Stability of Classifier
@@ -40,8 +40,8 @@ Uses Decision Tree
 - $T$ no of trees (chosen by engineer)
 - $M$ Total no of features
 - $m$ no of features
-  - $m$ chosen randomly
-  - $m << M$
+    - $m$ chosen randomly
+    - $m << M$
 
 ### Steps
 
@@ -95,8 +95,8 @@ $$
 
 $$
 
-   - $f(x)$ is the final function
-   - $h_i(x)$ is the hypothesis function of each ada boost iteration
+     - $f(x)$ is the final function
+     - $h_i(x)$ is the hypothesis function of each ada boost iteration
 
 6. 
 

@@ -71,16 +71,16 @@ The direction of a `<<includes>>` relationship is to the using use case (unlike 
 ### Connections
 
 - association
-  - can be 1-way or 2-way
-  - can be one-one or many-many
+    - can be 1-way or 2-way
+    - can be one-one or many-many
     $1-1, \quad 5\ldots* - *, \quad *- 3\ldots *, \quad * - *$
-  - arrow from a towards b, means that a depends on b
+    - arrow from a towards b, means that a depends on b
   
 - aggregation
 - composition (strong aggregation)
 - inheritance
-  - class inheritance
-  - interface inheritance
+    - class inheritance
+    - interface inheritance
 ### Example
 
 ``` mermaid

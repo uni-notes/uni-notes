@@ -50,12 +50,12 @@ q0((q0)) -->|1/X, R| q1((q1))
 ### Uses
 
 - Language decider/recognizer
-  - Yes/No output
-  - Halts for correct input
-  - May not halt for wrong inputs
+    - Yes/No output
+    - Halts for correct input
+    - May not halt for wrong inputs
 - Compute functions
-  - Reverse string
-  - Computing systems
+    - Reverse string
+    - Computing systems
 
 ## Hailstone Sequence
 

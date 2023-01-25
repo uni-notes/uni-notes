@@ -17,10 +17,10 @@ We should try to generalize a programming language, to ensure compatibility.
 - Expressibility
   For eg, `while ` loop instead of `if` and `goto`
 - Reliability: Error Checking
-  - Detect use of initialized variables
-  - Type checking
-  - Array Bounds (C vs Java)
-  - Testing Support
+    - Detect use of initialized variables
+    - Type checking
+    - Array Bounds (C vs Java)
+    - Testing Support
 
 ## Paradigms
 

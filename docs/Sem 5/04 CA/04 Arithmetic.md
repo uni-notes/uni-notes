@@ -31,7 +31,7 @@ Other languages (e.g., Ada, Fortran) require raising an exception
 
 - Use MIPS `add`, `addi`, `sub` instructions
 - On overflow, invoke exception handler
-  - Save PC in exception program counter (EPC) register
+    - Save PC in exception program counter (EPC) register
 - Jump to predefined handler address
 - `mfc0` (move from coprocessor 0 reg) instruction can retrieve EPC value, to return after corrective action
 
@@ -62,15 +62,15 @@ Can be done more efficiently
 
 - A running sum of partial products is maintained rather
   than waiting until the end to sum all partial products
-  - Saves storage
+    - Saves storage
 - Shift multiplier right each step
-  - Allows to look at a constant position (i.e) examine the least
+    - Allows to look at a constant position (i.e) examine the least
     significant bit only
 - For each 1 on the LSB of the multiplier
-  - Add (add running sum of partial product with the multiplicand)
-  - Shift (shift-left the multiplicand)
+    - Add (add running sum of partial product with the multiplicand)
+    - Shift (shift-left the multiplicand)
 - For each 0 on the LSB of multiplier
-  - Shift left the multiplicand
+    - Shift left the multiplicand
 
 ![image-20221106220739321](assets/image-20221106220739321.png)
 

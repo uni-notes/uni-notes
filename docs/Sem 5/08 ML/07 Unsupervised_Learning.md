@@ -77,7 +77,7 @@ $$
 - $\mu_k =$ Means
 - $\Sigma_k =$ Covariances
 - $\pi_k =$ Mixing Coefficients
-  - Proportion of each gaussian in the mixture
+    - Proportion of each gaussian in the mixture
 
 ### EM for Gaussian Mixture
 

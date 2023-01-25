@@ -23,7 +23,7 @@ Consider $v=\{v_1, v_2 \}=\{\oplus, \ominus \}$
 The optimal classifier is given by
 
 $$
-\underset{v_j \in V} {\arg \max}
+\underset{v_j \in V}{\arg \max}
 \sum_{h_i \in H} \textcolor{hotpink}{P(v_j | h_i)} \ P(h_i | D)
 $$
 

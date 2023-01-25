@@ -19,8 +19,8 @@ eg:
 
 - Demand and Supply for a commodity
 - US interest rate and UAE interest rate
-  - US is leading market
-  - UAE is following market
+    - US is leading market
+    - UAE is following market
 - Dubai and Sharjah rent
 - GCC stock markets
 
@@ -28,14 +28,17 @@ Consider $x, z$ which are both $I(1)$ processes; $x_t$ and $z_t$ are cointegrate
 
 $$
 \begin{align}
-z_t &= \alpha_1 x + u_t & \text{(Long-Term Specification)} \\\implies
-u_t &= z_t - \alpha_1 x_t & \text{(Short-Term Specification)} \\z_t - z_{t-1} &= \textcolor{hotpink}{-}\alpha_D(z_{t-1} - \alpha_1 x_{t-1}) + v_t \\\Delta z_t &= \textcolor{hotpink}{-}\alpha_D(u_{t-1}) + v_t \\& \text{if $x$ also has correcting tendancy,} \\\implies \Delta x_t &= \textcolor{orange}{+}\alpha_G(u_{t-1}) + w_t
+z_t &= \alpha_1 x + u_t & \text{(Long-Term Specification)} \\
+\implies
+u_t &= z_t - \alpha_1 x_t & \text{(Short-Term Specification)} \\z_t - z_{t-1} &= \textcolor{hotpink}{-}\alpha_D(z_{t-1} - \alpha_1 x_{t-1}) + v_t \\
+\Delta z_t &= \textcolor{hotpink}{-}\alpha_D(u_{t-1}) + v_t \\& \text{if $x$ also has correcting tendancy,} \\
+\implies \Delta x_t &= \textcolor{orange}{+}\alpha_G(u_{t-1}) + w_t
 \end{align}
 $$
 
 - $\alpha_D$
-  - Speed of adjustment parameter, or error correction coefficient
-  - $\alpha_D \in (0, 1)$
+    - Speed of adjustment parameter, or error correction coefficient
+    - $\alpha_D \in (0, 1)$
 
 ### Parts
 
@@ -49,7 +52,9 @@ $$
 $$
 \begin{align}
 \Delta m_t
-&= \lambda_m (u_{t-1}) + \epsilon_{mt} \\&= \lambda_m (blah blah) + \epsilon_{mt} \\\Delta p_t &= \\\Delta y_t &= 
+&= \lambda_m (u_{t-1}) + \epsilon_{mt} \\&= \lambda_m (blah blah) + \epsilon_{mt} \\
+\Delta p_t &= \\
+\Delta y_t &= 
 \end{align}
 $$
 
@@ -76,7 +81,6 @@ If the values of $\lambda$ are zero, then it is a simple VAR model and there is 
 
 $$
 MV = \underbrace{PY}_{\text{GDP}}
-
 \label{qtm}
 $$
 
@@ -116,11 +120,11 @@ $$
 ### Hypotheses
 
 - $H_0: \beta_2 = 0$ 
-  - $y$ is independent of $x$
-  - $x$ does not granger cause $y$
+    - $y$ is independent of $x$
+    - $x$ does not granger cause $y$
 - $H_1: \beta_2 \ne 0$
-  - $x \to y$
-  - $x$ granger causes $y$
+    - $x \to y$
+    - $x$ granger causes $y$
 
 ### Procedure
 

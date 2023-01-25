@@ -70,9 +70,9 @@ Names for variables, functions, arrays, structures, etc
 
 - Starting character must be alphabet/underscore
 - Other characters can be
-  - Alphabet
-  - Underscore
-  - Digits
+    - Alphabet
+    - Underscore
+    - Digits
 - Max Length = 31 characters
 
 ### Key Words

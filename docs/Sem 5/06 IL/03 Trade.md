@@ -38,9 +38,9 @@ Meant to help economic recovery after WW2, through reconstruction and liberaliza
 Regulation of Trade by Countries before WTO
 
 - Import prohibition
-  - Exception list of goods
+    - Exception list of goods
 - Import quotas
-  - 
+    - 
 - Tariffs
 - Discriminatory Policies
 

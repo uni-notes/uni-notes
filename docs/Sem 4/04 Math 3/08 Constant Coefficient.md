@@ -18,10 +18,12 @@ y' = m \cdot e^{mx} \\y' = m^2 \cdot e^{mx} \\
 e^{mx} ( m^2 + pm + q ) = 0 \\
 
 $$
+
 ### Auxiliary equation
 
 $$
-e^{mx} \ne 0 \\\implies
+e^{mx} \ne 0 \\
+\implies
 ( m^2 + pm + q ) = 0
 
 $$

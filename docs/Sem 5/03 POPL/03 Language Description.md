@@ -101,9 +101,9 @@ Used to specify grammar of non-regular expressions (refer Theory of Computation)
 - Set of non-terminals
 - Set of rules/productions
   Each production has a
-  - non-terminal on its left hand-side
-  - $::=$ or $\rightarrow$ on right-hand side
-  - String of terminals/non-terminals on right-hand side
+    - non-terminal on its left hand-side
+    - $::=$ or $\rightarrow$ on right-hand side
+    - String of terminals/non-terminals on right-hand side
 - A Non terminal is chosen as the starting non-terminal
   Unique starting terminal is called starting symbol
 
@@ -119,8 +119,8 @@ used to specify grammar
 - Non-terminals are enclosed between $< >$
   Eg: < fraction >
 - Productions
-  - Read $::=$ as ‘can be’
-  - Read $|$ or
+    - Read $::=$ as ‘can be’
+    - Read $|$ or
 
 ### Example
 

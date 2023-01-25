@@ -47,16 +47,12 @@ The assembler converts assembly code into bytecode
 $$
 \underbrace{ \fbox{1} \fbox{0} \fbox{0} \fbox{0} \fbox{1}\fbox{0} }
 _{\text{Opcode}}
-
 \underset{\text{D}}{ \fbox{1}}
 \underset{\text{W}}{ \fbox{1}}
-
 \underbrace{ \fbox{1} \fbox{1} }
 _{\text{MOD}}
-
 \underbrace{ \fbox{0} \fbox{1} \fbox{1} }
 _{\text{Reg}}
-
 \underbrace{ \fbox{0} \fbox{1} \fbox{1} }
 _{\text{R/M}}
 $$

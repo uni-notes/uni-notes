@@ -67,17 +67,17 @@ Input and output can be serial/parallel
 contains
 
 - features
-  - clock pulse
-  - reset/clear
-  - four 4 x 1 mux for modes
+    - clock pulse
+    - reset/clear
+    - four 4 x 1 mux for modes
     0. No change
     1. Shift Left
     2. Shift Right
     3. Parallel load
-  - four d flipflops
+    - four d flipflops
 - inputs
-  - serial input for shift-left
-  - serial input for shift-right
+    - serial input for shift-left
+    - serial input for shift-right
 
 ## Ring/Shift-Register Counter
 

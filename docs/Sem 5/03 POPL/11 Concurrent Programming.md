@@ -199,11 +199,11 @@ monitor Monitor_Name
 Variable `X` of type `condition` has only two legal operations
 
 - `X.wait()`
-  - Blocks a process until some other process calls `signal()`
-  - adds the blocked process onto a list associated with that condition
+    - Blocks a process until some other process calls `signal()`
+    - adds the blocked process onto a list associated with that condition
 - `X.signal()`
-  - does nothing if there are no processes waiting on that condition
-  - Otherwise, it wakes up exactly one process from the condition's list of waiting processes
+    - does nothing if there are no processes waiting on that condition
+    - Otherwise, it wakes up exactly one process from the condition's list of waiting processes
 
 ![image-20221222211932050](assets/image-20221222211932050.png)
 

@@ -13,8 +13,8 @@ This is one of the most important core courses of Computer Engineering
 - Performance and how to measure it
 
 - MIPS ISA
-  - Microprocessor without Interlocked Pipeline Stages
-  - Instruction Set Architecture
+    - Microprocessor without Interlocked Pipeline Stages
+    - Instruction Set Architecture
 - Computer Arithmetic
 
 - CPU and control design

@@ -66,19 +66,19 @@ International sector allows
 Govt
 
 - consumers
-  - collect taxes
-  - provide direct income transfers (like pensions)
+    - collect taxes
+    - provide direct income transfers (like pensions)
 - business
-  - collects taxes
-  - govt purchases
-  - transfer payments (tax holidays)
+    - collects taxes
+    - govt purchases
+    - transfer payments (tax holidays)
 - financial sector
 
-  - loans in times of govt deficit
-  - liquidity injection
+    - loans in times of govt deficit
+    - liquidity injection
     Hot money/cash for the banks
 - foreign sector
-  - import duties/taxes
+    - import duties/taxes
 
 ## Budget deficit leads to high inflation
 

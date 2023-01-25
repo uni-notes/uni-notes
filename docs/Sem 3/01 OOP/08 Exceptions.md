@@ -89,8 +89,8 @@ error
 exceptions
 
 - Runtime exception 
-  - unexpected values - divide by 0
-  - array index out of bound
+    - unexpected values - divide by 0
+    - array index out of bound
 
 ## Custom Exceptions
 

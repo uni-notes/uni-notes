@@ -195,9 +195,9 @@ We can turn into 2 tables
 
 2. Find the transitive closures of all
 
-   - attributes
+     - attributes
 
-   - combination of failure keys
+     - combination of failure keys
 
 3. List out all keys
 

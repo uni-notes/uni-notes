@@ -8,9 +8,9 @@ $$
 +
 \Big[\lambda Q(x) + R(x) \Big] y
 = 0
-
 \label{gen}
 $$
+
 with the boundary conditions
 
 $$
@@ -25,7 +25,7 @@ $$
 ### Simplest Form
 
 $$
-y'' + \lambda y = 0 \\ \\P(x) = 1 \\Q(x) = 1 \\R(x) = 0
+y'' + \lambda y = 0 \\P(x) = 1 \\Q(x) = 1 \\R(x) = 0
 
 $$
 
@@ -40,7 +40,8 @@ $$
 	y'
 \Big] +
 \underbrace{n(n+1)}_{\lambda} \ y
-= 0 \\P(x) = 1-x^2 \\Q(x) = 1 \\R(x) = 0 \\\lambda = n(n+1)
+= 0 \\P(x) = 1-x^2 \\Q(x) = 1 \\R(x) = 0 \\
+\lambda = n(n+1)
 $$
 Here, $\lambda$ is the eigen value of $\eqref{gen}$
 

@@ -144,7 +144,7 @@ $$
 
 - $C$ is the total consumption
 - $c$ is the basic consumption
-  - $c \ne 0$
+    - $c \ne 0$
 - $k$ is called the MPC (Marginal Propensity to Consume)
-  - $k \in [0, 1]$
+    - $k \in [0, 1]$
 - $I$ is the income

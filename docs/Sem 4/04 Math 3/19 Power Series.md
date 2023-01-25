@@ -4,9 +4,9 @@ An infinite series in $x$ of the form
 
 $$
 \sum_{n=0}^\infty a_n x^n = a_0 + a_1 x + a_2 x^2 + \dots + a_r x^r + \dots
-
 \label{power_series}
 $$
+
 where $\{ a_0, a_1, a_2, \dots \}$ are constants
 
 $\eqref{power_series}$ is convergent only when $x \to 0$
@@ -38,7 +38,8 @@ y'
 &&= a_1 + 2a_2 x + 3a_3 x^2 + \dots \\
 y''
 &= \sum_{n=2}^\infty a_n n(n-1) x^{n-2}
-&&= 2a_2 + (3 \cdot 2) a_3 x + \dots \\\end{align}
+&&= 2a_2 + (3 \cdot 2) a_3 x + \dots \\
+\end{align}
 $$
 
 ### Comparing Coefficients
@@ -58,11 +59,12 @@ Consider a general 2nd order differential equation with polynomials $P_1, P_2, P
 
 $$
 \begin{align}
-P y'' + Q y' + R y &= 0 \\\implies y'' + \frac{Q}{P} y' + \frac{R}{P} y &= 0
+P y'' + Q y' + R y &= 0 \\
+\implies y'' + \frac{Q}{P} y' + \frac{R}{P} y &= 0
 \end{align}
-
 \label{gen}
 $$
+
 | Types          | $P(a)$  |
 | -------------- | ------- |
 | Ordinary Point | $\ne 0$ |
@@ -78,7 +80,6 @@ The power series solution of $\eqref{gen}$ is given by
 
 $$
 y = \sum_{n=0}^{\infty} a_n x^n
-
 \label{sol}
 $$
 
@@ -107,7 +108,6 @@ q&=
 \lim_{x \to a} (x-a)^{\textcolor{hotpink}{2}}
 &\frac{R(x)}{P(x)}
 \end{align}
-
 \label{limits}
 $$
 
@@ -126,6 +126,7 @@ y
 &= x^m \sum_{n=0}^\infty a_n x^n \\&= \sum_{n=0}^\infty a_n x^{m+n}
 \end{align}
 $$
+
 where $m$ is constant coefficient called as root/indical/initial value. This is singular points (to be calculated).
 
 ### Trick to find indical value

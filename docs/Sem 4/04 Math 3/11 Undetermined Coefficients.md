@@ -33,11 +33,14 @@ $$
 x e^x ( A \cos x + B \sin x) \to x \phi
 
 $$
+
 ### Example
 
 $$
 \begin{align}
-y'' - 2y' + 2y &= e^x \sin x \\ \\x e^x ( A \cos x + B \sin x) & \to x \phi \\
-{y_g}'' - 2{y_g}' + 2{y_g} &= 0 \\\implies \phi'' - 2\phi' + 2\phi &= 0
+y'' - 2y' + 2y &= e^x \sin x \\x e^x ( A \cos x + B \sin x) & \to x \phi \\
+{y_g}'' - 2{y_g}' + 2{y_g} &= 0 \\
+\implies \phi'' - 2\phi' + 2\phi &= 0
 \end{align}
 $$
+
