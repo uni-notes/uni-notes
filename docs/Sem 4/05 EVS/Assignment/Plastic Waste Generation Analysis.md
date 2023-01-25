@@ -44,7 +44,9 @@ $$
 
 $$
 \begin{align}
-&= 9.7 \times 10^6 \times 419.143\\   &= 4065.6871 \times 10^6 \\   &= 4.0657 \ \text{Gg}
+&= 9.7 \times 10^6 \times 419.143 \\
+&= 4065.6871 \times 10^6 \\
+&= 4.0657 \ \text{Gg}
 \end{align}
 $$
    
@@ -56,7 +58,9 @@ $$
 
 $$
 \begin{align}
-&= 6\times \text{average of } m( \text{plastic} ) \\      &= 6 \times 419.143 \\      &= 2514.858 \text{\ g}
+&= 6\times \text{average of } m( \text{plastic} ) \\
+&= 6 \times 419.143 \\
+&= 2514.858 \text{\ g}
 \end{align}
 $$
 
@@ -64,7 +68,10 @@ $$
 
 $$
 \begin{align}
-&= 365 \times \text{amount per day} \\     &= 365 \times 2514.858 \\     &= 917.92 \times 10^3 \text{\ g} \\     &= 917.92 \text{\ kg}
+&= 365 \times \text{amount per day} \\
+&= 365 \times 2514.858 \\
+&= 917.92 \times 10^3 \text{\ g} \\
+&= 917.92 \text{\ kg}
 \end{align}
 $$
 
@@ -74,8 +81,12 @@ $$
 
 $$
 \begin{align}
-\text{Ratio} &= \frac{0.5 \text{ mg of PAH} }{1 \text{ g of plastic waste} } \\   &= 0.5 \times 10^{-3} \\   
-\text{PAH produced/day} &= \text{Ratio$\times m$(plastic/day)} \\   &= 0.5 \times 10^{-3} \times 419.143 \text{\ g} \\   &= 209.572 \times 10^-3 \text{\ g} \\   &= 209.572 \text{\ mg}
+\text{Ratio} &= \frac{0.5 \text{ mg of PAH} }{1 \text{ g of plastic waste} } \\
+&= 0.5 \times 10^{-3} \\
+\text{PAH produced/day} &= \text{Ratio$\times m$(plastic/day)} \\
+&= 0.5 \times 10^{-3} \times 419.143 \text{\ g} \\
+&= 209.572 \times 10^-3 \text{\ g} \\
+&= 209.572 \text{\ mg}
 \end{align}
 $$
 
