@@ -1,37 +1,40 @@
 window.MathJax = {
-	// i'm loading manually
-	loader: {load: [
-		'[tex]/color',
-		'[tex]/cases',
-		'[tex]/mhchem',
-		'[tex]/textmacros'
-	]},
-  tex: {
+	// i want to load these manually :(
+	loader: {
+		load: [
+			'[tex]/color',
+			'[tex]/cases',
+			'[tex]/mhchem',
+			'[tex]/textmacros'
+		]
+	},
+	tex: {
 		packages: {
 			'[+]': [
 				'color',
 				'cases',
 				'mhchem',
 				'textmacros'
-		]
-	},
-    inlineMath: [
+			]
+		},
+		tags: 'ams',
+		inlineMath: [
 			["\\(", "\\)"],
 			["$", "$"]
 		],
-    displayMath: [
+		displayMath: [
 			["\\[", "\\]"],
 			["$$", "$$"]
 		],
-    processEscapes: true,
-    processEnvironments: true
-  },
-  options: {
-    ignoreHtmlClass: ".*|",
-    processHtmlClass: "arithmatex"
-  }
+		processEscapes: true,
+		processEnvironments: true
+	},
+	options: {
+		ignoreHtmlClass: ".*|",
+		processHtmlClass: "arithmatex"
+	}
 };
 
-document$.subscribe(() => { 
-  MathJax.typesetPromise()
+document$.subscribe(() => {
+	MathJax.typesetPromise()
 })
