@@ -41,6 +41,7 @@ $$
 1. The Population of U.A.E is say 9.7 million and if everyone is going to generate average waste like you, calculate how much waste will be generated in a day?
    
 **Answer**
+
 $$
 \begin{align}
 &= 9.7 \times 10^6 \times 419.143\\   &= 4065.6871 \times 10^6 \\   &= 4.0657 \ \text{Gg}
@@ -70,6 +71,7 @@ $$
 3. Plastic takes around 500 to 1000 years to completely degrade. Plastics used by us till date still exists somewhere on the planet. Many People out of ignorance end up burning plastic waste to manage it. If 1g of plastic waste on burning produces 0.5mg of PAH, calculate the amount of PAH generated on an average per day by you.
 
 **Answer**
+
 $$
 \begin{align}
 \text{Ratio} &= \frac{0.5 \text{ mg of PAH} }{1 \text{ g of plastic waste} } \\   &= 0.5 \times 10^{-3} \\   
@@ -80,6 +82,7 @@ $$
 4. What is PAH and How they affect our health?
 
 **Answer**
+
 PAH are **Polycyclic Aromatic Hydrocarbons**, which occur naturally in coal, crude oil, and gasoline. They are emitted when coal, oil, gas, wood, garbage, and tobacco are burned. PAHs generated from these sources can bind to or form small particles in the air. High-temperature cooking will form PAHs in meat and in other foods.
 
 Breathing air contaminated with motor vehicle exhaust, cigarette smoke, wood smoke, or fumes from asphalt roads are common ways exposure occurs. People take in PAHs when they eat grilled or charred meats or foods or foods on which PAH particles have settled from the air.
