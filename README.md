@@ -8,4 +8,4 @@ These notes are **not affiliated** to any university, club, association.
 
 ## License
 
-https://github.com/AhmedThahir/Notes_Shared/blob/7f40371c5c538b07ed90acf4a868604b7f42579e/license#L1-L21
+https://github.com/AhmedThahir/Notes_Shared/blob/main/license#L1-L21
