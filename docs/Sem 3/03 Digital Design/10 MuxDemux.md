@@ -34,6 +34,7 @@ $M = i_0 {s_0}' + i_1 s_0$
 - 4 inputs
 - 1 output
 - 2 selection lines
+
 | s0   | s1   | M     |
 | ---- | ---- | ----- |
 | 0    | 0    |$i_0$ |
