@@ -7,8 +7,7 @@ more suitable if the RHS function is a ==$\log, \tan, \cot, \sec, \csc,$ hyperbo
 1. Find general solution
    $$
    y_g = c_1 \textcolor{orange}{y_1} + c_2 \textcolor{orange}{y_2}
-   
-$$
+   $$
 
 2. Let
    $$

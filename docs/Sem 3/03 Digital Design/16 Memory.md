@@ -70,8 +70,7 @@ $$
    2^n &= 8 \times 2^{10} \\   &= 2^3 \times 2^{10} \\   &= 2^{13} \\   
    \implies n &= 13
    \end{align}
-   
-$$
+   $$
 
 3. Capacity = 16KB
    $$
@@ -80,8 +79,7 @@ $$
    &= 16 \text{ KB}
    
    \end{align}
-   
-$$
+   $$
 
 ## Operations
 

@@ -31,8 +31,7 @@ Formulae
    \begin{align}
    n(A \cup B \cup C)&= n(A) + n(B) + n(C) \\   & \qquad - n(A \cap B) - n(B \cap C) - n(A \cap C) \\   & \qquad + n(A \cap B \cap C)
    \end{align}
-   
-$$
+   $$
 
 3. $A' = S - A$
 

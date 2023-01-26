@@ -147,8 +147,7 @@ $$
 
 3. $$
    \text{Base address} = \text{Frame no} \times \text{Frame size}
-   
-$$
+   $$
 
 4. Frame Offset = page offset
 
@@ -158,8 +157,7 @@ $$
 
 5. $$
    \text{Physical address} = \text{Base Address} + \text{Frame Offset}
-   
-$$
+   $$
 
 ## I Missed Something
 

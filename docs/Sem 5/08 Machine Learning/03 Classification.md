@@ -560,8 +560,7 @@ $$
    H(C_2=\text{Value}_i)
    \right]
    \end{align}
-   
-$$
+   $$
 
 4. Pick the independent variable with the highest gain
 

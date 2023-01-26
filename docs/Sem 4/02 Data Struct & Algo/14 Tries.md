@@ -100,8 +100,7 @@ Assign the minimum key to the character with the maximum frequency.
    }{
    \sum\limits_i \text{Frequency}_i
    }
-   
-$$
+   $$
 
 ### Example
 

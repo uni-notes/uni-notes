@@ -21,8 +21,8 @@ In other words, we need to minimize cost function
 
 $$
 J(\theta) = \frac{1}{2} ||w||^2
-
 $$
+
 We can derive through linear-programming
 
 ## For Linearly-Separable
