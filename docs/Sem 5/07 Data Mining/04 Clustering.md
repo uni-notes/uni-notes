@@ -40,9 +40,8 @@ We should be careful; first study the problem and apply only if it is logical to
 | Attribute Type | Dissimilarity                                                | Similarity                                                   |
 | -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Nominal        | $\begin{cases} 0, & p=q \\ 1, &p \ne q \end{cases}$          | $\begin{cases} 1, & p=q \\ 0, &p \ne q \end{cases}$          |
-| Ordinal        | $\frac{|p-q|}{n-1}$<br />Values mapped to integers: $[0, n-1]$, where $n$ is the no of values | $s = 1- \frac{|p-q|}{n-1}$                                   |
-| Interval/Ratio | $|p-q|$                                                      | $s = \begin{cases} -d \\
-\frac{1}{1+d} \\ 1-\frac{d-d_\text{min}}{d_\text{max}-d_\text{min}} \end{cases}$ |
+| Ordinal        | $\dfrac{\| p-q \|}{n-1}$<br />Values mapped to integers: $[0, n-1]$, where $n$ is the no of values | $1- \dfrac{\| p-q \|}{n-1}$  |
+| Interval/Ratio | $\|p-q\|$                                                      | $-d$ <br /> $\dfrac{1}{1+d}$ <br /> $1 - \dfrac{d-d_\text{min}}{d_\text{max}-d_\text{min}}$ |
 
 ## Dissimilarity Matrix
 
