@@ -13,8 +13,7 @@
 | ------------- | -------------------------------------- | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | Heat Engine   | - Heat $\to$ Work<br />- cycle         | $\begin{align} \eta_{\small\text{HE}} &= \frac{W_\text{net, out}}{Q_\text{H}} \\ &= 1 - \frac{Q_\text{L}}{Q_\text{H}} \end{align}$ |        $\eta_\text{HE} < 1$<br />Kelvin-Plank Statement        | $\begin{align} \Delta U &= 0 \\ Q_\text{net} &= W_\text{net} \\ W_\text{net, out} &= Q_\text{in} - Q_\text{out} \\ &= Q_\text{H} - Q_\text{L} \end{align}$ |
 | Refridgerator | - maintain cool temp<br />- Reverse HE | $\begin{align} \text{COP_R} &= \frac{Q_\text{L}}{Q_\text{net, in}} \\ &= \frac{1}{ \frac{Q_\text{H}}{Q_\text{L}} - 1 } \end{align}$ |                   $\text{COP_R}$ can be > 1                    |                                                              |
-| Heat Pump     | - maintain warm temp<br />- Reverse HE | $\begin{align} \text{COP_{HP}} &= \frac{Q_\text{H}}{W_\text{net, in}} \\ &= \frac{1}{ 1 - \frac{Q_\text{L}}{Q_\text{H}} } \end{align}$ | $\begin{align} \text{COP_{HP}} &= \text{COP_{R}} + 1 \\
-\text{COP_{HP}} &> \text{COP_{R}} \end{align}$ |                                                              |
+| Heat Pump     | - maintain warm temp<br />- Reverse HE | $\begin{align} \text{COP_{HP}} &= \frac{Q_\text{H}}{W_\text{net, in}} \\ &= \frac{1}{ 1 - \frac{Q_\text{L}}{Q_\text{H}} } \end{align}$ | $\begin{align} \text{COP_{HP}} &= \text{COP_{R}} + 1 \\ \text{COP_{HP}} &> \text{COP_{R}} \end{align}$ |                                                              |
 
 ```mermaid
 flowchart TB
