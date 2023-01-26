@@ -221,7 +221,7 @@ The equations of normal line at $P_0$ are given by
 
 $$
 \begin{align}
-x &= x_0 + t {f_x}_{(P_0)} \\y &= y_0 + t {f_y}_{(P_0)} \\z &= z_0 + t {f_z}_{(P_0)}
+x &= x_0 + t {f_x}_{(P_0)} \\y &= y_0 + t {f_y}_{(P_0)} \\ z &= z_0 + t {f_z}_{(P_0)}
 \end{align}, \quad t \text{ is some parameter}
 $$
 

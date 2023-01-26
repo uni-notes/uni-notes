@@ -405,7 +405,7 @@ Measure of degree of association between 2 variables
 Helps understand if both variables have some probability distribution
 
 $$
-r = \sqrt{R^2} \\R^2 = (r)^2
+r = \sqrt{R^2} \\ R^2 = (r)^2
 \label{randr2}
 $$
 

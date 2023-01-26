@@ -10,7 +10,7 @@ A relation R defined on a set S is said to be partially ordered if it is
 
 Then (S, R) is a POSET.
 
-Eg: $(\Z, \le), (\Z, \ge), (\Z^+ , /), (P(S) , \subseteq)$
+Eg: $(\mathbb{Z}, \le), (\mathbb{Z}, \ge), (\mathbb{Z}^+ , /), (P(S) , \subseteq)$
 
 #### Notes
 
@@ -25,7 +25,7 @@ Eg: $(\Z, \le), (\Z, \ge), (\Z^+ , /), (P(S) , \subseteq)$
    a and b are said to be comparable, if either $a \preceq b$ or $b \preceq a$
    otherwise a and b are not comparable
 
-   Eg: $(\Z^+, /)$
+   Eg: $(\mathbb{Z}^+, /)$
    (2, 10) , (16, 8) is comparable; but (2, 7) isn't comparable as neither 2 nor 7 can divide each other
 
 ## Totally ordered Set

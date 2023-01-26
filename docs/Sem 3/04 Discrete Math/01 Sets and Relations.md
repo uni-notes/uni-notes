@@ -170,7 +170,7 @@ $a \ R \ b \iff$ a and b belong to the same subset of P
 returns the remainder
 basically `x % m` in programming (smallest result)
 
-$x \equiv y(mod \ m), \text{ if } x = y + am, \quad  a, m \in \Z \\
+$x \equiv y(mod \ m), \text{ if } x = y + am, \quad  a, m \in \mathbb{Z} \\
 \implies x \% m = y$
 
 eg:$12 \equiv 2 (mod \ 5), -12 = 3(mod \ 5)$
@@ -179,7 +179,7 @@ eg:$12 \equiv 2 (mod \ 5), -12 = 3(mod \ 5)$
 
 1. $m$ divides $x-y$
 2. $x \equiv y(mod \ m) \implies y \equiv x (mod \ m)$
-3. $\equiv (mod \ m)$ divides $\Z$ into $m$ equivalence classes
+3. $\equiv (mod \ m)$ divides $\mathbb{Z}$ into $m$ equivalence classes
    $\Z_m = [0], [1], [2], \dots, [m-1]$
    1. $[0]$ contains the set of all elements that return 0 as remainder, when divided by m
    2. $[m] = [0], [m+1] = [1], \dots$
