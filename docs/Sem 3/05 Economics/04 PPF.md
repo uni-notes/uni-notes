@@ -53,8 +53,10 @@ Slope shows the real/opportunity cost of $x$ (how much we're sacrificing $y$)
 MRT of producing $x$ wrt $y$ shows no of units of $y$ to be sacrificed to increase the output of $x$ by one unit
 
 $$
-y = f(x) \\
-\text{MRT}_{x,y} = -\frac{\mathrm{d} y}{\mathrm{d} x}
+\begin{align}
+y &= f(x) \\
+\text{MRT}_{x,y} &= -\frac{\mathrm{d} y}{\mathrm{d} x}
+\end{align}
 $$
 
 When we go from left to right, the slope increases from left to right, ie, cost of production of $x$ increases
@@ -65,10 +67,12 @@ When we go from left to right, the slope increases from left to right, ie, cost 
 Example: if mango’s MP is 2 and apple’s MP is 4, then 4 units of apples are to be sacrificed to produce 2 units of mangoes
 
 $$
-x = l \cdot MP_l + k \cdot MP_k \\
-\mathrm{d} y = \mathrm{d} l_{y}(MP_l^y) + \mathrm{d} k_y(MP_k^y) \\
-\mathrm{d} x = \mathrm{d} l_{x}(MP_l^x) + \mathrm{d} k_x(MP_k^x) \\
-\frac{\mathrm{d} y}{\mathrm{d} x} = \frac{MP_k^y}{MP_k^x} = \frac{MP_l^y}{MP_l^x}
+\begin{align}
+x &= l \cdot MP_l + k \cdot MP_k \\
+\mathrm{d} y &= \mathrm{d} l_{y}(MP_l^y) + \mathrm{d} k_y(MP_k^y) \\
+\mathrm{d} x &= \mathrm{d} l_{x}(MP_l^x) + \mathrm{d} k_x(MP_k^x) \\
+\frac{\mathrm{d} y}{\mathrm{d} x} &= \frac{MP_k^y}{MP_k^x} = \frac{MP_l^y}{MP_l^x}
+\end{align}
 $$
 
 ### Points on the curve
