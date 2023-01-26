@@ -8,9 +8,9 @@ $$
 As $k_i$ is non-stochastic, the value of $\beta_2$ depends on $y$, which is a random variable
 
 $$
-\hat \beta_2 =
-\sum k_i (\beta_1 + \beta_2 X_i + u_i)
+\hat \beta_2 = \sum k_i (\beta_1 + \beta_2 X_i + u_i)
 $$
+
 As $u_i$ is the only random component in the equation, $\beta_2 = f(u_i)$ meaning that we can assume $\beta_2$ follows the same distribution as $u_i$
 
 As $u_i$ is normally distributed, $\beta_1$ and $beta_2$ are also normally-distributed

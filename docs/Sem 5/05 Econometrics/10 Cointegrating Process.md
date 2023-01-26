@@ -24,11 +24,12 @@ eg:
 - Dubai and Sharjah rent
 - GCC stock markets
 
-Consider $x, z$ which are both $I(1)$ processes; $x_t$ and $z_t$ are cointegrated processes $\iff u_t$ is stationary process,$$
+Consider $x, z$ which are both $I(1)$ processes; $x_t$ and $z_t$ are cointegrated processes $\iff u_t$ is stationary process,
+
+$$
 \begin{align}
 z_t &= \alpha_1 x + u_t & \text{(Long-Term Specification)} \\
-\implies
-u_t &= z_t - \alpha_1 x_t & \text{(Short-Term Specification)} \\z_t - z_{t-1} &= \textcolor{hotpink}{-}\alpha_D(z_{t-1} - \alpha_1 x_{t-1}) + v_t \\
+\implies u_t &= z_t - \alpha_1 x_t & \text{(Short-Term Specification)} \\z_t - z_{t-1} &= \textcolor{hotpink}{-}\alpha_D(z_{t-1} - \alpha_1 x_{t-1}) + v_t \\
 \Delta z_t &= \textcolor{hotpink}{-}\alpha_D(u_{t-1}) + v_t \\& \text{if $x$ also has correcting tendancy,} \\
 \implies \Delta x_t &= \textcolor{orange}{+}\alpha_G(u_{t-1}) + w_t
 \end{align}
@@ -93,8 +94,8 @@ As they are $I(1)$, they are not mean-reverting variables. Hence, taking log on 
 
 $$
 \beta_0 + \beta_1 m_t - \beta_2 p_t - \beta_3 y_t = u_t
-
 $$
+
 Velocity is a constant, which is an intercept. Here it is represented by $\beta_0$, but can also represented by $1\cdot V$
 
 If $u_t$ is $I(0) \implies M, V, P, Y$ are cointegrating

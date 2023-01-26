@@ -1,6 +1,7 @@
 ## Floating Point
 
 ![image-20221106222720868](assets/image-20221106222720868.png)
+
 $$
 x =
 (-1)^s \times

@@ -83,6 +83,7 @@ $$
 Stochastic Specification is equal to PRF, as long as ==$E(u_i|x_i) = 0$==; this does **not** mean that $u_i = 0 , \forall i$
 
 Why? This is because only if it is so, the line passes through the expectations of $y$ for different values of $x$. It is mathematically possible only if so. (Draw graph and see)
+
 $$
 E(y_i | x_i) = E(y|x_i) + E(u_i|x_i)
 $$

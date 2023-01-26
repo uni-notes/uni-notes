@@ -187,8 +187,8 @@ Here, $\rho_1$ and $\rho_2$ are partial-autocorrelation coefficient of $y_{t-1}$
 
 $$
 y_t = \rho_1 y_{t-2} + u_t
-
 $$
+
 Here, $\rho_1$ is total autocorrelation coefficient of $y_{t-2}$ on $y_t$
 
 We choose the number of lags by trial-and-error and checking which coefficients are significant ($\ne 0$)
@@ -274,6 +274,7 @@ Will have either ==**one/both**== of the following
     - Variance of distribution of possible outcomes corresponding to each time period is different
 
 We need to tranform this somehow, as OLS and [GMM](#GMM) cannot be used for non-stationary processes, because the properties of OLS are violated - heteroscedastic variance of error term
+
 #### Random Walk w/o drift (Pure random walk process)
 
 - Mean is constant over time
@@ -344,10 +345,8 @@ $$
 \begin{align}
 y_t
 &= \beta_0 + \beta_1 t + y_{t-1} + u_t
-
 & (\beta_0 \ne 0, \beta_1 \ne 0) \\
-&=
-y_0 + t \beta_0 + \beta_1 \sum_{i=1}^t i + \sum_{i=1}^t u_t 
+&= y_0 + t \beta_0 + \beta_1 \sum_{i=1}^t i + \sum_{i=1}^t u_t
 \end{align}
 $$
 
@@ -393,8 +392,7 @@ $$
 $$
 \begin{align}
 y_t &= \beta_0 + y_{t-1} + u_t \\
-\implies \Delta y_t &= \beta_0 + \Delta y_{t-1} + u_t
-\quad \text{(Stationary)}
+\implies \Delta y_t &= \beta_0 + \Delta y_{t-1} + u_t \quad \text{(Stationary)}
 \end{align}
 $$
 

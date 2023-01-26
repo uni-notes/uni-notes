@@ -33,6 +33,7 @@ $$
 ## Homogeneous Equation
 
 Special type of [Homogeneous Expression](#Homogeneous Expression)
+
 $$
 M dx + N dy = 0
 $$

@@ -35,15 +35,16 @@ $$
 \frac{\partial \sum u_i}{}
 $$
 
-2. Set the partial derivative = 0
+1. Set the partial derivative = 0
 
-3. Rearrange the terms
+2. Rearrange the terms
 
-4. $$
-   \sum y_i = n \hat \beta_1 + \hat \beta_2 \sum x_i \\   
-   \sum y_i x_i = n \hat \beta_1 + \hat \beta_2 \sum x_i
-   
-$$
+3. $$
+   \begin{align}
+   \sum y_i &= n \hat \beta_1 + \hat \beta_2 \sum x_i \\   
+   \sum y_i x_i &= n \hat \beta_1 + \hat \beta_2 \sum x_i
+	 \end{align}
+	 $$
 
 ## Assumptions of OLS & Classical Regression
 
@@ -102,21 +103,17 @@ $$
 
      - No relationship between error term and independent variables
 
-     -$$
-     \text{Cov}(u_i, x_i) = 0
-     
-$$
+     - $$
+       \text{Cov}(u_i, x_i) = 0
+		   $$
 
      - If there is correlation, then we cannot correctly obtain coefficients
 
 6. DOF > 1
 
      - Degree of freedom $= n - k$, where
-
      - $n =$ number of observations
-
      - $k =$ no of independent variables
-
      - DOF = 0 leads to overfitting
 
 7. Good variability
@@ -320,8 +317,8 @@ TSS of $y$ = Total Sum of Squares of $y$
 
 $$
 \text{TSS} = \sum (y_i - \bar y)^2
-
 $$
+
 ESS = Explained sum of squares
 
 $$

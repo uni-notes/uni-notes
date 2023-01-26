@@ -11,9 +11,9 @@ Assume that the input string has English alphabets (upper case and lower case) a
 HASH FUNCTION for an input string is defined as follows:
 
 $$
-\Bigg( \left(\sum \text{alphabets' ASCII} + 2 \sum \text{digits' ASCII} \right) * 17 + 5 \Bigg) \% 6
-
+\Bigg( \left( \sum \text{alphabets' ASCII} + 2 \sum \text{digits' ASCII} \right) * 17 + 5 \Bigg) \% 6
 $$
+
 **Note:** MOD(%) denotes modulus operator (i.e. remainder after division)
 
 **Example**

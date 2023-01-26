@@ -103,6 +103,7 @@ $$
 $$
 
 - Kurtosis = 3
+
 $$
 Kurt = \frac{\mu_4}{\sigma^4}
 $$

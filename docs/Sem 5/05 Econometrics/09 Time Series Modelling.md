@@ -20,16 +20,12 @@ $$
 \text{AR}(p) =
 \sum_{i=1}^{p} \alpha_i u_{t-i} +
 u_t
-
 $$
+
 | Model   | Order<br />(No of lags involved)                             | Example                                                      |
 | ------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| AR$(1)$ | 1<br />There is only $1$ particular lag (not necessarily $y_{t-1}$) | $y_t = \beta_1 y_{t-\textcolor{hotpink}{1}} + u_t \\
-\text{or} \\ y_t = \beta_1 y_{t-\textcolor{hotpink}{2}} + u_t \\
-\text{or} \\
-\dots \\ y_t = \beta_1 y_{t-\textcolor{hotpink}{100}} + u_t$ |
-| AR$(2)$ | 2                                                            | $y_t = \beta_1 y_{t-\textcolor{hotpink}{1}} + u_t,  y_{t-\textcolor{hotpink}{2}} + u_t \\
-\text{or} \\ y_t = \beta_1 y_{t-\textcolor{hotpink}{1}} + u_t,  y_{t-\textcolor{hotpink}{100}} + u_t$ |
+| AR$(1)$ | 1<br />There is only $1$ particular lag (not necessarily $y_{t-1}$) | $y_t = \beta_1 y_{t-\textcolor{hotpink}{1}} + u_t \\ \text{or} \\ y_t = \beta_1 y_{t-\textcolor{hotpink}{2}} + u_t \\ \text{or} \\ \dots \\ y_t = \beta_1 y_{t-\textcolor{hotpink}{100}} + u_t$ |
+| AR$(2)$ | 2                                                            | $y_t = \beta_1 y_{t-\textcolor{hotpink}{1}} + u_t,  y_{t-\textcolor{hotpink}{2}} + u_t \\ \text{or} \\ y_t = \beta_1 y_{t-\textcolor{hotpink}{1}} + u_t,  y_{t-\textcolor{hotpink}{100}} + u_t$ |
 
 ## MA Model
 
@@ -41,12 +37,11 @@ $$
 \text{MA}(q) =
 \sum_{i=1}^{q} \beta_i u_{t-i} +
 u_t
-
 $$
+
 | Model   | Order<br />(No of lags involved)                             |                           Example                            |
 | ------- | ------------------------------------------------------------ | :----------------------------------------------------------: |
-| MA$(1)$ | 1<br />There is only $1$ particular lag (not necessarily $u_{t-1}$) | $y_t = \beta_1 u_{t-\textcolor{hotpink}{1}} + u_t \\
-\Big(\text{ie, } y_t = \beta_1 (y_{t-\textcolor{hotpink}{1}}-E[y_{t-\textcolor{hotpink}{1}}]) + u_t \Big)$ |
+| MA$(1)$ | 1<br />There is only $1$ particular lag (not necessarily $u_{t-1}$) | $y_t = \beta_1 u_{t-\textcolor{hotpink}{1}} + u_t \\ \Big(\text{ie, } y_t = \beta_1 (y_{t-\textcolor{hotpink}{1}}-E[y_{t-\textcolor{hotpink}{1}}]) + u_t \Big)$ |
 | MA$(2)$ | 2                                                            | $y_t = \beta_1 u_{t-\textcolor{hotpink}{1}} + \beta_2 u_{t-\textcolor{hotpink}{2}} + u_t$ |
 
 ## ARMA
@@ -56,7 +51,9 @@ Autoregressive Moving Average Model
 ARMA$(p, q)$ model means that there are __ involved in the ARMA model
 
 - $p$ autoregressive lags
-- $q$ moving averages lags$$
+- $q$ moving averages lags
+
+$$
 \text{ARMA}(p, q) =
 \sum_{i=1}^{p} \alpha_i y_{t-i} +
 \sum_{i=1}^{q} \beta_i u_{t-i} +

@@ -520,6 +520,7 @@ Most branch targets are near-branch (forward/backward)
 $$
 \text{Target address} = \text{PC}_\text{new} + (\text{Offset} × 4)
 $$
+
 ==**PC already incremented by 4 by this time**==
 
 ## Jump Addressing
@@ -535,6 +536,7 @@ Encode full address in instruction
 $$
 \text{Target address} = (\text{address} × 4)
 $$
+
 Why do we have 00 at the end of immediate when we calculate new instruction for branch/jump instructions? This is because
 
 - Instructions are word-aligned, so their addresses always end with 00

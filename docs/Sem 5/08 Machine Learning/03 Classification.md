@@ -350,9 +350,9 @@ Posterior depends on
 $$
 \text{Posterior} =
 \frac{
-
+something
 }{
-
+something
 }
 $$
 

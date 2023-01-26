@@ -15,7 +15,6 @@ where $y$ is the dependent variable
 $$
 y \times IF = \int \Big( Q \times IF \Big) dx \quad + c
 $$
-   
 
 ## Bernoulli’s DE
 
@@ -36,13 +35,12 @@ $$
 $$
 \begin{align}
 z'
-&= (1-n) y^{(1-n)-1} y' \\   
-
+&= (1-n) y^{(1-n)-1} y' \\
 y^{-n} y' &=
 \left( \frac{1}{1-n} \right) z'
 \end{align}
 $$
-   
+
 3. Convert into a Linear DE
 
 $$

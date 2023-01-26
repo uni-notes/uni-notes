@@ -50,6 +50,7 @@ Let $n$ be the no of instructions
 Speedup is due to increased throughput (number of instructions per unit time), **not** reduced latency (time for each instruction remains same)
 
 Assuming all stages are balanced/even (all stages take same time)
+
 $$
 \begin{align}
 S_\text{ideal}

@@ -30,8 +30,10 @@ Sum of Product
 Represented by NAND gate
 
 $$
-f(a,b,c) = ab + bc \\
-g(a,b,c) = a'b + b'c
+\begin{align}
+f(a,b,c) &= ab + bc \\
+g(a,b,c) &= a'b + b'c
+\end{align}
 $
 
 ### POS ($\pi$)
@@ -40,7 +42,12 @@ Product of Sum
 
 Represented by NOR gate
 
-$f(a,b,c) = (a+b)(b+c) \\ g(a,b,c) = (a'+b)(b'+c)$
+$$
+\begin{align}
+f(a,b,c) &= (a+b)(b+c) \\
+g(a,b,c) &= (a'+b)(b'+c)
+\end{align}
+$$
 
 ## Canonical Form
 
@@ -52,7 +59,9 @@ Each variable within a term of a Boolean expression.
 
 SOP
 
-$m_0 + m_1 + m_2 + \dots$
+$$
+m_0 + m_1 + m_2 + \dots
+$$
 
 Minterm (0) is targeted $x' = 0, x = 1$, Minterms are wherever the output is 1
 
@@ -70,7 +79,9 @@ so that the AND of all literals are always 1
 
 #### 2 variable minterm
 
+$$
 2^2 = 4
+$$
 
 | x    | y    | Minterm | Notation |           |
 | ---- | ---- | ------- | -------- | --------: |
@@ -81,7 +92,9 @@ so that the AND of all literals are always 1
 
 #### 3 var minterm
 
+$$
 2^3 = 8
+$$
 
 |      |      |      |        |      |
 | ---- | ---- | ---- | ------ | ---- |
@@ -98,7 +111,9 @@ so that the AND of all literals are always 1
 
 POS
 
-$M_0 \cdot M_1 \cdot M_3 \cdot \dots$
+$$
+M_0 \cdot M_1 \cdot M_3 \cdot \dots
+$$
 
 Maxterm (1) is targeted $x' = 1, x = 0$, maxterms are wherever the output is 0
 
@@ -135,7 +150,8 @@ basically,
 
 $$
 \begin{align}
- & \  xyz + xy \\=& \  xyz + xy(z+z')
+ & \ xyz + xy \\
+=& \ xyz + xy(z+z')
 \end{align}
 $$
 

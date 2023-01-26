@@ -22,11 +22,12 @@ a set of programs
   Kernel means most important part of any computing system/programming environment
     - Kernel is system software which is part of operating system
     - Kernel provides interface between hardware and software components
- $$
+
+$$
 \fbox{
 System, Application Software
 $\fbox{
-  Operating System
+Operating System
 $\fbox{Kernel
 $\fbox{H/W Resources}$
 }$}$

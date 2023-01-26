@@ -90,6 +90,7 @@ Solving $\eqref{gen}$ using $\eqref{sol}$ gives the general solution of $\eqref{
 $$
 y = a(\text{PS}_1) + b(\text{PS}_2)
 $$
+
 where
 
 - PS~1~ and PS~2~ are congruent and linearly-independent power series, for $x \to 0$

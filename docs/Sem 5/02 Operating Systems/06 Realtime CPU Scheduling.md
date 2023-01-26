@@ -45,9 +45,9 @@ Time constraint for execution time
 
 $$
 d \le p
-
 $$
-In this course, we are assuming that
+
+In this course, we are **assuming** that
 
 $$
 d = p

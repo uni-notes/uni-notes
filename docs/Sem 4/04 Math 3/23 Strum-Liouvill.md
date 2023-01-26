@@ -42,6 +42,7 @@ $$
 = 0 \\P(x) = 1-x^2 \\Q(x) = 1 \\R(x) = 0 \\
 \lambda = n(n+1)
 $$
+
 Here, $\lambda$ is the eigen value of $\eqref{gen}$
 
 The corresponding solutions are $P_n(x), n = 1, 2, \dots$ They are called as eigen functions.

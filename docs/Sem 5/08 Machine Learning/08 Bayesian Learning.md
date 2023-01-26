@@ -55,5 +55,4 @@ Events $A, B, C, \dots$ are independent $\iff$
 
 $$
 P(A, B, C, \dots) = P(A) \times P(B) \times P(C) \times \dots
-
 $$
