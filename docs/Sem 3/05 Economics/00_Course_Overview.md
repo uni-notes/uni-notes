@@ -1,4 +1,4 @@
-# Economics
+## Economics
 
 | Class   | Instructor               |
 | ------- | ------------------------ |
@@ -13,7 +13,7 @@ deals with
 2. how to produce
 3. for whom to produce
 
-### Aspects
+## Aspects
 
 - scarcity of resources
 - forecasting

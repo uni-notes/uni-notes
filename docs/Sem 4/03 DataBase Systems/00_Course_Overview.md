@@ -1,4 +1,4 @@
-# Database Systems
+## Database Systems
 
 | Class     | Instructor                 |
 | --------- | -------------------------- |

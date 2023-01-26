@@ -1,4 +1,4 @@
-# Theory Of Computation
+## Theory Of Computation
 
 Taught by Dr. Santhosh Kumar
 

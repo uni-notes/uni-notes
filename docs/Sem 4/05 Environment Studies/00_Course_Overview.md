@@ -1,4 +1,4 @@
-# Environmental Studies
+## Environmental Studies
 
 Dr. Vijaya Llango
 
@@ -14,21 +14,21 @@ Individual
 4. Answer questions
 5. Make a video explaining what is the best way for alternative
 
-### Ideas
+## Ideas
 
-#### Bottles
+### Bottles
 
 1. use metal bottles
 2. if heat retention is required, use a thermosflask instead
 3. take your own bottle when going out, instead of buying from stores
 
-#### Bags
+### Bags
 
 1. use cloth bags
 2. if a bag is not required, then politely decline it and just take the item(s) in your hand
 3. take your own bag instead of getting from the store
 
-#### Waste Management
+### Waste Management
 
 1. sort the waste ourselves
 2. if we do it ourselves, it becomes more feasible for the govt to adopt more sustainable measures

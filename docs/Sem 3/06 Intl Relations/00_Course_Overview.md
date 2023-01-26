@@ -1,4 +1,4 @@
-# International Relations
+## International Relations
 
 | Class   | Instructor        |
 | ------- | ----------------- |
@@ -8,7 +8,7 @@ Peace and conflict
 
 not about moral, it's about survival
 
-### Why Learn
+## Why Learn
 
 Why not just learn about internal affairs of a country?
 To see the global picture, we have to see the relations b/w countries

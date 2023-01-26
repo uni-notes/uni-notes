@@ -1,4 +1,4 @@
-# Principles of Programming Languages
+## Principles of Programming Languages
 
 Taught by Dr. B. Vijayakumar
 

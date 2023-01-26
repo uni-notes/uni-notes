@@ -1,4 +1,4 @@
-# Data Mining
+## Data Mining
 
 Taught by Dr. Angel
 
@@ -43,6 +43,6 @@ The course doesn’t cover regression.
 5. Proposed Method
 6. References (20 papers)
 
-### Sources
+## Sources
 
 Kaggle, UCI ML repository

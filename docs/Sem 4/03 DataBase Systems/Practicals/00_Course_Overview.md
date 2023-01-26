@@ -8,13 +8,13 @@
 
 ## JDBC
 
-### Creation
+## Creation
 
 1. File > New Project
 1. Java with Ant
 1. Next > Finish
 
-### Code
+## Code
 
 ```java
 package jdbc;
@@ -70,7 +70,7 @@ public class JavaApplication7 {
 }
 ```
 
-### Output
+## Output
 
 ```
 select * from salesman 😊
@@ -100,9 +100,9 @@ select * from salesman where salesman_id > 5003 😊
 
 ## GUI
 
-### Steps
+## Steps
 
-### Code
+## Code
 
 ```java
 private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         

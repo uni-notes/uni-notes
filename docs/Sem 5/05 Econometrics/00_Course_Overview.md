@@ -1,4 +1,4 @@
-# Econometric Methods
+## Econometric Methods
 
 Taught by Dr. Sartaj Rasool Rather
 

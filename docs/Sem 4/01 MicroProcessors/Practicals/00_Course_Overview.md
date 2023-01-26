@@ -6,9 +6,9 @@ It uses an assembler to convert the code into machine language the processor can
 
 ## Installation
 
-### Windows
+## Windows
 
-### MacOS
+## MacOS
 
 1. Install `dosbox`
    1. https://www.dosbox.com/download.php?main=1
@@ -20,7 +20,7 @@ It uses an assembler to convert the code into machine language the processor can
 
 ## Basics
 
-### Skeleton Program
+## Skeleton Program
 
 ```assembly
 .model small
@@ -44,7 +44,7 @@ end start
 code ends
 ```
 
-### Steps
+## Steps
 
 1. Open up TurboAssembler
 
@@ -73,7 +73,7 @@ code ends
    3. Enter `ds:address`
       for eg `ds:1000`
 
-### Saving
+## Saving
 
 on your keyboard, click
 
