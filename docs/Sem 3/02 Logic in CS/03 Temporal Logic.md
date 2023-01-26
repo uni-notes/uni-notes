@@ -28,6 +28,7 @@ For both LTL and CTL
 #### Path Quantifiers
 
 (only for CTL)
+
 | Symbol | Meaning                 |
 | -----: | ----------------------- |
 |      A | for ==A==ll paths       |
