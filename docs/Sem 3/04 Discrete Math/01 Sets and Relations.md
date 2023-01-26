@@ -110,7 +110,7 @@ No pair of vertices are connected in both directions, and there are self-loops
 
 $(a, b) \in R, (b, c) \in R \implies (a, c) \in R$
 
-Asymmetry$\implies$ Anti-symmetry, but not vice-versa
+Asymmetry $\implies$ Anti-symmetry, but not vice-versa
 
 ## Notes
 
