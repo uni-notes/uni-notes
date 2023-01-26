@@ -4,19 +4,16 @@
 
 ### Consumer Surplus
 
-benefit that consumers enjoy when they purchase goods and services
-
-= area under demand curve and above equilibrium price line
-
-= willingness to pay - total payment
+Benefit that consumers enjoy when they purchase goods and services
 
 $$
-=
-\int \limits_0^{Q} Q_d
--
-\int \limits_0^{P} P_d
-
+\begin{align}
+&= \text{area under demand curve and above equilibrium price line}  \\
+&= \text{willingness to pay - total payment} \\
+&= \int \limits_0^{Q} Q_d - \int \limits_0^{P} P_d
+\end{align}
 $$
+
 if the value associated with a commodity is 
 
 - high, surplus is high
@@ -40,17 +37,16 @@ The Consumer surplus = 6 + 4 + 2 = 12
 
 ### Supplier Surplus
 
-it is basically the profit
-
-= TR - cost
-
-= area above supply curve and below price line
+It is basically the profit
 
 $$
-= 
-\int
-
+\begin{align}
+&= TR - \text{Cost} \\
+&= \text{area above supply curve and below price line} \\
+&= \int
+\end{align}
 $$
+
 | P    | $Q_s$ | $P_{eq} - P$ |
 | ---- | ----- | ------------ |
 | 1    | 1     | 3            |

@@ -14,15 +14,14 @@ Language translators
 
 - Python is dynamic
 
-    - ```python
+    ```python
     x = "hi"
     x = 304
-    
     ```
 
 - Static (compilation)
 
-    - ```c
+    ```c
     #include <stdio.h>
     // standard input output
     // header file
@@ -44,16 +43,14 @@ Language translators
 
 - Key words
 
-    - ```c
+    ```c
     return
       void
     ```
 
-    - 
-
 - Identifiers
 
-    - ```
+    ```
     int x = 3;
     ```
 
