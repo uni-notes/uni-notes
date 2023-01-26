@@ -9,19 +9,24 @@ x =
 2^{\text{Exponent - Bias}}
 $$
 
-- S
-    - Sign bit
-    - 0: non-negative
-    - 1: negative
-- Normalize significand
-    - Significand is Fraction with the `1.` restored
-    - $1.0 \le |\text{significand}| < 2.0$
-    - Always has a leading pre-binary-point 1 bit, so no need to
-    represent it explicitly (hidden bit)
-- Exponent
-    - Excess representation: actual exponent + Bias
-    - Ensures exponent is unsigned
-    - Single: Bias = 127; Double: Bias = 1023
+### S
+
+- Sign bit
+- 0: non-negative
+- 1: negative
+
+### Exponent
+
+- Excess representation: actual exponent + Bias
+- Ensures exponent is unsigned
+- Single: Bias = 127; Double: Bias = 1023
+
+### Normalized Significand
+
+- Significand is Fraction with the `1.` restored
+- $1.0 \le |\text{significand}| < 2.0$
+- Always has a leading pre-binary-point 1 bit, so no need to
+represent it explicitly (hidden bit)
 
 ## Single Precision (32-bit)
 
