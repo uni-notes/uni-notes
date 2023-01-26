@@ -65,21 +65,25 @@ $$
 1. 16 data input lines, 16 data output lines
 
 2. 13 address lines
-   $$
-   \begin{align}
-   2^n &= 8 \times 2^{10} \\   &= 2^3 \times 2^{10} \\   &= 2^{13} \\   
-   \implies n &= 13
-   \end{align}
-   $$
+   
+$$
+\begin{align}
+2^n &= 8 \times 2^{10} \\
+&= 2^3 \times 2^{10} \\
+&= 2^{13} \\
+\implies n &= 13
+\end{align}
+$$
 
 3. Capacity = 16KB
-   $$
-   \begin{align}
-   \text{Capactity} &= m \times 2^n \text{ bits} \\   &= \frac{16 \times 2^{13}}{8 \times 1024} \text{ KiloBytes} \\   
-   &= 16 \text{ KB}
    
-   \end{align}
-   $$
+$$
+\begin{align}
+\text{Capactity} &= m \times 2^n \text{ bits} \\   &= \frac{16 \times 2^{13}}{8 \times 1024} \text{ KiloBytes} \\   
+&= 16 \text{ KB}
+
+\end{align}
+$$
 
 ## Operations
 

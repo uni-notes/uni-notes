@@ -119,12 +119,12 @@ If
 - $p$ is the fraction that can be parallelized
 - $n$ is the new parallel processing ability
   
-   $$
-  \begin{align}
-  n &= \text{factor of increase in number of processors} \\
-  & \qquad \times \text{factor of increase in processor performance}
-  \end{align}
-   $$
+$$
+\begin{align}
+n &= \text{factor of increase in number of processors} \\
+& \qquad \times \text{factor of increase in processor performance}
+\end{align}
+$$
   
 $(s = 1-p; \quad p = 1-s)$
 

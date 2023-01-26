@@ -43,19 +43,20 @@ A force $\vec F = M \hat i + N \hat j + P \vec k$ is conservative
 
 2. there exists a scalar potential function $\phi(x, y, z)$ such that
    
-	 $$
-   \begin{align}
-   \vec F &= \nabla \phi \\
-	 \text{where } \nabla \phi &= \phi_x \hat i + \phi_y \hat j + \phi_z \hat k
-   \end{align}
-   $$
+$$
+\begin{align}
+\vec F &= \nabla \phi \\
+\text{where } \nabla \phi &= \phi_x \hat i + \phi_y \hat j + \phi_z \hat k
+\end{align}
+$$
 
 3. If $C$ is any path joining A and B
-   $$
-   \begin{align}
-   W &= \int\limits_C \vec F \cdot d \vec r \\   &= \phi(B) - \phi(A)
-   \end{align}
-   $$
+
+$$
+\begin{align}
+W &= \int\limits_C \vec F \cdot d \vec r \\   &= \phi(B) - \phi(A)
+\end{align}
+$$
 
 ## Green’s Theorem in a Plane
 

@@ -156,16 +156,16 @@ AutoRegressive Conditional Heteroschedacity models
 
 3. $$
    y_t = u_t \implies \sigma^2 (y_t) = \sigma^2 (u_t)
-   
-$$
+	 $$
 
 4. So our model becomes
-   $$
-   (u_t)^2 = \lambda_0 + \lambda_1 (u_{t-1})^2 + \dots
    
 $$
+(u_t)^2 = \lambda_0 + \lambda_1 (u_{t-1})^2 + \dots
+$$
 
-5. 
+5. Something
+
 ### GARCH
 
 Generalized AutoRegressive Conditional Heteroschedacity models

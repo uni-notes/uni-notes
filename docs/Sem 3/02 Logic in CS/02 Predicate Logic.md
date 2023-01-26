@@ -100,12 +100,14 @@ any of the above can replace free variable
       \frac{
         \exists x \ \phi \quad
         \begin{bmatrix}
-        	x_0 \quad \phi[x_0/x] \\        	\vdots \\        	\chi
+        	x_0 \quad \phi[x_0/x] \\
+					\vdots \\
+					\chi
         \end{bmatrix}
         }
         {\chi} \quad
         \exists x \quad e
-     $$
+      $$
    
    2. if $\exists x \quad \phi$ is true, there should be atleast one value of $x$ for which $\phi$ is true
    

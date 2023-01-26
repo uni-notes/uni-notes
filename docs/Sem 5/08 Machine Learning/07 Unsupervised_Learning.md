@@ -22,16 +22,18 @@ Output: Set of $k$ clusters
 2. For each of the objects
    1. Compute distance between current objects and $k$ cluster centroids
    2. Assign current object to that cluster to which it is closest
-      If distance of a point between 2 clusters is same, then we assign the point to first centroid.
+      
+			If distance of a point between 2 clusters is same, then we assign the point to first centroid.
 
 3. Compute ‘cluster centers’ $m$ of each cluster. These become the new cluster centroids
    
-	 $$
-   \begin{align}
-   m_k &= \Big(\text{mean}(X), \text{mean}(Y) \Big) \\   
-   X &= \text{List of $x$ coordinates}\\   Y &= \text{List of $y$ coordinates}
-   \end{align}
-   $$
+$$
+\begin{align}
+m_k &= \Big(\text{mean}(X), \text{mean}(Y) \Big) \\   
+X &= \text{List of $x$ coordinates}\\
+Y &= \text{List of $y$ coordinates}
+\end{align}
+$$
 
 4. Repeat steps 2-3 until [convergence criterion](#convergence criterion) is satisfied
 
@@ -86,43 +88,43 @@ $$
 
 2. E Step: Assign each point $X_n$ an assignment score $\gamma(z_{nk})$ for each cluster $k$
    
-   $$
-   \gamma(z_{nk}) = \frac{
-   \pi_k N(x_n|\mu_k, \Sigma_k)
-   }{
-   \sum_{i=1}^K \pi_i N(x_n|\mu_i, \Sigma_i)
-   }
-   $$
+$$
+\gamma(z_{nk}) = \frac{
+\pi_k N(x_n|\mu_k, \Sigma_k)
+}{
+\sum_{i=1}^K \pi_i N(x_n|\mu_i, \Sigma_i)
+}
+$$
 
 3. M Step: Given scores, adjust $\mu_k, \pi_k, \Sigma_k$ for each cluster $k$
    
-   $$
-   \begin{align}
-   \text{Let }
-   N_k &= \sum_{n=1}^N \gamma(z_{nk}) \\   N &= \text{Sample Size} \\   
-   \\   
-   \mu_k^\text{new} &=
-   \frac{1}{N_k}
-   \sum_{n=1}^N \gamma(z_{nk}) x_n
-   \\   \Sigma_k^\text{new} &=
-   \frac{1}{N_k}
-   \sum_{n=1}^N \gamma(z_{nk})
-   (x_n - \mu_k^\text{new})
-   (x_n - \mu_k^\text{new})^T
-   \\   
-   \pi_k^\text{new} &= \frac{N_k}{N} \\   \end{align}
-   $$
+$$
+\begin{align}
+\text{Let }
+N_k &= \sum_{n=1}^N \gamma(z_{nk}) \\   N &= \text{Sample Size} \\   
+\\   
+\mu_k^\text{new} &=
+\frac{1}{N_k}
+\sum_{n=1}^N \gamma(z_{nk}) x_n
+\\   \Sigma_k^\text{new} &=
+\frac{1}{N_k}
+\sum_{n=1}^N \gamma(z_{nk})
+(x_n - \mu_k^\text{new})
+(x_n - \mu_k^\text{new})^T
+\\   
+\pi_k^\text{new} &= \frac{N_k}{N} \\   \end{align}
+$$
    
 4. Evaluate log likelihood
    
-	 $$
-   \ln p(X| \mu, \Sigma, \pi) =
-   \sum_{n=1}^N
-   \ln \left|
-   \sum_{k=1}^K \pi_k N(x_n | \mu_k, \Sigma_k)
-   \right|
-   $$
-   
+$$
+\ln p(X| \mu, \Sigma, \pi) =
+\sum_{n=1}^N
+\ln \left|
+\sum_{k=1}^K \pi_k N(x_n | \mu_k, \Sigma_k)
+\right|
+$$
+
 5. Stop if likelihood/parameters converge
 
 ## K Means vs Gaussian Mixture

@@ -174,11 +174,12 @@ for(int i = 0; i<n; i++)
 1. Summations
 
 2. Log formulae
-   $$
-   \begin{align}
-   \log xy  &= \log x + \log y \\   \log \left( \frac{x}{y} \right) &= \log x - \log y \\   \log x^n &= n \log x
-   \end{align}
-   $$
+   
+$$
+\begin{align}
+\log xy  &= \log x + \log y \\   \log \left( \frac{x}{y} \right) &= \log x - \log y \\   \log x^n &= n \log x
+\end{align}
+$$
    
 3. Proof Techniques
 

@@ -78,18 +78,19 @@ $$
      - Residual series should be independent of other residual series
 
      - For any 2 values $x_i$ and $x_j$, the correlation between $u_i$ and $u_j$ is $0$
-    $$
-     \text{cov}(u_i, u_j | x_i, x_j) \\     = E
-     \Big \{
-     [u_i - E(u_i) | x_1],
-     [u_i - E(u_i) | x_1]
-     \Big \} \\     = E
-     \Big \{
-     [u_i | X_i], [u_j | X_j]
-     \Big \} \\     \Big(
-     E(u_i) = E(u_j) = 0
-     \Big)
-    $$
+
+$$
+	\text{cov}(u_i, u_j | x_i, x_j) \\     = E
+	\Big \{
+	[u_i - E(u_i) | x_1],
+	[u_i - E(u_i) | x_1]
+	\Big \} \\     = E
+	\Big \{
+	[u_i | X_i], [u_j | X_j]
+	\Big \} \\     \Big(
+	E(u_i) = E(u_j) = 0
+	\Big)
+$$
    
      - If we plot the scatter plot between $u_i$ and $u_j$, there should be no sign of correlation
    

@@ -126,24 +126,24 @@ If $w = f(x, y)$ a function where $x, y$ are themselves functions of
 
 - an independent parameter $t$
   
-   $$
-  \frac{dw}{dt} =
-  \left( \frac{\partial w}{\partial x} \cdot \frac{dx}{dt} \right) +
-  \left( \frac{\partial w}{\partial y} \cdot \frac{dy}{dt} \right)
-   $$
+$$
+\frac{dw}{dt} =
+\left( \frac{\partial w}{\partial x} \cdot \frac{dx}{dt} \right) +
+\left( \frac{\partial w}{\partial y} \cdot \frac{dy}{dt}  \right)
+$$
 
 - 2 independent parameters $u, v$
   
-	$$
-  \begin{align}
-  \frac{\partial w}{\partial u} &=
-  \left( \frac{\partial w}{\partial x} \cdot \frac{\partial x}{\partial u} \right) +
-  \left( \frac{\partial w}{\partial y} \cdot \frac{\partial y}{\partial u} \right) \\  
-  \frac{\partial w}{\partial v} &=
-  \left( \frac{\partial w}{\partial x} \cdot \frac{\partial x}{\partial v} \right) +
-  \left( \frac{\partial w}{\partial y} \cdot \frac{\partial y}{\partial v} \right)
-  \end{align}
-   $$
+$$
+\begin{align}
+\frac{\partial w}{\partial u} &=
+\left( \frac{\partial w}{\partial x} \cdot \frac{\partial x}{\partial u} \right) +
+\left( \frac{\partial w}{\partial y} \cdot \frac{\partial y}{\partial u} \right) \\  
+\frac{\partial w}{\partial v} &=
+\left( \frac{\partial w}{\partial x} \cdot \frac{\partial x}{\partial v} \right) +
+\left( \frac{\partial w}{\partial y} \cdot \frac{\partial y}{\partial v} \right)
+\end{align}
+$$
 
 ## Implicit Differentiation
 
@@ -272,15 +272,15 @@ We extremise a function $f(x, y, z)$ subject to constraint/condition $\phi(x, y,
 
 1. From Lagrange’s function, $\lambda =$ Lagrange’s multiplier constant
     
-    $$
-    F(x, y, z) = f + \lambda \phi
-    $$
+$$
+F(x, y, z) = f + \lambda \phi
+$$
 
 2. The extreme values are given by
     
-    $$
-    F_x = F_y = F_z = 0
-    $$
+$$
+F_x = F_y = F_z = 0
+$$
 
 3. Solve the equations for $x, y, z, \lambda$
 
@@ -289,6 +289,6 @@ We extremise a function $f(x, y, z)$ subject to constraint/condition $\phi(x, y,
 1. By Lagrange’s method, we cannot find whether $f$ has a maximum or minimum
 2. If $f$ is to be extremised subject to constraints $\phi_1 = \phi_2 = 0$, then the Lagrange’s function becomes
     
-    $$
-    F = f + \lambda_1 \phi_1 + \lambda_2 \phi_2
-    $$
+$$
+F = f + \lambda_1 \phi_1 + \lambda_2 \phi_2
+$$

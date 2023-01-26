@@ -48,9 +48,10 @@ Uses Decision Tree
 - collect votes from every tree in the forest
 
 - Use majority voting to decide class label
-   $$
-  y = \frac{1}{n} \sum_i y_i
-   $$
+   
+$$
+y = \frac{1}{n} \sum_i y_i
+$$
 
 ## Ada Boost
 
