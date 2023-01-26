@@ -53,9 +53,7 @@ $$
 
 $$
 \begin{align}
-
-|A_1 \cup A_2 \cup \ldots \cup A_n|
-
+\| A_1 \cup A_2 \cup \ldots \cup A_n \|
 &= S_1 - S_2 + S_3 - \ldots + (-1)^{n-1} S_n \\&= \sum\limits_{i = 1}^n |A_i|
 - \sum\limits_{i,j} |A_i \cap A_j|
 + \sum\limits_{i, j, k} |A_i \cap A_j \cap A_k| \\

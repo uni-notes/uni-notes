@@ -100,10 +100,9 @@ Every layer feeds forward to the next layer (backward/self-loop is not allowed)
 
 For an input layer with $n$ nodes, we will have
 
--$$
- hidden layers
-    - 
-$$
+- $$
+  hidden layers = 
+  $$
 
 - $W_i$ is the weights to layer $i$
 

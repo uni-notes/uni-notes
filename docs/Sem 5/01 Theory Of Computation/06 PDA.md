@@ -5,6 +5,7 @@ Pushdown Automaton
 NFA + Stack
 
 Also represented as NPDA (non-deterministic)
+
 $$
 \text{PDA} \implies M(Q, \Sigma, \Gamma, \delta, q_0, F)
 $$
@@ -21,10 +22,7 @@ $$
 - States $Q$
 - Input Alphabet $\Sigma$
 - Stack Alphabet $\Gamma$
-    - $\
-
-$$
- marks the bottom of stack
+    - $\$$ marks the bottom of stack
     - Symbols are pushed/popped to/from stack
 - Transitions
     - If PDA is current in state $q_i$
@@ -107,10 +105,7 @@ Initialize stack as ==$\$S$==
 | ------------ | -------- | ---------------------------- |
 | Non-Terminal |          | Pop it<br />Push RHS of rule |
 | Terminal     | Terminal | Pop it                       |
-| $\
-
-$$
-         |          | Pop it<br />Accept string    |
+| $\$$         |          | Pop it<br />Accept string    |
 
 As pushing strings instead of a symbol into stack is not possible, we can use another approach, as both are equivalent.
 
@@ -152,18 +147,9 @@ q0(((q0))) -->
 
 The reason why $1, 0 \to \epsilon$ for $q_2\to q_3$ ==**can**== be replaced by $\epsilon, \textcolor{hotpink}{\epsilon} \to \epsilon$ is because the top of stack should be $\textcolor{hotpink}{\epsilon}$. The top of stack can be thought as the actual top of stack or an empty string “” $(\epsilon)$
 
-|   Input $\rarr$   |      | $0$  |                |                       | $1$  |            |      |      $\epsilon$       |                       |
+|   Input $\rightarrow$   |      | $0$  |                |                       | $1$  |            |      |      $\epsilon$       |                       |
 | :---------------: | :--: | :--: | :------------: | :-------------------: | :--: | :--------: | :--: | :-------------------: | :-------------------: |
-| Stack Top $\rarr$ | $0$  | $\
-
-$$
- |   $\epsilon$   |          $0$          | $\
-
-$$
- | $\epsilon$ | $0$  |         $\
-
-$$
-          |      $\epsilon$       |
+| Stack Top $\rightarrow$ | $0$  | $\$$ |   $\epsilon$   |          $0$          | $\$$ | $\epsilon$ | $0$  |         $\$$          |      $\epsilon$       |
 |       $q_0$       |      |      |                |                       |      |            |      |                       |    $\{(q_1, \$)\}$    |
 |       $q_1$       |      |      | $\{(q_1, 0)\}$ |                       |      |            |      |                       | $\{(q_2, \epsilon)\}$ |
 |       $q_2$       |      |      |                | $\{(q_2, \epsilon)\}$ |      |            |      | $\{(q_3, \epsilon)\}$ |                       |

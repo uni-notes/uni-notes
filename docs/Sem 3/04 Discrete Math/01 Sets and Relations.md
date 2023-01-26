@@ -27,7 +27,7 @@ Every element has exactly one image
 
 if $f(x)= f(y) \implies x=y$
 
-if $x \ne y \Rarr f(x) \ne f(y)$
+if $x \ne y \rightarrow f(x) \ne f(y)$
 
 #### Onto (surjective)
 

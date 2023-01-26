@@ -21,7 +21,6 @@ but for giffen goods, $e$ is positive
 
 $$
 \begin{align}
-
 e_x^p
 %&= \frac{(x' - x)/x}{(p' - p)/p} \\&= \frac{\% \Delta x}{\% \Delta p} \\&= \frac{\color{orange} \Delta x/x}{\color{orange} \Delta p/p} \\
 &= \frac{\color{orange} \Delta x}{\color{orange} \Delta p}
@@ -35,12 +34,12 @@ if price of commodity changes by some $k \%$, demand for it changes by $k \times
 
 Note that the following shows the magnitude only
 
-|          $|e_x^p|$ | Demand                                                       |
+|          $\|e_x^p\|$ | Demand                                                       |
 | -----------------: | ------------------------------------------------------------ |
 |                  0 | perfectly inelastic<br />(demand curve vertical - parallel to price axis) |
-|      $0 < |e| < 1$ | inelastic (low sensitivity)                                  |
+|      $0 < \|e\| < 1$ | inelastic (low sensitivity)                                  |
 |                  1 | unitary elastic                                              |
-| $1 < |e| < \infty$ | elastic                                                      |
+| $1 < \|e\| < \infty$ | elastic                                                      |
 |           $\infty$ | perfectly elastic<br />(demand curve horizontal - parallel to demand axis)<br />happens in perfectly-competitive market |
 
 ![Elasticity](img/demandElasticity.svg)
@@ -68,7 +67,6 @@ proportional change may be % change
 
 $$
 \begin{align}
-
 e_{x_1}^{p_2} 
 %&= \frac{(x' - x)/x}{(p' - p)/p} \\&= \frac{\% \Delta x_1}{\% \Delta p_2} \\&= \frac{\color{orange} \Delta x_1/x_1}{\color{orange} \Delta p_2/p_2} \\
 &= \frac{\color{orange} \Delta x_1}{\color{orange} \Delta p_2}
@@ -94,7 +92,9 @@ i’m using $|e|$ to highlight only the magnitude
 
 ### Availability of substitute
 
-$|e| \propto n_s$
+$$
+|e| \propto n_s
+$$
 
 - more substitutes, more elastic
     - coke, pepsi
@@ -110,7 +110,9 @@ $|e| \propto n_s$
 
 ### No of purposes/uses for commodity
 
-$|e| \propto u$
+$$
+|e| \propto u
+$$
 
 more uses, more elastic
 
@@ -124,7 +126,9 @@ fewer purposes, less elastic
 
 ### Proportion of income spent on commodity
 
-$|e| \propto p$
+$$
+|e| \propto p
+$$
 
 more prop of income required, price elastic
 
@@ -138,7 +142,9 @@ less prop of income required, price inelastic
 
 ### Time Period
 
-$|e| \propto T$
+$$
+|e| \propto T
+$$
 
 - In the shortrun, demand is inelastic
 - In the longrun, demand is elastic
@@ -147,7 +153,9 @@ There is more time for consumers to reconsider their decision, to see if it is a
 
 ### Addictiveness
 
-$|e| \propto \frac 1 a$
+$$
+|e| \propto \frac 1 a
+$$
 
 - More addictive product is inelastic
 - less addictive product is elastic
@@ -177,7 +185,9 @@ The change is based on which factor is of greater magnitude
 
 ### Inelastic
 
-$|e| < 1$
+$$
+|e| < 1
+$$
 
 For necessities, when price increases, total revenue increases
 
@@ -185,7 +195,9 @@ reduction in price is pointless, and increase in price is good for profits
 
 ### Unitary Elastic
 
-$|e| = 1 \to \frac{\partial (xp)}{\partial p} = 0$
+$$
+|e| = 1 \to \frac{\partial (xp)}{\partial p} = 0
+$$
 
 graph is vertical line parallel to price
 
@@ -193,7 +205,9 @@ proportion of consumers’ income spend does not change with change in price
 
 ### Elastic
 
-$|e| > 1$
+$$
+|e| > 1
+$$
 
 For luxury goods, when price increases, total revenue decreases
 
@@ -234,7 +248,6 @@ Proportional change in demand of commodity wrt proportional change in income of 
 
 $$
 \begin{align}
-
 e_x^m
 %&= \frac{(x' - x)/x}{(p' - p)/p} \\&= \frac{\% \Delta x}{\% \Delta m} \\&= \frac{\color{orange} \Delta x/x}{\color{orange} \Delta m/m} \\
 &= \frac{\color{orange} \Delta x}{\color{orange} \Delta m}
@@ -258,11 +271,15 @@ High Income Elasticity $\implies$ High Price Elasticity
 This is because of
 
 1. substitution effect
-   1. when price decreases, you start buying more
+   
+	 1. when price decreases, you start buying more
    2. when price increases, you just don’t buy this product and start buying alternatives
+
 2. income effect
-   the real income gets changed
-   1. when price decreases, you feel richer, cuz you can now buy more
+   
+	 the real income gets changed
+   
+	 1. when price decreases, you feel richer, cuz you can now buy more
    2. when price increases, you feel poorer, cuz you can now buy less
 
 ## Midpoint Formula for % change
@@ -276,9 +293,8 @@ let $v$ be the value
 $$
 \begin{align}
 \% \text{ change}
-&= \frac{\Delta v}{v_\text{avg}} \\v'&= \frac{|\Delta v|}{
-(v_1 + v_2)/2
-}
+&= \frac{\Delta v}{v_\text{avg}} \\
+v'&= \frac{|\Delta v|}{(v_1 + v_2)/2}
 \end{align}
 $$
 

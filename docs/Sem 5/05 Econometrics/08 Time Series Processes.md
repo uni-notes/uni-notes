@@ -33,14 +33,14 @@ Sometimes just auto-correlation is enough to learn the values of a value
 
 $$
 y_t = \beta_0 + \beta_1 y_{t-1} + e_t
-
 $$
+
 If we take $j$ lags,
 
 $$
 y_t = \beta_0 + \sum_{i=1}^j \beta_i y_{t-i} + e_t
-
 $$
+
 Generally, $i>j \implies \beta_i < \beta_j$
 
 Impact of earlier lags is lower than impact of recent lags
@@ -408,8 +408,8 @@ Assume a process is given by
 
 $$
 y_t = \beta_0 + \beta_1 t + y_{t-1} + u_t
-
 $$
+
 where trend is deterministic/stochastic
 
 Then
@@ -421,8 +421,8 @@ We perform **de-trending** $\implies$ subtract $(\beta_0 + \beta_1 t)$ from $y_t
 
 $$
 (y_t - \beta_0 - \beta_1 t) = y_{t-1} + u_t
-
 $$
+
 If
 
 - $\beta_2 = 0$, the de-trended series is white noise process
@@ -471,7 +471,7 @@ We test the hypothesis using Dicky-Fuller distribution, to generate the critical
 
 | Model           | Hypotheses $H_0$ | Test Statistic |
 | --------------- | ---------------- | -------------- |
-| $\Delta y_t = $ |                  |                |
+| $\Delta y_t =$  |                  |                |
 |                 |                  |                |
 |                 |                  |                |
 

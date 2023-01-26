@@ -162,8 +162,7 @@ every clause contains $\to$
 - $\lnot$
 
 $$
-\underbrace{ 
-
+\underbrace{
 ( \underbrace{p}_\text{proposition} \land q \to s) 
 \land 
 \underbrace{(

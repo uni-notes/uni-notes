@@ -132,11 +132,13 @@ Let $f(n)$ be the algorithm for which we are finding the notation
 
 ### Big Oh notation
 
+Most commonly-used notation
+
 we neglect the constant factors
 
-is the most commonly-used notation
+**examples:**
 
-**examples:**$$
+$$
 O(1) < O(\log n) < O(n) < O(n \log n) < O(n^2 \log n) < O(n^2) < \dots < O(2^n), O(e^n)
 $$
 
