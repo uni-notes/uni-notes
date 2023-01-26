@@ -11,4 +11,4 @@ Space Complexity = $O(1)$
 | Time Complexity      | $O(n)$                                       | $O(\log_2 n)$                        |
 | Requires Sorted List | ❌                                            | ✅                                    |
 
-[04 Search.md](Practicals/04 Search.md)
+[04 Search](Practicals/04 Search.md)
