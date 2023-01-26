@@ -6,7 +6,7 @@
 - H
 - $u$ for closed system
 
-note that specific quanties like $h, u$ can***not*** be added
+note that specific quanties like $h, u$ can ***not*** be added
 
 ## Work
 
@@ -15,8 +15,8 @@ note that specific quanties like $h, u$ can***not*** be added
 $$
 \begin{align}
 F &= kx \\
-W
-&= \frac12 k x^2 \\&= \frac12 k ({x_2} ^2 - {x_1}^2) \\
+W &= \frac{1}{2} k x^2 \\
+&= \frac12 k ({x_2} ^2 - {x_1}^2) \\
 \end{align}
 $$
 
@@ -24,13 +24,15 @@ $$
 
 $$
 \begin{align}
-\dot W &= VI \\W &= VI \Delta t
+\dot W &= VI \\
+W &= VI \Delta t
 \end{align}
 $$
 
 ### Boundary Work
 
 Note that temperature should be in $K$ (Kelvin)
+
 $$
 W_\text{out, b} = \int \limits_{v_1}^{v_2} P \cdot dv
 $$
