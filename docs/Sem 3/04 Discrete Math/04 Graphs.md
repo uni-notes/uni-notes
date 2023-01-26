@@ -115,8 +115,8 @@ In a path, vertices and edges
 2. If $v_0 = v_n$, then path p is closed
    $v_0 = v_n$, then path p is open
 3. a path p is itself a graph, ie, subgraph of G
-   1. $V(P) \sube V(G)$
-   2. $E(P) \sube E(G)$
+   1. $V(P) \subseteq V(G)$
+   2. $E(P) \subseteq E(G)$
 4. Path may have no edges at all
    1. length = 0 $(V(P) = \set{v_0})$
    2. trivial path (simple, closed path)
@@ -299,7 +299,7 @@ H is a subgraph of G $\iff V(H) \subseteq V(G)$ and $E(H) \subseteq E(G)$
 
 ## Spanning subgraph
 
-$\iff V(H) = V(G)$ and $E(H) \sube E(G)$
+$\iff V(H) = V(G)$ and $E(H) \subseteq E(G)$
 
 ### Minimal Spanning subgraph
 
@@ -313,7 +313,7 @@ need not be a unique; there can many variations of subgraphs with the above prop
 
 it’s the subgraph using only vertices contained in set W and all the pre-existing edges
 
-If $W \sube G$, then the subgraph induced by W in G is the one with the vertices set W and contains all edges connecting a pair of vertices in W
+If $W \subseteq G$, then the subgraph induced by W in G is the one with the vertices set W and contains all edges connecting a pair of vertices in W
 
 ## Complement of graph
 

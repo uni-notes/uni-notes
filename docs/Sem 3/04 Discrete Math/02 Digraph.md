@@ -2,7 +2,7 @@
 
 Directed Graph
 
-A digraph G is defined as (V, E), if $E \sube V \times V$, where V = vertices set of G, E = edge set of G
+A digraph G is defined as (V, E), if $E \subseteq V \times V$, where V = vertices set of G, E = edge set of G
 
 "edge incident from 1 to 3"
 

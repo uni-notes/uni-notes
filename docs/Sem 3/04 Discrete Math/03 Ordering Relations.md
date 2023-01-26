@@ -10,7 +10,7 @@ A relation R defined on a set S is said to be partially ordered if it is
 
 Then (S, R) is a POSET.
 
-Eg: $(\Z, \le), (\Z, \ge), (\Z^+ , /), (P(S) , \sube)$
+Eg: $(\Z, \le), (\Z, \ge), (\Z^+ , /), (P(S) , \subseteq)$
 
 #### Notes
 
@@ -140,7 +140,7 @@ eg: $(D_6, /)$
 ### Examples
 
 $$
-\left(P(S), \sube\right)\\A, B \in P(S): A \lor B = A \cup B, A \land B = A \cap B
+\left(P(S), \subseteq\right)\\A, B \in P(S): A \lor B = A \cup B, A \land B = A \cap B
 $$
 
 $$

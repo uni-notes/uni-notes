@@ -6,8 +6,8 @@ $y = f_1(l, k), x = f_2(l, k)$
 
 ## Marginal Productivity
 
-- $\text{MP}_l^y = \frac{\part y}{\part l}$
-- $\text{MP}_k^{y} = \frac{\part y}{\part k}$
+- $\text{MP}_l^y = \frac{\partial y}{\partial l}$
+- $\text{MP}_k^{y} = \frac{\partial y}{\partial k}$
 
 ### Law of Diminishing Marginal Productivity
 

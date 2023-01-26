@@ -66,13 +66,13 @@ $g \circ f \ (x)$ not necessarily equal to $f \circ g \ (x)$
 
 A relation between two sets is a collection of ordered pairs containing one object from each set.
 
-Consider a binary relation $R \sube A \times B$, where $A \times B = \{ (a,b)/ a \in A, b \in B \}$. If A and B contain $m$and $n$ elements respectively, then A x B contains $m \times n$ elements
+Consider a binary relation $R \subseteq A \times B$, where $A \times B = \{ (a,b)/ a \in A, b \in B \}$. If A and B contain $m$and $n$ elements respectively, then A x B contains $m \times n$ elements
 
-Consider $R \sube A \times A$, where $A \times A = \{(a,b) / a \in A, b \in A \}$. If A has n elements, then A x A contains $n^2$ elements
+Consider $R \subseteq A \times A$, where $A \times A = \{(a,b) / a \in A, b \in A \}$. If A has n elements, then A x A contains $n^2$ elements
 
 ### Complement of relation
 
-if $R \sube A \times A,$ then its complement is $R' = \set{A \times A} - R$
+if $R \subseteq A \times A,$ then its complement is $R' = \set{A \times A} - R$
 
 ## Properties of Relations
 
@@ -194,7 +194,7 @@ R is reflexive & circular $\iff$ R is an equivalence relation
 ## Operations on Relations
 
 - $R_1 - R_2 = \{ (a,b)| (a,b) \in R_1 \text{ and } (a,b) \notin R_2 \}$
-  $R_1 - R_2 \sube R_1$
+  $R_1 - R_2 \subseteq R_1$
 
 - $R_1 \cup R_2 = \{ (a,b)| (a,b) \in R_1 \text{ or } (a,b) \in R_2 \}$
 
@@ -214,7 +214,7 @@ R is reflexive & circular $\iff$ R is an equivalence relation
 
 ## Composition of Relations
 
-Let $R \sube A \times B$ and $S \sube B \times C$
+Let $R \subseteq A \times B$ and $S \subseteq B \times C$
 
 Then, the composition of $R$ and $S$ is $R \circ S = \{(x,z) | (x,y) \in R \text{ and } (y,z) \in S \}$
 
