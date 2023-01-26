@@ -6,7 +6,7 @@ site_description: >-
 # Repository
 repo_name: ahmedthahir/notes_shared
 repo_url: https://github.com/ahmedthahir/notes_shared
-edit_uri: blob/main/docs/
+edit_uri: edit/main/docs/
 
 # Copyright
 # copyright: Copyright &copy; 2016 - 2023 Martin Donath
