@@ -165,26 +165,23 @@ Assume
    \begin{align}
    \frac{\partial J}{\partial a}
    &= \frac{\partial J}{\partial y} \frac{\partial y}{\partial a} \\   
-   \implies
-   \frac{\partial J}{\partial \theta}
-   &= \frac{\partial J}{\partial a} \frac{\partial a}{\partial \theta} \\   \end{align}
-   
-$$
+   \implies \frac{\partial J}{\partial \theta}
+   &= \frac{\partial J}{\partial a} \frac{\partial a}{\partial \theta}
+   \end{align}
+   $$
 
 3. $$
    \begin{align}
    \nabla J_\text{outputLayer}
    &= \frac{\partial J}{\partial x} \\   &= \frac{\partial J}{\partial \theta} \frac{\partial \theta}{\partial x}
    \end{align}
-   
-$$
+   $$
 
-4. 
+4. Something
 
 5. $$
    \theta_\text{new} = \theta_\text{old} - \eta \ \nabla J
-   
-$$
+   $$
 
 ### MLP
 
