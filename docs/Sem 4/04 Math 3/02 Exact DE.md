@@ -58,8 +58,10 @@ $$
 1. Check if the given DE is exact
 
 2. Put integration sign for both sides
-
-$$ \int (\ y + y \cos(xy)  \ )  dx + \int(\ x + x \cos(xy) \ )  dx = \int 0 $$
+  
+$$
+\int (\ y + y \cos(xy)  \ )  dx + \int(\ x + x \cos(xy) \ )  dx = \int 0
+$$
    
 3. Simplifications
    1. Treat $y$ as a constant in the $dx$ integral
@@ -70,8 +72,9 @@ $$ \int (\ y + y \cos(xy)  \ )  dx + \int(\ x + x \cos(xy) \ )  dx = \int 0 $$
       - $x \cos(x) \to 0$
       - $y + y \cos(x) \to y$
    
-$$ \int (\  y + y \cos(xy) \ ) dx + \int (0 + 0) dy = c $$
-
+$$
+\int (\  y + y \cos(xy) \ ) dx + \int (0 + 0) dy = c
+$$
    
 4. Integrate
 

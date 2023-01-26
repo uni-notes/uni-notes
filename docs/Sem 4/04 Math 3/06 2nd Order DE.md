@@ -20,8 +20,8 @@ Complete equation with $R(x) = 0$
 
 $$
 y'' + P(x) y' + Q(x) y = 0
-
 $$
+
 Also called as homogeneous DE
 
 $$
@@ -42,11 +42,12 @@ If $y_1(x)$ and $y_2(x)$ are 2 solutions of reduced DE, then they are
 $$
 W(y_1, y_2) = 
 \begin{vmatrix}
-y_1 & y_2 \\{y_1}' & {y_2}'
+y_1 & y_2 \\
+{y_1}' & {y_2}'
 \end{vmatrix}
 = 0
-
 $$
+
 Else, they are linearly-independent
 
 eg:
@@ -70,11 +71,14 @@ If the given DE is of the form
 $$
 y'' +  py' + qy = f(x) + g(x)
 $$
+
 Solution is given by
 
 $$
 \begin{align}
-y'' +  py' + qy &= 0 &\to y_g \\y'' +  py' + qy &= f(x) &\to y_{p_1} \\y'' +  py' + qy &= g(x) &\to y_{p_2} \\
+y'' +  py' + qy &= 0 &\to y_g \\
+y'' +  py' + qy &= f(x) &\to y_{p_1} \\
+y'' +  py' + qy &= g(x) &\to y_{p_2} \\
 \implies y &= y_g + y_{p_1} + y_{p_2}
 \end{align}
 $$
