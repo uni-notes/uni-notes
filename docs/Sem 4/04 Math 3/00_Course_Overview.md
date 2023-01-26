@@ -1,9 +1,9 @@
+# Math 3
+
 | Class     | Instructor     |
 | --------- | -------------- |
 | Lecture   | Dr. Baskaran   |
 | Tutorial  | Dr. Baskaran   |
-
-## Mathematics 3
 
 This course is about
 

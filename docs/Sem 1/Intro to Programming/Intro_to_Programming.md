@@ -1,3 +1,5 @@
+# Intro to Programming
+
 - 0/1 (bit)
 - 8 bits = 1 byte
 - 1024 bytes = 1KB
