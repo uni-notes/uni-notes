@@ -88,25 +88,23 @@ any of the above can replace free variable
 4. $\exists i$
 
    1. $$
-         \frac{
-         \phi[t/x]
-         }{\exists x \quad \phi} \quad
-         \exists x \quad i
-		 $$
+      \frac{
+      \phi[t/x]
+      }{\exists x \quad \phi} \quad
+      \exists x \quad i
+      $$
    
-   2. We can deduce $\exist x \quad \phi$ whenever we have $\phi[t/x]$; $t$ has to be free for $x$ in $\phi$
+   2. We can deduce $\exists x \quad \phi$ whenever we have $\phi[t/x]$; $t$ has to be free for $x$ in $\phi$
 5. $\exists e$
    1. $$
       \frac{
-        \exists x \ \phi \quad
-        \begin{bmatrix}
-        	x_0 \quad \phi[x_0/x] \\
-					\vdots \\
-					\chi
-        \end{bmatrix}
-        }
-        {\chi} \quad
-        \exists x \quad e
+      \exists x \ \phi \quad
+      \begin{bmatrix}
+      x_0 \quad \phi[x_0/x] \\
+      \vdots \\
+      \chi
+      \end{bmatrix}
+      }{\chi} \quad \exists x \quad e
       $$
    
    2. if $\exists x \quad \phi$ is true, there should be atleast one value of $x$ for which $\phi$ is true
@@ -121,7 +119,7 @@ any of the above can replace free variable
 
 1. De-Morgan’s rule
 
-   convert bw $\forall$ and $\exists$ when there is negation
+   Convert bw $\forall$ and $\exists$ when there is negation
      - $\lnot \forall x (\phi) \dashv \vdash \exists x (\lnot \phi)$
      - $\lnot \exists x (\phi) \dashv \vdash \forall x (\lnot \phi)$
 2. Distributive

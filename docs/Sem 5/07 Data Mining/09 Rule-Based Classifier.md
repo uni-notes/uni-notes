@@ -62,7 +62,7 @@ Majority class represented by records not covered by rules in rulebase
 | Desired Property             | Meaning                                         |
 | ---------------------------- | ----------------------------------------------- |
 | Rules are Mutually-Exclusive | Only 1 rule is triggered for any record         |
-| Rules are Exhaustive         | $\exist \ge 1$ rule(s) that covers every record |
+| Rules are Exhaustive         | $\exists \ge 1$ rule(s) that covers every record |
 
 ## Types of Rules
 

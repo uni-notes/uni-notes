@@ -4,7 +4,7 @@
 | ------ | ------------------------------ | --------------------------------------------- |
 | A      | Automator                      | State Machine<br />(same as DD)               |
 | FA     | Finite Automator               | Automator with finite no of states            |
-| DFA    | Deterministic Finite Automator | FA where $\exist$ next state $\forall$ states |
+| DFA    | Deterministic Finite Automator | FA where $\exists$ next state $\forall$ states |
 
 States are the only mechanism for a FA to “remember” what it has seen of input string so far
 

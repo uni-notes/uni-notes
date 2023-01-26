@@ -107,7 +107,7 @@ do
 | Solution         |                                                              |
 | ---------------- | ------------------------------------------------------------ |
 | Mutual Exclusion | If process $P_i$ is executing in its critical section, no other processes can be executing in their critical sections |
-| Progress         | If no process is executing in its critical section, and $\exist$ some processes that wish to enter their critical section, then the selection of the processes that will enter the critical section next cannot be postponed indefinitely |
+| Progress         | If no process is executing in its critical section, and $\exists$ some processes that wish to enter their critical section, then the selection of the processes that will enter the critical section next cannot be postponed indefinitely |
 | Bounded waiting  | Bound must exist on the number of times that other processes are allowed to enter their critical sections after a process has made a request to enter its critical section before that request is granted |
 
 ## Semaphores
