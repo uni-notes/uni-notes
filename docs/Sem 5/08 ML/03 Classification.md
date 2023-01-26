@@ -81,7 +81,7 @@ $$
 \frac{ \partial J(\theta) }{\partial \theta_1} \\
 \frac{ \partial J(\theta) }{\partial \theta_2} \\
 \textcolor{orange}{
-	\frac{ \partial J(\theta) }{\partial \theta_0}
+  \frac{ \partial J(\theta) }{\partial \theta_0}
 }
 \end{bmatrix}
 &\approx 1
@@ -224,36 +224,36 @@ It is also used a pre-processing step for ML application
 
 1. Find within-class Scatter/Covariance matrix
 
-   $S_w = S_1 + S_2$
+    $S_w = S_1 + S_2$
 
-     - $S_1 \to$ Covariance matrix for class 1
+    - $S_1 \to$ Covariance matrix for class 1
 
-     - $S_2 \to$ Covariance matrix for class 2
-   $$
-   S_1 = \begin{bmatrix}
-   \text{cov}(x_1, x_1) & \text{cov}(x_1, x_2) \\   \text{cov}(x_2, x_1) & \text{cov}(x_2, x_2)
-   \end{bmatrix}
+    - $S_2 \to$ Covariance matrix for class 2
    
-$$
-   $$
-   \text{Cov}(x_j, x_k) = 
-   \frac{1}{n_j - 1}
-   \sum_{i=1, x \in C_j}^{n_1}
-   (x_i - \mu_1)(x_i - \mu_1) \\   
-   \text{Cov}(x_1, x_1) = 
-   \frac{1}{n_1 - 1}
-   \sum_{i=1, x \in C_1}^{n_1}
-   (x_i - \mu_1)^2
-   
-$$
+    $$
+    S_1 = \begin{bmatrix}
+    \text{cov}(x_1, x_1) & \text{cov}(x_1, x_2) \\   \text{cov}(x_2, x_1) & \text{cov}(x_2, x_2)
+    \end{bmatrix}
+    $$
+
+    $$
+    \text{Cov}(x_j, x_k) = 
+    \frac{1}{n_j - 1}
+    \sum_{i=1, x \in C_j}^{n_1}
+    (x_i - \mu_1)(x_i - \mu_1) \\   
+    \text{Cov}(x_1, x_1) = 
+    \frac{1}{n_1 - 1}
+    \sum_{i=1, x \in C_1}^{n_1}
+    (x_i - \mu_1)^2
+    $$
 
 2. Find between-class scatter matrix
-   $$
-   S_B =
-   (\mu_1 - \mu_2)
-   (\mu_1 - \mu_2)^T
    
-$$
+    $$
+    S_B =
+    (\mu_1 - \mu_2)
+    (\mu_1 - \mu_2)^T
+    $$
 
 3. Find [Eigen Value](#Eigen Value)
 
@@ -262,10 +262,9 @@ $$
 5. Generate LDA Projection [Normalized Eigen Vector](#Normalized Eigen Vector)
 
 6. Generate LDA score (projected value) in reduced dimensions
-   $$
+    $$
     \text{LDA Score} = x_1 v_1 + x_2 v_2
-    
-$$
+    $$
 
 ### Eigen Value
 
@@ -552,7 +551,7 @@ $$
    $$
    \begin{align}
    &\text{Gain}\Big(
-   	\text{Value}(C_1), C_2
+     \text{Value}(C_1), C_2
    \Big) \\   
    =& H \Big(\text{Value}(C_1) \Big) \\   & - \left[
    \sum_{i=1}

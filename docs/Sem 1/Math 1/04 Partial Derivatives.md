@@ -271,16 +271,16 @@ $$
 We extremise a function $f(x, y, z)$ subject to constraint/condition $\phi(x, y, z) = 0$. We then proceed as follows
 
 1. From Lagrange’s function, $\lambda =$ Lagrange’s multiplier constant
-   
-	 $$
-   F(x, y, z) = f + \lambda \phi
-   $$
+    
+	  $$
+    F(x, y, z) = f + \lambda \phi
+    $$
 
 2. The extreme values are given by
-   
-	 $$
-   F_x = F_y = F_z = 0
-   $$
+    
+	  $$
+    F_x = F_y = F_z = 0
+    $$
 
 3. Solve the equations for $x, y, z, \lambda$
 
@@ -288,7 +288,7 @@ We extremise a function $f(x, y, z)$ subject to constraint/condition $\phi(x, y,
 
 1. By Lagrange’s method, we cannot find whether $f$ has a maximum or minimum
 2. If $f$ is to be extremised subject to constraints $\phi_1 = \phi_2 = 0$, then the Lagrange’s function becomes
-   
-	 $$
-   F = f + \lambda_1 \phi_1 + \lambda_2 \phi_2
-   $$
+    
+	  $$
+    F = f + \lambda_1 \phi_1 + \lambda_2 \phi_2
+    $$
