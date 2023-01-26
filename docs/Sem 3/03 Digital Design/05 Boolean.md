@@ -34,7 +34,7 @@ $$
 f(a,b,c) &= ab + bc \\
 g(a,b,c) &= a'b + b'c
 \end{align}
-$
+$$
 
 ### POS ($\pi$)
 
