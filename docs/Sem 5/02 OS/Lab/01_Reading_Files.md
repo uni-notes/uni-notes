@@ -1,5 +1,3 @@
-## Lab 1 Something
-
 This was regarding reading a file
 
 - $>= 0$ successful; no of bytes read
