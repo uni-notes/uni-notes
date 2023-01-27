@@ -43,7 +43,7 @@ $$
 
 |                  |                                             |                    Converges                     |    Diverges     |
 | :--------------: | :-----------------------------------------: | :----------------------------------------------: | :-------------: |
-| Geometric Series |           $a + ar + ar^2 + \dots$           | $|r| < 1$<br />converges to $\dfrac{a}{1-r}$ | $|r| \ge 1$ |
+| Geometric Series |           $a + ar + ar^2 + \dots$           | $\| r \| < 1$<br />converges to $\dfrac{a}{1-r}$     | $\| r \| \ge 1$ |
 |     p-series     | $\sum\limits_{n = 1}^\infty \dfrac{1}{n^p}$ |                     $p > 1$                      |    $p \le 1$    |
 
 $$
