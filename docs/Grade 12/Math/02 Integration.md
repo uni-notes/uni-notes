@@ -12,10 +12,10 @@ For simplicy, I’ve excluded
 | **Coefficient**  |           $f(ax+b)$            |                    $\frac{F(ax + b)}{a}$                     |                                   |
 | **Trignometric** |            $\sin x$            |                          $- \cos x$                          |                                   |
 |                  |            $\cos x$            |                           $\sin x$                           |                                   |
-|                  |            $\tan x$            |                       $\log \|\sec x|$                        |          $-\log\|\cos x|$          |
-|                  |            $\cot x$            |                       $\log \|\sin x|$                        |     $-\log\|\text{cosec } x|$      |
-|                  |            $\sec x$            |                   $\log\|\sec x + \tan x|$                    |     $-\log\|\sec x - \tan x|$      |
-|                  |        $\text{cosec }x$        |               $\log\|\text{cosec } x - \cot x|$               | $-\log\|\text{cosec } x + \cot x|$ |
+|                  |            $\tan x$            |                       $\log \|\sec x\|$                        |          $-\log\|\cos x\|$          |
+|                  |            $\cot x$            |                       $\log \|\sin x\|$                        |     $-\log\|\text{cosec } x\|$      |
+|                  |            $\sec x$            |                   $\log\|\sec x + \tan x\|$                    |     $-\log\|\sec x - \tan x\|$      |
+|                  |        $\text{cosec }x$        |               $\log\|\text{cosec } x - \cot x\|$               | $-\log\|\text{cosec } x + \cot x\|$ |
 |                  |        $\sec x \tan x$         |                           $\sec x$                           |                                   |
 |                  |    $\text{cosec }x \cot x$     |                      $-\text{cosec } x$                      |                                   |
 |                  |           $\sec^2 x$           |                           $\tan x$                           |                                   |
