@@ -262,7 +262,7 @@ Error is the deviation between predicted and actual value
 
 | Type | Full Form               | Equation                                   |
 | ---- | ----------------------- | ------------------------------------------ |
-| MAE  | Mean Absolute Error     | $\sum_{i=1}^n |\hat y_i - y_i|$            |
+| MAE  | Mean Absolute Error     | $\sum_{i=1}^n \| \hat y_i - y_i \|$          |
 | MSE  | Mean Squared Error      | $\sum_{i=1}^n (\hat y_i - y_i)^2$          |
 | RMSE | Root Mean Squared Error | $\sqrt{ \sum_{i=1}^n (\hat y_i - y_i)^2 }$ |
 
