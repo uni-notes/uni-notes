@@ -12,8 +12,9 @@
 | Device        | Purpose                                |                                                              |                                                              |                                                              |
 | ------------- | -------------------------------------- | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | Heat Engine   | - Heat $\to$ Work<br />- cycle         | $\begin{align} \eta_{\small\text{HE}} &= \frac{W_\text{net, out}}{Q_\text{H}} \\ &= 1 - \frac{Q_\text{L}}{Q_\text{H}} \end{align}$ |        $\eta_\text{HE} < 1$<br />Kelvin-Plank Statement        | $\begin{align} \Delta U &= 0 \\ Q_\text{net} &= W_\text{net} \\ W_\text{net, out} &= Q_\text{in} - Q_\text{out} \\ &= Q_\text{H} - Q_\text{L} \end{align}$ |
-| Refridgerator | - maintain cool temp<br />- Reverse HE | $\begin{align} \text{COP_R} &= \frac{Q_\text{L}}{Q_\text{net, in}} \\ &= \frac{1}{ \frac{Q_\text{H}}{Q_\text{L}} - 1 } \end{align}$ |                   $\text{COP_R}$ can be > 1                    |                                                              |
-| Heat Pump     | - maintain warm temp<br />- Reverse HE | $\begin{align} \text{COP_{HP}} &= \frac{Q_\text{H}}{W_\text{net, in}} \\ &= \frac{1}{ 1 - \frac{Q_\text{L}}{Q_\text{H}} } \end{align}$ | $\begin{align} \text{COP_{HP}} &= \text{COP_{R}} + 1 \\ \text{COP_{HP}} &> \text{COP_{R}} \end{align}$ |                                                              |
+| Refridgerator | - maintain cool temp<br />- Reverse HE | $\begin{align} \text{COP}_R &= \frac{Q_\text{L}}{Q_\text{net, in}} \\ &= \frac{1}{ \frac{Q_\text{H}}{Q_\text{L}} - 1 } \end{align}$ |                   $\text{COP}_R$ can be > 1                    |                                                              |
+| Heat Pump     | - maintain warm temp<br />- Reverse HE | $\begin{align} \text{COP}_{HP} &= \frac{Q_\text{H}}{W_\text{net, in}} \\ &= \frac{1}{ 1 - \frac{Q_\text{L}}{Q_\text{H}} } \end{align}$ | $\begin{align} \text{COP}_{HP} &= \text{COP}_{R} + 1 \\
+\text{COP}_{HP} &> \text{COP}_{R} \end{align}$ |                                                              |
 
 ```mermaid
 flowchart TB
@@ -46,9 +47,9 @@ Adiabatic means polytropic process with**out** heat transfer
 
 | Transition | Characteristic                            |    Constant     |            Signs             |                             Work                             |
 | :--------: | ----------------------------------------- | :-------------: | :--------------------------: | :----------------------------------------------------------: |
-|   1 - 2    | Isothermal Expansion<br />Heat Absorbed   |    $PV = c$     | $W_{12} > 0 \\ Q_\text{H} > 0$ | $P_1 V_1 \ln \| \frac{V_2|{V_1}} \\ P_2 V_2 \ln \| \frac{P_1|{P_2}}$ |
+|   1 - 2    | Isothermal Expansion<br />Heat Absorbed   |    $PV = c$     | $W_{12} > 0 \\ Q_\text{H} > 0$ | $P_1 V_1 \ln \| \frac{V_2}{V_1} \|$ <br /> $P_2 V_2 \ln \| \frac{P_1}{P_2} \|$ |
 |   2 - 3    | Adiabatic Expansion                       | $PV^\gamma = c$ |         $W_{23} > 0$         |               $\frac{P_3 V_3 - P_2 V_2}{1-n}$                |
-|   3 - 4    | Isothermal Compression<br />Heat Released |    $PV = c$     | $W_{34} < 0 \\ Q_\text{L} < 0$ | $P_3 V_3 \ln \| \frac{V_4|{V_3}} \\ P_4 V_4 \ln \| \frac{P_3|{P_4}}$ |
+|   3 - 4    | Isothermal Compression<br />Heat Released |    $PV = c$     | $W_{34} < 0 \\ Q_\text{L} < 0$ | $P_3 V_3 \ln \| \frac{V_4}{V_3} \|$ <br /> $P_4 V_4 \ln \| \frac{P_3}{P_4} \|$ |
 |   4 - 1    | Adiabatic Compression                     | $PV^\gamma = c$ |         $W_{41} < 0$         |               $\frac{P_1 V_1 - P_4 V_4}{1-n}$                |
 
 $$
@@ -70,8 +71,8 @@ $Q_\text{L} > 0, Q_\text{H} < 0$
 $$
 \begin{align}
 W_\text{net, in} &= W_{12} + W_{23} + W_{34} + W_{41} \\
-\text{COP_R} &= \frac{Q_\text{L}}{W_\text{net, in}} \\
-\text{COP_{HP}} &= \frac{Q_\text{H}}{W_\text{net, in}}
+\text{COP}_R &= \frac{Q_\text{L}}{W_\text{net, in}} \\
+\text{COP}_{HP} &= \frac{Q_\text{H}}{W_\text{net, in}}
 \end{align}
 $$
 

@@ -30,10 +30,8 @@ $$
 |         |                         Left-Tailed                          |                          Two-Tailed                          |                         Right-Tailed                         |
 | :-----: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 |  $H_1$  |                        $\mu < \mu_0$                         |                       $\mu \ne \mu_0$                        |                        $\mu > \mu_0$                         |
-| p-value |              $F(z_c) \\
-\alpha(t-\text{dist})$               |           $2[ F(-z_c) ] \\ 2\alpha(t-\text{dist})$           |              $F(-z_c) \\
-\alpha(t-\text{dist})$              |
-|  Cases  | Accept $H_1$ if <br />$\begin{align} z_c &\le -z_\alpha \\ t_c &\le -t_{(n-1), \alpha} \\ p &\le \alpha \end{align}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{align} z_c \le -z_{\alpha/2} &\text{ or } z_c \ge +z_{\alpha/2}\\ t_c \le -t_{(n-1), (\alpha/2)} &\text{ or } t_c \ge +t_{(n-1), (\alpha/2)} \\ p &\le \alpha \end{align}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{align} z_c &\ge +z_\alpha \\ t_c &\ge +t_{(n-1), \alpha} \\ p &\le \alpha \end{align}$<br /><br />else accept $H_0$ |
+| p-value |              $F(z_c)$ <br /> $\alpha(t-\text{dist})$               |           $2[ F(-z_c) ]$ <br /> $2 \alpha(t-\text{dist})$           |              $F(-z_c)$ <br /> $\alpha(t-\text{dist})$              |
+|  Cases  | Accept $H_1$ if <br />$\begin{align} z_c & \le -z_\alpha \\ t_c &\le -t_{(n-1), \alpha} \\ p &\le \alpha \end{align}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{align} z_c \le -z_{\alpha/2} &\text{ or } z_c \ge +z_{\alpha/2}\\ t_c \le -t_{(n-1), (\alpha/2)} &\text{ or } t_c \ge +t_{(n-1), (\alpha/2)} \\ p &\le \alpha \end{align}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{align} z_c &\ge +z_\alpha \\ t_c &\ge +t_{(n-1), \alpha} \\ p &\le \alpha \end{align}$<br /><br />else accept $H_0$ |
 
 ## Proportion
 

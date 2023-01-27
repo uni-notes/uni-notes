@@ -48,12 +48,14 @@ $$
 
 $$
 \begin{align}
-\lim\limits_{n \to \infty} \frac{ \ln \|n\| }{n} &= 0 \\(\ln \|n\| \text{ always} &< n, \text{ so den reaches } \infty \text{ faster} ) \\
+\lim\limits_{n \to \infty} \frac{ \ln \|n\| }{n} &= 0 \quad (\ln \| n \| \text{ always $< n$, so den reaches $\infty$ faster} ) \\
 \lim\limits_{n \to \infty} x^{\frac 1n} &= 1 \\
-\lim\limits_{n \to \infty} n^{\frac 1n} &= 1 \\(x^0 = n^0 &= 1) \\
+\lim\limits_{n \to \infty} n^{\frac 1n} &= 1 \\
+(x^0 = n^0 &= 1) \\
 \lim\limits_{n \to \infty} \left( 1 + \frac x n \right)^n &= e^x \\
 \lim\limits_{n \to \infty} x^n &= 0 \text{ if } |x| < 1 \\
-\lim\limits_{n \to \infty} \frac{x^n}{n!} &= 0 \\(n! &> x^n),  \text{ when $n$ is large so den reaches $\infty$ faster}
+\lim\limits_{n \to \infty} \frac{x^n}{n!} &= 0 \\
+(n! &> x^n),  \text{ when $n$ is large so den reaches $\infty$ faster}
 \end{align}
 $$
 

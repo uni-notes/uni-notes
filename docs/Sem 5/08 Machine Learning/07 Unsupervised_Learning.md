@@ -29,8 +29,8 @@ Output: Set of $k$ clusters
    
 $$
 \begin{align}
-m_k &= \Big(\text{mean}(X), \text{mean}(Y) \Big) \\   
-X &= \text{List of $x$ coordinates}\\
+m_k &= \Big(\text{mean}(X), \text{mean}(Y) \Big) \\
+X &= \text{List of $x$ coordinates} \\
 Y &= \text{List of $y$ coordinates}
 \end{align}
 $$

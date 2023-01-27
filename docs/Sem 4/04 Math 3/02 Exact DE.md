@@ -111,7 +111,7 @@ $$
 
 $$
 \begin{align}
-d\left( \log | \frac{y}{x} | \right) &= \frac{x dy - y dx}{xy}
+d\left( \log \| \frac{y}{x} \| \right) &= \frac{x dy - y dx}{xy}
 \end{align}
 $$
 

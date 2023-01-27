@@ -30,8 +30,8 @@ For simplicy, I’ve excluded
 |                  |  $\frac{1}{\sqrt{x^2 + a^2}}$  |          $\log\left\| x + \sqrt{x^2 + a^2} \right\|$           |                                   |
 |                  | $\frac{1}{x \sqrt{x^2 - a^2}}$ |       $\frac{1}{a} \sec^{-1} \left(\frac{x}{a}\right)$       |                                   |
 |  **Num Roots**   |       $\sqrt{a^2 - x^2}$       | $\frac{x}{2} \sqrt{a^2 - x^2} + \frac{a^2}{2} \sin^{-1}\left(\frac{x}{a}\right)$ |                                   |
-|                  |       $\sqrt{a^2 + x^2}$       | $\frac{x}{2} \sqrt{a^2 + x^2} + \frac{a^2}{2} \log|x + \sqrt{a^2 + x^2}|$ |                                   |
-|                  |       $\sqrt{x^2 - a^2}$       | $\frac{x}{2} \sqrt{x^2 - a^2} - \frac{a^2}{2} \log|x + \sqrt{x^2 - a^2}|$ |                                   |
+|                  |       $\sqrt{a^2 + x^2}$       | $\frac{x}{2} \sqrt{a^2 + x^2} + \frac{a^2}{2} \log \|x + \sqrt{a^2 + x^2} \|$ |                                   |
+|                  |       $\sqrt{x^2 - a^2}$       | $\frac{x}{2} \sqrt{x^2 - a^2} - \frac{a^2}{2} \log \|x + \sqrt{x^2 - a^2}\|$ |                                   |
 |     **IDK**      | $e^x \Big(f(x) + f'(x) \Big)$  |                          $e^x f(x)$                          |                                   |
 |                  |  $x \Big(f(x) + f'(x) \Big)$   |                           $x f(x)$                           |                                   |
 | **Parts/ILATE**  |         $\int (uv) dx$         |    $u \int vdx + \int \left(u' {\small \int} vdx \right)$    |                                   |

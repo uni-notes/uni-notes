@@ -43,8 +43,8 @@ $$
    \begin{align}
    \sum y_i &= n \hat \beta_1 + \hat \beta_2 \sum x_i \\   
    \sum y_i x_i &= n \hat \beta_1 + \hat \beta_2 \sum x_i
-	 \end{align}
-	 $$
+   \end{align}
+   $$
 
 ## Assumptions of OLS & Classical Regression
 
@@ -56,79 +56,84 @@ $$
 
    1. $E(u_i | x_i) = 0$
 
-      1. Symmetric distribution for values of error terms **for a given value $x$**
-      2. **Not** over time/different values of $x$
-      3. This means that
-         1. you have used up all the possible factors
-         2. $u_i$ only contains the non-systematic component
+     1. Symmetric distribution for values of error terms **for a given value $x$**
+     2. **Not** over time/different values of $x$
+     3. This means that
+        1. you have used up all the possible factors
+        2. $u_i$ only contains the non-systematic component
 
    2. Homoscedascity of variance
 
-      1. $\sigma^2 (u_i|x_i)$ should be same $\forall i$
-      2. For the Variance of distribution of potential outcomes, the range of distribution stays same over time
-      3. $\sigma^2 (x) = \sigma^2(x-\bar x)$
-      
-      else, the variable is **volatile**; hard to predict; **we cannot use OLS**
-      
-      - if variance decreases, value of $y$ is more reliable as training data
-      - if variance increases, value of $y$ is less reliable as training data
-      - We use voltaility modelling (calculating variance) to predict the pattern in variance
+     1. $\sigma^2 (u_i|x_i)$ should be same $\forall i$
+     2. For the Variance of distribution of potential outcomes, the range of distribution stays same over time
+     3. $\sigma^2 (x) = \sigma^2(x-\bar x)$
+     
+     else, the variable is **volatile**; hard to predict; **we cannot use OLS**
+     
+     - if variance decreases, value of $y$ is more reliable as training data
+     - if variance increases, value of $y$ is less reliable as training data
+     - We use voltaility modelling (calculating variance) to predict the pattern in variance
    
 4. No [autocorrelation](#Autocorrelation) between $u_i$ and $u_j$
 
-     - Residual series should be independent of other residual series
+    - Residual series should be independent of other residual series
 
-     - For any 2 values $x_i$ and $x_j$, the correlation between $u_i$ and $u_j$ is $0$
+    - For any 2 values $x_i$ and $x_j$, the correlation between $u_i$ and $u_j$ is $0$
 
-$$
-	\text{cov}(u_i, u_j | x_i, x_j) \\     = E
-	\Big \{
-	[u_i - E(u_i) | x_1],
-	[u_i - E(u_i) | x_1]
-	\Big \} \\     = E
-	\Big \{
-	[u_i | X_i], [u_j | X_j]
-	\Big \} \\     \Big(
-	E(u_i) = E(u_j) = 0
-	\Big)
-$$
-   
-     - If we plot the scatter plot between $u_i$ and $u_j$, there should be no sign of correlation
-   
-     - If there exists autocorrelation in time series, then we have to incorporate the lagged value of the dependent var as an explanatory var of itself
-   
-     - Rather than $y_t=f(x_t)$, we use $y_t = f(x_t, y_{t-1})$
-   
+    $$
+    \begin{align}
+    \text{cov}(u_i, u_j | x_i, x_j)
+    &= E
+    \Big \{
+    [u_i - E(u_i) | x_1],
+    [u_i - E(u_i) | x_1]
+    \Big \} \\
+    &= E
+    \Big \{
+    [u_i | X_i], [u_j | X_j]
+    \Big \} \\
+    \Big(
+    E(u_i) &= E(u_j) = 0
+    \Big)
+    \end{align}
+    $$
+
+    - If we plot the scatter plot between $u_i$ and $u_j$, there should be no sign of correlation
+
+    - If there exists autocorrelation in time series, then we have to incorporate the lagged value of the dependent var as an explanatory var of itself
+
+    - Rather than $y_t=f(x_t)$, we use $y_t = f(x_t, y_{t-1})$
+
 5. No covariance/correlation between $u_i$ and $x_i$
 
-     - No relationship between error term and independent variables
+    - No relationship between error term and independent variables
 
-     - $$
-       \text{Cov}(u_i, x_i) = 0
-		   $$
+    - $$
+      \text{Cov}(u_i, x_i) = 0
+      $$
 
-     - If there is correlation, then we cannot correctly obtain coefficients
+    - If there is correlation, then we cannot correctly obtain coefficients
 
 6. DOF > 1
 
-     - Degree of freedom $= n - k$, where
-     - $n =$ number of observations
-     - $k =$ no of independent variables
-     - DOF = 0 leads to overfitting
+    - Degree of freedom $= n - k$, where
+    - $n =$ number of observations
+    - $k =$ no of independent variables
+    - DOF = 0 leads to overfitting
 
 7. Good variability
 
-     - We need more variation in values of $x$
-     - Indian stock market is very volatile. But not in UAE; so it's hard to use it an independent var. Similarly, we cant use exchange rate in UAE, as it is fixed to US dollars
+    - We need more variation in values of $x$
+    - Indian stock market is very volatile. But not in UAE; so it's hard to use it an independent var. Similarly, we cant use exchange rate in UAE, as it is fixed to US dollars
 
 8. No specification bias
 
-     - We need to use the correct functional form, which is theoretically consistent
+    - We need to use the correct functional form, which is theoretically consistent
 
 9. No multi-colinearity
 
-     - Independent vars should not be correlated with each other
-     - If |correlation| > 0.5 between 2 independent vars, then we drop one of the variables
+    - Independent vars should not be correlated with each other
+    - If |correlation| > 0.5 between 2 independent vars, then we drop one of the variables
 
 ## Properties of OLS
 
@@ -142,7 +147,7 @@ $$
 -  Predicted value and residuals are not correlated with eachother
 
 -  Error terms are not correlated with values of $x$
-     -  $\sum \hat u_i x_i = 0$
+    -  $\sum \hat u_i x_i = 0$
 
 -  OLS is BLUE
    (Best Linear Unbiased Estimator)
@@ -242,11 +247,11 @@ Some derivation (below)
 Understand how accurate we are
 
 Estimates change with change in sample. However, if there is large change in the estimates, the estimates are less-precise; if there is less change, then it is more precise.
-| Evaluation Criteria                                          | Meaning                                                      |  Preferably  |
+| Evaluation Criteria                                  | Meaning                                            |  Preferably  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | :----------: |
-| **SEE**<br />Standard Error of Estimate                      | Standard deviation of sampling distribution of an estimate   | $\downarrow$ |
+| **SEE**<br />Standard Error of Estimate                  | Standard deviation of sampling distribution of an estimate   | $\downarrow$ |
 | **Goodness of Fit**<br />(In practicality, it is actually badness of fit) | How much one sample estimate differs from another sample estimate | $\downarrow$ |
-| **$R^2$**<br />Coefficient of Determination                  | $0 \le R^2 \le 1$                                            |  $\uparrow$  |
+| **$R^2$**<br />Coefficient of Determination               | $0 \le R^2 \le 1$                                    |  $\uparrow$  |
 
 ### Standard Error of Estimate
 
@@ -413,18 +418,18 @@ $$
 
 ### Correlation vs $R^2$
 
-|                                                              |          Correlation          |                  $R^2$                   |
+|                                                  |        Correlation        |               $R^2$                |
 | ------------------------------------------------------------ | :---------------------------: | :--------------------------------------: |
-| Range                                                        |           $[-1, 1]$           |                 $[0, 1]$                 |
-| Symmetric?                                                   |               ✅               |                    ❌                     |
-|                                                              |      $r(x, y) = r(y, x)$      |        $r^2(x, y) \ne r^2(y, x)$         |
-| Independent on scale of variables?                           |               ✅               |                    ✅                     |
-|                                                              |     $r(kx, y) = r(x, y)$      |         $r^2(kx, y) = r^2(x, y)$         |
-| Independent on origin?                                       |               ❌               |                    ✅                     |
-|                                                              |    $r(x-c, y) \ne r(x, y)$    |       $r^2(x-c, y) \ne r^2(x, y)$        |
-| Relevance for non-linear relationship?                       |               ❌               |                    ✅                     |
-|                                                              | $r(\frac{1}{x}, y) \approx 0$ | $r(\frac{1}{x}, y)$ not necessarily be 0 |
-| Gives **direction** of causation/association<br />(not exactly the value of causality) |               ❌               |                    ✅                     |
+| Range                                             |         $[-1, 1]$         |              $[0, 1]$              |
+| Symmetric?                                         |            ✅            |                ❌                 |
+|                                                  |     $r(x, y) = r(y, x)$     |       $r^2(x, y) \ne r^2(y, x)$        |
+| Independent on scale of variables?                      |            ✅            |                ✅                 |
+|                                                  |    $r(kx, y) = r(x, y)$     |        $r^2(kx, y) = r^2(x, y)$        |
+| Independent on origin?                                |            ❌            |                ✅                 |
+|                                                  |    $r(x-c, y) \ne r(x, y)$    |      $r^2(x-c, y) \ne r^2(x, y)$       |
+| Relevance for non-linear relationship?                   |            ❌            |                ✅                 |
+|                                                  | $r(\frac{1}{x}, y) \approx 0$ | $r(\frac{1}{x}, y)$ not necessarily be 0 |
+| Gives **direction** of causation/association<br />(not exactly the value of causality) |            ❌            |                ✅                 |
 
 ## Inertia of Time Series Variable
 

@@ -40,14 +40,13 @@ r = \frac{
 }
 $$
 
-|   Type    |    Correlation    |
-| :-------: | :---------------: |
-|   Weak    |   $|r| \le 0.5$   |
-| Moderate  | $0.5 < |r| < 0.8$ |
-|  Strong   |   $|r| \ge 0.8$   |
-|           |                   |
-| Directly  |      $r > 0$      |
-| Inversely |      $r < 0$      |
+|     |   Type    |    Correlation    |
+| :-------: | :-------: | :---------------: |
+| **Strength**  |   Weak    |   $\| r \| \le 0.5$   |
+|           | Moderate  | $0.5 < \| r \| < 0.8$ |
+|           |  Strong   |   $\| r \| \ge 0.8$   |
+| **Direction** | Directly  |      $r > 0$      |
+|           | Inversely |      $r < 0$      |
 
 ## Coefficient of Determination
 

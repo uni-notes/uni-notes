@@ -56,7 +56,7 @@ $\delta(G) = \Delta(G)$
 The name of the graph $= (|V| - 1)$ Regular graph
 Eg: for 5 vertices graph, if all the 5 vertices are connected to the others, then the name will be "4 - regular graph"
 
-$|E| = \frac{n \cp d}{2}, d =$ the degree of every vertex
+$|E| = \frac{n \times d}{2}, d =$ the degree of every vertex
 
 ## Theorems
 
@@ -154,21 +154,21 @@ if $|V| = n$, deg of every vertex $= n-1$
 graph LR
 
 subgraph k1
-	a(( ))
+    a(( ))
 end
 
 subgraph k2
-	b(( )) --- c(( ))
+    b(( )) --- c(( ))
 end
 
 subgraph k3
-	d(( )) --- e(( )) --- f(( )) --- d
+    d(( )) --- e(( )) --- f(( )) --- d
 end
 
 subgraph k4
-	g(( )) --- h(( )) --- i(( )) --- j(( )) --- g
-	h --- j
-	i --- g
+    g(( )) --- h(( )) --- i(( )) --- j(( )) --- g
+    h --- j
+    i --- g
 end
 ```
 
@@ -181,11 +181,11 @@ $|V| = n$
 graph LR
 
 subgraph L2
-	a(( )) --- b(( ))
+    a(( )) --- b(( ))
 end
 
 subgraph L5
-	c(( )) --- d(( )) --- e(( )) --- f(( )) --- g(( ))
+    c(( )) --- d(( )) --- e(( )) --- f(( )) --- g(( ))
 end
 ```
 
@@ -193,7 +193,7 @@ end
 | ------------- | :----: | :--: | :-----: | :---: | :---: | ------------------- | :-----------------------: |
 | \|V\|         |   n    |  n   |    n    |   n   |       | n                   |             n             |
 | deg of vertex |        |      |         |       |       | d                   |            n-1            |
-| \|E\|         |   n    | n-1  |    n    |   n   |       | $\frac{n \cp d}{2}$ | $\frac{n(n-1)}{2} = nC_2$ |
+| \|E\|         |   n    | n-1  |    n    |   n   |       | $\frac{n \times d}{2}$ | $\frac{n(n-1)}{2} = nC_2$ |
 
 ## Theorem
 
@@ -206,19 +206,23 @@ Mathematical induction
 Taking a u-v path. It can either be
 
 - closed
-  obviously contains a trivial path (of length 0)
-  simple path
+  
+    obviously contains a trivial path (of length 0)
+  
+    simple path
 
 - open
-  Consider an open u-v path
-  To show it contains a simple u-v path
+  
+    Consider an open u-v path
+  
+    To show it contains a simple u-v path
 
-  ``` mermaid
-  graph LR
-  u((u / v0)) --- v1((v1)) --- v2((...)) --- v((v / vn))
-  ```
+    ``` mermaid
+    graph LR
+    u((u / v0)) --- v1((v1)) --- v2((...)) --- v((v / vn))
+    ```
 
-  Proof by induction on the length of path p
+    Proof by induction on the length of path p
 
     - Length = 1 (basic)
 
@@ -232,16 +236,14 @@ Taking a u-v path. It can either be
 
     - trying to prove that it contains a simple path (using the induction hypothesis)
 
-      ``` mermaid
-      graph LR
-      u((u / v0)) --- v1((v1)) --- v2((...)) --- vn((vn)) --- v((v / vn+1))
-      ```
+        ``` mermaid
+        graph LR
+        u((u / v0)) --- v1((v1)) --- v2((...)) --- vn((vn)) --- v((v / vn+1))
+       ```
 
-      this path
+        this path
 
-      - has no repeated vertices
-
-        - then automatically it is simple
+        - has no repeated vertices $\implies$ it is simple
 
       - contains repeated vertices
 
@@ -284,12 +286,13 @@ f need not be unique; there can be various mappings that preserve adjacency
 
 Let G = (V, E) be an undirected graph with n vertices and m edges
 
-$B_{n \cp m} = [b_{ij}]$ is called the incident matrix of G where
+$B_{n \times m} = [b_{ij}]$ is called the incident matrix of G, where
 
 $$
 b_{ij} = 
 \begin{cases}
-1, \text{ when $e_j$ is incident on $v_i$} \\0, \text{ otherwise}
+1, \text{ when $e_j$ is incident on $v_i$} \\
+0, \text{ otherwise}
 \end{cases}
 $$
 

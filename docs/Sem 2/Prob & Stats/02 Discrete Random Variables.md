@@ -45,8 +45,7 @@ $$
 | Distribution   |                                                      |                            $f(x)$                            |            $\mu$             |                            $V(x)$                            |
 | -------------- | ---------------------------------------------------- | :----------------------------------------------------------: | :--------------------------: | :----------------------------------------------------------: |
 | Binomial       | - 2 outcomes<br />- independent and identical trials |              $nC_x \cdot p^x \cdot (1-p)^{n-x}$              |             $np$             |                          $np(1-p)$                           |
-| Hypergeometric | dependent trials without replacement                 | $f(x) = \frac{MC_x \times (N-M) C_{(n-x)} }{NC_n} \\
-\text{max}\Big(0, n- (N-m) \Big) \le x \le \text{min}(n, M)$ | $n \left(\dfrac M N \right)$ | $\left( \dfrac{N-n}{N-1} \right) \cdot n \cdot \dfrac M N \left( 1 - \dfrac M N \right)$ |
+| Hypergeometric | dependent trials without replacement                 | $f(x) = \frac{MC_x \times (N-M) C_{(n-x)} }{NC_n}$ <br /> $\text{max}\Big(0, n- (N-m) \Big) \le x \le \text{min}(n, M)$ | $n \left(\dfrac M N \right)$ | $\left( \dfrac{N-n}{N-1} \right) \cdot n \cdot \dfrac M N \left( 1 - \dfrac M N \right)$ |
 | Poisson        | discrete phenomenon in continuous interval           |    $\dfrac {e^{-\mu} \times \mu^x}{x!}, \mu = \alpha t$     |          $\alpha t$          |                          $\alpha t$                          |
 
 ### Rate Parameter $(\alpha)$

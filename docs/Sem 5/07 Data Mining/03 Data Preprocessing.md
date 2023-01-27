@@ -199,7 +199,7 @@ Then convert using binarization. But, why?
 
 |                        |                             $x'$                             |                                                              |        Property         |
 | ---------------------- | :----------------------------------------------------------: | ------------------------------------------------------------ | :---------------------: |
-| Simple                 |                      $x^2, \log x, |x|$                      |                                                              |                         |
+| Simple                 |                      $x^2, \log x, \| x \|$                      |                                                              |                         |
 | Min-Max Normalization  | $\frac{x - x_{\text{min}}}{x_{\text{max}} - x_{\text{min}}}$ | $\frac{x - x_{\text{min}}}{x_{\text{max}} - x_{\text{min}}} * ({\max}_{\text{new}} - {\min}_{\text{new}}) + {\min}_{\text{new}}$<br />I didn’t exactly understand this |     $0 \le x \le 1$     |
 | Standard Normalization |                    $\frac{x-\mu}{\sigma}$                    |                                                              | $\mu' = 0, \sigma' = 1$ |
 

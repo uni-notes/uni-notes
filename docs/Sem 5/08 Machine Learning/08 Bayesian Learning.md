@@ -6,8 +6,8 @@ $$
 
 | Hypothesis                       |                                                              |                                                             |
 | -------------------------------- | ------------------------------------------------------------ | ----------------------------------------------------------- |
-| Maximum Likelihood               | the hypothesis (or class) that best explains the training data | $h_\text{ML} = \underset{h_i \in H}{\arg \max} \ P(D |h_i)$ |
-| Maximum A Posteriori Probability |                                                              | $h_\text{MAP} = somethign$                                  |
+| Maximum Likelihood               | the hypothesis (or class) that best explains the training data | $h_\text{ML} = \underset{h_i \in H}{\arg \max} \ P(D \| h_i)$ |
+| Maximum A Posteriori Probability |                                                              | $h_\text{MAP} = something$                                  |
 
 $\arg \max$ is like maximum of a list
 

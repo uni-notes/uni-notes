@@ -22,8 +22,8 @@ $$
 \begin{align}
 & \text{$X$ is $n$ times as fast as $Y$} \\
 \implies & n 
-= \frac{P_\textcolor{orange}{x}}{P_\textcolor{hotpink}{y}}
-= \frac{T_\textcolor{hotpink}{y}}{T_\textcolor{orange}{x}}
+= \frac{P_{\textcolor{orange}{x}}}{P_{\textcolor{hotpink}{y}}}
+= \frac{T_{\textcolor{hotpink}{y}}}{T_{\textcolor{orange}{x}}}
 \end{align}
 $$
 

@@ -14,7 +14,7 @@ $$
 where
 
 - $M =$ max value of $f(z)$
-- $L = $ length of contour $C$
+- $L =$ length of contour $C$
 
 ## Theorems
 

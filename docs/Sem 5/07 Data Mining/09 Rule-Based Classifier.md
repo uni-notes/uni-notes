@@ -30,8 +30,8 @@ Consider $r: A \to y$, where
 
 | Quality Measure                      |                                                            | Formula                   |
 | ------------------------------------ | ---------------------------------------------------------- | ------------------------- |
-| Coverage$(r)$                        | Fraction of records covered by rule                        | $\dfrac{|A|}{|D|}$        |
-| Accuracy$(r)$<br />Confidence Factor | Fraction of records for which the rule correctly predicted | $\dfrac{|A \cap y|}{|A|}$ |
+| Coverage$(r)$                        | Fraction of records covered by rule                        | $\dfrac{\|A\|}{\| D \|}$        |
+| Accuracy$(r)$<br />Confidence Factor | Fraction of records for which the rule correctly predicted | $\dfrac{\| A \cap y \|}{\| A \|}$ |
 
 ## Steps
 

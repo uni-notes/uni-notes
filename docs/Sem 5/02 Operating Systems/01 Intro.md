@@ -24,14 +24,7 @@ a set of programs
     - Kernel provides interface between hardware and software components
 
 $$
-\fbox{
-System, Application Software
-$\fbox{
-Operating System
-$\fbox{Kernel
-$\fbox{H/W Resources}$
-}$}$
-}
+\fbox{System, Application Software $\fbox{ Operating System $\fbox{Kernel $\fbox{H/W Resources}$}$}$}
 $$
 
 ## Types of Operating System

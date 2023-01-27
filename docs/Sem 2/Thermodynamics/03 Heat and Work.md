@@ -41,7 +41,7 @@ $$
 | :--------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | Isochoric  |                           $V = c$                            |                             $0$                              |                                                              |
 |  Isobaric  |                           $P = c$                            |                       $P_1(V_2 - V_1)$                       |                    $mP_1(\nu_2 - \nu_1)$                     |
-| Isothermal | $\begin{align} T &= c \\ PV &= mRT \\ P_1 V_1 &= P_2 V_2 \end{align}$ | $P_i V_i \ \ln \| \frac{V_2}{V_1} \| \\ P_i V_i \ \ln \| \frac{P_1}{P_2} \|$ | $mRT \ \ln \| \frac{V_2}{V_1} \| \\ mRT \ \ln \| \frac{P_1}{P_2} \|$ |
+| Isothermal | $\begin{align} T &= c \\ PV &= mRT \\ P_1 V_1 &= P_2 V_2 \end{align}$ | $P_i V_i \ \ln \| \frac{V_2}{V_1} \| \\ P_i V_i \ \ln \| \frac{P_1}{P_2} \|$ | $mRT \ \ln \| \frac{V_2}{V_1} \|$ <br /> $mRT \ \ln \| \frac{P_1}{P_2} \|$ |
 | Polytropic | $\begin{align} P V^n &= c \\ P_1 (V_1)^n &= P_2 (V_2)^n \\ \frac{P_1}{P_2} &= \left( \frac{V_2}{V_1} \right)^n  \end{align}$ | $\frac{P_2 V_2 - P_1 V_1}{1-n}$ | $\frac{mR(T_2 - T_1)}{1-n}$ |
 
 ## Sign Convention

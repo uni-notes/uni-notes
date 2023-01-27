@@ -14,7 +14,7 @@ A problem that cannot be solved by a Turing Machine is **not computable**.
 | :-----------: | ---------------------------- | ------------------------------------------------------------ |
 |   $\Sigma$    | Set of Alphabet              | Non-empty finite set of symbols<br />eg: $\{0, 1 \}$         |
 |               | String                       | Finite sequence of zero/symbols                              |
-|     $|s|$     | Length of string s           |                                                              |
+|     $\| s \|$     | Length of string s           |                                                              |
 |  $\Sigma^k$   | Set of strings of length $k$ |                                                              |
 |  $\Sigma^1$   | Set of strings of length 1   | eg: $\{0, 1 \}$                                              |
 |  $\epsilon$   | Empty String                 | “”                                                           |
@@ -29,8 +29,7 @@ A problem that cannot be solved by a Turing Machine is **not computable**.
 | ------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Concatenation | $S_1 \cdot S_2$                                              | $S_1$ followed by $S_2$                                      |
 | Power         | $S^n$                                                        | Concatenation with itself for $n$ times                      |
-| Closure       | $\begin{align} \Sigma^+ &= \Sigma^1 \cup \Sigma^2 \cup \dots \\
-\Sigma^* &= \Sigma^0 \cup \Sigma^1 \cup \Sigma^2 \cup \dots \\ &=  \{ \epsilon \} \cup \Sigma^+ \end{align}$ | Union of **infinite** concatenation with itself<br />Also called as Kleene Closure/Star |
+| Closure       | $\begin{align} \Sigma^+ &= \Sigma^1 \cup \Sigma^2 \cup \dots \\ \Sigma^* &= \Sigma^0 \cup \Sigma^1 \cup \Sigma^2 \cup \dots \\ &=  \{ \epsilon \} \cup \Sigma^+ \end{align}$ | Union of **infinite** concatenation with itself<br />Also called as Kleene Closure/Star |
 
 ### On Languages
 
@@ -41,7 +40,7 @@ A problem that cannot be solved by a Turing Machine is **not computable**.
 | Concatenation           | $L_1 \cdot L_2$                                              |                                                              |
 | Complement              | $\begin{align} &L'\\ = &\Sigma^* - L \end{align}$        | Opposite of defined language<br />Swap all accepting and rejecting states |
 | Closure of languages    | $L^*$                                                        | Similar to that of string                                    |
-| Power Set of $\Sigma^*$ | $\begin{align} P(S) &= 2^{\Sigma^*} \\ |P(S)| &= 2^{|S|} \end{align}$ | Set of all subsets of $\Sigma^*$                             |
+| Power Set of $\Sigma^*$ | $\begin{align} P(S) &= 2^{\Sigma^*} \\ \| P(S) \| &= 2^{\|S\|} \end{align}$ | Set of all subsets of $\Sigma^*$                             |
 
 $$
 \begin{align}

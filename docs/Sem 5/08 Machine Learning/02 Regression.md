@@ -105,7 +105,7 @@ Helps measuring accuracy, which depends on amount of prediction errors
 
 | Metric | Full Form                    |                           Formula                            | Preferred Value |
 | :----: | ---------------------------- | :----------------------------------------------------------: | :-------------: |
-|  MAE   | Mean Absolute Error          |         $\frac{1}{n} \sum_{i=1}^n | \hat y_i - y_i|$         |  $\downarrow$   |
+|  MAE   | Mean Absolute Error          |         $\frac{1}{n} \sum_{i=1}^n \| \hat y_i - y_i \|$         |  $\downarrow$   |
 |  MSE   | Mean Squared Error           |        $\frac{1}{n} \sum_{i=1}^n (\hat y_i - y_i)^2$         |  $\downarrow$   |
 |  RMSE  | Root Mean Square Error       |     $\sqrt{\frac{1}{n} \sum_{i=1}^n (\hat y_i - y_i)^2}$     |  $\downarrow$   |
 |  RAE   | Relative Absolute Error      | $\frac{\sum_{i=1}^n |y_i - \hat y|}{\sum_{i=1}^n |y_i - \bar y|}$ |  $\downarrow$   |
@@ -183,7 +183,7 @@ Helps reduce the variance.
 | Common Name    |                 Lasso                  |                    Rigde                    | Lasso-Ridge                                                  |
 |                |    Eliminates feature(s) completely    | Reduce/Normalize the effect of each feature |                                                              |
 |                |       Helps in feature selection       |         Scale down the coefficients         |                                                              |
-| Error Function | $RSS + \lambda \sum_{j=1}^m |\beta_i|$ |   $RSS + \lambda \sum_{j=1}^m \beta_i ^2$   | $RSS + \lambda_1 \sum_{j=1}^m  + \lambda_2 \sum_{j=1}^m \beta_i ^2$ |
+| Error Function | $RSS + \lambda \sum_{j=1}^m \|\beta_i \|$ |   $RSS + \lambda \sum_{j=1}^m \beta_i ^2$   | $RSS + \lambda_1 \sum_{j=1}^m  + \lambda_2 \sum_{j=1}^m \beta_i ^2$ |
 
 ### Nom
 

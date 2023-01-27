@@ -58,7 +58,7 @@ The set of values that the output can take, ensuring that the function is define
 
 $g \circ f \ (x) = g(\ f(x) \ )$
 
-Domain of $ g \circ f \ (x) = \set{x \in \text{domain } f | f(x) \in \text{domain } g}$
+Domain of $g \circ f \ (x) = \set{x \in \text{domain } f | f(x) \in \text{domain } g}$
 
 $g \circ f \ (x)$ not necessarily equal to $f \circ g \ (x)$
 

@@ -215,9 +215,9 @@ burden is heavier on inelastic side
 
 | Elasticity      | Elastic | Inelastic | Who’s affected more |
 | --------------- | ------- | --------- | ------------------- |
-| $|e_d| = |e_s|$ | -       | -         | both equally        |
-| $|e_d| > |e_s|$ | demand  | supply    | sellers             |
-| $|e_d| < |e_s|$ | supply  | demand    | consumer            |
+| $\| e_d \| = \| e_s \|$ | -       | -         | both equally        |
+| $\| e_d \| > \| e_s \|$ | demand  | supply    | sellers             |
+| $\| e_d \| < \| e_s \|$ | supply  | demand    | consumer            |
 
 this is why basic necessities are not taxed, as
 

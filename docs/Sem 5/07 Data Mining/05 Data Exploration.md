@@ -18,8 +18,8 @@ Minimal set of value(s) that captures the characteristics of large amounts of da
 | Spread           | Range                                    | $x_\text{max} - x_\text{min}$                                | Sensitive to outliers and noise                              |
 |                  | Variance                                 | $\sigma^2 = \frac{1}{\textcolor{hotpink}{n-1}} \sum_{i=1}^n (x_i - \bar x)^2$ |                                                              |
 |                  | Standard Deviation                       | $\sigma = \sqrt{V}$                                          |                                                              |
-|                  | Absolute Average/Mean Absolute Deviation | $\frac{1}{n} \sum_{i=1}^n |x_i - \bar x|$                    |                                                              |
-|                  | Median Absolute Deviation                | $\text{median}( \ |x_1 - \bar x|, |x_2 - \bar x|, \dots, |x_n - \bar x| \ )$ |                                                              |
+|                  | Absolute Average/Mean Absolute Deviation | $\frac{1}{n} \sum_{i=1}^n \| x_i - \bar x \|$                    |                                                              |
+|                  | Median Absolute Deviation                | $\text{median}( \ \| x_1 - \bar x \|, \| x_2 - \bar x|, \dots, \| x_n - \bar x \| \ )$ |                                                              |
 |                  | InterQuantile Range                      | $X_{75 \%} - X_{25 \%}$                                      |                                                              |
 | Central Tendancy | Mean                                     |                                                              | Does **not** always show the middle point of skewed/asymmetric distribution<br />Highly sensitive by outliers |
 |                  | Median                                   |                                                              |                                                              |

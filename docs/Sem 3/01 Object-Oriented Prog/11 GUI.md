@@ -78,19 +78,7 @@ JComponent --> JLabel & JButton & x[many more...]
 ```
 
 $$
-\color{hotpink}
-\fbox{$
-\underset{
-\color{orange}
-\fbox{$
-\underset{
-\color{orange}
-\fbox{Components}
-}
-{Panel}
-$}}
-{\text{Frame}}
-$}
+\color{hotpink} \fbox{$ \underset{ \color{orange} \fbox{$ \underset{ \color{orange} \fbox{Components} }{Panel} $}} {\text{Frame}}$}
 $$
 
 ## Containers

@@ -138,7 +138,7 @@ $$
 \begin{align}
 C(\hat y, y)
 &= \begin{cases}
-- \log |1 - \hat y|, & y=0 \\- \log |\hat y|, & y=1
+- \log \| 1 - \hat y \|, & y=0 \\- \log \| \hat y \|, & y=1
 \end{cases} \\J(\theta)
 &= \frac{-1}{m}
 \sum

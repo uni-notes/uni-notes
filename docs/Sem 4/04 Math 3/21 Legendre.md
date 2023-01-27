@@ -56,7 +56,9 @@ $$
 ## Generating Function
 
 $$
-(1-2xt + t^2)^{-1/2} = \sum\limits_{n=0}^\infty P_n (x) t^n \\|t| < 1 \\|x| \le 1
+(1-2xt + t^2)^{-1/2} = \sum\limits_{n=0}^\infty P_n (x) t^n \\
+|t| < 1 \\
+|x| \le 1
 $$
 
 ## Binomial Expansion

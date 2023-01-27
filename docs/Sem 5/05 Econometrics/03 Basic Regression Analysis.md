@@ -65,7 +65,9 @@ $$
 
 $$
 \begin{align}
-y_i &= E(y|x_i) + u_i\\&\updownarrow\\u_i &= y_i - E(y|x_i)
+y_i &= E(y|x_i) + u_i \\
+& \updownarrow \\
+u_i &= y_i - E(y|x_i)
 \end{align}
 $$
 

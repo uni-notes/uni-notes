@@ -86,15 +86,15 @@ $$
 d(a, b) =
 \left(
 \sum_{k=1}^n
-|a_k - b_k|^r
+\| a_k - b_k \|^r
 \right)^{\frac{1}{r}}
 $$
 
 | $r$      | Type of Distance                                             |               $d(x, y)$               | Gives                  | Magnitude of Distance | Remarks                               |
 | -------- | ------------------------------------------------------------ | :-----------------------------------: | ---------------------- | --------------------- | ------------------------------------- |
-| 1        | City block<br />Manhattan<br />Taxicab<br />$L_1$ Norm       |      $\sum_{k=1}^n |a_k - b_k|$       | Distance along axes    | Maximum               |                                       |
-| 2        | Euclidean<br />$L_2$ Norm                                    | $\sqrt{ \sum_{k=1}^n |a_k - b_k|^2 }$ | Perpendicular Distance | Shortest              | We need to standardize the data first |
-| $\infty$ | Chebychev<br />Supremum<br />$L_\max$ norm<br />$L_\infty$ norm |          $\max(|x_k - y_k|)$          |                        | Medium                |                                       |
+| 1        | City block<br />Manhattan<br />Taxicab<br />$L_1$ Norm       |      $\sum_{k=1}^n \| a_k - b_k \|$       | Distance along axes    | Maximum               |                                       |
+| 2        | Euclidean<br />$L_2$ Norm                                    | $\sqrt{ \sum_{k=1}^n \| a_k - b_k \|^2 }$ | Perpendicular Distance | Shortest              | We need to standardize the data first |
+| $\infty$ | Chebychev<br />Supremum<br />$L_{\max}$ norm<br />$L_\infty$ norm |          $\max (\| x_k - y_k \|)$          |                        | Medium                |                                       |
 
 Also, we have squared euclidean distance, which is used sometimes
 
@@ -141,16 +141,14 @@ $$
 
 $$
 \begin{align}
-\cos(x, y)
-&=
-\frac{
+\cos(x, y) &= \frac{
 xy
 }{
-||x|| \ \ ||y||
+\| x \| \ \ \| y \|
 }
-\sum_{i=1}^n x_i y_i \\&= x \cdot y \\
-||x||
-&= \sqrt{\sum_{i=1}^n x_i^2}
+\sum_{i=1}^n x_i y_i \\
+&= x \cdot y \\
+\| x \| &= \sqrt{\sum_{i=1}^n x_i^2}
 \end{align} 
 $$
 

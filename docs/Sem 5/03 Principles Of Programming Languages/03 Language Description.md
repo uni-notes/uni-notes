@@ -225,7 +225,7 @@ real-number $\implies$ integer-part . fraction $\implies$ integer-part digit.fra
 |             | Left-Recursive                                     | Right-Recursive                                    |
 | :---------: | -------------------------------------------------- | -------------------------------------------------- |
 | **Handles** | Left-associativity                                 | Right-associativity                                |
-| **Example** | $L ::= L + \text{num} |L – \text{num} |\text{num}$ | $R ::= \text{num} + R |\text{num} – R |\text{num}$ |
+| **Example** | $L ::= L + \text{num} \ L – \text{num} \| \text{num}$ | $R ::= \text{num} + R \| \text{num} – R \| \text{num}$ |
 
 ### Operator Precedence
 
@@ -234,13 +234,13 @@ real-number $\implies$ integer-part . fraction $\implies$ integer-part digit.fra
 | Operator             | Meaning        |
 | -------------------- | -------------- |
 | $=$                  | Assignment     |
-| $||$                 | Logical or     |
+| $\|\|$                 | Logical or     |
 | $\&\&$               | Logical and    |
-| $|$                  | inclusive or   |
+| $\|$                  | inclusive or   |
 | ^                    | exclusive or   |
 | $\&$                 | and            |
 | $== \ \ \ne$         | equality       |
-| $< \ \le \ \ge \ > $ | relational     |
+| $< \ \le \ \ge \ >$ | relational     |
 | $<< \ \ >>$          | shift          |
 | $+ -$                | additive       |
 | $* / \%$             | multiplicative |

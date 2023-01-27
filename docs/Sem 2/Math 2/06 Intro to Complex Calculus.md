@@ -24,16 +24,16 @@ $$
 
 ### Circles
 
-|               |                                   |
-| ------------- | --------------------------------- |
-| $|z| = r$     | circle with radius $r$ @ $(0, 0)$ |
-| $|z-z_0| = r$ | circle with radius $r$ @ $z_0$    |
+|                   |                                   |
+| ----------------- | --------------------------------- |
+| $\| z \| = r$     | circle with radius $r$ @ $(0, 0)$ |
+| $\| z-z_0 \| = r$ | circle with radius $r$ @ $z_0$    |
 
 ## Triangle Inequality
 
 | Upper Bound                         | Lower Bound                                    |
 | ----------------------------------- | ---------------------------------------------- |
-| $| z_1 \pm z_2 | \le |z_1| + |z_2|$ | $|z_1 \pm z_2 | \ge \text{abs}(|z_1| - |z_2|)$ |
+| $\| z_1 \pm z_2 \| \le \| z_1 \| + \| z_2 \|$ | $\| z_1 \pm z_2 \| \ge \text{abs} (\| z_1 \| - \| z_2 \|)$ |
 
 **abs** refers to absolute value
 

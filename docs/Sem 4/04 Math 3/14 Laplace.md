@@ -39,9 +39,9 @@ $$
 
 ## Basic Rules
 
-| Situation          |                              LT                                           |                             ILT                              |
-| ------------------ | :-----------------------------------------------------------------------: | :----------------------------------------------------------: |
-| Constant Coeffient |                $L\Big(k f(t) \Big) = k L(t)$                              |          $L^{-1}(k s) = k L^{-1} \Big( F(s) \Big) $          |
+| Situation          |       LT   |             ILT   |
+| ------------------ | :---------: | :--------------: |
+| Constant Coeffient |                $L\Big(k f(t) \Big) = k L(t)$  | $L^{-1}(k s) = k L^{-1} \Big( F(s) \Big) $          |
 | Sum                | $L \Big( f(t) \pm g(t) \Big) = L \Big( f(t) \Big) \pm L \Big( g(t) \Big)$ | $L^{-1} \Big( F(s) \pm G(s) \Big) = L^{-1} \Big( F(s) \Big) \pm L^{-1} \Big( G(s) \Big)$ |
 
 ## LT of Standard Functions
@@ -55,8 +55,7 @@ $$
 |                 $\sin(at)$                  |                    $\frac{a}{s^2 + a^2}$                     |
 |                 $\cosh(at)$                 |                    $\frac{s}{s^2 - a^2}$                     |
 |                 $\sinh(at)$                 |                    $\frac{a}{s^2 - a^2}$                     |
-|                    $t^n$                    | $\begin{cases}\dfrac{n!}{s^{n+1}}, & n \le 0\\
-\dfrac{\Gamma(n+1)}{s^{n+1}}, & \text{otherwise}\end{cases}$<br /><br />where $\Gamma$ is [gamma function](#Gamma Function) |
+|                    $t^n$                    | $\begin{cases} \dfrac{n!}{s^{n+1}}, & n \le 0 \\ \dfrac{\Gamma(n+1)}{s^{n+1}}, & \text{otherwise} \end{cases}$ <br /><br /> where $\Gamma$ is [gamma function](#Gamma Function) |
 | $e^{at} f(t)$<br />(exponent shifting rule) | $F(s \textcolor{orange}{-} a) = \Big\{ F(s) \Big\}_{s \to s-a}$ |
 |                  $u_a(t)$                   |                     $\frac{e^{-as}}{s}$                      |
 |                $\delta (t)$                 |                             $1$                              |

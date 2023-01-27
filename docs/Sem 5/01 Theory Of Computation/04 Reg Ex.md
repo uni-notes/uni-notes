@@ -24,7 +24,7 @@ Atomic regex with operations
 
 - Kleene star ${}^*$
 - concatenation $\cdot$
-- union: represented with $\cup $ or $|$ or $+$
+- union: represented with $\cup$ or $|$ or $+$
 
 Think similar to BODMAS: ^$,\times , +$
 
