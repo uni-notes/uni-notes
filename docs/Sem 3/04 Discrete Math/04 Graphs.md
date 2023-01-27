@@ -289,9 +289,8 @@ Let G = (V, E) be an undirected graph with n vertices and m edges
 $B_{n \times m} = [b_{ij}]$ is called the incident matrix of G, where
 
 $$
-b_{ij} = 
-\begin{cases}
-1, \text{ when $e_j$ is incident on $v_i$} \\
+b_{ij} = \begin{cases}
+1, \text{ when } e_j \text{ is incident on } v_i \\
 0, \text{ otherwise}
 \end{cases}
 $$
