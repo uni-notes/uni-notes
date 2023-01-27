@@ -120,9 +120,9 @@ Stores the frame number/base address of each page in physical memory
 $$
 \begin{align}
 & \text{Total no of logical address (space size) of the paging} \\
-&= \text{No of pages $\times$ Page Size} \\
+&= \text{No of pages } \times \text{ Page Size} \\
 & \text{Total Physical memory size} \\
-&= \text{No of frames $\times$ Frame Size}
+&= \text{No of frames} \times \text{Frame Size}
 \end{align}
 $$
 
@@ -186,7 +186,7 @@ TLB Hit, TLB Miss
 ## Effective Memory Access Time
 
 $$
-\text{EMET = (TLB Hit Ratio $\times$ Hit Time) + (TLB Miss Ratio $\times$ Miss Time)}
+\text{EMET } = (\text{ TLB Hit Ratio } \times \text{ Hit Time }) + (\text{ TLB Miss Ratio } \times \text{ Miss Time})}
 $$
 
 $$
