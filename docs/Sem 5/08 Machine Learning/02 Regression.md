@@ -108,7 +108,7 @@ Helps measuring accuracy, which depends on amount of prediction errors
 |  MAE   | Mean Absolute Error          |         $\frac{1}{n} \sum_{i=1}^n \| \hat y_i - y_i \|$         |  $\downarrow$   |
 |  MSE   | Mean Squared Error           |        $\frac{1}{n} \sum_{i=1}^n (\hat y_i - y_i)^2$         |  $\downarrow$   |
 |  RMSE  | Root Mean Square Error       |     $\sqrt{\frac{1}{n} \sum_{i=1}^n (\hat y_i - y_i)^2}$     |  $\downarrow$   |
-|  RAE   | Relative Absolute Error      | $\frac{\sum_{i=1}^n |y_i - \hat y|}{\sum_{i=1}^n |y_i - \bar y|}$ |  $\downarrow$   |
+|  RAE   | Relative Absolute Error      | $\frac{\sum_{i=1}^n \| y_i - \hat y \|}{\sum_{i=1}^n |y_i - \bar y|}$ |  $\downarrow$   |
 |  RSE   | Relative Square Error        | $\frac{\sum_{i=1}^n (y_i - \hat y)^2}{\sum_{i=1}^n (y_i - \bar y)^2}$ |  $\downarrow$   |
 | $R^2$  | Coefficient of Determination |                       $1 - \text{RSE}$                       |   $\uparrow$    |
 
