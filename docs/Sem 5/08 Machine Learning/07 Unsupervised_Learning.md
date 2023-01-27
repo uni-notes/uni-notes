@@ -23,15 +23,15 @@ Output: Set of $k$ clusters
    1. Compute distance between current objects and $k$ cluster centroids
    2. Assign current object to that cluster to which it is closest
       
-			If distance of a point between 2 clusters is same, then we assign the point to first centroid.
+      If distance of a point between 2 clusters is same, then we assign the point to first centroid.
 
 3. Compute ‘cluster centers’ $m$ of each cluster. These become the new cluster centroids
    
 $$
 \begin{align}
 m_k &= \Big(\text{mean}(X), \text{mean}(Y) \Big) \\
-X &= \text{List of $x$ coordinates} \\
-Y &= \text{List of $y$ coordinates}
+X &= \text{List of } x \text{ coordinates} \\
+Y &= \text{List of } y \text{ coordinates}
 \end{align}
 $$
 
