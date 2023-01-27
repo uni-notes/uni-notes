@@ -22,7 +22,7 @@ $$
 - States $Q$
 - Input Alphabet $\Sigma$
 - Stack Alphabet $\Gamma$
-    - $\$$ marks the bottom of stack
+    - $ marks the bottom of stack
     - Symbols are pushed/popped to/from stack
 - Transitions
     - If PDA is current in state $q_i$
@@ -72,9 +72,9 @@ Let $L_1, L_2$ have grammar $G_1 = \{S_1 \to A\}, G_2 = \{S_2 \to B\}$
 
 | Operation                            | New Grammar $G_\text{new}$ |
 | ------------------------------------ | -------------------------- |
-| $L^*$                                | $\{SS | \epsilon \}$       |
+| $L^*$                                | $\{SS \| \epsilon \}$       |
 | $L_1 \cdot L_2$<br />(concatenation) | $\{S_1 \cdot S_2 \}$       |
-| $L_1 \cup L_2$                       | $\{S_1 | S_2\}$            |
+| $L_1 \cup L_2$                       | $\{S_1 \| S_2\}$            |
 
 #### Note
 
@@ -97,7 +97,7 @@ $$
 
 ## PDA for CFG
 
-Initialize stack as ==$\$S$==
+Initialize stack as ==$==
 
 ### Leftmost Derivation
 
@@ -105,7 +105,7 @@ Initialize stack as ==$\$S$==
 | ------------ | -------- | ---------------------------- |
 | Non-Terminal |          | Pop it<br />Push RHS of rule |
 | Terminal     | Terminal | Pop it                       |
-| $\$$         |          | Pop it<br />Accept string    |
+| $            |          | Pop it<br />Accept string    |
 
 As pushing strings instead of a symbol into stack is not possible, we can use another approach, as both are equivalent.
 
@@ -149,7 +149,7 @@ The reason why $1, 0 \to \epsilon$ for $q_2\to q_3$ ==**can**== be replaced by $
 
 |   Input $\rightarrow$   |      | $0$  |                |                       | $1$  |            |      |      $\epsilon$       |                       |
 | :---------------: | :--: | :--: | :------------: | :-------------------: | :--: | :--------: | :--: | :-------------------: | :-------------------: |
-| Stack Top $\rightarrow$ | $0$  | $\$$ |   $\epsilon$   |          $0$          | $\$$ | $\epsilon$ | $0$  |         $\$$          |      $\epsilon$       |
+| Stack Top $\rightarrow$ | $0$  | $ |   $\epsilon$   |          $0$          | $ | $\epsilon$ | $0$  |         $          |      $\epsilon$       |
 |       $q_0$       |      |      |                |                       |      |            |      |                       |    $\{(q_1, \$)\}$    |
 |       $q_1$       |      |      | $\{(q_1, 0)\}$ |                       |      |            |      |                       | $\{(q_2, \epsilon)\}$ |
 |       $q_2$       |      |      |                | $\{(q_2, \epsilon)\}$ |      |            |      | $\{(q_3, \epsilon)\}$ |                       |
