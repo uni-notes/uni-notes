@@ -85,7 +85,9 @@ This is because
 $$
 \begin{align}
 L
-=& \{a^n b^n \} - \{a^{50} b^{50} \} \\=& \{a^n b^n \} \cap \{a^{50} b^{50} \}' & & \Big( A-B = A \cap B' \Big) \\=& \text{CFL} \cap \text{RL} && {\Big(\text{(RL)' \to RL }\Big)} \\
+=& \{a^n b^n \} - \{a^{50} b^{50} \} \\
+=& \{a^n b^n \} \cap \{a^{50} b^{50} \}' & & \Big( A-B = A \cap B' \Big) \\
+=& \text{CFL} \cap \text{RL} && {\Big( (RL)' \to RL \Big)} \\
 \implies & \text{CFL}
 \end{align}
 $$
@@ -150,7 +152,7 @@ The reason why $1, 0 \to \epsilon$ for $q_2\to q_3$ ==**can**== be replaced by $
 |   Input $\rightarrow$   |      | $0$  |                |                       | $1$  |            |      |      $\epsilon$       |                       |
 | :---------------: | :--: | :--: | :------------: | :-------------------: | :--: | :--------: | :--: | :-------------------: | :-------------------: |
 | Stack Top $\rightarrow$ | $0$  | $ |   $\epsilon$   |          $0$          | $ | $\epsilon$ | $0$  |         $          |      $\epsilon$       |
-|       $q_0$       |      |      |                |                       |      |            |      |                       |    $\{(q_1, \$)\}$    |
+|       $q_0$       |      |      |                |                       |      |            |      |                       |    \(\{(q_1, $)\}\)    |
 |       $q_1$       |      |      | $\{(q_1, 0)\}$ |                       |      |            |      |                       | $\{(q_2, \epsilon)\}$ |
 |       $q_2$       |      |      |                | $\{(q_2, \epsilon)\}$ |      |            |      | $\{(q_3, \epsilon)\}$ |                       |
 |       $q_3$       |      |      |                |                       |      |            |      |                       |                       |
