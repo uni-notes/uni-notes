@@ -200,7 +200,7 @@ $$
 
 |                      Direction                      |           f            |        DD         |
 | :-------------------------------------------------: | :--------------------: | :---------------: |
-|                      $\nabla f$                      | increases more rapidly |  $|\nabla f|$  |
+|                      $\nabla f$                      | increases more rapidly |  $\| \nabla f \|$  |
 |                     $- \nabla f$                     | decreases more rapidly | $- \| \nabla f \|$ |
 | $\perp \text{to } (\nabla f) \text{ or } (-\nabla f)$ |       no change        |         0         |
 
