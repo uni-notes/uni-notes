@@ -21,6 +21,10 @@ How countries interact with each other
 2. Theories of International Relations
 3. Issues of International Relations
 
+## Theme for research project
+
+Suggest a proposal to UN about possible conflict, with sufficient reasons
+
 ## Watch
 
 - [ ] how to become a tyrant
