@@ -1,5 +1,3 @@
-[toc]
-
 ## There's always Trade-offs
 
 Refers to the fact that when picking an option, you're always giving up on something else; ie there is always an opportunity cost
