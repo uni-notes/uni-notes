@@ -18,10 +18,10 @@ Eg: $(\mathbb{Z}, \le), (\mathbb{Z}, \ge), (\mathbb{Z}^+ , /), (P(S) , \subseteq
 
 2. if $a \prec b$ denotes that $a \preceq b$ but $a \ne b$
 
-3. if R is a partial order relation on S, the R^-1^ is also a partial order relation on S, where $R^{-1} = \{ (b, a) | (a,b) \in R \}$
-   (S, R^-1^) is called the dual of (S, R)
+3. if R is a partial order relation on S, the $R^{-1}$ is also a partial order relation on S, where $R^{-1} = \{ (b, a) | (a,b) \in R \}$
+   (S, $R^{-1}$) is called the dual of (S, R)
 
-4. Let$a, b \in S$ where $(S, \preceq)$ is a POSET.
+4. Let $a, b \in S$ where $(S, \preceq)$ is a POSET.
    a and b are said to be comparable, if either $a \preceq b$ or $b \preceq a$
    otherwise a and b are not comparable
 
@@ -53,7 +53,7 @@ WOSET $\implies$ TOSET
 not all TOSETs are WOSETs, but all finite TOSETs are
 
 Eg: $(N, \le), (Z^+, \le), (Z^-, \ge)$
-$(Z^-, \le)$ is TOSET but not WOSET, as there is no subset ($- \infin$ is the least element)
+$(Z^-, \le)$ is TOSET but not WOSET, as there is no subset ( $-\infty$ is the least element)
 
 ## POSET/HASSE Diagram
 
@@ -140,19 +140,19 @@ eg: $(D_6, /)$
 ### Examples
 
 $$
-\left(P(S), \subseteq\right)\\A, B \in P(S): A \lor B = A \cup B, A \land B = A \cap B
+\left(P(S), \subseteq\right)\ A, B \in P(S): A \lor B = A \cup B, A \land B = A \cap B
 $$
 
 $$
-\left(P(S), \supseteq \right)\\A, B \in P(S): A \lor B = A \cap B, A \land B = A \cup B
+\left(P(S), \supseteq \right)\ A, B \in P(S): A \lor B = A \cap B, A \land B = A \cup B
 $$
 
 $$
-\left(P(S), \le\right)\\A, B \in P(S): A \lor B = \text{max}(A,B), A \land B = \text{min}(A,B)
+\left(P(S), \le\right)\ A, B \in P(S): A \lor B = \text{max}(A,B), A \land B = \text{min}(A,B)
 $$
 
 $$
-\left(D_n, / \right)\\A, B \in D_n: A \lor B = \text{lcf}(A,B), A \land B = \text{hcf}(A,B)
+\left(D_n, / \right)\ A, B \in D_n: A \lor B = \text{lcf}(A,B), A \land B = \text{hcf}(A,B)
 $$
 
 ## Semi-Lattice
@@ -181,7 +181,7 @@ Let $(L, \lor, \land)$ be an algebraic system defined by lattice $(L, \preceq)$
    1. $a \land a = a$
    2. $a \lor a = a$
 2. Commutative
-   1. $a \land b = b \and a$
+   1. $a \land b = b \land a$
    2. $a \lor b = b \lor a$
 3. Associative
    1. $(a \land b) \land c = a \land (b \land c)$
