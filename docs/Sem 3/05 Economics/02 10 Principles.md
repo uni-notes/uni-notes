@@ -300,6 +300,7 @@ If you print money without them producing anything, money loses its value and in
 However, if you print money due to increase in the country's output, then it's fine
 
 When prices of commodity increases, value of money reduces
+
 value of money $\propto \frac{1}{\text{price of commodities} }$
 
 ### Inflation
