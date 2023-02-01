@@ -6,7 +6,7 @@ Make sure to ⭐ this project on GitHub.
 
 ## Tips
 
-1. Use the navbar to go through the website
+1. Use the navbar ⬅️ to go through the website
 2. If you've got any changes/corrections:
-    - Create a pull request if you know how to correct it
-    - Create an issue, otherwise
+    - Create a GitHub pull request, if you can correct it
+    - Create an GitHub issue, if you just want to report it
