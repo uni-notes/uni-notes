@@ -22,7 +22,9 @@ but for giffen goods, $e$ is positive
 $$
 \begin{align}
 e_x^p
-%&= \frac{(x' - x)/x}{(p' - p)/p} \\&= \frac{\% \Delta x}{\% \Delta p} \\&= \frac{\color{orange} \Delta x/x}{\color{orange} \Delta p/p} \\
+&= \frac{(x' - x)/x}{(p' - p)/p} \\
+&= \frac{\% \Delta x}{\% \Delta p} \\
+&= \frac{\color{orange} \Delta x/x}{\color{orange} \Delta p/p} \\
 &= \frac{\color{orange} \Delta x}{\color{orange} \Delta p}
 \frac{\color{orange} p}{\color{orange}{x}}
 \end{align}
@@ -172,8 +174,10 @@ basically finding the relationship bw TR and demand
 - x = Total Revenue
 
 $$
-TR = xp \\
-\frac{\partial (TR)}{\partial p} = x[e_x^{p} + 1]
+\begin{align}
+TR &= xp \\
+\frac{\partial (TR)}{\partial p} &= x[e_x^{p} + 1]
+\end{align}
 $$
 
 Changes in total revenue depends on
