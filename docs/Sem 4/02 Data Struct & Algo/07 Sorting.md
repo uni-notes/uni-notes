@@ -139,7 +139,7 @@ Algorithm randomizedQuickSort(a, p, r)
 		q = randomizedPartition(a, p, r)
 		
 		randomizedQuickSort(arr, p, q - 1)  // Before pivot
-    randomizedQuickSort(arr, q + 1, r) // After pivot
+    		randomizedQuickSort(arr, q + 1, r) // After pivot
     
 Algorithm randomizedPartition(a, p, r)
 	i = random(p, r)
