@@ -21,17 +21,16 @@ Owners can expect (**not promised - not legal obligation**)
 - capital gain
 
 - dividend payments
-  $$
-  \begin{align}
-  \text{Earnings per share} &=
-  \frac{\text{net profit}}{\text{no of shares}} \\
-  
-  \text{Dividend payout rate} &=
-  \text{}
-  \end{align}
-  $$
 
-- 
+$$
+\begin{align}
+\text{Earnings per share} &=
+\frac{\text{net profit}}{\text{no of shares}} \\
+
+\text{Dividend payout rate} &=
+\text{}
+\end{align}
+$$
 
 The board decides [in consultation with CEO] whether to give out dividends or to re-invest
 
@@ -97,5 +96,4 @@ Interest rate of bond depends on
   - Long-term bond has high interest rate
 
 ## Clientele Effect
-
 

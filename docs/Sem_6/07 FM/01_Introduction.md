@@ -39,6 +39,7 @@ For risk, we have known probabilities. For eg, we can estimate inflation, etc
 Uncertainity means we have no information.
 
 Usually,
+
 $$
 \text{Trade Return} \propto \text{Risk}
 $$

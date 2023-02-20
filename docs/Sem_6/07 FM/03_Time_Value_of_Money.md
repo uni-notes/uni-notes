@@ -24,7 +24,6 @@ Return for every investment is a compensation
 $$
 \begin{align}
 \text{FV} &= \text{PV} \cdot \underbrace{(1+r)^t}_{\text{Compound Factor}} \\
-
 \text{PV} &= \frac{\text{FV}}{(1+r)^t} \\
 &= \text{FV} \cdot \underbrace{\frac{1}{(1+r)^t}}_\text{Discount Factor}
 \end{align}
