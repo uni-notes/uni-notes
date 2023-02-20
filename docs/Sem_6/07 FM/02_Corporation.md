@@ -26,7 +26,6 @@ $$
 \begin{align}
 \text{Earnings per share} &=
 \frac{\text{net profit}}{\text{no of shares}} \\
-
 \text{Dividend payout rate} &=
 \text{}
 \end{align}
