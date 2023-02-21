@@ -23,10 +23,28 @@ Return for every investment is a compensation
 
 $$
 \begin{align}
-\text{FV} &= \text{PV} \cdot \underbrace{(1+r)^t}_{\text{Compound Factor}} \\
-\text{PV} &= \frac{\text{FV}}{(1+r)^t} \\
-&= \text{FV} \cdot \underbrace{\frac{1}{(1+r)^t}}_\text{Discount Factor}
+\text{FV} &= \text{PV} \times \underbrace{(1+r)^t}_{\text{Compound Factor}} \\
+\implies \text{PV} &= \text{FV} \times \underbrace{\frac{1}{(1+r)^t}}_\text{Discount Factor}
 \end{align}
 $$
 
 In a finance interview, if you’re not sure of the answer, just say it’s compounding 😭😂
+
+## Multiple Cashflows
+
+
+$$
+\begin{align}
+\text{FV} = \sum_{i=1}^n C_i (1+r)^i \\
+\text{PV} = \sum_{i=1}^n \frac{C_i}{(1+r)^i}
+\end{align}
+$$
+
+## Types of Interest
+
+If $P =$ original principal amount
+
+| Type                    | FV                        |
+| ----------------------- | ------------------------- |
+| Simple                  | $P \times (1+r) \times t$ |
+| Compound<br />(Default) | $P \times (1+r)^t$        |
