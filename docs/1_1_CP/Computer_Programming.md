@@ -1,4 +1,8 @@
-# Intro to Programming
+## Video
+
+[My Explainer Video](https://youtu.be/IDNGU4B7Oe0)
+
+## Basics
 
 - 0/1 (bit)
 - 8 bits = 1 byte
