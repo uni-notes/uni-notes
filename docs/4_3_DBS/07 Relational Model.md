@@ -10,7 +10,7 @@ a superkey is a key that is sufficient to uniquely identify a tuple of each poss
 
 shows the different relations
 
-<img src="assets/schema.svg" class = "full" />
+![Schema Diagram Example](assets/schema.svg)
 
 ## Design
 
