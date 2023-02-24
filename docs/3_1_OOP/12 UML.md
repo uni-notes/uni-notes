@@ -85,38 +85,21 @@ The direction of a `<<includes>>` relationship is to the using use case (unlike 
 
 ``` mermaid
 classDiagram
-
 Interface <|.. Base: implements
 Base <|-- Teacher
 Base <|-- Student
 Base <.. Tester
-
 ClassRoom *-- Teacher
 ClassRoom o-- Student
-
 class Interface {
 	<<interface>>
 	+func() void
 }
-
 class Base {
 	<<abstract>>
 	#var : int
 	+func() void
 }
-
-class Teacher {
-	
-}
-
-class Student {
-	
-}
-
-class ClassRoom {
-	
-}
-
 class Tester {
 	+main() void
 }
