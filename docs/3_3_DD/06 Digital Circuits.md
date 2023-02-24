@@ -6,9 +6,9 @@
 |                                 | Combinational | Sequential               |
 | ------------------------------- | ------------- | ------------------------ |
 | output depends on               | input         | input<br />present state |
-| storage                         | N             | Y                        |
-| memory                          | N             | Y                        |
-| Feedback<br />(recursive input) | N             | Y                        |
+| storage                         | ❌            | ✅                      |
+| memory                          | ❌            | ✅                      |
+| Feedback<br />(recursive input) | ❌            | ✅                      |
 
 ## Applications of combinational circuits
 
