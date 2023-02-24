@@ -11,6 +11,10 @@ edit_uri: edit/main/docs/
 # Copyright
 # copyright: Copyright &copy; 2016 - 2023 Martin Donath
 
+nav:
+  - Section:
+      - section/index.md
+
 # Configuration
 theme:
   name: material
