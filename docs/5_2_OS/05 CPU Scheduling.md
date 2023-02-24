@@ -50,7 +50,7 @@ Time between stopping one process and starting another process, including contex
 
 ## Times
 
-|                                    |                                                              |                            |
+| Time | Meaning | Formula |
 | ---------------------------------- | ------------------------------------------------------------ | -------------------------- |
 | Arrival Time                       | **Time** at which process arrived (duh)                      |                            |
 | Burst Time                         | **Duration** of CPU execution required for a process         |                            |
