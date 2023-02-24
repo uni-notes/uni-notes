@@ -10,7 +10,7 @@ Due to the above points, we cannot use a general OS system.
 
 In this course, we are assuming that all realtime tasks are [periodic](#periodic task)
 
-## Types
+## Types of Realtime Systems
 
 |                              | Soft Realtime System       | Hard Realtime System                                         |
 | :--------------------------- | :------------------------- | :----------------------------------------------------------- |
@@ -29,137 +29,64 @@ In this course, we are assuming that all realtime tasks are [periodic](#periodic
 
 Task repeats itself at regular intervals of time
 
-## Execution Time $t$
+## Terms
 
-Time taken for a process to complete execution
+| Term | Meaning                   | Explanation                                                  |
+| ---- | ------------------------- | ------------------------------------------------------------ |
+| $t$  | Execution Time            | Time taken for a process to complete execution               |
+| $p$  | Time Period               | The interval at which the process has to repeat itself<br/>(not like time quanta in Round Robin) |
+| $d$  | Deadline                  | Time constraint for execution time $:d \le p$<br />In this course, we are assuming that $d = p$ |
+| $U$  | CPU/Processor Utilization | Fraction of utilization of available processor resources<br />$U = \sum\limits_{i=1}^n \frac{t}{p}$,<br />where $n=$ number of tasks |
 
-## Time Period $p$
+## Scheduling Algorithms
 
-(not like time quanta in Round Robin)
+Algorithms to complete a set of $n$ tasks, using a single processor, such that
 
-The interval at which the process has to repeat itself
-
-## Deadline
-
-Time constraint for execution time
-
-$$
-d \le p
-$$
-
-In this course, we are **assuming** that
-
-$$
-d = p
-$$
-
-## CPU/Processor Utilization
-
-$$
-\begin{align}
-U &= \frac{t}{\text{p}} \\
-&= \frac{\text{Execution Time}}{\text{Period}}
-\end{align}
-$$
-
-If you have multiple tasks $T_1, T_2, T_3, \dots, T_n$
-
-$$
-\begin{align}
-U &= U_1 + U_2 + \dots + U_n \\
-&= \frac{t_1}{p_1} + \frac{t_2}{p_2} + \dots + \frac{t_n}{p_n}
-\end{align}
-$$
-
-## RMS/RMA
-
-Rate-Monotic Scheduling Algorithm
-
-Schedule periodic tasks
-
-**Pre-emptive scheduling**
-
-Priority-Based Algo
-
-- Assigns **static priorities** to tasks
-- ==**shorter periods means higher priority**==
+- $d=p$
+- $t =$ constant
 
 CPU utilization is not always 100%. It is bounded to a limit, based on number of tasks in system
 
-### Assumtions
+|                                | RMS/RMA                                                      | EDF                                                          |
+| ------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Full Form                      | Rate-Monotic Scheduling Algorithm                            | Earliest Deadline First                                      |
+| Priority-Based                 | ✅                                                            | ✅                                                            |
+| Priority Type                  | Static                                                       | Dynamic                                                      |
+| High Priority for task with __ | Shortest Period                                              | Earliest Deadline                                            |
+| Schedulability Condition(s)    | - [Test of Schedulability](#Test of Schedulability)<br />- [Test of Maximum CPU Utilization Bound](#Test of Maximum CPU Utilization Bound) | - [Test of Schedulability](#Test of Schedulability) (Necessary & Sufficient Condition) |
+| Requirement                    |                                                              | Tasks must announce their deadlines to scheduler, when it becomes runnable |
 
-- $d=p$
-- $t = \text{constant}$
+### 3 Cases
 
-### Given
+|       $U_\text{tot}$        |                       RMS Schedulable?                       | EDF Schedulable? |
+| :-------------------------: | :----------------------------------------------------------: | :--------------: |
+|            $> 1$            |                              ❌                               |        ❌         |
+|     $\le U_\text{max}$      |                              ✅                               |        ✅         |
+| $U_\max < U_\text{tot} < 1$ | Inconclusive<br />(Draw [Realtime Scheduling Gantt Chart](#Realtime Scheduling Gantt Chart)) |        ✅         |
 
-- Task set with $n$ tasks
-- uni-processor
+## Testing Methods
 
-### Todo
+### Test of Schedulability
 
-Find if task set is schedulable using
+Check if $U_\text{tot} \le 1$
 
-- [Test of Schedulability](#Test of Schedulability)
-- [Test of Maximum CPU Utilization Bound](#Test of Maximum CPU Utilization Bound)
+### Test of Maximum CPU Utilization Bound
 
-### Maximum CPU Utilization Bound
+Also called as **upper bound of schedulability test**
 
-For $n$ tasks
-
+Check if $U_\text{tot} \le U_\text{max}$, where
 $$
 U_\text{max} = n(2^\frac{1}{n} - 1)
 $$
 
-### 3 Possible Outcomes
-
-|       $U_\text{tot}$        |                      Schedulable?                      |
-| :-------------------------: | :----------------------------------------------------: |
-|            $> 1$            |                           ❌                            |
-|     $\le U_\text{max}$      |                           ✅                            |
-| $U_\max < U_\text{tot} < 1$ | Inconclusive<br />(Draw graph to check schedulability) |
-
-## Earliest Deadline First
-
-Priorities of tasks changes dynamically
-
-- Earlier Deadline $\to$ High Priority
-- Later Deadline $\to$ Low Priority
-
-### Requirement
-
-Tasks must announce their deadlines to scheduler, when it becomes runnable
-
-[Test of Schedulability](#Test of Schedulability) is the only Necessary & Sufficient Condition
-
-## Test of Schedulability
-
-Check if $U_\text{tot} \le 1$
-
-## Test of Maximum CPU Utilization Bound
-
-Also called as **upper bound of schedulability test**
-
-Check if $U_\text{tot} \le U_\text{max}$
 
 - This is a **sufficient, but not necessary** condition
 - $U_\text{max}$ is called as
     - Upper bound of schedulability
     - Maximum CPU utilization bound
 
-## Realtime Scheduling Gantt Chart
+### Realtime Scheduling Gantt Chart
+
+Try scheduling the task set using a Gantt chart.
 
 If the total time to plot is not given, plot till the LCM of the periods of the processes.
-
-## Priority-Based Pre-emptive Scheduler
-
-Foreground-Background Scheduler
-
-Realtime task are given higher priority than low priority
-
-$$
-T_B = \frac{t_B}{
-1 - \sum_{i=1}^n somethign
-}
-$$
-
