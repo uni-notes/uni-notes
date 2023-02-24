@@ -128,6 +128,7 @@ requires
      - 1 enabled low
 
      - 1 enabled high
+
 | w    | x    | y    | z    | Output |
 | ---- | ---- | ---- | ---- | ------ |
 | 0    | 0    | 0    | 0    | d0     |
