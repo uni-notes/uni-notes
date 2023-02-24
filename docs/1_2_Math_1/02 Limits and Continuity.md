@@ -48,11 +48,14 @@ A function $f(x)$ is continuous @ a point $x_0$ if the following conditions are 
 
 ### Note
 
-If $f$ and $g$ are continuous functions in a domaind D, then the following functions are also continuous in all points of F
+If $f$ and $g$ are continuous functions in a domain $D$, then the following functions are also continuous in all points of F
 
 $$
-f \pm g \\fg \\
-\frac f g \\kf, &\text{k =  const}
+\begin{align}
+f \pm g \\
+fg \\
+\frac f g \\kf, & k \text{=  const}
+\end{align}
 $$
 
 The following functions are known to be continuous in their domain of definition
