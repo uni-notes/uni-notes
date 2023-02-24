@@ -35,8 +35,8 @@ In a finance interview, if you’re not sure of the answer, just say it’s comp
 
 $$
 \begin{align}
-\text{FV} = \sum_{i=1}^n C_i (1+r)^i \\
-\text{PV} = \sum_{i=1}^n \frac{C_i}{(1+r)^i}
+\text{FV} &= \sum_{i=1}^n C_i (1+r)^i \\
+\text{PV} &= \sum_{i=1}^n \frac{C_i}{(1+r)^i}
 \end{align}
 $$
 
