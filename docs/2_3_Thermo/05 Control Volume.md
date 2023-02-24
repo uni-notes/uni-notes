@@ -3,14 +3,9 @@
 $$
 \begin{align}
 \dot V &= vA \\
-\dot m &= \rho \dot V &= \rho vA \\&= \frac{\dot V}{\nu} &= \frac{vA}{\nu} 
-&&
-\begin{pmatrix}
-\begin{align}
-PV &= mRT \\ m &= PV \\
-\rho &= \frac{P}{RT}
-\end{align}
-\end{pmatrix}
+\dot m &= \rho \dot V = \rho vA \\
+&= \frac{\dot V}{\nu} = \frac{vA}{\nu} \\
+\Big( PV &= mRT, m = PV, \rho = \frac{P}{RT} \Big)
 \end{align}
 $$
 
@@ -72,12 +67,12 @@ $$
 
 ## Steady Flow Devices
 
-| Device                                | $v$  | $P$  | $T$  |                  Work                   |                                                              |
-| ------------------------------------- | :--: | :--: | :--: | :-------------------------------------: | :----------------------------------------------------------: |
-| Nozzle                                | inc  | dec  |      |                                         |                                                              |
-| Diffuser                              | dec  | inc  |      |                                         |                                                              |
-| Turbine<br />thermal $\to$ mechanical |      |      |      |          $\dot W_\text{in} = 0$           |                                                              |
-| Compressor                            |      | inc  | inc  |          $\dot W_\text{out} = 0$          |                                                              |
+| Device                                | $v$  | $P$  | $T$  |                    Work                     |                                                              |
+| ------------------------------------- | :--: | :--: | :--: | :-----------------------------------------: | :----------------------------------------------------------: |
+| Nozzle                                | inc  | dec  |      |                                             |                                                              |
+| Diffuser                              | dec  | inc  |      |                                             |                                                              |
+| Turbine<br />thermal $\to$ mechanical |      |      |      |           $\dot W_\text{in} = 0$            |                                                              |
+| Compressor                            |      | inc  | inc  |           $\dot W_\text{out} = 0$           |                                                              |
 | Throttling valve<br />(isenthalpic)   |      | dec  | dec  | $\dot W_\text{in}  = \dot W_\text{out} = 0$ | $\begin{align} h_1 &= h_2 \\ u_1 + P_1 \nu_1 &= u_2 + P_2 \nu_2 \end{align}$ |
 
 ## Unsteady/Transient Flow
@@ -95,8 +90,9 @@ $$
 
 $$
 \begin{align}
-E_\text{in} - E_\text{out} &= \Delta E_\text{cv} \\Q_\text{net} - W_\text{net} + E_\text{m, in} - E_\text{m, out} &= \Delta E_\text{cv} \\
-\Delta E_\text{cv} &= m_2 e_2 - m_1 e_1 \\e &= h + \frac{v^2}{2000} + gz
+E_\text{in} - E_\text{out} &= \Delta E_\text{cv} \\
+Q_\text{net} - W_\text{net} + E_\text{m, in} - E_\text{m, out} &= \Delta E_\text{cv} \\
+\Delta E_\text{cv} &= m_2 e_2 - m_1 e_1 \\
+e &= h + \frac{v^2}{2000} + gz
 \end{align}
 $$
-
