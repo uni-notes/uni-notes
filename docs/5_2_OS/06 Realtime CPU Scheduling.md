@@ -37,12 +37,12 @@ Algorithms to complete a set of $n$ tasks, using a single processor, such that
 
 CPU utilization is not always 100%. It is bounded to a limit, based on number of tasks in system
 
-|                                | RMS/RMA                                                      | EDF                                                          |
-| ------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Full Form                      | Rate-Monotic Scheduling Algorithm                            | Earliest Deadline First                                      |
-| Priority-Based                 | ✅                                                            | ✅                                                            |
-| Priority Type                  | Static                                                       | Dynamic                                                      |
-| High Priority for task with __ | Shortest Period                                              | Earliest Deadline                                            |
+|                                |                           RMS/RMA                            | EDF                                                          |
+| ------------------------------ | :----------------------------------------------------------: | :----------------------------------------------------------- |
+| Full Form                      |              Rate-Monotic Scheduling Algorithm               | Earliest Deadline First                                      |
+| Priority-Based                 |                              ✅                               | ✅                                                            |
+| Priority Type                  |                            Static                            | Dynamic                                                      |
+| High Priority for task with __ |                       Shortest Period                        | Earliest Deadline                                            |
 | Schedulability Condition(s)    | - [Test of Schedulability](#Test of Schedulability)<br />- [Test of Maximum CPU Utilization Bound](#Test of Maximum CPU Utilization Bound) | - [Test of Schedulability](#Test of Schedulability) (Necessary & Sufficient Condition) |
 | Requirement                    |                                                              | Tasks must announce their deadlines to scheduler, when it becomes runnable |
 
@@ -56,27 +56,8 @@ CPU utilization is not always 100%. It is bounded to a limit, based on number of
 
 ## Testing Methods
 
-### Test of Schedulability
-
-Check if $U_\text{tot} \le 1$
-
-### Test of Maximum CPU Utilization Bound
-
-Also called as **upper bound of schedulability test**
-
-Check if $U_\text{tot} \le U_\text{max}$, where
-
-$$
-U_\text{max} = n(2^\frac{1}{n} - 1)
-$$
-
-- This is a **sufficient, but not necessary** condition
-- $U_\text{max}$ is called as
-    - Upper bound of schedulability
-    - Maximum CPU utilization bound
-
-### Realtime Scheduling Gantt Chart
-
-Try scheduling the task set using a Gantt chart.
-
-If the total time to plot is not given, plot till the LCM of the periods of the processes.
+| Test                                                         | Check                                                        |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Test of Schedulability                                       | $U_\text{tot} \le 1$                                         |
+| Test of Maximum CPU Utilization Bound<br />(aka upper bound of schedulability test) | $U_\text{tot} \le n(2^\frac{1}{n} - 1)$                      |
+| Realtime Scheduling Gantt Chart                              | Scheduling the task set using a Gantt chart<br />(If the total time to plot is not given, plot till the LCM of the periods of the processes.) |
