@@ -1,23 +1,17 @@
 ## Realtime Systems
 
-Real time processes exist along normal processes
+Realtime processes exist along normal processes, and their tasks are of higher priority $\implies$ Latency should be minimized
 
-Realtime tasks are of higher priority
-
-Latency should be minimized
-
-Due to the above points, we cannot use a general OS system.
-
-In this course, we are assuming that all realtime tasks are [periodic](#periodic task)
+In this course, we are assuming that all realtime tasks are periodic, ie task repeats itself at regular intervals of time
 
 ## Types of Realtime Systems
 
-|                              | Soft Realtime System       | Hard Realtime System                                         |
-| :--------------------------- | :------------------------- | :----------------------------------------------------------- |
-| Strict deadline constraints? | ❌                          | ✅                                                            |
-| Deadline miss leads to       | Degradation in performance | failure/destruction                                          |
-| Bounded Latency?             | ❌                          | ✅                                                            |
-| Example                      | Streaming Video            | Robots in medical treatment<br />Automated chemical plant<br />Auto-missile system |
+|                              |    Soft Realtime System    |                     Hard Realtime System                     |
+| :--------------------------- | :------------------------: | :----------------------------------------------------------: |
+| Strict deadline constraints? |             ❌              |                              ✅                               |
+| Deadline miss leads to       | Degradation in performance |                     failure/destruction                      |
+| Bounded Latency?             |             ❌              |                              ✅                               |
+| Example                      |      Streaming Video       | Robots in medical treatment<br />Automated chemical plant<br />Auto-missile system |
 
 ## Types of Latency
 
@@ -25,18 +19,14 @@ In this course, we are assuming that all realtime tasks are [periodic](#periodic
 - Dispatch latency
 - Event latency
 
-## Periodic Task
-
-Task repeats itself at regular intervals of time
-
 ## Terms
 
-| Term | Meaning                   | Explanation                                                  |
-| ---- | ------------------------- | ------------------------------------------------------------ |
-| $t$  | Execution Time            | Time taken for a process to complete execution               |
-| $p$  | Time Period               | The interval at which the process has to repeat itself<br/>(not like time quanta in Round Robin) |
-| $d$  | Deadline                  | Time constraint for execution time $:d \le p$<br />In this course, we are assuming that $d = p$ |
-| $U$  | CPU/Processor Utilization | Fraction of utilization of available processor resources<br />$U = \sum\limits_{i=1}^n \frac{t}{p}$,<br />where $n=$ number of tasks |
+| Term                  | Symbol | Meaning                                                      |
+| --------------------- | :----: | ------------------------------------------------------------ |
+| Execution Time        |  $t$   | Time taken for a process to complete execution               |
+| Time Period           |  $p$   | The interval at which the process has to repeat itself<br/>(not like time quanta in Round Robin) |
+| Deadline              |  $d$   | Time constraint for execution time $:d \le p$<br />In this course, we are assuming that $d = p$ |
+| Processor Utilization |  $U$   | Fraction of utilization of available processor resources<br />$U = \sum\limits_{i=1}^n \frac{t}{p}$, where $n=$ number of tasks |
 
 ## Scheduling Algorithms
 
