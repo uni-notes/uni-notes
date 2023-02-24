@@ -1,4 +1,4 @@
-## Microprocessors and Interfacing
+# Microprocessors and Interfacing
 
 | Class     | Instructor         |
 | --------- | ------------------ |

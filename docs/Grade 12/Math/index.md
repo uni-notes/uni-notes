@@ -1,4 +1,4 @@
-## Math
+# Math
 
 These are just a few of the major math notes from grade 12.
 

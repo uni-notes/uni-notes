@@ -1,4 +1,4 @@
-## Machine Learning
+# Machine Learning
 
 Taught by Dr. Pranav M Pavar
 

@@ -1,4 +1,4 @@
-## Logic in CS
+# Logic in CS
 
 | Class    | Instructor              |
 | -------- | ----------------------- |

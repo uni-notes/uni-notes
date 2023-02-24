@@ -1,4 +1,4 @@
-## Intro
+# Intro
 
 We are using ‘Assembly Language’, which is a lower level language compared to C, C++, Java, Python, etc…
 

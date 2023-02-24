@@ -1,4 +1,4 @@
-## International Law
+# International Law
 
 Taught by Dr. Shamshad
 

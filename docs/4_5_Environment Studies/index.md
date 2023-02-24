@@ -1,4 +1,4 @@
-## Environmental Studies
+# Environmental Studies
 
 Dr. Vijaya Llango
 

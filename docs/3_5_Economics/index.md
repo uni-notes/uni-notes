@@ -1,4 +1,4 @@
-## Economics
+# Economics
 
 | Class   | Instructor               |
 | ------- | ------------------------ |

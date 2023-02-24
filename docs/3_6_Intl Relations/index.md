@@ -1,4 +1,4 @@
-## International Relations
+# International Relations
 
 | Class   | Instructor        |
 | ------- | ----------------- |

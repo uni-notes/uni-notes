@@ -1,4 +1,4 @@
-## Thermodynamics
+# Thermodynamics
 
 Taught by Dr. Shashank Khurana, Asst HOD of Mechanical Eng Dept.
 

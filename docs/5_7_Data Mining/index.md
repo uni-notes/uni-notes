@@ -1,4 +1,4 @@
-## Data Mining
+# Data Mining
 
 Taught by Dr. Angel
 

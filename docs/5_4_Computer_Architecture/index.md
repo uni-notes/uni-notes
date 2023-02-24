@@ -1,4 +1,4 @@
-## Computer Architecture
+# Computer Architecture
 
 Taught by Dr. Tamizharasan Periyasami
 

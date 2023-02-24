@@ -1,4 +1,4 @@
-## Digital Design
+# Digital Design
 
 | Class     | Instructor         |
 | --------- | ------------------ |
