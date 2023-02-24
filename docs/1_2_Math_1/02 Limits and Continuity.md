@@ -54,7 +54,8 @@ $$
 \begin{align}
 f \pm g \\
 fg \\
-\frac f g \\kf, & k \text{=  const}
+\frac f g \\
+kf, & (k \text{=  const})
 \end{align}
 $$
 
