@@ -66,8 +66,8 @@ If you have multiple tasks $T_1, T_2, T_3, \dots, T_n$
 
 $$
 \begin{align}
-U
-&= U_1 + U_2 + \dots + U_n \\&= \frac{t_1}{p_1} + \frac{t_2}{p_2} + \dots + \frac{t_n}{p_n}
+U &= U_1 + U_2 + \dots + U_n \\
+&= \frac{t_1}{p_1} + \frac{t_2}{p_2} + \dots + \frac{t_n}{p_n}
 \end{align}
 $$
 
@@ -119,6 +119,19 @@ $$
 |     $\le U_\text{max}$      |                           ✅                            |
 | $U_\max < U_\text{tot} < 1$ | Inconclusive<br />(Draw graph to check schedulability) |
 
+## Earliest Deadline First
+
+Priorities of tasks changes dynamically
+
+- Earlier Deadline $\to$ High Priority
+- Later Deadline $\to$ Low Priority
+
+### Requirement
+
+Tasks must announce their deadlines to scheduler, when it becomes runnable
+
+[Test of Schedulability](#Test of Schedulability) is the only Necessary & Sufficient Condition
+
 ## Test of Schedulability
 
 Check if $U_\text{tot} \le 1$
@@ -137,23 +150,6 @@ Check if $U_\text{tot} \le U_\text{max}$
 ## Realtime Scheduling Gantt Chart
 
 If the total time to plot is not given, plot till the LCM of the periods of the processes.
-
-## Earliest Deadline First
-
-Priorities of tasks changes dynamically
-
-- Earlier Deadline $\to$ High Priority
-- Later Deadline $\to$ Low Priority
-
-### Requirement
-
-Tasks must announce their deadlines to scheduler, when it becomes runnable
-
-### Necessary & Sufficient Condition
-
-$$
-U \le 1
-$$
 
 ## Priority-Based Pre-emptive Scheduler
 
