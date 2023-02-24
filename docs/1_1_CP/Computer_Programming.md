@@ -1,6 +1,6 @@
 ## Video
 
-[My Explainer Video](https://youtu.be/IDNGU4B7Oe0)
+[Check out my Explainer Video](https://youtu.be/IDNGU4B7Oe0)
 
 ## Basics
 
