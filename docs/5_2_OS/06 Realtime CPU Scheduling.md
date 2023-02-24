@@ -65,10 +65,10 @@ Check if $U_\text{tot} \le 1$
 Also called as **upper bound of schedulability test**
 
 Check if $U_\text{tot} \le U_\text{max}$, where
+
 $$
 U_\text{max} = n(2^\frac{1}{n} - 1)
 $$
-
 
 - This is a **sufficient, but not necessary** condition
 - $U_\text{max}$ is called as
