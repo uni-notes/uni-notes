@@ -57,8 +57,8 @@ $$
 
 $$
 \begin{align}
-U
-&= \frac{t}{\text{p}} \\&= \frac{\text{Execution Time}}{\text{Period}}
+U &= \frac{t}{\text{p}} \\
+&= \frac{\text{Execution Time}}{\text{Period}}
 \end{align}
 $$
 
