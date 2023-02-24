@@ -33,7 +33,8 @@ $M = i_0 {s_0}' + i_1 s_0$
 
 - 4 inputs
 - 1 output
-- 2 selection lines
+- 2 selection lines 
+
 | s0   | s1   | M     |
 | ---- | ---- | ----- |
 | 0    | 0    |$i_0$ |
@@ -75,14 +76,16 @@ MSD will be the selection line for the last mux
 ### 4x1 using 2-1
 
 $$
-n_\text{req} = 4 \\n_\text{available} = 2 \\
-4/2 = 2, 2/2 = 1 \implies \text{no of muxes}= 2 + 1 = 3
+n_\text{req} = 4 \\
+n_\text{available} = 2 \\
+4/2 = 2, 2/2 = 1 \implies \text{no of muxes} = 2 + 1 = 3
 $$
 
 ### 8x1 using 2-1
 
 $$
-n_\text{req} = 8 \\n_\text{available} = 2 \\
+n_\text{req} = 8 \\
+n_\text{available} = 2 \\
 8/2 = 4, 4/2 = 2, 2/2 = 1 \implies \text{no of muxes}= 4 + 2 + 1 = 7
 $$
 
@@ -95,7 +98,8 @@ $8/4 = 2; 2/2 = 1$
 ### 16x1 using 4x1
 
 $$
-n_\text{req} = 16 \\n_\text{available} = 4 \\
+n_\text{req} = 16 \\
+n_\text{available} = 4 \\
 16/4 = 4, 4/4 = 1 \implies \text{no of muxes}= 4 + 1 = 5
 $$
 
