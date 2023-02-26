@@ -4,7 +4,7 @@ li:not(li:has(.md-nav__link--active)):not(:hover) label
     opacity: 0.5;
 }
 
-li:has(.md-nav__link--active) a,
+.md-nav__link--active,
 li:has(.md-nav__link--active) label
 {
     font-weight: bold;
