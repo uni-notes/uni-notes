@@ -128,8 +128,8 @@ true for at least one interpretation
 
 ### Conclusions
 
-- A is valid$\iff \lnot A$ is un-satisfiable
-- A is satisfiable$\iff \lnot A$ is invalid
+- A is valid $\iff \lnot A$ is un-satisfiable
+- A is satisfiable $\iff \lnot A$ is invalid
 
 ## CNF
 
@@ -139,7 +139,7 @@ basically POS
 2. clause
 3. formula
 
-$\underbrace{ ( \underbrace{p}_\text{literal} \lor q) \and \underbrace{(r \lor s)}_\text{clause}  }_\text{formula}$
+$\underbrace{ ( \underbrace{p}_\text{literal} \lor q) \land \underbrace{(r \lor s)}_\text{clause}  }_\text{formula}$
 
 if $p$ and $p’$ both exist within all clauses, all clauses are true
 then formula is valid
