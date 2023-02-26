@@ -4,6 +4,12 @@ li:not(li:has(.md-nav__link--active)):not(:hover) label
     opacity: 0.5;
 }
 
+li:has(.md-nav__link--active) a,
+li:has(.md-nav__link--active) label
+{
+    font-weight: bold;
+}
+
 /* latin */
 @font-face {
   font-family: 'Roboto';
