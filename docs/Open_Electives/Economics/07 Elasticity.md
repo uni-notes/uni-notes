@@ -69,10 +69,11 @@ proportional change may be % change
 
 $$
 \begin{align}
-e_{x_1}^{p_2} 
-%&= \frac{(x' - x)/x}{(p' - p)/p} \\&= \frac{\% \Delta x_1}{\% \Delta p_2} \\&= \frac{\color{orange} \Delta x_1/x_1}{\color{orange} \Delta p_2/p_2} \\
-&= \frac{\color{orange} \Delta x_1}{\color{orange} \Delta p_2}
-\frac{\color{orange} p_2}{\color{orange}{x_1}}
+e_{x_1}^{p_2} \%
+&= \frac{(x' - x)/x}{(p' - p)/p} \\
+&= \frac{\% \Delta x_1}{\% \Delta p_2} \\
+&= \frac{\color{orange} \Delta x_1/x_1}{\color{orange} \Delta p_2/p_2} \\
+&= \frac{\color{orange} \Delta x_1}{\color{orange} \Delta p_2} \frac{\color{orange} p_2}{\color{orange}{x_1}}
 \end{align}
 $$
 
