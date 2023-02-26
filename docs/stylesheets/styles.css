@@ -1,11 +1,11 @@
-li:not(li:has(.md-nav__link--active)):not(nav:hover li) a,
-li:not(li:has(.md-nav__link--active)):not(nav:hover li) label
+nav li:not(li:has(.md-nav__link--active)):not(nav:hover li) a,
+nav li:not(li:has(.md-nav__link--active)):not(nav:hover li) label
 {
     opacity: 0.5;
 }
 
-.md-nav__link--active,
-li:has(.md-nav__link--active) label
+nav .md-nav__link--active,
+nav li:has(.md-nav__link--active) label
 {
     font-weight: bold;
 }
