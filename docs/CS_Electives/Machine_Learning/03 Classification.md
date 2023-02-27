@@ -236,14 +236,10 @@ S_1 = \begin{bmatrix}
 $$
 
 $$
-\text{Cov}(x_j, x_k) = 
-\frac{1}{n_j - 1}
-\sum_{i=1, x \in C_j}^{n_1}
-(x_i - \mu_1)(x_i - \mu_1) \\   
-\text{Cov}(x_1, x_1) = 
-\frac{1}{n_1 - 1}
-\sum_{i=1, x \in C_1}^{n_1}
-(x_i - \mu_1)^2
+\begin{align}
+\text{Cov}(x_j, x_k) &= \frac{1}{n_j - 1} \sum_{i=1, x \in C_j}^{n_1} (x_i - \mu_1)(x_i - \mu_1) \\   
+\text{Cov}(x_1, x_1) &= \frac{1}{n_1 - 1} \sum_{i=1, x \in C_1}^{n_1} (x_i - \mu_1)^2
+\end{align}
 $$
 
 2. Find between-class scatter matrix
