@@ -1,4 +1,4 @@
-# Financial Management
+## Financial Management
 
 This course covers concepts relevant to managing finances of a corporation.
 
