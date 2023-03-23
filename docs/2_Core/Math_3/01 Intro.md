@@ -64,7 +64,7 @@ $$
 
 ## Integration Rules
 
-[Grade 12 Integration Rules](..\..\Grade 12\Math\02 Integration.md)
+[Grade 12 Integration Rules](../../School/Math/02_Integration.md)
 
 ## Transposed Differential
 
