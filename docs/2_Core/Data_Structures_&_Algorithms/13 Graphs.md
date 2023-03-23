@@ -1,4 +1,4 @@
-[Discrete Graphs](../../Sem 3/04 Discrete/04 Graphs.md) 
+[Discrete Graphs](../Discrete_Structures/04_Graphs.md) 
 
 Graphs without parallel edges and self loops are called as simple graphs.
 
