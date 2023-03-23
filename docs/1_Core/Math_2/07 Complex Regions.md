@@ -2,7 +2,7 @@
 
 A set where **any** 2 points can be joined without leaving the set
 
-Refer to [Types of Sets](..\Math_1\04_Partial_Derivatives.md#Types of Sets)
+Refer to [Types of Sets](../Math_1/04_Partial_Derivatives.md#Types of Sets)
 
 - open' = closed
 - closed' = open
