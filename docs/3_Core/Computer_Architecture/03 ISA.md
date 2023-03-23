@@ -1,5 +1,5 @@
-- [MIPS_Instruction_Set.pdf](assets\MIPS_Instruction_Set.pdf)
-- [MIPS_Instruction_Format.pdf](assets\MIPS_Instruction_Format.pdf) 
+- [MIPS_Instruction_Set.pdf](assets/MIPS_Instruction_Set.pdf)
+- [MIPS_Instruction_Format.pdf](assets/MIPS_Instruction_Format.pdf) 
 
 ## Starter Program
 
