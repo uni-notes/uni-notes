@@ -128,7 +128,7 @@ end
 
 ## Missed this class
 
-[Lec20.pdf](assets\Lec20.pdf) 
+[Lec20.pdf](assets/Lec20.pdf) 
 
 ## Terms
 
