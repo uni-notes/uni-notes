@@ -221,7 +221,7 @@ main:
 end main
 ```
 
-## Floating Point Example
+## MIPS Floating Point Examples
 
 ### Area of Circle
 
@@ -246,7 +246,7 @@ main:
   syscall
 ```
 
-### $\text{°F \to °C}$
+### °F $\to$ °C
 
 ```assembly
 .data
