@@ -1,6 +1,6 @@
 ## Trade
 
-is a voluntary transaction, where both sides are happier
+Voluntary transaction between parties, resulting in their betterment.
 
 Trade offs are there as everything has pros/cons, gains/costs; other options could have been chosen, but did not as the customer takes the best option
 
@@ -29,7 +29,8 @@ For a recession, incentivize
 
 2. consumer spending by
    1. direct income transfers to people/universal basic income
-      1. only good up to a limit - too much is bad cuz inflation
+      
+      only good up to a limit - too much is bad due to inflation
    2. reducing taxes
 
 ## Methodology
