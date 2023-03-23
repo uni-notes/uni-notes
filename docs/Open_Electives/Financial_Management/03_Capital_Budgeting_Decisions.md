@@ -39,6 +39,7 @@ $$
 ## IRR (Primary)
 
 Internal Rate of Return
+
 $$
 \text{IRR} = \text{Rate @ which NPV is 0}
 $$
@@ -58,6 +59,7 @@ $$
 $$
 
 For every 1 unit of investment
+
 $$
 \begin{align}
 &\text{Additional value generated after taking minimum returns} \\

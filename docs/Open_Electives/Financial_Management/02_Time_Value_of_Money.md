@@ -41,6 +41,7 @@ $$
 $$
 
 If one of the cashflow happens in first year itself, then it will be
+
 $$
 \text{PV} = c_0 + \sum_{t=1} \frac{c_t}{(1+r)^t}
 $$
@@ -92,11 +93,13 @@ Annual Percentage Rate
 Effective Annual Rate
 
 The actual interest rate you are paying
+
 $$
 \text{EAR } = \left(
 1 + \frac{\text{APR}}{m}
 \right)^m - 1
 $$
+
 where $m =$ interest compounding frequency
 
 This is the value of $r$ we use when calculating present/future value
