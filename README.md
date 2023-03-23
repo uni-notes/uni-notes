@@ -18,4 +18,4 @@ Make sure to ⭐ this project on GitHub. Feel free to share this to everyone you
 
 ## License
 
-https://github.com/AhmedThahir/Notes_Shared/blob/2a3179bdc266a97cc93b85c5defe31748b908fe3/license#L1-L21
+https://github.com/AhmedThahir/Uni_Notes/blob/2a3179bdc266a97cc93b85c5defe31748b908fe3/license#L1-L21
