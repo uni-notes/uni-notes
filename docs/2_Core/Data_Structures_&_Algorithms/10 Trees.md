@@ -6,7 +6,7 @@ Used for computing spaced used by a directory’s files and sub-directories.
 
 ## Properties
 
-Refer to [05 Trees](../../Sem 3/04 Discrete/05 Trees.md) 
+Refer to [05 Trees](../Discrete_Structures/05_Trees.md) 
 
 ## Subtrees
 
