@@ -1,10 +1,20 @@
 # Welcome!
 
-Feel free to share this to everyone you know. Make sure to ⭐ this project!
+Hi there, I'm Ahmed Thahir. These are the lecture notes I've taken over the years. Hope they help you!
 
-If you want to publish this on your own, make sure to give due credit, to help support this project :)
+Make sure to ⭐ this project on GitHub. Feel free to share this to everyone you know.
 
-These notes are **not affiliated** to any university, club, association.
+## Tips
+
+- Use the navbar ⬅️ to go through the website
+- If you've got any changes/corrections:
+    - Create a GitHub pull request, if you can correct it
+    - Create an GitHub issue, if you just want to report it
+
+## Disclaimers
+
+- If you want to publish this on your own, **make sure to give due credit**, to help support this project :)
+- These notes are **not affiliated** to any university, club, association.
 
 ## License
 
