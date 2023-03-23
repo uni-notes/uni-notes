@@ -1,7 +1,10 @@
-.md-nav.md-nav--primary li:not(li:has(.md-nav__link--active)):not(.md-nav.md-nav--primary:hover li) a,
-.md-nav.md-nav--primary li:not(li:has(.md-nav__link--active)):not(.md-nav.md-nav--primary:hover li) label
+@media (orientation: landscape)
 {
-    opacity: 0.3;
+    .md-nav.md-nav--primary li:not(li:has(.md-nav__link--active)):not(.md-nav.md-nav--primary:hover li) a,
+    .md-nav.md-nav--primary li:not(li:has(.md-nav__link--active)):not(.md-nav.md-nav--primary:hover li) label
+    {
+        opacity: 0.3;
+    }
 }
 
 .md-nav.md-nav--primary .md-nav__link--active,
