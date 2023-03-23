@@ -453,7 +453,7 @@ $$
 
 Same as Data Mining
 
-[Classification Accuracy Metrics](07 Supervised_Learning.md#Classification Accuracy Metrics)
+[Classification Accuracy Metrics](../Data_Mining/07_Classification.md#Classification Accuracy Metrics)
 
 ### Classification Report
 
