@@ -28,10 +28,11 @@ Lower the WACC the better
 
 $$
 \begin{align}
-\text{WACC} & \\
-= w_d &\times k_d (1-\tau) + \\
-w_{ps} &\times k_{ps} + \\
-w_{cs} &\times k_{cs}
+\text{WACC} 
+= \quad
+& w_d  \times k_d (1-\tau) \\
++ & w_{ps} \times k_{ps} \\
++ & w_{cs} \times k_{cs}
 \end{align}
 $$
 
