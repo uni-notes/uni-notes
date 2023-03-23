@@ -1,11 +1,11 @@
 # site_url: https://squidfunk.github.io/mkdocs-material/
-site_name: Ahmed Thahir Notes
+site_name: Uni Notes
 site_author: Ahmed Thahir
 site_description: >-
-  My notes taken over the years
+  Ahmed Thahir's notes taken over the years
 # Repository
-repo_name: ahmedthahir/notes_shared
-repo_url: https://github.com/ahmedthahir/notes_shared
+repo_name: ahmedthahir/Uni_Notes
+repo_url: https://github.com/ahmedthahir/Uni_Notes
 edit_uri: edit/main/docs/
 
 # Copyright
