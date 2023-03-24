@@ -2,7 +2,7 @@
 
 Pipelining improves efficiency by executing multiple instructions simultaneously (through overlapped execution)
 
-Pipelining produces [speedup](#Speedup), while maintaining similar datapath
+Pipelining produces [speedup](#speedup), while maintaining similar datapath
 
 Assume time for stages is
 
