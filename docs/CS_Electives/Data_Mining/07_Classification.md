@@ -73,12 +73,13 @@ To analyze the classification
 | --------------------------------------------------- | ------------------------------------------------------------ | :----------------------------------------------------------: |
 | **Accuracy**                                        | $\frac{\text{Correct Predictions}}{\text{No of predictions}}$ |      $\frac{\text{TP + TN}}{\text{TP + FP + TN + FN}}$       |
 | **Error**                                           | $\frac{\text{Wrong Predictions}}{\text{No of predictions}}$  | $\begin{align} & 1 - \text{Accuracy} \\ &\frac{\text{FP + FN}}{\text{TP + FP + TN + FN}}\end{align}$ |
-| **Recall**<br />Sensitivity<br />True Positive Rate | How many actual +ve values were correctly predicted as +ve   | $\frac{\text{\textcolor{hotpink}{TP}}}{\text{\textcolor{hotpink}{TP} + FN}}$ |
-| **Precision**<br />Positive Predictive Value        | Out of actual +ve values, how many were correctly predicted as +ve | $\frac{\text{\textcolor{hotpink}{TP}}}{\text{\textcolor{hotpink}{TP} + FP}}$ |
-| **Specificity**<br />True Negative Rate             | Out of actual -ve values, how many were correctly predicted as -ve | $\frac{\text{\textcolor{hotpink}{TN}}}{\text{\textcolor{hotpink}{TN} + FP}}$ |
+| **Recall**<br />Sensitivity<br />True Positive Rate | How many actual +ve values were correctly predicted as +ve   | $\frac{\textcolor{hotpink}{TP}}{\textcolor{hotpink}{TP} + \text{FN}}$ |
+| **Precision**<br />Positive Predictive Value        | Out of actual +ve values, how many were correctly predicted as +ve | $\frac{\textcolor{hotpink}{TP}}{\textcolor{hotpink}{TP} + \text{FP}}$ |
+| **Specificity**<br />True Negative Rate             | Out of actual -ve values, how many were correctly predicted as -ve | $\frac{\textcolor{hotpink}{TN}}{\textcolor{hotpink}{TN} + \text{FP}}$ |
 | **F Score**<br />F~1~ Score<br />F-Measure          | Harmonic mean between precision and recall<br />Close to lower value | $\frac{2 \times \text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}$ |
-| FP Rate                                             | Out of the actual -ve, how many were misclassified as Positive | $\begin{align}\alpha &= \frac{\text{\textcolor{hotpink}{FP}}}{\text{\textcolor{hotpink}{FP}+TN}} \\ &= 1 - \text{Specificity} \end{align}$ |
-| FN Rate                                             | Out of the actual +ve, how many were misclassified as Negative | $\begin{align}\beta &= \frac{\text{\textcolor{hotpink}{FN}}}{\text{\textcolor{hotpink}{FN} + TP}} \\ &= 1 - \text{Sensitivity} \end{align}$ |
+| FP Rate                                             | Out of the actual -ve, how many were misclassified as Positive | $\begin{align}\alpha &= \frac{\textcolor{hotpink}{FP}}{\textcolor{hotpink}{FP} + \text{TN}} \\ &= 1 - \text{Specificity} \end{align}$ |
+| FN Rate                                             | Out of the actual +ve, how many were misclassified as Negative | $\begin{align}\beta &= \frac{\textcolor{hotpink}{FN}}{\textcolor{hotpink}{FN} + \text{TP}} \\ &= 1 - \text{Sensitivity} \end{align}$ |
+
 ## Binary Classification
 
 2-class classification
