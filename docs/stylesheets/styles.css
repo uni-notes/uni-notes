@@ -13,6 +13,12 @@
     font-weight: bold;
 }
 
+.md-typeset iframe
+{
+    height: 50vh;
+    width: 100%;
+}
+
 /* latin */
 @font-face {
   font-family: 'Roboto';
