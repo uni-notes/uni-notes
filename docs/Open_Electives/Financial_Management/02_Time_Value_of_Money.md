@@ -35,17 +35,17 @@ In a finance interview, if you’re not sure of the answer, just say it’s comp
 
 $$
 \begin{align}
-\text{FV} &= \sum_{t=1} c_t (1+r)^t \\
-\text{PV} &= \sum_{t=1} \frac{c_t}{(1+r)^t}
+\text{FV} &= \sum_{t=0} c_t (1+r)^t \\
+\text{PV} &= \sum_{t=0} \frac{c_t}{(1+r)^t}
 \end{align}
 $$
 
-If one of the cashflow happens in first year itself, then it will be
+where $c_t$ can be
 
-$$
-\text{PV} = c_0 + \sum_{t=1} \frac{c_t}{(1+r)^t}
-$$
-
+| Flow Type |         |
+| --------- | ------- |
+| Inflow    | $c_t>0$ |
+| Outflow   | $c_t<0$ |
 
 ## Types of Interest
 
