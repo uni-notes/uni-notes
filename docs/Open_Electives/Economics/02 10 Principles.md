@@ -423,15 +423,18 @@ Depression --> Recovery --> Boom --> Recession --> Depression
 
 ### Phillips Curve Relation
 
-y-axis = inflation
-x-axis = unemployment
-
-inflation $\propto \frac{1}{\text{unemployment}}$
+- y-axis = inflation
+- x-axis = unemployment
 
 $$
-\pi_t = \alpha - \beta U_t \qquad  (\pi_t = - \beta U_t + \alpha, \ y = mx+c)\\
-\text{Taking derivative wrt } \pi_t \\
-\beta = - \frac{d \pi_t}{dt}
+\text{Inflation} \propto \frac{1}{\text{Unemployment}}
+$$
+
+$$
+\begin{align}
+\pi_t &= \alpha - \beta U_t &  (\pi_t = - \beta U_t + \alpha, \ y = mx+c) \\
+\text{Taking derivative wrt } \pi_t \implies \beta &= - \frac{d \pi_t}{dt}
+\end{align}
 $$
 
 - $\pi_t =$ Inflation
@@ -452,9 +455,9 @@ Moreover, workers suffer money illusion (only focus on the nominal income increa
 
 Then in the long run, few months later, the employees will renegotiate for higher wages; then the producers will hesitate as they no longer see the attraction for producing at such large volume and paying such wages; so they fire employees; therefore, the unemployment rate will increase again
 
-#### Extra
+#### Inflation, Employment, Output
 
-inflation $\propto$ employment
-
-As output increases with employment, output $\propto$ inflation
+$$
+\text{Output} \propto \text{Employment} \propto \text{Inflation}
+$$
 
