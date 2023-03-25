@@ -35,17 +35,14 @@ D &= f(P) \\&= \alpha_1 - \alpha_2 P \\
 \end{align}
 $$
 
-- $x =$ demand
-- $P =$ price
-- $\alpha_1 =$ the demand even the commodity is free
+| Term       | Meaning                                                      |
+| ---------- | ------------------------------------------------------------ |
+| $x$        | Demand                                                       |
+| $P$        | Price                                                        |
+| $\alpha_2$ | Sensitivity of demand wrt price<br />The no of units of demand decreases by when the price increases by 1 unit<br /> - Necessities have low sensitivity<br/> - Luxury goods have high sensitivity |
+| $\alpha_1$ | Demand even when commodity is free<br />Captures impact of all other factors that affect the demand (Income of consumers, advertising, etc) |
 
-    - impact of all other factors that affect the demand 
-    - income of consumers
-    - advertising etc 
-- $\alpha_2 =$ sensitivity of demand with respect to price
-  the no of units of demand decreases by when the price increases by 1 unit
-    - necessities have low sensitivity
-    - luxury goods have high sensitivity
+### Graph Characteristics
 
 |                | Horizontal Graph                                             | Vertical Graph                                               |
 | -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -88,44 +85,22 @@ $$
 
 More income and wealth means more spending and hence, higher demand
 
-income is flow of money currently
-wealth is what we have accumulated over time
+- Income is flow of money currently
+- Wealth is what we have accumulated over time
 
-#### +ve
+| Relationship<br />Type | Elastic<br />Demand? | Shift in<br />individual demand curve | Consumption at<br />same price |          Example          |
+| :--------------------: | :------------------: | :-----------------------------------: | :----------------------------: | :-----------------------: |
+|          +ve           |          ✅           |               Rightward               |            Greater             |       Luxury Items        |
+|        Neutral         |          ❌           |                 None                  |              Same              |       Staple foods        |
+|          -ve           |          ✅           |               Leftward                |             Lower              | Inferior and Giffen goods |
 
-eg: luxury items
+#### Types of Goods based on Income Elasticity
 
-individual demand curve will have a rightward shift; ie greater consumption at same price
-
-#### neutral
-
-inelastic demand
-
-eg: food
-
-#### -ve
-
-individual demand curve will have a leftward shift; ie lower consumption at same price
-
-inferior and giffen goods
-
-#### Superior good
-
-if the demand inc with inc in income
-
-Eg: smartphones,  LEDs, cars
-
-#### Necessities
-
-inelastic
-
-Eg: Rice
-
-#### Inferior
-
-if the demand dec with inc in income
-
-eg: B/W TV, tungsten bulbs, public transport
+| Type        | Income Elasticity |                                          |
+| ----------- | :---------------: | ---------------------------------------- |
+| Superior    |        +ve        | Smartphones, LED TVs, Cars               |
+| Necessities |         0         | Staple foods                             |
+| Inferior    |        -ve        | B/W TV, tungsten bulbs, public transport |
 
 ### Price of Other goods
 
@@ -139,42 +114,40 @@ hence, if
 - $\alpha_3 > 0$ substitute
 - $\alpha_3 < 0$ complimentary
 
-#### Complimentary goods
+#### Types of Goods based on Income Elasticity
 
-are goods that are consumed together
-
-eg: car and petrol
-
-#### Substitute Goods
-
-substitute for each other
-
-Eg: Pepsi and coke
+|                     |                                           | Example      |
+| ------------------- | ----------------------------------------- | ------------ |
+| Complimentary goods | Goods that are consumed together          | Car & Petrol |
+| Substitute Goods    | Goods that are alternatives of each other | Pepsi & Coke |
 
 ### Tastes/Preferences
 
 idk how to write this
 
-### Expectations
+### Customer Expectations
 
-- expected price - what I predict to be the price of the commodity in the future
-    - if expected price > current price, then demand increases
-    - which ends up increasing the price; whether or not it would’ve happened naturally, nobody will know :laughing:
-      here, our expectations clearly affects the actual outcome
-    - if expected price < current price, then demand decreases
-- expected income - what I predict to be my income in the future
+| Expectation    | Meaning                                                      | Explanation                                                  |
+| -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Expected Price | What I predict to be the price of the commodity in the future | If expected price > current price, then demand increases, which ends up increasing the price; whether or not it would’ve happened naturally, nobody will know 😆; here, our expectations clearly affects the actual outcome<br />If expected price < current price, then demand decreases |
+| Expected       | What I predict to be my income in the future                 |                                                              |
 
 ### Market Size
 
-no of buyers
+No of buyers in the market
 
-more the buyers, greater the demand
+$$
+\text{Demand} \propto \text{Market Size}
+$$
 
-### Advertising
+### Advertising Expenditure
 
-does not affect the product, but only changes the perception of the product in consumers’ heads
+Does not affect the product, but changes the perception of the product in consumers’ heads
 
-better the advertising, greater the demand
+$$
+\text{Demand} \propto \text{Advertising Expenditure}
+$$
+
 
 ### Season/Time of the Year
 
@@ -201,9 +174,7 @@ $S = \beta_1 + \beta_2 P_{t}$
 
 $S = \beta_1 + \beta_2 P_{t-1}$
 
-for commodities with large gestation period
-
-agricultural
+For commodities with large gestation period, such as agricultural
 
 ### Terms
 
@@ -215,23 +186,28 @@ agricultural
 - y = P
 - x = S
 
-Outward shift means greater supply for the same price
-inward shift means lower supply for the same price
+| Shift   | Supply for the same price |
+| ------- | ------------------------- |
+| Outward | Greater                   |
+| Inward  | Lower                     |
 
 All points on the supply curve show the optimal supplies
-any point inside/outside the supply curve will not provide maximum profit
+Any point inside/outside the supply curve will not provide maximum profit
 
 ### Individual Supply
 
-every firm has different supply curve due to difference in cost structures
+Every firm has different supply curve due to difference in cost structures
 
-greater the scale, lower the cost (due to Benefits of Scale)
+$$
+\text{Cost} \propto \frac{1}{\text{Scale}} \quad (\because \text{Benefits of Scale})
+$$
+
 
 ### Market Supply
 
-total supply for a commodity in a market at a particular price
+Total supply for a commodity in a market at a particular price
 
-summation of supplies of commodity by different firms at particular prices
+Summation of supplies of commodity by different firms at particular prices
 
 ## Factors of Supply
 
@@ -294,34 +270,28 @@ we can also draw a graph and obtain the point of interception of the supply and 
 
 Whenever there is a disequilibrium, the market automatically adjusts the price
 
-- Surplus (excess supply/low demand) when 
-    - actual price > equilibrium price
-    - buyers do not want to buy
-    - actual price will reduce to equilibrium price automatically, as there is low demand
-- Shortage (excess demand/low supply) when 
-    - actual price < equilibrium price
-    - sellers do not want to sell
-    - only those who are willing and able to continue buying do so; others stop buying
-    - actual price will increase to equilibrium price automatically, as there is low supply
+|                           | Surplus                                                      | Shortage                                                     |
+| ------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Characteristic            | Excess Supply/<br />Low Demand                               | Excess Demand/<br />Low Supply                               |
+|                           | Buyers not willing to buy                                    | Sellers not willing to sell                                  |
+| Price                     | Actual > Equilibrium                                         | Actual < equilibrium                                         |
+| Automatic<br />Correction | Actual price will reduce to equilibrium price automatically, as there is low demand | actual price will increase to equilibrium price automatically, as there is low supply |
+
 
 Automatic market correction mechanism always occurs, given that
 
-1. prices are flexible
-2. market free from government intervention
-3. both buyers and sellers are equally-informed about the market
-    (internet has helped with making information symmetric)
-    otherwise there will be one or more of the following
-    - sellers will manipulate buyers
-    - all the sellers will be selling bad products, as it more profitable to do so
-    - company recruiters will only get bad candidates as the salary they provide will be amazing for bad candidates, but too low for good candidates
-    so only the bad candidates will end up accepting the job
-    - buyers will be hesitant to pay higher price, even when the seller is justified to ask that much
+1. Prices are flexible
+2. Market free from government intervention
+3. Both buyers and sellers are equally-informed about the market (internet has helped with making information symmetric); otherwise there will be one or more of the following
+   - sellers will manipulate buyers
+   - all the sellers will be selling bad products, as it more profitable to do so
+   - company recruiters will only get bad candidates as the salary they provide will be amazing for bad candidates, but too low for good candidates
+     so only the bad candidates will end up accepting the job
+   - buyers will be hesitant to pay higher price, even when the seller is justified to ask that much
 
 #### Govt
 
-Black market (not the illegal market one) is a market that sells commodity at price cheaper than govt-issued price
-
-Whenever there is govt intervention in market dis-equilibrium, there will be always be a tendency for the existence of a parallel black market
+Whenever there is govt intervention in market dis-equilibrium, there will be always be a tendency for the existence of a parallel black market. Black market (not the illegal market one) is a market that sells commodity at price cheaper than govt-issued price.
 
 ### Events
 
@@ -333,46 +303,40 @@ Whenever there is govt intervention in market dis-equilibrium, there will be alw
 
 [Equilibrium Geogebra](demo/equilibrium.ggb)
 
-rightward/leftward shift of the demand and supply curve is due to change in factors other than price
-change in the constant
-
-angular upward/downward shift is due to change in price
-change in the coefficient of price
+| Direction of Shift in Demand & Supply Curve | Cause                          | Meaning                            |
+| ------------------------------------------- | ------------------------------ | ---------------------------------- |
+| Right/Left                                  | Change in constant             | Change in factors other than price |
+| Angular upward/downward                     | Change in coefficient of price | Change in price                    |
 
 Imagine an auction
 
-|              | Supply const       | Supply inc              | Supply dec              |
-| ------------ | ------------------ | ----------------------- | ----------------------- |
-| demand const | P same<br />Q same | P ⬇<br />Q ⬆            | P ⬆<br />Q ⬇            |
-| demand inc   | P ⬆<br />Q ⬆       | P ambiguous<br />Q ⬆    | P ⬆<br />Q ambiguous    |
-| demand dec   | P ⬇<br />Q ⬇       | P ⬇<br />Q ambiguous    | P ambiguous<br />Q ⬇    |
+|              | Supply const       | Supply inc           | Supply dec           |
+| ------------ | ------------------ | -------------------- | -------------------- |
+| demand const | P same<br />Q same | P ⬇<br />Q ⬆         | P ⬆<br />Q ⬇         |
+| demand inc   | P ⬆<br />Q ⬆       | P ambiguous<br />Q ⬆ | P ⬆<br />Q ambiguous |
+| demand dec   | P ⬇<br />Q ⬇       | P ⬇<br />Q ambiguous | P ambiguous<br />Q ⬇ |
 
-ambiguous –> it depends on the relative change bw the supply and demand
+Ambiguous –> it depends on the relative change bw the supply and demand
 
 ## Misc
 
 ### Black Money
 
-the money isn’t illegal
-
-the problem is that the transaction is invalid
-
-the transaction was not recorded to avoid paying taxes for the transaction
+The money isn’t necessarily illegal, the problem is that the transaction is unofficial, to avoid paying taxes for the transaction.
 
 ### Demonetization
 
-they assumed that all black wealth is in the form of cash
-but if you look at data, 0.0002% of total wealth is in the form of cash, and only around 1% of black wealth is in cash
+They assumed that all black wealth is in the form of cash, but if you look at data
+- 0.0002% of total wealth is in the form of cash
+- only ~1% of black wealth is in cash
 
-demerits were the cost of
+Demerits were the cost of
+- Printing the notes
+- Time of people in queues wasted and hence they did not perform productively
+- Informal sector shops lost everything, due to the above
 
-- printing the notes
-- time of people in queues wasted and hence they did not perform productively
-- because of the above, informal sector shops lost everything
+It mainly did one thing: introduction of a new commodity: old currency
 
-it did only one thing, one more commodity got introduced: old currency lol ahahah :laughing:
+### Fake Currency
 
-Fake currency is only an issue if it facilitates illegal activities.
-However, as long as fake currency is used for legal activities, then there is no problem from the perspective of economics.
-But at the same time, if the proportion of fake money increases, then there is fear of inflation
-
+Fake currency is only an issue if it facilitates illegal activities. However, as long as fake currency is used for legal activities, then there is no problem from the perspective of economics. However, if the proportion of fake money is too large, then there is risk of inflation
