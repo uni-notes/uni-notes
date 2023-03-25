@@ -210,7 +210,7 @@ Depends on
 
 ### Medium Term Scheduler Flowchart
 
-![image-20221102214523197](assets/image-20221102214523197.png)
+![image-20221102214523197](assets/image-20221102214523197.png){ loading=lazy }
 ### Degree of multi-programming
 
 No of programs kept in primary memory
@@ -245,7 +245,7 @@ set of all processes in system
 
 stored in secondary memory
 
-![job_queue](assets/job_queue.svg)
+![job_queue](assets/job_queue.svg){ loading=lazy }
 
 ### Ready Queue
 

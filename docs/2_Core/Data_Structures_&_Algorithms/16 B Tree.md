@@ -2,7 +2,7 @@ Generalized and ordered BST, where each node contains children as linked list, r
 
 It is used for data storage and access in hard disks.
 
-![](assets/B_Tree.svg)
+![](assets/B_Tree.svg){ loading=lazy }
 
 | Feature            |                        Formula                        |
 | ------------------ | :---------------------------------------------------: |

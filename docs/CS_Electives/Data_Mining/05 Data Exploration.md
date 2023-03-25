@@ -136,13 +136,13 @@ $$
 
 1. Degree of freedom something
 
-![image-20221018122654103](assets//image-20221018122654103.png)
+![image-20221018122654103](assets//image-20221018122654103.png){ loading=lazy }
 
-![image-20221018122734531](assets//image-20221018122734531.png)
+![image-20221018122734531](assets//image-20221018122734531.png){ loading=lazy }
 
 2. It is possible that the variance of the sample is low, so we correct for that
 
-![image-20221018122422694](assets//image-20221018122422694.png)
+![image-20221018122422694](assets//image-20221018122422694.png){ loading=lazy }
 
-![image-20221018122358045](assets//image-20221018122358045.png)
+![image-20221018122358045](assets//image-20221018122358045.png){ loading=lazy }
 

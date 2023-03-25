@@ -30,7 +30,7 @@ represented as a byte
 
 No need to study this; just for reference
 
-![image-20221031100906527](assets/image-20221031100906527.png)
+![image-20221031100906527](assets/image-20221031100906527.png){ loading=lazy }
 
 ## Derived Data Types
 
@@ -106,7 +106,7 @@ Union is very similar to structure, but the memory implementation is different; 
 
 ==**The size of the block will be the size of the largest data type**==. So, the value of the block will be the latest value we stored. So we won’t get the correct expected output like structure.
 
-![structure_vs_union](assets/structure_vs_union.jpg)
+![structure_vs_union](assets/structure_vs_union.jpg){ loading=lazy }
 
 ### Enum
 

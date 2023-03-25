@@ -76,7 +76,7 @@ I missed this
 
 If the values of $\lambda$ are zero, then it is a simple VAR model and there is no cointegration. 
 
-![image-20221226212830201](assets/image-20221226212830201.png)
+![image-20221226212830201](assets/image-20221226212830201.png){ loading=lazy }
 
 ## Example: Quantity Theory of Money
 

@@ -53,11 +53,11 @@ Make this into block diagram
 
 Microcontrollers like Arduino have the memory also embedded to the processor
 
-![mp](assets/mp.jpg)
+![mp](assets/mp.jpg){ loading=lazy }
 
 ### Detailed
 
-![detailedmp](assets/detailed.png)
+![detailedmp](assets/detailed.png){ loading=lazy }
 
 ## Architectures
 
@@ -142,7 +142,7 @@ Each range of addresses is allocated for different **segments **of registers
 
 If CS = 10000 and offet = 0002, then DS = 10002
 
-![](assets/8086 block.png)
+![](assets/8086 block.png){ loading=lazy }
 
 ## Internal Cache
 
@@ -150,9 +150,9 @@ a small and fast SRAM memory attached to the processor, for pre-fetching data
 
 ## Registers
 
-![image-20220211093529992](assets/image-20220211093529992.png)
+![image-20220211093529992](assets/image-20220211093529992.png){ loading=lazy }
 
-![image-20220211093703802](assets/image-20220211093703802.png)
+![image-20220211093703802](assets/image-20220211093703802.png){ loading=lazy }
 
 ## IDK
 

@@ -111,7 +111,7 @@ Each ISR requires 4 bytes
 
 If the starting address of IVT is $\text{00000_H}$, then the ending address is $\text{003FF_H}$
 
-![Explain the interrupt structure of 8086 with its IVT.](assets/HisVM1S.png)
+![Explain the interrupt structure of 8086 with its IVT.](assets/HisVM1S.png){ loading=lazy }
 
 ### Graph
 

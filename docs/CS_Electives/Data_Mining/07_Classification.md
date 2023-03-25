@@ -84,7 +84,7 @@ To analyze the classification
 
 2-class classification
 
-![confusion_matrix_True_False_Positive_Negative](assets/confusion_matrix.png)
+![confusion_matrix_True_False_Positive_Negative](assets/confusion_matrix.png){ loading=lazy }
 
 ## Multi-Class Classification
 

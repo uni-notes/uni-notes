@@ -105,7 +105,7 @@ $$
 
 ### Diagram
 
-![mux](img/mux.svg)
+![mux](img/mux.svg){ loading=lazy }
 
 ## De-multiplexer (De-mux)
 
@@ -138,5 +138,5 @@ $D_0 = i {s_0}'{s_1}', D_1 = i{s_0}'s_1, D_2 = i s_0 {s_1}', D_3 = i s_0 s_1$
 
 ### Diagram
 
-![demux](img/demux.svg)
+![demux](img/demux.svg){ loading=lazy }
 

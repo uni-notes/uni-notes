@@ -32,7 +32,7 @@ when govt believes that market price is unfair to buyers/sellers
 
 ## Price Ceiling
 
-![Ceiling](img/ceiling.svg)
+![Ceiling](img/ceiling.svg){ loading=lazy }
 
 sometimes, price ceiling may be 0 for illegal transactions such as prostitution, sale of organs
 
@@ -78,7 +78,7 @@ effects
 
 ## Price Floor
 
-![Floor](img/floor.svg)
+![Floor](img/floor.svg){ loading=lazy }
 
 if the surplus is not taken care of, the sellers will be unsatisfied
 

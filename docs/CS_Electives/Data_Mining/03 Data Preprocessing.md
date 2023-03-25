@@ -61,7 +61,7 @@ e[Evaluate results] -->|Increase Sample Size| s
 e -->|Best Result Obtained| st[/Stop/]
 ```
 
-![sample_evaluation](assets/sample_evaluation.svg)
+![sample_evaluation](assets/sample_evaluation.svg){ loading=lazy }
 
 ### Data Augmentation
 

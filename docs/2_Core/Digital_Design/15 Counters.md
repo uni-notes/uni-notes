@@ -440,4 +440,4 @@ Lockout condition
 
 ## Diagrams
 
-![Counters](img/counters.svg)
+![Counters](img/counters.svg){ loading=lazy }

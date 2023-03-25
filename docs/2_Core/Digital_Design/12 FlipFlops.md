@@ -135,7 +135,7 @@ $Q_{n+1} = T \oplus Qn$
 
 ## Diagrams
 
-![FlipFlops](img/flipflops.svg)
+![FlipFlops](img/flipflops.svg){ loading=lazy }
 
 ## Verilog
 
@@ -199,7 +199,7 @@ basically the graph thingy
 
 you’ll do it obviously
 
-![](img/timing.svg)
+![](img/timing.svg){ loading=lazy }
 
 ## Excitation Table
 

@@ -81,7 +81,7 @@ Typically, one machine-language instruction translates into several microcode in
 
 ## Levels of Computing System
 
-![levels](assets/levels.svg)
+![levels](assets/levels.svg){ loading=lazy }
 
 | Level                |                                            |
 | -------------------- | ------------------------------------------ |
@@ -97,7 +97,7 @@ Typically, one machine-language instruction translates into several microcode in
 
 ## Components of Computer
 
-![image-20221106165730510](assets/image-20221106165730510.png)
+![image-20221106165730510](assets/image-20221106165730510.png){ loading=lazy }
 | Component |                                                              |
 | --------- | ------------------------------------------------------------ |
 | Input     | Write data to memory<br />(from user)                        |

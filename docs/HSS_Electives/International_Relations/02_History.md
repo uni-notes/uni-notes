@@ -161,7 +161,7 @@ relatively non-violent
 
 ###  Europe
 
-![germany cold war](img/germanyColdWar.png)
+![germany cold war](img/germanyColdWar.png){ loading=lazy }
 
 Iron Curtain was an idea/concept, not really a physical one; it represented the divide b/w the 2 ideologies
 
@@ -173,7 +173,7 @@ Western Germany was controlled by 3 countries after WW2
 
 ### Berlin
 
-![berlin cold war](img/berlinColdWar.png)
+![berlin cold war](img/berlinColdWar.png){ loading=lazy }
 
 Berlin was an enclave (a portion of territory surrounded by a larger territory whose inhabitants are culturally or ethnically distinct; like Musandam in UAE)
 

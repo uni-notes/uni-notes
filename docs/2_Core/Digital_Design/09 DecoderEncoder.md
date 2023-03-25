@@ -160,11 +160,11 @@ we need 5 decoders in total
 
 idk exactly
 
-![building](img/building.png)
+![building](img/building.png){ loading=lazy }
 
 ## Diagram
 
-![decoders](img/decoders.svg)
+![decoders](img/decoders.svg){ loading=lazy }
 
 ## Combinational Logic implementation using decoder
 

@@ -8,7 +8,7 @@ Helps us undertand the data
 
 Helps understand the range and central tendancy of a variable
 
-![box_plot](assets/box_plot.svg)
+![box_plot](assets/box_plot.svg){ loading=lazy }
 
 ## 1D Histogram
 
@@ -36,7 +36,7 @@ The convention of analyzing these bins
 
 Helps understand frequency of co-occurance of 2 attributes
 
-![img](assets/2d_histogram.png)
+![img](assets/2d_histogram.png){ loading=lazy }
 
 ## Pair Plot
 

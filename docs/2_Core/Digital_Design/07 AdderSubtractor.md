@@ -87,7 +87,7 @@ to add two n bit binary nos, n no of full adders are required
 
 ### Diagram
 
-![adders](img/adders.svg)
+![adders](img/adders.svg){ loading=lazy }
 
 ## Subtractors
 
@@ -148,7 +148,7 @@ Binary subtractor using 2’s complement
 
 ### Diagram
 
-![subtractors](img/subtractors.svg)
+![subtractors](img/subtractors.svg){ loading=lazy }
 
 ## Other
 
@@ -220,4 +220,4 @@ $C = z_2 z_8 + z_4 z_8 + k$
 
 ### Circuit
 
-![other adders](img/otherAdders.svg)
+![other adders](img/otherAdders.svg){ loading=lazy }

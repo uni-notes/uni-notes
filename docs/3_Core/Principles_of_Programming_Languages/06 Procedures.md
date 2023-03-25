@@ -130,13 +130,13 @@ Layout of executable file
 | Stack   | Local variables of procedure<br />Procedure activation records (C, Pascal) | Space reclaimed when procedure terminates<br />Relative Address of variable are same |
 | Heap    | Dynamic memory allocation<br />Procedure activation records  | Activation records stay here as long as they are needed      |
 
-![run_time_storage](assets/run_time_storage.png)
+![run_time_storage](assets/run_time_storage.png){ loading=lazy }
 
 ## Procedure Activations
 
 I didn't understand this
 
-![image-20221031151414699](assets/image-20221031151414699.png)
+![image-20221031151414699](assets/image-20221031151414699.png){ loading=lazy }
 
 ## Activation Record
 
@@ -144,9 +144,9 @@ Activation records on stack are called as stack frame
 
 ### Sections
 
-![image-20221031152020858](assets/image-20221031152020858.png)
+![image-20221031152020858](assets/image-20221031152020858.png){ loading=lazy }
 
-![image-20221031152612306](assets/image-20221031152612306.png)
+![image-20221031152612306](assets/image-20221031152612306.png){ loading=lazy }
 
 | Link    | Type    |                                                 | Represents ___ environment of procedure |
 | ------- | ------- | ----------------------------------------------- | --------------------------------------- |

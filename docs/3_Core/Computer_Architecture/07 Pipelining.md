@@ -13,17 +13,17 @@ Assume time for stages is
 
 Each of the 5 stages have their own step
 
-![image-20221107005154363](assets/image-20221107005154363.png)
+![image-20221107005154363](assets/image-20221107005154363.png){ loading=lazy }
 
 ## Diagram
 
 ### Resource Usage Form
 
-![image-20221107005404162](assets/image-20221107005404162.png)
+![image-20221107005404162](assets/image-20221107005404162.png){ loading=lazy }
 
 ### Traditional Form
 
-![image-20221107005506199](assets/image-20221107005506199.png)
+![image-20221107005506199](assets/image-20221107005506199.png){ loading=lazy }
 
 ## Time
 
@@ -37,7 +37,7 @@ $$
 **Why 200ps?**
 The longest stage determines the clock cycle time of the pipeline
 
-![image-20221106232557620](assets/image-20221106232557620.png)
+![image-20221106232557620](assets/image-20221106232557620.png){ loading=lazy }
 
 Let $n$ be the no of instructions
 

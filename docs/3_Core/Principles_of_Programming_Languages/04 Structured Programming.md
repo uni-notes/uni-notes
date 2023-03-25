@@ -103,7 +103,7 @@ Compiler uses jump table if atleast half of the entries are used. Else, the comp
 
 `while <exp> do <stmt`
 
-![while_loop](assets/while_loop.png)
+![while_loop](assets/while_loop.png){ loading=lazy }
 
 ### Do-While
 

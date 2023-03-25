@@ -10,8 +10,8 @@ Transfer data/info between address space, while ensuring protection and isolatio
 
 | IPC                        | Meaning                                                      |                           Diagram                            | ✅<br />Advantage |     ❌<br />Disadvantage     |
 | -------------------------- | ------------------------------------------------------------ | :----------------------------------------------------------: | :--------------: | :-------------------------: |
-| Pipes<br />(Shared buffer) | - Exchange of messages<br />- Named pipes allow processes on different computers to communicate over the network | ![image-20221222202303062](assets/image-20221222202303062.png) |  OS in control   |          Overhead           |
-| Shared Memory              | One process creates a portion of memory that another process accesses | ![image-20221222202340055](assets/image-20221222202340055.png) |   No overhead    | May require re-writing code |
+| Pipes<br />(Shared buffer) | - Exchange of messages<br />- Named pipes allow processes on different computers to communicate over the network | ![image-20221222202303062](assets/image-20221222202303062.png) |  OS in control   |          Overhead           |{ loading=lazy }
+| Shared Memory              | One process creates a portion of memory that another process accesses | ![image-20221222202340055](assets/image-20221222202340055.png) |   No overhead    | May require re-writing code |{ loading=lazy }
 | Message Queue              | Ordered list of memory segments where processes store and retrieve data |                                                              |                  |                             |
 | Process Synchronization    | mutex lock<br />semaphore<br />monitors                      |                                                              |                  |                             |
 | Files                      | - Parent process creates 2 files before forking child process<br />- Child inherits file descriptors from parent, and they share the file pointers<br />- Can use one for parent to write and child to read, other for child to write and parent to read |                                                              |                  |                             |
@@ -24,7 +24,7 @@ Lists all IPC facilities which has read access for the current process. It provi
 
 Every IPC facility has unique key and identifier, which is used to identify an IPC facility.
 
-![image-20221222202903397](assets/image-20221222202903397.png)
+![image-20221222202903397](assets/image-20221222202903397.png){ loading=lazy }
 
 ## Thread
 
@@ -137,7 +137,7 @@ Actually implemented as sets.
 > - When it is time for a philosopher to eat, it must first acquire two chopsticks - one from their left and one from their right.
 > - When a philosopher thinks, it puts down both chopsticks in their original locations.
 
-![image-20221222210220443](assets/image-20221222210220443.png)
+![image-20221222210220443](assets/image-20221222210220443.png){ loading=lazy }
 
 ### Solution
 
@@ -205,7 +205,7 @@ Variable `X` of type `condition` has only two legal operations
     - does nothing if there are no processes waiting on that condition
     - Otherwise, it wakes up exactly one process from the condition's list of waiting processes
 
-![image-20221222211932050](assets/image-20221222211932050.png)
+![image-20221222211932050](assets/image-20221222211932050.png){ loading=lazy }
 
 ### Disadvantage
 

@@ -30,7 +30,7 @@ All signals depend on the clock. So faster the frequency of the clock, faster th
 
 ## Address Buses
 
-![address_bus](assets/address_bus.png)
+![address_bus](assets/address_bus.png){ loading=lazy }
 
 They are multiplexed with data lines and with selection lines. To reduce area required.
 

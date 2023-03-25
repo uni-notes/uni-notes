@@ -87,4 +87,4 @@ $Q_{n+1} = d$, right?
 
 ## Diagram
 
-![latches](img/latches.svg)
+![latches](img/latches.svg){ loading=lazy }

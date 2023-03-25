@@ -126,13 +126,13 @@ list(Pkey):-
 
 ## Type Predicates
 
-![image-20221222185230187](assets/image-20221222185230187.png)
+![image-20221222185230187](assets/image-20221222185230187.png){ loading=lazy }
 
 `=..` is used to compose and decompose terms
 
 ## Arithmetic Expression
 
-![image-20221222185532668](assets/image-20221222185532668.png)
+![image-20221222185532668](assets/image-20221222185532668.png){ loading=lazy }
 
 ```prolog
 ?- X is 3*4.

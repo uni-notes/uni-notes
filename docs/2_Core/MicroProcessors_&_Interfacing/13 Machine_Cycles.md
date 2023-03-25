@@ -63,8 +63,8 @@ Number of wait states depends on the difference in the speed between the micropr
 
 ### Write
 
-![timing_diagram_write](assets/timing_diagram_write.png)
+![timing_diagram_write](assets/timing_diagram_write.png){ loading=lazy }
 
 ### Read
 
-![timing_diagram_read](assets/timing_diagram_read.png)
+![timing_diagram_read](assets/timing_diagram_read.png){ loading=lazy }

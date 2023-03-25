@@ -57,7 +57,7 @@ for use cases that require/depend on another use case
 
 The direction of a `<<includes>>` relationship is to the using use case (unlike `<<extends>>` relationships).
 
-![](img/useCase.svg)
+![](img/useCase.svg){ loading=lazy }
 
 ## Class Diagram
 

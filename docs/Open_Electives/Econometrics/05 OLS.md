@@ -238,9 +238,9 @@ $$
 
 Some derivation (below)
 
-![c74c7766-a5cd-4aa8-b8c5-a1fca0702e4f.jfif](assets/c74c7766-a5cd-4aa8-b8c5-a1fca0702e4f.jfif)
+![c74c7766-a5cd-4aa8-b8c5-a1fca0702e4f.jfif](assets/c74c7766-a5cd-4aa8-b8c5-a1fca0702e4f.jfif){ loading=lazy }
 
-![5aac6ce9-a8d9-4589-99b9-8ba2f1429e51.jfif](assets/5aac6ce9-a8d9-4589-99b9-8ba2f1429e51.jfif)
+![5aac6ce9-a8d9-4589-99b9-8ba2f1429e51.jfif](assets/5aac6ce9-a8d9-4589-99b9-8ba2f1429e51.jfif){ loading=lazy }
 
 ## Precision Evaluation of OLS Estimators
 

@@ -65,4 +65,4 @@ $E = x_3 x_2 x_1 x_0$
 
 ## Diagram
 
-![comparator](img/comparator.svg)
+![comparator](img/comparator.svg){ loading=lazy }

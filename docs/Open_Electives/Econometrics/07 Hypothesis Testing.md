@@ -76,7 +76,7 @@ $$
 Construct the confidence interval for $t$ distribution, with $(n-2)$ degrees of freedom.
 This is because we have 2 unknowns.
 
-![confidence](assets/confidence.svg)
+![confidence](assets/confidence.svg){ loading=lazy }
 
 ## Level of Significance
 

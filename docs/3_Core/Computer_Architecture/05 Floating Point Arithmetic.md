@@ -1,6 +1,6 @@
 ## Floating Point
 
-![image-20221106222720868](assets/image-20221106222720868.png)
+![image-20221106222720868](assets/image-20221106222720868.png){ loading=lazy }
 
 $$
 x =
@@ -54,9 +54,9 @@ Exponents $0000…00$ and $1111…11$ reserved
 
 ## Floating Point Examples
 
-![image-20221106223420314](assets/image-20221106223420314.png)
+![image-20221106223420314](assets/image-20221106223420314.png){ loading=lazy }
 
-![image-20221106223444802](assets/image-20221106223444802.png)
+![image-20221106223444802](assets/image-20221106223444802.png){ loading=lazy }
 
 ## Denormal Numbers
 
@@ -105,7 +105,7 @@ FP adder usually takes several cycles
 
 ## MIPS Floating Point Instructions
 
-![image-20221106230237074](assets/image-20221106230237074.png)
+![image-20221106230237074](assets/image-20221106230237074.png){ loading=lazy }
 
 FPU co-processor is an adjunct processor that extends the ISA
 
@@ -128,7 +128,7 @@ Separate FP instructions for single/double precision
 
 ### FP Arithmetic Operations
 
-![image-20221106230425090](assets/image-20221106230425090.png)
+![image-20221106230425090](assets/image-20221106230425090.png){ loading=lazy }
 
 ### FP Load/Store
 
@@ -139,7 +139,7 @@ Separate FP instructions for single/double precision
 | `swc1` | store word coprocessor 1   |
 | `sdc1` | store double coprocessor 1 |
 
-![image-20221106230548473](assets/image-20221106230548473.png)
+![image-20221106230548473](assets/image-20221106230548473.png){ loading=lazy }
 
 ### FP Load/Store pseudo Instructions
 
@@ -171,7 +171,7 @@ Moving data between general purpose and FP registers
 | Moving data between FP registers                         | `mov.s` | move single precision float                              |
 |                                                          | `mov.d` | move double precision float = even/odd pair of registers |
 
-![image-20221106231142663](assets/image-20221106231142663.png)
+![image-20221106231142663](assets/image-20221106231142663.png){ loading=lazy }
 
 ## FP Convert Instructions
 
@@ -188,7 +188,7 @@ Convert
 - Double precision float = `.d` (double float in even-odd FP register)
 - Signed integer word = `.w` (signed integer in FP register)
 
-![image-20221106231255663](assets/image-20221106231255663.png)
+![image-20221106231255663](assets/image-20221106231255663.png){ loading=lazy }
 
 ## FP Compare and Branch Instructions
 
@@ -202,11 +202,11 @@ Three comparisons
 
 Two branch instructions based on the condition flag
 
-![image-20221106231341044](assets/image-20221106231341044.png)
+![image-20221106231341044](assets/image-20221106231341044.png){ loading=lazy }
 
 ## Reading and printing single and double values
 
-![image-20221106231406731](assets/image-20221106231406731.png)
+![image-20221106231406731](assets/image-20221106231406731.png){ loading=lazy }
 
 ## Floating-Point Data Declarations
 

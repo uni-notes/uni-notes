@@ -27,7 +27,7 @@ Otherwise, if the process tries to access a page that is marked invalid, this me
 
 If there are no free frames, we need to replace the frame in a manner that would reduce future page faults.
 
-![image-20230102012922160](assets/image-20230102012922160.png)
+![image-20230102012922160](assets/image-20230102012922160.png){ loading=lazy }
 
 ### Algorithms
 

@@ -153,7 +153,7 @@ Algorithm evaluateExpression()
 | Internal  | Thrice    |
 | External  | Once      |
 
-![traversal](assets/traversal.svg)
+![traversal](assets/traversal.svg){ loading=lazy }
 
 ### Application
 

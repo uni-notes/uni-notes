@@ -1,6 +1,6 @@
 ## MIPS Datapath
 
-![image-20221106232200002](assets/image-20221106232200002.png)
+![image-20221106232200002](assets/image-20221106232200002.png){ loading=lazy }
 
 ## Goal of Datapath
 
@@ -51,25 +51,25 @@ $$
 
 ## MIPS Instruction Available Datapath
 
-![image-20221107000028244](assets/image-20221107000028244.png)
+![image-20221107000028244](assets/image-20221107000028244.png){ loading=lazy }
 
 ## `add` instruction
 
-![image-20221106235052529](assets/image-20221106235052529.png)
+![image-20221106235052529](assets/image-20221106235052529.png){ loading=lazy }
 
 ## `addi` Instruction
 
-![image-20221106235126778](assets/image-20221106235126778.png)
+![image-20221106235126778](assets/image-20221106235126778.png){ loading=lazy }
 
 ## `load` Instruction
 
-![image-20221106235255055](assets/image-20221106235255055.png)
+![image-20221106235255055](assets/image-20221106235255055.png){ loading=lazy }
 
 ## Store Instruction
 
-![image-20221106235405184](assets/image-20221106235405184.png)
+![image-20221106235405184](assets/image-20221106235405184.png){ loading=lazy }
 
-![image-20221106235439715](assets/image-20221106235439715.png)
+![image-20221106235439715](assets/image-20221106235439715.png){ loading=lazy }
 
 ## `beq` Instruction
 
@@ -78,7 +78,7 @@ Choose between
 - $\text{PC = (PC + 4)}$
 - $\text{PC = (PC + 4) + \ \ Imm<<2}$
 
-![image-20221106235657682](assets/image-20221106235657682.png)
+![image-20221106235657682](assets/image-20221106235657682.png){ loading=lazy }
 
 ## `j` Instruction
 
@@ -87,7 +87,7 @@ Choose between
 - `imm <<` (shift left)
 - Concatenate PC’s upper bits
 
-![image-20221106235950649](assets/image-20221106235950649.png)
+![image-20221106235950649](assets/image-20221106235950649.png){ loading=lazy }
 
 ## Control Unit
 

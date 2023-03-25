@@ -1,6 +1,6 @@
 ## Data Bus
 
-![data_bus](assets/data_bus.png)
+![data_bus](assets/data_bus.png){ loading=lazy }
 
 ## Pins
 
@@ -31,7 +31,7 @@ It is an ouput signal.
 | 0                 | 0               | 1               | Input/Output Read  |
 | 0                 | 1               | 0               | Input/Output Write |
 
-![operations_read_write](assets/operations_read_write.png)
+![operations_read_write](assets/operations_read_write.png){ loading=lazy }
 
 ### $\overline{DEN}$
 
@@ -55,7 +55,7 @@ Connected to [DIR](#DIR)
 
 ## Bi-Directional Buffer
 
-![bidirectional_buffer](assets/bidirectional_buffer.png)
+![bidirectional_buffer](assets/bidirectional_buffer.png){ loading=lazy }
 
 We are using ==LS245== as the octal buffer.
 

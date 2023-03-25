@@ -37,7 +37,7 @@ Other languages (e.g., Ada, Fortran) require raising an exception
 
 ## Multiplication Hardware
 
-![image-20221106220857415](assets/image-20221106220857415.png)
+![image-20221106220857415](assets/image-20221106220857415.png){ loading=lazy }
 
 ## Regular Unsigned Multiplication
 
@@ -72,11 +72,11 @@ Can be done more efficiently
 - For each 0 on the LSB of multiplier
     - Shift left the multiplicand
 
-![image-20221106220739321](assets/image-20221106220739321.png)
+![image-20221106220739321](assets/image-20221106220739321.png){ loading=lazy }
 
 ### Example
 
-![image-20221106220821792](assets/image-20221106220821792.png)
+![image-20221106220821792](assets/image-20221106220821792.png){ loading=lazy }
 
 ## Booth’s Multiplication
 
@@ -97,11 +97,11 @@ Each bit is examined along with the bit to its right
 
 In order to preserve sign bit arithmetic shift right is performed. The leftmost bit of $A$, $A_{n-1}$ is not only shifted into $A_{n-2}$ but also remains in $A_{n-1}$
 
-![image-20221106221525684](assets/image-20221106221525684.png)
+![image-20221106221525684](assets/image-20221106221525684.png){ loading=lazy }
 
 ### Example
 
-![image-20221106221552783](assets/image-20221106221552783.png)
+![image-20221106221552783](assets/image-20221106221552783.png){ loading=lazy }
 
 ### Advantage
 

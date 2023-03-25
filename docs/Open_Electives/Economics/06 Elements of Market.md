@@ -264,7 +264,7 @@ Auctions take place until equilibrium is reached
 
 we can also draw a graph and obtain the point of interception of the supply and demand curves
 
-![Equilibrium](img/equilibrium.svg)
+![Equilibrium](img/equilibrium.svg){ loading=lazy }
 
 ### Dis-equilibrium
 

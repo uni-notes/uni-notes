@@ -188,7 +188,7 @@ A grammar for a language is syntactically ambiguous, if some string in its langu
 - S $::=$ if E then S
 - S $::=$ if E then S else S
 
-![image-20221221181415395](assets/image-20221221181415395.png)
+![image-20221221181415395](assets/image-20221221181415395.png){ loading=lazy }
 
 ### Math
 
@@ -272,9 +272,9 @@ $$
 
 ## Syntax Chart
 
-![image-20221221182656971](assets/image-20221221182656971.png)
+![image-20221221182656971](assets/image-20221221182656971.png){ loading=lazy }
 
 The above can be represented as ⬇
 
-![syntax_chart](assets/syntax_chart.png)
+![syntax_chart](assets/syntax_chart.png){ loading=lazy }
 

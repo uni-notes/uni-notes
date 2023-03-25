@@ -20,7 +20,7 @@ flowchart TB
 x --- a[< x] & c[&#8805 x]
 ```
 
-![B+_Tree](assets/B+_Tree.svg)
+![B+_Tree](assets/B+_Tree.svg){ loading=lazy }
 
 ### Formulae
 
@@ -92,7 +92,7 @@ If local depth of filled page $\ge$ global depth
 | Local $=$ Global | double the hash table size                                   |
 | Local $>$ Global | 1. allocate space for an additional bin<br/>2. re-distribute filled page indices |
 
-![](assets/extendible_hashing.svg)
+![](assets/extendible_hashing.svg){ loading=lazy }
 
 The number of combinations that will be connected to each bucket will be the remaining combination of the unused bits. For eg, $01$ bucket will have 2 unused bits, so there will be 4 combinations
 

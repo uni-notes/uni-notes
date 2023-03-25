@@ -44,7 +44,7 @@ Note that the following shows the magnitude only
 | $1 < \|e\| < \infty$ | elastic                                                      |
 |           $\infty$ | perfectly elastic<br />(demand curve horizontal - parallel to demand axis)<br />happens in perfectly-competitive market |
 
-![Elasticity](img/demandElasticity.svg)
+![Elasticity](img/demandElasticity.svg){ loading=lazy }
 
 ### Cases
 
@@ -240,7 +240,7 @@ draw geogebra graph
 
 ==Revenue is greatest at center point==
 
-![pointElasticity](img/pointElasticity.png)
+![pointElasticity](img/pointElasticity.png){ loading=lazy }
 
 This is due to [Point Elasticity](#Point Elasticity)
 
@@ -322,7 +322,7 @@ Always $0 < e < \infty$
 
 perfectly competitive market
 
-![Elasticity](img/supplyElasticity.svg)
+![Elasticity](img/supplyElasticity.svg){ loading=lazy }
 
 ## Factors of Elasticity of Supply
 

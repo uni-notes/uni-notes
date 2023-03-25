@@ -194,7 +194,7 @@ used by lock manager blah blah
 
 ### Graph
 
-![transactions.svg](assets/transactions.svg)
+![transactions.svg](assets/transactions.svg){ loading=lazy }
 
 ### Types
 

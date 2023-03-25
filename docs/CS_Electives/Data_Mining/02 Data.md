@@ -12,7 +12,7 @@ Collection of data in rows and columns
 
 ## Types of Attributes
 
-![types_of_attributes](assets/types_of_attributes.jpg)
+![types_of_attributes](assets/types_of_attributes.jpg){ loading=lazy }
 
 |                  | Nominal                                                      | Ordinal                                                      | Interval                                                     | Ratio                                                        |
 | ---------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |

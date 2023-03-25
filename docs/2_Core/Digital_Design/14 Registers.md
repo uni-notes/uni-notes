@@ -151,5 +151,5 @@ flowchart LR
 
 ## Diagrams
 
-![](img/registers.svg)
+![](img/registers.svg){ loading=lazy }
 

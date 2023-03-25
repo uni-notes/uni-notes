@@ -43,7 +43,7 @@ There is no distinction between code and data, as they are stored in the same me
 
 ### Structured Programming
 
-![structured](assets/structured.jpg)
+![structured](assets/structured.jpg){ loading=lazy }
 
 Dijkstra
 

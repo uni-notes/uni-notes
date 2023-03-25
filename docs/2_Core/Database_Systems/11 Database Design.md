@@ -154,7 +154,7 @@ $$
 | No Multi-Attribute Dependency |      |      |      |      |  ✅   |  ✅   |
 | Lossless Decomposition        |      |      |      |      |      |  ✅   |
 
-![normalization](assets/normalization.svg)
+![normalization](assets/normalization.svg){ loading=lazy }
 
 ## 1NF
 

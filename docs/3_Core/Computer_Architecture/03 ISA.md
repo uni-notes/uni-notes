@@ -140,7 +140,7 @@ Register numbers
 
 ## R-Format
 
-![image-20221106200710944](assets/image-20221106200710944.png)
+![image-20221106200710944](assets/image-20221106200710944.png){ loading=lazy }
 
 |       |                                |
 | ----- | ------------------------------ |
@@ -513,7 +513,7 @@ Branch instructions specify
 
 Most branch targets are near-branch (forward/backward)
 
-![image-20221106213601258](assets/image-20221106213601258.png)
+![image-20221106213601258](assets/image-20221106213601258.png){ loading=lazy }
 
 **PC-relative addressing**
 
@@ -529,7 +529,7 @@ Jump (`j` and `jal`) targets could be anywhere in text segment
 
 Encode full address in instruction
 
-![image-20221106213743937](assets/image-20221106213743937.png)
+![image-20221106213743937](assets/image-20221106213743937.png){ loading=lazy }
 
 **(Pseudo) Direct jump addressing**
 
@@ -562,7 +562,7 @@ L2:
 
 ## Addressing Summary
 
-![image-20221106214426599](assets/image-20221106214426599.png)
+![image-20221106214426599](assets/image-20221106214426599.png){ loading=lazy }
 
 ## Assembler Pseudoinstructions
 

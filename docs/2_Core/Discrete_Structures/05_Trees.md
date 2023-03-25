@@ -237,4 +237,4 @@ has parent, left child, right child
 
 ## Diagram
 
-![](img/traversal.svg)
+![](img/traversal.svg){ loading=lazy }

@@ -140,7 +140,7 @@ It shows the deviations upto which the forecast is expected to deviate
 
 ## Inflation-Welfare Cost Relation
 
-![inflation_welfare_costs](assets/inflation_welfare_costs.svg)
+![inflation_welfare_costs](assets/inflation_welfare_costs.svg){ loading=lazy }
 
 |                      | Optimal Inflation Rate |
 | -------------------- | ---------------------- |

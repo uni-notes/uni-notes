@@ -1,6 +1,6 @@
 ## Cromsky Hierarchy
 
-![image-20221224182757253](assets/image-20221224182757253.png)
+![image-20221224182757253](assets/image-20221224182757253.png){ loading=lazy }
 
 ## Turing Machine
 
@@ -198,11 +198,11 @@ q1 -->
 
 ### $w\#w: 011\#011$
 
-![image-20221224235706611](assets/image-20221224235706611.png)
+![image-20221224235706611](assets/image-20221224235706611.png){ loading=lazy }
 
 ### Add $b$ to match $a$, such that $a^n b^n$
 
-![image-20221225000916013](assets/image-20221225000916013.png)
+![image-20221225000916013](assets/image-20221225000916013.png){ loading=lazy }
 
 ### Convert $w \to w w^r$
 

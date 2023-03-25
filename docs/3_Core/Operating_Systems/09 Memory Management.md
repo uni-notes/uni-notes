@@ -44,7 +44,7 @@ When a partition is free, a process is selected from input queue and is loaded t
 
 Internal fragmentation = unused memory within a partition
 
-![image-20230102004033919](assets/image-20230102004033919.png)
+![image-20230102004033919](assets/image-20230102004033919.png){ loading=lazy }
 
 #### Equal Fixed Size Partitions
 
@@ -66,9 +66,9 @@ Hole is the block of available memory
 
 ❌ Causes external fragmentation (multiple holes generated within the memory)
 
-![image-20230102004043877](assets/image-20230102004043877.png)
+![image-20230102004043877](assets/image-20230102004043877.png){ loading=lazy }
 
-![image-20230102004405752](assets/image-20230102004405752.png)
+![image-20230102004405752](assets/image-20230102004405752.png){ loading=lazy }
 
 ## Allocation Algorithms
 

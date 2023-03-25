@@ -6,7 +6,7 @@ Data does not get lost
 
 also, the value gets stored in carry flag
 
-![Screen Shot 2022-03-22 at 6.03.59 PM](assets/rotate.png)
+![Screen Shot 2022-03-22 at 6.03.59 PM](assets/rotate.png){ loading=lazy }
 
 ## Shift
 

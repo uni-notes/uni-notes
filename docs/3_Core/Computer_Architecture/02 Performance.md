@@ -88,7 +88,7 @@ Constant-rate clock that governs operation of digital hardware
 
 ## Performance Factors
 
-![image-20221106185825302](assets/image-20221106185825302.png)
+![image-20221106185825302](assets/image-20221106185825302.png){ loading=lazy }
 
 | Factor                | Determines                                                   | Affects<br />Instruction Count | Affects CPI~avg~ | Affects T~C~ |
 | --------------------- | ------------------------------------------------------------ | :----------------------------: | :--------------: | :----------: |

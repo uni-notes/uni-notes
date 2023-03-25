@@ -217,7 +217,7 @@ Time between starting of execution of a program and its completion
      - Load the kernel into primary memory
 8. Using the Interrupt Vector Table (of an 8086 processor operating in real mode) shown below, determine the address of the ISR of a device with interrupt vector 42H. 
    
-   ![image-20230101134404020](assets/image-20230101134404020.png)
+   ![image-20230101134404020](assets/image-20230101134404020.png){ loading=lazy }
    
    Answer $= \text{4D6EA_H}$
 9. Differentiate between multi-programming & multi-processing

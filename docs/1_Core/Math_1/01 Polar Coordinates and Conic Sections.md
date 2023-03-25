@@ -17,7 +17,7 @@ Let
     - $\theta > 0$ clockwise
 - $P(r, \theta)$ - corresponding point
 
-![Polar](img/polar.svg)
+![Polar](img/polar.svg){ loading=lazy }
 
 ## Circle Through Pole
 

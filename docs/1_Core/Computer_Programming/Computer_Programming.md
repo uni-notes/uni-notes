@@ -824,4 +824,4 @@ a variable that stores address
 ==name of an array is a pointer to the first element of that array==
 ## Handrawn
 
-![Computer_Programming_Handrawn](assets/Computer_Programming_Handrawn.svg)
+![Computer_Programming_Handrawn](assets/Computer_Programming_Handrawn.svg){ loading=lazy }
