@@ -116,14 +116,14 @@ Govt can help improve market outcomes
     1. Monopoly
     2. Tragedy of Commons for CPR(Common Property Resources)
       
-       For community resources(like fishing ponds, forests), the govt comes in to prevent over-utilization of the resources; supports sustainability
+        For community resources(like fishing ponds, forests), the govt comes in to prevent over-utilization of the resources; supports sustainability
 
 3. Market failure
     
     1. Market fails when it comes to non-excludable commodity
     2. Govt interferes in fields where private investors are not interested
 
-   Examples
+    Examples
        
       - national defence
       - community services
