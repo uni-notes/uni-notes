@@ -75,34 +75,18 @@ Even if someone gets richer, they won't be eating more food
 
 ## Markets are usually good
 
-### Types of economic systems
+### Economic Systems
 
 An economic system is an arrangement of economic activity
 
-1. Market-Based/Capitalist/Private
-   
-   1. The market is dynamically affected by what the producers produce and consumers consume
-   2. less regulated
-      pure capitalism means that the market is free from govt intervention
-      eg: USA
-   
-   Advantages
-   
-   1. high competition
-   2. encourages people to perform better
-      everyone tries to optimize
-   3. consumers have freedom to choose from large variety of products
-   
-2. Centralized/Govt
-   A central authority dictates
-   Eg: north korea
+| Type | Description | Regulation | Competition                                                            | Variety in Products | Example|
+|---                             | ---                                                                                                                                                              | ---        | ---                                                                    | ---                 | ---|
+|Private/<br />Market-Based/<br />Capitalist | Dynamically affected by what the producers produce and consumers consume<br /><br />Pure capitalism means that the market is free from govt intervention | Low/None | High (encourages people to perform better; everyone tries to optimize) | High            | USA|
+|Centralized/Govt                | Central authority dictates                                                                                                                                     | High | Low | Low | North Korea|
+|Public                          | Communism Type                                                                                                                                                 |            |                                                                        |                     | |
+|Hybrid                          |                                                                                                                                                                  | Moderate | Moderate | Moderate | India (Centralized railways, while others are market-based)|
 
-3. Public? (communism type)
-
-4. Hybrid
-   In india, there are a few sectors which are centralized, such as railways, while others are market-based
-
-### Functions of market
+### Functions of Market
 
 1. organizing economic activity
 
@@ -122,16 +106,12 @@ An economic system is an arrangement of economic activity
    Distortion of market signal: when govt creates policies to change pricing in a free market
    Eg: subsidies
 
-## Govt
+## Government
 
-Govt can sometimes improve market outcomes
-
-### Govt steps in
+Govt can help improve market outcomes
 
 1. protect property rights
-
 2. generate efficient outcomes, such as prevent
-
    1. monopoly
    2. Tragedy of Commons for CPR(Common Property Resources)
       for community resources(like fishing ponds, forests), the govt comes in to prevent over-utilization of the resources; supports sustainability
