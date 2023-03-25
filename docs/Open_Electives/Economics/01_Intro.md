@@ -41,7 +41,7 @@ Trade offs are there as everything has pros/cons, gains/costs; other options cou
 
 Scenario where Govt Expenditure > Revenue. This happens a lot in developing countries, as they are trying to develop as rapidly as possible.
 
-## Opportunity cost
+## Opportunity Cost
 
 $$
 \text{OC} = \frac{\text{What you sacrifice}}{\text{What you receive}}
