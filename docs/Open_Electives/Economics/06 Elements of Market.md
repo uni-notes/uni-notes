@@ -17,7 +17,7 @@ this goes other way round too
 
 ### Individual Demand Curve
 
-can vary from one individual to another even for the same commodity, due to factors of trade (1st note) [Factors of trade](01/#Factors of trade)
+can vary from one individual to another even for the same commodity, due to [Factors of Trade](01_Intro.md#factors of trade)
 
 graph is a straight line with a negative slope
 
