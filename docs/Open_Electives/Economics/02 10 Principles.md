@@ -110,29 +110,30 @@ An economic system is an arrangement of economic activity
 
 Govt can help improve market outcomes
 
-1. protect property rights
-2. generate efficient outcomes, such as prevent
-   1. monopoly
-   2. Tragedy of Commons for CPR(Common Property Resources)
-      for community resources(like fishing ponds, forests), the govt comes in to prevent over-utilization of the resources; supports sustainability
+1. Protect property rights
+2. Generate efficient outcomes, such as prevent 
+   
+    1. Monopoly
+    2. Tragedy of Commons for CPR(Common Property Resources)
+      
+       For community resources(like fishing ponds, forests), the govt comes in to prevent over-utilization of the resources; supports sustainability
 
-3. market failure
+3. Market failure
+    
+    1. Market fails when it comes to non-excludable commodity
+    2. Govt interferes in fields where private investors are not interested
 
-   1. market fails when it comes to non-excludable commodity
-   2. govt interferes in fields where private investors are not interested
-
-   example
-
-     - national defence
-     - community services
-     - landscapes
-     - fresh air
+   Examples
+       
+      - national defence
+      - community services
+      - landscapes
+      - fresh air
 
 4. Promote equality/equity
-
-   1. prevention of trade of whatever is socially harmful (alcohol, drugs)
-   2. keeps market's obsession with efficiency at the expensive of equity in check
-   3. reduces economic inequality
+    1. prevention of trade of whatever is socially harmful (alcohol, drugs)
+    2. keeps market's obsession with efficiency at the expensive of equity in check
+    3. reduces economic inequality
 
 5. Socially desirable outcomes
 
