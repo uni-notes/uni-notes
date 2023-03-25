@@ -28,22 +28,20 @@ Lower the WACC the better
 
 $$
 \begin{align}
-\text{WACC} 
-= \quad
-& w_d  \times k_d (1-\tau) \\
-+ & w_{ps} \times k_{ps} \\
-+ & w_{cs} \times k_{cs}
+\text{WACC} = \quad & w_d  \times k_d (1-\tau) \\
++ & w_p \times k_p \\
++ & w_c \times k_c
 \end{align}
 $$
 
-| Term     | Meaning                         |
-| -------- | ------------------------------- |
-| $w_d$    | Proportion of debt              |
-| $w_{ps}$ | Proportion of preference shares |
-| $w_{cs}$ | Proportion of common shares     |
-| $k_d$    | Cost of debt                    |
-| $k_{ps}$ | Cost of preference shares       |
-| $k_{cs}$ | Cost of common shares           |
-| $\tau$   | Tax rate                        |
+|  Term  | Meaning                         |            Formula            |
+| :----: | ------------------------------- | :---------------------------: |
+| $w_d$  | Proportion of debt              | $\frac{w_d}{w_d + w_p + w_c}$ |
+| $w_p$  | Proportion of preference shares | $\frac{w_p}{w_d + w_p + w_c}$ |
+| $w_c$  | Proportion of common shares     | $\frac{w_c}{w_d + w_p + w_c}$ |
+| $k_d$  | Cost of debt                    |                               |
+| $k_p$  | Cost of preference shares       |                               |
+| $k_c$  | Cost of common shares           |                               |
+| $\tau$ | Tax rate                        |           Available           |
 
 Interest is tax-deductable, hence it gives ‘tax shield’
