@@ -75,7 +75,7 @@ plugins:
 
 # Customization
 extra:
-  manifest: 'manifest.json'
+  manifest: manifest.json
 #   analytics:
 #     provider: google
 #     property: !ENV GOOGLE_ANALYTICS_KEY
