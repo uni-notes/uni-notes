@@ -55,14 +55,15 @@ const update = request =>
   caches
     .open(CURRENT_CACHE)
     .then(cache =>
-      fetch(request).then(response => cache.put(request, response))
+      fetch(request).then(response => cache.put(request, response)
+    ).then(console.log("Cached this page"))
     );
 
 // general strategy when making a request (eg if online try to fetch it
 // from the network with a timeout, if something fails serve from cache)
 self.addEventListener('fetch', evt => {
   evt.respondWith(
-    fromNetwork(evt.request, 10000).catch(() => fromCache(evt.request))
+    fromNetwork(evt.request, 1000).catch(() => fromCache(evt.request))
   );
   evt.waitUntil(update(evt.request));
 });
