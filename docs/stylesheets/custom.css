@@ -4,6 +4,20 @@ iframe
 {
     content-visibility: auto !important;
     contain-intrinsic-size: 1px 500px !important;
+    
+    max-width: 100%;
+    height: auto;
+    max-height: 75vh;
+    
+    display: block;
+    margin: auto;
+}
+
+.md-typeset iframe
+{
+    width: 100%;
+    height: 75vh;
+    border: none;
 }
 
 @media (orientation: landscape)
@@ -19,13 +33,6 @@ iframe
 .md-nav.md-nav--primary li:has(.md-nav__link--active) label
 {
     font-weight: bold;
-}
-
-.md-typeset iframe
-{
-    height: 75vh;
-    width: 100%;
-    border: none;
 }
 
 /* latin */
