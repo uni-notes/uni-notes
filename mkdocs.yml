@@ -145,3 +145,4 @@ extra_javascript:
 
 extra_css:
   - stylesheets/custom.css
+  - stylesheets/quicklink.js
