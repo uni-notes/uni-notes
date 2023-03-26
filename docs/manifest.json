@@ -3,7 +3,7 @@
   "short_name" : "Notes",
   "description" : "Ahmed Thahir's Open University Notes",
   "start_url" : "./",
-  "scope" : "/",
+  "scope" : ".",
   "display" : "minimal-ui",
   "lang" : "English",
   "icons" : [
