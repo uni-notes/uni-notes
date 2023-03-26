@@ -253,10 +253,10 @@ Proportional change in demand of commodity wrt proportional change in income of 
 
 $$
 \begin{align}
-e_x^m
-%&= \frac{(x' - x)/x}{(p' - p)/p} \\&= \frac{\% \Delta x}{\% \Delta m} \\&= \frac{\color{orange} \Delta x/x}{\color{orange} \Delta m/m} \\
-&= \frac{\color{orange} \Delta x}{\color{orange} \Delta m}
-\frac{\color{orange} m}{\color{orange}{x}}
+e_x^m \% &= \frac{(x' - x)/x}{(p' - p)/p} \\
+&= \frac{\% \Delta x}{\% \Delta m} \\
+&= \frac{\color{hotpink} \Delta x/x}{\color{orange} \Delta m/m} \\
+&= \frac{\color{hotpink} \Delta x}{\color{orange} \Delta m} \frac{\color{orange} m}{\color{hotpink}{x}}
 \end{align}
 $$
 
