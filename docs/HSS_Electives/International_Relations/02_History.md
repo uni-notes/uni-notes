@@ -1,30 +1,23 @@
-## Need for history
+## Need for History
 
-1. give examples for theory
-2. justifications for proposals and ideas
-3. To understand the present
-   Lot of conflicts in middle east are due to WW1
+1. Give examples for theory
+2. Justifications for proposals and ideas
+3. To understand the present (Lot of conflicts in middle east are due to World War 1)
 4. Notice patterns
 
 ## World War 1
 
-started in Europe
-
-High speed of industrialization
-
-everyone believed that the best way to progress was through industrialization
+Started in Europe, mainly due high speed of industrialization; everyone believed that the best way to progress was through industrialization.
 
 ### Germany
 
-dissatisfied
+was dissatisfied and get surrounded by its enemies quickly
 
-get surrounded by its enemies quickly
+### Reason for dissatisfaction
 
-### Reason
-
-1. nationalism
-   1. want an empire
+1. nationalism and wanted an empire
 2. Franz Ferdinand got assassinated
+   
    The political objective of the assassination was to free Bosnia of Austria-Hungarian rule and established of a common South Slav ("Yugoslav") state. The assassination precipitated the July crisis which lead to Austria-Hungary declaring war on Serbia and the start of the First World War
 
 ### Parties
@@ -40,12 +33,13 @@ get surrounded by its enemies quickly
 
 Italy switched sides cuz it felt like it didn't get much from the war, even though it did a lot
 
-Why US joined WW1
+### Why US joined WW1
 
-mostly financial
+Mostly financial
 
-1. to get european allies by supporting
-2. maritime - Germany blockade of ships
+1. To get european allies by supporting
+2. Maritime - Blockade of ships by Germany
+   
    Germany sank many American merchant ships around the British Isles, using submarines, prompting the American entry into the war.
 
 ### Far East
@@ -106,7 +100,7 @@ Another theory about why US used the bomb is to show it's superiority, because t
 
 After WW1 and WW2, naked expansion has been frowned upon. Previously, colonialism and expansion of territories was accepted
 
-## Ind
+## Indian Wars
 
 ### Naxalite–Maoist Insurgency
 
@@ -239,7 +233,7 @@ you cannot attack diplomat in embassy; embassy are like enclaves
 
 ### UN Security council
 
-countries which volunteer its military services for global issues
+Countries which volunteer its military services for global issues
 
 5 permanent members
 
