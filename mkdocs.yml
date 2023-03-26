@@ -14,8 +14,8 @@ edit_uri: edit/main/docs/
 # Configuration
 theme:
   name: material
+  custom_dir: overrides
   font: false
-  custom_dir: material/overrides
   features:
     # - announce.dismiss
     # - content.action.view
