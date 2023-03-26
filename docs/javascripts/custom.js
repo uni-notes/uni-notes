@@ -14,4 +14,8 @@ window.addEventListener("load", function(){
 
   let next = document.querySelector(".md-footer__link--next").href;
   prefetch(next.toLowerCase(), "document");
+  
+  window.addEventListener('load', () =>{
+    quicklink.listen();
+  });
 });
