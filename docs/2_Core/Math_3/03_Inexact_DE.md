@@ -19,7 +19,7 @@ $$
 
 3. Multiply both sides of $\eqref{de}$:
    Inexact DE $\times$ IF $\to$ Exact DE
-4. Then, use [02 Exact DE](02 Exact DE.md) method
+4. Then, use [Exact DE](02_Exact_DE.md) method
 
 ## Shortcut
 

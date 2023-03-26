@@ -242,7 +242,7 @@ class QueuedLL
 
 ## Double Linked List
 
-[03 DLL](Practicals/03 DLL.md) 
+[DLL Practicals](Practicals/03_DLL.md) 
 
 ## Circular Linked List
 

@@ -28,7 +28,7 @@ $$
    
 5. Put $\theta^2 \to m^2, \theta \to m$
 
-6. Find gen solution in terms of $z : y(z)$, using [Constant Coefficient](08 Constant Coefficient.md)
+6. Find gen solution in terms of $z : y(z)$, using [Constant Coefficient](08_Constant_Coefficient.md)
 
     - $y = c_1 e^{m_1 z} + c_2 e^{m_2 z}$
     - $y = e^{mz}(c_1 + c_2 z)$

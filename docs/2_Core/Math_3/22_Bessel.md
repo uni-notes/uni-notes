@@ -17,7 +17,7 @@ $x=0$ is a regular singular point of $\eqref{de}$. Solving using Frobenieus Seri
 | :----: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | $J(x)$ | $\sum\limits_{n=0}^\infty \dfrac{(-1)^n \left(\frac{x}{2}\right)^{2n \textcolor{hotpink}{+p}}}{n!(n \textcolor{hotpink}{+p})!}$ | $\sum\limits_{n=0}^\infty \dfrac{(-1)^n \left(\frac{x}{2}\right)^{2n \textcolor{hotpink}{-p} }}{n!(n \textcolor{hotpink}{-p} )!}$ |
 
-The above 2 formula are not directly possible for negative integers, as $(n-p)!$ is not valid when it is negative<br />Use [gamma function](14 Laplace.md#Gamma Function)
+The above 2 formula are not directly possible for negative integers, as $(n-p)!$ is not valid when it is negative<br />Use [gamma function](14_Laplace.md#Gamma Function)
 
 ## General Solution
 

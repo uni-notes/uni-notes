@@ -176,7 +176,7 @@ $S = \sum(1,2,4,7), C = \sum(3,5,6,7)$
 - 3-8 decoder
 - 2 or gates
 
-refer the [gates notes](02 Gates.md#Universal Gates) to use different gates
+refer the [gates notes](02_Gates.md#Universal Gates) to use different gates
 
 ## Encoder
 

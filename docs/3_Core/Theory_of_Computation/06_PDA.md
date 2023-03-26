@@ -31,7 +31,7 @@ $$
 
 ### Conclusion
 
-Same as [NFA Conclusion](03 NFA.md#Conclusion)
+Same as [NFA Conclusion](03_NFA.md#Conclusion)
 
 ### Note
 

@@ -4,7 +4,7 @@ $$
 y^{(n)} + \dots + py' + qy = 0
 $$
 
-Solve using the same method as [Constant Coefficient](08 Constant Coefficient.md)
+Solve using the same method as [Constant Coefficient](08_Constant_Coefficient.md)
 
 $$
 m^n + \dots + pm + q = 0 \label{hi}

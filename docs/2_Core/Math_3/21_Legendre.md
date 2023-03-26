@@ -69,7 +69,7 @@ $$
 
 ## Legendre Series
 
-Similar to [Fourier Series](#19 Fourier Series.md), Any function $f(x)$ can be represented as
+Similar to [Fourier Series](17_Fourier_Series.md), Any function $f(x)$ can be represented as
 
 $$
 \begin{align}
