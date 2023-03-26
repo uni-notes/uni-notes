@@ -9,6 +9,5 @@ Make sure to ⭐ this project on GitHub. Feel free to share this to everyone you
 ## Tips
 
 - Use the navbar ⬅️ to go through the website
-- If you've got any changes/corrections:
-    - Create a GitHub pull request, if you can correct it
-    - Create an GitHub issue, if you just want to report it
+- For changes/corrections, click the edit button (pen icon) at the top of any page
+- Collaborators will be mentioned in the GitHub repository for their contributions
