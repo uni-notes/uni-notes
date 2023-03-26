@@ -136,11 +136,12 @@ markdown_extensions:
 extra_javascript:
   - javascripts/quicklink.js
   - javascripts/custom.js
+  
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - javascripts/tex-mml-chtml.js
+  # - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   
-  # - javascripts/tex-mml-chtml.js
   # - javascripts/mathjax_mhchem.js
   # - javascripts/mathjax_color.js
   # - javascripts/mathjax_cases.js
