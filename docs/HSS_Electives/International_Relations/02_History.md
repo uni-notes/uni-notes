@@ -82,7 +82,7 @@ Japan already had a military alliance with Britain, but that did not obligate it
 | Soviet |         |
 | China  |         |
 
-US and Soviet were together?! :open_mouth:
+US and Soviet were together?! 😲
 
 ### Why did Japan join axis
 

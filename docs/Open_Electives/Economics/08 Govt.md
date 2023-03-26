@@ -57,7 +57,7 @@ case study
 - in short run, it is fine
 - in the long run, causes a huge shortage in houses
 
-> “the best way to destory a city, other than bombing” :laughing:
+> “the best way to destory a city, other than bombing” 🤭
 
 1. people pay lower rents
    1. both rich and poor tenants gain
@@ -112,7 +112,7 @@ the funding comes from taxing the rich
 
 but taxes de-incentives the rich, cuz they don’t like it
 
-(i zoned out for this part :disappointed: )
+(i zoned out for this part 😞)
 
 ## Case Study: Sugar
 

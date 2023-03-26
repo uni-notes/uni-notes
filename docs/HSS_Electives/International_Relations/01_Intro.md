@@ -24,7 +24,7 @@ For a country to have relations with another country
 
 ## Unipolar vs Bipolar world
 
-Which is better? :thinking:
+Which is better? 🤔
 
 Realists say that bipolar world is the most stable, and unipolar is least stable
 
