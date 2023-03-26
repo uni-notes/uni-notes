@@ -4,6 +4,6 @@
   "description" : "Ahmed Thahir's Open University Notes",
   "start_url" : "index.html",
   "scope" : "/",
-  "display" : "standalone",
+  "display" : "fullscreen",
   "lang" : "English"
 }
