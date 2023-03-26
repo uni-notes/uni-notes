@@ -16,7 +16,7 @@ theme:
   name: material
   font: false
   extrahead:
-    manifest: manifest.json
+    <link rel="manifest" href="./manifest.json">
   # custom_dir: material/.overrides
   features:
     # - announce.dismiss
