@@ -1,0 +1,9 @@
+{
+  "name" : "Uni Notes",
+  "short_name" : "Notes",
+  "description" : "Ahmed Thahir's Open University Notes",
+  "start_url" : "index.html",
+  "scope" : "/",
+  "display" : "standalone",
+  "lang" : "English"
+}
