@@ -20,6 +20,11 @@ iframe
     border: none;
 }
 
+.md-footer-meta
+{
+    display: none;
+}
+
 @media (orientation: landscape)
 {
     .md-nav.md-nav--primary li:not(li:has(.md-nav__link--active)):not(.md-nav.md-nav--primary:hover li) a,
