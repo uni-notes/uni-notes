@@ -15,6 +15,8 @@ edit_uri: edit/main/docs/
 theme:
   name: material
   font: false
+  extrahead:
+    manifest: manifest.json
   # custom_dir: material/.overrides
   features:
     # - announce.dismiss
@@ -74,8 +76,7 @@ plugins:
       
 
 # Customization
-extra:
-  manifest: manifest.json
+#extra: 
 #   analytics:
 #     provider: google
 #     property: !ENV GOOGLE_ANALYTICS_KEY
