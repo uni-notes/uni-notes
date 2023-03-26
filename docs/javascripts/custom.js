@@ -12,6 +12,9 @@ function prefetch(link, type)
 }
 
 window.addEventListener("load", function(){
-	let next_file = document.querySelector("a[rel='next']").innerText.split("\n").pop().replaceAll(" ", "_").toLowerCase() + "/";
-  prefetch(next_file, "document")
+  let next_file = document.querySelector("a[rel='next']").innerText.split("\n").pop().replaceAll(" ", "_")
+  prefetch(
+	  "../" + next_file.toLowerCase() + "/";,
+	  "document"
+  )
 });
