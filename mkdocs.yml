@@ -15,7 +15,6 @@ edit_uri: edit/main/docs/
 theme:
   name: material
   font: false
-  extrahead: <link rel="manifest" href="./manifest.json">
   # custom_dir: material/.overrides
   features:
     # - announce.dismiss
