@@ -24,7 +24,7 @@ theme:
     - content.code.copy
     # - content.tabs.link
     - content.tooltips
-    # - header.autohide
+    - header.autohide
     # - navigation.expand
     - navigation.footer
     - navigation.indexes
@@ -63,7 +63,8 @@ theme:
 # Plugins
 plugins:
   - search:
-      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+      lang: en
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;' #'[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - minify:
       minify_html: true
       minify_js: true
@@ -74,7 +75,8 @@ plugins:
       
 
 # Customization
-#extra: 
+extra:
+  generator: false
 #   analytics:
 #     provider: google
 #     property: !ENV GOOGLE_ANALYTICS_KEY
