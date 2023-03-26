@@ -3,7 +3,7 @@ video,
 iframe
 {
     content-visibility: auto !important;
-    contain-intrinsic-size: 0 200px !important;
+    contain-intrinsic-size: 1px 5000px !important;
 }
 
 @media (orientation: landscape)
