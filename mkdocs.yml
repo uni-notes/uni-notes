@@ -134,6 +134,7 @@ markdown_extensions:
       generic: true
 
 extra_javascript:
+  - javascripts/custom.js
   - javascripts/mathjax.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   # - javascripts/tex-mml-chtml.js
@@ -143,4 +144,4 @@ extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
 
 extra_css:
-  - stylesheets/styles.css
+  - stylesheets/custom.css
