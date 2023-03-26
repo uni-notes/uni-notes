@@ -13,5 +13,5 @@ function prefetch(link, type)
 
 window.addEventListener("load", function(){
   let next = document.querySelector(".md-footer__link--next").href;
-  prefetch(next, "document");
+  prefetch(next.toLowerCase(), "document");
 });
