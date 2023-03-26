@@ -6,7 +6,7 @@
    Lot of conflicts in middle east are due to WW1
 4. Notice patterns
 
-## WW1
+## World War 1
 
 started in Europe
 
@@ -62,7 +62,7 @@ basically china wanted to help the Allies in exchange for help with land dispute
 
 Japan already had a military alliance with Britain, but that did not obligate it to enter the war. It joined the Allies in order to make territorial gains: because they wanted to acquire the lands in Far East under German control
 
-## WW2
+## World War 2
 
 ### Reasons
 
