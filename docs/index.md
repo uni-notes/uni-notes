@@ -1,8 +1,10 @@
 # Welcome!
 
-Hi there, I'm Ahmed Thahir. These are the lecture notes I've taken over the years. Hope they help you!
+Hi there, I'm Ahmed Thahir. These are the lecture notes I've taken over the years.
 
-You can install the app right now! Make sure to ⭐ this project on GitHub. Feel free to share this to everyone you know.
+You can install the app right now (you should get a `Add to Home Screen` popup). Hope it helps you!
+
+Make sure to ⭐ this project on GitHub. Feel free to share this to everyone you know.
 
 ## Tips
 
