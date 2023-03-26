@@ -141,11 +141,11 @@ Why do you say that a democracy better than a dictatorship?
 
 ## Graphs
 
-<iframe src="https://ourworldindata.org/grapher/refugee-population-by-country-or-territory-of-origin"></iframe>
+<iframe src="https://ourworldindata.org/grapher/refugee-population-by-country-or-territory-of-origin" loading="lazy"></iframe>
 
-<iframe src="https://ourworldindata.org/grapher/refugee-population-by-country-or-territory-of-asylum?"></iframe>
+<iframe src="https://ourworldindata.org/grapher/refugee-population-by-country-or-territory-of-asylum?" loading="lazy"></iframe>
 
-<iframe src="https://ourworldindata.org/grapher/trade-as-share-of-gdp"></iframe>
+<iframe src="https://ourworldindata.org/grapher/trade-as-share-of-gdp" loading="lazy"></iframe>
 
 ## Iran
 
