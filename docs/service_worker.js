@@ -3,7 +3,7 @@ const CACHE_VERSION = 10;
 const CURRENT_CACHE = `main-${CACHE_VERSION}`;
 
 // these are the routes we are going to cache for offline support
-const cacheFiles = ['/', '/about-me/', '/projects/', '/offline/'];
+const cacheFiles = ['/'];
 
 // on activation we clean up the previously registered service workers
 self.addEventListener('activate', evt =>
