@@ -134,6 +134,8 @@ markdown_extensions:
       generic: true
 
 extra_javascript:
+  - javascripts/register_service_worker.js
+  
   - javascripts/quicklink_lower_case.js
   - javascripts/custom.js
   
