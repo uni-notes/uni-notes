@@ -50,9 +50,19 @@ iframe
     border: none;
 }
 
-.md-footer-meta
+.md-footer-meta, .md-footer__direction
 {
     display: none;
+}
+
+.md-footer__link
+{
+    display: none;
+}
+
+.md-ellipsis
+{
+    max-width: 15ex;
 }
 
 .md-nav__link--active,
