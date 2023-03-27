@@ -1,4 +1,20 @@
 window.addEventListener("load", function(){
+  
+  const non_footer_links = document.querySelectorAll("a:not(footer a)");
+  non_footer_links.forEach(function(link){
+      link.textContent = link.textContent.replace(/[0-9]+[_ ]/, "")
+  });
+
+  const footer_directions = document.querySelectorAll(".md-footer__direction");
+  footer_directions.forEach(function(direction) {
+      direction.remove()
+  })
+
+  const footer_links = document.querySelectorAll("footer .md-ellipsis");
+  footer_links.forEach(function(link){
+      link.textContent = link.textContent.replace(/[0-9]+[_ ]/, "")
+  });
+  
   function prefetch(link, type)
   {
     const prefetch = document.createElement("link");
@@ -16,4 +32,5 @@ window.addEventListener("load", function(){
   prefetch(next.toLowerCase(), "document");
   
   quicklink.listen();
+  
 });
