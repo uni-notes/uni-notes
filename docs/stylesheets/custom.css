@@ -1,6 +1,9 @@
 img,
 video,
-iframe
+iframe,
+nav,
+table,
+footer
 {
     content-visibility: auto !important;
     contain-intrinsic-size: 1px 500px !important;
@@ -28,7 +31,8 @@ iframe
 @media (orientation: landscape)
 {
     .md-nav.md-nav--primary li:not(li:has(.md-nav__link--active)):not(.md-nav.md-nav--primary:hover li) a,
-    .md-nav.md-nav--primary li:not(li:has(.md-nav__link--active)):not(.md-nav.md-nav--primary:hover li) label
+    .md-nav.md-nav--primary li:not(li:has(.md-nav__link--active)):not(.md-nav.md-nav--primary:hover li) label,
+    .md-sidebar--secondary:not(:hover)
     {
         opacity: 0.3;
     }
