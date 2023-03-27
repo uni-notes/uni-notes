@@ -39,16 +39,17 @@ iframe
 
 @media (orientation: landscape)
 {
-    .md-nav.md-nav--primary li:not(li:has(.md-nav__link--active)):not(.md-nav.md-nav--primary:hover li) a,
-    .md-nav.md-nav--primary li:not(li:has(.md-nav__link--active)):not(.md-nav.md-nav--primary:hover li) label,
+    /* .md-nav.md-nav--primary li:not(li:has(.md-nav__link--active)):not(.md-nav.md-nav--primary:hover li) a, */
+    /* .md-nav.md-nav--primary li:not(li:has(.md-nav__link--active)):not(.md-nav.md-nav--primary:hover li) label, */
+    .md-sidebar--primary:not(:hover)
     .md-sidebar--secondary:not(:hover)
     {
         opacity: 0.3;
     }
 }
 
-.md-nav.md-nav--primary .md-nav__link--active,
-.md-nav.md-nav--primary li:has(.md-nav__link--active) label
+.md-nav__link--active,
+li:has(.md-nav__link--active) label
 {
     font-weight: bold;
 }
