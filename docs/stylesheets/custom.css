@@ -15,12 +15,18 @@ footer
 
 @media (orientation: landscape)
 {
+    header > *,
+    footer > *,
+    .md-sidebar > * {
+        will-change: opacity;
+        transition: opacity 0.1s;
+    }
+    
     /* .md-nav.md-nav--primary li:not(li:has(.md-nav__link--active)):not(.md-nav.md-nav--primary:hover li) a, */
     /* .md-nav.md-nav--primary li:not(li:has(.md-nav__link--active)):not(.md-nav.md-nav--primary:hover li) label, */
-    /* .md-sidebar--secondary nav:not(:hover), */
-    /* .md-sidebar--primary nav:not(:hover), */
-    nav:not(:hover) > a
-    {
+    header:not(:hover) > *,
+    footer:not(:hover) > *,
+    .md-sidebar:not(:hover) > * {
         opacity: 0.3;
     }
 }
