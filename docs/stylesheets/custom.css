@@ -19,7 +19,7 @@ footer
     /* .md-nav.md-nav--primary li:not(li:has(.md-nav__link--active)):not(.md-nav.md-nav--primary:hover li) label, */
     /* .md-sidebar--secondary nav:not(:hover), */
     /* .md-sidebar--primary nav:not(:hover), */
-    nav > a:not(:hover)
+    nav:not(:hover) > a
     {
         opacity: 0.3;
     }
