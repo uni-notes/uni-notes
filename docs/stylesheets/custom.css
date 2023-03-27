@@ -7,7 +7,12 @@ footer
 {
     content-visibility: auto !important;
     contain-intrinsic-size: 1px 500px !important;
-    
+}
+
+img,
+video,
+iframe
+{   
     max-width: 100%;
     height: auto;
     max-height: 75vh;
