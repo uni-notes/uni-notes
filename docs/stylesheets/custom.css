@@ -59,7 +59,7 @@ iframe
 
 .md-footer__link
 {
-    padding: none;
+    padding: 0;
 }
 
 .md-ellipsis
