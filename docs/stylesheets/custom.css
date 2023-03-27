@@ -67,6 +67,11 @@ iframe
     max-width: 15ex;
 }
 
+.md-grid
+{
+    max-width: initial;
+}
+
 .md-nav__link--active,
 li:has(.md-nav__link--active) label
 {
