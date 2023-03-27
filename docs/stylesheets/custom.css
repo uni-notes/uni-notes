@@ -41,8 +41,8 @@ iframe
 {
     /* .md-nav.md-nav--primary li:not(li:has(.md-nav__link--active)):not(.md-nav.md-nav--primary:hover li) a, */
     /* .md-nav.md-nav--primary li:not(li:has(.md-nav__link--active)):not(.md-nav.md-nav--primary:hover li) label, */
-    .md-sidebar--primary:not(:hover)
-    .md-sidebar--secondary:not(:hover)
+    .md-sidebar--secondary nav:not(:hover),
+    .md-sidebar--primary nav:not(:hover)
     {
         opacity: 0.3;
     }
