@@ -7,7 +7,8 @@ iframe,
 .md-search-result__item,
 .md-search-result__more,
 table,
-footer
+footer,
+.arithmatex
 {
     content-visibility: auto !important;
     contain-intrinsic-size: 1px 500px !important;
@@ -27,7 +28,7 @@ footer
     header:not(:hover) > *,
     footer:not(:hover) > *,
     .md-sidebar:not(:hover) > * {
-        opacity: 0.3;
+        opacity: 0.2;
     }
 }
 
@@ -57,7 +58,7 @@ iframe
 
 .md-footer__link
 {
-    display: none;
+    padding: none;
 }
 
 .md-ellipsis
