@@ -18,7 +18,7 @@ f1 --> f2 & f3
 | `f2()` | `f3()` | Adjacent           | ❌                   |
 | `f3()` | `f2()` | Adjacent           | ❌                   |
 
-### Requirements
+## Requirements
 
 |                         | Description                                                  | Returns                                                      |
 | ----------------------- | ------------------------------------------------------------ | :----------------------------------------------------------- |
@@ -35,7 +35,7 @@ $$
 \end{cases}
 $$
 
-### Example
+## Example
 
 ```c
 #include <stdio.h>
@@ -81,7 +81,7 @@ void main()
 }
 ```
 
-#### Output
+### Output
 
 ```
 Entering main() Function
