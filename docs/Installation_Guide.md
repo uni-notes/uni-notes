@@ -1,15 +1,17 @@
 What you’re currently using is a [PWA](#What’s a PWA?), which dramatically simplifies this entire notes initiative, but is not supported on a few browsers.
 
-|  Platform   |    Browser     |  ➡   | Supported? | Installation Step                      |
-| :---------: | :------------: | :--: | :--------: | :------------------------------------- |
-| **Android** |     Chrome     |      |     ✅      | Click the `Add to Home Screen` popup   |
-|   **iOS**   |     Chrome     |      |     ❌      | 😕 I hate this; open the link on Safari |
-|             |     Safari     |      |     ✅      | Click the `Add to Home Screen` popup   |
-| **Windows** |     Chrome     |      |     ✅      | Click the `+` icon in the address bar  |
-|             | Microsoft Edge |      |     ✅      | Click the `+` icon in the address bar  |
-|  **MacOS**  |     Chrome     |      |     ✅      | Click the `+` icon in the address bar  |
-|             |     Safari     |      |     ❌      | 😕 I hate this; open the link on Chrome |
-|  **Linux**  |     Chrome     |      |     ✅      | Click the `+` icon in the address bar  |
+|  Platform   |    Browser     |  ➡   | Supported?[^caniuse] |           Installation Step            |
+| :---------: | :------------: | :--: | :------------------: | :------------------------------------: |
+| **Android** |     Chrome     |      |          ✅           |  Click the `Add to Home Screen` popup  |
+|   **iOS**   |     Chrome     |      |          ❌           | 😕 I hate this; open the link on Safari |
+|             |     Safari     |      |          ✅           |  Click the `Add to Home Screen` popup  |
+| **Windows** |     Chrome     |      |          ✅           | Click the `+` icon in the address bar  |
+|             | Microsoft Edge |      |          ✅           | Click the `+` icon in the address bar  |
+|  **MacOS**  |     Chrome     |      |          ✅           | Click the `+` icon in the address bar  |
+|             |     Safari     |      |          ❌           | 😕 I hate this; open the link on Chrome |
+|  **Linux**  |     Chrome     |      |          ✅           | Click the `+` icon in the address bar  |
+
+[^caniuse]: [caniuse.com](https://caniuse.com/web-app-manifest)
 
 ## What’s a PWA?
 
