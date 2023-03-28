@@ -2,7 +2,7 @@
 
 Hi there, I'm Ahmed Thahir. These are the lecture notes I've taken over the years.
 
-You can install the app right now, by clicking `Add to Home Screen`. Check out the [Installation Guide](Installation Guide.md) if you are facing difficulties.
+You can install the app right now, by clicking `Add to Home Screen`. Check out the [Installation Guide](Installation_Guide.md) if you are facing difficulties.
 
 Make sure to ⭐ this project on GitHub. Feel free to share this to everyone you know.
 
