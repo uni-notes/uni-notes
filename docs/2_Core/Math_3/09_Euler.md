@@ -1,7 +1,7 @@
 ## Euler’s Equidimensional DE
 
 $$
-x^2 y'' + px y' + qy = 0\label\{.*\}
+x^2 y'' + px y' + qy = 0
 $$
 
 ## Transformation
