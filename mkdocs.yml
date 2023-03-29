@@ -139,9 +139,8 @@ extra_javascript:
   - javascripts/register_service_worker.js
   
   - javascripts/quicklink_lower_case.js
-  - javascripts/custom.js
-  
   - javascripts/katex.min.js
+  - javascripts/custom.js
 
   # - javascripts/mathjax.js
   # - https://polyfill.io/v3/polyfill.min.js?features=es6
