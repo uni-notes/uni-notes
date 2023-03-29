@@ -1,21 +1,18 @@
-window.addEventListener("load", function(){
-  
-  function prefetch(link, type)
-  {
-    const prefetch = document.createElement("link");
-
-    prefetch.setAttribute("rel", "prefetch");
-    prefetch.setAttribute("href", link);
-    prefetch.setAttribute("as", type);
-    if(type == "font" && link.includes("http")) // online font
-      prefetch.setAttribute("crossorgin", true);
-
-    document.head.appendChild(prefetch);
+window.addEventListener("load", function () {
+  options = {
+    threshold: 0.25, // default = 0, % in decimal that needs to be visible
+    ignores: [
+      /\/api\/?/, // all "/api/*" pathnames
+      uri => uri.includes('.zip'), // all ".zip" extensions
+      uri => uri.includes('#'), // prefetches to URLs containing URL fragment
+      (uri, elem) => elem.hasAttribute('noprefetch') // all <a> tags with "noprefetch" attribute
+    ] // String, RegExp, or Function values
   }
 
-  let next = document.querySelector(".md-footer__link--next").href;
-  prefetch(next.toLowerCase(), "document");
-  
-  quicklink.listen();
-  
+  quicklink.listen(options);
+  const next_page = document.querySelector(".md-footer__link--next").href.toLowerCase();
+  quicklink.prefetch(
+    [next_page],
+    true // priority; false means low priority
+  );
 });
