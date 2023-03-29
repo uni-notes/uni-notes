@@ -7,7 +7,7 @@ $$
 Solve using the same method as [Constant Coefficient](08_Constant_Coefficient.md)
 
 $$
-m^n + \dots + pm + q = 0\label\{.*\}
+m^n + \dots + pm + q = 0
 $$
 
 For 3 equal roots,
