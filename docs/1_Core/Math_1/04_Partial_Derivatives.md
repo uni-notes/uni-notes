@@ -56,7 +56,9 @@ Let $f$ be a function defined at all points in the some neighborhood f $(x_0, y_
 
 $$
 \begin{aligned}
-0 < \text{ Distance between } (x, y) \text{ and } (x_0, y_0) &< \delta \\0 < \sqrt{ (x-x_0)^2 + (y-y_0)^2 } &< \delta \\| f(x,y) - L | &< \epsilon \\
+0 < \text{ D b/w } (x, y) \text{ and } (x_0, y_0) &< \delta \\
+0 < \sqrt{ (x-x_0)^2 + (y-y_0)^2 } &< \delta \\
+| f(x,y) - L | &< \epsilon \\
 \implies L &= \lim_{(x, y) \to (x_0, y_0)} f(x, y)
 \end{aligned}
 $$
