@@ -1,19 +1,5 @@
 // load event gets fired only once; this script gets called every time
 
-if (typeof katex !== "undefined") {
-	var maths = document.querySelectorAll('.arithmatex'),
-		tex;
-
-	for (var i = 0; i < maths.length; i++) {
-		tex = maths[i].textContent || maths[i].innerText;
-		if (tex.startsWith('\\(') && tex.endsWith('\\)')) {
-			katex.render(tex.slice(2, -2), maths[i], { 'displayMode': false });
-		} else if (tex.startsWith('\\[') && tex.endsWith('\\]')) {
-			katex.render(tex.slice(2, -2), maths[i], { 'displayMode': true });
-		}
-	}
-}
-
 window.addEventListener("load", function () {
 	quicklink_options = {
 		threshold: 0.25, // default = 0, % in decimal that needs to be visible
@@ -69,6 +55,19 @@ window.addEventListener("load", function () {
 // 	}
 // };
 
-// document$.subscribe(() => {
-// 	MathJax.typesetPromise()
-// })
+document$.subscribe(() => {
+	// MathJax.typesetPromise()
+	if (typeof katex !== "undefined") {
+	var maths = document.querySelectorAll('.arithmatex'),
+		tex;
+
+	for (var i = 0; i < maths.length; i++) {
+		tex = maths[i].textContent || maths[i].innerText;
+		if (tex.startsWith('\\(') && tex.endsWith('\\)')) {
+			katex.render(tex.slice(2, -2), maths[i], { 'displayMode': false });
+		} else if (tex.startsWith('\\[') && tex.endsWith('\\]')) {
+			katex.render(tex.slice(2, -2), maths[i], { 'displayMode': true });
+		}
+	}
+}
+})
