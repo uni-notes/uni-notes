@@ -15,84 +15,84 @@ window.addEventListener("load", function () {
 		[next_page],
 		true // priority; false means low priority
 	);
+});
 
-	// render katex
+// render katex
+(function () {
+	'use strict';
+
+	var katexMath = (function () {
+		var maths = document.querySelectorAll('.arithmatex'),
+			tex;
+
+		for (var i = 0; i < maths.length; i++) {
+			tex = maths[i].textContent || maths[i].innerText;
+			if (tex.startsWith('\\(') && tex.endsWith('\\)')) {
+				katex.render(tex.slice(2, -2), maths[i], { 'displayMode': false });
+			} else if (tex.startsWith('\\[') && tex.endsWith('\\]')) {
+				katex.render(tex.slice(2, -2), maths[i], { 'displayMode': true });
+			}
+		}
+	});
+
 	(function () {
-		'use strict';
+		var onReady = function onReady(fn) {
+			if (document.addEventListener) {
+				document.addEventListener("DOMContentLoaded", fn);
+			} else {
+				document.attachEvent("onreadystatechange", function () {
+					if (document.readyState === "interactive") {
+						fn();
+					}
+				});
+			}
+		};
 
-		var katexMath = (function () {
-			var maths = document.querySelectorAll('.arithmatex'),
-				tex;
-
-			for (var i = 0; i < maths.length; i++) {
-				tex = maths[i].textContent || maths[i].innerText;
-				if (tex.startsWith('\\(') && tex.endsWith('\\)')) {
-					katex.render(tex.slice(2, -2), maths[i], { 'displayMode': false });
-				} else if (tex.startsWith('\\[') && tex.endsWith('\\]')) {
-					katex.render(tex.slice(2, -2), maths[i], { 'displayMode': true });
-				}
+		onReady(function () {
+			if (typeof katex !== "undefined") {
+				katexMath();
 			}
 		});
+	})();
 
-		(function () {
-			var onReady = function onReady(fn) {
-				if (document.addEventListener) {
-					document.addEventListener("DOMContentLoaded", fn);
-				} else {
-					document.attachEvent("onreadystatechange", function () {
-						if (document.readyState === "interactive") {
-							fn();
-						}
-					});
-				}
-			};
+}());
 
-			onReady(function () {
-				if (typeof katex !== "undefined") {
-					katexMath();
-				}
-			});
-		})();
+// render mathjax
+// window.MathJax = {
+// 	// i want to load these manually :(
+// 	loader: {
+// 		load: [
+// 			'[tex]/color',
+// 			'[tex]/cases',
+// 			'[tex]/mhchem',
+// 		]
+// 	},
+// 	tex: {
+// 		packages: {
+// 			'[+]': [
+// 				'color',
+// 				'cases',
+// 				'mhchem',
+// 				'textmacros'
+// 			]
+// 		},
+// 		inlineMath: [
+// 			["\\(", "\\)"],
+// 			["$", "$"]
+// 		],
+// 		displayMath: [
+// 			["\\[", "\\]"],
+// 			["$$", "$$"]
+// 		],
+// 		processEscapes: true,
+// 		processEnvironments: true
+// 	},
+// 	options: {
+// 		ignoreHtmlClass: ".*|",
+// 		processHtmlClass: "arithmatex"
+// 	}
+// };
 
-	}());
-
-	// render mathjax
-	// window.MathJax = {
-	// 	// i want to load these manually :(
-	// 	loader: {
-	// 		load: [
-	// 			'[tex]/color',
-	// 			'[tex]/cases',
-	// 			'[tex]/mhchem',
-	// 		]
-	// 	},
-	// 	tex: {
-	// 		packages: {
-	// 			'[+]': [
-	// 				'color',
-	// 				'cases',
-	// 				'mhchem',
-	// 				'textmacros'
-	// 			]
-	// 		},
-	// 		inlineMath: [
-	// 			["\\(", "\\)"],
-	// 			["$", "$"]
-	// 		],
-	// 		displayMath: [
-	// 			["\\[", "\\]"],
-	// 			["$$", "$$"]
-	// 		],
-	// 		processEscapes: true,
-	// 		processEnvironments: true
-	// 	},
-	// 	options: {
-	// 		ignoreHtmlClass: ".*|",
-	// 		processHtmlClass: "arithmatex"
-	// 	}
-	// };
-
-	// document$.subscribe(() => {
-	// 	MathJax.typesetPromise()
-	// })
-});
+// document$.subscribe(() => {
+// 	MathJax.typesetPromise()
+// })
