@@ -1,15 +1,15 @@
 # Welcome!
 
-Hi there, I'm Ahmed Thahir. These are the lecture notes I've taken over the years. Hope they help you!
+This is a PWA using Mkdocs material theme
 
-Make sure to ⭐ this project on GitHub. Feel free to share this to everyone you know.
+## Performance Optimizations
 
-## Tips
-
-- Use the navbar ⬅️ to go through the website
-- If you've got any changes/corrections:
-    - Create a GitHub pull request, if you can correct it
-    - Create an GitHub issue, if you just want to report it
+- Network-first PWA (offline-use possible)
+- Minifying & combining CSS/JS
+- Lazy loading images
+- Prefetching links
+- Using katex instead of mathjax
+- `content-visibility: auto`
 
 ## Disclaimers
 
