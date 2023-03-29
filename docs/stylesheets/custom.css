@@ -15,6 +15,11 @@ footer,
     contain-intrinsic-size: 1px 500px !important;
 }
 
+.arithmatex, .katex
+{
+    font-display: swap !important;
+}
+
 @media (orientation: landscape)
 {
     header > *,
