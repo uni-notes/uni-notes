@@ -8,7 +8,6 @@ $$
 +
 \Big[\lambda Q(x) + R(x) \Big] y
 = 0
-\label{gen}
 $$
 
 with the boundary conditions
@@ -48,7 +47,7 @@ $$
 \lambda = n(n+1)
 $$
 
-Here, $\lambda$ is the eigen value of $\eqref{gen}$
+Here, $\lambda$ is the eigen value of equation
 
 The corresponding solutions are $P_n(x), n = 1, 2, \dots$ They are called as eigen functions.
 

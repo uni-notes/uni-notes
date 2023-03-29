@@ -82,7 +82,6 @@ If the values of $\lambda$ are zero, then it is a simple VAR model and there is 
 
 $$
 MV = \underbrace{PY}_{\text{GDP}}
-\label{qtm}
 $$
 
 |      |                         |                                                             | Integrated of order       |
@@ -92,7 +91,7 @@ $$
 | $P$  | Price                   |                                                             | $I(1)$                    |
 | $Y$  | Real quantity of Output |                                                             | $I(1)$                    |
 
-As they are $I(1)$, they are not mean-reverting variables. Hence, taking log on both sides of $\eqref{qtm}$, and then transposing
+As they are $I(1)$, they are not mean-reverting variables. Hence, taking log on both sides of equation, and then transposing
 
 $$
 \beta_0 + \beta_1 m_t - \beta_2 p_t - \beta_3 y_t = u_t

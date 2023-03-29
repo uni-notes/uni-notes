@@ -3,7 +3,6 @@ Consider a 1st order inexact DE
 $$
 M(x, y) dx + N(x, y) dy = 0, \quad
 (M_y \ne N_x)
-\label{de}
 $$
 
 ### **Steps**
@@ -17,7 +16,7 @@ $$
 |      | $\dfrac{M_y - N_x}{\color{orange}-M} = h(y)$ | $\dfrac{M_y - N_x}{\color{orange}N} = g(x)$ |
 |  IF  |         $e^{\int h(y) \cdot dy}$          |         $e^{\int g(x) \cdot dx}$         |
 
-3. Multiply both sides of $\eqref{de}$:
+3. Multiply both sides of equation:
    Inexact DE $\times$ IF $\to$ Exact DE
 4. Then, use [Exact DE](02_Exact_DE.md) method
 

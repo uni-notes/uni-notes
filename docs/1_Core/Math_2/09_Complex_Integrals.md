@@ -55,13 +55,12 @@ f(z) &= \sum_0^\infty a_n (z-z_0)^n + \underbrace{
 \end{aligned}
 $$
 
-The following equation $\eqref{formula}$ is only valid if $0 < |z| < 1$
+The following equation is only valid if $0 < |z| < 1$
 
 $$
 \begin{aligned}
 (1+z)^{-1} &= 1 - z + z^2 - z^3 + \dots \\(1-z)^{-1} &= 1 + z + z^2 + z^3 + \dots \\(1+z)^{-2} &= 1 - 2z + 3z^2 - 4z^3 + \dots \\(1-z)^{-2} &= 1 + 2z + 3z^2 + 4z^3 + \dots
 \end{aligned}
-\label{formula}
 $$
 
 ## Singular Points

@@ -10,7 +10,6 @@ a^2 \left(
 	\frac{\partial^2 y}{\partial x^2}
 \right)
 \end{aligned}
-\label{idk}
 $$
 
 ==$a \ne$ acceleration==
@@ -26,7 +25,7 @@ $$
 
 ### Solution
 
-Solution of $\eqref{idk}$ under the initial conditions
+Solution of equation under the initial conditions
 
 $$
 \begin{aligned}
@@ -63,7 +62,6 @@ $$
 &=
 \alpha^2 \left( \frac{\partial^2 u}{\partial x^2} \right)
 \end{aligned}
-\label{2}
 $$
 
 ### Conditions
@@ -76,7 +74,7 @@ $$
 
 ### Solution
 
-Solution of $\eqref{2}$ under the initial conditions
+Solution of equation under the initial conditions
 
 $$
 \begin{aligned}

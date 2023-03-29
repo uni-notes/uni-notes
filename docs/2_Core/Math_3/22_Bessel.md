@@ -4,14 +4,13 @@ Family of differential equation, with some constant value $p$
 
 $$
 x^2y'' + xy' + (x^2-p^2) y = 0
-\label{de}
 $$
 
 ## Bessel’s Function
 
 is the solution of Bessel’s DE. Denoted by $J_p(x)$
 
-$x=0$ is a regular singular point of $\eqref{de}$. Solving using Frobenieus Series method gives 2 initial roots as $m = \pm p$
+$x=0$ is a regular singular point of equation. Solving using Frobenieus Series method gives 2 initial roots as $m = \pm p$
 
 |        |                             $+p$                             |                             $-p$                             |
 | :----: | :----------------------------------------------------------: | :----------------------------------------------------------: |

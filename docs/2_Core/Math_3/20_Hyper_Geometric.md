@@ -14,12 +14,11 @@ $$
 x(1-x) y'' +
 \Big[c - (a+b+1)x \Big]y' -
 (ab)y = 0
-\label{standard}
 $$
 
 where $a, b, c$ are real constants
 
-$x=0, x=1$ are the regular singular points of $\eqref{standard}$
+$x=0, x=1$ are the regular singular points of equation
 
 By Frobenius Series method, at regular singular points, we get 2 initial roots
 

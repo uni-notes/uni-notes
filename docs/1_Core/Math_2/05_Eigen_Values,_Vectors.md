@@ -1,10 +1,9 @@
 ## Eigen Values
 
-are the values of $\lambda$ that satisfy $\eqref{values}$
+are the values of $\lambda$ that satisfy equation
 
 $$
 | A - \lambda I | = 0
-\label{values}
 $$
 
 ### Properties
@@ -23,11 +22,10 @@ $$
 
 ## Eigen Vectors
 
-are the values of $X$ that satisfies $\eqref{vectors}$
+are the values of $X$ that satisfies equation
 
 $$
 (A - \lambda I) X = 0
-\label{vectors}
 $$
 
 Eigen vector(s) of $A$ = eigen vector(s) of $A^{-1}, A^n, A^T$

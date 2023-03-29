@@ -23,11 +23,10 @@ all interior points and boundary points are limit points
 
 ### Differentiable
 
-Consider derivative $\eqref{limit}$.
+Consider derivative equation.
 
 $$
 f'(z) = \lim_{\Delta z \to 0} \frac{ f(z + \Delta z) - f(z) }{ \Delta z }
-\label{limit}
 $$
 
 A function is said to differentiable if $f'(z)$ is **unique**
@@ -42,11 +41,10 @@ Analytic Everywhere
 
 ### Harmonic
 
-$u$ is harmonic if it satisfied Laplace Equation $\eqref{laplace}$, ie
+$u$ is harmonic if it satisfied Laplace equation, ie
 
 $$
 u_{xx} + u_{yy} = 0
-\label{laplace}
 $$
 
 If $f(z) = u+iv$, then

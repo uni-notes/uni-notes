@@ -4,12 +4,11 @@ An infinite series in $x$ of the form
 
 $$
 \sum_{n=0}^\infty a_n x^n = a_0 + a_1 x + a_2 x^2 + \dots + a_r x^r + \dots
-\label{power_series}
 $$
 
 where $\{ a_0, a_1, a_2, \dots \}$ are constants
 
-$\eqref{power_series}$ is convergent only when $x \to 0$
+equation is convergent only when $x \to 0$
 
 ### Non-Algebraic Elementary Functions
 
@@ -62,7 +61,6 @@ $$
 P y'' + Q y' + R y &= 0 \\
 \implies y'' + \frac{Q}{P} y' + \frac{R}{P} y &= 0
 \end{aligned}
-\label{gen}
 $$
 
 | Types          | $P(a)$  |
@@ -72,20 +70,19 @@ $$
 
 ## Ordinary Point
 
-$x=a$ is an ordinary point of DE $\eqref{gen}$, if $P(a) \ne 0$.
+$x=a$ is an ordinary point of DE equation, if $P(a) \ne 0$.
 
 ### Power Series Solution
 
-The power series solution of $\eqref{gen}$ is given by
+The power series solution of equation is given by
 
 $$
 y = \sum_{n=0}^{\infty} a_n x^n
-\label{sol}
 $$
 
 ### General Solution
 
-Solving $\eqref{gen}$ using $\eqref{sol}$ gives the general solution of $\eqref{gen}$ as
+Solving equation as
 
 $$
 y = a(\text{PS}_1) + b(\text{PS}_2)
@@ -109,7 +106,6 @@ q&=
 \lim_{x \to a} (x-a)^{\textcolor{hotpink}{2}}
 &\frac{R(x)}{P(x)}
 \end{aligned}
-\label{limits}
 $$
 
 | Both limits exist | Point Type |
@@ -136,4 +132,4 @@ $$
 m(m-1) + p m + q = 0
 $$
 
-where $p$ and $q$ are limits from $\eqref{limits}$
+where $p$ and $q$ are limits from equation

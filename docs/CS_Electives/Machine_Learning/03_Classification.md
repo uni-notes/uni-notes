@@ -70,7 +70,6 @@ $$
 } =
 \frac{1}{m}
 \sum (\hat y - y) x
-\label{idk1}
 $$
 
 $$
@@ -86,10 +85,9 @@ $$
 \end{bmatrix}
 &\approx 1
 \end{aligned}
-\label{idk2}
 $$
 
-Using $\eqref{idk1}$ and $\eqref{idk2}$
+Using equation
 
 $$
 \nabla J(\theta) =
@@ -389,10 +387,9 @@ P(C|x)
 }_{\text{Likelihood}}
 \underbrace{P(C)|x}_{\text{Prior}}
 \end{aligned}
-\label{gc}
 $$
 
-However $\eqref{gc}$ is not used as it is; we take $\log$ on both sides and find **log likehood**
+However equation is not used as it is; we take $\log$ on both sides and find **log likehood**
 
 $$
 \begin{aligned}

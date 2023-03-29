@@ -1,7 +1,7 @@
 ## Euler’s Equidimensional DE
 
 $$
-x^2 y'' + px y' + qy = 0 \label{gen}
+x^2 y'' + px y' + qy = 0\label\{.*\}
 $$
 
 ## Transformation
@@ -18,7 +18,7 @@ xD &= \theta \\   x^2 D^2 &= \theta(\theta - 1)
 \end{aligned}
 $$
    
-4. Equation $\eqref{gen}$ becomes
+4. equation becomes
 
 $$
 \begin{aligned}

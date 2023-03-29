@@ -5,29 +5,27 @@ $$
 2xy' +
 n(n+1)y
 = 0
-\label{gen}
 $$
 
 ## Solution
 
-Solution of $\eqref{gen}$ is given by subbing $t=\frac{1 - x}{2}$, at the 2 singular points $x = \pm 1$.
+Solution of equation, at the 2 singular points $x = \pm 1$.
 
 We will get
 
 $$
 t(t-1)y'' + (1-2t)y' + n(n+1)y = 0
-\label{hyper}
 $$
 
-$\eqref{hyper}$ is a hyper-geometric function.
+equation is a hyper-geometric function.
 
-### Solution of $\eqref{hyper}$ near $t=0$
+### Solution of equation near $t=0$
 
 $$
 y = F(-n, n+1, 1, t)
 $$
 
-### Solution of $\eqref{gen}$ near $x=0$
+### Solution of equation near $x=0$
 
 $$
 P_n(x) =
