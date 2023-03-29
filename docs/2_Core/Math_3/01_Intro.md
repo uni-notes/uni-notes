@@ -23,11 +23,11 @@ Aim is to find the value of $y$ in terms in $x$. We do this by integrating (anti
 We can directly solve this by separating the variables
 
 $$
-\begin{align}
+\begin{aligned}
 f(x, y) &= g(x) \cdot h(y) \\
 \frac{dy}{dx} &= g(x) \cdot h(y) \\
 \int \frac{dy}{h(y)}  &= \int g(x) dx
-\end{align}
+\end{aligned}
 $$
 
 ## Homogeneous Equation
@@ -41,19 +41,19 @@ $$
 If both $M(x, y)$ and $N(x,y)$ are homogeneous of the same degree.
 
 $$
-\begin{align}
+\begin{aligned}
 \frac{dy}{dx} &= \frac{- M(x, y)}{N(x, y)} \\
 \text{Let }  v &= \frac{y}{x} \implies y = vx \\
 \frac{dy}{dx} &= v + x \frac{dv}{dx}
-\end{align}
+\end{aligned}
 $$
 
 ## Homogeneous Expression
 
 $$
-\begin{align}
+\begin{aligned}
 f(tx, ty) = t^n \cdot f(x, y)
-\end{align}
+\end{aligned}
 $$
 
 |       Example       | Degree |
@@ -71,11 +71,11 @@ $$
 Be able to identify transposition to simplify
 
 $$
-\begin{align}
+\begin{aligned}
 d(\log x) &= \left( \frac{1}{x} \right) dx \\
 \text{because
  }
 \frac{d(\log x)}{dx} &= \frac{1}{x} \\
-\end{align}
+\end{aligned}
 $$
 

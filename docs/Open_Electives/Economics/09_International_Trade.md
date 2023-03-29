@@ -7,11 +7,11 @@
 Benefit that consumers enjoy when they purchase goods and services
 
 $$
-\begin{align}
+\begin{aligned}
 &= \text{area under demand curve and above equilibrium price line}  \\
 &= \text{willingness to pay - total payment} \\
 &= \int \limits_0^{Q} Q_d - \int \limits_0^{P} P_d
-\end{align}
+\end{aligned}
 $$
 
 if the value associated with a commodity is 
@@ -40,11 +40,11 @@ The Consumer surplus = 6 + 4 + 2 = 12
 It is basically the profit
 
 $$
-\begin{align}
+\begin{aligned}
 &= TR - \text{Cost} \\
 &= \text{area above supply curve and below price line} \\
 &= \int
-\end{align}
+\end{aligned}
 $$
 
 | P    | $Q_s$ | $P_{eq} - P$ |

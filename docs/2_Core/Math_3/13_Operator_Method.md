@@ -3,9 +3,9 @@ Operator Method is a more general method, so it is good.
 Consider a 2nd order DE
 
 $$
-\begin{align}
+\begin{aligned}
 y'' + py' + qy &= R(x) \\(D^2 + pD + q)y &= R(x)
-\end{align}
+\end{aligned}
 $$
 
 ## Definition
@@ -15,27 +15,27 @@ y_p = \frac{1}{\phi(D)} R(x)
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 \phi(D) y &= R(x) \\
 \phi(D)
 &= D^2 + pD + q \\&=(D-m_1)(D-m_2)
-\end{align}
+\end{aligned}
 $$
 
 ## Integrals
 
 $$
-\begin{align}
+\begin{aligned}
 \frac{1}{D} R(x) &= \int R(x) dx \\
 \frac{1}{D^2} R(x) &= \iint R(x) dx \cdot dx
-\end{align}
+\end{aligned}
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 \frac{1}{D-m} R(x) &= \textcolor{orange}{e^{mx}} \int R(x) \cdot \textcolor{hotpink}{e^{-mx}} \cdot dx \\
 \frac{1}{D+m} R(x) &= \textcolor{hotpink}{e^{-mx}} \int R(x) \cdot \textcolor{orange}{e^{mx}} \cdot dx
-\end{align}
+\end{aligned}
 $$
 
 ## Short Rules for standard functions
@@ -54,28 +54,28 @@ $$
 ### Derivatives
 
 $$
-\begin{align}
+\begin{aligned}
 \phi'(a) &= \left\{ \frac{d \phi(D)}{dD} \right\}_{D \to a} \\
 \phi''(a) &= \left\{ \frac{d^2 \phi(D)}{d D^2} \right\}_{D \to a} \\f(-a^2) &= \left\{ \frac{d f(D^2)}{dD} \right\}_{D^2 \to -a^2} \\f'(-a^2) &= \left\{ \frac{d^2 f(D^2)}{d D^2} \right\}_{D^2 \to -a^2} \\
-\end{align}
+\end{aligned}
 $$
 
 ## Binomial Expansions
 
 $$
-\begin{align}
+\begin{aligned}
 (1+x)^{-1} &= 1 - x + x^2 - x^3 + \dots \\(1-x)^{-1} &= 1 + x + x^2 + x^3 + \dots
-\end{align}
+\end{aligned}
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 (1+x)^{-2} &= 1 - 2x + 3x^2 - 4x^3 + \dots \\(1-x)^{-2} &= 1 + 2x + 3x^2 + 4x^3 + \dots
-\end{align}
+\end{aligned}
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 (1+x)^{-n}
 &= 1 - nx +
 \frac{n(n+1) x^2}{2!} - 
@@ -83,7 +83,7 @@ $$
 &= 1 + nx +
 \frac{n(n+1) x^2}{2!} +
 \frac{n(n+1)(n+2) x^3}{3!} + \cdots
-\end{align}
+\end{aligned}
 $$
 
 ## Cube Formula
@@ -100,7 +100,7 @@ $$
 ### idk
 
 $$
-\begin{align}
+\begin{aligned}
 y_p
 &= \frac{1}{\phi(D)} R(x) \\&= \underbrace{
 	\left( \frac{1}{D-m_1} \right)
@@ -108,25 +108,25 @@ y_p
 		\frac{1}{D-m_2} R(x)
 	}_{R_1(x)}
 }_{R_2(x)}\\&= \frac{1}{D-m} R(x)
-\end{align}
+\end{aligned}
 $$
 
 ### IF
 
 $$
-\begin{align}
+\begin{aligned}
 Dy - my &= R(x) \\
 \frac{dy}{dx} - my &= R(x) \\
 IF
 &= e^{\int P(x) dx} \\&= e^{\int -m dx} \\&= e^{-mx}
-\end{align}
+\end{aligned}
 $$
 
 ### Solution
 
 $$
-\begin{align}
+\begin{aligned}
 y \times IF &= \int R(x) \cdot IF \cdot dx \\y e^{-mx} &= \int R(x) \cdot e^{-mx} \cdot dx \\y &= e^{mx} \int R(x) \cdot e^{-mx} \cdot dx
-\end{align}
+\end{aligned}
 $$
 

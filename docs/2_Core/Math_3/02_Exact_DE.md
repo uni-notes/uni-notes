@@ -1,11 +1,11 @@
 ## Family of Curves
 
 $$
-\begin{align}
+\begin{aligned}
 f(x, y) &= c \\
 d( \ f(x, y) \ ) &= d(c) \\
 f_x dx + f_y dy &= 0
-\end{align}
+\end{aligned}
 $$
 
 This last step
@@ -26,7 +26,7 @@ $$
 **if** there happens to be a function $f(x, y)$ such that
 
 $$
-\begin{align}
+\begin{aligned}
 f_x = M(x, y),
 \quad
 f_y &= N(x, y) \\
@@ -36,7 +36,7 @@ f_y &= N(x, y) \\
 &= 0 \\
 d( f(x, y) ) &= 0 \\
 f(x, y) &= c
-\end{align}
+\end{aligned}
 $$
 
 The final step is the general solution of the given differential equation.
@@ -78,52 +78,52 @@ $$
    
 4. Integrate
 
-$$ \begin{align} yx + y \left( \frac{ \sin xy }{ y } \right) &= c \\
+$$ \begin{aligned} yx + y \left( \frac{ \sin xy }{ y } \right) &= c \\
 yx + \sin(xy) &= c
-\end{align} $$
+\end{aligned} $$
 
 ## Exact DE Formulae
 
 $$
-\begin{align}
+\begin{aligned}
 d(xy) &= xdy + y dx \\
 d(x^2 + y^2) &= 2x dx + 2y dy \\
 d \left(\frac{x^2 + y^2}{2} \right) &= x dx + y dy
-\end{align}
+\end{aligned}
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 d\left(\frac{x}{y}\right) &= \frac{ydx - xdy}{y^2}
 \quad \left(\frac{u}{v} \right)' \text{ formula}\\
 &= \frac{1}{y}dx - \frac{x}{y^2} dy \\
 d\left(\frac{y}{x}\right) &= \frac{xdy - ydx}{x^2} \\
 &= \frac{1}{x}dy - \frac{y}{x^2} dx
-\end{align}
+\end{aligned}
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 d\left(\log{ |\frac{x}{y}| }\right) &= \frac{1}{\frac{x}{y}} \left( \frac{y dx - x dy}{y^2} \right) \\
 &= \frac{y dx - x dy}{xy} \\
-\end{align}
+\end{aligned}
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 d\left( \log \| \frac{y}{x} \| \right) &= \frac{x dy - y dx}{xy}
-\end{align}
+\end{aligned}
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 d \left( \tan^{-1} \frac{x}{y} \right) &=
 \frac{1}{1 + \frac{x^2}{y^2} }
 \left( \frac{y dx - x dy}{y^2} \right) \\
 &= \frac{y dx - x dy}{x^2 + y^2} \\
 d \left( \tan^{-1} \frac{y}{x} \right) &=
 \frac{x dy - ydx}{x^2 + y^2}
-\end{align}
+\end{aligned}
 $$
 
 ## IDK

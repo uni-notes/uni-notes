@@ -20,14 +20,14 @@ $e$ is generally negative (demand is generally negatively-related)
 but for giffen goods, $e$ is positive
 
 $$
-\begin{align}
+\begin{aligned}
 e_x^p
 &= \frac{(x' - x)/x}{(p' - p)/p} \\
 &= \frac{\% \Delta x}{\% \Delta p} \\
 &= \frac{\color{orange} \Delta x/x}{\color{orange} \Delta p/p} \\
 &= \frac{\color{orange} \Delta x}{\color{orange} \Delta p}
 \frac{\color{orange} p}{\color{orange}{x}}
-\end{align}
+\end{aligned}
 $$
 
 if price of commodity changes by some $k \%$, demand for it changes by $k \times e \%$
@@ -68,13 +68,13 @@ Proportional change in demand of commodity wrt proportional change in price of a
 proportional change may be % change
 
 $$
-\begin{align}
+\begin{aligned}
 e_{x_1}^{p_2} \%
 &= \frac{(x' - x)/x}{(p' - p)/p} \\
 &= \frac{\% \Delta x_1}{\% \Delta p_2} \\
 &= \frac{\color{orange} \Delta x_1/x_1}{\color{hotpink} \Delta p_2/p_2} \\
 &= \frac{\color{orange} \Delta x_1}{\color{hotpink} \Delta p_2} \frac{\color{hotpink} p_2}{\color{orange}{x_1}}
-\end{align}
+\end{aligned}
 $$
 
 if price of another commodity changes by some $k \%$, demand of our main commodity changes by $k \times e \%$
@@ -175,10 +175,10 @@ basically finding the relationship bw TR and demand
 - x = Total Revenue
 
 $$
-\begin{align}
+\begin{aligned}
 TR &= xp \\
 \frac{\partial (TR)}{\partial p} &= x[e_x^{p} + 1]
-\end{align}
+\end{aligned}
 $$
 
 Changes in total revenue depends on
@@ -252,12 +252,12 @@ but if price of car goes from 10k to 5k, not that many *more* people will buy
 Proportional change in demand of commodity wrt proportional change in income of consumers
 
 $$
-\begin{align}
+\begin{aligned}
 e_x^m \% &= \frac{(x' - x)/x}{(p' - p)/p} \\
 &= \frac{\% \Delta x}{\% \Delta m} \\
 &= \frac{\color{hotpink} \Delta x/x}{\color{orange} \Delta m/m} \\
 &= \frac{\color{hotpink} \Delta x}{\color{orange} \Delta m} \frac{\color{orange} m}{\color{hotpink}{x}}
-\end{align}
+\end{aligned}
 $$
 
 For inferior goods, $- \infty < e < 0$
@@ -296,11 +296,11 @@ helpful when we don’t know what the initial value, ie we don’t know what $\f
 let $v$ be the value
 
 $$
-\begin{align}
+\begin{aligned}
 \% \text{ change}
 &= \frac{\Delta v}{v_\text{avg}} \\
 v'&= \frac{|\Delta v|}{(v_1 + v_2)/2}
-\end{align}
+\end{aligned}
 $$
 
 ## Elasticity of Supply

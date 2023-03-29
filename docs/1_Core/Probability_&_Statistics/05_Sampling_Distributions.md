@@ -15,11 +15,11 @@ is used when it is not feasible to analyse the entire population
 ### Relations
 
 $$
-\begin{align}
+\begin{aligned}
 E(\bar x) &= \mu, E(s^2) = \sigma^2 , E(s) = \sigma \\
 s^2 &= \frac{\sigma^2}{n} , s = \frac{\sigma}{\sqrt n} \\
 z_\text{sample} &= \frac{\bar x - \mu}{ \sigma/\sqrt n }
-\end{align}
+\end{aligned}
 $$
 
 ## Central Limit Theorem
@@ -41,11 +41,11 @@ Confidence % $= 1- \alpha$
 Most common is $95\%$ confidence interval estimate
 
 $$
-\begin{align}
+\begin{aligned}
 1 - \alpha &= 0.95 \\
 \alpha &= 0.05 \\
 \alpha/\small 2 &= 0.025
-\end{align}
+\end{aligned}
 $$
 
 ### Population mean
@@ -57,9 +57,9 @@ $$
 | unknown | $\le 30$ | $t = \dfrac {\bar x - \mu}{s / \sqrt n}$ | $\bar x \pm t_{\small n-1, \alpha/\small 2} \cdot \dfrac s {\sqrt n} \\ (n-1) \to \text{deg of freedom}$ |
 
 $$
-\begin{align}
+\begin{aligned}
 n &= \left( \frac{z_{\alpha/\small 2} \cdot \sigma}{w} \right)^2 \\&= \left( \frac{z_{\alpha/\small 2} \cdot s}{w} \right)^2
-\end{align}
+\end{aligned}
 $$
 
 where
@@ -70,22 +70,22 @@ where
 ### Proportion
 
 $$
-\begin{align}
+\begin{aligned}
 p &= \hat p \pm z_{\alpha/\small2} \sqrt {\frac{\hat p \hat q}{n}} \\
 \hat p &= \frac x n = \frac{\text{Favorable no of cases}}{\text{Total no of cases}} \\
 \hat q &= 1 - \hat p
-\end{align}
+\end{aligned}
 $$
 
 ### Population Variance / SD
 
 $$
-\begin{align}
+\begin{aligned}
 \sigma^2 &= \left[
 \frac{(n-1)s^2}{\chi^2_{(n-1), (\alpha/\small 2)}},
 \frac{(n-1)s^2}{\chi^2_{(n-1), (1-\alpha/\small 2)}}
 \right] \\
 \sigma &= \sqrt {\sigma^2}
-\end{align}
+\end{aligned}
 $$
 

@@ -3,10 +3,10 @@
 Goal is to obtain hyperplane farthest from all sample points
 
 $$
-\begin{align}
+\begin{aligned}
 \text{Distance } & \text{between edge point and line} \\&= \frac{|w^t x_i + w_0|}{||w||} \\&=\frac{1}{||w||} \\
 \implies m &= \frac{2}{||w||}
-\end{align}
+\end{aligned}
 $$
 
 Goal is to maximize ‘margin’ $m$ (distance between classes), subject to the following constraints
@@ -45,7 +45,7 @@ $$
      - $-ve = -1$
    
 $$
-\begin{align}
+\begin{aligned}
 \alpha_1 \tilde{s_1} \cdot \tilde{s_1} +
 \alpha_2 \tilde{s_2} \cdot \tilde{s_1} +
 \alpha_3 \tilde{s_3} \cdot \tilde{s_1}
@@ -58,7 +58,7 @@ $$
 \alpha_2 \tilde{s_2} \cdot \tilde{s_3} +
 \alpha_3 \tilde{s_3} \cdot \tilde{s_3}
 &= 1
-\end{align}
+\end{aligned}
 $$
 
 5. Find $w_i$

@@ -33,9 +33,9 @@ Similarly, we define the left-hand limit
 While working on one-sided problms, we proceed as follows
 
 $$
-\begin{align}
+\begin{aligned}
 f({x_0}^+) &= \lim_{h \to 0} f(x_0 + h), & h > 0 \\f({x_0}^-) &= \lim_{h \to 0} f(x_0 - h), & h > 0
-\end{align}
+\end{aligned}
 $$
 
 ## Continuity
@@ -51,12 +51,12 @@ A function $f(x)$ is continuous @ a point $x_0$ if the following conditions are 
 If $f$ and $g$ are continuous functions in a domain $D$, then the following functions are also continuous in all points of F
 
 $$
-\begin{align}
+\begin{aligned}
 f \pm g \\
 fg \\
 \frac f g \\
 kf, & (k \text{=  const})
-\end{align}
+\end{aligned}
 $$
 
 The following functions are known to be continuous in their domain of definition

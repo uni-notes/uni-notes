@@ -34,7 +34,7 @@ Therefore, at a given temperature
 ## Ideal Gases
 
 $$
-\begin{align}
+\begin{aligned}
 PV 
 &= mRT \\&= n R_u T \\
 m &= \frac{PV}{RT} \\
@@ -42,6 +42,6 @@ m &= \frac{PV}{RT} \\
 R &= \frac{R_u}{M}, M = \text{Molar Mass (kg/mol)} \\
 R_u
 &= 0.8314 \ \mathrm{kJ/mol \cdot K} \\&= 8.314  \ \mathrm{J/mol \cdot K} \\
-\end{align}
+\end{aligned}
 $$
 

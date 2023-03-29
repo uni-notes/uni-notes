@@ -75,12 +75,12 @@ $$
 Solution is given by
 
 $$
-\begin{align}
+\begin{aligned}
 y'' +  py' + qy &= 0 &\to y_g \\
 y'' +  py' + qy &= f(x) &\to y_{p_1} \\
 y'' +  py' + qy &= g(x) &\to y_{p_2} \\
 \implies y &= y_g + y_{p_1} + y_{p_2}
-\end{align}
+\end{aligned}
 $$
 
 This superposition of the solutions is called as principle of superposition.

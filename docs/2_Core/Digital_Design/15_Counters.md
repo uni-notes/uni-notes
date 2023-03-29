@@ -202,14 +202,14 @@ The MSB of the first(left) counter is connected to the clock of the second (righ
 | 001                   | 000                   |       |       |       |       |       |       |
 
 $$
-\begin{align}
+\begin{aligned}
 J_1 &= ? &
 K_1 &= ? \\
 J_2 &= ? &
 K_2 &= ? \\
 J_3 &= Q_2' Q_1' &
 K_3 &= Q_2' Q_1'
-\end{align}
+\end{aligned}
 $$
 
 ### up/down
@@ -246,14 +246,14 @@ flowchart LR
 4 variable KMAP
 
 $$
-\begin{align}
+\begin{aligned}
 J_1 &= 1 &
 K_1 &= 1 \\
 J_2 &= Q_1 \odot M &
 K_2 &= Q_1 \odot M \\
 J_3 &= Q_2 \odot Q_1 \odot  m &
 K_3 &= Q_2 \odot Q_1 \odot  m \\
-\end{align}
+\end{aligned}
 $$
 
 ### BCD upcounter
@@ -280,7 +280,7 @@ $$
 10-15 are unused states
 
 $$
-\begin{align}
+\begin{aligned}
 J_1 &= 1 &
 K_1 &= 1 \\
 J_2 &= Q_4' Q_1 &
@@ -289,7 +289,7 @@ J_3 &= Q_2 Q_1 &
 K_3 &= Q_2 Q_1 \\
 J_4 &= Q_3 Q_2 Q_1 &
 K_4 &= Q_1
-\end{align}
+\end{aligned}
 $$
 
 ## Special Conditions
@@ -364,14 +364,14 @@ flowchart LR
 unused states will be represented as don’t care in the KMAP
 
 $$
-\begin{align}
+\begin{aligned}
 J_1 &= 1 &
 K_1 &= 1 \\
 J_2 &= Q_3' Q_1 &
 K_2 &= Q_1 \\
 J_3 &= Q_2 Q_1 &
 K_3 &= Q_1 \\
-\end{align}
+\end{aligned}
 $$
 
 |     | Unused PS<br />$Q_3 Q_2 Q_1$ | $J_3$ | $K_3$ | $J_2$ | $K_2$ | $J_1$ | $K_1$ | NS<br />$Q_3 Q_2 Q_1$ |     |

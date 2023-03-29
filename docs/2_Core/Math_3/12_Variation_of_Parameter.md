@@ -13,7 +13,7 @@ $$
 2. Let
 
 $$
-\begin{align}
+\begin{aligned}
 y_p &= v_1 y_1(x) + v_2 y_2(x), \text{where} \\   
 v_1 &= \int
 \frac{
@@ -27,7 +27,7 @@ v_2 &= \int
 }{
 W(y_1, y_2)
 } dx
-\end{align}
+\end{aligned}
 $$
 
 where $W(y_1, y_2)$ be the Wronskian, then

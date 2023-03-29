@@ -7,10 +7,10 @@ takes finite/countably-infinite no of values
 Probability Density Function
 
 $$
-\begin{align}
+\begin{aligned}
 f(x) &= P(X = x) \\f(x) &\ge 0 \\
 \sum f(x) &= 1
-\end{align}
+\end{aligned}
 $$
 
 ## CDF
@@ -18,10 +18,10 @@ $$
 Cumulative Distribution Function
 
 $$
-\begin{align}
+\begin{aligned}
 F(x) &= P(X \le x) \\&= \sum\limits_0^x f(x) \\
 P(a \le X \le b) &= \sum\limits_a^b f(x)
-\end{align}
+\end{aligned}
 $$
 
 ## Terms
@@ -35,9 +35,9 @@ $$
 | Normalised Variable |    $z$     | $\dfrac{x - E(x)}{\text{SD}}$ |
 
 $$
-\begin{align}
+\begin{aligned}
 E(k) &= k & E(kx) &= k \cdot E(x) & E(z) &= 0\\V(k) &= 0 & V(kx) &= k^2 \cdot V(x) & V(z) &= 1
-\end{align}
+\end{aligned}
 $$
 
 ## Distributions

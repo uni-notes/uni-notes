@@ -28,9 +28,9 @@ Formulae
 1. $n(A \cup B) = n(A) + n(B) - n(A \cap B)$
 
 2. $$
-   \begin{align}
+   \begin{aligned}
    n(A \cup B \cup C)&= n(A) + n(B) + n(C) \\   & \qquad - n(A \cap B) - n(B \cap C) - n(A \cap C) \\   & \qquad + n(A \cap B \cap C)
-   \end{align}
+   \end{aligned}
    $$
 
 3. $A' = S - A$
@@ -41,25 +41,25 @@ Formulae
    2. $(A \cap B)' = A' \cup B'$
 
 $$
-\begin{align}
+\begin{aligned}
 |A'| &= |U| - |A| \\|A-B| &= |A \cup B'| \\&= |A| - |A\cup B| \\
 |A \cap B \cap C'| &= |A \cap B| - |A \cap B \cap C| \\
 |A \cap B' \cap C| &= |A \cap C| - |A \cap B \cap C| \\
 |A \cap B' \cap C'| &= |B' \cap C'| - |A' \cap B' \cap C'|
-\end{align}
+\end{aligned}
 $$
 
 ## Gen Principle
 
 $$
-\begin{align}
+\begin{aligned}
 \| A_1 \cup A_2 \cup \ldots \cup A_n \|
 &= S_1 - S_2 + S_3 - \ldots + (-1)^{n-1} S_n \\&= \sum\limits_{i = 1}^n |A_i|
 - \sum\limits_{i,j} |A_i \cap A_j|
 + \sum\limits_{i, j, k} |A_i \cap A_j \cap A_k| \\
 & \qquad + \ldots
 + (-1)^{n-1} |A_1 \cap A_2 \cap \dots \cap A_n|
-\end{align}
+\end{aligned}
 $$
 
 ## Selection
@@ -75,9 +75,9 @@ $nC_r = nP_r = 0 \iff n<r$
 The no of $r$ combinations of $n$ distinct objects with unlimited repetitions
 
 $$
-\begin{align}
+\begin{aligned}
 &= V(n,r) \\&= (n-1+r)C_r &= (n-1+r)C_{n-1} \\&= \frac{(n-1+r)!}{r! \ (n-1)!}
-\end{align}
+\end{aligned}
 $$
 
 Uses
@@ -109,7 +109,7 @@ normally, for any arrangement of $n$ numbers, no of arrangements = $n!$
 $D_n =$ no of derangments possible for derangement of $n$ numbers
 
 $$
-\begin{align}
+\begin{aligned}
 D_1 &= 0 \\D_2 &= 1 \\D_3 &= 2 \qquad \set{(3, 1, 2), (2, 3, 1)} \\
 \vdots & \\
 D_n &= n! \left[
@@ -118,6 +118,6 @@ D_n &= n! \left[
 &= n! \left[
 1 + \sum_{i=1}^n (-1)^i \frac{1}{i!}
 \right]
-\end{align}
+\end{aligned}
 $$
 

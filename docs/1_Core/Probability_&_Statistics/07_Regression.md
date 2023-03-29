@@ -5,7 +5,7 @@ used to predict for the dependent variable on the basis of past information avai
 The estimated regression line is given by
 
 $$
-\begin{align}
+\begin{aligned}
 \hat y &= b_0 + b_1 x \\b_1 &= \frac{
 	n \ \sum (xy) - \sum x \sum y
 }{
@@ -13,7 +13,7 @@ $$
 } \\b_0 &= \bar y - b_1 \bar x \\
 \bar x &= \frac{\sum x} n \\
 \bar y &= \frac{\sum y} n
-\end{align}
+\end{aligned}
 $$
 
 | Term     | Meaning              |
@@ -55,12 +55,12 @@ $R^2$ value is used for non-linear regression. It shows how well data fits withi
 It has a range of $[0, 1]$. Higher the better.
 
 $$
-\begin{align}
+\begin{aligned}
 R^2 &= 1 - \frac{ \text{SS}_{res} }{ \text{SS}_{tot} } \\
 \text{SS}_\text{res} &= \sum\limits_{i=1}^n (y_i - \hat y)^2 \\
 \text{SS}_\text{tot} &= \sum\limits_{i=1}^n (y_i - \bar y)^2 \\
 \bar y &= \frac{1}{n} \sum\limits_{i=1}^n y_i
-\end{align}
+\end{aligned}
 $$
 
 where

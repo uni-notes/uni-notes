@@ -55,14 +55,14 @@ $+1$ is due to intercept(constant)
 ## Confidence Interval
 
 $$
-\begin{align}
+\begin{aligned}
 (1-\alpha)
 &= P(- t_{\alpha/2} \le
 \textcolor{hotpink}{t}
 \le +t_{\alpha/2}) \\
 \textcolor{hotpink}{t}
 &= \frac{\hat \beta_2 - \beta_2}{\sigma(\hat \beta_2)}
-\end{align}
+\end{aligned}
 $$
 
 $$
@@ -113,10 +113,10 @@ This is
 0.5 can be statistically = 0, or not; depends on the context
 
 $$
-\begin{align}
+\begin{aligned}
 P(\text{rejecting } H_0)
 &\propto |t| \\&\propto \text{Deviation of sample value from true value}
-\end{align}
+\end{aligned}
 $$
 
 $$

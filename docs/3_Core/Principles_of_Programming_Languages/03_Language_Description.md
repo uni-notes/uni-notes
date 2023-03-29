@@ -261,9 +261,9 @@ real-number $\implies$ integer-part . fraction $\implies$ integer-part digit.fra
 - Parentheses $()$ are used for grouping
 
 $$
-\begin{align}
+\begin{aligned}
 E &::= T \Big\{ (+ | -) \ T \Big\} \\T &::= F \Big\{ (* | /) \ F \Big\} \\F &::= ( E ) | \text{Name} | \text{Number}
-\end{align}
+\end{aligned}
 $$
 
 - $E =$ Expression

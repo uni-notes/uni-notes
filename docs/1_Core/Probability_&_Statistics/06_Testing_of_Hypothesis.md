@@ -14,9 +14,9 @@ The entire distribution is divided into 2 regions
 ## Population Mean
 
 $$
-\begin{align}
+\begin{aligned}
 H_0: \mu &= \mu_0 & &\text{(Null Hypothesis)} \\H_1: \mu &< \mu_0, \mu \ne \mu_0, \mu > \mu_0 & &\text{(Alternative Hypothesis)} \\
-\end{align}
+\end{aligned}
 $$
 
 | $\sigma^2$ |   $n$    |    Test Statistic/Probability Distribution     |
@@ -31,16 +31,16 @@ $$
 | :-----: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 |  $H_1$  |                        $\mu < \mu_0$                         |                       $\mu \ne \mu_0$                        |                        $\mu > \mu_0$                         |
 | p-value |              $F(z_c)$ <br /> $\alpha(t-\text{dist})$               |           $2[ F(-z_c) ]$ <br /> $2 \alpha(t-\text{dist})$           |              $F(-z_c)$ <br /> $\alpha(t-\text{dist})$              |
-|  Cases  | Accept $H_1$ if <br />$\begin{align} z_c & \le -z_\alpha \\ t_c &\le -t_{(n-1), \alpha} \\ p &\le \alpha \end{align}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{align} z_c \le -z_{\alpha/2} &\text{ or } z_c \ge +z_{\alpha/2}\\ t_c \le -t_{(n-1), (\alpha/2)} &\text{ or } t_c \ge +t_{(n-1), (\alpha/2)} \\ p &\le \alpha \end{align}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{align} z_c &\ge +z_\alpha \\ t_c &\ge +t_{(n-1), \alpha} \\ p &\le \alpha \end{align}$<br /><br />else accept $H_0$ |
+|  Cases  | Accept $H_1$ if <br />$\begin{aligned} z_c & \le -z_\alpha \\ t_c &\le -t_{(n-1), \alpha} \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{aligned} z_c \le -z_{\alpha/2} &\text{ or } z_c \ge +z_{\alpha/2}\\ t_c \le -t_{(n-1), (\alpha/2)} &\text{ or } t_c \ge +t_{(n-1), (\alpha/2)} \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{aligned} z_c &\ge +z_\alpha \\ t_c &\ge +t_{(n-1), \alpha} \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ |
 
 ## Proportion
 
 $$
-\begin{align}
+\begin{aligned}
 H_0: p &= p_0 & &\text{(Null Hypothesis)} \\H_1: p &< p_0, p \ne p_0, p > p_0 & &\text{(Alternative Hypothesis)} \\z_c &= \frac{\hat p - p_0}{
 	\sqrt{ \frac{p_0(1-p_0)}{n} }
 } & & \hat p = \frac x n = \text{Estimated value of } p\\
-\end{align}
+\end{aligned}
 $$
 
 ### Critical Region
@@ -49,15 +49,15 @@ $$
 | :-----: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 |  $H_1$  |                          $p < p_0$                           |                         $p \ne p_0$                          |                          $p > p_0$                           |
 | p-value |                           $F(z_c)$                           |                        $2[ F(-z_c) ]$                        |                          $F(-z_c)$                           |
-|  Cases  | Accept $H_1$ if <br />$\begin{align}z_c &\le -z_\alpha \\ p &\le \alpha \end{align}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{align} z_c \le -z_{\alpha/2} &\text{ or } z_c \ge +z_{\alpha/2} \\ p &\le \alpha \end{align}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{align} z_c &\ge +z_\alpha \\ p &\le \alpha \end{align}$<br /><br />else accept $H_0$ |
+|  Cases  | Accept $H_1$ if <br />$\begin{aligned}z_c &\le -z_\alpha \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{aligned} z_c \le -z_{\alpha/2} &\text{ or } z_c \ge +z_{\alpha/2} \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{aligned} z_c &\ge +z_\alpha \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ |
 
 ## Variance/SD
 
 $$
-\begin{align}
+\begin{aligned}
 H_0: \sigma^2 &= \sigma^2_0 & &\text{(Null Hypothesis)} \\H_1: \sigma^2 &< \sigma^2_0, \sigma^2 \ne \sigma^2_0, \sigma^2 > \sigma^2_0 & &\text{(Alternative Hypothesis)} \\
 \chi_c^2 &= (n-1) \frac{s^2}{\sigma_0^2}
-\end{align}
+\end{aligned}
 $$
 
 ### Critical Region
@@ -66,7 +66,7 @@ $$
 | :-----: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 |  $H_1$  |                          $p < p_0$                           |                         $p \ne p_0$                          |                          $p > p_0$                           |
 | p-value |                     1 - $\alpha$(table)                      |                     1 - $\alpha$(table)                      |                     1 - $\alpha$(table)                      |
-|  Cases  | Accept $H_1$ if <br />$\begin{align}\chi_c^2 &\le \chi^2_{(n-1), (1-\alpha)}  \\ p &\le \alpha \end{align}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{align}\chi_c^2 \le \chi^2_{(n-1), (1-\alpha/2)} &\text{ or } \chi_c^2 \ge \chi^2_{(n-1), (\alpha/2)} \\ p &\le \alpha \end{align}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{align}\chi_c^2 &\ge \chi^2_{(n-1), \alpha}  \\ p &\le \alpha \end{align}$<br /><br />else accept $H_0$ |
+|  Cases  | Accept $H_1$ if <br />$\begin{aligned}\chi_c^2 &\le \chi^2_{(n-1), (1-\alpha)}  \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{aligned}\chi_c^2 \le \chi^2_{(n-1), (1-\alpha/2)} &\text{ or } \chi_c^2 \ge \chi^2_{(n-1), (\alpha/2)} \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{aligned}\chi_c^2 &\ge \chi^2_{(n-1), \alpha}  \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ |
 
 ## Errors
 

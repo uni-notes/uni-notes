@@ -101,7 +101,7 @@ If $A$ and $B$ are 2 non-singular matrices such that $|A| \ne 0$, then $A^{-1} =
 $I$ is identity matrix
 
 $$
-\begin{align}
+\begin{aligned}
 I_{2 \times 2} &=
 \begin{bmatrix}
 1 & 0 \\0 & 1
@@ -110,7 +110,7 @@ I_{3 \times 3} &=
 \begin{bmatrix}
 1 & 0 & 0 \\0 & 1 & 0 \\0 & 0 & 1
 \end{bmatrix}
-\end{align}
+\end{aligned}
 $$
 
 To find inverse

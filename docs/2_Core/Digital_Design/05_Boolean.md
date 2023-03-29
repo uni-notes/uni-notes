@@ -30,10 +30,10 @@ Sum of Product
 Represented by NAND gate
 
 $$
-\begin{align}
+\begin{aligned}
 f(a,b,c) &= ab + bc \\
 g(a,b,c) &= a'b + b'c
-\end{align}
+\end{aligned}
 $$
 
 ### POS ($\pi$)
@@ -43,10 +43,10 @@ Product of Sum
 Represented by NOR gate
 
 $$
-\begin{align}
+\begin{aligned}
 f(a,b,c) &= (a+b)(b+c) \\
 g(a,b,c) &= (a'+b)(b'+c)
-\end{align}
+\end{aligned}
 $$
 
 ## Canonical Form
@@ -149,10 +149,10 @@ so that all the OR of all literals is 0
 basically,
 
 $$
-\begin{align}
+\begin{aligned}
  & \ xyz + xy \\
 =& \ xyz + xy(z+z')
-\end{align}
+\end{aligned}
 $$
 
 ## K-Map

@@ -28,19 +28,19 @@ $\sigma_{A=B} T_1 \times T_2 (\text{instructor})$
 ### Insertion
 
 $$
-\begin{align}
+\begin{aligned}
 &\text{account} \leftarrow \text{account } \cup \{ \\ 
 &\text{(“Ahmed", A-973, 1200)} \\&\text{(“Thahir", A-193, 1300)} \\&\}
-\end{align}
+\end{aligned}
 $$
 
 ### Update
 
 $$
-\begin{align}
+\begin{aligned}
 &\text{account} \leftarrow
 \Pi (something)
-\end{align}
+\end{aligned}
 $$
 
 ## Additional operations
@@ -60,21 +60,21 @@ Not exactly part of relational algebra, but
 - **Tuples** - records of A having the same records in B
 
 $$
-\begin{align}
+\begin{aligned}
 R ÷ S = & \\
 \{ \quad
 & t[a_1,...,a_n] : \quad t \in R \\& \land \forall s \in S \Big( (t[a_1, \dots ,a_n] \cup s) \in R \Big)
 \quad \}
-\end{align}
+\end{aligned}
 $$
 
 ### View
 
 $$
-\begin{align}
+\begin{aligned}
 &\text{create view allCustomers as} \\&\Pi_\text{branchName, customerName} (
 	\text{depositor$\Join$account}
 ) \\&\Pi_\text{branchName} ( \\&\sigma \text{ something}\\&)
-\end{align}
+\end{aligned}
 $$
 

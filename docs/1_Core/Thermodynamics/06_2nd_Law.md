@@ -11,9 +11,9 @@
 
 | Device        | Purpose                                |                                                              |                                                              |                                                              |
 | ------------- | -------------------------------------- | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| Heat Engine   | - Heat $\to$ Work<br />- cycle         | $\begin{align} \eta_{\small\text{HE}} &= \frac{W_\text{net, out}}{Q_\text{H}} \\ &= 1 - \frac{Q_\text{L}}{Q_\text{H}} \end{align}$ |        $\eta_\text{HE} < 1$<br />Kelvin-Plank Statement        | $\begin{align} \Delta U &= 0 \\ Q_\text{net} &= W_\text{net} \\ W_\text{net, out} &= Q_\text{in} - Q_\text{out} \\ &= Q_\text{H} - Q_\text{L} \end{align}$ |
-| Refridgerator | - maintain cool temp<br />- Reverse HE | $\begin{align} \text{COP}_R &= \frac{Q_\text{L}}{Q_\text{net, in}} \\ &= \frac{1}{ \frac{Q_\text{H}}{Q_\text{L}} - 1 } \end{align}$ |                   $\text{COP}_R$ can be > 1                    |                                                              |
-| Heat Pump     | - maintain warm temp<br />- Reverse HE | $\begin{align} \text{COP}_{HP} &= \frac{Q_\text{H}}{W_\text{net, in}} \\ &= \frac{1}{ 1 - \frac{Q_\text{L}}{Q_\text{H}} } \end{align}$ | $\begin{align} \text{COP}_{HP} &= \text{COP}_{R} + 1 \\ \text{COP}_{HP} &> \text{COP}_{R} \end{align}$ |                                                              |
+| Heat Engine   | - Heat $\to$ Work<br />- cycle         | $\begin{aligned} \eta_{\small\text{HE}} &= \frac{W_\text{net, out}}{Q_\text{H}} \\ &= 1 - \frac{Q_\text{L}}{Q_\text{H}} \end{aligned}$ |        $\eta_\text{HE} < 1$<br />Kelvin-Plank Statement        | $\begin{aligned} \Delta U &= 0 \\ Q_\text{net} &= W_\text{net} \\ W_\text{net, out} &= Q_\text{in} - Q_\text{out} \\ &= Q_\text{H} - Q_\text{L} \end{aligned}$ |
+| Refridgerator | - maintain cool temp<br />- Reverse HE | $\begin{aligned} \text{COP}_R &= \frac{Q_\text{L}}{Q_\text{net, in}} \\ &= \frac{1}{ \frac{Q_\text{H}}{Q_\text{L}} - 1 } \end{aligned}$ |                   $\text{COP}_R$ can be > 1                    |                                                              |
+| Heat Pump     | - maintain warm temp<br />- Reverse HE | $\begin{aligned} \text{COP}_{HP} &= \frac{Q_\text{H}}{W_\text{net, in}} \\ &= \frac{1}{ 1 - \frac{Q_\text{L}}{Q_\text{H}} } \end{aligned}$ | $\begin{aligned} \text{COP}_{HP} &= \text{COP}_{R} + 1 \\ \text{COP}_{HP} &> \text{COP}_{R} \end{aligned}$ |                                                              |
 
 ```mermaid
 flowchart TB
@@ -52,11 +52,11 @@ Adiabatic means polytropic process with**out** heat transfer
 |   4 - 1    | Adiabatic Compression                     | $PV^\gamma = c$ |         $W_{41} < 0$         |               $\frac{P_1 V_1 - P_4 V_4}{1-n}$                |
 
 $$
-\begin{align}
+\begin{aligned}
 W_\text{net, out} &= W_{12} + W_{23} + W_{34} + W_{41} \\
 \eta
 &= \frac{W_\text{net, out}}{Q_\text{H}} \\&= 1 - \frac{Q_\text{L}}{Q_\text{H}} \\&= 1 - \frac{T_L}{T_H}
-\end{align}
+\end{aligned}
 $$
 
 Make sure of the signs when calculating $W_\text{net, out}$
@@ -68,10 +68,10 @@ For Refridgerator, Heat Pump
 $Q_\text{L} > 0, Q_\text{H} < 0$
 
 $$
-\begin{align}
+\begin{aligned}
 W_\text{net, in} &= W_{12} + W_{23} + W_{34} + W_{41} \\
 \text{COP}_R &= \frac{Q_\text{L}}{W_\text{net, in}} \\
 \text{COP}_{HP} &= \frac{Q_\text{H}}{W_\text{net, in}}
-\end{align}
+\end{aligned}
 $$
 

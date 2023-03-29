@@ -64,11 +64,11 @@ $$
 ## Stochastic Specification of PRF
 
 $$
-\begin{align}
+\begin{aligned}
 y_i &= E(y|x_i) + u_i \\
 & \updownarrow \\
 u_i &= y_i - E(y|x_i)
-\end{align}
+\end{aligned}
 $$
 
 ### Components

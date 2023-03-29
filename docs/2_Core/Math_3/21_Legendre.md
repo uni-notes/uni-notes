@@ -48,9 +48,9 @@ P_n(x) =
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 P_0(x) &= 1 \\P_1(x) &= x \\P_2(x) &= \frac{1}{2}(3x^2 - 1) \\P_3(x) &= \frac{1}{2}(5x^3 - 3x)
-\end{align}
+\end{aligned}
 $$
 
 ## Generating Function
@@ -72,9 +72,9 @@ $$
 Similar to [Fourier Series](17_Fourier_Series.md), Any function $f(x)$ can be represented as
 
 $$
-\begin{align}
+\begin{aligned}
 f(x) &= \sum_{n=0}^\infty a_n P_n(x) \\
 a_n &= \frac{2n+1}{2} \int_{-1}^1 f(x) P_n(x) dx
-\end{align}
+\end{aligned}
 $$
 

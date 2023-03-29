@@ -61,10 +61,10 @@ $$
 For every 1 unit of investment
 
 $$
-\begin{align}
+\begin{aligned}
 &\text{Additional value generated after taking minimum returns} \\
 &= (\text{PI} - 1) \times \text{Original Investment}
-\end{align}
+\end{aligned}
 $$
 
 | NPV  | Meaning                                  | Decision       |

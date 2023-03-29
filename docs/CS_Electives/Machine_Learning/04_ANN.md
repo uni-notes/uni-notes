@@ -9,9 +9,9 @@ Highly simplified compulational model of neuron
 $g$ aggregates inputs and the function $f$ and gives $y \in \{ 0, 1 \}$
 
 $$
-\begin{align}
+\begin{aligned}
 y &= f \circ g \ (x) \\&= f \Big( g (x) \Big)
-\end{align}
+\end{aligned}
 $$
 
 $$
@@ -34,7 +34,7 @@ MP neuron with a mechanism to learn numerical weights for inputs
 ✅ Input is no longer limited to boolean values
 
 $$
-\begin{align}
+\begin{aligned}
 y
 &= \begin{cases}
 1, & \sum w_i x_i \ge \theta \\0, & \text{otherwise}
@@ -42,7 +42,7 @@ y
 \Big(
 x_0 &= 1, w_0 = -\theta
 \Big)
-\end{align}
+\end{aligned}
 $$
 
 - $w_i$ is weights for the inputs
@@ -107,12 +107,12 @@ For an input layer with $n$ nodes, we will have
 - $W_i$ is the weights to layer $i$
 
 $$
-\begin{align}
+\begin{aligned}
 \textcolor{hotpink}{\text{PreActivation}_{H_1}}
 &= b_1 + w_1 x_1 + w_2 x_2 + \dots \\
 \text{Activation}_{H_1}
 &= \frac{1}{1 + e^{- \textcolor{hotpink}{\text{PreActivation}_{H_1}}}}
-\end{align}
+\end{aligned}
 $$
 
 ### Decision Boundary
@@ -161,19 +161,19 @@ Assume
 1. Find $\frac{\partial J}{\partial y}$
 
 2. $$
-   \begin{align}
+   \begin{aligned}
    \frac{\partial J}{\partial a}
    &= \frac{\partial J}{\partial y} \frac{\partial y}{\partial a} \\   
    \implies \frac{\partial J}{\partial \theta}
    &= \frac{\partial J}{\partial a} \frac{\partial a}{\partial \theta}
-   \end{align}
+   \end{aligned}
    $$
 
 3. $$
-   \begin{align}
+   \begin{aligned}
    \nabla J_\text{outputLayer}
    &= \frac{\partial J}{\partial x} \\   &= \frac{\partial J}{\partial \theta} \frac{\partial \theta}{\partial x}
-   \end{align}
+   \end{aligned}
    $$
 
 4. Something
@@ -192,7 +192,7 @@ Assume
 - $a_j$ is accumulator (pre-activation) function of node $j$ in hidden layer
 
 $$
-\begin{align}
+\begin{aligned}
 \text{Find } \frac{\partial J}{\partial y} & \\ 
 \frac{\partial J}{\partial b}
 &= \frac{\partial J}{\partial y} \frac{\partial y}{\partial b} \\
@@ -207,7 +207,7 @@ $$
 \implies
 \nabla J_\text{outputLayer}
 &=\frac{\partial J}{\partial x} \\&= \frac{\partial J}{\partial \alpha_j} \frac{\partial \alpha_j}{\partial x}
-\end{align}
+\end{aligned}
 $$
 
 ## Recurrent Neural Network

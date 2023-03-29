@@ -33,9 +33,9 @@ use a secondary hash function $d(k)$
 ### Hashing
 
 $$
-\begin{align}
+\begin{aligned}
 h(k) &= k \% N \\d(k) &= q - k \% q \\
-\end{align}
+\end{aligned}
 $$
 
 where
@@ -46,10 +46,10 @@ where
 ### Bucket Placement
 
 $$
-\begin{align}
+\begin{aligned}
 \text{index} = \Big( i+ jd(k) \Big)
 \% N \\i &= h(k) \\j &= 0, 1,\dots
-\end{align}
+\end{aligned}
 $$
 
 ## Load Factor

@@ -1,11 +1,11 @@
 ## Formulae
 
 $$
-\begin{align}
+\begin{aligned}
 P(S) &=1 \\ 
 0 \le P(A) &\le 1\\P(A') &= 1 - P(A) \\P(A \cup B) &= P(A) + P(B) - P(A \cap B) \\P(A \cup B \cup C) &= P(A) + P(B) + P(C) - P(A \cap B) - P(B \cap C) - P(A \cap C) + P(A \cap B \cap C) \\
 P(A \cap B') &= P(A) - P(A \cap B) \\&= P(A \cup B) - P(B)
-\end{align}
+\end{aligned}
 $$
 
 ## Cases
@@ -50,9 +50,9 @@ $$
 - $P(B|A_2)$
 
 $$
-\begin{align}
+\begin{aligned}
 P(A_1|B)
 &= \frac{P(A_1 \cap B)}{P(B)} \\&= \frac{P(B | A_1) \cdot P(A_1)}{\sum\limits_{i=1}^{n} P(B|A_i) \cdot P(A_i)} \\
-\end{align}
+\end{aligned}
 $$
 

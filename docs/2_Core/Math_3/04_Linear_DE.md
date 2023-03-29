@@ -33,31 +33,31 @@ $$
 2. Take $z = y^{1-n}$
 
 $$
-\begin{align}
+\begin{aligned}
 z'
 &= (1-n) y^{(1-n)-1} y' \\
 y^{-n} y' &=
 \left( \frac{1}{1-n} \right) z'
-\end{align}
+\end{aligned}
 $$
 
 3. Convert into a Linear DE
 
 $$
-\begin{align}
+\begin{aligned}
 \left( \frac{1}{1-n} \right) z' + P z
 &= Q \\   
 z' + \underbrace{(1-n) P}_{P\text{ of linear DE}} \ z
 &= (1-n) Q
-\end{align}
+\end{aligned}
 $$
    
 4. Solving using Linear DE method in terms of $z$
 
 $$
-\begin{align}
+\begin{aligned}
 \text{IF} &= (1-n) \int P dx \\   z \times \text{IF} &= (1-n) \int (Q \times \text{IF}) dx \quad + c
-\end{align}
+\end{aligned}
 $$
    
 5. Put $z = y^{1-n}$ back into this

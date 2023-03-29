@@ -34,8 +34,8 @@ it’s like a reality in Rick and Morty. We can assume every thing that can/cann
    (look at the position of the $\lnot$ symbol)
    
 $$
-\begin{align}
+\begin{aligned}
 &\Box(\phi) \\   \underbrace{}_\text{not here}
 &\Box ( \lnot \phi)
-\end{align}
+\end{aligned}
 $$

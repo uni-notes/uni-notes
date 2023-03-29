@@ -47,11 +47,11 @@ $$
 Consider the point $P(x, y) \iff P(r, \theta)$
 
 $$
-\begin{align}
+\begin{aligned}
 x &= r \cos\theta \\y &= r \sin\theta \\
 r^2 &= x^2 + y^2 \\
 \theta &= \tan^{-1} \left( \frac y x \right)
-\end{align}
+\end{aligned}
 $$
 
 ## Symmetry
@@ -86,7 +86,7 @@ $$
 ### Roses
 
 $$
-\begin{align}
+\begin{aligned}
 r &= a \cos(n\theta) \\&\text{ or } \\r &= a \sin(n\theta) \\
 \text{No of petals } N &= \begin{cases}
 n, &  n = \text{odd} \\2n, & n = \text{even}
@@ -98,7 +98,7 @@ n, &  n = \text{odd} \\2n, & n = \text{even}
 \end{cases} \\
 \text{Length of petals} &= a \\
 \text{Angular Gap between axes of petals} &= \frac{2 \pi}{N}
-\end{align}
+\end{aligned}
 $$
 
 ### Lemmiscates

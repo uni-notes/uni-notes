@@ -113,21 +113,21 @@ Algorith depth(v)
 | $h$      | height               |
 
 $$
-\begin{align}
+\begin{aligned}
 e &= i+1 \\n &= 2e - 1 \\h &\le i \\h &\le (n-1)/2
-\end{align}
+\end{aligned}
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 h+1 &\le e \le 2^h \\h &\le i \le 2^h - 1 \\2h+1 &\le i \le 2^{h+1} - 1 \\one more
-\end{align}
+\end{aligned}
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 h &\ge \log_2 e \\h &\ge \log_2(n_1) -1 \\i &\le 2^i
-\end{align}
+\end{aligned}
 $$
 
 ## Expressions

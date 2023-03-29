@@ -1,27 +1,27 @@
 ## $e^z$
 
 $$
-\begin{align}
+\begin{aligned}
 |e^z| &= e^x \\e^{z + (2k \pi) i} &= e^z
-\end{align}
+\end{aligned}
 $$
 
 ## $\log z$
 
 $$
-\begin{align}
+\begin{aligned}
 \log z
 &= \ln r + i \theta \\&= \ln r + i[\text{Arg}(z) + 2k\pi] \\
 \text{Log} z
 &= \ln r + i[\text{Arg}(z)]
-\end{align}
+\end{aligned}
 $$
 
 ## Complex Exponents
 
 $$
-\begin{align}
+\begin{aligned}
 z &= e^{\log z} \\z_c &= e^{c \log z} \\PV(z^c) &= e^{c \text{ Log} z}
-\end{align}
+\end{aligned}
 $$
 

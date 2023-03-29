@@ -44,7 +44,7 @@ $\sum R =$ Sum of residues at poles lying inside/on $C$
 ## Laurent’s Series
 
 $$
-\begin{align}
+\begin{aligned}
 f(z) &= \sum_0^\infty a_n (z-z_0)^n + \underbrace{
 	\sum_1^\infty \frac{b_n}{(z - z_0)^n}
 }_\text{Principal Part} \\a_n &= \frac{1}{2 \pi i} \times \int \frac{f(z)}{(z-z_0)^{
@@ -52,15 +52,15 @@ f(z) &= \sum_0^\infty a_n (z-z_0)^n + \underbrace{
 }} \\b_n &= \frac{1}{2 \pi i} \times \int \frac{f(z)}{(z-z_0)^{
 	\textcolor{orange}{-n}+1
 }} 
-\end{align}
+\end{aligned}
 $$
 
 The following equation $\eqref{formula}$ is only valid if $0 < |z| < 1$
 
 $$
-\begin{align}
+\begin{aligned}
 (1+z)^{-1} &= 1 - z + z^2 - z^3 + \dots \\(1-z)^{-1} &= 1 + z + z^2 + z^3 + \dots \\(1+z)^{-2} &= 1 - 2z + 3z^2 - 4z^3 + \dots \\(1-z)^{-2} &= 1 + 2z + 3z^2 + 4z^3 + \dots
-\end{align}
+\end{aligned}
 \label{formula}
 $$
 

@@ -133,12 +133,12 @@ Let
     - Probability of $i$ x Number of records covered by rule
 
 $$
-\begin{align}
+\begin{aligned}
 R
 &= 2 \sum_{i=1}^k \  f_i \ \log_2 \left(\frac{f_i}{e_i} \right) \\
 e_i
 &= \text{Frac}_i \times n_i
-\end{align}
+\end{aligned}
 $$
 
 Higher value $\implies$ better rule

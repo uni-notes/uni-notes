@@ -118,21 +118,21 @@ Stores the frame number/base address of each page in physical memory
 ### Formulae
 
 $$
-\begin{align}
+\begin{aligned}
 & \text{Total no of logical address (space size) of the paging} \\
 &= \text{No of pages } \times \text{ Page Size} \\
 & \text{Total Physical memory size} \\
 &= \text{No of frames} \times \text{Frame Size}
-\end{align}
+\end{aligned}
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 \text{Logical memory size} &= 2^\text{Size of logical address bus} \\
 \implies \text{Size of logical address bus} &= \log_2 (\text{Logical memory size}) \\
 \text{Physical memory size} &= 2^\text{Size of physical address bus} \\
 \implies \text{Size of physical address bus} &= \log_2 (\text{Physical memory size})
-\end{align}
+\end{aligned}
 $$
 
 ### Address Translation
@@ -190,10 +190,10 @@ $$
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 \text{Hit Time} &= \text{Time to search TLB } + & \text{Time to access memory} \\
 \text{Miss Time} &= \text{Time to search TLB } + & \textcolor{hotpink}{2 \times} \text{Time to access memory} \\
-\end{align}
+\end{aligned}
 $$
 
 ## Memory Protection

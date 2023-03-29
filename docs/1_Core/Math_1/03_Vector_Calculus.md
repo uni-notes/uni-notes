@@ -57,11 +57,11 @@ The path of a particle is gievn by eliminating the parameter $t$ from $x, y, z$
 eg: The path of a particle having $\vec r(t) = \cos t \cdot \hat i + \sin t \hat j, \quad t \in I$
 
 $$
-\begin{align}
+\begin{aligned}
 x^2 + y^2 &=
 \cos^2 t + \sin^2 t \\
 &= 1
-\end{align}
+\end{aligned}
 $$
 
 Therefore, this path is a circle with radius = 1
@@ -69,7 +69,7 @@ Therefore, this path is a circle with radius = 1
 ## Angle Between Vectors
 
 $$
-\begin{align}
+\begin{aligned}
 \cos \theta &=
 \frac{
 	\vec a \cdot \vec b
@@ -83,7 +83,7 @@ $$
 	|\vec a| |\vec b|
 }
 \right)
-\end{align}
+\end{aligned}
 $$
 
 ## Arc Length

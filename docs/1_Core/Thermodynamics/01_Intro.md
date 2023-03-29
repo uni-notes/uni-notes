@@ -1,13 +1,13 @@
 ## Pressure
 
 $$
-\begin{align}
+\begin{aligned}
 P
 &= \frac F A \\&= \rho g h \\
 P_\text{abs} 
 &= P_\text{atm} + P_\text{gage} \\&= P_\text{atm} - P_\text{vac} \\
 1 \text{ bar} &= 100 \text{ kPa}
-\end{align}
+\end{aligned}
 $$
 
 ## Manometer
@@ -15,11 +15,11 @@ $$
 Denser fluid will be below
 
 $$
-\begin{align}
+\begin{aligned}
 P_\text{a} &= P_\text{b} \\
 P_{g_1} + \rho_1 g h_1
 &= P_{g_2} + \rho_2 g h_2
-\end{align}
+\end{aligned}
 $$
 
 ## Terms

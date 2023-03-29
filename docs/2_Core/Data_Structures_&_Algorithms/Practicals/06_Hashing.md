@@ -21,9 +21,9 @@ Input String : Az9
 Hash Value
 
 $$
-\begin{align}
+\begin{aligned}
 &= \Big((65 + 122 + 2*57) *17 + 5 \Big) \% 6 \\&= (301*17 +5) \% 6 \\&= 5122 \% 6 \\&= 4
-\end{align}
+\end{aligned}
 $$
 
 1. Compute the hash values for each of the following twenty input strings and display the values. Note: you can read each input string from a text file (one string in each line).

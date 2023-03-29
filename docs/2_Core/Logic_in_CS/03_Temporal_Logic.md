@@ -89,20 +89,20 @@ s1 --> s[s1]
 | Existential Quantifier | E     | F      |
 
 $$
-\begin{align}
+\begin{aligned}
 \lnot AF \phi &= EG \lnot \phi \\
 \lnot EF \phi &= AG \lnot \phi \\
 \lnot AX \phi &= EX \lnot \phi \\
 AF \phi &= A[T \cup \phi] \\EF \phi &= E[T \cup \phi]
-\end{align}
+\end{aligned}
 $$
 
 ### Adequate Sets
 
 $$
-\begin{align}
+\begin{aligned}
 AX \phi &= \lnot EX  \lnot \phi \\AG &=\\
-\end{align}
+\end{aligned}
 $$
 
 there are more

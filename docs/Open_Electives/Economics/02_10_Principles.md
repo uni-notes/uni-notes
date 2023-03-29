@@ -412,10 +412,10 @@ $$
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 \pi_t &= \alpha - \beta U_t &  (\pi_t = - \beta U_t + \alpha, \ y = mx+c) \\
 \text{Taking derivative wrt } \pi_t \implies \beta &= - \frac{d \pi_t}{dt}
-\end{align}
+\end{aligned}
 $$
 
 - $\pi_t =$ Inflation

@@ -23,12 +23,12 @@ Owners can expect (**not promised - not legal obligation**)
 - dividend payments
 
 $$
-\begin{align}
+\begin{aligned}
 \text{Earnings per share} &=
 \frac{\text{net profit}}{\text{no of shares}} \\
 \text{Dividend payout rate} &=
 \text{}
-\end{align}
+\end{aligned}
 $$
 
 The board decides [in consultation with CEO] whether to give out dividends or to re-invest

@@ -5,10 +5,10 @@ Ordinary Least Squares
 Based on Principle of Least Squares
 
 $$
-\begin{align}
+\begin{aligned}
 u_i
 &= y_i - \hat y_i \\&= y_i - (\hat \beta_0 + \hat \beta_1 x_i)
-\end{align}
+\end{aligned}
 $$
 
 We do **not** use just regular sum of residuals
@@ -40,10 +40,10 @@ $$
 2. Rearrange the terms
 
 3. $$
-   \begin{align}
+   \begin{aligned}
    \sum y_i &= n \hat \beta_1 + \hat \beta_2 \sum x_i \\   
    \sum y_i x_i &= n \hat \beta_1 + \hat \beta_2 \sum x_i
-   \end{align}
+   \end{aligned}
    $$
 
 ## Assumptions of OLS & Classical Regression
@@ -81,7 +81,7 @@ $$
     - For any 2 values $x_i$ and $x_j$, the correlation between $u_i$ and $u_j$ is $0$
 
     $$
-    \begin{align}
+    \begin{aligned}
     \text{cov}(u_i, u_j | x_i, x_j)
     &= E
     \Big \{
@@ -95,7 +95,7 @@ $$
     \Big(
     E(u_i) &= E(u_j) = 0
     \Big)
-    \end{align}
+    \end{aligned}
     $$
 
     - If we plot the scatter plot between $u_i$ and $u_j$, there should be no sign of correlation
@@ -185,11 +185,11 @@ Given the assumptions of CLRM(Classical Linear Regression Models), OLS estimator
 #### Linearity of OLS Estimator
 
 $$
-\begin{align}
+\begin{aligned}
 \hat \beta_2
 &= \frac{\sum x_i y_i}{\sum x_i^2} \\&= \sum k_i y_i \\
 k_i &= \frac{x_i}{\sum x_i^2}
-\end{align}
+\end{aligned}
 $$
 
 $\therefore ,$
@@ -215,7 +215,7 @@ $\beta_2$ is unbiased estimator
 #### Variance of OLS Estimators
 
 $$
-\begin{align}
+\begin{aligned}
 \sigma^2(\hat \beta_2)
 &= E[\hat \beta_2 - E(\hat \beta_2)]^2 \\&= E[\hat \beta_2 - \beta_2]^2 \\
 &= E \left[ \left( \sum k_i u_i \right)^2 \right] \\&= E[k_1^2 u_1^2 + k_2^2 u_2^2 + \dots +
@@ -223,7 +223,7 @@ $$
 ]
 \quad (E[u_i, u_j] = 0) \\
 &= \sigma^2 \sum k_i^2 \\&= \frac{\sigma^2}{\sum x_i^2}
-\end{align}
+\end{aligned}
 $$
 
 This is the formula for variance of $\beta_2$. This is also equal to the expectation of residual series.
@@ -256,12 +256,12 @@ Estimates change with change in sample. However, if there is large change in the
 ### Standard Error of Estimate
 
 $$
-\begin{align}
+\begin{aligned}
 \text{var} (\hat \beta_2)
 &= \frac{\sigma^2}{\sum x_i^2} \\
 \text{se}(\hat \beta_2)
 &= 
-\end{align}
+\end{aligned}
 $$
 
 As we don’t have $\sigma$, we can use sample estimate
@@ -279,10 +279,10 @@ If standard error of $\beta_0$ or $\beta_1$ or $\beta_2$, then substitute them a
 #### Determinants of SEE
 
 $$
-\begin{align}
+\begin{aligned}
 \text{SEE}
 &\propto \sigma \\& \propto \frac{1}{\sum x_i^2} \\& \propto \frac{1}{n}
-\end{align}
+\end{aligned}
 $$
 
 This is why we want large variability of independent variable $x$
@@ -312,10 +312,10 @@ Helps understand ___ of independent variables
 #### IDK
 
 $$
-\begin{align}
+\begin{aligned}
 \text{TSS} &= \text{ESS + RSS} \\
 \sum 
-\end{align}
+\end{aligned}
 $$
 
 TSS of $y$ = Total Sum of Squares of $y$
@@ -331,17 +331,17 @@ $$
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 R^2
 &= \frac{\text{ESS}}{\text{TSS}} \\
-\end{align}
+\end{aligned}
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 R^2
 &= 1 - \frac{\text{RSS}}{\text{TSS}} \\&= 1 - \frac{}{}
-\end{align}
+\end{aligned}
 $$
 
 $$

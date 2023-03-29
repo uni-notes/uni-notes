@@ -30,7 +30,7 @@ $$
 ### To Remember
 
 $$
-\begin{align}
+\begin{aligned}
 J_\frac{1}{2}(x) &= \sin x \sqrt{
 	\frac{2}{\pi x}
 } \\
@@ -38,19 +38,19 @@ J_\frac{-1}{2}(x) &= \cos x \sqrt{
 	\frac{2}{\pi x}
 } \\
 J_{p-1}(x) + J_{p+1}(x) &= \frac{2p}{x} J_p(x)
-\end{align}
+\end{aligned}
 $$
 
 ### Other Properties
 
 $$
-\begin{align}
+\begin{aligned}
 \Big( x^{p} J_p(x) \Big)'
 &= x^{p} J_{p-1} (x) \\
 \Big( x^{-p} J_p(x) \Big)'
 &= - x^{-p} J_{p+1} (x) \\
 {J_p}'(x) + \frac{p}{x} J_p(x) &= J_{p-1}(x) \\{J_p}'(x) - \frac{p}{x} J_p(x) &= - J_{p+1}(x) \\
 J_{p-1}(x) - J_{p+1}(x) &= 2 {J_p}'(x)
-\end{align}
+\end{aligned}
 $$
 

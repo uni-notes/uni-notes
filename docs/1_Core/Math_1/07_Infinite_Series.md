@@ -47,7 +47,7 @@ $$
 |     p-series     | $\sum\limits_{n = 1}^\infty \dfrac{1}{n^p}$ |                     $p > 1$                      |    $p \le 1$    |
 
 $$
-\begin{align}
+\begin{aligned}
 \lim\limits_{n \to \infty} \frac{ \ln \|n\| }{n} &= 0 \quad (\ln \| n \| \text{ always } < n, \text{ so den reaches } \infty \text{ faster} ) \\
 \lim\limits_{n \to \infty} x^{\frac{1}{n}} &= 1 \\
 \lim\limits_{n \to \infty} n^{\frac{1}{n}} &= 1 \\
@@ -56,7 +56,7 @@ $$
 \lim\limits_{n \to \infty} x^n &= 0 \text{ if } |x| < 1 \\
 \lim\limits_{n \to \infty} \frac{x^n}{n!} &= 0 \\
 (n! &> x^n),  \text{ when } n \text{ is large so den reaches } \infty \text{ faster}
-\end{align}
+\end{aligned}
 $$
 
 ## Integral Test

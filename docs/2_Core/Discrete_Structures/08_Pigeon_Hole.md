@@ -1,9 +1,9 @@
 ## Summary
 
 $$
-\begin{align}
+\begin{aligned}
 r &= \left\lceil \frac n k \right \rceil \\n &= k(r-1) + 1 \\k &= \left\lceil \frac n r \right \rceil \\
-\end{align}
+\end{aligned}
 $$
 
 ## Pigeon Hole Principle

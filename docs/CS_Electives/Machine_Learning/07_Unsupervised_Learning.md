@@ -28,11 +28,11 @@ Output: Set of $k$ clusters
 3. Compute ‘cluster centers’ $m$ of each cluster. These become the new cluster centroids
    
 $$
-\begin{align}
+\begin{aligned}
 m_k &= \Big(\text{mean}(X), \text{mean}(Y) \Big) \\
 X &= \text{List of } x \text{ coordinates} \\
 Y &= \text{List of } y \text{ coordinates}
-\end{align}
+\end{aligned}
 $$
 
 4. Repeat steps 2-3 until [convergence criterion](#convergence criterion) is satisfied
@@ -99,7 +99,7 @@ $$
 3. M Step: Given scores, adjust $\mu_k, \pi_k, \Sigma_k$ for each cluster $k$
    
 $$
-\begin{align}
+\begin{aligned}
 \text{Let }
 N_k &= \sum_{n=1}^N \gamma(z_{nk}) \\   N &= \text{Sample Size} \\   
 \\   
@@ -112,7 +112,7 @@ N_k &= \sum_{n=1}^N \gamma(z_{nk}) \\   N &= \text{Sample Size} \\
 (x_n - \mu_k^\text{new})
 (x_n - \mu_k^\text{new})^T
 \\   
-\pi_k^\text{new} &= \frac{N_k}{N} \\   \end{align}
+\pi_k^\text{new} &= \frac{N_k}{N} \\   \end{aligned}
 $$
    
 4. Evaluate log likelihood
@@ -151,13 +151,13 @@ Principal Component Analysis
 2. Choose the best Principal Component
 
 3. $$
-   \begin{align}
+   \begin{aligned}
    P_{ij} &= {\text{PC}_i}^T
    \begin{bmatrix}
    x_j - \bar x \\   y_j - \bar y
    \end{bmatrix} \\   
    i &= \text{Which PC we are using} \\   j &\in [1, n] \\   n &= \text{Sample Size}
-   \end{align}
+   \end{aligned}
    $$
 
 4. Now use this $P$ vector as the new reduced dimension feature

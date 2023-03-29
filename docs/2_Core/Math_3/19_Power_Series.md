@@ -29,7 +29,7 @@ Transcendental means non-algebraic
 ## Solving
 
 $$
-\begin{align}
+\begin{aligned}
 y
 &= \sum_{n=0}^\infty a_n x^n
 &&= a_0 + a_1 x + a_2 x^2 + a_3 x^3 + \dots \\
@@ -39,7 +39,7 @@ y'
 y''
 &= \sum_{n=2}^\infty a_n n(n-1) x^{n-2}
 &&= 2a_2 + (3 \cdot 2) a_3 x + \dots \\
-\end{align}
+\end{aligned}
 $$
 
 ### Comparing Coefficients
@@ -58,10 +58,10 @@ Power series solution is only possible if $x = 0$ is an [ordinary point](#ordina
 Consider a general 2nd order differential equation with polynomials $P_1, P_2, P_3$.
 
 $$
-\begin{align}
+\begin{aligned}
 P y'' + Q y' + R y &= 0 \\
 \implies y'' + \frac{Q}{P} y' + \frac{R}{P} y &= 0
-\end{align}
+\end{aligned}
 \label{gen}
 $$
 
@@ -101,14 +101,14 @@ where
 Consider limits
 
 $$
-\begin{align}
+\begin{aligned}
 p&=
 \lim_{x \to a} (x-a)
 &\frac{Q(x)}{P(x)}\\
 q&=
 \lim_{x \to a} (x-a)^{\textcolor{hotpink}{2}}
 &\frac{R(x)}{P(x)}
-\end{align}
+\end{aligned}
 \label{limits}
 $$
 
@@ -122,10 +122,10 @@ $$
 Differential equations with **regular** singular points at $x=0$ can be solved using a power series of the form
 
 $$
-\begin{align}
+\begin{aligned}
 y
 &= x^m \sum_{n=0}^\infty a_n x^n \\&= \sum_{n=0}^\infty a_n x^{m+n}
-\end{align}
+\end{aligned}
 $$
 
 where $m$ is constant coefficient called as root/indical/initial value. This is singular points (to be calculated).

@@ -32,10 +32,10 @@ $u_i$ and $u_j$ have [IID](#IID)
 Student’s $t$ distribution
 
 $$
-\begin{align}
+\begin{aligned}
 t
 &= \frac{\hat \beta_2 - \beta_2}{SEE} \\&= \frac{(\hat \beta_2 - \beta_2) \sqrt{\sum x_i^2} }{\hat \sigma} \\
-\end{align}
+\end{aligned}
 $$
 
 This $t$ variable will follow $t$ distribution with $(n-2)$ degrees of freedom

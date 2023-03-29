@@ -20,16 +20,16 @@ L \{ f(t) \star g(t) \}
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 L^{-1} \{ F(s) \cdot G(s) \}
 &= f(t) \star g(t) \\&= L^{-1}\{ F(s) \} \star L^{-1}\{ G(s) \}
-\end{align}
+\end{aligned}
 $$
 
 ## Trignometric
 
 $$
-\begin{align}
+\begin{aligned}
 \cos(x) &= \frac{
 	e^x \textcolor{orange}{+} e^{-x}
 }{2} \\
@@ -42,6 +42,6 @@ $$
 \sin(x) &= \frac{
 	e^{\textcolor{hotpink}{i} x} \textcolor{orange}{-} e^{-\textcolor{hotpink}{i} x}
 }{2i}
-\end{align}
+\end{aligned}
 $$
 

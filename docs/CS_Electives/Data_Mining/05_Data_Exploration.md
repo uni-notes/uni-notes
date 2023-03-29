@@ -90,12 +90,12 @@ It is always $n \times n$, where $n =$ no of attributes
 The diagonal elements will be variance of the corresponding attribute
 
 $$
-\begin{align}
+\begin{aligned}
 \text{Cov}(x, y)
 &= \frac{1}{n} \sum_{k=1}^n (x_k - \bar x) (y_k - \bar y) \\
 \implies \text{Cov}(x, x)
 &= \frac{1}{n} \sum_{k=1}^n (x_k - \bar x) (y_k - \bar y) \\&= \frac{1}{n} \sum_{k=1}^n (x_k - \bar x) (x_k - \bar x) \\&= \frac{1}{n} \sum_{k=1}^n (x_k - \bar x)^2 \\&= \sigma^2_x
-\end{align}
+\end{aligned}
 $$
 
 ### Correlation Matrix
@@ -109,7 +109,7 @@ $$
 The diagonal elements will be 1
 
 $$
-\begin{align}
+\begin{aligned}
 r(x, y)
 &= \frac{
 \text{Cov}(x, y)
@@ -129,7 +129,7 @@ r(x, x)
 \sqrt{ \frac{1}{n} (x_k - \bar x)^2 }
 \right)^2
 } \\&= 1
-\end{align}
+\end{aligned}
 $$
 
 ## Why $(n-1)$ for sample statistics?

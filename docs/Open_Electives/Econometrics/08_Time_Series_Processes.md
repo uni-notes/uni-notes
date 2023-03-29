@@ -134,10 +134,10 @@ Measure of variation of a variable from its expected value
 If the variance is heteroschedastic (changes over time), the variable is volatile
 
 $$
-\begin{align}
+\begin{aligned}
 \sigma^2_{y_t}
 &= E \Big [\Big(y_t - E(y_t) \Big)^2 \Big] \\&= E \Big [\Big(y_t - \textcolor{hotpink}{0} \Big)^2 \Big] \quad \text{(if \textcolor{hotpink}{normalized})} \\&= E [y_t^2 ] \\&= y_t^2 \\
-\end{align}
+\end{aligned}
 $$
 
 $$
@@ -173,10 +173,10 @@ Generalized AutoRegressive Conditional Heteroschedacity models
 ## Lag Terms
 
 $$
-\begin{align}
+\begin{aligned}
 \text{Let's say} \to
 y_t &= f(y_{t-2}) \\y_t &= f(y_{t-1}) \\y_{t-1} &= f(y_{t-2})
-\end{align}
+\end{aligned}
 $$
 
 $$
@@ -206,14 +206,14 @@ Consider a distribution of $y$ for each time period has
 - Identical variance
 
 $$
-\begin{align}
+\begin{aligned}
 \text{Consider } y_t
 &= \sum \rho_i y_{t-i} + u_t \\&= \sum \textcolor{hotpink} 0 \times y_{t-i} + u_t
 \quad \text{(Independent of lags)} \\
 \implies y_t &= u_t \\
 & \text{and} \\
 E(y_t) &= \mu = 0 \\E[(y_t - \mu)^2] &= \sigma^2
-\end{align}
+\end{aligned}
 $$
 
 If a financial series is a white noise series, then we say that the ‘market is efficient’
@@ -254,13 +254,13 @@ This is basically a wave (for eg, sound-wave), and $\beta$ is basically the ampl
 #### Derivation of properties
 
 $$
-\begin{align}
+\begin{aligned}
 y_t &= \beta^t y_0 + \sum_{i=0}^{t-1} \beta^i u_{t-1} + u_t \\
 \implies
 E(y_t) &= \beta^t y_0 \to \text{Constant} \\
 \implies
 E[y_t-\beta^t y_0] &= \sum_{i=0}^t \beta^t \sigma^2 \\&= \alpha(1 + \beta + \beta^2 + \dots) \\&= \frac{\sigma^2}{1 - \beta} \to \text{Constant}
-\end{align}
+\end{aligned}
 $$
 
 ### Non-Stationary Stochastic
@@ -283,12 +283,12 @@ We need to tranform this somehow, as OLS and [GMM](#GMM) cannot be used for non-
 It is a long memory series
 
 $$
-\begin{align}
+\begin{aligned}
 y_t
 &= \beta_1 y_{t-1} + u_t \\&= 1 y_{t-1} + u_t & (\beta_1 = 1) \\&= y_{t-1} + u_t \\
 \implies
 y_t &= y_0 + \sum_{i=0}^t u_i
-\end{align}
+\end{aligned}
 $$
 
 Every value is basically the
@@ -297,11 +297,11 @@ Every value is basically the
 - Initial value + cumulative sum of disturbances
 
 $$
-\begin{align}
+\begin{aligned}
 E(y_t)
 &= E(y_0) + E(u_1) + E(u_2) + \dots + E(u_t) \\&= y_0 + 0 \\
 \implies E(y_t) &= y_0
-\end{align}
+\end{aligned}
 $$
 
 $$
@@ -320,10 +320,10 @@ It is a [Long memory series](#Long memory series)
 Similar to [Random Walk w/o drift](#Random Walk w/o drift), but has  $\beta_0$ as well
 
 $$
-\begin{align}
+\begin{aligned}
 y_t
 &= \beta_0 + y_{t-1} + u_t \\&= t\beta_0 + y_0 + \sum_{i=0}^t u_i
-\end{align}
+\end{aligned}
 $$
 
 $$
@@ -342,12 +342,12 @@ Volatility increases over time
 - Variance changes over time
 
 $$
-\begin{align}
+\begin{aligned}
 y_t
 &= \beta_0 + \beta_1 t + y_{t-1} + u_t
 & (\beta_0 \ne 0, \beta_1 \ne 0) \\
 &= y_0 + t \beta_0 + \beta_1 \sum_{i=1}^t i + \sum_{i=1}^t u_t
-\end{align}
+\end{aligned}
 $$
 
 $\beta_1$ is deterministic = stochastic = non-random
@@ -380,20 +380,20 @@ If the first-difference is non-stationary, we take second-difference, and so on
 ### Pure random walk is DS
 
 $$
-\begin{align}
+\begin{aligned}
 y_t &= y_{t-1} + u_t \\
 \implies \Delta y_t &= \Delta y_{t-1} + u_t
 \quad \text{(White Noise Process = Stationary)}
-\end{align}
+\end{aligned}
 $$
 
 ### Random walk w/ drift is DS
 
 $$
-\begin{align}
+\begin{aligned}
 y_t &= \beta_0 + y_{t-1} + u_t \\
 \implies \Delta y_t &= \beta_0 + \Delta y_{t-1} + u_t \quad \text{(Stationary)}
-\end{align}
+\end{aligned}
 $$
 
 ## TS Process
@@ -451,10 +451,10 @@ $$
 Alternatively, subtract $y_{t-1}$ on both sides of main equation
 
 $$
-\begin{align}
+\begin{aligned}
 y_t - y_{t-1} &= \beta_1 y_{t-1} - y_{t-1} + u_t \\y_t - y_{t-1} &= (\beta_1-1) y_{t-1} + u_t \\
 \Delta y_t &= \gamma y_{t-1} + u_t & (\gamma = \beta_1 - 1)
-\end{align}
+\end{aligned}
 $$
 
 - $H_0: \gamma=1$ (Non-Stationary)

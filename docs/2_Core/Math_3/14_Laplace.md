@@ -16,11 +16,11 @@ DE
 Laplace Transform
 
 $$
-\begin{align}
+\begin{aligned}
 L\{ f(t) \}
 &= \int\limits_0^\infty e^{-st} f(t) \cdot dt 
 \quad \text{ (or a function of } x)\\&= F(s)
-\end{align}
+\end{aligned}
 $$
 
 |        |                                 |
@@ -83,12 +83,12 @@ f_\epsilon(t) =
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 L\Big( \delta(t) \Big)
 &= \lim_{\epsilon \to 0} L\Big( f_\epsilon (t) \Big) \\&= \lim_{\epsilon \to 0} \left[
 	\int\limits_0^\infty e^{-st}  f_\epsilon(t) \cdot dt \\
 \right] \\& \dots \\&= 1
-\end{align}
+\end{aligned}
 $$
 
 ## Sum of GP
@@ -106,13 +106,13 @@ $$
 ### Properties
 
 $$
-\begin{align}
+\begin{aligned}
 \Gamma \left(\frac{1}{2} \right)
 &= \sqrt{\pi} \\
 \Gamma(n)
 &= (n-1)! \\&= (n-1) \cdot \Gamma(n-1) \\ 
 n! &= \Gamma (n+1) \\
-\end{align}
+\end{aligned}
 $$
 
 ## IDK

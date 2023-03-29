@@ -27,14 +27,14 @@ eg:
 Consider $x, z$ which are both $I(1)$ processes; $x_t$ and $z_t$ are cointegrated processes $\iff u_t$ is stationary process,
 
 $$
-\begin{align}
+\begin{aligned}
 z_t &= \alpha_1 x + u_t & \text{(Long-Term Specification)} \\
 \implies u_t &= z_t - \alpha_1 x_t & \text{(Short-Term Specification)} \\
 z_t - z_{t-1} &= \textcolor{hotpink}{-}\alpha_D(z_{t-1} - \alpha_1 x_{t-1}) + v_t \\
 \Delta z_t &= \textcolor{hotpink}{-}\alpha_D(u_{t-1}) + v_t \\
 & \text{if } x \text{ also has correcting tendancy,} \\
 \implies \Delta x_t &= \textcolor{orange}{+} \alpha_G(u_{t-1}) + w_t
-\end{align}
+\end{aligned}
 $$
 
 - $\alpha_D$
@@ -51,12 +51,12 @@ $$
 ## Error Correction Models
 
 $$
-\begin{align}
+\begin{aligned}
 \Delta m_t
 &= \lambda_m (u_{t-1}) + \epsilon_{mt} \\&= \lambda_m (blah blah) + \epsilon_{mt} \\
 \Delta p_t &= \\
 \Delta y_t &= 
-\end{align}
+\end{aligned}
 $$
 
 - $\epsilon$ is white noise error

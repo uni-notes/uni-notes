@@ -94,11 +94,11 @@ ISR and IVT(Interrupt Vector Table) are stored in fixed location in memory.
 ISR is accessed using IVT, which contains the starting address of the ISRs.
 
 $$
-\begin{align}
+\begin{aligned}
 &\text{Starting address of ISR in IVT}\\& = \text{Starting address of IVT in memory } \\& \quad + (
 \text{type} \times \text{no. of loc to store address of 1 ISR}
 )
-\end{align}
+\end{aligned}
 $$
 
 8086 has 256 vectored interrupts

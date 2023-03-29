@@ -40,7 +40,7 @@ $$
 ## Behind the Scenes of Regression
 
 $$
-\begin{align}
+\begin{aligned}
 \hat y &= ax + b \\
 a &= \frac{
 n \Sigma xy - \Sigma x \Sigma y
@@ -48,7 +48,7 @@ n \Sigma xy - \Sigma x \Sigma y
 n \Sigma x^2 - (\Sigma x)^2
 } \\
 b &= \frac{1}{n} \Big( \Sigma y - a \Sigma x \Big)
-\end{align}
+\end{aligned}
 $$
 
 The pivot point of the best fit line are $(\bar x, \bar y)$; which are the averages of $x$ and $y$
@@ -115,7 +115,7 @@ Helps measuring accuracy, which depends on amount of prediction errors
 ## Multiple Linear Regression
 
 $$
-\begin{align}
+\begin{aligned}
 \hat y &=
 \theta_0 +
 \theta_1 x_1 +
@@ -125,7 +125,7 @@ $$
 1 \\x_1 \\x_2 \\
 \dots \\x_n
 \end{bmatrix}
-\end{align}
+\end{aligned}
 $$
 
 ### 2 Variate Linear Regression
@@ -137,7 +137,7 @@ y = b_0 + b_1 x_1 + b_2 x_2
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 b_1 &= \\b_2 &= \\b_0 &= \hat y - b_1 \overline{x_1} - \overline{x_2} \\
 \sum {x_1}^2 &=
 \sum(x_1 x_1) - \frac{\sum x_1\sum x_1}{n} \\
@@ -146,7 +146,7 @@ b_1 &= \\b_2 &= \\b_0 &= \hat y - b_1 \overline{x_1} - \overline{x_2} \\
 \sum {x_1 y} &= \\
 \sum {x_2 y} &= \\
 \sum {x_1}{x_2} &= \\
-\end{align}
+\end{aligned}
 $$
 
 ## Bias vs Variance

@@ -11,12 +11,12 @@ We will only have limited values of $y$ for given value(s) of $x$; we don’t ha
 Sample Regression Function
 
 $$
-\begin{align}
+\begin{aligned}
 \hat y_i
 &= \hat \beta_0 + \hat \beta_1 x_i \\
 y_i
 &= \hat \beta_0 + \hat \beta_1 x_i + \hat u_i
-\end{align}
+\end{aligned}
 $$
 
 We try to make each of these hyperparameters close to their PRF counter-parts

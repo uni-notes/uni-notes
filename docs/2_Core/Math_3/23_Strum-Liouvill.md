@@ -14,23 +14,23 @@ $$
 with the boundary conditions
 
 $$
-\begin{align}
+\begin{aligned}
 c_1 y(a) + c_2 y'(a) &= 0 &
 d_1 y(b) + d_2 y'(b) &= 0 \\
 c_1 \text{ or } c_2 &= 0 &
 d_1 \text{ or } d_2 &= 0
-\end{align}
+\end{aligned}
 $$
 
 ### Simplest Form
 
 $$
-\begin{align}
+\begin{aligned}
 y'' + \lambda y &= 0 \\
 P(x) &= 1 \\
 Q(x) &= 1 \\
 R(x) &= 0
-\end{align}
+\end{aligned}
 $$
 
 ### Legendre Equation
@@ -57,10 +57,10 @@ $n > 0$ because $n \le 0$ will give trivial solution.
 ## Eigen Value/Function
 
 $$
-\begin{align}
+\begin{aligned}
 y'' + \lambda y &= 0 \\
 y(a) &= 0 \\y(b) &= 0 \\
 a & \ne b
-\end{align}
+\end{aligned}
 $$
 

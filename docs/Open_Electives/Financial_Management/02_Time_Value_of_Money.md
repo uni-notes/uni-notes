@@ -22,10 +22,10 @@ Return for every investment is a compensation
 - Risk
 
 $$
-\begin{align}
+\begin{aligned}
 \text{FV} &= \text{PV} \times \underbrace{(1+r)^t}_{\text{Compound Factor}} \\
 \implies \text{PV} &= \text{FV} \times \underbrace{\frac{1}{(1+r)^t}}_\text{Discount Factor}
-\end{align}
+\end{aligned}
 $$
 
 In a finance interview, if you’re not sure of the answer, just say it’s compounding 😭😂
@@ -34,10 +34,10 @@ In a finance interview, if you’re not sure of the answer, just say it’s comp
 
 
 $$
-\begin{align}
+\begin{aligned}
 \text{FV} &= \sum_{t=0} c_t (1+r)^t \\
 \text{PV} &= \sum_{t=0} \frac{c_t}{(1+r)^t}
-\end{align}
+\end{aligned}
 $$
 
 where $c_t$ can be
@@ -122,10 +122,10 @@ As we go from annual compounding towards more frequent compounding frequency, we
 ## Compounding
 
 $$
-\begin{align}
+\begin{aligned}
 \text{FV} &= \text{PV} (1+r)^t \\
 &= \text{PV} \left(1 + \frac{r}{m} \right)^{mt} & \text{(Discrete)} \\
 &= \text{PV} \times e^{rt} & \text{(Continuous)}
-\end{align}
+\end{aligned}
 $$
 

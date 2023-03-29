@@ -13,17 +13,17 @@ $$
 3. Put the following substitutions; Refer to [Custom Operators](#Custom Operators)
    
 $$
-\begin{align}
+\begin{aligned}
 xD &= \theta \\   x^2 D^2 &= \theta(\theta - 1)
-\end{align}
+\end{aligned}
 $$
    
 4. Equation $\eqref{gen}$ becomes
 
 $$
-\begin{align}
+\begin{aligned}
 \Big( \theta(\theta - 1) + p \theta + q \Big)y &= 0 \\   \theta(\theta - 1) + p \theta + q &= 0 & (y \ne 0)
-\end{align}
+\end{aligned}
 $$
    
 5. Put $\theta^2 \to m^2, \theta \to m$
@@ -39,12 +39,12 @@ $$
 ## Custom Operators
 
 $$
-\begin{align}
+\begin{aligned}
 D &= \frac{d}{dx}  &
 D^2 &= \frac{d^2}{dx^2} \\
 \theta &= \frac{d}{dz}  &
 \theta^2 &= \frac{d^2}{dz^2}
-\end{align}
+\end{aligned}
 $$
 
 ### Formula

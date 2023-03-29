@@ -59,12 +59,12 @@ If $f(z) = u+iv$, then
 ### Hyperbolic
 
 $$
-\begin{align}
+\begin{aligned}
 \cos(ix) &= \cosh(x) & \sin(ix) &= i \sinh(x) \\
 \cosh(x) &= \frac{e^x + e^{-x}}{2} & \sinh(x) &= \frac{e^x - e^{-x}}{2} \\
 [\sinh(x)]' &= \cosh(x) & [\cosh(x)]' &= \sinh(x) \\
 \cosh^2(x) - \sinh^2(x) &= 1
-\end{align}
+\end{aligned}
 $$
 
 ## CR Equation

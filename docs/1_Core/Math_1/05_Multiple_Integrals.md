@@ -23,12 +23,12 @@ The limits of outer integral will always be constants.
 Let $f$ be defined in a domain $R$ in the $XY$ plane. Then
 
 $$
-\begin{align}
+\begin{aligned}
 \iint\limits_{R} f(x, y) \ dA
 & =
 \iint\limits_{R'} f(r \cos\theta, r \sin\theta) \cdot r \ dr \ d\theta \\
 \text{where } x &= r \cos\theta, y = r \sin\theta, dA = dx \ dy
-\end{align}
+\end{aligned}
 $$
 
 **Note:** First integrate wrt to $r$, then $\theta$

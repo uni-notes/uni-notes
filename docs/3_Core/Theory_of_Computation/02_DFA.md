@@ -27,14 +27,14 @@ States are the only mechanism for a FA to “remember” what it has seen of inp
 | $q_0$                                                        | Starting State                                               |
 | $F$                                                          | Set of Final States                                          |
 | $\Sigma$                                                     | Alphabet                                                     |
-| $\begin{align} &\delta: Q \times \Sigma \to Q \\ & \delta(\text{Current State}, \text{Input}) \end{align}$ | State Transition Function                                    |
-| $\begin{align} &\delta^*: Q \times \Sigma^* \to Q \\ & \delta(\text{Current State}, \text{Input}) \end{align}$ | Extended State Transition Function<br />==(Recursive traversal including $\epsilon$)== |
+| $\begin{aligned} &\delta: Q \times \Sigma \to Q \\ & \delta(\text{Current State}, \text{Input}) \end{aligned}$ | State Transition Function                                    |
+| $\begin{aligned} &\delta^*: Q \times \Sigma^* \to Q \\ & \delta(\text{Current State}, \text{Input}) \end{aligned}$ | Extended State Transition Function<br />==(Recursive traversal including $\epsilon$)== |
 
 $$
-\begin{align}
+\begin{aligned}
 \delta (q, \epsilon) &= q \\
 \delta^* (q, \epsilon) &= \{q, \ \dots\}
-\end{align}
+\end{aligned}
 $$
 
 DFA seen as 5-Tuple
@@ -128,11 +128,11 @@ class b dead
 - Non-Accepting states $\to$ Accepting states
 
 $$
-\begin{align}
+\begin{aligned}
 L& \implies
 M = ( Q, Σ, δ, q_0, F ) \\L'& \implies
 M' = ( Q, Σ, δ, q_0, Q-F ) \\
-\end{align}
+\end{aligned}
 $$
 
 ## Reversing a regular expression

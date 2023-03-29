@@ -83,13 +83,13 @@ Using properties, we can say that $L=\{a^n b^n | n \ge 0, n \ne 50 \}$ is CFL
 This is because
 
 $$
-\begin{align}
+\begin{aligned}
 L
 =& \{a^n b^n \} - \{a^{50} b^{50} \} \\
 =& \{a^n b^n \} \cap \{a^{50} b^{50} \}' & & \Big( A-B = A \cap B' \Big) \\
 =& \text{CFL} \cap \text{RL} && {\Big( (RL)' \to RL \Big)} \\
 \implies & \text{CFL}
-\end{align}
+\end{aligned}
 $$
 
 ### Non-Closed Operations

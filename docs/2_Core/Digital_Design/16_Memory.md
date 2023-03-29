@@ -55,9 +55,9 @@ $$
 - 1 enabled line
 
 $$
-\begin{align}
+\begin{aligned}
 \text{Capactity} &= m \times 2^n \text{ bits} \\&= \frac{m \times 2^n}{8 \times 1024} \text{ KiloBytes}
-\end{align}
+\end{aligned}
 $$
 
 ### 8K x 16
@@ -67,21 +67,21 @@ $$
 2. 13 address lines
    
 $$
-\begin{align}
+\begin{aligned}
 2^n &= 8 \times 2^{10} \\
 &= 2^3 \times 2^{10} \\
 &= 2^{13} \\
 \implies n &= 13
-\end{align}
+\end{aligned}
 $$
 
 3. Capacity = 16KB
    
 $$
-\begin{align}
+\begin{aligned}
 \text{Capactity} &= m \times 2^n \text{ bits} \\   &= \frac{16 \times 2^{13}}{8 \times 1024} \text{ KiloBytes} \\   
 &= 16 \text{ KB}
-\end{align}
+\end{aligned}
 $$
 
 ## Operations
@@ -281,12 +281,12 @@ there is no 0 for outputs
     - complement the entire thing
 
 $$
-\begin{align}
+\begin{aligned}
 F_1(T) &= \sum (0,1, 2, 4) \\&= A'B' + B'C' + A'C' \\
 F_1(C) &= \bigg( \sum (3, 5, 6, 7) \bigg)' \\&=  \\
 F_2(T) &= \sum (0, 5, 6, 7) \\&= \\
 F_2(c) &= \bigg( \sum (1, 2, 3, 4) \bigg)' \\&=
-\end{align}
+\end{aligned}
 $$
 
 We are gonna select $F_1(c)$ and $F_2(T)$, as they have the maximum no of common terms

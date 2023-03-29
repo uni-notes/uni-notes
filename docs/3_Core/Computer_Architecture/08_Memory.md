@@ -67,14 +67,14 @@ something
 ## Direct Mapped Cache
 
 $$
-\begin{align}
+\begin{aligned}
 \text{Total no of bits}
 &= 2^n \times \Big(
 \text{Block size + Tag Size + Valid Field Size}
 \Big) \\
 \text{where } n
 &= \text{No of bits to represent cache lines}
-\end{align}
+\end{aligned}
 $$
 
 ### Cache Line Table
@@ -98,19 +98,19 @@ Let $s$ be address bus size (number of bits to represent ==main memory address==
 No of cache blocks $= 2^something$
 
 $$
-\begin{align}
+\begin{aligned}
 &\text{No of index bits} \\&= \text{No of bits for Total Cache Size} - 
 \text{No of bits for Offset}
-\end{align}
+\end{aligned}
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 &\text{No of tag bits} \\&= \text{No of bits for Total Memory Size} \\& \ -\Big(
 \text{No of bits for Index} +
 \text{No of bits for Offset}
 \Big)
-\end{align}
+\end{aligned}
 $$
 
 ### Tags & Valid Bits
@@ -154,10 +154,10 @@ Particular block address is mapped to a particular set
 '$n$-way associated cache' means each set has $n$ blocks, where $n \in \{2, 4, 8, \dots \}$
 
 $$
-\begin{align}
+\begin{aligned}
 \text{No of sets } N
 &= \frac{\text{Total no of blocks}}{n} \\&= \frac{1}{n} \times \frac{\text{Cache Size in bytes}}{\text{Size of each block in bytes}}
-\end{align}
+\end{aligned}
 $$
 
 No of bits for set index = $2^N$

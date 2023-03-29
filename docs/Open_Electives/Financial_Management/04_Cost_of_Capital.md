@@ -27,11 +27,11 @@ Lower the WACC the better
 ## Calculation
 
 $$
-\begin{align}
+\begin{aligned}
 \text{WACC} = \quad & w_d  \times k_d (1-\tau) \\
 + & w_p \times k_p \\
 + & w_c \times k_c
-\end{align}
+\end{aligned}
 $$
 
 |  Term  | Meaning                         |            Formula            |

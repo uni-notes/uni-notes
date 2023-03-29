@@ -16,10 +16,10 @@ $$
 Using Sigmoid Function
 
 $$
-\begin{align}
+\begin{aligned}
 \hat y
 &= \sigma(\theta^T x) \\&= \frac{1}{1 + e^{(\theta^T x)}} \\&= P(y=1|x)
-\end{align}
+\end{aligned}
 $$
 
 #### Cases to use
@@ -74,7 +74,7 @@ $$
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 \nabla J(\theta)
 & \approx 1 \\
 \begin{bmatrix}
@@ -85,7 +85,7 @@ $$
 }
 \end{bmatrix}
 &\approx 1
-\end{align}
+\end{aligned}
 \label{idk2}
 $$
 
@@ -122,7 +122,7 @@ Entropy: How much information gain we have
 Information Gain $\propto \frac{1}{\text{Entropy}}$
 
 $$
-\begin{align}
+\begin{aligned}
 C(\hat y, y)
 &=
 \frac{1}{2}
@@ -131,18 +131,18 @@ J(\theta)
 &= \frac{1}{m}
 \sum_{i=1}^m
 \text{Cost}(\hat y, y)
-\end{align}
+\end{aligned}
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 C(\hat y, y)
 &= \begin{cases}
 - \log \| 1 - \hat y \|, & y=0 \\- \log \| \hat y \|, & y=1
 \end{cases} \\J(\theta)
 &= \frac{-1}{m}
 \sum
-\end{align}
+\end{aligned}
 $$
 
 ## Adam Optimizer
@@ -236,10 +236,10 @@ S_1 = \begin{bmatrix}
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 \text{Cov}(x_j, x_k) &= \frac{1}{n_j - 1} \sum_{i=1, x \in C_j}^{n_1} (x_i - \mu_1)(x_i - \mu_1) \\   
 \text{Cov}(x_1, x_1) &= \frac{1}{n_1 - 1} \sum_{i=1, x \in C_1}^{n_1} (x_i - \mu_1)^2
-\end{align}
+\end{aligned}
 $$
 
 2. Find between-class scatter matrix
@@ -376,7 +376,7 @@ Calculate posterior probability, based on assumption that all input attributes a
 Used for classifying continuous data
 
 $$
-\begin{align}
+\begin{aligned}
 P(C|x)
 & \propto P(x|C) \times P(C) \\& \propto N(x; \mu_c, \sigma^2_c) P(C) \\
 \underbrace{P(C)}_{\text{Posterior}}
@@ -388,20 +388,20 @@ P(C|x)
 \right)
 }_{\text{Likelihood}}
 \underbrace{P(C)|x}_{\text{Prior}}
-\end{align}
+\end{aligned}
 \label{gc}
 $$
 
 However $\eqref{gc}$ is not used as it is; we take $\log$ on both sides and find **log likehood**
 
 $$
-\begin{align}
+\begin{aligned}
 \text{LL}(x|C)
 &= \text{LL}(x|\mu_c, \sigma_c^2) \\&= \ln P(x | \mu_c, \sigma_c^2) \\&= \ln \left[
 \frac{1}{\sqrt{2 \pi \sigma_c^2}}
 \right]
  \ \exp somethign
-\end{align}
+\end{aligned}
 $$
 
 $$
@@ -413,10 +413,10 @@ $$
 ### 2 Classes
 
 $$
-\begin{align}
+\begin{aligned}
 \ln \frac{P(C_1 | x)}{P(C_2 | x)}
 &= \ln P(C_1 | x) - \ln P(C_2 | x) \\&= \frac{-1}{2} ()
-\end{align}
+\end{aligned}
 $$
 
 - If log ratio $\ge 0$, assign to $C_1$
@@ -443,10 +443,10 @@ Diagonal elements are True Positive
 ### Jacquard Index
 
 $$
-\begin{align}
+\begin{aligned}
 J(y, \hat y)
 &= \frac{|y \cap \hat y|}{|y \cup \hat y|} \\&= \frac{|y \cap \hat y|}{|y| + |\hat y| - |y \cap \hat y|}
-\end{align}
+\end{aligned}
 $$
 
 ### F1 Score
@@ -464,56 +464,56 @@ classfication_report(y_test, predictions)
 #### Macro Average
 
 $$
-\begin{align}
+\begin{aligned}
 \text{Total Macro Average (Recall)}
 &= \frac{\sum \text{Recall of each class}}{\text{No of classes}} \\
 \text{Macro Average of each class (Recall)}
 &= \text{Recall of that class}
-\end{align}
+\end{aligned}
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 \text{Total Macro Average (Precision)}
 &= \frac{\sum \text{Precision of each class}}{\text{No of classes}} \\
 \text{Macro Average of each class (Precision)}
 &= \text{Precision of that class}
-\end{align}
+\end{aligned}
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 \text{Total Macro Average (F1 Score)}
 &= \frac{\sum \text{F1 Score of each class}}{\text{No of classes}} \\
 \text{Macro Average of each class (F1 Score)}
 &= \text{F1 Score of that class}
-\end{align}
+\end{aligned}
 $$
 
 #### Weighted Average
 
 $$
-\begin{align}
+\begin{aligned}
 &\text{Weighted Average (Recall)} \\&= \frac{
 \sum \Big( \text{Recall of each class} \times \text{Support of each class} \Big)
 }{\text{Size of sample}}
-\end{align}
+\end{aligned}
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 &\text{Weighted Average (Precision)} \\&= \frac{
 \sum \Big( \text{Precision of each class} \times \text{Support of each class} \Big)
 }{\text{Size of sample}}
-\end{align}
+\end{aligned}
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 &\text{Weighted Average (F1 Score)} \\&= \frac{
 \sum \Big( \text{F1 Score of each class} \times \text{Support of each class} \Big)
 }{\text{Size of sample}}
-\end{align}
+\end{aligned}
 $$
 
 ### Log Loss/Cross-Entropy Error Function
@@ -546,7 +546,7 @@ $$
 3. Calculate gain of each independent variable for current set/subset of data
 
 $$
-\begin{align}
+\begin{aligned}
 &\text{Gain}\Big(
 \text{Value}(C_1), C_2
 \Big) \\   
@@ -556,7 +556,7 @@ $$
 \times
 H(C_2=\text{Value}_i)
 \right]
-\end{align}
+\end{aligned}
 $$
 
 4. Pick the independent variable with the highest gain

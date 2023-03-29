@@ -44,9 +44,9 @@ Take the top bit and copy it to all the other bits
 **example**
 
 $$
-\begin{align}
+\begin{aligned}
 7 &\to 0111 \to 0000 \ 0000 \ 0000 \ 0111 \\-2 &\to 1110 \to 1111 \ 1111 \ 1111 \ 1110
-\end{align}
+\end{aligned}
 $$
 
 ## MIPS Instruction Available Datapath

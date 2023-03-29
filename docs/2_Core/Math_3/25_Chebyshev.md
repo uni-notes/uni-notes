@@ -29,11 +29,11 @@ $$
 ## Euler’s Theorem
 
 $$
-\begin{align}
+\begin{aligned}
 e^{i\theta}
 &= \cos \theta + i \sin \theta \\
 e^{ni\theta}
 &= \cos n\theta + i \sin n\theta \\&= (\cos \theta + i \sin \theta)^n \\
-\end{align}
+\end{aligned}
 $$
 

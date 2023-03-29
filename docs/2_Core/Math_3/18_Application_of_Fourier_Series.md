@@ -3,13 +3,13 @@
 Assuming that the vibration only happens in one direction.
 
 $$
-\begin{align}
+\begin{aligned}
 a^2 &= \frac{T}{m} > 0 \\
 \frac{\partial^2 y}{\partial t^2} &=
 a^2 \left(
 	\frac{\partial^2 y}{\partial x^2}
 \right)
-\end{align}
+\end{aligned}
 \label{idk}
 $$
 
@@ -29,14 +29,14 @@ $$
 Solution of $\eqref{idk}$ under the initial conditions
 
 $$
-\begin{align}
+\begin{aligned}
 y(x, t)
 &= \sum_{n = 1}^\infty
 b_n
 \sin(nx)
 \textcolor{hotpink}{\cos (nat)} \\
 b_n &= \frac{2}{\pi} \int\limits_0^\pi f(x) \sin(nx) dx
-\end{align}
+\end{aligned}
 $$
 
 ## 1D Heat Equation
@@ -56,13 +56,13 @@ Time 0 is the time at which the external temperature is placed
 $\alpha^2$ is thermal diffusability.
 
 $$
-\begin{align}
+\begin{aligned}
 \alpha^2
 &= \frac{k}{\rho c} > 0\\
 \frac{\partial u}{\partial t}
 &=
 \alpha^2 \left( \frac{\partial^2 u}{\partial x^2} \right)
-\end{align}
+\end{aligned}
 \label{2}
 $$
 
@@ -79,13 +79,13 @@ $$
 Solution of $\eqref{2}$ under the initial conditions
 
 $$
-\begin{align}
+\begin{aligned}
 u(x, t)
 &= \sum_{n = 1}^\infty
 b_n
 \sin (nx)
 \textcolor{hotpink}{e^{-n^2 \alpha^2 t}} \\
 b_n &= \frac{2}{\pi} \int\limits_0^\pi f(x) \sin(nx) dx
-\end{align}
+\end{aligned}
 $$
 

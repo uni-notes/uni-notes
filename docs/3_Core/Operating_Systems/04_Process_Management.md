@@ -227,10 +227,10 @@ No of programs kept in primary memory
 % time spent on scheduling decision
 
 $$
-\begin{align}
+\begin{aligned}
 &\text{Overhead} \% \\&=
 \frac{\text{Scheduling Decision Time}}{\text{Process Execution Time} + \text{Scheduling Decision Time}} \times 100 \%
-\end{align}
+\end{aligned}
 $$
 
 We want to minimize this.

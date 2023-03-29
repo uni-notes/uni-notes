@@ -12,19 +12,19 @@ $$
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 P_x &\textcolor{orange}{>} P_y \\
 \implies T_x & \textcolor{orange} < T_y \quad \left( \frac{1}{T_x} > \frac{1}{T_y} \right)
-\end{align}
+\end{aligned}
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 & X \text{ is } n \text{ times as fast as } Y \\
 \implies & n 
 = \frac{P_{\textcolor{orange}{x}}}{P_{\textcolor{hotpink}{y}}}
 = \frac{T_{\textcolor{hotpink}{y}}}{T_{\textcolor{orange}{x}}}
-\end{align}
+\end{aligned}
 $$
 
 ## Execution Time
@@ -56,20 +56,20 @@ $$
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 & \text{No of clock cycles} \\
 &= \text{No of instructions} \times \text{CPI} \\
 & \qquad \qquad \text{CPI}\to \text{(Cycles per Instruction)} \\
 &= \sum_{i=1} \text{(No of instructions)}_i \times \text{(CPI)}_i \\
 & \qquad\qquad (\exists \text{ different classes of instructions)}
-\end{align}
+\end{aligned}
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 &\text{CPU Execution time for a program} \\
 =& \text{No of clock cycles} \times \text{Clock cycle time}
-\end{align}
+\end{aligned}
 $$
 
 Be careful when calculating avg CPI for a code sequence (simple, but avoid careless mistake)
@@ -102,11 +102,11 @@ Constant-rate clock that governs operation of digital hardware
 ## Speedup
 
 $$
-\begin{align}
+\begin{aligned}
 S
 &= \frac{P_\text{new}}{P_\text{old}} \\
 &= \frac{T_\text{old}}{T_\text{new}}
-\end{align}
+\end{aligned}
 $$
 
 ## Amdahl's Law
@@ -120,10 +120,10 @@ If
 - $n$ is the new parallel processing ability
   
 $$
-\begin{align}
+\begin{aligned}
 n &= \text{factor of increase in number of processors} \\
 & \qquad \times \text{factor of increase in processor performance}
-\end{align}
+\end{aligned}
 $$
   
 $(s = 1-p; \quad p = 1-s)$
@@ -131,13 +131,13 @@ $(s = 1-p; \quad p = 1-s)$
 Then, the maximum speed up $S$ is
 
 $$
-\begin{align}
+\begin{aligned}
 S &= 
 \frac{\text{Speed with parallelization}}{\text{Speed without parallelization}} \\
 &= \frac{1}{
 s + \frac{p}{n}
 }
-\end{align}
+\end{aligned}
 $$
 
 ## Design Principles

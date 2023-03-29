@@ -140,7 +140,7 @@ $$
 ### Cosine Similarity
 
 $$
-\begin{align}
+\begin{aligned}
 \cos(x, y) &= \frac{
 xy
 }{
@@ -149,7 +149,7 @@ xy
 \sum_{i=1}^n x_i y_i \\
 &= x \cdot y \\
 \| x \| &= \sqrt{\sum_{i=1}^n x_i^2}
-\end{align} 
+\end{aligned} 
 $$
 
 | $\cos (x, y)$ | Interpretation              |
@@ -196,7 +196,7 @@ Range = $[-1, +1]$
 | $+1$ | High +ve correlation |
 
 $$
-\begin{align}
+\begin{aligned}
 r(x, y)
 &= \frac{
 \text{Covariance}(x, y)
@@ -207,11 +207,11 @@ r(x, y)
 }{
 \sigma_x \sigma_y
 }
-\end{align}
+\end{aligned}
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 \sigma_{xy}
 &= \frac{1}{n} \sum_{i=1}^n (x_i - \bar x)(y_i - \bar y) \\
 \sigma_{x}
@@ -222,6 +222,6 @@ $$
 &= \sqrt{
 \frac{1}{n-1} \sum_{i=1}^n (y_i - \bar y)^2
 }
-\end{align}
+\end{aligned}
 $$
 

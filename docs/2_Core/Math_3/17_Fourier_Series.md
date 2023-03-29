@@ -35,11 +35,11 @@ Whenever possible, we have to make it into regular summation, ie from $1 \to \in
 ### Fourier Constants
 
 $$
-\begin{align}
+\begin{aligned}
 a_0 &= \frac{1}{\pi} \int\limits_{-\pi}^{\pi} f(x) \cdot dx \\
 a_n &= \frac{1}{\pi} \int\limits_{-\pi}^{\pi} f(x) \textcolor{orange}{\cos(nx)} \cdot dx \\
 b_n &= \frac{1}{\pi} \int\limits_{-\pi}^{\pi} f(x) \textcolor{orange}{\sin(nx)} \cdot dx
-\end{align}
+\end{aligned}
 $$
 
 ## Sum of Functions
@@ -78,7 +78,7 @@ This is because $\int f(x) dx = 0$ when $f(x)$ is even
 Consider
 
 $$
-\begin{align}
+\begin{aligned}
 f(x) &= \begin{cases}
 	g_1(x), & (-a, 0) \\	g_2(x), & (0, a)
 \end{cases}\\
@@ -87,7 +87,7 @@ f(x) &= \begin{cases}
 \text{Even}, & g_1(-x) = +g_2(x) \\
 \text{Odd},  & g_1(-x) = -g_2(x)
 \end{cases}
-\end{align}
+\end{aligned}
 $$
 
 ### Grahphically
@@ -132,11 +132,11 @@ f(x) =
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 a_0 &= \frac{1}{\textcolor{hotpink}{l}} \int\limits_{-l}^l f(x) dx \\a_n &= \frac{1}{\textcolor{hotpink}{l}} \int\limits_{-l}^l f(x) \cos \left(
 	\frac{n \textcolor{hotpink}{\pi} x}{\textcolor{hotpink}{l}}
 \right) dx \\b_n &= \frac{1}{\textcolor{hotpink}{l}} \int\limits_{-l}^l f(x) \sin \left(\frac{n \textcolor{hotpink}{\pi} x}{\textcolor{hotpink}{l}} \right) dx
-\end{align}
+\end{aligned}
 $$
 
 ### Changes in Interval

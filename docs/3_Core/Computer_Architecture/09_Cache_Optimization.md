@@ -51,7 +51,7 @@ $$
 ## Multiple Cache AMAT
 
 $$
-\begin{align}
+\begin{aligned}
 \text{AMAT}_\text{Overall} &=
 \Big(
 \text{Hit Rate}_{L_1} \times \text{Hit Penalty}_{L_1}
@@ -67,7 +67,7 @@ $$
 \text{Miss Rate}_{L_2} \times \textcolor{orange}{\text{Miss Penalty}_{L_3}}
 \Big) \\
 &\dots
-\end{align}
+\end{aligned}
 $$
 
 ## Cache Miss Types

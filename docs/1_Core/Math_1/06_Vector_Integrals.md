@@ -20,9 +20,9 @@ because displacement s = $\int$ velocity = $\int$ speed x direction
 The work done by a force field $\vec F = M \hat i + N \hat j + P \vec k$ along curve $C: x \hat i + y \hat j + z \hat k, a \le t \le b$ is
 
 $$
-\begin{align}
+\begin{aligned}
 W &= \int\limits_C \vec F \cdot d \vec r \\&= \int\limits_C (M \ dx + N \ dy + P \ dz) \ dt
-\end{align}
+\end{aligned}
 $$
 
 The above integral is also referred to as the **circulation of vector $\vec F$** in fluid flow problems.
@@ -34,28 +34,28 @@ If the line integral is independent of the path of integration, then $\vec F$ is
 A force $\vec F = M \hat i + N \hat j + P \vec k$ is conservative
 
 1. $$
-   \begin{align}
+   \begin{aligned}
    M_y &= N_x \\
 	 P_y &= N_z \\
 	 P_x &= M_z
-   \end{align}
+   \end{aligned}
    $$
 
 2. there exists a scalar potential function $\phi(x, y, z)$ such that
    
 $$
-\begin{align}
+\begin{aligned}
 \vec F &= \nabla \phi \\
 \text{where } \nabla \phi &= \phi_x \hat i + \phi_y \hat j + \phi_z \hat k
-\end{align}
+\end{aligned}
 $$
 
 3. If $C$ is any path joining A and B
 
 $$
-\begin{align}
+\begin{aligned}
 W &= \int\limits_C \vec F \cdot d \vec r \\   &= \phi(B) - \phi(A)
-\end{align}
+\end{aligned}
 $$
 
 ## Green’s Theorem in a Plane
@@ -63,11 +63,11 @@ $$
 Let $\vec F = M \hat i + N \hat j$ be a vector-valued function defined at all points in a region $R$ in the $XY$ plane, bounded by a simple closed curve C. Then, the counter-clockwise circulation of $\vec F$ or flux or tangential form of Green’s theorem is given by
 
 $$
-\begin{align}
+\begin{aligned}
 \oint\limits_C \vec F \cdot d \vec r &= \int\limits_C M \ dx + N \ dy \\&= \iint\limits_R 
 \left( \frac{\partial N}{\partial x} - \frac{\partial M}{\partial y} \right)
 \ dx \ dy
-\end{align}
+\end{aligned}
 $$
 
 ## Gauss Divergence Theorem
@@ -75,14 +75,14 @@ $$
 Let $F = M \hat i + N \hat j + P \hat k$ be a vector-valued function, defined at all points of closed surface $S$, enclosing a volume $V$. Then, the outward-drawn flux of $\vec F$ is given by
 
 $$
-\begin{align}
+\begin{aligned}
 \iint_S \vec F \cdot \vec n \cdot ds &=
 \iiint (\text{div } \vec F) \ dv \\
 \text{where }
 (\text{div } \vec F) &= \nabla \cdot \vec F \\&= \frac{\partial M}{\partial x} + \frac{\partial N}{\partial y} + \frac{\partial P}{\partial z} \\
 \vec n &= \frac{\nabla \phi}{ |\nabla \phi| } \\&\text{(unit outward-drawn normal vector to surface S)}\\
 \phi &= \phi(x, y, z) \\&\text{(equation of surface S)}
-\end{align}
+\end{aligned}
 $$
 
 ## Stoke’s Theorem
@@ -90,7 +90,7 @@ $$
 If $\vec F = M \hat i + N \hat j + P \vec k$ is defined on all points on an open surface bounded by a simple curve $C$,
 
 $$
-\begin{align}
+\begin{aligned}
 \int \limits_C \vec F \cdot dr &=
 \iint \limits_S (\text{curl } \vec F) \cdot \hat n \cdot ds \\
 \text{where }
@@ -99,6 +99,6 @@ $$
 \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
 M & N & P
 \end{vmatrix}
-\end{align}
+\end{aligned}
 $$
 
