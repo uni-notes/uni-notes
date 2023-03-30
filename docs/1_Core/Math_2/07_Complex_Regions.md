@@ -19,11 +19,11 @@ closed set has all limit points
 
 all interior points and boundary points are limit points
 
-## Functions
+## Properties of Functions
 
 ### Differentiable
 
-Consider derivative equation.
+Consider derivative equation
 
 $$
 f'(z) = \lim_{\Delta z \to 0} \frac{ f(z + \Delta z) - f(z) }{ \Delta z }
@@ -54,7 +54,7 @@ If $f(z) = u+iv$, then
 - real and imaginary parts are harmonic
 - $v$ is harmonic conjugate of $u$
 
-### Hyperbolic
+## Hyperbolic Function
 
 $$
 \begin{aligned}
