@@ -19,11 +19,11 @@ closed set has all limit points
 
 all interior points and boundary points are limit points
 
-## Functions
+## Properties of Functions
 
 ### Differentiable
 
-Consider derivative equation.
+Consider derivative equation
 
 $$
 f'(z) = \lim_{\Delta z \to 0} \frac{ f(z + \Delta z) - f(z) }{ \Delta z }
@@ -54,15 +54,18 @@ If $f(z) = u+iv$, then
 - real and imaginary parts are harmonic
 - $v$ is harmonic conjugate of $u$
 
-### Hyperbolic
+## Hyperbolic Function
 
 $$
 \begin{aligned}
 \cos(ix) &= \cosh(x) & \sin(ix) &= i \sinh(x) \\
 \cosh(x) &= \frac{e^x + e^{-x}}{2} & \sinh(x) &= \frac{e^x - e^{-x}}{2} \\
-[\sinh(x)]' &= \cosh(x) & [\cosh(x)]' &= \sinh(x) \\
-\cosh^2(x) - \sinh^2(x) &= 1
+\sinh'(x) &= \cosh(x) & \cosh'(x) &= \sinh(x)
 \end{aligned}
+$$
+
+$$
+\cosh^2(x) - \sinh^2(x) = 1
 $$
 
 ## CR Equation

@@ -1,15 +1,15 @@
 ## Methodology for measuring relationships
 
 ```mermaid
-flowchart TB
+flowchart LR
 et[Hypothesis] -->
 mm -->
 em -->
-dc[(Data Collection)] -->
+dc[(Data<br/>Collection)] -->
 Estimation -->
-ht[Hypothesis Testing] -->
+ht[Hypothesis<br/>Testing] -->
 Forecasting -->
-p[Policy to affect Behavior]
+p[Policy to<br/>affect behavior]
 
 subgraph Model
 	mm[Mathematical]
