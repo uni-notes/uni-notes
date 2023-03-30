@@ -2,7 +2,9 @@
 
 Subfield of pattern recognition and computational learning theory in artificial intelligence.
 
-> Field of study that gives the oputer the ability to learn without being explicitly programmed
+![img](assets/data_science_and_machine_learning_1667046154106_0.svg)
+
+> Field of study that gives the computer the ability to learn without being explicitly programmed
 >
 > ~ Arthur Samuel
 
@@ -108,15 +110,19 @@ r --> l[Linear] & nl[Non-Linear]
 
 ### Regression
 
+Predicting a continuous output
+
 ### Classification
+
+Predicting a discrete output
 
 Derived from regression
 
 ### Lazy/Instance-Based Learning
 
-Store the training examples instead of lraning explicit desrcipiton of the target function.
+Store the training examples instead of training explicit description of the target function.
 
-Output of the learning algorith for a new instance not only depends on it, but also on its neighbors.
+Output of the learning algorithm for a new instance not only depends on it, but also on its neighbors.
 
 The best algorithm is KNN (K-Nearest Neighbor) Algorithm.
 
