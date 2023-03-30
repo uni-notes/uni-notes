@@ -9,7 +9,7 @@ dc[(Data<br/>Collection)] -->
 Estimation -->
 ht[Hypothesis<br/>Testing] -->
 Forecasting -->
-p[Policyto<br/>affect behavior]
+p[Policy to<br/>affect behavior]
 
 subgraph Model
 	mm[Mathematical]
