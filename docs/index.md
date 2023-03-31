@@ -1,6 +1,6 @@
 # Welcome!
 
-Hi there, I'm Ahmed Thajir. Welcome to the app.
+Hi there, I'm Ahmed Thahir. Welcome to the app!
 
 You can install the app right now, by clicking `Add to Home Screen`. Check out the [Installation Guide](Installation_Guide.md) if you are facing difficulties.
 
