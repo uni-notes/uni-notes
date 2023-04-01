@@ -1,4 +1,6 @@
-Artifical Nerual Network
+# Artifical Neural Networks
+
+For more advanced concepts, refer to [Deep Learning](./../Deep_Learning.md) concepts.
 
 ## MP Neuron
 
@@ -54,7 +56,7 @@ $$
 
 ### Perceptron Learning Algorithm
 
-Something
+
 
 ## Perceptron vs Sigmoidal Neuron
 
@@ -65,9 +67,11 @@ Something
 | Continuous Curve?     |     ❌      |        ✅         |
 | Differentiable Curve? |     ❌      |        ✅         |
 
-## Multi-Layer Perceptron
+## MLP
 
-### 3 Layers
+Multi-Layer Perceptron
+
+Simple neural network with 3 Layers
 
 ```mermaid
 flowchart LR
@@ -94,9 +98,9 @@ For an input layer with $n$ nodes, we will have
 - 1 output
 - $2^n$ nodes in hidden layer
 
-## Feed-Forward Neural Network
+## Feed-Forward NN
 
-Every layer feeds forward to the next layer (backward/self-loop is not allowed)
+NN (with $> 3$ layers) where every layer feeds forward to the next layer; backward/self-loop is not allowed
 
 For an input layer with $n$ nodes, we will have
 
@@ -117,103 +121,33 @@ $$
 
 ### Decision Boundary
 
-| Hidden Layers | Shape              |
-| ------------- | ------------------ |
-| 0             | Open region        |
-| 1             | Closed/Open Region |
-| $\ge 2$       | Closed             |
+| Hidden Layers | Shape of Region |
+| :-----------: | --------------- |
+|       0       | Open            |
+|       1       | Closed/Open     |
+|    $\ge 2$    | Closed          |
 
-As you increase the number of hidden layers, the possibility of open decision boundary decreases.
+As you increase the number of hidden layers, the possibility of open decision boundary decreases (which is good).
 
-### Activation Function
+## Activation Functions
 
-| Layer  | Name                               | $f(x)$                                                       |
-| ------ | ---------------------------------- | ------------------------------------------------------------ |
-| Hidden | Identity                           | $x$                                                          |
-|        | Binary Step                        | $\begin{cases} 0, &x < 0 \\ 1, & x \ge 0 \end{cases}$        |
-|        | Tariff                             | $\tanh(x)$                                                   |
-|        | ArcTan                             | $\tan^{-1} (x)$                                              |
-|        | Rectified Linear Unit              | $\begin{cases} 0, &x < 0 \\ x, & x \ge 0 \end{cases}$        |
-|        | Parametric Rectified Linear Unit   | $\begin{cases} \alpha x, &x < 0 \\ x, & x \ge 0 \end{cases}$ |
-|        | Exponential Linear Unit            | $\begin{cases} \alpha (e^x-1), &x < 0 \\ x,&  x \ge 0 \end{cases}$ |
-| Output | Logistic<br />(Sigmoid, Soft Step) | $\frac{1}{1+e^{-x}}$                                         |
-|        | SoftPlus                           | $\log(1+e^x)$                                                |
+|                  Name                  |                        Output $f(x)$                         | Output Type |        Range        |
+| :------------------------------------: | :----------------------------------------------------------: | ----------- | :-----------------: |
+|                Identity                |                             $x$                              | Continuous  |      $[-1, 1]$      |
+|            Binary<br />Step            |    $\begin{cases} 0, &x < 0 \\ 1, & x \ge 0 \end{cases}$     | Binary      |      ${0, 1}$       |
+|           Tariff/<br />Tanh            |                          $\tanh(x)$                          | Discrete    |      $[-1, 1]$      |
+|                 ArcTan                 |                       $\tan^{-1} (x)$                        | Continuous  |  $(-\pi/2, \pi/2)$  |
+|   ReLU (Rectified<br />Linear Unit)    |    $\begin{cases} 0, &x < 0 \\ x, & x \ge 0 \end{cases}$     | Continuous  |    $[0, \infty]$    |
+|   SoftPlus<br />(smooth alt to ReLU)   |                        $\log(1+e^x)$                         | Continuous  |    $[0, \infty]$    |
+|      Parametric/<br />Leaky ReLU       | $\begin{cases} \alpha x, &x < 0 \\ x, & x \ge 0 \end{cases}$ | Continuous  | $[-\infty, \infty]$ |
+|      Exponential<br />Linear Unit      | $\begin{cases} \alpha (e^x-1), &x < 0 \\ x,&  x \ge 0 \end{cases}$ | Continuous  | $[-\infty, \infty]$ |
+| Sigmoid/<br />Logistic/<br />Soft Step |                    $\dfrac{1}{1+e^{-x}}$                     | Binary      |      $[0, -1]$      |
+|                Softmax                 | $\dfrac{e^{x}}{\sum_{i=1}^k e^{x_i}}$<br />where $k=$ no of classes<br />such that $\dfrac{\sum p_i}{k} = 1$ | Discrete    |      $[0, 1]$       |
 
-### Training
+![activation_functions.svg](assets/activation_functions.svg)
 
-- Something
+## Back-Propagation
 
-## Backpropagation
+Occurs at every neuron
 
-occurs at every neuron
-
-### Perceptron
-
-occurs only once, as there is only one neuron in the output layer
-
-Assume
-
-- $y$ is activation function
-- $a$ is accumulator (pre-activation) function
-
-#### Steps
-
-1. Find $\frac{\partial J}{\partial y}$
-
-2. $$
-   \begin{aligned}
-   \frac{\partial J}{\partial a}
-   &= \frac{\partial J}{\partial y} \frac{\partial y}{\partial a} \\   
-   \implies \frac{\partial J}{\partial \theta}
-   &= \frac{\partial J}{\partial a} \frac{\partial a}{\partial \theta}
-   \end{aligned}
-   $$
-
-3. $$
-   \begin{aligned}
-   \nabla J_\text{outputLayer}
-   &= \frac{\partial J}{\partial x} \\   &= \frac{\partial J}{\partial \theta} \frac{\partial \theta}{\partial x}
-   \end{aligned}
-   $$
-
-4. Something
-
-5. $$
-   \theta_\text{new} = \theta_\text{old} - \eta \ \nabla J
-   $$
-
-### MLP
-
-Assume
-
-- $y$ is activation function of output layer
-- $b$ is accumulator (pre-activation) function of output layer
-- $z_j$ is activation function of node $j$ in hidden layer
-- $a_j$ is accumulator (pre-activation) function of node $j$ in hidden layer
-
-$$
-\begin{aligned}
-\text{Find } \frac{\partial J}{\partial y} & \\ 
-\frac{\partial J}{\partial b}
-&= \frac{\partial J}{\partial y} \frac{\partial y}{\partial b} \\
-\frac{\partial J}{\partial \beta_j}
-&= \frac{\partial J}{\partial b} \frac{\partial b}{\partial \beta_j} \\
-\frac{\partial J}{\partial z_j}
-&= \frac{\partial J}{\partial \beta_j} \frac{\partial \beta_j}{\partial z_j} \\
-\frac{\partial J}{\partial a_j}
-&= \frac{\partial J}{\partial \beta_j} \frac{\partial \beta_j}{\partial z_j} \\
-\frac{\partial J}{\partial \alpha_j}
-&= \frac{\partial J}{\partial a_j} \frac{\partial a_j}{\partial \alpha_j} \\
-\implies
-\nabla J_\text{outputLayer}
-&=\frac{\partial J}{\partial x} \\&= \frac{\partial J}{\partial \alpha_j} \frac{\partial \alpha_j}{\partial x}
-\end{aligned}
-$$
-
-## Recurrent Neural Network
-
-NN where forward-feed, backward-feed, and self-loop is allowed
-
-## Linearly-Separable Function
-
-Function for which $\exists$ a line/plane that separates the $y=0$ points and $y=1$ points
+In a perceptron, it occurs only once, as there is only one neuron in the output layer
