@@ -14,7 +14,8 @@ iframe,
 table,
 footer,
 .arithmatex,
-.mermaid
+.mermaid,
+.jp-Cell
 {
     content-visibility: auto !important;
     contain-intrinsic-size: 1px 500px !important;
