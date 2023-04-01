@@ -7,7 +7,9 @@ In a classication dataset, you have
 - Independent attributes $<A_1, A_2, A_3>$
 - Discrete Target attribute
 - Tuples/records/data objects/sample instance
+  
   Tuple $= (x, y)$
+  
     - $x =$ Feature Vector
     - $y =$ Class Label
 

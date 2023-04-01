@@ -77,20 +77,9 @@ $$
 y = b_0 + b_1 x_1 + b_2 x_2
 $$
 
-$$
-\begin{aligned}
-b_1 &= \\b_2 &= \\b_0 &= \hat y - b_1 \overline{x_1} - \overline{x_2} \\
-\sum {x_1}^2 &=
-\sum(x_1 x_1) - \frac{\sum x_1\sum x_1}{n} \\
-\sum {x_1}^2 &= \\
-\sum {x_2}^2 &= \\
-\sum {x_1 y} &= \\
-\sum {x_2 y} &= \\
-\sum {x_1}{x_2} &= \\
-\end{aligned}
-$$
-
 ## Something I missed
+
+
 
 ## Linear Basis Function
 
