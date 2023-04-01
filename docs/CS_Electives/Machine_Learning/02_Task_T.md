@@ -1,5 +1,3 @@
-## Task $T$
-
 Process of learning itself is not the task; learning is the means of attaining ability to perform the task
 
 Usually described in terms of how the machine

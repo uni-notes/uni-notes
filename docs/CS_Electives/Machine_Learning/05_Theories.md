@@ -1,6 +1,4 @@
-## Theories
-
-### Statistical Learning Theory
+## Statistical Learning Theory
 
 Helps understand performance when we observe only the training set, through assumptions about training and test sets
 
@@ -15,7 +13,7 @@ But rarely used in practice with deep learning, as
 - bounds are loose
 - difficult to determine capacity of deep learning algorithms
 
-### Probably Approximately Correct
+## Probably Approximately Correct
 
 [SLT](#Statistical Learning Theory) contradicts basic principles of logic, as according to logic
 
@@ -24,7 +22,7 @@ But rarely used in practice with deep learning, as
 
 ML avoids this problem with probabilistic rules, by finding rules that are probably correct about most members of concerned set
 
-### No-Free Lunch
+## No-Free Lunch
 
 [PAC](#Probably Approximately Correct) does not entirely resolve contradiction of logic.
 

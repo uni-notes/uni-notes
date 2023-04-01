@@ -1,8 +1,6 @@
-## Learning Experience $E$
+Deals with how we train the model
 
-Training
-
-### Data
+## Data
 
 Data can be structured/unstructured
 
@@ -13,7 +11,7 @@ Usually represented as a design matrix
 
 Train-Test Split is usually 80-20
 
-#### Multi-Dimensional Data
+### Multi-Dimensional Data
 
 can be hard to work with as
 
@@ -21,9 +19,9 @@ can be hard to work with as
 - harder to interpret
 - harder to visualize
 
-#### Feature Selection
+### Feature Selection
 
-#### Dimension Reduction
+### Dimension Reduction
 
 Using Principal Component Analysis
 
@@ -31,7 +29,7 @@ Deriving simplified features from existing features
 
 Easy example: using area instead of length and breadth.
 
-### Model
+## Model
 
 A functional mapping between input and output
 
@@ -40,7 +38,7 @@ A functional mapping between input and output
 |         | Learn a function described by a parameter whose size is finite & fixed before data is observed | Complexity is function of training set size |
 | Example | Linear Regression                                            | Nearest Neighbor                            |
 
-### Learning Types
+## Learning Types
 
 |                        |                                                              | Application  |
 | ---------------------- | ------------------------------------------------------------ | ------------ |
