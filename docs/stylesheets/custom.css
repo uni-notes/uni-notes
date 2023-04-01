@@ -23,8 +23,10 @@ footer,
 
 .jp-Cell-outputWrapper
 {
-    max-height: 50vwh;
+    max-height: 50vh;
+    max-height: 50svh;
 }
+
 
 .arithmatex, .katex
 {
