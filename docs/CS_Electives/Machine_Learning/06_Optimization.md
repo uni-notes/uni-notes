@@ -89,3 +89,9 @@ $0 < \eta < 1$
 
 - Large value may lead to underfitting/overfitting
 - Small value will lead to more time taken
+
+Can be
+
+- constant
+- time-based decay
+
