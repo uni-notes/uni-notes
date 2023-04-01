@@ -157,15 +157,24 @@ Generated using decision function
 
 If we have $d$ dimensional data, our decision boundary will have $(d-1)$ dimensions
 
-## Linearly Separable Class
+## Linear Separability
 
-Classes that can be separated using a linear decision surface, using a non-linear activation function
+Means the ability to separate points of different classes using a line, with/without a non-linear activation function
 
 $$
 f(u) = \begin{cases}
 1, & u \ge 0 \\0, & \text{otherwise}
 \end{cases}
 $$
+
+| Logic Gate | Linearly-Separable? |
+| :--------: | :-----------------: |
+|    AND     |          ✅          |
+|     OR     |          ✅          |
+|    XOR     |          ❌          |
+|    XOR     |          ❌          |
+
+![Linear Separability of Logic Gates](assets/linear_separability.svg)
 
 ## Discrimant Function
 
@@ -226,7 +235,7 @@ It is also used a pre-processing step for ML application
 
     - $S_1 \to$ Covariance matrix for class 1
     - $S_2 \to$ Covariance matrix for class 2
-   
+
 $$
 S_1 = \begin{bmatrix}
 \text{cov}(x_1, x_1) & \text{cov}(x_1, x_2) \\   \text{cov}(x_2, x_1) & \text{cov}(x_2, x_2)
@@ -255,7 +264,7 @@ $$
 5. Generate LDA Projection [Normalized Eigen Vector](#Normalized Eigen Vector)
 
 6. Generate LDA score (projected value) in reduced dimensions
-    
+   
 $$
 \text{LDA Score} = x_1 v_1 + x_2 v_2
 $$
