@@ -33,10 +33,10 @@ Easy example: using area instead of length and breadth.
 
 A functional mapping between input and output
 
-|         | Parametric                                                   | Non-Parametric                              |
-| ------- | ------------------------------------------------------------ | ------------------------------------------- |
-|         | Learn a function described by a parameter whose size is finite & fixed before data is observed | Complexity is function of training set size |
-| Example | Linear Regression                                            | Nearest Neighbor                            |
+|          | Parametric                                                   | Non-Parametric                              |
+| -------- | ------------------------------------------------------------ | ------------------------------------------- |
+|          | Learn a function described by a parameter whose size is finite & fixed before data is observed | Complexity is function of training set size |
+| Examples | Linear Regression                                            | Nearest Neighbor                            |
 
 ## Learning Types
 
@@ -52,3 +52,9 @@ A functional mapping between input and output
 | Reinforcement Learning | Learning in realtime, from experience of interacting in the environment, without any fixed input dataset.<br />It is similar to a kid learning from experience.<br/><br/>Best algorithm is **Q-Learning algorithm**. | Game playing |
 | Bayesian Learning      | Conditional-probabilistic learning tool, where each observed training expmle can incrementally inc/dec the estimated probability that a hypothesis is correct.<br/><br/>Useful when there is chance of false positive.<br/>For eg: Covid +ve |              |
 | Deep Learning          |                                                              |              |
+
+## Hyperparameters
+
+Parameters that affect the prediction of a model.
+
+They are not adapted by the ML algo itself, but we can use nested learning, where other algorithms optimize the hyperparameter for the ML algo.

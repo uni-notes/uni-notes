@@ -1,4 +1,4 @@
-## Supported Vector Machine
+## Support Vector Machine
 
 Goal is to obtain hyperplane farthest from all sample points
 
@@ -38,12 +38,12 @@ s_1 = \begin{pmatrix} 0 \\ 1 \end{pmatrix}
 \implies
 \tilde{s_1} = \begin{pmatrix} 0 \\ 1 \end{pmatrix}
 $$
-   
+
 4. Find values of $\alpha$, assuming that
 
      - $+ve = +1$
      - $-ve = -1$
-   
+
 $$
 \begin{aligned}
 \alpha_1 \tilde{s_1} \cdot \tilde{s_1} +
@@ -66,7 +66,7 @@ $$
 $$
 w_i =
 $$
-   
+
 6. Something
 
 ## Kernel function $\phi(x)$ 
