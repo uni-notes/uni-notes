@@ -1,15 +1,17 @@
-# Optimization
-
 ## Training Process
 
 ```mermaid
 flowchart LR
 i[Initialize θ] -->
-y[Calculate y] -->
+calc[Calculate ŷ] -->
 compare[Compare ŷ with y] -->
 error[Calculate error] -->
-change[Change θ to reduce cost] -->
-y
+a{Acceptable?} -->
+|Yes| stop([Stop])
+
+a -->
+|No| change[Change θ to reduce cost] -->
+calc
 ```
 
 ## Popular Optimization Algorithms
@@ -23,11 +25,11 @@ y
 
 ## Gradient Descent
 
-using derivative of cost function
+Using derivative of cost function
 
 $$
 \theta_{\text{new}} =
-\theta_{\text{prv}} -
+\theta_{\text{prev}} -
 \eta \ 
 {\nabla J}
 $$
