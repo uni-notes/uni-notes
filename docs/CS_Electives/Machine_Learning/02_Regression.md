@@ -53,30 +53,6 @@ $$
 
 The pivot point of the best fit line are $(\bar x, \bar y)$; which are the averages of $x$ and $y$
 
-## Model Evaluation
-
-We don’t test the model on the same we trained it with, because it will give high in-sample accuracy, but may give low out-of-sample accuracy(which is really what we want).
-
-Out-of-sample accuracy is the accuracy of the model when tested when never-before-seen data.
-
-### Train-Test Split
-
-The training and test set should be mutually-exclusive, to ensure good out-of-sample accuracy. Usually split it as 80%-20%
-
-Then, after evaluation you should train your model with the testing data afterwards.
-
-However, this will not work well all the time, as this will be dependent ; especially for realtime data, where the model is sensitive to the data.
-
-### $k$-Fold Cross Validation
-
-$k$ is called as decision parameter.
-
-In this course, we are doing 4-fold. This is the most common evaluation model.
-
-- Split the dataset into 4 random groups
-- Do the 80-20% split for each group
-- Take average of all accuracies
-
 ## Multiple Linear Regression
 
 $$

@@ -136,38 +136,75 @@ A functional mapping between input and output
 
 ## Performance Measure $P$
 
-Testing
-
-- Accuracy
-- Precision
-- Recall
-- F1-Score
-
-|            | Meaning               |
-| ---------- | --------------------- |
-| Evaluation | In sample testing     |
-| Validation | Out of Sample Testing |
-
-### Error Evaluation Metrics
+### Error Metrics
 
 Cost Functions/Loss Functions
 
-Helps measuring accuracy, which depends on amount of prediction errors.
+#### Regression
 
-|       Metric       | Full Form                    |                           Formula                            | Preferred Value |
-| :----------------: | ---------------------------- | :----------------------------------------------------------: | :-------------: |
-|        MAE         | Mean Absolute Error          |       $\frac{1}{n} \sum_{i=1}^n \| \hat y_i - y_i \|$        |  $\downarrow$   |
-|        MSE         | Mean Squared Error           |        $\frac{1}{n} \sum_{i=1}^n (\hat y_i - y_i)^2$         |  $\downarrow$   |
-|        RMSE        | Root Mean Square Error       |     $\sqrt{\frac{1}{n} \sum_{i=1}^n (\hat y_i - y_i)^2}$     |  $\downarrow$   |
-|        RAE         | Relative Absolute Error      | $\dfrac{\sum_{i=1}^n \| \hat y_i - y_i \|}{\sum_{i=1}^n \| \bar y - y_i \|}$ |  $\downarrow$   |
-|        RSS         | Residual Sum of Squares      | $\sum_{i=1}^n \left( y_i - \left( \beta_0 + \sum_{j=1}^m \beta_j x_{ij} \right) \right)^2$ |                 |
-|        RSE         | Relative Square Error        | $\dfrac{\sum_{i=1}^n  (\hat y_i - y_i)^2 }{\sum_{i=1}^n (\bar y - y_i)^2 }$ |                 |
-|       $R^2$        | Coefficient of Determination |                       $1 - \text{RSE}$                       |   $\uparrow$    |
-| Cross<br />Entropy |                              |        $-\sum\limits_{x \in X} P(x) \cdot \log Q(x)$         |  $\downarrow$   |
-|       Bayes        |                              |               Error incurred by an ideal model               |  $\downarrow$   |
-|        SEE         | Standard Error of Estimate   |          $\sqrt{\dfrac{ \sum(\hat y - y)^2}{n-2}}$           |  $\downarrow$   |
+|                  Metric                   |                           Formula                            | Preferred Value |
+| :---------------------------------------: | :----------------------------------------------------------: | :-------------: |
+|      MAE<br />(Mean Absolute Error)       |       $\frac{1}{n} \sum_{i=1}^n \| \hat y_i - y_i \|$        |  $\downarrow$   |
+|       MSE<br />(Mean Squared Error)       |        $\frac{1}{n} \sum_{i=1}^n (\hat y_i - y_i)^2$         |  $\downarrow$   |
+|    RMSE<br />(Root Mean Square Error)     |     $\sqrt{\frac{1}{n} \sum_{i=1}^n (\hat y_i - y_i)^2}$     |  $\downarrow$   |
+|    RAE<br />(Relative Absolute Error)     | $\dfrac{\sum_{i=1}^n \| \hat y_i - y_i \|}{\sum_{i=1}^n \| \bar y - y_i \|}$ |  $\downarrow$   |
+|    RSS<br />(Residual Sum of Squares)     | $\sum_{i=1}^n \left( y_i - \left( \beta_0 + \sum_{j=1}^m \beta_j x_{ij} \right) \right)^2$ |                 |
+|     RSE<br />(Relative Square Error)      | $\dfrac{\sum_{i=1}^n  (\hat y_i - y_i)^2 }{\sum_{i=1}^n (\bar y - y_i)^2 }$ |                 |
+| $R^2$<br />(Coefficient of Determination) |                       $1 - \text{RSE}$                       |   $\uparrow$    |
+|                   Bayes                   |               Error incurred by an ideal model               |  $\downarrow$   |
+|   SEE<br />(Standard Error of Estimate)   |          $\sqrt{\dfrac{ \sum(\hat y - y)^2}{n-2}}$           |  $\downarrow$   |
 
 Ideal model is one that making predictions from true distribution $P(x,y)$; even such a model incurs some error due to noise/overlap in the distributions
+
+#### Classification
+
+| Metric                                              | Meaning                                                      |                           Formula                            |
+| --------------------------------------------------- | ------------------------------------------------------------ | :----------------------------------------------------------: |
+| **Accuracy**                                        | $\frac{\text{Correct Predictions}}{\text{No of predictions}}$ |      $\frac{\text{TP + TN}}{\text{TP + FP + TN + FN}}$       |
+| **Error**                                           | $\frac{\text{Wrong Predictions}}{\text{No of predictions}}$  | $\begin{aligned} & 1 - \text{Accuracy} \\ &\frac{\text{FP + FN}}{\text{TP + FP + TN + FN}}\end{aligned}$ |
+| **Recall**<br />Sensitivity<br />True Positive Rate | How many actual +ve values were correctly predicted as +ve   | $\frac{\textcolor{hotpink}{TP}}{\textcolor{hotpink}{TP} + \text{FN}}$ |
+| **Precision**<br />Positive Predictive Value        | Out of actual +ve values, how many were correctly predicted as +ve | $\frac{\textcolor{hotpink}{TP}}{\textcolor{hotpink}{TP} + \text{FP}}$ |
+| **Specificity**<br />True Negative Rate             | Out of actual -ve values, how many were correctly predicted as -ve | $\frac{\textcolor{hotpink}{TN}}{\textcolor{hotpink}{TN} + \text{FP}}$ |
+| **F Score**<br />F~1~ Score<br />F-Measure          | Harmonic mean between precision and recall<br />Close to lower value | $\frac{2 \times \text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}$ |
+| **FP Rate**                                         | Out of the actual -ve, how many were misclassified as Positive | $\begin{aligned}\alpha &= \frac{\textcolor{hotpink}{FP}}{\textcolor{hotpink}{FP} + \text{TN}} \\ &= 1 - \text{Specificity} \end{aligned}$ |
+| **FN Rate**                                         | Out of the actual +ve, how many were misclassified as Negative | $\begin{aligned}\beta &= \frac{\textcolor{hotpink}{FN}}{\textcolor{hotpink}{FN} + \text{TP}} \\ &= 1 - \text{Sensitivity} \end{aligned}$ |
+| **Cross<br />Entropy**/<br />Log Loss               |                                                              |        $-\sum\limits_{x \in X} P(x) \cdot \log Q(x)$         |
+
+### Model Evaluation
+
+We don’t test the model on the same we trained it with, because it will give high in-sample accuracy, but may give low out-of-sample accuracy(which is really what we want).
+
+Out-of-sample accuracy is the accuracy of the model when tested when never-before-seen data.
+
+
+|                     | Meaning               |
+| ------------------- | --------------------- |
+| Training evaluation | In sample testing     |
+| Validation          | Out of Sample Testing |
+| Testing evaluation  |                       |
+
+#### Train-Validation-Test Split
+
+The training, validation, and test sets should be mutually-exclusive, to ensure good out-of-sample accuracy. Usually split it as 60%-20%-20%
+
+Then, after evaluation you should train your model with the testing data afterwards.
+
+The size of test set is important; small test set implies statistical uncertainty around the estimated average test error, and hence cannot claim algo A is better than algo B for given task
+
+However, this will not work well all the time, as this will be dependent; especially for realtime data, where the model is sensitive to the data.
+
+#### $k$-Fold Cross Validation
+
+Used when dataset is too small, and hence difficult to divide dataset into a fixed training set, validation, and test sets.
+
+- Split the dataset into $k$ random groups
+  - $k$ is most commonly set as 4
+  - $k$ is called as decision parameter
+
+- $k-1$ groups are used to train and evaluated on remaining group
+- Take average of all performance scores
+
+![image-20230401152950610](assets/image-20230401152950610.png){ loading:lazy }
 
 ### Bias & Variance
 
@@ -271,6 +308,12 @@ No free lunch theorem states
 
 > Averaged over all distributions, every algo has same error classifying unobserved points, ie no ML algo universally better than any other.
 
+## Hyperparameters
+
+Parameters that affect the prediction of a model.
+
+They are not adapted by the ML algo itself, but we can use nested learning, where other algorithms optimize the hyperparameter for the ML algo.
+
 ## Misc
 
 ### Degree of Polynomial
@@ -284,12 +327,9 @@ No free lunch theorem states
 
 ### Nom
 
-$| |$ is called as ‘nom’?
+$\|\|$ is called as ‘nom’?
 
 $$
 ||w^2|| = \sum |w^2|
 $$
 
-## Hyperparameters
-
-Parameters that affect the prediction of a model.
