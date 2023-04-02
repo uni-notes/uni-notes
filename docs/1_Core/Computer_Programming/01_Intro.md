@@ -1,43 +1,12 @@
 ## Basics
 
+Digital data is in binary form.
+
 - 0/1 (bit)
 - 8 bits = 1 byte
 - 1024 bytes = 1KB
 
-`print("hello")` $\to$ 0/1
-
-Language translators
-
-- Compilers ()
-  C, C++, Pascal
-
-- Interpretors ()
-  Python, Javascript, 
-
-- Python is dynamic
-
-    ```python
-    x = "hi"
-    x = 304
-    ```
-
-- Static (compilation)
-
-    ```c
-    #include <stdio.h>
-    // standard input output
-    // header file
-    // libraries
-    
-    int main()
-    {
-      // code
-      return 0;
-    }
-    
-    def my_func():
-      print("hi")
-    ```
+When write a C program to perform a task, it gets converted into binary instructions which a computer can understand
 
 ## Variables
 
