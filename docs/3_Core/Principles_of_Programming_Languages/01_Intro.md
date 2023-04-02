@@ -104,7 +104,7 @@ Programming languages
 | Distributes            | Executable                                                   | Executable not possible |                  |
 | Development time       | Slower                                                       | Faster                  |                  |
 | Typing                 | Static/Dynamic                                               | Dynamic                 |                  |
-| Target Program         | Machine Code<br />Portable Machine Code (Java Byte Code)<br />C Code |                         |                  |
+| Target Program         | Machine Code<br />Portable Machine Code (Java Byte Code)<br />C Code | ❌<br/>Does not generate target program<br/>executes instructions directly |                  |
 | Example                | C<br />C++<br />Java                                         | Javascript<br />Python  | Java<br />Python |
 
 ### Compiled Code
