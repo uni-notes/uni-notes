@@ -1,22 +1,22 @@
-## A tour of the cell (Course Handout - Components of the cell and its internal workings): 
+## (Course Handout - Components of the cell and its internal workings): 
 
-Plasma Membrane: 
-- Made of Phospholipids which comprise of phospholipid bilayer, one for hydrophilic head and other for hydrophobic tail. 
+Plasma Membrane: <br>
+- Made of Phospholipids which comprise of phospholipid bilayer, one for hydrophilic head and other for hydrophobic tail. <br>
 - Inside the bilayer, it mostly comprises of proteins which regulates what goes in and out. It can freely move and is called Fluid Mossaic.
 
 - Superbug : Ruptures the plasma membrane, causing a staph infection. Mostly occurs in schools, hospitals and gyms.
 - Animal cells lack cell wall, but compensate w the help of an extracellular matrix (protein collagen).
 
-Nucleus : 
-- It is separated from the cytoplasm by a double membrane called the nuclear envelope. It has holes. 
+Nucleus : <br>
+- It is separated from the cytoplasm by a double membrane called the nuclear envelope. It has holes. <br>
 - Long DNA molecules and associated proteins from fibres called chromatin are present, each chromatin fibre has one chromosome.
 
-Ribosomes : 
-- Some case the proteins made by ribosomes are made in nucleus and are transported to the cytoplasm through the pores of the nuclear envelope, in other cases they are in the cytoplasm itself, making proteins that remain fluid within the cell, sometimes even connected to the ER. 
+Ribosomes : <br>
+- Some case the proteins made by ribosomes are made in nucleus and are transported to the cytoplasm through the pores of the nuclear envelope, in other cases they are in the cytoplasm itself, making proteins that remain fluid within the cell, sometimes even connected to the ER. <br>
 - Cells that make a lot of proteins have a lot of ribosomes.
 
-Endoplasmic Reticulum: 
-- Rough ER : To make more plasma membrane, it can budd off. Cells that secrete a lot of protein such as your salivary glands, which secrete enzymes in your mouth are rich in rough ER. 
+Endoplasmic Reticulum: <br>
+- Rough ER : To make more plasma membrane, it can budd off. Cells that secrete a lot of protein such as your salivary glands, which secrete enzymes in your mouth are rich in rough ER. <br>
 - Smooth ER: Repro hormones are rich in smooth ER. They help in detoxification, example liver cells as well. This eventually strengthen's the body's tolerance to that drug, therefore requiring more dosage to have the same effect.
 
 - Golgi Apparatus : Is the ship port of the cell. 
@@ -31,7 +31,7 @@ Endoplasmic Reticulum:
 
 - Cytoskeleton shape is maintained using microtubules.
 
-Movement in Cells: 
-- Cilia : Short hair liked strucutres that are many in number and move back and forth in a coordinated fashion. Eg - Cilia in windpipe that are responsible to sweep mucus in the respiratory system get damages due to smoking leading to respiratory complications in smokers. 
-- Flagella : They are singular, whip - like structures that help in movement os sperms during fertilization. The problems with flagella often times lead to infertility problems. 
+Movement in Cells: <br>
+- Cilia : Short hair liked strucutres that are many in number and move back and forth in a coordinated fashion. Eg - Cilia in windpipe that are responsible to sweep mucus in the respiratory system get damages due to smoking leading to respiratory complications in smokers. <br>
+- Flagella : They are singular, whip - like structures that help in movement os sperms during fertilization. The problems with flagella often times lead to infertility problems. <br>
 - Pilli : Helps in attachment to surfaces. 
