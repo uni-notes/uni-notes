@@ -40,7 +40,7 @@ A functional mapping between input and output
 
 ## Learning Types
 
-|                        |                                                              | Application  |
+| Type                   | Meaning                                                      | Application  |
 | ---------------------- | ------------------------------------------------------------ | ------------ |
 | Supervised             | Uses labelled data, to derive a mapping between input examples and target variable. |              |
 | Unsupervised           | Learning from unlabelled data                                |              |
