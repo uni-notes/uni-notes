@@ -1,3 +1,7 @@
+td {
+    white-space: nowrap;
+}
+
 html
 {
     scroll-behavior: smooth !important;
