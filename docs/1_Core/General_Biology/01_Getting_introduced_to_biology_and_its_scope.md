@@ -22,3 +22,11 @@ Kingdoms are distinguished like:
 - Plantae : Produce their own food. 
 - Animalia : Obtain food by ingesting and digesting. 
 - Fungi : Decomposers, obtain food by decomposing dead and decaying organic matter. 
+
+Prokaryotes have: 
+
+- Pilli : Short projections for attachment to surfaces. 
+- Flagella : Long projections to propel them through their liquid environment. 
+- Capsules : Makes the bacteria's surface more slippery, helping it to escape engulfment by phagocytic cells.
+
+- Only Animal cells have Lysomes and Plant Cells have Chloroplasts.
