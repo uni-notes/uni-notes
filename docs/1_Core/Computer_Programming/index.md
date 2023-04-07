@@ -11,3 +11,7 @@ This was very similar to the C++ course in CBSE 11th/12th, so haven't made detai
 ## Explainer Video:
 
 This [video](https://youtu.be/IDNGU4B7Oe0) covers till midsem.
+
+## Labs:
+
+This<a href = 'https://github.com/SivaaB/BITSPil-CSF111'> repository <a> consists of solutions to all the lab and tutorial sheets given in class. 
