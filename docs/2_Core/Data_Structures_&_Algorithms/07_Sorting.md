@@ -113,7 +113,7 @@ Algorithm quickSort(a, p, r)
 	if(p<r)
 		q = partition(a, p, r)
 		quickSort(a, p, q - 1)  // Before pivot
-    		quickSort(a, q + 1, r) // After pivot
+		quickSort(a, q + 1, r) // After pivot
 		// the reason q is left out is cuz it is already placed in its correct position
     
 Algorithm partition(a, p, r)
