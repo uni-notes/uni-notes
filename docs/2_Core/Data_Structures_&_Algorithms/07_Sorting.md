@@ -125,7 +125,7 @@ Algorithm partition(a, p, r)
 			i = i+1
 			swap a[i] and a[j]
 			
-	swap a[i+1] with a[r]
+	swap a[i+1] with pivot
 	return i+1 // this is the new position of the pivot element
 ```
 
