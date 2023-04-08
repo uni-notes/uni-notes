@@ -21,14 +21,16 @@ For example, binary search requires a **sorted** list as input.
 
 ## Efficiency of Algorithm
 
-determined by
+Determined by
 
-1. Running Time (Time complexity)
-2. Space used (Space complexity)
+1. Space complexity (Space used)
+2. Time complexity (Running Time)
+   
+   This is more important
 
 Both of the above are defined as a function of input size
 
-## Experimental Analysis
+## Experimental/Emperical Analysis
 
 1. Write the program for the algorithm
 2. Run the program with different input sizes
@@ -46,7 +48,7 @@ Both of the above are defined as a function of input size
 3. Only limited set of input is possible
 4. Same h/w & s/w should be used to compare 2 algorithms
 
-## Theoretical Analysis
+## Theoretical/Mathematical Analysis
 
 1. Use [pseudocode](#Pseudocode)
 2. Determine the primitive operations
