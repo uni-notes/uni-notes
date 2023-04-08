@@ -1,10 +1,14 @@
 # Welcome!
 
-Hi there, I'm Ahmed Thahir. Welcome to the app!
+Hi there, welcome to the app! You can install it right now, by clicking `Add to Home Screen`. Check out the [Installation Guide](#Installation Guide) for help.
 
-You can install the app right now, by clicking `Add to Home Screen`. Check out the [Installation Guide](#Installation Guide) if you are facing difficulties.
+## ✨ Contributors
 
-Make sure to ⭐ this project on GitHub. Feel free to share this to everyone you know.
+Thanking all contributors, as this initiative would not be possible without their support!
+
+<a href="https://github.com/AhmedThahir/Uni_Notes/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=AhmedThahir/Uni_Notes" loading="lazy" />
+</a>
 
 ## Tips
 
