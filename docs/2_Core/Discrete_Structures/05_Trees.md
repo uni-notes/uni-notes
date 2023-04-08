@@ -31,19 +31,19 @@ level of a path = length of the path required to reach the vertex from the root
 
 ### Spanning Tree
 
-is a tree containing all vertices of a simple graph G
+Tree containing all vertices of source graph, and minimum required edges to span the entire graph.
 
-it is a subgraph of G
+It is a subgraph of G
 
-it is obtained by removing cycles
+It is obtained by removing cycles
 
-height of spanning tree = max level
+Height of spanning tree = max level
 
 ### Minimum Spanning Tree
 
 spanning tree with minimum sum of weights
 
-## Finding spanning tree
+## Finding Spanning Tree
 
 for small trees, we can perform directly; we need to use algorithms for large trees
 
@@ -63,7 +63,7 @@ for small trees, we can perform directly; we need to use algorithms for large tr
 1. pick an arbitrary vertex as the root
 2. add multiple adjacent vertices and edges (try to get more vertices with max edges)
 
-### Prim’s algorithm
+### Prim’s Algorithm
 
 used for weighted spanning graphs
 Eg: GMaps
@@ -73,10 +73,26 @@ Eg: GMaps
    1. if you have 2 edges with the same priority, take the alphabetically
    2. then add the other ones too after the above one
 
-### Kruskal’s algorithm
+### Kruskal’s Algorithm
 
 1. start with minimum edge
 2. do minimum edges that aren’t even incident(don’t connect them you dummy), making sure that you don’t get cycles
+
+Independent of starting address
+
+### Prim vs Kruskal
+
+|                           |           Prim            |    Kruskal    |
+| ------------------------- | :-----------------------: | :-----------: |
+| Starting Edge             |             ✅             |       ❌       |
+| Chooses ___ at every edge | nearest/cheapest neighbor | cheapest edge |
+| Better for ___ graph      |          Denser           |    Sparse     |
+| Insertion of vertices     |             👍             |       👎       |
+|                           |                           |               |
+
+Pr***i***m - start***i***ng edge
+
+Krusk***a***l - ***a***ny
 
 ## Trees terminology
 
