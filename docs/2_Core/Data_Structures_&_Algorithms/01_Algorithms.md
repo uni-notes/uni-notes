@@ -21,6 +21,8 @@ For example, binary search requires a **sorted** list as input.
 
 ## Efficiency of Algorithm
 
+### Complexity
+
 Determined by
 
 1. Space complexity (Space used)
@@ -29,6 +31,13 @@ Determined by
    This is more important
 
 Both of the above are defined as a function of input size
+
+### Cases
+
+- Worst
+- Average
+- Best
+- Amortized (Sequence opertions applied to input size $n$ averaged over time)
 
 ## Experimental/Emperical Analysis
 
