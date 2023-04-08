@@ -42,7 +42,6 @@ for (j=0; j<n-1; j++)
 		{
 			m = a[i];
 			pos = i;
-			break;
 		}
 		
 	a[pos] = a[j];
