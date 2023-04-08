@@ -25,31 +25,34 @@ determined by
 
 1. Running Time (Time complexity)
 2. Space used (Space complexity)
-3. Function of input size
-   i didn’t understand
+
+Both of the above are defined as a function of input size
 
 ## Experimental Analysis
 
-1. write the program for the algorithm
+1. Write the program for the algorithm
 2. Run the program with different input sizes
-3. measure running tim
-   in java we can use `System.currentTimeMillis()`
+3. Measure running time
+   
+   For eg, in Java we can use `System.currentTimeMillis()`
 4. Plot the result
 
 ### Limitations
 
-1. we need to implement and test
-2. the same programming language must be used to compare 2 algorithms
-   because our interpretation of the efficiency may vary with different programming languages
-3. only limited set of input is possible
-4. the same hardware and software should be used to compare 2 algorithms
+1. We need to implement and test
+2. Same programming language must be used to compare 2 algorithms
+   
+   Because our interpretation of the efficiency may vary with different programming languages
+3. Only limited set of input is possible
+4. Same h/w & s/w should be used to compare 2 algorithms
 
 ## Theoretical Analysis
 
-1. use [pseudocode](#Pseudocode)
-2. determine the primitive operations
+1. Use [pseudocode](#Pseudocode)
+2. Determine the primitive operations
+   
    We assume that each primitive operation takes 1 unit of time.
-3. define running time as a function of input size $n$
+3. Define running time as a function of input size $n$
 
 ```pseudocode
 Algorithm arrayMax(a, n)
