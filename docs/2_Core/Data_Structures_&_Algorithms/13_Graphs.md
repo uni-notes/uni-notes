@@ -66,46 +66,12 @@ It requires
 
 ## Minimum Spanning Tree
 
-A tree that has all the vertices of the source graph, but only the minimum required edges to span the entire graph.
+Refer [Discrete Structures](./../Discrete_Structures/05_Trees.md#minimum-spanning-tree)
 
 ### Prim’s Algorithm
 
+Refer [Discrete Structures](./../Discrete_Structures/05_Trees.md#prims-algorithm)
+
 ### Kruskal’s Algorithm
 
-independent of starting address
-
-### Steps
-
-1. List out edges in the ascending order of weights
-2. Start with the minimum starting algorithm
-3. Connect in that order, ensuring
-   1. no cycles
-   2. no connected components
-
-### Working
-
-| Edge         | Weight | Action |
-| ------------ | ------ | ------ |
-| $(v_1, v_2)$ | 1      | Accept |
-| $(v_2, v_3)$ | 3      | Reject |
-| $(v_3, v_4)$ | 10     | Accept |
-
-```pseudocode
-find(u)
-
-union(u, v)
-```
-
-### Prim vs Kruskal
-
-|                           |           Prim            |    Kruskal    |
-| ------------------------- | :-----------------------: | :-----------: |
-| Starting Edge             |             ✅             |       ❌       |
-| Chooses ___ at every edge | nearest/cheapest neighbor | cheapest edge |
-| Better for ___ graph      |          Denser           |    Sparse     |
-| Insertion of vertices     |             👍             |       👎       |
-|                           |                           |               |
-
-Pr***i***m - start***i***ng edge
-
-Krusk***a***l - ***a***ny
+Refer [Discrete Structures](./../Discrete_Structures/05_Trees.md#kruskals-algorithm)
