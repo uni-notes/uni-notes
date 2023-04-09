@@ -2,13 +2,13 @@
 
 | Law             | Formula                                                      |
 | --------------- | ------------------------------------------------------------ |
-| Complementation | $\bar0 = 1 \\ \bar1 = 0 \\ \bar{\bar{x}} = x$              |
-| and             | $x \cdot 1 = x \\ x \cdot 0 = 0 \\ x \cdot x = x \\ x \cdot \bar x = 0$|
-| or              | $x + 0 = x \\ x + 1 = 1 \\ x + x = x \\ x + \bar x = 1$    |
-| commutative     | $x + y = y + x \\ xy = yx$                                 |
-| Associative     | $x+(y+z) = (x+y)+z \\ x(yz) = (xy) z$                      |
-| Distributive    | $x(y+z) = xy + xz \\ x + yz = (x+y)(x+z)$                  |
-| Demorgan's      | $\overline{x+y} = \bar x \cdot \bar y \\ \overline{x \cdot y} = \bar x + \bar y$ |
+| Complementation | $\bar0 = 1$<br/>$\bar1 = 0$<br/>$\bar{\bar{x}} = x$              |
+| and             | $x \cdot 1 = x$<br/>$x \cdot 0 = 0$<br/>$x \cdot x = x$<br/>$x \cdot \bar x = 0$|
+| or              | $x + 0 = x$<br/>$x + 1 = 1$<br/>$x + x = x$<br/>$x + \bar x = 1$    |
+| commutative     | $x + y = y + x$<br/>$xy = yx$                                 |
+| Associative     | $x+(y+z) = (x+y)+z$<br/>$x(yz) = (xy) z$                      |
+| Distributive    | $x(y+z) = xy + xz$<br/>$x + yz = (x+y)(x+z)$                  |
+| Demorgan's      | $\overline{x+y} = \bar x \cdot \bar y$<br/>$\overline{x \cdot y} = \bar x + \bar y$ |
 
 ## Duality Principle
 
