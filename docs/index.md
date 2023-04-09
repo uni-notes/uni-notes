@@ -1,4 +1,4 @@
-# Welcome!
+# 👋 Welcome!
 
 Hi there, welcome to the university notes app! This is a collection of notes on Math, Computer, Economics, Finance and so much more.
 
@@ -12,13 +12,13 @@ Thanking all contributors, as this initiative would not be possible without thei
   <img src="https://contrib.rocks/image?repo=AhmedThahir/Uni_Notes" loading="lazy" />
 </a>
 
-## Tips
+## ℹ️ Tips
 
 - Use the navbar ⬅️ to go through the website
 - For changes/corrections, click the edit button (pen icon) at the top of any page
 - Collaborators will be mentioned in the GitHub repository for their contributions
 
-## Installation Guide
+## 📱 Installation Guide
 
 What you’re currently using is a [PWA](#What’s a PWA?), which dramatically simplifies this entire notes initiative, but is not supported on a few browsers.
 
@@ -35,7 +35,7 @@ What you’re currently using is a [PWA](#What’s a PWA?), which dramatically s
 
 [^caniuse]: [caniuse.com](https://caniuse.com/web-app-manifest)
 
-## What’s a PWA?
+## 🌐 What’s a PWA?
 
 Progressive Web Apps are web applications that have been designed to be capable, reliable, and installable with a single codebase.
 
