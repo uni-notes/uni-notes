@@ -4,19 +4,19 @@ Hi there, welcome to the university notes app! This is a collection of notes on 
 
 You can install right now, by clicking `Add to Home Screen`. Check out the [Installation Guide](#Installation Guide) for help.
 
-## ✨ Contributions
+## ℹ️ Tips
 
-A big thank you to all contributors, as this initiative would not be possible without their support! You can check out the progress of the project [here](https://github.com/orgs/uni-notes/projects/1).
+- Use the navbar ⬅️ to go through the website
+- For changes/corrections, click the edit button (pen icon) at the top of any page
+- Want to join the initiative? Collaborators will be mentioned for their contributions!
+
+## ✨ Contributions
 
 <a href="https://github.com/AhmedThahir/Uni_Notes/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=AhmedThahir/Uni_Notes" loading="lazy" />
 </a>
 
-## ℹ️ Tips
-
-- Use the navbar ⬅️ to go through the website
-- For changes/corrections, click the edit button (pen icon) at the top of any page
-- Collaborators will be mentioned in the GitHub repository for their contributions
+A big thank you to all contributors, as this initiative would not be possible without their support! You can check out the progress of the project [here](https://github.com/orgs/uni-notes/projects/1).
 
 ## 📱 Installation Guide
 
