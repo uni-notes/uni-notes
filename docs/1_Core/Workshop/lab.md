@@ -1,4 +1,4 @@
-# Lab: 
+# Lab
 
 1 - <a href = "https://www.youtube.com/watch?v=IObtH8j0qyk&feature=youtu.be"> Vertical Milling <a><br>
 2 - <a href = "https://www.youtube.com/watch?v=SknYW0bGRss&feature=youtu.be"> Shaper Experiment <a><br>

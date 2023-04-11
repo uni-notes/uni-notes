@@ -61,8 +61,8 @@ Check the following -
 6. Short Answer 
 7. Scale
 
-Misc: 
-- Double Barreled Question : How have teachers and students reacted to the new 30min lunch break?
-- Leading Question : Do you think the new cafeteria lunch menu offers a better variety of healthy foods than the old one?
-- Minimum Number of Respondents is Total Size / 10
+Misc: <br>
+- Double Barreled Question : How have teachers and students reacted to the new 30min lunch break? <br>
+- Leading Question : Do you think the new cafeteria lunch menu offers a better variety of healthy foods than the old one?<br>
+- Minimum Number of Respondents is Total Size / 10<br>
 
