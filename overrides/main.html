@@ -3,3 +3,23 @@
 {% block extrahead %}
 <link rel="manifest" href="{{ 'manifest.json' | url }}">
 {% endblock %}
+
+{% block header %}
+  {{super()}}
+  <script>
+    if (navigator.share) { 
+        let btn = document.createElement("button");
+        btn.innerHTML = '{% include ".icons/material/share-variant.svg" %}';
+        btn.classList.add("md-header__button", "md-icon","twemoji");
+        var title = document.getElementsByClassName("md-header__inner")[0];
+        title.insertBefore(btn, document.getElementsByClassName("md-header__option")[0]);
+
+        btn.addEventListener('click', event => {
+            navigator.share({
+                title: document.title,
+                url: window.location.href
+            });
+        });
+    }
+  </script>
+{% endblock %}
