@@ -1,4 +1,4 @@
-## Components of the cell and its internal workings: 
+## Molecules of Life (Course Handout - Components of the cell and its internal workings): 
 
 - Animals store excess glucose in the form of Glycogen. 
 - Cellulose can't be digested by humans only ruminating animals like cows can do so thru the help of the microorganisims in their intestines which help them break them down. Altho we can't digest it, it is good for us as the lining of our intestines secrete mucus which allows food to pass freely.
