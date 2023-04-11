@@ -101,7 +101,7 @@ S7 is always high
 
 8 bit latch
 
-used for **de**multiplexing address and data
+used for **de** -multiplexing address and data
 
 it is used to ensure that address does not get affected, while operations don’t get affected.
 
