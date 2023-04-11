@@ -7,7 +7,7 @@
 {% block header %}
   {{super()}}
   <script>
-    if (navigator.share) { 
+    if (navigator.canShare()) { 
         let btn = document.createElement("button");
         btn.innerHTML = '{% include ".icons/material/share-variant.svg" %}';
         btn.classList.add("md-header__button", "md-icon","twemoji");
