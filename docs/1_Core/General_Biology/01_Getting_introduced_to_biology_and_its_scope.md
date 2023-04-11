@@ -1,5 +1,3 @@
-## Getting introduced to biology and its scope
-
 - List of steps in biology to conclude a statement: Observation, Question, Hypothesiis, Prediction, Experiment. (Pnemonic : OQHPE) ; If the experiment does not support hypothesis then make a new one. If it supports hypothesis, make new predictions. 
 - List of major life charecteristics: Order, Regulation, Growth and Development, Energy Processing, Response to Environment, Reproduction, Evolution. (Pnemonic : ORGERRE)
 - List of major themes in biology : Energy Processsing, Structure and Function, Information Flow, Evolution, Interconnection to other systems. (Pnemonic : ESIEI)

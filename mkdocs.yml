@@ -1,15 +1,15 @@
-site_url: https://AhmedThahir.github.io/Uni_Notes
+site_url: https://uni-notes.netlify.app
 site_name: Uni Notes
 site_author: Ahmed Thahir
 site_description: >-
-  Ahmed Thahir's notes taken over the years
+  Ahmed Thahir's notes taken over the years, now featuring others' as well :)
 # Repository
 repo_name: Uni Notes
-repo_url: https://github.com/ahmedthahir/Uni_Notes
+repo_url: https://github.com/uni-notes/uni-notes
 edit_uri: edit/main/docs/
 
 # Copyright
-# copyright: Copyright &copy; 2016 - 2023 Martin Donath
+# copyright: Copyright &copy; 2023 Ahmed Thahir
 
 # Configuration
 theme:

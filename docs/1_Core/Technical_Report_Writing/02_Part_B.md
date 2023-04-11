@@ -27,8 +27,6 @@ Thoughts should be expressed keeping [Approach --> Method --> Technique] order i
 1. Title in " " 
 2. Journal must be underlined with Pencil 
 3. Author Name is Eg. S Balamurugan
-
 4. Editor comes after journal 
 5. "Place : Publishing Press name"
-
 6. Volume (vol), Issue (no), Page (pp), Year, DOI
