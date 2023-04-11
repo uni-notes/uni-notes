@@ -14,6 +14,7 @@ This is a PWA using Mkdocs material theme
 ## ⚠️ Disclaimers
 
 - If you want to publish this on your own, **make sure to give due credit**, to help support this project :)
+- This is meant to be a student-only knowledge sharing initiative - not a classroom portal.
 - These notes are **not affiliated** to any university, club, association.
 
 ## License
