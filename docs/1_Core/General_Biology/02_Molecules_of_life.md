@@ -1,4 +1,4 @@
-## (Course Handout - Components of the cell and its internal workings): 
+## Components of the cell and its internal workings
 
 - Animals store excess glucose in the form of Glycogen. 
 - Cellulose can't be digested by humans only ruminating animals like cows can do so thru the help of the microorganisims in their intestines which help them break them down. Altho we can't digest it, it is good for us as the lining of our intestines secrete mucus which allows food to pass freely.
@@ -9,16 +9,16 @@
 - Changing one element's sequence in proteins can be very detrimental as it affects the proteins ability to function. Eg. Substitution of one amino acid in hemoglobin incorrectly results in sickle cell disease, an inherited blood disorder.
 - High Fever are dangerous for this very reason as with the inc in temp, the proteins tend to lose their shape.
 
-Linking of Ribonucleic Acid can be represented as: <br>
-- A - T <br>
+Linking of Ribonucleic Acid can be represented as:
+- A - T
 - G - C 
 
-Difference between RNA and DNA: <br>
+Difference between RNA and DNA:
 - Ribonucleic<br>
 - Instead of Thymine base, RNA has Uracil <br>
 - RNA is usually found in living cells in stranded form, whereas DNA usually exists as a double helix.
 
-Termninology: <br>
-- Starch is Amylose <br>
-- Indigestible fibres are called cellulose.<br>
-- Animal starch is called glycogen. 
+Termninology:
+- Starch is Amylose
+- Indigestible fibres are called cellulose
+- Animal starch is called glycogen
