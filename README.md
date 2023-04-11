@@ -26,4 +26,4 @@ I would like to thank all contributors. This project would not be possible witho
 
 ## License
 
-https://github.com/AhmedThahir/Uni_Notes/blob/2a3179bdc266a97cc93b85c5defe31748b908fe3/license#L1-L21
+https://github.com/uni-notes/uni-notes/blob/main/license#L1-L21
