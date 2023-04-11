@@ -13,7 +13,7 @@ You can install right now, by clicking `Add to Home Screen`. Check out the [Inst
 ## ✨ Contributions
 
 <a href="https://github.com/AhmedThahir/Uni_Notes/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=AhmedThahir/Uni_Notes" loading="lazy" />
+  <img src="https://contrib.rocks/image?repo=uni-notes/uni-notes" loading="lazy" />
 </a>
 
 A big thank you to all contributors, as this initiative would not be possible without their support! You can check out the progress of the project [here](https://github.com/orgs/uni-notes/projects/1).
