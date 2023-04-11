@@ -39,7 +39,7 @@ Abbreviation to remember : SCQRE
 
 Abbreviation to remember : DNIEE
 
-## : Effective Sentence Making
+## Effective Sentence Making
 
 Check the following -
 
@@ -51,7 +51,7 @@ Check the following -
 6. Avoid gender biased words (mankind --> humanity)
 7. Avoid too many nouns (Window Sash Installation Company --> the company that installs window sashes)
 
-## : Questionnaires
+## Questionnaires
 
 1. Open Ended ( How would you describe this flavor of ice cream? ) 
 2. Close Ended ( Do you think this ice cream is too rich in flavor? )
