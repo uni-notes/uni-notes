@@ -2,7 +2,7 @@
 
 Hi there, welcome to the university notes app! This is a collection of notes on Math, Computer, Economics, Finance and so much more. Feel free to share to everyone you know!
 
-You can install right now, by clicking `Add to Home Screen`. Check out the [📱 Installation Guide](#📱-Installation-Guide) for help.
+You can install right now, by clicking `Add to Home Screen`. Check out the [📱 Installation Guide](#-installation-guide) for help.
 
 ## ℹ️ Tips
 
