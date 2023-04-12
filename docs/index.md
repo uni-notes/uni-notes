@@ -1,8 +1,8 @@
 # 👋 Welcome!
 
-Hi there, welcome to the university notes app! This is a collection of notes on Math, Computer, Economics, Finance and so much more.
+Hi there, welcome to the university notes app! This is a collection of notes on Math, Computer, Economics, Finance and so much more. Feel free to share to everyone you know!
 
-You can install right now, by clicking `Add to Home Screen`. Check out the [Installation Guide](#Installation Guide) for help.
+You can install right now, by clicking `Add to Home Screen`. Check out the [📱 Installation Guide](#📱-Installation-Guide) for help.
 
 ## ℹ️ Tips
 
@@ -22,16 +22,16 @@ A big thank you to all contributors, as this initiative would not be possible wi
 
 What you’re currently using is a [PWA](#What’s a PWA?), which dramatically simplifies this entire notes initiative, but is not supported on a few browsers.
 
-|  Platform   |    Browser     |  ➡   | Supported?[^caniuse] |           Installation Step            |
-| :---------: | :------------: | :--: | :------------------: | :------------------------------------: |
-| **Android** |     Chrome     |      |          ✅           |  Click the `Add to Home Screen` popup  |
-|   **iOS**   |     Chrome     |      |          ❌           | 😕 I hate this; open the link on Safari |
-|             |     Safari     |      |          ✅           | Click share button in the bottom, `Add to Home Screen`|
-| **Windows** |     Chrome     |      |          ✅           | Click the `+` icon in the address bar  |
-|             | Microsoft Edge |      |          ✅           | Click the `+` icon in the address bar  |
-|  **MacOS**  |     Chrome     |      |          ✅           | Click the `+` icon in the address bar  |
-|             |     Safari     |      |          ❌           | 😕 I hate this; open the link on Chrome |
-|  **Linux**  |     Chrome     |      |          ✅           | Click the `+` icon in the address bar  |
+|  Platform   |    Browser     |  ➡   | Supported?[^caniuse] |                   Installation Step                    |
+| :---------: | :------------: | :--: | :------------------: | :----------------------------------------------------: |
+| **Android** |     Chrome     |      |          ✅           |          Click the `Add to Home Screen` popup          |
+|   **iOS**   |     Chrome     |      |          ❌           |         😕 I hate this; open the link on Safari         |
+|             |     Safari     |      |          ✅           | Click share button in the bottom, `Add to Home Screen` |
+| **Windows** |     Chrome     |      |          ✅           |         Click the `+` icon in the address bar          |
+|             | Microsoft Edge |      |          ✅           |         Click the `+` icon in the address bar          |
+|  **MacOS**  |     Chrome     |      |          ✅           |         Click the `+` icon in the address bar          |
+|             |     Safari     |      |          ❌           |         😕 I hate this; open the link on Chrome         |
+|  **Linux**  |     Chrome     |      |          ✅           |         Click the `+` icon in the address bar          |
 
 [^caniuse]: [caniuse.com](https://caniuse.com/web-app-manifest)
 
