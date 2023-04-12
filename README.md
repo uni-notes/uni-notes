@@ -19,4 +19,4 @@ This is a PWA using Mkdocs material theme
 
 ## License
 
-https://github.com/uni-notes/uni-notes/blob/main/license#L1-L21
+https://github.com/uni-notes/uni-notes/blob/0e642d1e5922c11d8e80ab89f8f4849668338f7c/license#L1-L10
