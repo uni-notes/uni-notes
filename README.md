@@ -13,7 +13,7 @@ This is a PWA using Mkdocs material theme
 
 ## ⚠️ Disclaimers
 
-- **Make sure to give due credit** when sharing these notes, to help support this project :) Publishing this as your own without credit would be bypassing the license, and demeaning this project. 
+- **Make sure to give due credit** when sharing these notes, to help support this project :) Publishing this as your own without crediting and using the exact Open Software License 3.0 would be bypassing the license, and demeaning this project.
 - This is meant to be a student-only knowledge sharing initiative - not a classroom portal.
 - These notes are **not affiliated** to any university, club, association.
 
