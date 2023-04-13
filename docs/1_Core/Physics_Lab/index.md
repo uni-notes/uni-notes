@@ -13,4 +13,4 @@ Here is the demonstration of every experiment in the physics lab. <br>
 09 - <a href = "https://drive.google.com/file/d/1o0r5-deXMAFtrKeqgZoplrt35T1LdXGh/view?usp=share_link"> Friction </a><br>
 10 - <a href = "https://drive.google.com/file/d/1LevttYaJr-_6DtLWV7vpR0PccdGMykKp/view?usp=share_link"> Photoelectric Effect </a><br>
 11 - <a href = "https://drive.google.com/file/d/1xtRnXHYAtAiZd38EdV9ungDCM318ZnC1/view?usp=share_link"> Rotational Inertia</a><br>
-11 - <a href = "https://drive.google.com/file/d/1IEL-gBdMQ34MLW9sx61ahpQgUpnD_BaV/view?usp=share_link"> Vibration</a><br>
+12 - <a href = "https://drive.google.com/file/d/1IEL-gBdMQ34MLW9sx61ahpQgUpnD_BaV/view?usp=share_link"> Vibration</a><br>
