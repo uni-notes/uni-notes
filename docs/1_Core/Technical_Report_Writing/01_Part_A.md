@@ -4,65 +4,62 @@
 
 ### On the basis of structure: 
 
-1. Simple Sentence: 
-Can have small conjunction b/w two words. 
+| Type of Sentence | Structure | Example |
+| --------------- | --------- | ------- |
+| Simple Sentence | One independent clause | "She ran." |
+|                 | Can have small conjunction between two words | "She ran and jumped." |
+| Compound Sentence | Two or more independent clauses | "She ran, and he jumped." |
+|                    | Joined by FANBOYS conjunction (For, And, Nor, Between, Or, Yet, So) | "She ran, and he jumped, but he fell." |
+| Complex Sentence | One independent clause | "She ran to the store." |
+|                  | One dependent clause (starts with some "complex" word) | "After she ran to the store, she went home." |
+| Compound-Complex Sentence | Two or more independent clauses | "She ran to the store, and he jumped over the fence." |
+|                           | One dependent clause | "After she ran to the store, she went home, but he stayed outside." |
 
-2. Compound Sentence: 
-FANBOYS Abbreviation (For, And, Nor, Between, Or, Yet, So)
 
-3. Complex Sentence: 
-1 independent clause 
-1 dependent clause (Starts w some "complex" word) 
+### Mnemonic for remembering classification of sentences on the basis of form: [SCQRC]
 
-4. Compound Complex Sentence: 
-2 Independent Clause
-1 Dependent Clause 
-One Conjunction
+1. **S**tatement 
+2. **C**ommand 
+3. **Q**uestion 
+4. **R**equest 
+5. **C**ommand
 
-### On the basis of form: 
+### Mnemonic for remembering classification of sentences on the basis of function: [DNIEE]
 
-1. Statement 
-2. Command 
-3. Question 
-4. Request 
-5. Command
+1. **D**escriptive 
+2. **N**arrative 
+3. **I**llocutionary 
+4. **E**xpository 
+5. **E**xclamatory
 
-Abbreviation to remember : SCQRE
+--- 
 
-### On the basis of function: 
+## Effective Sentence Making:
 
-1. Descriptive 
-2. Narrative 
-3. Illocutionary 
-4. Expository 
-5. Exclamatory
+Check for the following -
+- Should not be too connotative (negative) 
+- Precise (mention names) 
+- Concise (difficult to approximate --> estimate) 
+- Plainness (don't use complicated words) 
+- Avoid Cliches, Jargons, Foreign Words 
+- Avoid gender biased words (mankind --> humanity)
+- Avoid too many nouns (Window Sash Installation Company --> the company that installs window sashes)
 
-Abbreviation to remember : DNIEE
+---
 
-## Effective Sentence Making
+## Questionnaires:
 
-Check the following -
+- Open Ended ( How would you describe this flavor of ice cream? ) 
+- Close Ended ( Do you think this ice cream is too rich in flavor? )
+- Multiple Choice 
+- Checklist
+- Ranking 
+- Short Answer 
+- Scale
 
-1. Should not be too connotative (negative) 
-2. Precise (mention names) 
-3. Concise (difficult to approximate --> estimate) 
-4. Plainness (don't use complicated words) 
-5. Avoid Cliches, Jargons, Foreign Words 
-6. Avoid gender biased words (mankind --> humanity)
-7. Avoid too many nouns (Window Sash Installation Company --> the company that installs window sashes)
+Misc points to remember: 
+- Double Barreled Question : How have teachers and students reacted to the new 30min lunch break? 
+- Leading Question : Do you think the new cafeteria lunch menu offers a better variety of healthy foods than the old one?
+- Minimum Number of Respondents is Total Size / 10
 
-## Questionnaires
-
-1. Open Ended ( How would you describe this flavor of ice cream? ) 
-2. Close Ended ( Do you think this ice cream is too rich in flavor? )
-3. Multiple Choice 
-4. Checklist
-5. Ranking 
-6. Short Answer 
-7. Scale
-
-Misc: <br>
-- Double Barreled Question : How have teachers and students reacted to the new 30min lunch break? <br>
-- Leading Question : Do you think the new cafeteria lunch menu offers a better variety of healthy foods than the old one?<br>
-- Minimum Number of Respondents is Total Size / 10<br>
-
+---
