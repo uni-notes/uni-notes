@@ -63,54 +63,18 @@ Surface Finish : The amount of geometric irregularities produced on the surface 
 
 ## Ch4 Material Removal Process:
 
-- Mechanism of Material Removal:  
-- Depth of Cut  
-- Feed - By how much distance the cutting tool must advance for each revolution of work.  
-- Cutting Speed 
-- Cutting Speed : The speed at which the workpiece moves with respect to the tool.  
-S = Pi * D(mm) * N / 1000 
-- Depth of Cut: D1-D2/2  
-- Roughing Operation : A large chunk to be removed without considering perfection.  
-- Finishing Operation : Only a small portion is removed keeping final touches in mind.
-- MRR : 1000 * V * d * f  
-- Turning : Excess material is removed by giving a depth of cut to its diameter.  
-- Facing : Used to cut a flat surface perpendicular to the work peice's rotational axis. It is used to reduce the length of the workpiece. The length the workpiece travels is called the radius of the job. The depth of the cut is along the axis of the job.  
-- Knurling : To produce regular patterns on the surface of metals. It is the process of pressing the metal hard enough to cause plastic deformation of metal into peaks and troughs. Low cutting speed and feed can be used w/ plenty of coolant. MRR is very low.  
-- Grooving : Narrow grooves on Cylindrical Shapes, the diameter of the surface is slightly reduced. Cutting speed is slow. Depth of cut is given but no feed.  
-- Parting : It is the operation of cutting a workpiece into 2 parts. The workpiece is rotated at a slow speed and the parting tool is fed perpendicular. NOTE : If a slow feed is used it wil run for 2-3 revolutions without cutting and will suddenly bite the machine, this is undesired and is called hogging.  
-- Chamferigng : It is the operation of bevelling (smoothening) the sharp edges of a workpiece to avoid an injuries. It is used at an angle of 45degs.
 
----
-```mermaid
-graph TD;
-    A[Mechanism of Material Removal]-->B[Depth of Cut];
-    A-->C[Feed];
-    A-->D[Cutting Speed];
-    D-->E[S = Pi * D(mm) * N / 1000];
-    B-->F[D1-D2/2];
-    A-->G[Roughing Operation];
-    A-->H[Finishing Operation];
-    A-->I[MRR : 1000 * V * d * f];
-    A-->J[Turning];
-    A-->K[Facing];
-    K-->L[Reduce length];
-    K-->M[Depth along axis];
-    A-->N[Knurling];
-    N-->O[Plastic deformation of metal];
-    N-->P[Low cutting speed];
-    N-->Q[Low feed];
-    N-->R[MRR is very low];
-    A-->S[Grooving];
-    S-->T[Narrow grooves];
-    S-->U[Diameter slightly reduced];
-    S-->V[Slow cutting speed];
-    S-->W[Given depth of cut];
-    A-->X[Parting];
-    X-->Y[Workpiece into 2 parts];
-    X-->Z[Slow rotation];
-    X-->AA[Perpendicular feed];
-    AA-->AB[Undesired hogging];
-    A-->AC[Chamfering];
-    AC-->AD[Bevelling of sharp edges];
-    AC-->AE[Angle of 45degs];
-```
+| Mechanism of Material Removal | Description |
+| --- | --- |
+| Depth of Cut | D1-D2/2 |
+| Feed | By how much distance the cutting tool must advance for each revolution of work |
+| Cutting Speed | The speed at which the workpiece moves with respect to the tool. S = Pi * D(mm) * N / 1000 |
+| Roughing Operation | A large chunk to be removed without considering perfection |
+| Finishing Operation | Only a small portion is removed keeping final touches in mind |
+| MRR | 1000 * V * d * f |
+| Turning | Excess material is removed by giving a depth of cut to its diameter |
+| Facing | Used to cut a flat surface perpendicular to the work piece's rotational axis. It is used to reduce the length of the workpiece. The length the workpiece travels is called the radius of the job. The depth of the cut is along the axis of the job |
+| Knurling | To produce regular patterns on the surface of metals. It is the process of pressing the metal hard enough to cause plastic deformation of metal into peaks and troughs. Low cutting speed and feed can be used w/ plenty of coolant. MRR is very low |
+| Grooving | Narrow grooves on Cylindrical Shapes, the diameter of the surface is slightly reduced. Cutting speed is slow. Depth of cut is given but no feed |
+| Parting | It is the operation of cutting a workpiece into 2 parts. The workpiece is rotated at a slow speed and the parting tool is fed perpendicular. NOTE: If a slow feed is used it will run for 2-3 revolutions without cutting and will suddenly bite the machine, this is undesired and is called hogging |
+| Chamfering | It is the operation of beveling (smoothening) the sharp edges of a workpiece to avoid injuries. It is used at an angle of 45 degrees |
