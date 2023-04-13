@@ -7,7 +7,7 @@ You can install right now, by clicking `Add to Home Screen`. Check out the [📱
 ## ℹ️ Tips
 
 - Use the navbar ⬅️ to go through the website
-- For changes/corrections, click the edit button (pen icon) at the top of any page
+- For changes/corrections, click the edit button 📝 at the top of any page
 - Want to join the initiative? Collaborators will be mentioned for their contributions!
 
 ## ✨ Contributions
