@@ -1,6 +1,6 @@
 # Lab
 
-Here is the demonstration of every experiment in the biology lab. As of now I have only uploaded ti
+Here is the demonstration of every experiment in the biology lab. As of now I have only uploaded till midsem. 
 
 01 - <a href = "https://drive.google.com/drive/folders/1Z7wlOIcGp-cqL0ASnW0jcQIhnWii4xrf"> Microscopy </a><br>
 02 - <a href = "https://drive.google.com/file/d/1eNVGL-979OXRL4OTNNF6Aw2GX2n6l6I-/view?usp=drivesdk"> Isolation of Stomata</a><br>
