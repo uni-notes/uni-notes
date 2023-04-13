@@ -1,3 +1,5 @@
+## Types
+
 - `while`
     - Entry-controlled loop
 - `do...while`
