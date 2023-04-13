@@ -2,24 +2,89 @@
 
 {% block extrahead %}
 <link rel="manifest" href="{{ 'manifest.json' | url }}">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 {% endblock %}
 
 {% block header %}
   {{super()}}
   <script>
-    if (navigator.share) { 
-        let btn = document.createElement("button");
-        btn.innerHTML = '{% include ".icons/material/share-variant.svg" %}';
-        btn.classList.add("md-header__button", "md-icon","twemoji");
-        var title = document.getElementsByClassName("md-header__inner")[0];
-        title.insertBefore(btn, document.getElementsByClassName("md-header__option")[0]);
+    function selectText(nodeId) {
+        const node = document.getElementById(nodeId);
 
-        btn.addEventListener('click', event => {
-            navigator.share({
-                title: document.title,
-                url: window.location.href
-            });
-        });
+        if (document.body.createTextRange) {
+            const range = document.body.createTextRange();
+            range.moveToElementText(node);
+            range.select();
+        } else if (window.getSelection) {
+            const selection = window.getSelection();
+            const range = document.createRange();
+            range.selectNodeContents(node);
+            selection.removeAllRanges();
+            selection.addRange(range);
+        } else {
+            console.warn("Could not select text in node: Unsupported browser.");
+        }
     }
+
+    let btn = document.createElement("button");
+    btn.innerHTML = '{% include ".icons/material/share-variant.svg" %}';
+    btn.classList.add("md-header__button", "md-icon","twemoji");
+    var title = document.getElementsByClassName("md-header__inner")[0];
+    title.insertBefore(btn, document.getElementsByClassName("md-header__option")[0]);
+
+    btn.addEventListener('click', event => {
+        var title = document.title;
+        var url = window.location.href;
+
+        if (navigator.share) { 
+          navigator.share({
+              title: title,
+              url: url
+          });
+        }
+        else{
+          Swal.fire({
+            title: 'Share '+title,
+            html:
+              `<div class="targets">
+                <a class="button" href="https://www.facebook.com/sharer.php?u=`+url+`">
+                  <span class="twemoji">
+                    {% include ".icons/material/facebook.svg" %} 
+                  </span>
+                  <span>Facebook</span>
+                </a>
+                
+                <a class="button" href="https://twitter.com/intent/tweet?url=`+url+`">
+                  <span class="twemoji">
+                    {% include ".icons/material/twitter.svg" %} 
+                  </span>
+                  <span>Twitter</span>
+                </a>
+                
+                <a class="button" href="https://www.linkedin.com/sharing/share-offsite/?url=`+url+`">
+                  <span class="twemoji">
+                    {% include ".icons/material/linkedin.svg" %} 
+                  </span>
+                  <span>LinkedIn</span>
+                </a>
+                
+                <a class="button" href="mailto:?body=`+url+`">
+                  <span class="twemoji">
+                    {% include ".icons/material/email.svg" %} 
+                  </span>
+                  <span>Email</span>
+                </a>
+              </div>
+              <div class="link">
+                <div class="pen-url" id="urltext">`+url+`</div>
+                <button class="copy-link" onclick="navigator.clipboard.writeText('`+url+`');selectText('urltext')">Copy Link</button>
+              </div>
+            </div>
+            `,
+            showCloseButton: true,
+            showConfirmButton: false
+          });
+        } 
+    });
   </script>
 {% endblock %}
