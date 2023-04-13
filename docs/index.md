@@ -20,17 +20,14 @@ A big thank you to all contributors, as this initiative would not be possible wi
 
 ## Installation Guide
 
-|  Platform   |    Browser     |  ➡   | Installation Step                                            |
-| :---------: | :------------: | :--: | :----------------------------------------------------------- |
-| **Android** |     Chrome     |      | - Click the three dots at the top right<br />- Click `Install App` |
-|   **iOS**   |     Safari     |      | - Click share button in the bottom<br />- Click `Add to Home Screen` |
-|             |     Chrome     |      | ❌<br/>😕 I hate this; open the link on Safari                 |
-|             |                |      |                                                              |
-| **Windows** |     Chrome     |      | Click the `+` icon in the address bar                        |
-|             | Microsoft Edge |      | Click the `+` icon in the address bar                        |
-|  **MacOS**  |     Chrome     |      | Click the `+` icon in the address bar                        |
-|             |     Safari     |      | ❌<br/>😕 I hate this; open the link on Chrome                 |
-|  **Linux**  |     Chrome     |      | Click the `+` icon in the address bar                        |
+|      Platform      | Installation Step                                            |
+| :----------------- | :----------------------------------------------------------- |
+| **Android** Chrome | - Click the three dots at the top right<br />- Click `Install App` |
+|   **iOS** Safari   | - Click share button in the bottom<br />- Click `Add to Home Screen` |
+|   **iOS** Chrome   | ❌<br/>😕 I hate this; open the link on Safari                 |
+|    **Windows**     | Click the `+` icon in the address bar                        |
+|     **MacOS** Chrome     | Click the `+` icon in the address bar                        |
+| **MacOS** Safari | ❌<br/>😕 I hate this; open the link on Chrome                 |
 
 What you’re currently using is a PWA, which dramatically simplifies this entire notes initiative, but is not supported on a few browsers. They are web applications that have been designed to be capable, reliable, and installable with a single codebase.
 
