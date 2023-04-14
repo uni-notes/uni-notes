@@ -25,12 +25,11 @@ Stress and Strain :
 Poisson's Ratio = $\frac{\text{Lateral Strain}}{\text{Longitudinal Stress}}$
 
 Toughness vs Hardness vs Resilience  
-| Property   | Definition                                                                                               | Measurement                                                                |
+| Property | Definition | Measurement |
 |------------|----------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
-| Toughness  | Measure of Energy a material can absorb before it fractures. It is measured by the area under the stress-strain curve. | Area under the stress-strain curve                                          |
-| Hardness   | Property of a surface to resist abrasion or indentation.                                                  | -                                                                         |
-| Resilience | Capacity of a material to absorb energy elastically. Upon removal of the load the energy stored is given off. | Triangular area under the elastic portion of the stress-strain curve.    |
-
+| Toughness | Measure of Energy a material can absorb before it fractures. It is measured by the area under the stress-strain curve. | Area under the stress-strain curve |
+| Hardness | Property of a surface to resist abrasion or indentation. | - |
+| Resilience | Capacity of a material to absorb energy elastically. Upon removal of the load the energy stored is given off. | Triangular area under the elastic portion of the stress-strain curve. |
 
 Creep vs Fatigue :
 
@@ -77,4 +76,4 @@ Surface Finish : The amount of geometric irregularities produced on the surface 
 | Knurling | To produce regular patterns on the surface of metals. It is the process of pressing the metal hard enough to cause plastic deformation of metal into peaks and troughs. Low cutting speed and feed can be used w/ plenty of coolant. MRR is very low.|
 | Grooving | Narrow grooves on Cylindrical Shapes, the diameter of the surface is slightly reduced. Cutting speed is slow. Depth of cut is given but no feed.|
 | Parting | It is the operation of cutting a workpiece into 2 parts. The workpiece is rotated at a slow speed and the parting tool is fed perpendicular. NOTE: If a slow feed is used it will run for 2-3 revolutions without cutting and will suddenly bite the machine, this is undesired and is called hogging.|
-| Chamfering | It is the operation of beveling (smoothening) the sharp edges of a workpiece to avoid injuries. It is used at an angle of 45 degrees. |
+| Chamfering | It is the operation of beveling (smoothening) the sharp edges of a workpiece to avoid injuries. It is used at an angle of 45 degrees.|

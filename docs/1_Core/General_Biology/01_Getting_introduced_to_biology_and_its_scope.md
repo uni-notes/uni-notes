@@ -1,5 +1,5 @@
 Steps in biology to conclude a statement: Observation, Question, Hypothesis, Prediction, Experiment. If the experiment does not support hypothesis then make a new one. If it supports hypothesis, make new predictions. 
-### Mnemonic for remembering: [OQHPE]
+#### Mnemonic for remembering: [OQHPE]
 1. **O**bservation
 2. **Q**uestion
 3. **H**ypothesis
@@ -8,7 +8,7 @@ Steps in biology to conclude a statement: Observation, Question, Hypothesis, Pre
 
 
 Major life charecteristics: Order, Regulation, Growth and Development, Energy Processing, Response to Environment, Reproduction, Evolution. 
-### Mnemonic for remembering: [ORGERRE]
+#### Mnemonic for remembering: [ORGERRE]
 1. **O**rder
 2. **R**egulation
 3. **G**rowth and Development
@@ -18,7 +18,7 @@ Major life charecteristics: Order, Regulation, Growth and Development, Energy Pr
 7. **E**volution
 
 Major themes in biology : Energy Processsing, Structure and Function, Information Flow, Evolution, Interconnection to other systems. (Pnemonic : ESIEI)
-### Mnemonic for remembering: [ESIEI]
+#### Mnemonic for remembering: [ESIEI]
 1. **E**nergy Processing
 2. **S**tructure and Function
 3. **I**nformation Flow
