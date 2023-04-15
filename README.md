@@ -11,6 +11,14 @@ This is a PWA using Mkdocs material theme
 - Using katex instead of mathjax
 - `content-visibility: auto`
 
+## Why PWA?
+
+PWA are applications that have been designed to be capable, reliable, and installable with a single codebase.
+
+Using a PWA in this case allows the contributors of the website and I to ensure legible and understandable content, without worrying about the app development.
+
+For more details, check out Google’s [blog post](https://web.dev/what-are-pwas/)
+
 ## ⚠️ Disclaimers
 
 - **Make sure to give due credit** when sharing these notes, to help support this project :) Publishing this as your own without crediting and using the exact Open Software License 3.0 would be bypassing the license, and demeaning this project.
