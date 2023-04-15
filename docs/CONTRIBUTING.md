@@ -11,22 +11,15 @@ Welcome to our open-source project! We love your input! We want to make contribu
 We appreciate your interest in contributing to our repository. Before you get started, please take a moment to review the guidelines below.
 
 
-## 🚀 Getting Started
+## 🚀 Guidelines
+
 1. Fork the repository and clone it locally.
 2. Create a new branch for your changes.
-3. Make your changes and test them locally.
-4. Submit a pull request (PR) to the `main` branch of the original repository.
-5. Your PR will be reviewed by a moderator. If there are any requested changes, make them and push them to your branch, and your PR will be updated automatically.
-6. Once your changes are approved and merged, you can delete your branch.
-
-
-## 📌 Guidelines
-
-- All notes must be in markdown only. If you're not familiar with markdown, please refer to [this](https://gdscbpdc.github.io/2022-2023/02_Markdown/).
-- All pull requests must address an issue. 
-- Write clear and concise commit messages and pull request descriptions.
-- If you're fixing a bug, please include a test case that demonstrates the bug.
-
+3. Make your changes and test them locally. All notes must be in markdown only. If you're not familiar with markdown, please refer to [this](https://gdscbpdc.github.io/2022-2023/02_Markdown/).
+4. If you're fixing a bug, please include a test case that demonstrates the bug.
+5. Submit a pull request (PR) to the `main` branch of the original repository. All pull requests must address an issue. Write clear and concise commit messages and pull request descriptions.
+6. Your PR will be reviewed by a moderator. If there are any requested changes, make them and push them to your branch, and your PR will be updated automatically.
+7. Once your changes are approved and merged, you can delete your branch.
 
 ## 🤔 Issues and Feature Requests
 
@@ -35,15 +28,15 @@ If you find a bug or have a feature request, please open an issue in the reposit
 
 ## 💡 Additional Tips
 
-1. Use tables over lists whenever possible. This helps in grouping related concepts.
+- Use tables over lists whenever possible. This helps in grouping related concepts.
 
 ![example table](assets/example_table.png)
 
-2. Use mermaid flowcharts to simplify processes, flows, trees. 
+- Use mermaid flowcharts to simplify processes, flows, trees. 
 
 ![example mermaid](assets/example_mermaid.svg)
 
-3. Use LaTeX for mathematical/scientifical expressions. (Blurry images are not cool 😔👎)
+- Use LaTeX for mathematical/scientifical expressions. (Blurry images are not cool 😔👎)
 
 $$
 \int x^2 = \frac{x^3}{3}
