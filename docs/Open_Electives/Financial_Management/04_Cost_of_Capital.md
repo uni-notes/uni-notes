@@ -36,12 +36,13 @@ $$
 
 |  Term  | Meaning                         |            Formula            |
 | :----: | ------------------------------- | :---------------------------: |
-| $w_d$  | Proportion of debt              | $\frac{w_d}{w_d + w_p + w_c}$ |
-| $w_p$  | Proportion of preference shares | $\frac{w_p}{w_d + w_p + w_c}$ |
-| $w_c$  | Proportion of common shares     | $\frac{w_c}{w_d + w_p + w_c}$ |
+| $w_d$  | Proportion of debt              | $\frac{n_d}{n_d + n_p + n_c}$ |
+| $w_p$  | Proportion of preference shares | $\frac{n_p}{n_d + n_p + n_c}$ |
+| $w_c$  | Proportion of common shares     | $\frac{n_c}{n_d + n_p + n_c}$ |
 | $k_d$  | Cost of debt                    |                               |
 | $k_p$  | Cost of preference shares       |                               |
 | $k_c$  | Cost of common shares           |                               |
 | $\tau$ | Tax rate                        |           Available           |
 
 Interest is tax-deductable, hence it gives ‘tax shield’
+

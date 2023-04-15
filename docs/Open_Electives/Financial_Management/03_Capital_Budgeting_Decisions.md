@@ -73,14 +73,18 @@ $$
 | $<1$ | Actual returns < Minimum required return | Reject         |
 | $1$  | Actual returns = Minimum required return | Doesn’t matter |
 
+## Payback Period (Secondary)
+
+- Simplest explanation
+- If you have low DPP, that means the investement is less risky
+
 ## Discounted Payback Period (Secondary)
 
 $$
-\text{DPP} = 
+\text{DPP} =
 $$
 
 ### Disadvantages
 
 - Subjective payback period
 - Only focusing on short-term gains
-
