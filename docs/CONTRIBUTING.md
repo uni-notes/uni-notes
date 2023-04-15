@@ -1,4 +1,4 @@
-# 📝 Contributing to Uni-Notes
+# 📝 Contributing
 
 Welcome to our open-source project! We love your input! We want to make contributing to this project as easy and transparent as possible, whether it's:
 
