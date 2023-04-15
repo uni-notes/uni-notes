@@ -22,9 +22,11 @@ A good estimator $\hat \theta$ is a function whose output is close to the true u
 ## Function Estimation
 
 Estimation of relationship b/w input & target variables, ie predict a variable $y$ given input $x$
+
 $$
 y = \hat y + \epsilon
 $$
+
 where $\epsilon$ is Bayes Error
 
 ## Theories
