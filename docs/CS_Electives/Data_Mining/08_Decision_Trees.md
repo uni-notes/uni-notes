@@ -113,7 +113,7 @@ end
 Binary split will have $2^{k-1} - 1$ combinations of the binary split, where $k=$ no of values. For eg:
 
 ```mermaid
-flowchart TB
+flowchart LR
 
 subgraph 1
 direction TB

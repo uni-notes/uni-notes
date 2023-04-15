@@ -9,14 +9,11 @@ flowchart TB
 f1 --> f2 & f3
 ```
 
-| From   | To     | Direction of jump  | Long jump possible? |
-| ------ | ------ | ------------------ | ------------------- |
-| `f1()` | `f2()` | Higher $\to$ lower | ❌                   |
-| `f1()` | `f3()` | Higher $\to$ lower | ❌                   |
-| `f2()` | `f1()` | Lower $\to$ Higher | ✅                   |
-| `f3()` | `f1()` | Lower $\to$ Higher | ✅                   |
-| `f2()` | `f3()` | Adjacent           | ❌                   |
-| `f3()` | `f2()` | Adjacent           | ❌                   |
+| Direction of jump  | Long jump possible? |
+| ------------------ | ------------------- |
+| Higher $\to$ lower | ❌                   |
+| Lower $\to$ Higher | ✅                   |
+| Adjacent           | ❌                   |
 
 ## Requirements
 

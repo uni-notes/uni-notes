@@ -53,7 +53,7 @@ Computationally-expensive
 #### Steps
 
 ```mermaid
-flowchart TB
+flowchart LR
 s["Start with small sample (100-1000)"] -->
 a[Apply data mining algorithm] -->
 e[Evaluate results] -->|Increase Sample Size| s
@@ -91,7 +91,7 @@ Singular Value Decomposition
 ## Feature Selection
 
 ```mermaid
-flowchart TB
+flowchart LR
 
 Attributes -->
 ss[Search Strategy] -->

@@ -49,7 +49,7 @@ DPDA means DFA + Stack
 | Pop 0<br />(Pop 0, Push $\epsilon$)  | $0 \to \epsilon$ |
 
 ```mermaid
-flowchart TB
+flowchart LR
 q0((q0)) -->|"input, push &rarr; pop"| q1((q1))
 ```
 
@@ -112,7 +112,7 @@ Initialize stack as ==$==
 As pushing strings instead of a symbol into stack is not possible, we can use another approach, as both are equivalent.
 
 ```mermaid
-flowchart TB
+flowchart LR
 subgraph B
 	direction LR
 	p0((q0)) -->

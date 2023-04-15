@@ -109,7 +109,7 @@ Also called as Sink/Trap state
 In the following diagram, `b` is the deadstate
 
 ```mermaid
-flowchart TB
+flowchart LR
 a -->|0| b
 a -->|1| c
 
@@ -130,8 +130,8 @@ class b dead
 $$
 \begin{aligned}
 L& \implies
-M = ( Q, Σ, δ, q_0, F ) \\L'& \implies
-M' = ( Q, Σ, δ, q_0, Q-F ) \\
+M = ( Q, Σ, δ, q_0, F ) \\
+L'& \implies M' = ( Q, Σ, δ, q_0, Q-F )
 \end{aligned}
 $$
 

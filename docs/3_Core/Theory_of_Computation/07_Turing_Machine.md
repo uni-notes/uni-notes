@@ -98,7 +98,7 @@ Hence, the turing machine may not halt for this problem.
 ### $0^n 1^n, n \ge 1$
 
 ```mermaid
-flowchart TB
+flowchart LR
 
 subgraph Only X
 direction LR

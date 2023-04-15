@@ -16,24 +16,22 @@
 | Heat Pump     | - maintain warm temp<br />- Reverse HE | $\begin{aligned} \text{COP}_{HP} &= \frac{Q_\text{H}}{W_\text{net, in}} \\ &= \frac{1}{ 1 - \frac{Q_\text{L}}{Q_\text{H}} } \end{aligned}$ | $\begin{aligned} \text{COP}_{HP} &= \text{COP}_{R} + 1 \\ \text{COP}_{HP} &> \text{COP}_{R} \end{aligned}$ |                                                              |
 
 ```mermaid
-flowchart TB
+flowchart LR
 
 subgraph Heat Engine
-
+direction LR
 a([Warm]) -->
 |Q<sub>H</sub>| b[System] -->
 |Q<sub>L</sub>| c([Cool])
 
 b --> |W<sub>net</sub>| d[ ]
-
 end
 
 subgraph Refridgerator/Heat Pump
-
+direction LR
 r([Cool]) -->
 |Q<sub>L</sub>| q[System] -->
 |Q<sub>H</sub>| p([Warm])
-
 s[ ] --> |W<sub>net</sub>| q
 end
 ```

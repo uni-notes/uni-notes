@@ -124,7 +124,7 @@ eg: 1001 sequence detector
 ### Moore non-overlapping
 
 ```mermaid
-flowchart TB
+flowchart LR
 0((s0/0))
 1((s1/0))
 
@@ -144,7 +144,7 @@ flowchart TB
 ### Moore Overlapping
 
 ```mermaid
-flowchart TB
+flowchart LR
 0((s0/0))
 1((s1/0))
 
@@ -163,7 +163,7 @@ flowchart TB
 ### Mealy non-overlapping
 
 ```mermaid
-flowchart
+flowchart LR
 0((s0))
 1((s1))
 2((s2))
@@ -180,7 +180,7 @@ flowchart
 ### Mealy Overlapping
 
 ```mermaid
-flowchart
+flowchart LR
 0((s0))
 1((s1))
 2((s2))

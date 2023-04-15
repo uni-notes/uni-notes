@@ -51,7 +51,7 @@ L1 cache can be located on CPU Chip
 ### Cache Operation
 
 ```mermaid
-flowchart TB
+flowchart LR
 
 start((Start)) -->
 1[Retries RA from CPU] -->

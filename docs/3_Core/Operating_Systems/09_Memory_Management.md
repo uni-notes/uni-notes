@@ -19,8 +19,6 @@
 | Contiguous     | ✅                                              |
 | Non-contiguous | ❌                                              |
 
-## Contiguous
-
 ```mermaid
 flowchart TB
 

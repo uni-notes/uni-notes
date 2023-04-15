@@ -87,7 +87,7 @@ $$
 for ARIMA Model Building
 
 ```mermaid
-flowchart TB
+flowchart LR
 im[Identify Model] -->
 ep[Estimate Paramaters] -->
 d -->

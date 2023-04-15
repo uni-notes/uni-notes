@@ -534,7 +534,7 @@ Refer to data mining distances
 ==Different from re-inforcement learning==
 
 ```mermaid
-flowchart TB
+flowchart LR
 np[New Problem] -->
 rc[Retrieved Cases]
 ```

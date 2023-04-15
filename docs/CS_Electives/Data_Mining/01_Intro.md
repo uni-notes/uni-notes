@@ -11,7 +11,7 @@ Generate Decision Support Systems
 Knowledge Discovering from Databases
 
 ```mermaid
-flowchart TB
+flowchart LR
 
 id[Input Data] -->
 |Collect & Merge Data| Preprocessing -->
