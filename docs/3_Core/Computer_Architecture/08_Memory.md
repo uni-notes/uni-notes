@@ -133,7 +133,7 @@ Take from slides
 
 ### Writing to Cache
 
-[LRU Replacement](#LRU Replacement)
+[LRU Replacement](#LRU-Replacement)
 
 ✅ No calculation happens, so it is efficient and faster
 
@@ -147,7 +147,7 @@ Take from slides
 
 ## Set Associative Cache
 
-Combination of [Direct Mapped Cache](#Direct Mapped Cache) and [Fully-Associative Cache](#Fully-Associative Cache)
+Combination of [Direct Mapped Cache](#Direct-Mapped-Cache) and [Fully-Associative Cache](#Fully-Associative-Cache)
 
 Particular block address is mapped to a particular set
 
@@ -170,8 +170,8 @@ $$
 
 **Note**
 
-- [Direct Mapped Cache](#Direct Mapped Cache) is basically one-way associative caching
-- [Fully-Associative Cache](#Fully-Associative Cache) is basically associative caching with no of sets = total no of blocks
+- [Direct Mapped Cache](#Direct-Mapped-Cache) is basically one-way associative caching
+- [Fully-Associative Cache](#Fully-Associative-Cache) is basically associative caching with no of sets = total no of blocks
 
 ## Write
 

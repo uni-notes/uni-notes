@@ -35,7 +35,7 @@ Y &= \text{List of } y \text{ coordinates}
 \end{aligned}
 $$
 
-4. Repeat steps 2-3 until [convergence criterion](#convergence criterion) is satisfied
+4. Repeat steps 2-3 until [convergence criterion](#convergence-criterion) is satisfied
 
 5. Stop
 

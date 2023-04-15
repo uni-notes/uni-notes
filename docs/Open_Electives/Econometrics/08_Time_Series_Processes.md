@@ -315,9 +315,9 @@ Volatility increases over time
 - Mean varies over time
 - Variance varies over time
 
-It is a [Long memory series](#Long memory series)
+It is a [Long memory series](#Long-memory-series)
 
-Similar to [Random Walk w/o drift](#Random Walk w/o drift), but has  $\beta_0$ as well
+Similar to [Random Walk w/o drift](#Random-Walk-w/o-drift), but has  $\beta_0$ as well
 
 $$
 \begin{aligned}

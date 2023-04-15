@@ -166,7 +166,7 @@ Similar to instruction pointer of x86
 1. An interrupt that occurs in between an instruction can only happen after fetch, decode, execute, write-back of that instruction is first complete.
 2. When interrupt occurs, we need to push the following values into stack
 
-     - [PC](#Program Counter) so that we can return to the same point after finishing the interrupt
+     - [PC](#Program-Counter) so that we can return to the same point after finishing the interrupt
 
      - CPU state
      Contents of all CPU and flag registers

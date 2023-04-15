@@ -153,7 +153,7 @@ Some designers think it is necessary, others argue otherwise
 
 Process/Task Control Block
 
-It stores the [Context of a Process](#Context of a Process)
+It stores the [Context of a Process](#Context-of-a-Process)
 
 Whenever CPU requires details on any process, it will refer to PCB
 

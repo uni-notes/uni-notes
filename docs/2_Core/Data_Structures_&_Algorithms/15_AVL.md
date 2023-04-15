@@ -11,7 +11,7 @@ Leaves are always balanced, as they have a balanced factor of 0.
 
 ## Balanced Tree
 
-Tree with [balanced factor](#balanced factor) $\{ -1, 0, +1 \}$
+Tree with [balanced factor](#balanced-factor) $\{ -1, 0, +1 \}$
 
 ## Unbalanced $\overset{\text{rotation}}{\longrightarrow}$ Balanced
 

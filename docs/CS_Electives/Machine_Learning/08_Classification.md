@@ -172,11 +172,11 @@ S_B =
 (\mu_1 - \mu_2)^T
 $$
 
-3. Find [Eigen Value](#Eigen Value)
+3. Find [Eigen Value](#Eigen-Value)
 
-4. Find [Eigen Vector](#Eigen Vector)
+4. Find [Eigen Vector](#Eigen-Vector)
 
-5. Generate LDA Projection [Normalized Eigen Vector](#Normalized Eigen Vector)
+5. Generate LDA Projection [Normalized Eigen Vector](#Normalized-Eigen-Vector)
 
 6. Generate LDA score (projected value) in reduced dimensions
    

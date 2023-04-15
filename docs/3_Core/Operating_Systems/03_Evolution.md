@@ -191,7 +191,7 @@ Time between starting of execution of a program and its completion
      - Allocate the CPU
      - Hardware interrupt to display on screen
 2. Important activities/functions done by OS
-     - [Functions of OS](#Functions of OS)
+     - [Functions of OS](#Functions-of-OS)
 3. Suppose a computer system has 10000 bytes of memory available. Out of this, the OS occupies 5000bytes. Now it is required to run a program whose size is 7000bytes. Is this possible?
      - No, it is not possible in basic computers
      - Every program has to be loaded into primary memory for its execution

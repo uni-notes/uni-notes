@@ -32,7 +32,7 @@ flowchart TB
 
 ## Compressed
 
-Stored using [compact representation](#compact representation)
+Stored using [compact representation](#compact-representation)
 
 ```mermaid
 flowchart TB

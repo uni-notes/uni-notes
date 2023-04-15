@@ -68,7 +68,7 @@ is a tradeable asset that gives you claim over something.
 | Liability                           | Unlimited                          | Unlimited                          | Limited to investment of investor                         |
 | Ease for transfer of ownership      | Difficult                          | Difficult                          | Easy                                                      |
 | Ownership separate from Management  | ❌                                  | ❌                                  | ✅                                                         |
-| [Agency Problems](#Agency Problems) | ❌                                  | ❌                                  | ✅                                                         |
+| [Agency Problems](#Agency-Problems) | ❌                                  | ❌                                  | ✅                                                         |
 | Taxation                            | Single*                            | Single*                            | Double                                                    |
 
 *Taxed only once as personal income (corporate tax is higher than personal)

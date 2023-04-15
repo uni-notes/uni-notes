@@ -48,7 +48,7 @@ But rarely used in practice with deep learning, as
 
 ### Probably Approximately Correct
 
-[SLT](#Statistical Learning Theory) contradicts basic principles of logic, as according to logic
+[SLT](#Statistical-Learning-Theory) contradicts basic principles of logic, as according to logic
 
 > To infer a rule describing every member of a set, one
 > must have information about every member of the set
@@ -57,7 +57,7 @@ ML avoids this problem with probabilistic rules, by finding rules that are proba
 
 ### No-Free Lunch
 
-[PAC](#Probably Approximately Correct) does not entirely resolve contradiction of logic.
+[PAC](#Probably-Approximately-Correct) does not entirely resolve contradiction of logic.
 
 No free lunch theorem states
 

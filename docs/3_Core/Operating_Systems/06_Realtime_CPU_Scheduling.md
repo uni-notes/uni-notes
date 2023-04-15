@@ -52,7 +52,7 @@ CPU utilization is not always 100%. It is bounded to a limit, based on number of
 | :-------------------------: | :----------------------------------------------------------: | :--------------: |
 |            $> 1$            |                              ❌                               |        ❌         |
 |     $\le U_\text{max}$      |                              ✅                               |        ✅         |
-| $U_\max < U_\text{tot} < 1$ | Inconclusive<br />(Draw [Realtime Scheduling Gantt Chart](#Realtime Scheduling Gantt Chart)) |        ✅         |
+| $U_\max < U_\text{tot} < 1$ | Inconclusive<br />(Draw [Realtime Scheduling Gantt Chart](#Realtime-Scheduling-Gantt-Chart)) |        ✅         |
 
 ## Testing Methods
 

@@ -30,7 +30,7 @@ Decisions taken in order to maximize self-interest and happiness.
 
 ## Banking
 
-Central bank regulates interest rates through [rapport rate](#rapport rate).
+Central bank regulates interest rates through [rapport rate](#rapport-rate).
 
 In order to increase interest rate, (i think this missing part is central bank would increase rapport rate)
 

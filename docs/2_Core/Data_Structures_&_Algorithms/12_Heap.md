@@ -77,7 +77,7 @@ void maxHeapify(int[] a, int n, int i)
 
 1. [Heap Sort](07_Sorting.md#Heap Sort)
 2. Order Statistics
-3. [Priority Queue](#Priority Queue)
+3. [Priority Queue](#Priority-Queue)
 
 ## Priority Queue
 

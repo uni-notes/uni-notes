@@ -50,7 +50,7 @@ By changing index and re-arranging terms, we have to make the following equal
 
 ## 2nd Order
 
-Power series solution is only possible if $x = 0$ is an [ordinary point](#ordinary point) of the DE.
+Power series solution is only possible if $x = 0$ is an [ordinary point](#ordinary-point) of the DE.
 
 ## Types of Points
 

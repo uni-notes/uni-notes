@@ -10,7 +10,7 @@ $$
 
 2. Now, $y$ is a function of $z$, which in turn is a function of $x$
 
-3. Put the following substitutions; Refer to [Custom Operators](#Custom Operators)
+3. Put the following substitutions; Refer to [Custom Operators](#Custom-Operators)
    
 $$
 \begin{aligned}

@@ -27,7 +27,7 @@ $$
 
 ### ❌ Limitation
 
-MP neuron can be used to represent [linearly-separable functions](#Linearly-Separable Function)
+MP neuron can be used to represent [linearly-separable functions](#Linearly-Separable-Function)
 
 ## Perceptron
 

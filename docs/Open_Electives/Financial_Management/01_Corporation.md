@@ -51,7 +51,7 @@ Double Taxation
 - Dividend tax
 - Capital gains tax
 
-Refer [Clientele Effect](#Clientele Effect)
+Refer [Clientele Effect](#Clientele-Effect)
 
 ## Claim on Assets
 

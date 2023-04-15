@@ -19,7 +19,7 @@ Otherwise, if the process tries to access a page that is marked invalid, this me
 
 - software interrupt (trap) is created
 - bring in required page from secondary memory
-- Store into free frame/[Page Replacement](#Page Replacement)
+- Store into free frame/[Page Replacement](#Page-Replacement)
 - Reset page table
 - Restart execution
 
@@ -31,7 +31,7 @@ If there are no free frames, we need to replace the frame in a manner that would
 
 ### Algorithms
 
-| Algo                      | Replace frame that is                 | Avoids [Bélády's Anomaly](#Bélády's Anomaly) |
+| Algo                      | Replace frame that is                 | Avoids [Bélády's Anomaly](#Bélády's-Anomaly) |
 | ------------------------- | ------------------------------------- | :------------------------------------------: |
 | FIFO (First in First out) | oldest                                |                      ❌                       |
 | Optimal                   | least likely to be used in the future |                      ✅                       |

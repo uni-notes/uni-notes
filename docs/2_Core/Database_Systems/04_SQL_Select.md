@@ -367,7 +367,7 @@ from students;
 
 Temporary [view](#views), which you only need once.
 
-Useful when you need just an extra column, and for [Recursive CTE](#Recursive CTE).
+Useful when you need just an extra column, and for [Recursive CTE](#Recursive-CTE).
 
 ```mysql
 with table_with_dpr as

@@ -84,7 +84,7 @@ Conflicts that occur when simultaneous transactions occur.
 | Problem           | Description                                                  | Solution                                                     |
 | ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Blind Write       |                                                              |                                                              |
-| Dirty-read        | uncommited transactions are read                             | - [Serial Scheduling](#Serial Scheduling)<br />- values should be stored only after committing |
+| Dirty-read        | uncommited transactions are read                             | - [Serial Scheduling](#Serial-Scheduling)<br />- values should be stored only after committing |
 | Unrepeatable read | multiple reads of the same parameter without a commit        |                                                              |
 | Lost Update       | a later write committed first is preferred over the first write committed second, when multiple writes occur simultaneously | Nothing really, just how it works                            |
 | Phantom Read      | - transaction 1 reads<br />- some other transaction deletes<br />- transaction 1 tries reading, but can’t find |                                                              |

@@ -91,7 +91,7 @@ Let’s say that, height of wife is a function of height of husband, but vice-ve
 
 ## Econometric Model
 
-Similar to [Mathematical Model](#Mathematical Model), but understands that relationships are not perfect. There will remain some change unexplained by our mathematical model.
+Similar to [Mathematical Model](#Mathematical-Model), but understands that relationships are not perfect. There will remain some change unexplained by our mathematical model.
 
 The real world is complex and continuously changing, but human knowledge is limited.
 

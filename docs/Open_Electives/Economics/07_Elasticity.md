@@ -242,7 +242,7 @@ draw geogebra graph
 
 ![pointElasticity](img/pointElasticity.png){ loading=lazy }
 
-This is due to [Point Elasticity](#Point Elasticity)
+This is due to [Point Elasticity](#Point-Elasticity)
 
 eg: if price of car goes from 100k to 50k, so many *more* people will buy
 but if price of car goes from 10k to 5k, not that many *more* people will buy

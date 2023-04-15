@@ -40,7 +40,7 @@ Consider $r: A \to y$, where
 
 | Number of rules triggered | Rules have same class label | Steps                                                        |
 | ------------------------- | :-------------------------: | ------------------------------------------------------------ |
-| 0                         |             N/A             | Add [default rule](#default rule)<br />Fallback to [default class](#default class) |
+| 0                         |             N/A             | Add [default rule](#default-rule)<br />Fallback to [default class](#default-class) |
 | 1                         |             N/A             | Assign consequent of rule as class label of test record      |
 | Multiple                  |              ✅              | Assign consequent of rules as class label of test record     |
 | Multiple                  |              ❌              | - Use the highest-priority ordered rule (computationally-expensive for training)<br />or<br />- Use majority voting scheme using unordered rules<br />(computationally-expensive for testing) |

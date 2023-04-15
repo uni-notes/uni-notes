@@ -109,7 +109,7 @@ We can control the fitting of a model, by changing hypothesis space, and hence c
 
 ![image-20230401140853876](assets/image-20230401140853876.png)
 
-The capacity of a model increases with increased [degree of polynomial](#degree of polynomial)
+The capacity of a model increases with increased [degree of polynomial](#degree-of-polynomial)
 
 ## Techniques to address fitting
 

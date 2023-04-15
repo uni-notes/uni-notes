@@ -44,7 +44,7 @@ is used for orderly execution of cooperating processes that share a logical addr
 
 | `counter` Value | __ is Blocked | because buffer is                                    | Problem                       |
 | --------------- | ------------- | ---------------------------------------------------- | ----------------------------- |
-| $= 0$           | Consumer      | empty                                                | [Busy Waiting](#Busy Waiting) |
+| $= 0$           | Consumer      | empty                                                | [Busy Waiting](#Busy-Waiting) |
 | Buffer_Size     | Producer      | full<br />(buffer content has not yet been consumed) |                               |
 
 ## Interlocked/Interleaved Schedule
@@ -272,7 +272,7 @@ Use 3 semaphores
 | Full                                | Keep track of full buffers                       | 0             | `signal()`                  | Buffer empty                           |                                | Buffer full  |
 | Mutex<br />**Mut**ual-**ex**clusion | Ensures exclusive access to buffer pool (binary) |               |                             | Access to buffer pool **not** possible | Access to buffer pool possible | N/A          |
 
-This solution prevents [Busy Waiting](#Busy Waiting)
+This solution prevents [Busy Waiting](#Busy-Waiting)
 
 ### Producer process
 

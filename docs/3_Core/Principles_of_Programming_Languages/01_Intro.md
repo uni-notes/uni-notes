@@ -33,7 +33,7 @@ We should try to generalize a programming language, to ensure compatibility.
 
 ### Why do we usually use imperative languages?
 
-As we mainly use von [Neumann machines](#von Neumann Architecture), which is the class of stored program digital computer.
+As we mainly use von [Neumann machines](#von-Neumann-Architecture), which is the class of stored program digital computer.
 
 Imperative languages give control over moving data and program instructions between registers in CPU and Memory location
 

@@ -105,7 +105,7 @@ This is
 | ------------ | ------------------------------------------------------------ | ----------------------------------- |
 | Error of     | Rejecting correct null hypothesis                            | Accepting incorrect null hypothesis |
 | Meaning      | False Negative                                               | False Positive                      |
-| Measured by  | $\alpha$<br />([Level of Significance](#Level of Significance)) |                                     |
+| Measured by  | $\alpha$<br />([Level of Significance](#Level-of-Significance)) |                                     |
 | Happens when | Sample is not a good representation of population            |                                     |
 
 ## Statistical Equivalence

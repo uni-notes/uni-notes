@@ -45,7 +45,7 @@ Connected to [$\bar E$](#$\bar E$)
 
 Data Transmit/Receive
 
-Controls the direction of data transfer from/to data transceivers, such as [Bi-Directional Buffer](#Bi-Directional Buffer).
+Controls the direction of data transfer from/to data transceivers, such as [Bi-Directional Buffer](#Bi-Directional-Buffer).
 
 When high, data transmitted by processor
 
