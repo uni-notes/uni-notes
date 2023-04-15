@@ -26,9 +26,3 @@ Want to join the initiative? Check out the [guidelines](CONTRIBUTING.md) and sta
 |    **Windows**     | Click the `+` icon in the address bar                        |
 |     **MacOS** Chrome     | Click the `+` icon in the address bar                        |
 | **MacOS** Safari | ❌<br/>😕 I hate this; open the link on Chrome                 |
-
-What you’re currently using is a PWA, which dramatically simplifies this entire notes initiative, but is not supported on a few browsers. They are web applications that have been designed to be capable, reliable, and installable with a single codebase.
-
-Using a PWA in this case allows the contributors of the website and I to ensure legible and understandable content, without worrying about the app development.
-
-For more details, check out Google’s [blog post](https://web.dev/what-are-pwas/)
