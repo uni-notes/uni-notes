@@ -37,7 +37,7 @@ If you find a bug or have a feature request, please open an issue in the reposit
 
 1. Use tables over lists whenever possible. This helps in grouping related concepts.
 
-![example table](example_table.png)
+![example table](assets/example_table.png)
 
 2. Use mermaid flowcharts to simplify processes, flows, trees. 
 
