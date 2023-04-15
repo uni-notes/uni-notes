@@ -17,7 +17,7 @@ You can install right now, by clicking `Add to Home Screen`. Check out the [📱
 
 A big thank you to all contributors, as this initiative would not be possible without their support! You can check out the progress of the project [here](https://github.com/orgs/uni-notes/projects/1).
 
-Want to join the initiative? Collaborators will be mentioned for their contributions!
+Want to join the initiative? Check out the [guidelines](CONTRIBUTING.md) and start contributing now! Collaborators will be mentioned for their contributions. 
 
 ## Installation Guide
 
