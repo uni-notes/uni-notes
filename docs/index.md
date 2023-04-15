@@ -15,7 +15,9 @@ You can install right now, by clicking `Add to Home Screen`. Check out the [📱
   <img src="https://contrib.rocks/image?repo=uni-notes/uni-notes" loading="lazy" />
 </a>
 
-A big thank you to all contributors, as this initiative would not be possible without their support! You can check out the progress of the project [here](https://github.com/orgs/uni-notes/projects/1). Want to join the initiative? Collaborators will be mentioned for their contributions!
+A big thank you to all contributors, as this initiative would not be possible without their support! You can check out the progress of the project [here](https://github.com/orgs/uni-notes/projects/1).
+
+Want to join the initiative? Collaborators will be mentioned for their contributions!
 
 ## Installation Guide
 
