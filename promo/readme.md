@@ -1,5 +1,5 @@
 # Promo
 
-![Mail](mail.png)
+![Mail](Mail.png)
 
-![Social Media Post](social_media.png)
+![Social Media Post](Social_Media.png)
