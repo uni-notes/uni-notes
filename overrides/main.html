@@ -2,19 +2,17 @@
 
 {% block extrahead %}
 <link rel="manifest" href="{{ 'manifest.json' | url }}">
-
-<script>
-  if (! navigator.share) { // API not working, then load the script
-    let script = document.createElement("script");
-    script.src = "https://cdn.jsdelivr.net/npm/sweetalert2@11";
-    document.head.append(script);
-  }
-</script>
 {% endblock %}
 
-{% block header %}
-  {{super()}}
-  <script>
+{% block scripts %}
+    {{super()}}
+    
+    <script>
+    if (! navigator.share) { // API not working, then load the script
+      let script = document.createElement("script");
+      script.src = "https://cdn.jsdelivr.net/npm/sweetalert2@11";
+      document.head.append(script);
+    }
     function selectText(nodeId) {
         const node = document.getElementById(nodeId);
 
