@@ -1,6 +1,5 @@
 name: "Feature Request"
 description: Got a cool idea💡? Suggest it here
-title: "💡"
 labels: [enhancement]
 body:
   - type: markdown 
