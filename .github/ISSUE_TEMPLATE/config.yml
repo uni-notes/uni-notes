@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Discussions
+    about: General discussions about the project
+    url: https://github.com/uni-notes/uni-notes/discussions
