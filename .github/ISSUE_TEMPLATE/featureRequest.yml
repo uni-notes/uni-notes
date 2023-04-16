@@ -1,0 +1,36 @@
+name: "Feature Request"
+description: Got a cool idea💡? Suggest it here
+labels: [enhancement]
+body:
+  - type: markdown 
+    attributes:
+      value:
+        ## Thanks for taking the time to fill out this feature form for improving the project!
+        
+        We love to hear any and all ideas that you may have. It would be great to get as much detail from you as you wish to provide.
+        
+  - type: checkboxes 
+    id: terms 
+    attributes:
+      label: Idea Contribution
+      description: This project has Contribution Guidelines that all participants are expected to understand and follow.
+      options:
+        - label: "I have read and agree to the project's [Contribution Guidelines](https://github.com/unnamed-project/.github/CODE_OF_CONDUCT.md)📜"
+          required: true 
+  - type: textarea 
+    id: whats-your-idea 
+    attributes:
+      label: "What's your idea"
+      description: |
+        - Give as much detail as you can to help us understand the change you want to see.
+        - What is the expected outcome?
+        - How can your idea improve the current state of project?
+    validations: 
+      required: true
+  - type: textarea
+    id: anything-else
+    attributes:
+      label: Anything Else🤔?
+      description: Anything else that we should know about your issue?
+    validations:
+      required: false
