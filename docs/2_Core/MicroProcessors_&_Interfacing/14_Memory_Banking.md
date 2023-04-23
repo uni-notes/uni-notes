@@ -13,9 +13,6 @@ It also has o, so ROM
 $3 \times 8$ decoder
 
 The other one will be ram chip
-
----
-
 We don’t need the entire memory, so we instead use in different way.
 
 |       |      |

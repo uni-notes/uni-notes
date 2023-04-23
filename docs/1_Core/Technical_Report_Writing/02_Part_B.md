@@ -24,9 +24,6 @@
 - Impact and Outcome of the research. 
 
 Thoughts should be expressed keeping [Approach --> Method --> Technique] order in mind. 
-
----
-
 ## IEEE Format:
 
 - Title in " " 

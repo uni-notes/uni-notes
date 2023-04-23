@@ -39,9 +39,6 @@ High Fever are dangerous for this very reason as with the inc in temp, the prote
 | Indigestible fibres | Cellulose |
 | Animal starch | Glycogen |
 
-
----
-
 ## A Tour of the Cell [TB Order]
 
 Plasma Membrane: 

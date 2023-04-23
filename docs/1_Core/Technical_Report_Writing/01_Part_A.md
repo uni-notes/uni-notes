@@ -44,9 +44,6 @@ Check for the following -
 - Avoid Cliches, Jargons, Foreign Words 
 - Avoid gender biased words (mankind --> humanity)
 - Avoid too many nouns (Window Sash Installation Company --> the company that installs window sashes)
-
----
-
 ## Questionnaires:
 
 - Open Ended ( How would you describe this flavor of ice cream? ) 
