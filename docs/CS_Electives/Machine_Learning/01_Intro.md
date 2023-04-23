@@ -4,7 +4,7 @@ This introductory page is a big long, but that's because all the below concepts 
 
 Subfield of pattern recognition and computational learning theory in artificial intelligence.
 
-![img](assets/data_science_and_machine_learning_1667046154106_0.svg)
+![img](./../assets/overview_ai_ml_dl_ds.svg)
 
 > Field of study that gives the computer the ability to learn without being explicitly programmed
 >
@@ -54,4 +54,18 @@ t[Training] -->
 Testing -->
 Validation --> t & Stop([Save Model])
 ```
+
+## Open-source Tools
+
+|              |      |
+| ------------ | ---- |
+| Scikit-Learn |      |
+| TensorFLow   |      |
+| Keras        |      |
+| PyTorch      |      |
+| MXNet        |      |
+| CNTK         |      |
+| Caffe        |      |
+| PaddlePaddle |      |
+| Weka         |      |
 

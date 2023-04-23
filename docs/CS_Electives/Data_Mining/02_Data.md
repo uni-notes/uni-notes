@@ -1,3 +1,34 @@
+Data can be anything. It depends on the data engineer on what the input and output data is.
+
+## Types
+
+- Structured
+  - Numbers
+  - Tables 
+- Unstructured
+  - Audio
+  - Image
+  - Video
+
+## Means of data collection
+
+- Manual Labelling
+  - Manually marking as cat/not cat, etc.
+- Observing Behaviour
+  - taking data from user activity and seeing whether they purchased or not
+  - machine temperatures and observing for faults or not
+- Download from the web
+
+## Mistakes
+
+1. Waiting too long for implementing a data set
+   1. implement it early so that AI team can give feedback to the IT team
+2. Not all data is valuable
+3. Messy
+   1. Garbage in, garbage out
+   2. incorrect data
+   3. multiple types of data
+
 ## Datasets
 
 Collection of data in rows and columns

@@ -2,6 +2,8 @@
 
 ![Data Roles](assets/Data_Roles.svg)
 
+![img](./../assets/overview_ai_ml_dl_ds.svg)
+
 ## Data Mining
 
 Generate Decision Support Systems
