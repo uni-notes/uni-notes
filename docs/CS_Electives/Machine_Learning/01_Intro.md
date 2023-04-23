@@ -2,21 +2,11 @@ This introductory page is a big long, but that's because all the below concepts 
 
 ## Machine Learning
 
-Subfield of pattern recognition and computational learning theory in artificial intelligence.
+Field of study that enables computers to learn without being explicitly programmed; machine learns how to perform task $T$ from experience $E$ with performance measure $P$.
+
+Machine learning is necessary when it is not possible for us to make rules, ie, easier for the machine to learn the rules on its own
 
 ![img](./../assets/overview_ai_ml_dl_ds.svg)
-
-> Field of study that gives the computer the ability to learn without being explicitly programmed
->
-> ~ Arthur Samuel
-
-> Computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks T, as measured by P, improves with experience E.
->
-> ~ Tom Mitchell
-
-> Machine Learning is programming computers to optimize a performance criterion using example data or past experience.
->
-> ~ Ethem Alpyadin
 
 ```mermaid
 flowchart LR
