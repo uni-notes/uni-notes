@@ -30,7 +30,7 @@ A game tree is a tree where nodes of the tree are the game states and Edges of t
 
 *NOTE - We assume that the opponent we face behaves optimally, and will always perform the move that is worst for us.*
 
-![img](assets/mini-max.png)
+![Mini-max](assets/mini-max.png)
 
 Minimax is only for deterministic, fully observable games  
 
@@ -42,4 +42,4 @@ Mini-max algorithm is complete and optimal
 - Maintain two parameters in depth-first search, α, the value of the best (highest) value found so far for MAX along any path and β, the best (lowest) value found along any path for MIN.
 - Prune a subtree once it is known to be worse than the current α or β.
 
-![img](assets/alpha-beta-pruning-steps.png)
+![Alpha beta pruning](assets/alpha-beta-pruning-steps.png)

@@ -8,9 +8,9 @@
 
 ### Bayes' theorem 
 It determines the probability of an event with uncertain knowledge.  
-<br>
-$P(A|B) = \frac{P(B|A)P(A)}{P(B)}$  
-<br>
+
+$P(A|B) = \frac{P(B|A)P(A)}{P(B)}$   
+
 where $P(A|B)$ is known as posterior,  
 $P(B|A)$ is called the likelihood,  
 $P(A)$ is called the prior probability and  

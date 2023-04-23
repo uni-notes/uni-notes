@@ -18,7 +18,7 @@
 
 - State space size : total number of states. Counted using fundamental counting principle.
 
-| ![img](assets/State%20space%20graph.png)  | ![img](assets/Search%20tree.png) |
+| ![State space graph](assets/State%20space%20graph.png)  | ![Search tree](assets/Search%20tree.png) |
 |-|-|
 
 
@@ -34,8 +34,6 @@ Time Complexity - a measure of time for an algorithm to complete its task.
 
 Space Complexity: the maximum storage space required at any point during the search.
 
-<br>
-
 ### 1. Depth First Search  
 - Explore the deepest node from the starting node (i.e. leftmost node)
 - Not complete  
@@ -43,8 +41,6 @@ Space Complexity: the maximum storage space required at any point during the sea
 - TC - $O(b^m)$  
 - SC - $O(bm)$  
 where there are $b$ nodes at each level and depth is $m$
-
-<br>
 
 ### 2. Breadth First Search
 - Explore the shallowest node from the starting node (i.e. traverse left to right, level by level)
@@ -54,8 +50,6 @@ where there are $b$ nodes at each level and depth is $m$
 - SC - $O(b^s)$
 where there are $b$ nodes at each level (i.e. branching factor) and the shallowest solution is at depth $s$
 
-<br>
-
 ### 3. Uniform Cost Search
 - Explore the lowest cost node from the starting node
 - complete
@@ -64,14 +58,10 @@ where there are $b$ nodes at each level (i.e. branching factor) and the shallowe
 - SC - $O(b^{C∗/ε})$  
 where $C*$ is optimal path cost and ε is minimal cost between 2 nodes
 
-<br>
-
 ### 4. Iterative Deepening Search
 - Perform DFS for every depth level (combination of DFS and BFS)
 - TC - $O(b^d)$
 - SC - $O(bd)$
-
-<br>
 
 ### 5. Bidirectional Search  
 - Performed on search graph

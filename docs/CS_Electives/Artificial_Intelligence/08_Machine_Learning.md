@@ -25,13 +25,13 @@ Common examples of activation function -
 
 Visual representation of a neuron - 
 
-![img](assets/neuron.png)
+![Neruon diagram](assets/neuron.png)
 
 ### Neural Networks
 
 A neural network is simply made out of layers of neurons, connected in a way that the input of one layer of neuron is the output of the previous layer of neurons (after activation)
 
-![img](assets/neural%20network.png)
+![Neural network visualization](assets/neural%20network.png)
 
 We use a metric known as loss function which describes how badly the model is performing based on how far off our predictions are from the actual value in our data-set.
 
@@ -51,7 +51,7 @@ A recurrent neural network (RNN) is a kind of artificial neural network mainly u
 
 A recurrent neural network looks similar to a traditional neural network except that a memory-state is added to the neurons.
 
-![img](assets/rnn.png)
+![RNN diagram](assets/rnn.png)
 
 ### CNN
 
@@ -71,7 +71,7 @@ Then we have the pooling layer. The purpose of the pooling layer is to reduce th
 
 We use a fully connected layers at the end of our CNNs. When we reach this stage, we can flatten the neurons into a one-dimensional array of features.
 
-![img](assets/cnn.png)
+![CNN diagram](assets/cnn.png)
 
 ### LSTM
 
