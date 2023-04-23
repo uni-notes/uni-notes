@@ -1,6 +1,25 @@
 # Artifical Neural Networks
 
-For more advanced concepts, refer to [Deep Learning](./../Deep_Learning.md) concepts.
+A neural network is simply made out of layers of [neurons](#neuron), connected in a way that the input of one layer of neuron is the output of the previous layer of neurons (after activation)
+
+They are loosely based on how our human brain works. 
+
+![Neural network visualization](assets/neural%20network.png)
+
+For more advanced concepts, refer to [Deep Learning](./../Deep_Learning/).
+
+## Neuron
+
+Most basic unit of a neural network
+
+### Tasks
+
+1. Receive input from other neurons and combine them together
+2. Perform some kind of transformation to give an output. This transformation is usually a mathematical combination of inputs and application of an [activation function](#activation-functions).
+
+### Visual representation
+
+![Neruon diagram](assets/neuron.png)
 
 ## MP Neuron
 
