@@ -1,4 +1,4 @@
-.md-content h2:not(:first-of-type)
+.md-content h2:not(:first-child):not(h1+h2)
 {
     border-top: 0.1rem solid var(--md-default-fg-color--lightest);
     border-radius: 0;
