@@ -74,7 +74,7 @@ Plants have both chloroplasts and mitochondria but animals only have mitochondri
 
 Cytoskeleton shape is maintained using microtubules.
 
-Movement in Cells: <br>
-- Cilia : Short hair liked strucutres that are many in number and move back and forth in a coordinated fashion. Eg - Cilia in windpipe that are responsible to sweep mucus in the respiratory system get damages due to smoking leading to respiratory complications in smokers. <br>
-- Flagella : They are singular, whip - like structures that help in movement os sperms during fertilization. The problems with flagella often times lead to infertility problems. <br>
+Movement in Cells:
+- Cilia : Short hair liked strucutres that are many in number and move back and forth in a coordinated fashion. Eg - Cilia in windpipe that are responsible to sweep mucus in the respiratory system get damages due to smoking leading to respiratory complications in smokers.
+- Flagella : They are singular, whip - like structures that help in movement os sperms during fertilization. The problems with flagella often times lead to infertility problems.
 - Pilli : Helps in attachment to surfaces. 

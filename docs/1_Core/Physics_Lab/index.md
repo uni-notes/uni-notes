@@ -1,6 +1,6 @@
 # Lab
 
-Here is the demonstration of every experiment in the physics lab. <br>
+Here is the demonstration of every experiment in the physics lab. 
 
 1. [Collisions - I](https://drive.google.com/file/d/1y94c_QIwEYCDM_s7W_zg8fafszlW47z8/view?usp=share_link)
 2. [Collisions - II](https://drive.google.com/file/d/10RJqiZGilao6H4cpvTzWG4FAL3nWIwIU/view?usp=sharing)
