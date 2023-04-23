@@ -1,4 +1,5 @@
 ## Characteristics of Scripting Languages
+
 - Both Batch and Interactive use
 - Economy of Expression
 - Lack of declarations; simple scoping rules

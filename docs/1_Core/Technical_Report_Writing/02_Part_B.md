@@ -3,6 +3,7 @@
 ## Paragraph Writing 
 
 ### Types of Pragraphs: 
+
 - Descriptive 
 - Example 
 - Process
@@ -10,11 +11,13 @@
 - Narrative 
 
 ### Structure: 
+
 - Topic Sentence (What is the need to discuss the topic) 
 - Body 
 - Conclusion of Topic Sentence (Therefore we need it)
 ---
 ## Abstract Writing
+
 - Why we chose this topic?
 - Problem Statement 
 - Solutions 

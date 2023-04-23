@@ -35,6 +35,7 @@ Time Complexity - a measure of time for an algorithm to complete its task.
 Space Complexity: the maximum storage space required at any point during the search.
 
 ### 1. Depth First Search  
+
 - Explore the deepest node from the starting node (i.e. leftmost node)
 - Not complete  
 - Not optimal  
@@ -43,6 +44,7 @@ Space Complexity: the maximum storage space required at any point during the sea
 where there are $b$ nodes at each level and depth is $m$
 
 ### 2. Breadth First Search
+
 - Explore the shallowest node from the starting node (i.e. traverse left to right, level by level)
 - complete
 - optimal
@@ -51,6 +53,7 @@ where there are $b$ nodes at each level and depth is $m$
 where there are $b$ nodes at each level (i.e. branching factor) and the shallowest solution is at depth $s$
 
 ### 3. Uniform Cost Search
+
 - Explore the lowest cost node from the starting node
 - complete
 - optimal assuming all edges (cost) are non negative
@@ -59,11 +62,13 @@ where there are $b$ nodes at each level (i.e. branching factor) and the shallowe
 where $C*$ is optimal path cost and ε is minimal cost between 2 nodes
 
 ### 4. Iterative Deepening Search
+
 - Perform DFS for every depth level (combination of DFS and BFS)
 - TC - $O(b^d)$
 - SC - $O(bd)$
 
 ### 5. Bidirectional Search  
+
 - Performed on search graph
 - Two simultaneous search - forward search from start vertex toward goal vertex and backward search from goal vertex toward start vertex
 - complete if we use BFS in both searches
@@ -85,11 +90,13 @@ A heuristic is
 Remember every consistent heuristic is also admissible
 
 ### 1. Best First Search/Greedy Search
+
 - Explore the node with lowest heuristic value which also brings it closer to the goal
 - identical to UCS but with a priority queue 
 - not guaranteed to be complete or optimal
 
 ### 2. A* Search Algorithm
+
 - Explore the node with lowest total cost value 
 - Also uses priority queue
 - complete

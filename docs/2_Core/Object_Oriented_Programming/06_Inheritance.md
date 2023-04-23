@@ -168,6 +168,7 @@ In new versions, we can have
 3. functions can only have prototype - declared, but not defined
 
 ### Conditions
+
 - A class that `implements ` an interface must have function definition for ==all== the functions of the interface (and extended interfaces)
 - a single interface can extend multiple interfaces (multiple inheritance)
 - can have `default` methods

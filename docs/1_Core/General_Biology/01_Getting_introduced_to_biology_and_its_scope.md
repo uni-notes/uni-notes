@@ -49,11 +49,13 @@ graph LR;
 ```
 
 #### Eubacteria: 
+
 - Small, Prokaryotic, Single celled organisms ranging from 1 - 10um. 
 - Lack nucleus and cell membrane bound organelles. 
 - Cell wall contains a complex organic molecule called peptidoglycan. 
 
 #### Archea: 
+
 - Prokaryotic
 - Cell membrane has Isoprenes. 
 - Extremophiles 
