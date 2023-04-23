@@ -4,7 +4,6 @@ Machine learning is a part of AI which provides intelligence to machines with th
 
 > For more insight, refer Machine Learning course
 
----
 
 ### Neuron
 Neural networks are loosely based on how our human brain works, and the basic unit of a neural network is a neuron.
@@ -28,8 +27,6 @@ Visual representation of a neuron -
 
 ![img](assets/neuron.png)
 
----
-
 ### Neural Networks
 
 A neural network is simply made out of layers of neurons, connected in a way that the input of one layer of neuron is the output of the previous layer of neurons (after activation)
@@ -48,8 +45,6 @@ Once loss has been reduced, our model can encounter overfitting. Overfitting occ
 
 Use strategies such as L2 regularization, Early stopping and dropout to deal with overfitting
 
----
-
 ### RNN
 
 A recurrent neural network (RNN) is a kind of artificial neural network mainly used in speech recognition and natural language processing (NLP).  
@@ -57,8 +52,6 @@ A recurrent neural network (RNN) is a kind of artificial neural network mainly u
 A recurrent neural network looks similar to a traditional neural network except that a memory-state is added to the neurons.
 
 ![img](assets/rnn.png)
-
----
 
 ### CNN
 
@@ -79,8 +72,6 @@ Then we have the pooling layer. The purpose of the pooling layer is to reduce th
 We use a fully connected layers at the end of our CNNs. When we reach this stage, we can flatten the neurons into a one-dimensional array of features.
 
 ![img](assets/cnn.png)
-
----
 
 ### LSTM
 

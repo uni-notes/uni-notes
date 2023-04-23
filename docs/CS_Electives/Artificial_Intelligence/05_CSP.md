@@ -18,9 +18,7 @@ Corresponding constraint graph :
 <br>
 ![img](assets/CSP_Graph.png)
 
----
-
-### Solving CSPs
+## Solving CSPs
 
 1. Fix an ordering for variables, and select values for variables in this order. 
 2. When selecting values for a variable, only select values that don’t conflict with any previously assigned values.If no such values exist, backtrack and return to the previous variable,changing its value.
@@ -29,12 +27,12 @@ Corresponding constraint graph :
 
 To improve performance, we consider filtering which checks if we can prune the domain of unassigned variables ahead of time. 
 
-#### 1. Forward Checking 
+### 1. Forward Checking 
 
 - Whenever a new variable is assigned, we can run forward checking and prune the domains of unassigned variables adjacent to the newly assigned variable in the constraint graph.
 - Basically we eliminate all the values from the domain of the adjacent variables which could cause violation of any constraint.
 
-#### 2. Arc Consistency
+### 2. Arc Consistency
 
 - Interpret each undirected edge of the constraint graph for a CSP as two directed edges pointing in opposite directions.
 - Each of these directed edges is called an arc.

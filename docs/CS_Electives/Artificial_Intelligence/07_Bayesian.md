@@ -6,8 +6,6 @@
 
 - Independence - Two events $A$ and $B$ are independent if $P(A \wedge B) = P(A)P(B)$
 
----
-
 ### Bayes' theorem 
 It determines the probability of an event with uncertain knowledge.  
 <br>
@@ -22,10 +20,8 @@ The equation can be generalized as
 $P(A_i|B) = \frac{P(B|A_i)P(A_i)}{\sum_{i=1}^k P(B|A_i)P(A_i)}$  
 where $A_1, A_2, A_3,........, A_n$ are all mutually exclusive events
 
----
 
-
-### Bayesian Network
+## Bayesian Network
 
 Represents the dependence between variables
 
@@ -37,7 +33,6 @@ Represents the dependence between variables
 
 $P(X_i|X_{i-1},........., X_1) = P(X_i |Parents(X_i ))$
 
----
 
 ### Independence in BN
 

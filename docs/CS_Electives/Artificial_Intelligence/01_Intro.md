@@ -9,8 +9,6 @@ Artificial Intelligence ( abbreviated as AI ) can be defined as a branch of comp
 4. Object Detection
 5. Speech Recognition
 
----
-
 ### AI has advanced in various domains :
 1. Fashion and Art
 2. Science
@@ -23,9 +21,7 @@ Artificial Intelligence ( abbreviated as AI ) can be defined as a branch of comp
 
 Artificial Intelligence is the superset of all other forms of smart machine learning algorithms and models.
 
-<img src="assets\The_relationship_and_main_types_of_artificial_intelligence,_machine_learning_and_deep_learning.png"  width="75%" height="75%">
-
----
+![img](assets\The_relationship_and_main_types_of_artificial_intelligence,_machine_learning_and_deep_learning.png)
 
 ### But why Artificial Intelligence
 

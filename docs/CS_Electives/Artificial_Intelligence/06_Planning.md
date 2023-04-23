@@ -2,10 +2,14 @@
 
 Planning is a particular type of problem solving in which actions and goals are declaratively specified in logic and generally concerns performing actions in the real world.
 
-Generally languages of planning problems consist mainly of
-1. States - conjunction of positive literals
-2. Goals - conjunction of positive ground literals
-3. Actions - represented in terms of precondition and effect of the action
+Generally languages of planning problems consist mainly of  
+
+1. States - conjunction of positive literals  
+
+2. Goals - conjunction of positive ground literals  
+
+3. Actions - represented in terms of precondition and effect of the action  
+
 
 STRIPS and ADL are two languages used to express planning problems
 
@@ -21,9 +25,8 @@ STRIPS and ADL are two languages used to express planning problems
 |No support for types|Variables can have types|
 |Example : $Action(Fly(p, from,to),$<br>$PRECOND:At(p, from) ∧ Plane(p) ∧ Airport(from) ∧ Airport(to)$<br>$EFFECT:¬At(p, from) ∧ At(p,to))$ | Example : $Action(Fly(p : Plane, from : Airport,to : Airport),$<br>$PRECOND:At(p, from) ∧ (from = to)$<br>$EFFECT:¬At(p, from) ∧ At(p, to))$|
 
----
 
-### Partial Order Planning (POP)
+## Partial Order Planning (POP)
 
 Any planning algorithm that can place two actions into a plan without specifying which
 comes first is called a partial-order planner.
@@ -42,6 +45,7 @@ $Action(RightSock, EFFECT:RightSockOn)$
 $Action(LeftShoe, PRECOND:LeftSockOn, EFFECT:LeftShoeOn)$  
 $Action(LeftSock, EFFECT:LeftSockOn)$
 
+
 ![img](assets/pop.png)
 
 Actions - ${RightSock, RightShoe, LeftSock, LeftShoe, Start, Finish}$  
@@ -49,9 +53,7 @@ Orderings - ${RightSock ≺ RightShoe, LeftSock ≺ LeftShoe}$
 Links - {${RightSock\xrightarrow{\text{RightSockOn}}RightShoe, LeftSock\xrightarrow{\text{LeftSockOn}}LeftShoe,RightShoe\xrightarrow{\text{RightShoeOn}}Finish, LeftShoe\xrightarrow{\text{RightShoeOn}}Finish}$}  
 Open Preconditions - { }
 
----
-
-### Planning Graphs
+## Planning Graphs
 
 A planning graph consists of a sequence of levels that correspond to time steps in the
 plan, where level 0 is the initial state.  
@@ -60,12 +62,16 @@ Each level contains a set of literals and a set of actions.
 NOTE : persistence actions are actions that remain true from one situation to the next if no action alters it.
 
 Before forming a planning graph we need to understand mutex links  
-A mutex relation holds between two actions if
-1. Inconsistent effects - one action negates an effect of the other
+A mutex relation holds between two actions if  
+
+1. Inconsistent effects - one action negates an effect of the other  
+
 2. Interference - one of the effects of one action is the negation of a precondition of the
-other
+other  
+
 3. Competing needs - one of the preconditions of one action is mutually exclusive with a
-precondition of the other. 
+precondition of the other.  
+
 
 Consider this problem : 
 
