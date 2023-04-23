@@ -13,7 +13,8 @@ To find another **linear-independent** solution $y_2(x)$
 $$
 \begin{aligned}
 v &= \int
-\frac{1}{ {(y_1)}^2 \times e^{ \int P dx} } \\   
+\frac{1}{ {(y_1)}^2 \times e^{ \int P dx} } \\
+   
 y_2 &= v \cdot y_1
 \end{aligned}
 $$

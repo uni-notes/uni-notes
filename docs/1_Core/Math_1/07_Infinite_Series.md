@@ -31,7 +31,8 @@ We use the following tests.
 $$
 \lim\limits_{n \to \infty} a_n = 
 \begin{cases}
-\ne 0 & \text{Divergent} \\= 0 & \text{Test fails}
+\ne 0 & \text{Divergent} \\
+= 0 & \text{Test fails}
 \end{cases}
 $$
 

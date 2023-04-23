@@ -14,7 +14,8 @@ $$
    
 $$
 \begin{aligned}
-xD &= \theta \\   x^2 D^2 &= \theta(\theta - 1)
+xD &= \theta \\
+   x^2 D^2 &= \theta(\theta - 1)
 \end{aligned}
 $$
    
@@ -22,7 +23,8 @@ $$
 
 $$
 \begin{aligned}
-\Big( \theta(\theta - 1) + p \theta + q \Big)y &= 0 \\   \theta(\theta - 1) + p \theta + q &= 0 & (y \ne 0)
+\Big( \theta(\theta - 1) + p \theta + q \Big)y &= 0 \\
+   \theta(\theta - 1) + p \theta + q &= 0 & (y \ne 0)
 \end{aligned}
 $$
    

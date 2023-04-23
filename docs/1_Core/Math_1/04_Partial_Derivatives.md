@@ -142,7 +142,8 @@ $$
 \begin{aligned}
 \frac{\partial w}{\partial u} &=
 \left( \frac{\partial w}{\partial x} \cdot \frac{\partial x}{\partial u} \right) +
-\left( \frac{\partial w}{\partial y} \cdot \frac{\partial y}{\partial u} \right) \\  
+\left( \frac{\partial w}{\partial y} \cdot \frac{\partial y}{\partial u} \right) \\
+  
 \frac{\partial w}{\partial v} &=
 \left( \frac{\partial w}{\partial x} \cdot \frac{\partial x}{\partial v} \right) +
 \left( \frac{\partial w}{\partial y} \cdot \frac{\partial y}{\partial v} \right)
@@ -232,7 +233,8 @@ The equations of normal line at $P_0$ are given by
 $$
 \begin{aligned}
 x &= x_0 + t {f_x}_{(P_0)} \\
-y &= y_0 + t {f_y}_{(P_0)} \\ z &= z_0 + t {f_z}_{(P_0)}
+y &= y_0 + t {f_y}_{(P_0)} \\
+ z &= z_0 + t {f_z}_{(P_0)}
 \end{aligned}, \quad t \text{ is some parameter}
 $$
 
@@ -264,8 +266,10 @@ At point $(a, b)$
 
 $$
 \begin{aligned}
-1. & f_x = 0 \text{ and } f_y = 0 \\2. & r = f_{xx}, s = f_{xy}, t = f_{yy}, \\
-&D = rt - s^2 \\ 
+1. & f_x = 0 \text{ and } f_y = 0 \\
+2. & r = f_{xx}, s = f_{xy}, t = f_{yy}, \\
+&D = rt - s^2 \\
+ 
 \end{aligned}
 $$
 

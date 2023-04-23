@@ -37,9 +37,11 @@ We can derive through linear-programming
 3. Find augmented vectors with bias = 1
    
 $$
-s_1 = \begin{pmatrix} 0 \\ 1 \end{pmatrix}
+s_1 = \begin{pmatrix} 0 \\
+ 1 \end{pmatrix}
 \implies
-\tilde{s_1} = \begin{pmatrix} 0 \\ 1 \end{pmatrix}
+\tilde{s_1} = \begin{pmatrix} 0 \\
+ 1 \end{pmatrix}
 $$
 
 4. Find values of $\alpha$, assuming that

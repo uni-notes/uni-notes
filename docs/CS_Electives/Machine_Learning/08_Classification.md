@@ -7,7 +7,8 @@ deals with categorical data
 $$
 \hat y =
 \begin{cases}
-0, & \hat y < 0.5 \\1, & \hat y \ge 0.5
+0, & \hat y < 0.5 \\
+1, & \hat y \ge 0.5
 \end{cases}
 $$
 
@@ -59,7 +60,8 @@ $$
 \begin{aligned}
 C(\hat y, y)
 &= \begin{cases}
-- \log \| 1 - \hat y \|, & y=0 \\- \log \| \hat y \|, & y=1
+- \log \| 1 - \hat y \|, & y=0 \\
+- \log \| \hat y \|, & y=1
 \end{cases} \\
 J(\theta)
 &= \frac{-1}{m}
@@ -81,7 +83,8 @@ Means the ability to separate points of different classes using a line, with/wit
 
 $$
 f(u) = \begin{cases}
-1, & u \ge 0 \\0, & \text{otherwise}
+1, & u \ge 0 \\
+0, & \text{otherwise}
 \end{cases}
 $$
 
@@ -156,13 +159,15 @@ It is also used a pre-processing step for ML application
 
 $$
 S_1 = \begin{bmatrix}
-\text{cov}(x_1, x_1) & \text{cov}(x_1, x_2) \\   \text{cov}(x_2, x_1) & \text{cov}(x_2, x_2)
+\text{cov}(x_1, x_1) & \text{cov}(x_1, x_2) \\
+   \text{cov}(x_2, x_1) & \text{cov}(x_2, x_2)
 \end{bmatrix}
 $$
 
 $$
 \begin{aligned}
-\text{Cov}(x_j, x_k) &= \frac{1}{n_j - 1} \sum_{i=1, x \in C_j}^{n_1} (x_i - \mu_1)(x_i - \mu_1) \\   
+\text{Cov}(x_j, x_k) &= \frac{1}{n_j - 1} \sum_{i=1, x \in C_j}^{n_1} (x_i - \mu_1)(x_i - \mu_1) \\
+   
 \text{Cov}(x_1, x_1) &= \frac{1}{n_1 - 1} \sum_{i=1, x \in C_1}^{n_1} (x_i - \mu_1)^2
 \end{aligned}
 $$
@@ -481,8 +486,10 @@ $$
 \begin{aligned}
 &\text{Gain}\Big(
 \text{Value}(C_1), C_2
-\Big) \\   
-=& H \Big(\text{Value}(C_1) \Big) \\   & - \left[
+\Big) \\
+   
+=& H \Big(\text{Value}(C_1) \Big) \\
+   & - \left[
 \sum_{i=1}
 \frac{n (C_2=\text{Value}_i)}{n \Big(\text{Value}(C_1) \Big)}
 \times

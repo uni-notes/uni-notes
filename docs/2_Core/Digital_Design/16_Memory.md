@@ -80,7 +80,8 @@ $$
    
 $$
 \begin{aligned}
-\text{Capactity} &= m \times 2^n \text{ bits} \\   &= \frac{16 \times 2^{13}}{8 \times 1024} \text{ KiloBytes} \\   
+\text{Capactity} &= m \times 2^n \text{ bits} \\
+   &= \frac{16 \times 2^{13}}{8 \times 1024} \text{ KiloBytes} \\   
 &= 16 \text{ KB}
 \end{aligned}
 $$

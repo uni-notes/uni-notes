@@ -2,7 +2,8 @@
 
 $$
 \begin{aligned}
-P(S) &=1 \\ 
+P(S) &=1 \\
+ 
 0 \le P(A) &\le 1\\
 P(A') &= 1 - P(A) \\
 P(A \cup B) &= P(A) + P(B) - P(A \cap B) \\

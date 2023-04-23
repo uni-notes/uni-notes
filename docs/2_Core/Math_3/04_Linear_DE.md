@@ -46,7 +46,8 @@ $$
 $$
 \begin{aligned}
 \left( \frac{1}{1-n} \right) z' + P z
-&= Q \\   
+&= Q \\
+   
 z' + \underbrace{(1-n) P}_{P\text{ of linear DE}} \ z
 &= (1-n) Q
 \end{aligned}
@@ -56,7 +57,8 @@ $$
 
 $$
 \begin{aligned}
-\text{IF} &= (1-n) \int P dx \\   z \times \text{IF} &= (1-n) \int (Q \times \text{IF}) dx \quad + c
+\text{IF} &= (1-n) \int P dx \\
+   z \times \text{IF} &= (1-n) \int (Q \times \text{IF}) dx \quad + c
 \end{aligned}
 $$
    

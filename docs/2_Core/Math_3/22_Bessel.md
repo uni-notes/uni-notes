@@ -48,7 +48,8 @@ $$
 &= x^{p} J_{p-1} (x) \\
 \Big( x^{-p} J_p(x) \Big)'
 &= - x^{-p} J_{p+1} (x) \\
-{J_p}'(x) + \frac{p}{x} J_p(x) &= J_{p-1}(x) \\{J_p}'(x) - \frac{p}{x} J_p(x) &= - J_{p+1}(x) \\
+{J_p}'(x) + \frac{p}{x} J_p(x) &= J_{p-1}(x) \\
+{J_p}'(x) - \frac{p}{x} J_p(x) &= - J_{p+1}(x) \\
 J_{p-1}(x) - J_{p+1}(x) &= 2 {J_p}'(x)
 \end{aligned}
 $$

@@ -193,7 +193,8 @@ for(int i = 0; i<n; i++)
    
 $$
 \begin{aligned}
-\log xy  &= \log x + \log y \\   \log \left( \frac{x}{y} \right) &= \log x - \log y \\   \log x^n &= n \log x
+\log xy  &= \log x + \log y \\
+   \log \left( \frac{x}{y} \right) &= \log x - \log y \\   \log x^n &= n \log x
 \end{aligned}
 $$
    

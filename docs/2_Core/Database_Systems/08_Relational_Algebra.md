@@ -29,7 +29,8 @@ $\sigma_{A=B} T_1 \times T_2 (\text{instructor})$
 
 $$
 \begin{aligned}
-&\text{account} \leftarrow \text{account } \cup \{ \\ 
+&\text{account} \leftarrow \text{account } \cup \{ \\
+ 
 &\text{(“Ahmed", A-973, 1200)} \\
 &\text{(“Thahir", A-193, 1300)} \\
 &\}

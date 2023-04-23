@@ -29,7 +29,8 @@ Formulae
 
 2. $$
    \begin{aligned}
-   n(A \cup B \cup C)&= n(A) + n(B) + n(C) \\   & \qquad - n(A \cap B) - n(B \cap C) - n(A \cap C) \\   & \qquad + n(A \cap B \cap C)
+   n(A \cup B \cup C)&= n(A) + n(B) + n(C) \\
+   & \qquad - n(A \cap B) - n(B \cap C) - n(A \cap C) \\   & \qquad + n(A \cap B \cap C)
    \end{aligned}
    $$
 
@@ -42,7 +43,8 @@ Formulae
 
 $$
 \begin{aligned}
-|A'| &= |U| - |A| \\|A-B| &= |A \cup B'| \\
+|A'| &= |U| - |A| \\
+|A-B| &= |A \cup B'| \\
 &= |A| - |A\cup B| \\
 |A \cap B \cap C'| &= |A \cap B| - |A \cap B \cap C| \\
 |A \cap B' \cap C| &= |A \cap C| - |A \cap B \cap C| \\

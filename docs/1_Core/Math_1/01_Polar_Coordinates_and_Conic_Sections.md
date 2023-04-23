@@ -93,7 +93,8 @@ r &= a \cos(n\theta) \\
 &\text{ or } \\
 r &= a \sin(n\theta) \\
 \text{No of petals } N &= \begin{cases}
-n, &  n = \text{odd} \\2n, & n = \text{even}
+n, &  n = \text{odd} \\
+2n, & n = \text{even}
 \end{cases} \\
 \text{Axis of first petal } \theta &= 
 \begin{cases}

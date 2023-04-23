@@ -162,7 +162,8 @@ Array e (below code example) will look like
 
 $$
 \begin{bmatrix}
-2 & 3 & 7 \\3 & 5 & 6
+2 & 3 & 7 \\
+3 & 5 & 6
 \end{bmatrix}
 $$
 

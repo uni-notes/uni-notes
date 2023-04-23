@@ -45,7 +45,8 @@ $$
 \underbrace{n(n+1)}_{\lambda} \ y
 = 0 \\
 P(x) = 1-x^2 \\
-Q(x) = 1 \\ R(x) = 0 \\
+Q(x) = 1 \\
+ R(x) = 0 \\
 \lambda = n(n+1)
 $$
 

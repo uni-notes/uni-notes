@@ -84,9 +84,11 @@ public class p02
     String inputFile = "h:\\
 My Drive\\
 Notes\\
-Sem 4\\02 DSA\\
+Sem 4\\
+02 DSA\\
 Practicals\\
-Programs\\"
+Programs\\
+"
       + "studentin.dat";
     Scanner readMyFile = new Scanner( new File(inputFile) );
 
@@ -117,9 +119,11 @@ Programs\\"
     String outputFile = "h:\\
 My Drive\\
 Notes\\
-Sem 4\\02 DSA\\
+Sem 4\\
+02 DSA\\
 Practicals\\
-Programs\\"
+Programs\\
+"
       + "studentout.dat";
     PrintWriter writeToMyFile = new PrintWriter( new File(outputFile) );
    

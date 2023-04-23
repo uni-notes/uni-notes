@@ -124,7 +124,8 @@ $$
 $$
 \begin{aligned}
 h+1 &\le e \le 2^h \\
-h &\le i \le 2^h - 1 \\2h+1 &\le i \le 2^{h+1} - 1 \\
+h &\le i \le 2^h - 1 \\
+2h+1 &\le i \le 2^{h+1} - 1 \\
 one more
 \end{aligned}
 $$

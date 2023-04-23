@@ -29,7 +29,8 @@ A problem that cannot be solved by a Turing Machine is **not computable**.
 | ------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Concatenation | $S_1 \cdot S_2$                                              | $S_1$ followed by $S_2$                                      |
 | Power         | $S^n$                                                        | Concatenation with itself for $n$ times                      |
-| Closure       | $\begin{aligned} \Sigma^+ &= \Sigma^1 \cup \Sigma^2 \cup \dots \\ \Sigma^* &= \Sigma^0 \cup \Sigma^1 \cup \Sigma^2 \cup \dots \\ &=  \{ \epsilon \} \cup \Sigma^+ \end{aligned}$ | Union of **infinite** concatenation with itself<br />Also called as Kleene Closure/Star |
+| Closure       | $\begin{aligned} \Sigma^+ &= \Sigma^1 \cup \Sigma^2 \cup \dots \\
+ \Sigma^* &= \Sigma^0 \cup \Sigma^1 \cup \Sigma^2 \cup \dots \\ &=  \{ \epsilon \} \cup \Sigma^+ \end{aligned}$ | Union of **infinite** concatenation with itself<br />Also called as Kleene Closure/Star |
 
 ### On Languages
 
@@ -38,9 +39,11 @@ A problem that cannot be solved by a Turing Machine is **not computable**.
 | Union                   | $L_1 \cup L_2$                                               | Union of both sets                                           |
 | Intersection            | $L_1 \cap L_2$                                               | Intersection of both sets                                    |
 | Concatenation           | $L_1 \cdot L_2$                                              |                                                              |
-| Complement              | $\begin{aligned} &L'\\ = &\Sigma^* - L \end{aligned}$        | Opposite of defined language<br />Swap all accepting and rejecting states |
+| Complement              | $\begin{aligned} &L'\\
+ = &\Sigma^* - L \end{aligned}$        | Opposite of defined language<br />Swap all accepting and rejecting states |
 | Closure of languages    | $L^*$                                                        | Similar to that of string                                    |
-| Power Set of $\Sigma^*$ | $\begin{aligned} P(S) &= 2^{\Sigma^*} \\ \| P(S) \| &= 2^{\|S\|} \end{aligned}$ | Set of all subsets of $\Sigma^*$                             |
+| Power Set of $\Sigma^*$ | $\begin{aligned} P(S) &= 2^{\Sigma^*} \\
+ \| P(S) \| &= 2^{\|S\|} \end{aligned}$ | Set of all subsets of $\Sigma^*$                             |
 
 $$
 \begin{aligned}

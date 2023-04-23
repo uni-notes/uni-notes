@@ -19,7 +19,8 @@ $$
 
 $$
 y = \begin{cases}
-1, & \sum x_i \ge \theta \\0, & \text{otherwise}
+1, & \sum x_i \ge \theta \\
+0, & \text{otherwise}
 \end{cases}
 $$
 
@@ -40,7 +41,8 @@ $$
 \begin{aligned}
 y
 &= \begin{cases}
-1, & \sum w_i x_i \ge \theta \\0, & \text{otherwise}
+1, & \sum w_i x_i \ge \theta \\
+0, & \text{otherwise}
 \end{cases} \\
 \Big(
 x_0 &= 1, w_0 = -\theta
@@ -135,13 +137,17 @@ As you increase the number of hidden layers, the possibility of open decision bo
 |                  Name                  |                        Output $f(x)$                         | Output Type |        Range        |
 | :------------------------------------: | :----------------------------------------------------------: | ----------- | :-----------------: |
 |                Identity                |                             $x$                              | Continuous  |      $[-1, 1]$      |
-|            Binary<br />Step            |    $\begin{cases} 0, &x < 0 \\ 1, & x \ge 0 \end{cases}$     | Binary      |      ${0, 1}$       |
+|            Binary<br />Step            |    $\begin{cases} 0, &x < 0 \\
+ 1, & x \ge 0 \end{cases}$     | Binary      |      ${0, 1}$       |
 |           Tariff/<br />Tanh            |                          $\tanh(x)$                          | Discrete    |      $[-1, 1]$      |
 |                 ArcTan                 |                       $\tan^{-1} (x)$                        | Continuous  |  $(-\pi/2, \pi/2)$  |
-|   ReLU (Rectified<br />Linear Unit)    |    $\begin{cases} 0, &x < 0 \\ x, & x \ge 0 \end{cases}$     | Continuous  |    $[0, \infty]$    |
+|   ReLU (Rectified<br />Linear Unit)    |    $\begin{cases} 0, &x < 0 \\
+ x, & x \ge 0 \end{cases}$     | Continuous  |    $[0, \infty]$    |
 |   SoftPlus<br />(smooth alt to ReLU)   |                        $\log(1+e^x)$                         | Continuous  |    $[0, \infty]$    |
-|      Parametric/<br />Leaky ReLU       | $\begin{cases} \alpha x, &x < 0 \\ x, & x \ge 0 \end{cases}$ | Continuous  | $[-\infty, \infty]$ |
-|      Exponential<br />Linear Unit      | $\begin{cases} \alpha (e^x-1), &x < 0 \\ x,&  x \ge 0 \end{cases}$ | Continuous  | $[-\infty, \infty]$ |
+|      Parametric/<br />Leaky ReLU       | $\begin{cases} \alpha x, &x < 0 \\
+ x, & x \ge 0 \end{cases}$ | Continuous  | $[-\infty, \infty]$ |
+|      Exponential<br />Linear Unit      | $\begin{cases} \alpha (e^x-1), &x < 0 \\
+ x,&  x \ge 0 \end{cases}$ | Continuous  | $[-\infty, \infty]$ |
 | Sigmoid/<br />Logistic/<br />Soft Step |                    $\dfrac{1}{1+e^{-x}}$                     | Binary      |      $[0, -1]$      |
 |                Softmax                 | $\dfrac{e^{x}}{\sum_{i=1}^k e^{x_i}}$<br />where $k=$ no of classes<br />such that $\dfrac{\sum p_i}{k} = 1$ | Discrete    |      $[0, 1]$       |
 

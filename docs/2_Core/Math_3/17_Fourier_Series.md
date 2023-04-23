@@ -80,7 +80,8 @@ Consider
 $$
 \begin{aligned}
 f(x) &= \begin{cases}
-	g_1(x), & (-a, 0) \\	g_2(x), & (0, a)
+	g_1(x), & (-a, 0) \\
+	g_2(x), & (0, a)
 \end{cases}\\
 \implies 
 f(x) &= \begin{cases}

@@ -10,9 +10,11 @@ $$
 
 $$
 \begin{aligned}
-|z| &= \sqrt{x^2 + y^2} \\|z_1 \cdot z_2| &= |z_1| \cdot |z_2| \\
+|z| &= \sqrt{x^2 + y^2} \\
+|z_1 \cdot z_2| &= |z_1| \cdot |z_2| \\
 \left| \frac{z_1}{z_2} \right| &= \frac{ |z_1| }{ |z_2| } \\
-\bar z &= x - iy \\|\bar z| &= |z| \\
+\bar z &= x - iy \\
+|\bar z| &= |z| \\
 \bar{ |z| }^2 &= z \cdot \bar z \\
 \frac{z + \bar z}{2} &= \text{Re}(z) \\
 \frac{z - \bar z}{2i} &= \text{Im}(z) \\

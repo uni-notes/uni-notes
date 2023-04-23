@@ -54,7 +54,8 @@ $$
 | :-------------------------------: | :---: | :-------------------------------: | :------: |
 | known | any   | $z = \dfrac {\bar x - \mu}{\sigma / \sqrt n}$ | $\bar x \pm z_{\alpha/\small 2} \cdot \dfrac \sigma {\sqrt n}$ |
 | unknown | $>30$ | $z = \dfrac {\bar x - \mu}{s/ \sqrt n}$ | $\bar x \pm z_{\alpha/\small 2} \cdot \dfrac s {\sqrt n}$ |
-| unknown | $\le 30$ | $t = \dfrac {\bar x - \mu}{s / \sqrt n}$ | $\bar x \pm t_{\small n-1, \alpha/\small 2} \cdot \dfrac s {\sqrt n} \\ (n-1) \to \text{deg of freedom}$ |
+| unknown | $\le 30$ | $t = \dfrac {\bar x - \mu}{s / \sqrt n}$ | $\bar x \pm t_{\small n-1, \alpha/\small 2} \cdot \dfrac s {\sqrt n} \\
+ (n-1) \to \text{deg of freedom}$ |
 
 $$
 \begin{aligned}

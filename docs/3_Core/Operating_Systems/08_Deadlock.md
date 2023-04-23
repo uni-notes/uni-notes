@@ -72,7 +72,8 @@ Let $X, Y$ be 2 vectors
 
 $$
 X \le Y \iff X[i] \le Y[i], \\
-\forall i \in \text{len}(X) = \text{len}(Y) \\(0, 0, 0) \le (0, 0, 1) \\(0, 1, 0) \not \le (0, 0, 1)
+\forall i \in \text{len}(X) = \text{len}(Y) \\
+(0, 0, 0) \le (0, 0, 1) \\(0, 1, 0) \not \le (0, 0, 1)
 $$
 
 > Every element of $X$ should be smaller than/equal to every corresponding element of $Y$

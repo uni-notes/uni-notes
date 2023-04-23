@@ -27,8 +27,10 @@ States are the only mechanism for a FA to “remember” what it has seen of inp
 | $q_0$                                                        | Starting State                                               |
 | $F$                                                          | Set of Final States                                          |
 | $\Sigma$                                                     | Alphabet                                                     |
-| $\begin{aligned} &\delta: Q \times \Sigma \to Q \\ & \delta(\text{Current State}, \text{Input}) \end{aligned}$ | State Transition Function                                    |
-| $\begin{aligned} &\delta^*: Q \times \Sigma^* \to Q \\ & \delta(\text{Current State}, \text{Input}) \end{aligned}$ | Extended State Transition Function<br />==(Recursive traversal including $\epsilon$)== |
+| $\begin{aligned} &\delta: Q \times \Sigma \to Q \\
+ & \delta(\text{Current State}, \text{Input}) \end{aligned}$ | State Transition Function                                    |
+| $\begin{aligned} &\delta^*: Q \times \Sigma^* \to Q \\
+ & \delta(\text{Current State}, \text{Input}) \end{aligned}$ | Extended State Transition Function<br />==(Recursive traversal including $\epsilon$)== |
 
 $$
 \begin{aligned}

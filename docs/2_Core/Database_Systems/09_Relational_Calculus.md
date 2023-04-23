@@ -10,7 +10,8 @@ Display loan number for every loan > $1200
 
 $$
 \begin{aligned}
-\{ t | \exists s \in \text{loan} ( \\ && t[\text{loanNumber}] &= s[\text{loanNumber}] \\ && \land s[\text{amount}] &> 1200 \\ ) \}
+\{ t | \exists s \in \text{loan} ( \\
+ && t[\text{loanNumber}] &= s[\text{loanNumber}] \\ && \land s[\text{amount}] &> 1200 \\ ) \}
 \end{aligned}
 $$
 
@@ -21,10 +22,13 @@ $$
 \{ & t | \textcolor{purple}{
 \underbrace{
 	\exists b \in \text{borrower} \land \exists l \in \text{loan}
-}_\text{from}} ( \\ &
+}_\text{from}} ( \\
+ &
 \textcolor{hotpink}{
-\underbrace{t.cn = b.cn}_\text{select}} , \\ &
-\textcolor{orange}{\underbrace{l.bn = \text{“Perry"} \land l.ln = b.ln}_\text{where} \\} &) \} \end{aligned}
+\underbrace{t.cn = b.cn}_\text{select}} , \\
+ &
+\textcolor{orange}{\underbrace{l.bn = \text{“Perry"} \land l.ln = b.ln}_\text{where} \\
+} &) \} \end{aligned}
 $$
 
 ## Domain Relational Calculus (DRC)

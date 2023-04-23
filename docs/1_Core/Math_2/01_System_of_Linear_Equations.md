@@ -3,7 +3,8 @@
 $$
 A =
 \begin{bmatrix}
-1 & 2 & -1 \\-9 & 6 & 4 \\7 & 3 & -1
+1 & 2 & -1 \\
+-9 & 6 & 4 \\7 & 3 & -1
 \end{bmatrix}_{3 \times 3}
 $$
 
@@ -34,10 +35,12 @@ example
 
 $$
 \begin{bmatrix}
-1 & 4 & 5 & 3 \\0 & 1 & 2 & 8 \\0 & 0 & 1 & 5
+1 & 4 & 5 & 3 \\
+0 & 1 & 2 & 8 \\0 & 0 & 1 & 5
 \end{bmatrix} \quad
 \begin{bmatrix}
-1 & 4 & 3 & 5 \\0 & 1 & 8 & 2 \\0 & 0 & 0 & 1
+1 & 4 & 3 & 5 \\
+0 & 1 & 8 & 2 \\0 & 0 & 0 & 1
 \end{bmatrix}
 $$
 
@@ -49,10 +52,12 @@ is the REF matrix where the elements of the columns of the leading ones (other t
 
 $$
 \begin{bmatrix}
-1 & 0 & 0 & 3\\0 & 1 & 0 & 8\\0 & 0 & 1 & 5
+1 & 0 & 0 & 3\\
+0 & 1 & 0 & 8\\0 & 0 & 1 & 5
 \end{bmatrix} \quad
 \begin{bmatrix}
-1 & 0 & 5 & 0\\0 & 1 & 8 & 0\\0 & 0 & 0 & 1
+1 & 0 & 5 & 0\\
+0 & 1 & 8 & 0\\0 & 0 & 0 & 1
 \end{bmatrix}
 $$
 
@@ -104,11 +109,13 @@ $$
 \begin{aligned}
 I_{2 \times 2} &=
 \begin{bmatrix}
-1 & 0 \\0 & 1
+1 & 0 \\
+0 & 1
 \end{bmatrix} \\
 I_{3 \times 3} &=
 \begin{bmatrix}
-1 & 0 & 0 \\0 & 1 & 0 \\0 & 0 & 1
+1 & 0 & 0 \\
+0 & 1 & 0 \\0 & 0 & 1
 \end{bmatrix}
 \end{aligned}
 $$

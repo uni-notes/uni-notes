@@ -268,9 +268,11 @@ public class p03
   static String rel = "h:\\
 My Drive\\
 Notes\\
-Sem 4\\02 DSA\\
+Sem 4\\
+02 DSA\\
 Practicals\\
-Programs\\";
+Programs\\
+";
   static String inputFile = rel +
     "studentin.dat";
   static String outputFile = rel +

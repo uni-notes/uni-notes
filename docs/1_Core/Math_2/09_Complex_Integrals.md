@@ -21,7 +21,8 @@ where
 | Theorem                 |          Cauchy-Goursat          |                       Cauchy-Integral                        |               Cauchy-Integral for derivatives                |                        Cauchy Residue                        |
 | ----------------------- | :------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | Condition               | $f(z)$ is analytic inside/on $C$ | - $f(z)$ is analytic inside/on $C$<br />- $z_0$ is a point inside $C$ | - $f(z)$ is analytic inside/on $C$<br />- $z_0$ is a point inside $C$ |                                                              |
-| Identity                |      $\int_C f(z) \ dz = 0$      |    $\int_C \frac{f(z)}{z-z_0} dz = 2 \pi i \cdot f(z_0)$     | $\int_C \frac{f(z)}{(z-z_0)^{n+1}} dz = \frac{2 \pi i}{n!} \times f^{(n)}(z_0)$ | $\int_C f(z) \ dz = 2 \pi i \times \\ [\text{Sum of residues at poles lying inside/on } C]$ |
+| Identity                |      $\int_C f(z) \ dz = 0$      |    $\int_C \frac{f(z)}{z-z_0} dz = 2 \pi i \cdot f(z_0)$     | $\int_C \frac{f(z)}{(z-z_0)^{n+1}} dz = \frac{2 \pi i}{n!} \times f^{(n)}(z_0)$ | $\int_C f(z) \ dz = 2 \pi i \times \\
+ [\text{Sum of residues at poles lying inside/on } C]$ |
 | add for multiple points |                ❌                 |                              ✅                               |                              ✅                               |                                                              |
 
 | Theorem                             |                          Condition                           |                           Identity                           | add for multiple points |
@@ -61,7 +62,8 @@ The following equation is only valid if $0 < |z| < 1$
 
 $$
 \begin{aligned}
-(1+z)^{-1} &= 1 - z + z^2 - z^3 + \dots \\(1-z)^{-1} &= 1 + z + z^2 + z^3 + \dots \\(1+z)^{-2} &= 1 - 2z + 3z^2 - 4z^3 + \dots \\(1-z)^{-2} &= 1 + 2z + 3z^2 + 4z^3 + \dots
+(1+z)^{-1} &= 1 - z + z^2 - z^3 + \dots \\
+(1-z)^{-1} &= 1 + z + z^2 + z^3 + \dots \\(1+z)^{-2} &= 1 - 2z + 3z^2 - 4z^3 + \dots \\(1-z)^{-2} &= 1 + 2z + 3z^2 + 4z^3 + \dots
 \end{aligned}
 $$
 

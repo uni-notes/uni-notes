@@ -32,7 +32,8 @@ $$
 | :-----: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 |  $H_1$  |                        $\mu < \mu_0$                         |                       $\mu \ne \mu_0$                        |                        $\mu > \mu_0$                         |
 | p-value |              $F(z_c)$ <br /> $\alpha(t-\text{dist})$               |           $2[ F(-z_c) ]$ <br /> $2 \alpha(t-\text{dist})$           |              $F(-z_c)$ <br /> $\alpha(t-\text{dist})$              |
-|  Cases  | Accept $H_1$ if <br />$\begin{aligned} z_c & \le -z_\alpha \\ t_c &\le -t_{(n-1), \alpha} \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{aligned} z_c \le -z_{\alpha/2} &\text{ or } z_c \ge +z_{\alpha/2}\\ t_c \le -t_{(n-1), (\alpha/2)} &\text{ or } t_c \ge +t_{(n-1), (\alpha/2)} \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{aligned} z_c &\ge +z_\alpha \\ t_c &\ge +t_{(n-1), \alpha} \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ |
+|  Cases  | Accept $H_1$ if <br />$\begin{aligned} z_c & \le -z_\alpha \\
+ t_c &\le -t_{(n-1), \alpha} \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{aligned} z_c \le -z_{\alpha/2} &\text{ or } z_c \ge +z_{\alpha/2}\\ t_c \le -t_{(n-1), (\alpha/2)} &\text{ or } t_c \ge +t_{(n-1), (\alpha/2)} \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{aligned} z_c &\ge +z_\alpha \\ t_c &\ge +t_{(n-1), \alpha} \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ |
 
 ## Proportion
 
@@ -52,7 +53,8 @@ $$
 | :-----: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 |  $H_1$  |                          $p < p_0$                           |                         $p \ne p_0$                          |                          $p > p_0$                           |
 | p-value |                           $F(z_c)$                           |                        $2[ F(-z_c) ]$                        |                          $F(-z_c)$                           |
-|  Cases  | Accept $H_1$ if <br />$\begin{aligned}z_c &\le -z_\alpha \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{aligned} z_c \le -z_{\alpha/2} &\text{ or } z_c \ge +z_{\alpha/2} \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{aligned} z_c &\ge +z_\alpha \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ |
+|  Cases  | Accept $H_1$ if <br />$\begin{aligned}z_c &\le -z_\alpha \\
+ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{aligned} z_c \le -z_{\alpha/2} &\text{ or } z_c \ge +z_{\alpha/2} \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{aligned} z_c &\ge +z_\alpha \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ |
 
 ## Variance/SD
 
@@ -70,7 +72,8 @@ $$
 | :-----: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 |  $H_1$  |                          $p < p_0$                           |                         $p \ne p_0$                          |                          $p > p_0$                           |
 | p-value |                     1 - $\alpha$(table)                      |                     1 - $\alpha$(table)                      |                     1 - $\alpha$(table)                      |
-|  Cases  | Accept $H_1$ if <br />$\begin{aligned}\chi_c^2 &\le \chi^2_{(n-1), (1-\alpha)}  \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{aligned}\chi_c^2 \le \chi^2_{(n-1), (1-\alpha/2)} &\text{ or } \chi_c^2 \ge \chi^2_{(n-1), (\alpha/2)} \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{aligned}\chi_c^2 &\ge \chi^2_{(n-1), \alpha}  \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ |
+|  Cases  | Accept $H_1$ if <br />$\begin{aligned}\chi_c^2 &\le \chi^2_{(n-1), (1-\alpha)}  \\
+ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{aligned}\chi_c^2 \le \chi^2_{(n-1), (1-\alpha/2)} &\text{ or } \chi_c^2 \ge \chi^2_{(n-1), (\alpha/2)} \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{aligned}\chi_c^2 &\ge \chi^2_{(n-1), \alpha}  \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ |
 
 ## Errors
 

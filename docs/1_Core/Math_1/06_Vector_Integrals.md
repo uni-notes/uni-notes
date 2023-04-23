@@ -55,7 +55,8 @@ $$
 
 $$
 \begin{aligned}
-W &= \int\limits_C \vec F \cdot d \vec r \\   &= \phi(B) - \phi(A)
+W &= \int\limits_C \vec F \cdot d \vec r \\
+   &= \phi(B) - \phi(A)
 \end{aligned}
 $$
 

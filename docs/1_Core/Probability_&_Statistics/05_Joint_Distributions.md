@@ -28,7 +28,8 @@ $$
 \text{Cov} (x,y) &= E(x,y) - E(x) \cdot E(y) \\
 &= 
 \begin{cases}
->0 & \text{directly-dependent} \\0 & \text{independent}\\<0 & \text{inversely-dependent}
+>0 & \text{directly-dependent} \\
+0 & \text{independent}\\<0 & \text{inversely-dependent}
 \end{cases}
 \end{aligned}
 $$

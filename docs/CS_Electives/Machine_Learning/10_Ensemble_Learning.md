@@ -91,7 +91,8 @@ $$
 6. $$
    w_\text{new} = 
    \begin{cases}
-   \dfrac{w_\text{old}}{2(1-\epsilon)} & \text{✅ Point Classified Correctly}  \\   \dfrac{w_\text{old}}{2 \epsilon} & \text{❌ Point Misclassified}
+   \dfrac{w_\text{old}}{2(1-\epsilon)} & \text{✅ Point Classified Correctly}  \\
+   \dfrac{w_\text{old}}{2 \epsilon} & \text{❌ Point Misclassified}
    \end{cases}
    $$
 

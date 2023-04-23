@@ -35,10 +35,13 @@ $$
 
 | Distribution                 |                                     |                                                              |            $\mu$            |              $V(x)$              |
 | ---------------------------- | :---------------------------------: | :----------------------------------------------------------: | :-------------------------: | :------------------------------: |
-| Uniform                      |                                     | $f(x) = \begin{cases} \frac 1 {B-A} & A \le x \le B \\ 0 & \text{elsewhere} \end{cases}$ |      $\dfrac {B+A} 2$       |     $\dfrac 1 {12} (B-A)^2$      |
-| Normal                       |          Symmetric about 0          | $f(x) = \dfrac {1}{\sigma \sqrt{2\pi}} \exp \left\{ \dfrac {-1}{2} \left(\dfrac{x-\mu}{\sigma} \right)^2 \right\} \\ \begin{aligned} P(x<k) &= P \left(z<\frac{k-\mu}{\text{SD}} \right) \\ P(x>k) &= P(x < -k) \end{aligned}$ |              0              |                1                 |
+| Uniform                      |                                     | $f(x) = \begin{cases} \frac 1 {B-A} & A \le x \le B \\
+ 0 & \text{elsewhere} \end{cases}$ |      $\dfrac {B+A} 2$       |     $\dfrac 1 {12} (B-A)^2$      |
+| Normal                       |          Symmetric about 0          | $f(x) = \dfrac {1}{\sigma \sqrt{2\pi}} \exp \left\{ \dfrac {-1}{2} \left(\dfrac{x-\mu}{\sigma} \right)^2 \right\} \\
+ \begin{aligned} P(x<k) &= P \left(z<\frac{k-\mu}{\text{SD}} \right) \\ P(x>k) &= P(x < -k) \end{aligned}$ |              0              |                1                 |
 | t                            |              Symmetric              |                                                              |              0              |                >1                |
-| Binomial $\to$ Normal Approx |   $np \ge 10$ or $n(1-p) \ge 10$    | $\begin{aligned} x' &= x \pm 0.5 \\ z &= \frac{x' - \mu}{\text{SD}} \end{aligned}$ |            $np$             |            $np(1-p)$             |
+| Binomial $\to$ Normal Approx |   $np \ge 10$ or $n(1-p) \ge 10$    | $\begin{aligned} x' &= x \pm 0.5 \\
+ z &= \frac{x' - \mu}{\text{SD}} \end{aligned}$ |            $np$             |            $np(1-p)$             |
 | Gamma                        |     time between $n$ occurences     | $f(x) = \dfrac{1}{B^\alpha \lceil\alpha} \cdot x^{\alpha-1} \cdot e^{-\frac x \beta}$ |       $\alpha \beta$        |         $\alpha \beta^2$         |
 | Exponential                  | time between successive/consecutive |            $f(x) = \lambda \cdot e^{-\lambda x}$             | $\dfrac 1 \lambda  = \beta$ | $\dfrac 1 {\lambda^2} = \beta^2$ |
 

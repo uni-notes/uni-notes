@@ -79,8 +79,10 @@ class p05
 	static String outputFile = "h:\\
 My Drive\\
 Notes\\
-Sem 4\\02 DSA\\
-Practicals\\"
+Sem 4\\
+02 DSA\\
+Practicals\\
+"
       + "mergeout.txt";
 	
 	static float sortTime;

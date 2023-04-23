@@ -35,7 +35,8 @@ it’s like a reality in Rick and Morty. We can assume every thing that can/cann
    
 $$
 \begin{aligned}
-&\Box(\phi) \\   \underbrace{}_\text{not here}
+&\Box(\phi) \\
+   \underbrace{}_\text{not here}
 &\Box ( \lnot \phi)
 \end{aligned}
 $$

@@ -4,7 +4,8 @@ Consider a 2nd order DE
 
 $$
 \begin{aligned}
-y'' + py' + qy &= R(x) \\(D^2 + pD + q)y &= R(x)
+y'' + py' + qy &= R(x) \\
+(D^2 + pD + q)y &= R(x)
 \end{aligned}
 $$
 
@@ -67,13 +68,15 @@ $$
 
 $$
 \begin{aligned}
-(1+x)^{-1} &= 1 - x + x^2 - x^3 + \dots \\(1-x)^{-1} &= 1 + x + x^2 + x^3 + \dots
+(1+x)^{-1} &= 1 - x + x^2 - x^3 + \dots \\
+(1-x)^{-1} &= 1 + x + x^2 + x^3 + \dots
 \end{aligned}
 $$
 
 $$
 \begin{aligned}
-(1+x)^{-2} &= 1 - 2x + 3x^2 - 4x^3 + \dots \\(1-x)^{-2} &= 1 + 2x + 3x^2 + 4x^3 + \dots
+(1+x)^{-2} &= 1 - 2x + 3x^2 - 4x^3 + \dots \\
+(1-x)^{-2} &= 1 + 2x + 3x^2 + 4x^3 + \dots
 \end{aligned}
 $$
 
@@ -82,7 +85,8 @@ $$
 (1+x)^{-n}
 &= 1 - nx +
 \frac{n(n+1) x^2}{2!} - 
-\frac{n(n+1)(n+2) x^3}{3!} + \cdots\\(1-x)^{-n}
+\frac{n(n+1)(n+2) x^3}{3!} + \cdots\\
+(1-x)^{-n}
 &= 1 + nx +
 \frac{n(n+1) x^2}{2!} +
 \frac{n(n+1)(n+2) x^3}{3!} + \cdots

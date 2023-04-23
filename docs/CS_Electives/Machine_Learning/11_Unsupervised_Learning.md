@@ -101,18 +101,23 @@ $$
 $$
 \begin{aligned}
 \text{Let }
-N_k &= \sum_{n=1}^N \gamma(z_{nk}) \\   N &= \text{Sample Size} \\   
-\\   
+N_k &= \sum_{n=1}^N \gamma(z_{nk}) \\
+   N &= \text{Sample Size} \\   
+\\
+   
 \mu_k^\text{new} &=
 \frac{1}{N_k}
 \sum_{n=1}^N \gamma(z_{nk}) x_n
-\\   \Sigma_k^\text{new} &=
+\\
+   \Sigma_k^\text{new} &=
 \frac{1}{N_k}
 \sum_{n=1}^N \gamma(z_{nk})
 (x_n - \mu_k^\text{new})
 (x_n - \mu_k^\text{new})^T
-\\   
-\pi_k^\text{new} &= \frac{N_k}{N} \\   \end{aligned}
+\\
+   
+\pi_k^\text{new} &= \frac{N_k}{N} \\
+   \end{aligned}
 $$
    
 4. Evaluate log likelihood
@@ -154,9 +159,12 @@ Principal Component Analysis
    \begin{aligned}
    P_{ij} &= {\text{PC}_i}^T
    \begin{bmatrix}
-   x_j - \bar x \\   y_j - \bar y
-   \end{bmatrix} \\   
-   i &= \text{Which PC we are using} \\   j &\in [1, n] \\   n &= \text{Sample Size}
+   x_j - \bar x \\
+   y_j - \bar y
+   \end{bmatrix} \\
+   
+   i &= \text{Which PC we are using} \\
+   j &\in [1, n] \\   n &= \text{Sample Size}
    \end{aligned}
    $$
 

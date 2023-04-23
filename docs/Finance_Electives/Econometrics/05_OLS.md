@@ -42,7 +42,8 @@ $$
 
 3. $$
    \begin{aligned}
-   \sum y_i &= n \hat \beta_1 + \hat \beta_2 \sum x_i \\   
+   \sum y_i &= n \hat \beta_1 + \hat \beta_2 \sum x_i \\
+   
    \sum y_i x_i &= n \hat \beta_1 + \hat \beta_2 \sum x_i
    \end{aligned}
    $$
@@ -418,7 +419,8 @@ Measure of degree of association between 2 variables
 Helps understand if both variables have some probability distribution
 
 $$
-r = \sqrt{R^2} \\ R^2 = (r)^2
+r = \sqrt{R^2} \\
+ R^2 = (r)^2
 $$
 
 ==**Above equation $\refeq{randr2}$ is only for uni-variate models**==
