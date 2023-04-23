@@ -18,10 +18,9 @@
 
 - State space size : total number of states. Counted using fundamental counting principle.
 
-| ![State space graph](assets/State%20space%20graph.png)  | ![Search tree](assets/Search%20tree.png) |
+| State Space Graph  | Search Tree |
 |-|-|
-| ![State Space](assets/State%20space%20graph.png)  | ![Search Tree](assets/Search%20tree.png) |
-
+| ![State space graph](assets/State%20space%20graph.png)  | ![Search tree](assets/Search%20tree.png) |
 
 ## Uninformed Search 
 
