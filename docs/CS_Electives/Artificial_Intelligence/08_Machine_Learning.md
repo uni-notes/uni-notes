@@ -1,49 +1,11 @@
 ## Machine Learning
 
-Machine learning is a part of AI which provides intelligence to machines with the ability to automatically learn with experiences without being explicitly programmed.
+For more insight, refer to [Machine Learning](../Machine_Learning/01_Intro.md)
 
-> For more insight, refer Machine Learning course
+### Neurons and Neural Networks
 
+Kindly refer [Artificial Neural Networks](../Machine_Learning/12_ANN.md)
 
-### Neuron
-Neural networks are loosely based on how our human brain works, and the basic unit of a neural network is a neuron.
-
-A neuron does two things -  
-1. Receive input from other neurons and combine them together
-2. Perform some kind of transformation to give the neuron’s output
-
-We usually take a mathematical combination of inputs and apply an activation function to acheive an output.
-
-Example - A linear combination of 3 inputs $x_1, x_2$ and $x_3$ can be written as  
-$b + w_1x_1 + w_2x_2 + w_3x_3$  
-where $w_1,w_2\;and\;w_3$ are weights and $w_0$ is bias.
-
-Common examples of activation function -  
-- Sigmoid Function - A function which ‘squeezes’ all the initial output to be between 0 and 1
-- tanh Function - A function which ‘squeezes’ all the initial output to be between -1 and 1
-- ReLU Function - If the initial output is negative, then output 0. If not, do nothing to the initial output
-
-Visual representation of a neuron - 
-
-![Neruon diagram](assets/neuron.png)
-
-### Neural Networks
-
-A neural network is simply made out of layers of neurons, connected in a way that the input of one layer of neuron is the output of the previous layer of neurons (after activation)
-
-![Neural network visualization](assets/neural%20network.png)
-
-We use a metric known as loss function which describes how badly the model is performing based on how far off our predictions are from the actual value in our data-set.
-
-Our task is to come up with an algorithm to find the best parameters (i.e. weights and bias) in minimizing this loss function
-
-Once a loss function is chosen, we use gradient descent to to find the right parameters. The idea behind gradient descent is to move the parameters slowly in the direction where the loss will decrease.
-
-$NEW\;PARAMETERES = OLD\;PARAMETERS - STEP\;SIZE \times GRADIENT$
-
-Once loss has been reduced, our model can encounter overfitting. Overfitting occurs when our model has fitted so well to the training dataset that it has failed to generalize to unseen examples. This is characterized by a high test loss and a low train loss. 
-
-Use strategies such as L2 regularization, Early stopping and dropout to deal with overfitting
 
 ### RNN
 
