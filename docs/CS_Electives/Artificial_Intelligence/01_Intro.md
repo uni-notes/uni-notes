@@ -101,14 +101,15 @@ Steps for a company to transform into an AI company
    1. use AI to create an advantage specific to the required sector
    2. aligned with ‘Virtuous Cycle of AI’
 
-      ```mermaid
-      flowchart LR
+```mermaid
+flowchart LR
       
-      a[More Data] -->
-      b[Better Product] -->
-      c[More Users] -->
-      a
-      ```
+a[More Data] -->
+b[Better Product] -->
+c[More Users] -->
+a
+```
+
    3. data strategy
       1. strategic data acquisition
       2. unified data warehouse
