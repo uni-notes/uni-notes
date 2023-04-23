@@ -21,7 +21,7 @@ Artificial Intelligence ( abbreviated as AI ) can be defined as a branch of comp
 
 Artificial Intelligence is the superset of all other forms of smart machine learning algorithms and models.
 
-![Venn Diagram for AI, ML, DL](assets\The_relationship_and_main_types_of_artificial_intelligence,_machine_learning_and_deep_learning.png)
+![Venn Diagram for AI, ML, DL](assets/The_relationship_and_main_types_of_artificial_intelligence,_machine_learning_and_deep_learning.png)
 
 ### But why Artificial Intelligence
 
