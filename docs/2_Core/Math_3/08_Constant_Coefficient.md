@@ -11,7 +11,8 @@ Consider $y = e^{mx}$ as a possible solution, where $m$ = unknown constant. So o
 Then
 
 $$
-y' = m \cdot e^{mx} \\y' = m^2 \cdot e^{mx} \\
+y' = m \cdot e^{mx} \\
+y' = m^2 \cdot e^{mx} \\
 \implies
 (m^2 \cdot e^{mx}) + p(m \cdot e^{mx}) + qe^{mx} = 0 \\
 e^{mx} ( m^2 + pm + q ) = 0 \\

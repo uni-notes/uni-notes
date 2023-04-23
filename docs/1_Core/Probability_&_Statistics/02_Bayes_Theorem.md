@@ -17,7 +17,8 @@ where
 $$
 \begin{aligned}
 P(A_1|B)
-&= \frac{P(A_1 \cap B)}{P(B)} \\&= \frac{P(B | A_1) \cdot P(A_1)}{\sum\limits_{i=1}^{n} P(B|A_i) \cdot P(A_i)} \\
+&= \frac{P(A_1 \cap B)}{P(B)} \\
+&= \frac{P(B | A_1) \cdot P(A_1)}{\sum\limits_{i=1}^{n} P(B|A_i) \cdot P(A_i)} \\
 \end{aligned}
 $$
 

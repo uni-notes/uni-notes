@@ -99,14 +99,17 @@ No of cache blocks $= 2^something$
 
 $$
 \begin{aligned}
-&\text{No of index bits} \\&= \text{No of bits for Total Cache Size} - 
+&\text{No of index bits} \\
+&= \text{No of bits for Total Cache Size} - 
 \text{No of bits for Offset}
 \end{aligned}
 $$
 
 $$
 \begin{aligned}
-&\text{No of tag bits} \\&= \text{No of bits for Total Memory Size} \\& \ -\Big(
+&\text{No of tag bits} \\
+&= \text{No of bits for Total Memory Size} \\
+& \ -\Big(
 \text{No of bits for Index} +
 \text{No of bits for Offset}
 \Big)
@@ -156,7 +159,8 @@ Particular block address is mapped to a particular set
 $$
 \begin{aligned}
 \text{No of sets } N
-&= \frac{\text{Total no of blocks}}{n} \\&= \frac{1}{n} \times \frac{\text{Cache Size in bytes}}{\text{Size of each block in bytes}}
+&= \frac{\text{Total no of blocks}}{n} \\
+&= \frac{1}{n} \times \frac{\text{Cache Size in bytes}}{\text{Size of each block in bytes}}
 \end{aligned}
 $$
 

@@ -53,7 +53,9 @@ $$
 \begin{aligned}
 W_\text{net, out} &= W_{12} + W_{23} + W_{34} + W_{41} \\
 \eta
-&= \frac{W_\text{net, out}}{Q_\text{H}} \\&= 1 - \frac{Q_\text{L}}{Q_\text{H}} \\&= 1 - \frac{T_L}{T_H}
+&= \frac{W_\text{net, out}}{Q_\text{H}} \\
+&= 1 - \frac{Q_\text{L}}{Q_\text{H}} \\
+&= 1 - \frac{T_L}{T_H}
 \end{aligned}
 $$
 

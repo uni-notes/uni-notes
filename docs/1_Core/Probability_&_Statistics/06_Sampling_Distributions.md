@@ -58,7 +58,8 @@ $$
 
 $$
 \begin{aligned}
-n &= \left( \frac{z_{\alpha/\small 2} \cdot \sigma}{w} \right)^2 \\&= \left( \frac{z_{\alpha/\small 2} \cdot s}{w} \right)^2
+n &= \left( \frac{z_{\alpha/\small 2} \cdot \sigma}{w} \right)^2 \\
+&= \left( \frac{z_{\alpha/\small 2} \cdot s}{w} \right)^2
 \end{aligned}
 $$
 

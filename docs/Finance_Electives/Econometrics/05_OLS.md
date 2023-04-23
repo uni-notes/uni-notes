@@ -7,7 +7,8 @@ Based on Principle of Least Squares
 $$
 \begin{aligned}
 u_i
-&= y_i - \hat y_i \\&= y_i - (\hat \beta_0 + \hat \beta_1 x_i)
+&= y_i - \hat y_i \\
+&= y_i - (\hat \beta_0 + \hat \beta_1 x_i)
 \end{aligned}
 $$
 
@@ -187,7 +188,8 @@ Given the assumptions of CLRM(Classical Linear Regression Models), OLS estimator
 $$
 \begin{aligned}
 \hat \beta_2
-&= \frac{\sum x_i y_i}{\sum x_i^2} \\&= \sum k_i y_i \\
+&= \frac{\sum x_i y_i}{\sum x_i^2} \\
+&= \sum k_i y_i \\
 k_i &= \frac{x_i}{\sum x_i^2}
 \end{aligned}
 $$
@@ -217,12 +219,15 @@ $\beta_2$ is unbiased estimator
 $$
 \begin{aligned}
 \sigma^2(\hat \beta_2)
-&= E[\hat \beta_2 - E(\hat \beta_2)]^2 \\&= E[\hat \beta_2 - \beta_2]^2 \\
-&= E \left[ \left( \sum k_i u_i \right)^2 \right] \\&= E[k_1^2 u_1^2 + k_2^2 u_2^2 + \dots +
+&= E[\hat \beta_2 - E(\hat \beta_2)]^2 \\
+&= E[\hat \beta_2 - \beta_2]^2 \\
+&= E \left[ \left( \sum k_i u_i \right)^2 \right] \\
+&= E[k_1^2 u_1^2 + k_2^2 u_2^2 + \dots +
 2 k_1 k_2 \underbrace{u_1 u_2}_{= \ 0}
 ]
 \quad (E[u_i, u_j] = 0) \\
-&= \sigma^2 \sum k_i^2 \\&= \frac{\sigma^2}{\sum x_i^2}
+&= \sigma^2 \sum k_i^2 \\
+&= \frac{\sigma^2}{\sum x_i^2}
 \end{aligned}
 $$
 
@@ -281,7 +286,9 @@ If standard error of $\beta_0$ or $\beta_1$ or $\beta_2$, then substitute them a
 $$
 \begin{aligned}
 \text{SEE}
-&\propto \sigma \\& \propto \frac{1}{\sum x_i^2} \\& \propto \frac{1}{n}
+&\propto \sigma \\
+& \propto \frac{1}{\sum x_i^2} \\
+& \propto \frac{1}{n}
 \end{aligned}
 $$
 
@@ -340,7 +347,8 @@ $$
 $$
 \begin{aligned}
 R^2
-&= 1 - \frac{\text{RSS}}{\text{TSS}} \\&= 1 - \frac{}{}
+&= 1 - \frac{\text{RSS}}{\text{TSS}} \\
+&= 1 - \frac{}{}
 \end{aligned}
 $$
 

@@ -15,8 +15,10 @@ $$
 
 $$
 \begin{aligned}
-F(x) &= P(X \le x) \\&= \int\limits_{- \infty}^x f(x) \ \mathrm{d} x \\
-P(a \le X \le b) &= P(a < x < b) \\&= \int\limits_a^b f(x) \ \mathrm{d} x
+F(x) &= P(X \le x) \\
+&= \int\limits_{- \infty}^x f(x) \ \mathrm{d} x \\
+P(a \le X \le b) &= P(a < x < b) \\
+&= \int\limits_a^b f(x) \ \mathrm{d} x
 \end{aligned}
 $$
 

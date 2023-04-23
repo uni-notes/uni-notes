@@ -47,9 +47,11 @@ $$
 \begin{aligned}
 f(z) &= \sum_0^\infty a_n (z-z_0)^n + \underbrace{
 	\sum_1^\infty \frac{b_n}{(z - z_0)^n}
-}_\text{Principal Part} \\a_n &= \frac{1}{2 \pi i} \times \int \frac{f(z)}{(z-z_0)^{
+}_\text{Principal Part} \\
+a_n &= \frac{1}{2 \pi i} \times \int \frac{f(z)}{(z-z_0)^{
 	\textcolor{orange}{n}+1
-}} \\b_n &= \frac{1}{2 \pi i} \times \int \frac{f(z)}{(z-z_0)^{
+}} \\
+b_n &= \frac{1}{2 \pi i} \times \int \frac{f(z)}{(z-z_0)^{
 	\textcolor{orange}{-n}+1
 }} 
 \end{aligned}

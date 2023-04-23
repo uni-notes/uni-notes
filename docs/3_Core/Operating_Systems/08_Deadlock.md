@@ -62,7 +62,8 @@ Let
 
 $$
 \text{Need}[i][j] = \text{Max}[i][j] - \text{Allocation}[i][j] \\
-i \in [1, n],\\j \in [1, m]
+i \in [1, n],\\
+j \in [1, m]
 $$
 
 ### Vector Comparison

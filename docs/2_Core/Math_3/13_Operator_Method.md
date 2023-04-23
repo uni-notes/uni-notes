@@ -18,7 +18,8 @@ $$
 \begin{aligned}
 \phi(D) y &= R(x) \\
 \phi(D)
-&= D^2 + pD + q \\&=(D-m_1)(D-m_2)
+&= D^2 + pD + q \\
+&=(D-m_1)(D-m_2)
 \end{aligned}
 $$
 
@@ -56,7 +57,9 @@ $$
 $$
 \begin{aligned}
 \phi'(a) &= \left\{ \frac{d \phi(D)}{dD} \right\}_{D \to a} \\
-\phi''(a) &= \left\{ \frac{d^2 \phi(D)}{d D^2} \right\}_{D \to a} \\f(-a^2) &= \left\{ \frac{d f(D^2)}{dD} \right\}_{D^2 \to -a^2} \\f'(-a^2) &= \left\{ \frac{d^2 f(D^2)}{d D^2} \right\}_{D^2 \to -a^2} \\
+\phi''(a) &= \left\{ \frac{d^2 \phi(D)}{d D^2} \right\}_{D \to a} \\
+f(-a^2) &= \left\{ \frac{d f(D^2)}{dD} \right\}_{D^2 \to -a^2} \\
+f'(-a^2) &= \left\{ \frac{d^2 f(D^2)}{d D^2} \right\}_{D^2 \to -a^2} \\
 \end{aligned}
 $$
 
@@ -102,12 +105,14 @@ $$
 $$
 \begin{aligned}
 y_p
-&= \frac{1}{\phi(D)} R(x) \\&= \underbrace{
+&= \frac{1}{\phi(D)} R(x) \\
+&= \underbrace{
 	\left( \frac{1}{D-m_1} \right)
 	\underbrace{
 		\frac{1}{D-m_2} R(x)
 	}_{R_1(x)}
-}_{R_2(x)}\\&= \frac{1}{D-m} R(x)
+}_{R_2(x)}\\
+&= \frac{1}{D-m} R(x)
 \end{aligned}
 $$
 
@@ -118,7 +123,9 @@ $$
 Dy - my &= R(x) \\
 \frac{dy}{dx} - my &= R(x) \\
 IF
-&= e^{\int P(x) dx} \\&= e^{\int -m dx} \\&= e^{-mx}
+&= e^{\int P(x) dx} \\
+&= e^{\int -m dx} \\
+&= e^{-mx}
 \end{aligned}
 $$
 
@@ -126,7 +133,9 @@ $$
 
 $$
 \begin{aligned}
-y \times IF &= \int R(x) \cdot IF \cdot dx \\y e^{-mx} &= \int R(x) \cdot e^{-mx} \cdot dx \\y &= e^{mx} \int R(x) \cdot e^{-mx} \cdot dx
+y \times IF &= \int R(x) \cdot IF \cdot dx \\
+y e^{-mx} &= \int R(x) \cdot e^{-mx} \cdot dx \\
+y &= e^{mx} \int R(x) \cdot e^{-mx} \cdot dx
 \end{aligned}
 $$
 

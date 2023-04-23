@@ -61,10 +61,15 @@ $$
 \theta_0 +
 \theta_1 x_1 +
 \dots +
-\theta_n x_n \\&=\theta^T X \\
-\theta^T &= [\theta_0, \theta_1, \theta_2, \dots, \theta_n] \\X &= \begin{bmatrix}
-1 \\x_1 \\x_2 \\
-\dots \\x_n
+\theta_n x_n \\
+&=\theta^T X \\
+\theta^T &= [\theta_0, \theta_1, \theta_2, \dots, \theta_n] \\
+X &= \begin{bmatrix}
+1 \\
+x_1 \\
+x_2 \\
+\dots \\
+x_n
 \end{bmatrix}
 \end{aligned}
 $$

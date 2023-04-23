@@ -140,19 +140,23 @@ eg: $(D_6, /)$
 ### Examples
 
 $$
-\left(P(S), \subseteq\right)\\A, B \in P(S): A \lor B = A \cup B, A \land B = A \cap B
+\left(P(S), \subseteq\right)\\
+A, B \in P(S): A \lor B = A \cup B, A \land B = A \cap B
 $$
 
 $$
-\left(P(S), \supseteq \right)\\A, B \in P(S): A \lor B = A \cap B, A \land B = A \cup B
+\left(P(S), \supseteq \right)\\
+A, B \in P(S): A \lor B = A \cap B, A \land B = A \cup B
 $$
 
 $$
-\left(P(S), \le\right)\\A, B \in P(S): A \lor B = \text{max}(A,B), A \land B = \text{min}(A,B)
+\left(P(S), \le\right)\\
+A, B \in P(S): A \lor B = \text{max}(A,B), A \land B = \text{min}(A,B)
 $$
 
 $$
-\left(D_n, / \right)\\A, B \in D_n: A \lor B = \text{lcf}(A,B), A \land B = \text{hcf}(A,B)
+\left(D_n, / \right)\\
+A, B \in D_n: A \lor B = \text{lcf}(A,B), A \land B = \text{hcf}(A,B)
 $$
 
 ## Semi-Lattice

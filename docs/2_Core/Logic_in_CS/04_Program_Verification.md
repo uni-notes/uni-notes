@@ -30,11 +30,17 @@ $$
 
 $$
 \begin{aligned}
-& \top \\& \qquad \phi_0 & (implied)\\& C_1 \\& \qquad \phi_1 & \text{(assignment)}\\
-& C_2 \\& \qquad \phi_2 & \text{(assignment)}\\
+& \top \\
+& \qquad \phi_0 & (implied)\\
+& C_1 \\
+& \qquad \phi_1 & \text{(assignment)}\\
+& C_2 \\
+& \qquad \phi_2 & \text{(assignment)}\\
 & \vdots \\
-& C_{n-1} \\& \qquad \phi_{n-1} & \text{(assignment)}\\
-& C_n \\& \qquad \phi_n & \text{(assignment)}\\
+& C_{n-1} \\
+& \qquad \phi_{n-1} & \text{(assignment)}\\
+& C_n \\
+& \qquad \phi_n & \text{(assignment)}\\
 \end{aligned}
 $$
 

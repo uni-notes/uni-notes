@@ -56,7 +56,8 @@ $$
 
 $$
 \begin{aligned}
-\text{Capactity} &= m \times 2^n \text{ bits} \\&= \frac{m \times 2^n}{8 \times 1024} \text{ KiloBytes}
+\text{Capactity} &= m \times 2^n \text{ bits} \\
+&= \frac{m \times 2^n}{8 \times 1024} \text{ KiloBytes}
 \end{aligned}
 $$
 
@@ -282,10 +283,14 @@ there is no 0 for outputs
 
 $$
 \begin{aligned}
-F_1(T) &= \sum (0,1, 2, 4) \\&= A'B' + B'C' + A'C' \\
-F_1(C) &= \bigg( \sum (3, 5, 6, 7) \bigg)' \\&=  \\
-F_2(T) &= \sum (0, 5, 6, 7) \\&= \\
-F_2(c) &= \bigg( \sum (1, 2, 3, 4) \bigg)' \\&=
+F_1(T) &= \sum (0,1, 2, 4) \\
+&= A'B' + B'C' + A'C' \\
+F_1(C) &= \bigg( \sum (3, 5, 6, 7) \bigg)' \\
+&=  \\
+F_2(T) &= \sum (0, 5, 6, 7) \\
+&= \\
+F_2(c) &= \bigg( \sum (1, 2, 3, 4) \bigg)' \\
+&=
 \end{aligned}
 $$
 

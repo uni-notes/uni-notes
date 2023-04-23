@@ -30,7 +30,8 @@ Slope $= \frac 1 {\alpha_2}$
 $$
 \text{Demand as a function of price}\\
 \begin{aligned}
-D &= f(P) \\&= \alpha_1 - \alpha_2 P \\
+D &= f(P) \\
+&= \alpha_1 - \alpha_2 P \\
 \alpha_2 &= -\frac{\partial D}{\partial P}
 \end{aligned}
 $$

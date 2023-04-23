@@ -228,7 +228,8 @@ No of programs kept in primary memory
 
 $$
 \begin{aligned}
-&\text{Overhead} \% \\&=
+&\text{Overhead} \% \\
+&=
 \frac{\text{Scheduling Decision Time}}{\text{Process Execution Time} + \text{Scheduling Decision Time}} \times 100 \%
 \end{aligned}
 $$

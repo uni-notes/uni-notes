@@ -43,7 +43,9 @@ $$
 	y'
 \Big] +
 \underbrace{n(n+1)}_{\lambda} \ y
-= 0 \\P(x) = 1-x^2 \\Q(x) = 1 \\ R(x) = 0 \\
+= 0 \\
+P(x) = 1-x^2 \\
+Q(x) = 1 \\ R(x) = 0 \\
 \lambda = n(n+1)
 $$
 
@@ -58,7 +60,8 @@ $n > 0$ because $n \le 0$ will give trivial solution.
 $$
 \begin{aligned}
 y'' + \lambda y &= 0 \\
-y(a) &= 0 \\y(b) &= 0 \\
+y(a) &= 0 \\
+y(b) &= 0 \\
 a & \ne b
 \end{aligned}
 $$

@@ -58,7 +58,12 @@ public class p01
 
   public static void push() throws FileNotFoundException
   {
-    String inputFile = "h:\\My Drive\\Notes\\Sem 4\\02 DSA\\Practicals\\Programs\\"
+    String inputFile = "h:\\
+My Drive\\
+Notes\\
+Sem 4\\02 DSA\\
+Practicals\\
+Programs\\"
       + "studentin.dat";
     Scanner readMyFile = new Scanner( new File(inputFile) );
 
@@ -76,7 +81,12 @@ public class p01
 
   public static void pop() throws FileNotFoundException
   {
-    String outputFile = "h:\\My Drive\\Notes\\Sem 4\\02 DSA\\Practicals\\Programs\\"
+    String outputFile = "h:\\
+My Drive\\
+Notes\\
+Sem 4\\02 DSA\\
+Practicals\\
+Programs\\"
       + "studentout.dat";
     PrintWriter writeToMyFile = new PrintWriter( new File(outputFile) );
 

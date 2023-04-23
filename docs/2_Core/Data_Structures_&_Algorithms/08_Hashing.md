@@ -35,7 +35,11 @@ Dividend = (Divisor * Quotient) + Remainder
 
 $$
 \begin{aligned}
-&  10 \% 3 \\&= 10 - \left( 3 * \frac{10}{3} \right) \\&= 10 - ( 3 * 3 ) \\&= 10 - 9 \\&= 1
+&  10 \% 3 \\
+&= 10 - \left( 3 * \frac{10}{3} \right) \\
+&= 10 - ( 3 * 3 ) \\
+&= 10 - 9 \\
+&= 1
 \end{aligned}
 $$
 

@@ -94,7 +94,10 @@ $$
 \text{Cov}(x, y)
 &= \frac{1}{n} \sum_{k=1}^n (x_k - \bar x) (y_k - \bar y) \\
 \implies \text{Cov}(x, x)
-&= \frac{1}{n} \sum_{k=1}^n (x_k - \bar x) (y_k - \bar y) \\&= \frac{1}{n} \sum_{k=1}^n (x_k - \bar x) (x_k - \bar x) \\&= \frac{1}{n} \sum_{k=1}^n (x_k - \bar x)^2 \\&= \sigma^2_x
+&= \frac{1}{n} \sum_{k=1}^n (x_k - \bar x) (y_k - \bar y) \\
+&= \frac{1}{n} \sum_{k=1}^n (x_k - \bar x) (x_k - \bar x) \\
+&= \frac{1}{n} \sum_{k=1}^n (x_k - \bar x)^2 \\
+&= \sigma^2_x
 \end{aligned}
 $$
 
@@ -122,13 +125,15 @@ r(x, x)
 \text{Cov}(x, x)
 }{
 \sigma_x \sigma_x
-} \\&= \frac{
+} \\
+&= \frac{
 \frac{1}{n} \sum_{k = 1}^n (x_k - \bar x) (x_k - \bar x)
 }{
 \left(
 \sqrt{ \frac{1}{n} (x_k - \bar x)^2 }
 \right)^2
-} \\&= 1
+} \\
+&= 1
 \end{aligned}
 $$
 

@@ -4,7 +4,9 @@ Goal is to obtain hyperplane farthest from all sample points
 
 $$
 \begin{aligned}
-\text{Distance } & \text{between edge point and line} \\&= \frac{|w^t x_i + w_0|}{||w||} \\&=\frac{1}{||w||} \\
+\text{Distance } & \text{between edge point and line} \\
+&= \frac{|w^t x_i + w_0|}{||w||} \\
+&=\frac{1}{||w||} \\
 \implies m &= \frac{2}{||w||}
 \end{aligned}
 $$
@@ -13,7 +15,8 @@ Goal is to maximize ‘margin’ $m$ (distance between classes), subject to the 
 
 $$
 \begin{cases}
-w^t x_i + w_0 \ge 1, & x_i > 0 \\w^t x_i + w_0 \le -1, & x_i <0 
+w^t x_i + w_0 \ge 1, & x_i > 0 \\
+w^t x_i + w_0 \le -1, & x_i <0 
 \end{cases}
 $$
 

@@ -48,7 +48,8 @@ Consider the point $P(x, y) \iff P(r, \theta)$
 
 $$
 \begin{aligned}
-x &= r \cos\theta \\y &= r \sin\theta \\
+x &= r \cos\theta \\
+y &= r \sin\theta \\
 r^2 &= x^2 + y^2 \\
 \theta &= \tan^{-1} \left( \frac y x \right)
 \end{aligned}
@@ -74,7 +75,8 @@ $P(r, \theta)$ and $P'(r, - \theta)$ lie on same graph
 
 $$
 r = a \pm b \cos\theta \\
-\text{ or } \\r = a \pm b \sin\theta
+\text{ or } \\
+r = a \pm b \sin\theta
 $$
 
 | $\frac a b$ | Type       |
@@ -87,7 +89,9 @@ $$
 
 $$
 \begin{aligned}
-r &= a \cos(n\theta) \\&\text{ or } \\r &= a \sin(n\theta) \\
+r &= a \cos(n\theta) \\
+&\text{ or } \\
+r &= a \sin(n\theta) \\
 \text{No of petals } N &= \begin{cases}
 n, &  n = \text{odd} \\2n, & n = \text{even}
 \end{cases} \\
@@ -105,7 +109,8 @@ $$
 
 $$
 r^2 = a \cos\theta \\
-\text{ or } \\r^2 = a \sin\theta \\
+\text{ or } \\
+r^2 = a \sin\theta \\
 $$
 
 ### Straight Line
@@ -130,7 +135,8 @@ $$
 #### Radius passing through pole
 
 $$
-r_0 = a\\r = 2a cos(\theta - \theta_0)
+r_0 = a\\
+r = 2a cos(\theta - \theta_0)
 $$
 
 #### Center lies on axis

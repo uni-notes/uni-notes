@@ -48,7 +48,9 @@ L = \phi \implies
 L^* &= \{ \epsilon \} \\
 \text{How?} \implies
 L^*
-&= L^0 \cup L^1 \cup \dots \\&= \{ \epsilon \} \cup \phi \cup \dots \\&= \{ \epsilon \}
+&= L^0 \cup L^1 \cup \dots \\
+&= \{ \epsilon \} \cup \phi \cup \dots \\
+&= \{ \epsilon \}
 \end{aligned}
 $$
 

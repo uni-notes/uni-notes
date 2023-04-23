@@ -15,7 +15,8 @@ The entire distribution is divided into 2 regions
 
 $$
 \begin{aligned}
-H_0: \mu &= \mu_0 & &\text{(Null Hypothesis)} \\H_1: \mu &< \mu_0, \mu \ne \mu_0, \mu > \mu_0 & &\text{(Alternative Hypothesis)} \\
+H_0: \mu &= \mu_0 & &\text{(Null Hypothesis)} \\
+H_1: \mu &< \mu_0, \mu \ne \mu_0, \mu > \mu_0 & &\text{(Alternative Hypothesis)} \\
 \end{aligned}
 $$
 
@@ -37,7 +38,9 @@ $$
 
 $$
 \begin{aligned}
-H_0: p &= p_0 & &\text{(Null Hypothesis)} \\H_1: p &< p_0, p \ne p_0, p > p_0 & &\text{(Alternative Hypothesis)} \\z_c &= \frac{\hat p - p_0}{
+H_0: p &= p_0 & &\text{(Null Hypothesis)} \\
+H_1: p &< p_0, p \ne p_0, p > p_0 & &\text{(Alternative Hypothesis)} \\
+z_c &= \frac{\hat p - p_0}{
 	\sqrt{ \frac{p_0(1-p_0)}{n} }
 } & & \hat p = \frac x n = \text{Estimated value of } p\\
 \end{aligned}
@@ -55,7 +58,8 @@ $$
 
 $$
 \begin{aligned}
-H_0: \sigma^2 &= \sigma^2_0 & &\text{(Null Hypothesis)} \\H_1: \sigma^2 &< \sigma^2_0, \sigma^2 \ne \sigma^2_0, \sigma^2 > \sigma^2_0 & &\text{(Alternative Hypothesis)} \\
+H_0: \sigma^2 &= \sigma^2_0 & &\text{(Null Hypothesis)} \\
+H_1: \sigma^2 &< \sigma^2_0, \sigma^2 \ne \sigma^2_0, \sigma^2 > \sigma^2_0 & &\text{(Alternative Hypothesis)} \\
 \chi_c^2 &= (n-1) \frac{s^2}{\sigma_0^2}
 \end{aligned}
 $$

@@ -2,7 +2,9 @@
 
 $$
 \begin{aligned}
-r &= \left\lceil \frac n k \right \rceil \\n &= k(r-1) + 1 \\k &= \left\lceil \frac n r \right \rceil \\
+r &= \left\lceil \frac n k \right \rceil \\
+n &= k(r-1) + 1 \\
+k &= \left\lceil \frac n r \right \rceil \\
 \end{aligned}
 $$
 

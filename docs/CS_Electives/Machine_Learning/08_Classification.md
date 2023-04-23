@@ -18,7 +18,9 @@ Using Sigmoid Function
 $$
 \begin{aligned}
 \hat y
-&= \sigma(\theta^T x) \\&= \frac{1}{1 + e^{(\theta^T x)}} \\&= P(y=1|x)
+&= \sigma(\theta^T x) \\
+&= \frac{1}{1 + e^{(\theta^T x)}} \\
+&= P(y=1|x)
 \end{aligned}
 $$
 
@@ -58,7 +60,8 @@ $$
 C(\hat y, y)
 &= \begin{cases}
 - \log \| 1 - \hat y \|, & y=0 \\- \log \| \hat y \|, & y=1
-\end{cases} \\J(\theta)
+\end{cases} \\
+J(\theta)
 &= \frac{-1}{m}
 \sum
 \end{aligned}
@@ -300,7 +303,8 @@ Used for classifying continuous data
 $$
 \begin{aligned}
 P(C|x)
-& \propto P(x|C) \times P(C) \\& \propto N(x; \mu_c, \sigma^2_c) P(C) \\
+& \propto P(x|C) \times P(C) \\
+& \propto N(x; \mu_c, \sigma^2_c) P(C) \\
 \underbrace{P(C)}_{\text{Posterior}}
 & \propto
 \underbrace{
@@ -318,7 +322,9 @@ However equation is not used as it is; we take $\log$ on both sides and find **l
 $$
 \begin{aligned}
 \text{LL}(x|C)
-&= \text{LL}(x|\mu_c, \sigma_c^2) \\&= \ln P(x | \mu_c, \sigma_c^2) \\&= \ln \left[
+&= \text{LL}(x|\mu_c, \sigma_c^2) \\
+&= \ln P(x | \mu_c, \sigma_c^2) \\
+&= \ln \left[
 \frac{1}{\sqrt{2 \pi \sigma_c^2}}
 \right]
  \ \exp somethign
@@ -336,7 +342,8 @@ $$
 $$
 \begin{aligned}
 \ln \frac{P(C_1 | x)}{P(C_2 | x)}
-&= \ln P(C_1 | x) - \ln P(C_2 | x) \\&= \frac{-1}{2} ()
+&= \ln P(C_1 | x) - \ln P(C_2 | x) \\
+&= \frac{-1}{2} ()
 \end{aligned}
 $$
 
@@ -366,7 +373,8 @@ Diagonal elements are True Positive
 $$
 \begin{aligned}
 J(y, \hat y)
-&= \frac{|y \cap \hat y|}{|y \cup \hat y|} \\&= \frac{|y \cap \hat y|}{|y| + |\hat y| - |y \cap \hat y|}
+&= \frac{|y \cap \hat y|}{|y \cup \hat y|} \\
+&= \frac{|y \cap \hat y|}{|y| + |\hat y| - |y \cap \hat y|}
 \end{aligned}
 $$
 
@@ -415,7 +423,8 @@ $$
 
 $$
 \begin{aligned}
-&\text{Weighted Average (Recall)} \\&= \frac{
+&\text{Weighted Average (Recall)} \\
+&= \frac{
 \sum \Big( \text{Recall of each class} \times \text{Support of each class} \Big)
 }{\text{Size of sample}}
 \end{aligned}
@@ -423,7 +432,8 @@ $$
 
 $$
 \begin{aligned}
-&\text{Weighted Average (Precision)} \\&= \frac{
+&\text{Weighted Average (Precision)} \\
+&= \frac{
 \sum \Big( \text{Precision of each class} \times \text{Support of each class} \Big)
 }{\text{Size of sample}}
 \end{aligned}
@@ -431,7 +441,8 @@ $$
 
 $$
 \begin{aligned}
-&\text{Weighted Average (F1 Score)} \\&= \frac{
+&\text{Weighted Average (F1 Score)} \\
+&= \frac{
 \sum \Big( \text{F1 Score of each class} \times \text{Support of each class} \Big)
 }{\text{Size of sample}}
 \end{aligned}

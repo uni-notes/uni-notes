@@ -6,11 +6,13 @@ The estimated regression line is given by
 
 $$
 \begin{aligned}
-\hat y &= b_0 + b_1 x \\b_1 &= \frac{
+\hat y &= b_0 + b_1 x \\
+b_1 &= \frac{
 	n \ \sum (xy) - \sum x \sum y
 }{
 	n \ \sum x^2 - \Big( \sum x \Big)^2
-} \\b_0 &= \bar y - b_1 \bar x \\
+} \\
+b_0 &= \bar y - b_1 \bar x \\
 \bar x &= \frac{\sum x} n \\
 \bar y &= \frac{\sum y} n
 \end{aligned}

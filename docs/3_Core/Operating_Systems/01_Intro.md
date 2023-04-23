@@ -95,7 +95,9 @@ ISR is accessed using IVT, which contains the starting address of the ISRs.
 
 $$
 \begin{aligned}
-&\text{Starting address of ISR in IVT}\\& = \text{Starting address of IVT in memory } \\& \quad + (
+&\text{Starting address of ISR in IVT}\\
+& = \text{Starting address of IVT in memory } \\
+& \quad + (
 \text{type} \times \text{no. of loc to store address of 1 ISR}
 )
 \end{aligned}

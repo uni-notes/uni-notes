@@ -115,7 +115,8 @@ This is
 $$
 \begin{aligned}
 P(\text{rejecting } H_0)
-&\propto |t| \\&\propto \text{Deviation of sample value from true value}
+&\propto |t| \\
+&\propto \text{Deviation of sample value from true value}
 \end{aligned}
 $$
 

@@ -21,7 +21,8 @@ The work done by a force field $\vec F = M \hat i + N \hat j + P \vec k$ along c
 
 $$
 \begin{aligned}
-W &= \int\limits_C \vec F \cdot d \vec r \\&= \int\limits_C (M \ dx + N \ dy + P \ dz) \ dt
+W &= \int\limits_C \vec F \cdot d \vec r \\
+&= \int\limits_C (M \ dx + N \ dy + P \ dz) \ dt
 \end{aligned}
 $$
 
@@ -64,7 +65,8 @@ Let $\vec F = M \hat i + N \hat j$ be a vector-valued function defined at all po
 
 $$
 \begin{aligned}
-\oint\limits_C \vec F \cdot d \vec r &= \int\limits_C M \ dx + N \ dy \\&= \iint\limits_R 
+\oint\limits_C \vec F \cdot d \vec r &= \int\limits_C M \ dx + N \ dy \\
+&= \iint\limits_R 
 \left( \frac{\partial N}{\partial x} - \frac{\partial M}{\partial y} \right)
 \ dx \ dy
 \end{aligned}
@@ -79,9 +81,12 @@ $$
 \iint_S \vec F \cdot \vec n \cdot ds &=
 \iiint (\text{div } \vec F) \ dv \\
 \text{where }
-(\text{div } \vec F) &= \nabla \cdot \vec F \\&= \frac{\partial M}{\partial x} + \frac{\partial N}{\partial y} + \frac{\partial P}{\partial z} \\
-\vec n &= \frac{\nabla \phi}{ |\nabla \phi| } \\&\text{(unit outward-drawn normal vector to surface S)}\\
-\phi &= \phi(x, y, z) \\&\text{(equation of surface S)}
+(\text{div } \vec F) &= \nabla \cdot \vec F \\
+&= \frac{\partial M}{\partial x} + \frac{\partial N}{\partial y} + \frac{\partial P}{\partial z} \\
+\vec n &= \frac{\nabla \phi}{ |\nabla \phi| } \\
+&\text{(unit outward-drawn normal vector to surface S)}\\
+\phi &= \phi(x, y, z) \\
+&\text{(equation of surface S)}
 \end{aligned}
 $$
 
@@ -94,7 +99,8 @@ $$
 \int \limits_C \vec F \cdot dr &=
 \iint \limits_S (\text{curl } \vec F) \cdot \hat n \cdot ds \\
 \text{where }
-(\text{curl } \vec F) &= \vec V \times \vec F \\&= \begin{vmatrix}
+(\text{curl } \vec F) &= \vec V \times \vec F \\
+&= \begin{vmatrix}
 \hat i & \hat j & \hat k \\
 \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
 M & N & P

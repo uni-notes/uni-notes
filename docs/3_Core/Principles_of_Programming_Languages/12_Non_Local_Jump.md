@@ -28,7 +28,8 @@ $$
 \text{longjmp}(jb, \textcolor{hotpink}{k}) 
 \text{ causes setjmp to return} \\
 \text{return val} = \begin{cases}
-1, \textcolor{hotpink}{k} = 0 \\k, \textcolor{hotpink}{k} \ne 0
+1, \textcolor{hotpink}{k} = 0 \\
+k, \textcolor{hotpink}{k} \ne 0
 \end{cases}
 $$
 

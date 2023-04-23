@@ -76,7 +76,11 @@ class p05
 {
 	static int n = 10000;
 	static int[] a = new int[n];
-	static String outputFile = "h:\\My Drive\\Notes\\Sem 4\\02 DSA\\Practicals\\"
+	static String outputFile = "h:\\
+My Drive\\
+Notes\\
+Sem 4\\02 DSA\\
+Practicals\\"
       + "mergeout.txt";
 	
 	static float sortTime;

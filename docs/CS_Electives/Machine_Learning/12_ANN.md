@@ -12,7 +12,8 @@ $g$ aggregates inputs and the function $f$ and gives $y \in \{ 0, 1 \}$
 
 $$
 \begin{aligned}
-y &= f \circ g \ (x) \\&= f \Big( g (x) \Big)
+y &= f \circ g \ (x) \\
+&= f \Big( g (x) \Big)
 \end{aligned}
 $$
 

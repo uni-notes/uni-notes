@@ -42,7 +42,8 @@ Formulae
 
 $$
 \begin{aligned}
-|A'| &= |U| - |A| \\|A-B| &= |A \cup B'| \\&= |A| - |A\cup B| \\
+|A'| &= |U| - |A| \\|A-B| &= |A \cup B'| \\
+&= |A| - |A\cup B| \\
 |A \cap B \cap C'| &= |A \cap B| - |A \cap B \cap C| \\
 |A \cap B' \cap C| &= |A \cap C| - |A \cap B \cap C| \\
 |A \cap B' \cap C'| &= |B' \cap C'| - |A' \cap B' \cap C'|
@@ -54,7 +55,8 @@ $$
 $$
 \begin{aligned}
 \| A_1 \cup A_2 \cup \ldots \cup A_n \|
-&= S_1 - S_2 + S_3 - \ldots + (-1)^{n-1} S_n \\&= \sum\limits_{i = 1}^n |A_i|
+&= S_1 - S_2 + S_3 - \ldots + (-1)^{n-1} S_n \\
+&= \sum\limits_{i = 1}^n |A_i|
 - \sum\limits_{i,j} |A_i \cap A_j|
 + \sum\limits_{i, j, k} |A_i \cap A_j \cap A_k| \\
 & \qquad + \ldots
@@ -76,7 +78,9 @@ The no of $r$ combinations of $n$ distinct objects with unlimited repetitions
 
 $$
 \begin{aligned}
-&= V(n,r) \\&= (n-1+r)C_r &= (n-1+r)C_{n-1} \\&= \frac{(n-1+r)!}{r! \ (n-1)!}
+&= V(n,r) \\
+&= (n-1+r)C_r &= (n-1+r)C_{n-1} \\
+&= \frac{(n-1+r)!}{r! \ (n-1)!}
 \end{aligned}
 $$
 
@@ -110,7 +114,9 @@ $D_n =$ no of derangments possible for derangement of $n$ numbers
 
 $$
 \begin{aligned}
-D_1 &= 0 \\D_2 &= 1 \\D_3 &= 2 \qquad \set{(3, 1, 2), (2, 3, 1)} \\
+D_1 &= 0 \\
+D_2 &= 1 \\
+D_3 &= 2 \qquad \set{(3, 1, 2), (2, 3, 1)} \\
 \vdots & \\
 D_n &= n! \left[
 1- \frac{1}{1!}  + \frac{1}{2!} - \frac{1}{3!} + \dots + (-1)^n \frac{1}{n!}

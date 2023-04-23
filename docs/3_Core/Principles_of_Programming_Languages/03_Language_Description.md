@@ -262,7 +262,9 @@ real-number $\implies$ integer-part . fraction $\implies$ integer-part digit.fra
 
 $$
 \begin{aligned}
-E &::= T \Big\{ (+ | -) \ T \Big\} \\T &::= F \Big\{ (* | /) \ F \Big\} \\F &::= ( E ) | \text{Name} | \text{Number}
+E &::= T \Big\{ (+ | -) \ T \Big\} \\
+T &::= F \Big\{ (* | /) \ F \Big\} \\
+F &::= ( E ) | \text{Name} | \text{Number}
 \end{aligned}
 $$
 

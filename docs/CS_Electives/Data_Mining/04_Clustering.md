@@ -202,7 +202,8 @@ r(x, y)
 \text{Covariance}(x, y)
 }{
 \text{STD(x) } \text{ STD(y)}
-} \\& = \frac{
+} \\
+& = \frac{
 \sigma_{xy}
 }{
 \sigma_x \sigma_y

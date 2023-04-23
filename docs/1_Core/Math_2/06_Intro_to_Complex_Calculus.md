@@ -53,7 +53,8 @@ $$
 $$
 \begin{aligned}
 z
-&= r \cdot e^{i \theta} \\&= r (\cos \theta + i \sin \theta)
+&= r \cdot e^{i \theta} \\
+&= r (\cos \theta + i \sin \theta)
 \end{aligned}
 $$
 
@@ -62,10 +63,15 @@ $$
 $$
 \begin{aligned}
 c
-&= (r \cdot e^{i\theta})^{\frac{1}{n}} \\&= r^{\frac{1}{n}} \cdot e^{\frac{i\theta}{n}} \\&= r^{\frac{1}{n}} \Bigg(
+&= (r \cdot e^{i\theta})^{\frac{1}{n}} \\
+&= r^{\frac{1}{n}} \cdot e^{\frac{i\theta}{n}} \\
+&= r^{\frac{1}{n}} \Bigg(
 	\cos \left(\frac{\theta}{n}\right) + i \sin \left(\frac{\theta}{n}\right)
-\Bigg) \\r &= |z| \\
-\frac{\theta}{n} &= \frac{\text{Arg }z + 2k\pi}{n}, k \in [0, n) \\e^{i(n\theta)} &= \cos(n\theta) + i \sin(n\theta) \\e^{-i(n\theta)} &= \cos(n\theta) - i \sin(n\theta)
+\Bigg) \\
+r &= |z| \\
+\frac{\theta}{n} &= \frac{\text{Arg }z + 2k\pi}{n}, k \in [0, n) \\
+e^{i(n\theta)} &= \cos(n\theta) + i \sin(n\theta) \\
+e^{-i(n\theta)} &= \cos(n\theta) - i \sin(n\theta)
 \end{aligned}
 $$
 

@@ -133,9 +133,11 @@ $$
 
 $$
 \begin{aligned}
-a_0 &= \frac{1}{\textcolor{hotpink}{l}} \int\limits_{-l}^l f(x) dx \\a_n &= \frac{1}{\textcolor{hotpink}{l}} \int\limits_{-l}^l f(x) \cos \left(
+a_0 &= \frac{1}{\textcolor{hotpink}{l}} \int\limits_{-l}^l f(x) dx \\
+a_n &= \frac{1}{\textcolor{hotpink}{l}} \int\limits_{-l}^l f(x) \cos \left(
 	\frac{n \textcolor{hotpink}{\pi} x}{\textcolor{hotpink}{l}}
-\right) dx \\b_n &= \frac{1}{\textcolor{hotpink}{l}} \int\limits_{-l}^l f(x) \sin \left(\frac{n \textcolor{hotpink}{\pi} x}{\textcolor{hotpink}{l}} \right) dx
+\right) dx \\
+b_n &= \frac{1}{\textcolor{hotpink}{l}} \int\limits_{-l}^l f(x) \sin \left(\frac{n \textcolor{hotpink}{\pi} x}{\textcolor{hotpink}{l}} \right) dx
 \end{aligned}
 $$
 

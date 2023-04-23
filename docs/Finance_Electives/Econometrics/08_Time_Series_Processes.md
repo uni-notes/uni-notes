@@ -136,7 +136,10 @@ If the variance is heteroschedastic (changes over time), the variable is volatil
 $$
 \begin{aligned}
 \sigma^2_{y_t}
-&= E \Big [\Big(y_t - E(y_t) \Big)^2 \Big] \\&= E \Big [\Big(y_t - \textcolor{hotpink}{0} \Big)^2 \Big] \quad \text{(if \textcolor{hotpink}{normalized})} \\&= E [y_t^2 ] \\&= y_t^2 \\
+&= E \Big [\Big(y_t - E(y_t) \Big)^2 \Big] \\
+&= E \Big [\Big(y_t - \textcolor{hotpink}{0} \Big)^2 \Big] \quad \text{(if \textcolor{hotpink}{normalized})} \\
+&= E [y_t^2 ] \\
+&= y_t^2 \\
 \end{aligned}
 $$
 
@@ -175,7 +178,9 @@ Generalized AutoRegressive Conditional Heteroschedacity models
 $$
 \begin{aligned}
 \text{Let's say} \to
-y_t &= f(y_{t-2}) \\y_t &= f(y_{t-1}) \\y_{t-1} &= f(y_{t-2})
+y_t &= f(y_{t-2}) \\
+y_t &= f(y_{t-1}) \\
+y_{t-1} &= f(y_{t-2})
 \end{aligned}
 $$
 
@@ -208,11 +213,13 @@ Consider a distribution of $y$ for each time period has
 $$
 \begin{aligned}
 \text{Consider } y_t
-&= \sum \rho_i y_{t-i} + u_t \\&= \sum \textcolor{hotpink} 0 \times y_{t-i} + u_t
+&= \sum \rho_i y_{t-i} + u_t \\
+&= \sum \textcolor{hotpink} 0 \times y_{t-i} + u_t
 \quad \text{(Independent of lags)} \\
 \implies y_t &= u_t \\
 & \text{and} \\
-E(y_t) &= \mu = 0 \\E[(y_t - \mu)^2] &= \sigma^2
+E(y_t) &= \mu = 0 \\
+E[(y_t - \mu)^2] &= \sigma^2
 \end{aligned}
 $$
 
@@ -259,7 +266,9 @@ y_t &= \beta^t y_0 + \sum_{i=0}^{t-1} \beta^i u_{t-1} + u_t \\
 \implies
 E(y_t) &= \beta^t y_0 \to \text{Constant} \\
 \implies
-E[y_t-\beta^t y_0] &= \sum_{i=0}^t \beta^t \sigma^2 \\&= \alpha(1 + \beta + \beta^2 + \dots) \\&= \frac{\sigma^2}{1 - \beta} \to \text{Constant}
+E[y_t-\beta^t y_0] &= \sum_{i=0}^t \beta^t \sigma^2 \\
+&= \alpha(1 + \beta + \beta^2 + \dots) \\
+&= \frac{\sigma^2}{1 - \beta} \to \text{Constant}
 \end{aligned}
 $$
 
@@ -285,7 +294,9 @@ It is a long memory series
 $$
 \begin{aligned}
 y_t
-&= \beta_1 y_{t-1} + u_t \\&= 1 y_{t-1} + u_t & (\beta_1 = 1) \\&= y_{t-1} + u_t \\
+&= \beta_1 y_{t-1} + u_t \\
+&= 1 y_{t-1} + u_t & (\beta_1 = 1) \\
+&= y_{t-1} + u_t \\
 \implies
 y_t &= y_0 + \sum_{i=0}^t u_i
 \end{aligned}
@@ -299,7 +310,8 @@ Every value is basically the
 $$
 \begin{aligned}
 E(y_t)
-&= E(y_0) + E(u_1) + E(u_2) + \dots + E(u_t) \\&= y_0 + 0 \\
+&= E(y_0) + E(u_1) + E(u_2) + \dots + E(u_t) \\
+&= y_0 + 0 \\
 \implies E(y_t) &= y_0
 \end{aligned}
 $$
@@ -322,7 +334,8 @@ Similar to [Random Walk w/o drift](#Random-Walk-w/o-drift), but has  $\beta_0$ a
 $$
 \begin{aligned}
 y_t
-&= \beta_0 + y_{t-1} + u_t \\&= t\beta_0 + y_0 + \sum_{i=0}^t u_i
+&= \beta_0 + y_{t-1} + u_t \\
+&= t\beta_0 + y_0 + \sum_{i=0}^t u_i
 \end{aligned}
 $$
 
@@ -452,7 +465,8 @@ Alternatively, subtract $y_{t-1}$ on both sides of main equation
 
 $$
 \begin{aligned}
-y_t - y_{t-1} &= \beta_1 y_{t-1} - y_{t-1} + u_t \\y_t - y_{t-1} &= (\beta_1-1) y_{t-1} + u_t \\
+y_t - y_{t-1} &= \beta_1 y_{t-1} - y_{t-1} + u_t \\
+y_t - y_{t-1} &= (\beta_1-1) y_{t-1} + u_t \\
 \Delta y_t &= \gamma y_{t-1} + u_t & (\gamma = \beta_1 - 1)
 \end{aligned}
 $$

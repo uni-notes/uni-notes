@@ -53,7 +53,8 @@ $$
 $$
 \begin{aligned}
 \Delta m_t
-&= \lambda_m (u_{t-1}) + \epsilon_{mt} \\&= \lambda_m (blah blah) + \epsilon_{mt} \\
+&= \lambda_m (u_{t-1}) + \epsilon_{mt} \\
+&= \lambda_m (blah blah) + \epsilon_{mt} \\
 \Delta p_t &= \\
 \Delta y_t &= 
 \end{aligned}

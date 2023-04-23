@@ -3,7 +3,8 @@
 The motion of a particle moving space is given by
 
 $$
-\vec r = x(t) \cdot \hat i + y(t) \cdot \hat j + z(t) \cdot \hat k, \\a \le t \le b, \quad a, b \in R
+\vec r = x(t) \cdot \hat i + y(t) \cdot \hat j + z(t) \cdot \hat k, \\
+a \le t \le b, \quad a, b \in R
 $$
 
 ## Limits

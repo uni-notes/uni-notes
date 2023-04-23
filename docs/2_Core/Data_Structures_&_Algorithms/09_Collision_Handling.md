@@ -34,7 +34,8 @@ use a secondary hash function $d(k)$
 
 $$
 \begin{aligned}
-h(k) &= k \% N \\d(k) &= q - k \% q \\
+h(k) &= k \% N \\
+d(k) &= q - k \% q \\
 \end{aligned}
 $$
 
@@ -48,7 +49,9 @@ where
 $$
 \begin{aligned}
 \text{index} = \Big( i+ jd(k) \Big)
-\% N \\i &= h(k) \\j &= 0, 1,\dots
+\% N \\
+i &= h(k) \\
+j &= 0, 1,\dots
 \end{aligned}
 $$
 

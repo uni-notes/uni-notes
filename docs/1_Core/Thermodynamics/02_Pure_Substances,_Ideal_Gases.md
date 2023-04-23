@@ -36,12 +36,14 @@ Therefore, at a given temperature
 $$
 \begin{aligned}
 PV 
-&= mRT \\&= n R_u T \\
+&= mRT \\
+&= n R_u T \\
 m &= \frac{PV}{RT} \\
 \rho &= \frac{P}{RT} \\
 R &= \frac{R_u}{M}, M = \text{Molar Mass (kg/mol)} \\
 R_u
-&= 0.8314 \ \mathrm{kJ/mol \cdot K} \\&= 8.314  \ \mathrm{J/mol \cdot K} \\
+&= 0.8314 \ \mathrm{kJ/mol \cdot K} \\
+&= 8.314  \ \mathrm{J/mol \cdot K} \\
 \end{aligned}
 $$
 

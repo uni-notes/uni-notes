@@ -8,7 +8,8 @@ Probability Density Function
 
 $$
 \begin{aligned}
-f(x) &= P(X = x) \\f(x) &\ge 0 \\
+f(x) &= P(X = x) \\
+f(x) &\ge 0 \\
 \sum f(x) &= 1
 \end{aligned}
 $$
@@ -19,7 +20,8 @@ Cumulative Distribution Function
 
 $$
 \begin{aligned}
-F(x) &= P(X \le x) \\&= \sum\limits_0^x f(x) \\
+F(x) &= P(X \le x) \\
+&= \sum\limits_0^x f(x) \\
 P(a \le X \le b) &= \sum\limits_a^b f(x)
 \end{aligned}
 $$
@@ -36,7 +38,8 @@ $$
 
 $$
 \begin{aligned}
-E(k) &= k & E(kx) &= k \cdot E(x) & E(z) &= 0\\V(k) &= 0 & V(kx) &= k^2 \cdot V(x) & V(z) &= 1
+E(k) &= k & E(kx) &= k \cdot E(x) & E(z) &= 0\\
+V(k) &= 0 & V(kx) &= k^2 \cdot V(x) & V(z) &= 1
 \end{aligned}
 $$
 

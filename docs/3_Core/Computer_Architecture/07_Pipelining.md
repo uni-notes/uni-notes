@@ -30,7 +30,10 @@ Each of the 5 stages have their own step
 $$
 \begin{aligned}
 \text{Time with pipeline}
-&= \frac{\text{Time without pipeline}}{\text{No of stages}} \\&= \frac{800}{5} \\&= \cancel{160} \\&= 200
+&= \frac{\text{Time without pipeline}}{\text{No of stages}} \\
+&= \frac{800}{5} \\
+&= \cancel{160} \\
+&= 200
 \end{aligned}
 $$
 
@@ -54,7 +57,8 @@ Assuming all stages are balanced/even (all stages take same time)
 $$
 \begin{aligned}
 S_\text{ideal}
-&= \text{No of Stages} \\&= 5
+&= \text{No of Stages} \\
+&= 5
 \end{aligned}
 $$
 
@@ -63,7 +67,9 @@ If stages are unbalanced, speedup is less. Hence $\downarrow$
 $$
 \begin{aligned}
 S_\text{actual}
-&= \frac{\text{Time without Pipeline}}{\text{Time with Pipeline}} \\&= \frac{800}{200} \\&= 4
+&= \frac{\text{Time without Pipeline}}{\text{Time with Pipeline}} \\
+&= \frac{800}{200} \\
+&= 4
 \end{aligned}
 $$
 

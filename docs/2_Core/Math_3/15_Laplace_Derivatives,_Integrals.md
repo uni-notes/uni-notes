@@ -2,14 +2,17 @@
 
 $$
 \begin{aligned}
-L\{ f'(t) \} &= s F(s) - f(0) \\L\{ f''(t) \} &= s^2 F(s) - sf(0) - f'(0) \\
+L\{ f'(t) \} &= s F(s) - f(0) \\
+L\{ f''(t) \} &= s^2 F(s) - sf(0) - f'(0) \\
 \Big( L\{ f(t) \} &= F(s) \Big)
 \end{aligned}
 $$
 
 $$
 \begin{aligned}
-f(0) &= \{ f(t) \}_{t = 0} \\f'(0) &= \left\{ \frac{d f(t)}{dt} \right\}_{t = 0} \\f'(t) &= \frac{df}{dx}; f''(t) = \frac{d^2f}{dx^2}
+f(0) &= \{ f(t) \}_{t = 0} \\
+f'(0) &= \left\{ \frac{d f(t)}{dt} \right\}_{t = 0} \\
+f'(t) &= \frac{df}{dx}; f''(t) = \frac{d^2f}{dx^2}
 \end{aligned}
 $$
 

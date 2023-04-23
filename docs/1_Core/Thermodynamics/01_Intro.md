@@ -3,9 +3,11 @@
 $$
 \begin{aligned}
 P
-&= \frac F A \\&= \rho g h \\
+&= \frac F A \\
+&= \rho g h \\
 P_\text{abs} 
-&= P_\text{atm} + P_\text{gage} \\&= P_\text{atm} - P_\text{vac} \\
+&= P_\text{atm} + P_\text{gage} \\
+&= P_\text{atm} - P_\text{vac} \\
 1 \text{ bar} &= 100 \text{ kPa}
 \end{aligned}
 $$

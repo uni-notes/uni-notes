@@ -120,7 +120,8 @@ Differential equations with **regular** singular points at $x=0$ can be solved u
 $$
 \begin{aligned}
 y
-&= x^m \sum_{n=0}^\infty a_n x^n \\&= \sum_{n=0}^\infty a_n x^{m+n}
+&= x^m \sum_{n=0}^\infty a_n x^n \\
+&= \sum_{n=0}^\infty a_n x^{m+n}
 \end{aligned}
 $$
 

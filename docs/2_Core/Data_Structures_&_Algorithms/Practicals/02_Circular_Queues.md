@@ -81,7 +81,12 @@ public class p02
     f = -1;
     r = -1;
   
-    String inputFile = "h:\\My Drive\\Notes\\Sem 4\\02 DSA\\Practicals\\Programs\\"
+    String inputFile = "h:\\
+My Drive\\
+Notes\\
+Sem 4\\02 DSA\\
+Practicals\\
+Programs\\"
       + "studentin.dat";
     Scanner readMyFile = new Scanner( new File(inputFile) );
 
@@ -109,7 +114,12 @@ public class p02
 
   public static void dequeue() throws FileNotFoundException
   {
-    String outputFile = "h:\\My Drive\\Notes\\Sem 4\\02 DSA\\Practicals\\Programs\\"
+    String outputFile = "h:\\
+My Drive\\
+Notes\\
+Sem 4\\02 DSA\\
+Practicals\\
+Programs\\"
       + "studentout.dat";
     PrintWriter writeToMyFile = new PrintWriter( new File(outputFile) );
    

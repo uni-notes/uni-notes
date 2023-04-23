@@ -30,7 +30,9 @@ $\sigma_{A=B} T_1 \times T_2 (\text{instructor})$
 $$
 \begin{aligned}
 &\text{account} \leftarrow \text{account } \cup \{ \\ 
-&\text{(“Ahmed", A-973, 1200)} \\&\text{(“Thahir", A-193, 1300)} \\&\}
+&\text{(“Ahmed", A-973, 1200)} \\
+&\text{(“Thahir", A-193, 1300)} \\
+&\}
 \end{aligned}
 $$
 
@@ -63,7 +65,8 @@ $$
 \begin{aligned}
 R ÷ S = & \\
 \{ \quad
-& t[a_1,...,a_n] : \quad t \in R \\& \land \forall s \in S \Big( (t[a_1, \dots ,a_n] \cup s) \in R \Big)
+& t[a_1,...,a_n] : \quad t \in R \\
+& \land \forall s \in S \Big( (t[a_1, \dots ,a_n] \cup s) \in R \Big)
 \quad \}
 \end{aligned}
 $$
@@ -72,9 +75,13 @@ $$
 
 $$
 \begin{aligned}
-&\text{create view allCustomers as} \\&\Pi_\text{branchName, customerName} (
+&\text{create view allCustomers as} \\
+&\Pi_\text{branchName, customerName} (
 	\text{depositor$\Join$account}
-) \\&\Pi_\text{branchName} ( \\&\sigma \text{ something}\\&)
+) \\
+&\Pi_\text{branchName} ( \\
+&\sigma \text{ something}\\
+&)
 \end{aligned}
 $$
 

@@ -1,7 +1,8 @@
 ## Chebyshev DE
 
 $$
-(1-x^2)y'' - xy' + n^2 y =0 \\n>0
+(1-x^2)y'' - xy' + n^2 y =0 \\
+n>0
 $$
 
 $x = \pm 1$ are the regular singular points of equation
@@ -31,7 +32,8 @@ $$
 e^{i\theta}
 &= \cos \theta + i \sin \theta \\
 e^{ni\theta}
-&= \cos n\theta + i \sin n\theta \\&= (\cos \theta + i \sin \theta)^n \\
+&= \cos n\theta + i \sin n\theta \\
+&= (\cos \theta + i \sin \theta)^n \\
 \end{aligned}
 $$
 

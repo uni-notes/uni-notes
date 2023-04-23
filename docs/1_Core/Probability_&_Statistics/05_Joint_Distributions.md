@@ -3,8 +3,11 @@
 $$
 \begin{aligned}
 f(x, y)
-&= P(X=x, Y=y) \\&= P(x \cap y) \\F(x,y) &= P(X \le x, Y \le y) \\
-f(x, y) &\ge 0 \\f(x|y) &= \frac{f(x, y)}{f(y)}
+&= P(X=x, Y=y) \\
+&= P(x \cap y) \\
+F(x,y) &= P(X \le x, Y \le y) \\
+f(x, y) &\ge 0 \\
+f(x|y) &= \frac{f(x, y)}{f(y)}
 \end{aligned}
 $$
 
@@ -22,7 +25,8 @@ $$
 
 $$
 \begin{aligned}
-\text{Cov} (x,y) &= E(x,y) - E(x) \cdot E(y) \\&= 
+\text{Cov} (x,y) &= E(x,y) - E(x) \cdot E(y) \\
+&= 
 \begin{cases}
 >0 & \text{directly-dependent} \\0 & \text{independent}\\<0 & \text{inversely-dependent}
 \end{cases}
@@ -33,7 +37,8 @@ $$
 
 $$
 \begin{aligned}
-f(x,y) &= f(x) \cdot f(y) \\E(x, y) &= E(x) \cdot E(y) \\
+f(x,y) &= f(x) \cdot f(y) \\
+E(x, y) &= E(x) \cdot E(y) \\
 \text{Cov}(x,y) &= 0
 \end{aligned}
 $$

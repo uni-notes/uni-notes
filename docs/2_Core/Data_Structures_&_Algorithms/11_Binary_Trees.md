@@ -114,19 +114,26 @@ Algorith depth(v)
 
 $$
 \begin{aligned}
-e &= i+1 \\n &= 2e - 1 \\h &\le i \\h &\le (n-1)/2
+e &= i+1 \\
+n &= 2e - 1 \\
+h &\le i \\
+h &\le (n-1)/2
 \end{aligned}
 $$
 
 $$
 \begin{aligned}
-h+1 &\le e \le 2^h \\h &\le i \le 2^h - 1 \\2h+1 &\le i \le 2^{h+1} - 1 \\one more
+h+1 &\le e \le 2^h \\
+h &\le i \le 2^h - 1 \\2h+1 &\le i \le 2^{h+1} - 1 \\
+one more
 \end{aligned}
 $$
 
 $$
 \begin{aligned}
-h &\ge \log_2 e \\h &\ge \log_2(n_1) -1 \\i &\le 2^i
+h &\ge \log_2 e \\
+h &\ge \log_2(n_1) -1 \\
+i &\le 2^i
 \end{aligned}
 $$
 

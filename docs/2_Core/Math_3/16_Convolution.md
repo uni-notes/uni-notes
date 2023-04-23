@@ -22,7 +22,8 @@ $$
 $$
 \begin{aligned}
 L^{-1} \{ F(s) \cdot G(s) \}
-&= f(t) \star g(t) \\&= L^{-1}\{ F(s) \} \star L^{-1}\{ G(s) \}
+&= f(t) \star g(t) \\
+&= L^{-1}\{ F(s) \} \star L^{-1}\{ G(s) \}
 \end{aligned}
 $$
 

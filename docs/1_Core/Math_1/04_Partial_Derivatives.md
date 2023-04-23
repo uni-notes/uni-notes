@@ -110,7 +110,9 @@ $$
 f_x &= \frac{\partial^2 f}{\partial x^2}
 &= \frac{\partial}{\partial x}\left[ \frac{\partial f}{\partial x} \right] \\
 f_{xy} &=\frac{\partial^2 f}{\partial x \partial y}
-&= \frac{\partial}{\partial x}\left[ \frac{\partial f}{\partial y} \right] \\f_{xy} &= f_{yx} \\f_{xx} &= (f_x)_x
+&= \frac{\partial}{\partial x}\left[ \frac{\partial f}{\partial y} \right] \\
+f_{xy} &= f_{yx} \\
+f_{xx} &= (f_x)_x
 \end{aligned}
 $$
 
@@ -159,7 +161,8 @@ $$
 \left( \frac{\partial f}{\partial y} \cdot \frac{dy}{dx} \right)
 &= 0 \\
 \implies \frac{dy}{dx} &=
-\frac{-\partial f / \partial x}{\partial f / \partial y} \\&= \frac{- f_x}{f_y}
+\frac{-\partial f / \partial x}{\partial f / \partial y} \\
+&= \frac{- f_x}{f_y}
 \end{aligned}
 $$
 
@@ -167,7 +170,8 @@ If $z$ is a function of $x$ and $y$, given by an implicit relation $f(x,y,z) = 0
 
 $$
 \begin{aligned}
-z_x &= \frac{-f_x}{f_z} \\z_y &= \frac{-f_y}{f_z}
+z_x &= \frac{-f_x}{f_z} \\
+z_y &= \frac{-f_y}{f_z}
 \end{aligned}
 $$
 
@@ -177,7 +181,8 @@ Let $f = f(x,y)$ be a function. Then the gradient of $f$
 
 $$
 \begin{aligned}
-\text{grad } f &= \nabla f \\&= f_x \cdot \hat i + f_y \cdot \hat j
+\text{grad } f &= \nabla f \\
+&= f_x \cdot \hat i + f_y \cdot \hat j
 \end{aligned}
 $$
 
@@ -191,10 +196,13 @@ Let $f$ be a function defined at all pionts in some neighborhood of $P_0(x_0, y_
 
 $$
 \begin{aligned}
-\text{DD} &= (D_{\hat u} f)_{P_0} \\&= \lim_{s \to 0}
-\frac{f(x_0 + su_1, y_0 + su_2) - f(x_0, y_0)}{s} \\&= \nabla f \cdot \hat u \\
+\text{DD} &= (D_{\hat u} f)_{P_0} \\
+&= \lim_{s \to 0}
+\frac{f(x_0 + su_1, y_0 + su_2) - f(x_0, y_0)}{s} \\
+&= \nabla f \cdot \hat u \\
 \nabla f &= ( \nabla f )_{P_0} \\
-\hat u &= u_1 \hat i + u_2 \hat j, \text{ unit vector in direction of } \vec a \\&= \frac{\vec A}{|\vec A|}
+\hat u &= u_1 \hat i + u_2 \hat j, \text{ unit vector in direction of } \vec a \\
+&= \frac{\vec A}{|\vec A|}
 \end{aligned}
 $$
 
@@ -223,7 +231,8 @@ The equations of normal line at $P_0$ are given by
 
 $$
 \begin{aligned}
-x &= x_0 + t {f_x}_{(P_0)} \\y &= y_0 + t {f_y}_{(P_0)} \\ z &= z_0 + t {f_z}_{(P_0)}
+x &= x_0 + t {f_x}_{(P_0)} \\
+y &= y_0 + t {f_y}_{(P_0)} \\ z &= z_0 + t {f_z}_{(P_0)}
 \end{aligned}, \quad t \text{ is some parameter}
 $$
 
@@ -255,7 +264,8 @@ At point $(a, b)$
 
 $$
 \begin{aligned}
-1. & f_x = 0 \text{ and } f_y = 0 \\2. & r = f_{xx}, s = f_{xy}, t = f_{yy}, \\&D = rt - s^2 \\ 
+1. & f_x = 0 \text{ and } f_y = 0 \\2. & r = f_{xx}, s = f_{xy}, t = f_{yy}, \\
+&D = rt - s^2 \\ 
 \end{aligned}
 $$
 

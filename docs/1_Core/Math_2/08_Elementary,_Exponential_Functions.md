@@ -2,7 +2,8 @@
 
 $$
 \begin{aligned}
-|e^z| &= e^x \\e^{z + (2k \pi) i} &= e^z
+|e^z| &= e^x \\
+e^{z + (2k \pi) i} &= e^z
 \end{aligned}
 $$
 
@@ -11,7 +12,8 @@ $$
 $$
 \begin{aligned}
 \log z
-&= \ln r + i \theta \\&= \ln r + i[\text{Arg}(z) + 2k\pi] \\
+&= \ln r + i \theta \\
+&= \ln r + i[\text{Arg}(z) + 2k\pi] \\
 \text{Log} z
 &= \ln r + i[\text{Arg}(z)]
 \end{aligned}
@@ -21,7 +23,9 @@ $$
 
 $$
 \begin{aligned}
-z &= e^{\log z} \\z_c &= e^{c \log z} \\PV(z^c) &= e^{c \text{ Log} z}
+z &= e^{\log z} \\
+z_c &= e^{c \log z} \\
+PV(z^c) &= e^{c \text{ Log} z}
 \end{aligned}
 $$
 

@@ -34,7 +34,8 @@ While working on one-sided problms, we proceed as follows
 
 $$
 \begin{aligned}
-f({x_0}^+) &= \lim_{h \to 0} f(x_0 + h), & h > 0 \\f({x_0}^-) &= \lim_{h \to 0} f(x_0 - h), & h > 0
+f({x_0}^+) &= \lim_{h \to 0} f(x_0 + h), & h > 0 \\
+f({x_0}^-) &= \lim_{h \to 0} f(x_0 - h), & h > 0
 \end{aligned}
 $$
 

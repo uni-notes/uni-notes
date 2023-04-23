@@ -81,7 +81,8 @@ $$
 
 $$
 \begin{aligned}
-m_\text{in} - m_\text{out} &= \Delta m_\text{cv} \\&= m_2 - m_1 \\
+m_\text{in} - m_\text{out} &= \Delta m_\text{cv} \\
+&= m_2 - m_1 \\
 \dot m_\text{in} - \dot m_\text{out} &= \frac{\mathrm{d} m_\text{cv}}{\mathrm{d} t}
 \end{aligned}
 $$
