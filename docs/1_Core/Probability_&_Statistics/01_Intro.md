@@ -34,25 +34,3 @@ $$
 $$
 P(A|B) = \frac{P(A \cap B)}{P(B)} \quad P(B) \ne 0
 $$
-
-## Bayes’ Theorem
-
-**Phrases**
-
-- “out of”
-- “of those who”
-
-**Given**
-
-- $P(A_1)$
-- $P(A_2)$
-- $P(B|A_1)$
-- $P(B|A_2)$
-
-$$
-\begin{aligned}
-P(A_1|B)
-&= \frac{P(A_1 \cap B)}{P(B)} \\&= \frac{P(B | A_1) \cdot P(A_1)}{\sum\limits_{i=1}^{n} P(B|A_i) \cdot P(A_i)} \\
-\end{aligned}
-$$
-
