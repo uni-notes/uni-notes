@@ -2,6 +2,23 @@
 
 For more advanced concepts, refer to [Deep Learning](./../Deep_Learning.md) concepts.
 
+Neural networks are loosely based on how our human brain works, and the basic unit of a neural network is a neuron.
+
+A neuron does two things -  
+1. Receive input from other neurons and combine them together
+2. Perform some kind of transformation to give the neuron’s output
+
+We usually take a mathematical combination of inputs and apply an activation function to acheive an output.
+
+Visual representation of a neuron - 
+
+![Neruon diagram](assets/neuron.png)
+
+A neural network is simply made out of layers of neurons, connected in a way that the input of one layer of neuron is the output of the previous layer of neurons (after activation)
+
+![Neural network visualization](assets/neural%20network.png)
+
+
 ## MP Neuron
 
 McCulloch Pitts Neuron
