@@ -20,6 +20,7 @@
 
 | ![State space graph](assets/State%20space%20graph.png)  | ![Search tree](assets/Search%20tree.png) |
 |-|-|
+| ![State Space](assets/State%20space%20graph.png)  | ![Search Tree](assets/Search%20tree.png) |
 
 
 ## Uninformed Search 
