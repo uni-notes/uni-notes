@@ -13,12 +13,16 @@ document$.subscribe(() => {
 			entries.forEach((entry) => {
 				if (!entry.isIntersecting) return
 
+				console.log(tex)
+				
 				tex = entry.textContent || entry.innerText;
 				if (tex.startsWith('\\(') && tex.endsWith('\\)')) {
 					katex.render(tex.slice(2, -2), entry, { 'displayMode': false });
 				} else if (tex.startsWith('\\[') && tex.endsWith('\\]')) {
 					katex.render(tex.slice(2, -2), entry, { 'displayMode': true });
 				}
+
+				mathObserver.unobserve(entry.target)
 			});
 		}, lazyLoadOptions)
 		
