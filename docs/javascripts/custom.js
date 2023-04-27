@@ -9,23 +9,24 @@ document$.subscribe(() => {
 			rootMargin: "0px 0px 600px 0px"
 		};
 
-		const mathObserver = new IntersectionObserver((entries, mathObserver) => {
-			entries.forEach((entry) => {
-				if (!entry.isIntersecting) return
+		const mathObserver = new IntersectionObserver((entry, mathObserver) => {
+			if (!entry.isIntersecting)
+				return
 
-				console.log(tex)
-				
-				tex = entry.textContent || entry.innerText;
-				if (tex.startsWith('\\(') && tex.endsWith('\\)')) {
-					katex.render(tex.slice(2, -2), entry, { 'displayMode': false });
-				} else if (tex.startsWith('\\[') && tex.endsWith('\\]')) {
-					katex.render(tex.slice(2, -2), entry, { 'displayMode': true });
-				}
+			tex = entry.textContent || entry.innerText;
 
-				mathObserver.unobserve(entry.target)
-			});
+			console.log(maths)
+			console.log(entry)
+			console.log(tex)
+
+			if (tex.startsWith('\\(') && tex.endsWith('\\)')) {
+				katex.render(tex.slice(2, -2), entry, { 'displayMode': false });
+			} else if (tex.startsWith('\\[') && tex.endsWith('\\]')) {
+				katex.render(tex.slice(2, -2), entry, { 'displayMode': true });
+			}
+			mathObserver.unobserve(entry.target)
 		}, lazyLoadOptions)
-		
+
 		maths.forEach((math) => {
 			mathObserver.observe(math);
 			math.onload = function () {
