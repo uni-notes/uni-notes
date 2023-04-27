@@ -25,15 +25,21 @@ We appreciate your interest in contributing to our repository. Before you get st
 
 If you find a bug or have a feature request, please open an issue in the repository. Please provide a clear and concise description of the issue or request, and include any relevant information, such as error messages or steps to reproduce.
 
-## Want to introduce new course? 🤩
+## 🤩 Introducing new Course?
+1. Fork the repo and clone it to your local machine.
+2. Navigate to the relevant category folder where you want to add the content.
+3. Click on `Add file`, and then `Create new file`.
+4. On the text field for the file name, first write the course name you want to introduce.
+5. Then type `/`. This creates a new folder.
+6. You can add more folders similarly to organize your content.
+7. Finally, give the new file a name (for example, Topic.md) and add your content.
+8. Once you have added your content, commit your changes with a descriptive commit message.
+9. Push your changes to your forked repository.
+10. Create a pull request from your forked repository to the original repository.
+11. Provide a clear title and description for your pull request.
+12. Wait for feedback and engage in any discussions or revisions that are requested.
 
-1. Navigate to docs > *relevant folder the course belongs to*
-2. Click on *Add file*
-3. On the text field for the file name, first write the course name you want to introduce
-4. Then type `/`. This creates a new folder
-5. You can add more folders similarly
-6. Finally, give the new file a name (for example, `Topic.md` (Do not forget the file extension))
-7. Finally, click *Commit changes*.
+Once your pull request is approved, your changes will be merged into the original repository. 🥳
 
 ## 💡 Additional Tips
 
