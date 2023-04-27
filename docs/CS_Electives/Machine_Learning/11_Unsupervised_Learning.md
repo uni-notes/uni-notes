@@ -162,7 +162,6 @@ Principal Component Analysis
    x_j - \bar x \\
    y_j - \bar y
    \end{bmatrix} \\
-   
    i &= \text{Which PC we are using} \\
    j &\in [1, n] \\   n &= \text{Sample Size}
    \end{aligned}

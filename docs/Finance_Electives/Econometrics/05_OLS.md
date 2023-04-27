@@ -40,13 +40,14 @@ $$
 
 2. Rearrange the terms
 
-3. $$
-   \begin{aligned}
-   \sum y_i &= n \hat \beta_1 + \hat \beta_2 \sum x_i \\
-   
-   \sum y_i x_i &= n \hat \beta_1 + \hat \beta_2 \sum x_i
-   \end{aligned}
-   $$
+3. Apply
+
+$$
+\begin{aligned}
+\sum y_i &= n \hat \beta_1 + \hat \beta_2 \sum x_i \\
+\sum y_i x_i &= n \hat \beta_1 + \hat \beta_2 \sum x_i
+\end{aligned}
+$$
 
 ## Assumptions of OLS & Classical Regression
 

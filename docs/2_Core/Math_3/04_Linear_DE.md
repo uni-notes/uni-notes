@@ -47,7 +47,6 @@ $$
 \begin{aligned}
 \left( \frac{1}{1-n} \right) z' + P z
 &= Q \\
-   
 z' + \underbrace{(1-n) P}_{P\text{ of linear DE}} \ z
 &= (1-n) Q
 \end{aligned}

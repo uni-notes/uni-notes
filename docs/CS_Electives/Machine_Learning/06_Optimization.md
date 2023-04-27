@@ -111,9 +111,11 @@ Atleast try to get $-3 \le x_i \le 3$ or $-\frac13 \le x_i \le \frac13$
 Make features have appox zero mean
 
 Not for $x_0 = 1$
+
 $$
 x'_i = z_i = \frac{ x_i - \mu_i }{s_i}
 $$
+
 where:
 
 - $\mu_i =$ average of all values of feature i in training set
@@ -125,12 +127,10 @@ where:
 $$
 \begin{aligned}
 \theta_0 &:= \theta_0 - \alpha \frac1m \sum_{i=1}^m ( h(x^{(i)}) - y^{(i)} ) x_0^{(i)} \\
-
 \theta_j &:= \theta_0 - \alpha \left[ \frac1m \sum_{i=1}^m ( h(x^{(i)}) - y^{(i)} ) x_0^{(i)} + \frac{\lambda}m \theta_j \right] \\
 &:= \theta_j \left(1 - \alpha \frac {\lambda}m \right) - \alpha \frac1m \sum_{i=1}^m \left( h(x^{(i)}) - y^{(i)} \right) x_j^{(i)}
 \\
 (j &= 1, 2, \dots, n)
-
 \end{aligned}
 $$
 

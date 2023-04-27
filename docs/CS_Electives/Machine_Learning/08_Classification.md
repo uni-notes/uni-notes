@@ -167,7 +167,6 @@ $$
 $$
 \begin{aligned}
 \text{Cov}(x_j, x_k) &= \frac{1}{n_j - 1} \sum_{i=1, x \in C_j}^{n_1} (x_i - \mu_1)(x_i - \mu_1) \\
-   
 \text{Cov}(x_1, x_1) &= \frac{1}{n_1 - 1} \sum_{i=1, x \in C_1}^{n_1} (x_i - \mu_1)^2
 \end{aligned}
 $$
@@ -487,7 +486,6 @@ $$
 &\text{Gain}\Big(
 \text{Value}(C_1), C_2
 \Big) \\
-   
 =& H \Big(\text{Value}(C_1) \Big) \\
    & - \left[
 \sum_{i=1}

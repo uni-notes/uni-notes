@@ -15,14 +15,12 @@ $$
 $$
 \begin{aligned}
 y_p &= v_1 y_1(x) + v_2 y_2(x), \text{where} \\
-   
 v_1 &= \int
 \frac{
 \textcolor{orange}{-y_2} \cdot R(x)
 }{
 W(y_1, y_2)
 } dx \\
-   
 v_2 &= \int
 \frac{
 \textcolor{orange}{y_1} \cdot R(x)
