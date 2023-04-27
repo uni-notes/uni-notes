@@ -1,3 +1,36 @@
+document$.subscribe(() => {
+	// MathJax.typesetPromise()
+	if (typeof katex !== "undefined") {
+		var maths = document.querySelectorAll('.arithmatex'),
+			tex;
+
+		const lazyLoadOptions = {
+			threshold: 0,
+			rootMargin: "0px 0px 600px 0px"
+		};
+
+		const mathObserver = new IntersectionObserver((entries, mathObserver) => {
+			entries.forEach((entry) => {
+				if (!entry.isIntersecting) return
+
+				tex = entry.textContent || entry.innerText;
+				if (tex.startsWith('\\(') && tex.endsWith('\\)')) {
+					katex.render(tex.slice(2, -2), entry, { 'displayMode': false });
+				} else if (tex.startsWith('\\[') && tex.endsWith('\\]')) {
+					katex.render(tex.slice(2, -2), entry, { 'displayMode': true });
+				}
+			});
+		}, lazyLoadOptions)
+		
+		maths.forEach((math) => {
+			mathObserver.observe(math);
+			math.onload = function () {
+				asset.classList.add("loaded")
+			}
+		})
+	}
+})
+
 // load event gets fired only once; this script gets called every time
 
 window.addEventListener("load", function () {
@@ -54,20 +87,3 @@ window.addEventListener("load", function () {
 // 		processHtmlClass: "arithmatex"
 // 	}
 // };
-
-document$.subscribe(() => {
-	// MathJax.typesetPromise()
-	if (typeof katex !== "undefined") {
-	var maths = document.querySelectorAll('.arithmatex'),
-		tex;
-
-	for (var i = 0; i < maths.length; i++) {
-		tex = maths[i].textContent || maths[i].innerText;
-		if (tex.startsWith('\\(') && tex.endsWith('\\)')) {
-			katex.render(tex.slice(2, -2), maths[i], { 'displayMode': false });
-		} else if (tex.startsWith('\\[') && tex.endsWith('\\]')) {
-			katex.render(tex.slice(2, -2), maths[i], { 'displayMode': true });
-		}
-	}
-}
-})
