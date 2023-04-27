@@ -9,28 +9,28 @@ document$.subscribe(() => {
 			rootMargin: "0px 0px 600px 0px"
 		};
 
-		const mathObserver = new IntersectionObserver((entry, mathObserver) => {
-			if (!entry.isIntersecting)
-				return
+		const mathObserver = new IntersectionObserver((entries, observer) => {
+			entries.forEach((entry) => {
+				if (!entry.isIntersecting) return
 
-			tex = entry.textContent || entry.innerText;
+				const math = entry.target
+				
+				tex = math.textContent || math.innerText;
 
-			console.log(maths)
-			console.log(entry)
-			console.log(tex)
+				if (tex.startsWith('\\(') && tex.endsWith('\\)')) {
+					katex.render(tex.slice(2, -2), math, { 'displayMode': false });
+				} else if (tex.startsWith('\\[') && tex.endsWith('\\]')) {
+					katex.render(tex.slice(2, -2), math, { 'displayMode': true });
+				}
 
-			if (tex.startsWith('\\(') && tex.endsWith('\\)')) {
-				katex.render(tex.slice(2, -2), entry, { 'displayMode': false });
-			} else if (tex.startsWith('\\[') && tex.endsWith('\\]')) {
-				katex.render(tex.slice(2, -2), entry, { 'displayMode': true });
-			}
-			mathObserver.unobserve(entry.target)
+				observer.unobserve(entry.target)
+			});
 		}, lazyLoadOptions)
 
 		maths.forEach((math) => {
 			mathObserver.observe(math);
 			math.onload = function () {
-				asset.classList.add("loaded")
+				math.classList.add("loaded")
 			}
 		})
 	}
