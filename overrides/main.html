@@ -5,132 +5,76 @@
 {% endblock %}
 
 {% block scripts %}
-{{super()}}
+    {{super()}}
+    
+    <script>
+    if (! navigator.share) { // API not working, then load the script
+      let script = document.createElement("script");
+      script.defer = true;
+      script.src = "{{ 'javascripts/sweetalert2@11.js' | url }}"; // https://cdn.jsdelivr.net/npm/sweetalert2@11
+      document.head.append(script);
+    }
+    function selectText(nodeId) {
+        const node = document.getElementById(nodeId);
 
-<script>
-	function load_style(href) {
-		let stylesheet = document.createElement("link");
-		stylesheet.rel = "stylesheet";
-		stylesheet.href = href;
-		document.head.append(stylesheet);
-	}
+        if (document.body.createTextRange) {
+            const range = document.body.createTextRange();
+            range.moveToElementText(node);
+            range.select();
+        } else if (window.getSelection) {
+            const selection = window.getSelection();
+            const range = document.createRange();
+            range.selectNodeContents(node);
+            selection.removeAllRanges();
+            selection.addRange(range);
+        } else {
+            console.warn("Could not select text in node: Unsupported browser.");
+        }
+    }
 
-	function load_script(src) {
-		let script = document.createElement("script");
-		script.defer = true;
-		script.src = src;
-		document.body.append(script);
-	}
+    let btn = document.createElement("button");
+    btn.innerHTML = '{% include ".icons/material/share-variant.svg" %}';
+    btn.classList.add("md-header__button", "md-icon","twemoji");
+    var title = document.getElementsByClassName("md-header__inner")[0];
+    title.insertBefore(btn, document.getElementsByClassName("md-header__option")[0]);
 
-	// load_style("{{ 'stylesheets/katex.min.css' | url }}")
-	// load_script("{{ 'javascripts/katex.min.js' | url }}")
+    btn.addEventListener('click', event => {
+        var title = document.title;
+        var url = window.location.href;
 
-	const factor = 0; // 1/2
-	const lazyLoadOptions = {
-		threshold: 0,
-		rootMargin: `0px 0px ${factor * window.innerHeight}px 0px`
-	};
-
-	document$.subscribe(() => {
-		if (typeof katex !== "undefined") {
-			let maths = document.querySelectorAll('.arithmatex'),
-				tex;
-
-			let mathObserver = new IntersectionObserver((entries, observer) => {
-				entries.forEach((entry) => {
-					if (!entry.isIntersecting) return
-
-					const math = entry.target
-
-					tex = math.textContent || math.innerText;
-
-					if (tex.startsWith('\\(') && tex.endsWith('\\)')) {
-						katex.render(tex.slice(2, -2), math, { 'displayMode': false });
-					} else if (tex.startsWith('\\[') && tex.endsWith('\\]')) {
-						katex.render(tex.slice(2, -2), math, { 'displayMode': true });
-					}
-
-					observer.unobserve(entry.target);
-					math.classList.add("loaded");
-				});
-			}, lazyLoadOptions)
-
-			maths.forEach((math) => {
-				mathObserver.observe(math);
-			})
-		}
-	})
-
-	// load_script("{{ 'javascripts/custom.js' | url }}")
-
-	if (!navigator.share) { // API not working, then load the script
-		load_script("{{ 'javascripts/sweetalert2@11.js' | url }}")  // https://cdn.jsdelivr.net/npm/sweetalert2@11
-	}
-
-
-	// load_script("{{ 'javascripts/quicklink_lower_case.js' | url }}")
-
-	function selectText(nodeId) {
-		const node = document.getElementById(nodeId);
-
-		if (document.body.createTextRange) {
-			const range = document.body.createTextRange();
-			range.moveToElementText(node);
-			range.select();
-		} else if (window.getSelection) {
-			const selection = window.getSelection();
-			const range = document.createRange();
-			range.selectNodeContents(node);
-			selection.removeAllRanges();
-			selection.addRange(range);
-		} else {
-			console.warn("Could not select text in node: Unsupported browser.");
-		}
-	}
-
-	let btn = document.createElement("button");
-	btn.innerHTML = '{% include ".icons/material/share-variant.svg" %}';
-	btn.classList.add("md-header__button", "md-icon", "twemoji");
-	var title = document.getElementsByClassName("md-header__inner")[0];
-	title.insertBefore(btn, document.getElementsByClassName("md-header__option")[0]);
-
-	btn.addEventListener('click', event => {
-		var title = document.title;
-		var url = window.location.href;
-
-		if (navigator.share) {
-			navigator.share({
-				title: title,
-				url: url
-			});
-		}
-		else {
-			Swal.fire({
-				title: 'Share ' + title,
-				html:
-					`<div class="targets">
-                <a class="button" href="https://www.facebook.com/sharer.php?u=`+ url + `">
+        if (navigator.share) { 
+          navigator.share({
+              title: title,
+              url: url
+          });
+        }
+        else{
+          Swal.fire({
+            title: 'Share '+title,
+            html:
+              `<div class="targets">
+                <a class="button" href="https://www.facebook.com/sharer.php?u=`+url+`">
                   <span class="twemoji">
                     {% include ".icons/material/facebook.svg" %} 
                   </span>
                   <span>Facebook</span>
                 </a>
                 
-                <a class="button" href="https://twitter.com/intent/tweet?url=`+ url + `">
+                <a class="button" href="https://twitter.com/intent/tweet?url=`+url+`">
                   <span class="twemoji">
                     {% include ".icons/material/twitter.svg" %} 
                   </span>
                   <span>Twitter</span>
                 </a>
                 
-                <a class="button" href="https://www.linkedin.com/sharing/share-offsite/?url=`+ url + `">
+                <a class="button" href="https://www.linkedin.com/sharing/share-offsite/?url=`+url+`">
                   <span class="twemoji">
                     {% include ".icons/material/linkedin.svg" %} 
                   </span>
                   <span>LinkedIn</span>
                 </a>
                 
-                <a class="button" href="mailto:?body=`+ url + `">
+                <a class="button" href="mailto:?body=`+url+`">
                   <span class="twemoji">
                     {% include ".icons/material/email.svg" %} 
                   </span>
@@ -138,15 +82,15 @@
                 </a>
               </div>
               <div class="link">
-                <div class="pen-url" id="urltext">`+ url + `</div>
-                <button class="copy-link" onclick="navigator.clipboard.writeText('`+ url + `');selectText('urltext')">Copy Link</button>
+                <div class="pen-url" id="urltext">`+url+`</div>
+                <button class="copy-link" onclick="navigator.clipboard.writeText('`+url+`');selectText('urltext')">Copy Link</button>
               </div>
             </div>
             `,
-				showCloseButton: true,
-				showConfirmButton: false
-			});
-		}
-	});
-</script>
+            showCloseButton: true,
+            showConfirmButton: false
+          });
+        } 
+    });
+  </script>
 {% endblock %}
