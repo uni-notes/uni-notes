@@ -4,7 +4,7 @@ document$.subscribe(() => {
 		var maths = document.querySelectorAll('.arithmatex'),
 			tex;
 
-		const factor = 0; // 1/2
+		const factor = 1/2;
 		const lazyLoadOptions = {
 			threshold: 0,
 			rootMargin: `0px 0px ${factor * window.innerHeight}px 0px`
