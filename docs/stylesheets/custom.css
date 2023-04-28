@@ -45,6 +45,18 @@ footer,
     font-display: swap !important;
 }
 
+.arithmatex
+{
+will-change: opacity;
+opacity: 0;
+transition: opacity 0.2s ease-out;
+}
+
+.loaded
+{
+  opacity: 1;
+}
+
 @media (orientation: landscape)
 {
     header > *,
