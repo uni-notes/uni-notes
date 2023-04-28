@@ -30,9 +30,7 @@ document$.subscribe(() => {
 
 		maths.forEach((math) => {
 			mathObserver.observe(math);
-			math.onload = function () {
-				math.classList.add("loaded")
-			}
+			math.classList.add("loaded");
 		})
 	}
 })
