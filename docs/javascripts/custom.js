@@ -23,14 +23,13 @@ document$.subscribe(() => {
 				} else if (tex.startsWith('\\[') && tex.endsWith('\\]')) {
 					katex.render(tex.slice(2, -2), math, { 'displayMode': true });
 				}
-
-				observer.unobserve(entry.target)
+				math.classList.add("loaded");
+				observer.unobserve(math);
 			});
 		}, lazyLoadOptions)
 
 		maths.forEach((math) => {
 			mathObserver.observe(math);
-			math.classList.add("loaded");
 		})
 	}
 })
