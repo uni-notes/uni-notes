@@ -100,24 +100,12 @@ $$
    
 $$
 \begin{aligned}
-\text{Let }
-N_k &= \sum_{n=1}^N \gamma(z_{nk}) \\
-   N &= \text{Sample Size} \\   
-\\
-   
-\mu_k^\text{new} &=
-\frac{1}{N_k}
-\sum_{n=1}^N \gamma(z_{nk}) x_n
-\\
-   \Sigma_k^\text{new} &=
-\frac{1}{N_k}
-\sum_{n=1}^N \gamma(z_{nk})
-(x_n - \mu_k^\text{new})
-(x_n - \mu_k^\text{new})^T
-\\
-   
-\pi_k^\text{new} &= \frac{N_k}{N} \\
-   \end{aligned}
+\text{Let } N_k &= \sum_{n=1}^N \gamma(z_{nk}) \\
+N &= \text{Sample Size} \\
+\mu_k^\text{new} &= \frac{1}{N_k} \sum_{n=1}^N \gamma(z_{nk}) x_n \\
+\Sigma_k^\text{new} &= \frac{1}{N_k} \sum_{n=1}^N \gamma(z_{nk}) (x_n - \mu_k^\text{new}) (x_n - \mu_k^\text{new})^T \\
+\pi_k^\text{new} &= \frac{N_k}{N}
+\end{aligned}
 $$
    
 4. Evaluate log likelihood

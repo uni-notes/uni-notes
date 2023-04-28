@@ -143,7 +143,6 @@ $$
 \frac{\partial w}{\partial u} &=
 \left( \frac{\partial w}{\partial x} \cdot \frac{\partial x}{\partial u} \right) +
 \left( \frac{\partial w}{\partial y} \cdot \frac{\partial y}{\partial u} \right) \\
-  
 \frac{\partial w}{\partial v} &=
 \left( \frac{\partial w}{\partial x} \cdot \frac{\partial x}{\partial v} \right) +
 \left( \frac{\partial w}{\partial y} \cdot \frac{\partial y}{\partial v} \right)
@@ -268,8 +267,7 @@ $$
 \begin{aligned}
 1. & f_x = 0 \text{ and } f_y = 0 \\
 2. & r = f_{xx}, s = f_{xy}, t = f_{yy}, \\
-&D = rt - s^2 \\
- 
+& D = rt - s^2
 \end{aligned}
 $$
 

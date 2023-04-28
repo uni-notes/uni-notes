@@ -119,7 +119,6 @@ $$
 \Gamma(n)
 &= (n-1)! \\
 &= (n-1) \cdot \Gamma(n-1) \\
- 
 n! &= \Gamma (n+1) \\
 \end{aligned}
 $$

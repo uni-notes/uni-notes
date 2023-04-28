@@ -17,7 +17,6 @@ $$
 \Delta u &= \int \limits_{T_1}^{T_2} C_V \cdot \mathrm{d} T \\
 &= u[T_2] - u[T_1] & \text{(A.7)}\\
 \text{For Solids and Liquids, } \Delta u &= C_V \Delta T \\
- 
 \text{For Insulated Rigid Tank, } \Delta u &= \Delta U = 0 & (Q_\text{net} = W_\text{net}  = 0) \\
 \Delta h &= \int \limits_{T_1}^{T_2} C_P \cdot \mathrm{d} T \\
 &= h[T_2] - h[T_1] & \text{(A.8)} \\
@@ -25,7 +24,6 @@ C_V &= C_P - R \\
 C_P
 &= \sum_0^3 C_n \theta^n 
 & \left( \theta = \frac{T[K]}{1000} \right) \\
- 
 &= C_0 + C_1 \theta + C_2 \theta^2 + C_3 \theta^3 \\
 \end{aligned}
 $$

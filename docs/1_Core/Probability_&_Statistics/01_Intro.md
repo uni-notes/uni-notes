@@ -3,8 +3,7 @@
 $$
 \begin{aligned}
 P(S) &=1 \\
- 
-0 \le P(A) &\le 1\\
+0 \le P(A) &\le 1 \\
 P(A') &= 1 - P(A) \\
 P(A \cup B) &= P(A) + P(B) - P(A \cap B) \\
 P(A \cup B \cup C) &= P(A) + P(B) + P(C) - P(A \cap B) - P(B \cap C) - P(A \cap C) + P(A \cap B \cap C) \\
