@@ -136,11 +136,15 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
 
-extra_javascript:
-  - javascripts/register_service_worker.js
-  - javascripts/katex.min.js
-  - javascripts/custom.js
-  - javascripts/quicklink_lower_case.js
+extra_css:
+  - stylesheets/custom.css
+  # - stylesheets/katex.min.css
+
+# extra_javascript:
+#   - javascripts/register_service_worker.js
+#   - javascripts/katex.min.js
+#   - javascripts/custom.js
+#   - javascripts/quicklink_lower_case.js
 
   # - javascripts/mathjax.js
   # - https://polyfill.io/v3/polyfill.min.js?features=es6
@@ -150,7 +154,3 @@ extra_javascript:
   # - javascripts/mathjax_mhchem.js
   # - javascripts/mathjax_color.js
   # - javascripts/mathjax_cases.js
-
-extra_css:
-  - stylesheets/custom.css
-  - stylesheets/katex.min.css
