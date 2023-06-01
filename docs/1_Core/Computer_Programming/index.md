@@ -4,7 +4,9 @@ This was very similar to the C++ course in CBSE 11th/12th, so haven't made detai
 
 ## Explainer Video
 
-This [video](https://youtu.be/IDNGU4B7Oe0) covers till midsem.
+This video covers till midsem
+
+<iframe src="https://www.youtube-nocookie.com/embed/IDNGU4B7Oe0" loading="lazy" title="Intro to Computer Programming" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Labs
 
