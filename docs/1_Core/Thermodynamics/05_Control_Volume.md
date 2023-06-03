@@ -73,8 +73,7 @@ $$
 | Diffuser                              | dec  | inc  |      |                                             |                                                              |
 | Turbine<br />thermal $\to$ mechanical |      |      |      |           $\dot W_\text{in} = 0$            |                                                              |
 | Compressor                            |      | inc  | inc  |           $\dot W_\text{out} = 0$           |                                                              |
-| Throttling valve<br />(isenthalpic)   |      | dec  | dec  | $\dot W_\text{in}  = \dot W_\text{out} = 0$ | $\begin{aligned} h_1 &= h_2 \\
- u_1 + P_1 \nu_1 &= u_2 + P_2 \nu_2 \end{aligned}$ |
+| Throttling valve<br />(isenthalpic)   |      | dec  | dec  | $\dot W_\text{in}  = \dot W_\text{out} = 0$ | $\begin{aligned} h_1 &= h_2 \\ u_1 + P_1 \nu_1 &= u_2 + P_2 \nu_2 \end{aligned}$ |
 
 ## Unsteady/Transient Flow
 
