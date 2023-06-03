@@ -1,6 +1,6 @@
 Deep Learning is subset of machine learning, which involves a deep neural network. Large availability of data in present-day has led to the rise in demand for deep learning applications.
 
-Refer [Machine Learning](../Machine_Learning/) concepts, to understand this course well.
+Refer [Machine Learning](./../Machine_Learning/) concepts, to understand this course well.
 
 ## Types
 
