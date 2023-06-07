@@ -26,3 +26,14 @@ Want to join the initiative? Check out the [guidelines](CONTRIBUTING.md) and sta
 |    **Windows**     | Click the `+` icon in the address bar                        |
 |     **MacOS** Chrome     | Click the `+` icon in the address bar                        |
 | **MacOS** Safari | ❌<br/>😕 I hate this; open the link on Chrome                 |
+
+## ⚠️ Disclaimers
+
+- **Make sure to give due credit** when sharing these notes, to help support this project :) Publishing this as your own without crediting and using the exact Open Software License 3.0 would be bypassing the license, and demeaning this project.
+- This is meant to be a student-only knowledge sharing initiative - not a classroom portal.
+- These notes are **not affiliated** to any university, club, association.
+- Kindly note that since this is open source, and hence, correctness cannot be guaranteed.
+
+## License
+
+[Open Source Licence](https://github.com/uni-notes/uni-notes/blob/0e642d1e5922c11d8e80ab89f8f4849668338f7c/license#L1-L10)
