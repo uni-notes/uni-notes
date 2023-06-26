@@ -8,11 +8,14 @@ Total 6 bytes are required for an interrupt to occur
 
 ## Interrupt Vectors
 
-| Interrupt | Physical Address |       |
+| Interrupt | Physical Address |      |
 | --------- | ---------------- | ----- |
-| 00H       | ${00000}_H$      | IP~0~ |
-|           | ${00002}_H$      | CS~0~ |
-| FFH       |                  |       |
+| INT 00H       | ${00000}_H$      | ${IP}_0$ |
+|           | ${00002}_H$      | ${CS}_0$ |
+| INT 01H | ${00004_H}$ | ${IP}_1$ |
+|         | ${00006_H}$ | ${CS}_1$ | 
+| INT FFH | ${003FC_H}$ | ${IP}_{255}$ | 
+|     | ${003FE_H}$ | ${CS}_{255}$ |
 
 ## Interrupts
 
