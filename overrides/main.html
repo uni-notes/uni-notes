@@ -119,13 +119,25 @@
 
 
 {% block content %}
+	
   {{ super() }}
-
-  {% if git_page_authors %}
-    <div class="md-source-date">
-      <small>
-          Authors: {{ git_page_authors | default('enable mkdocs-git-authors-plugin') }}
-      </small>
-    </div>
+  
+  {% if committers or last_commit_date %}
+	<div class="page-metadata-container">
+		{% if last_commit_date %}
+			<span class="last-updated-text">Last updated:</span>
+			<time role="presentation" datetime="2018-10-25T00:00:00.000Z" data-article-date-source="ms.date">{{ last_commit_date }}</time>
+		{% endif %}
+		{% if committers %}
+			<p>
+				Contributors: 
+				{% for user in committers %}
+					<a href="{{ user.url }}" data-bi-name="contributorprofile" target="_blank">{{ user.name }}</a>{% if not loop.last %}, {% endif %}
+				{% endfor %}
+			</p>
+		{% endif %}
+	</div>
   {% endif %}
+
+  
 {% endblock %}

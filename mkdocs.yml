@@ -74,11 +74,12 @@ plugins:
           remove_comments: true
       cache_safe: true
   - mkdocs-jupyter
-  - git-authors:
-      sort_authors_by: contribution
+  - git-committers:
+      repository: uni-notes/uni-notes
+      branch: main
       exclude:
         - index.md
-  - git-revision-date-localized
+        - CONTRIBUTING.md
 
 # Customization
 extra:
