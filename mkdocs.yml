@@ -74,6 +74,11 @@ plugins:
           remove_comments: true
       cache_safe: true
   - mkdocs-jupyter
+  - git-authors:
+      sort_authors_by: contribution
+      exclude:
+        - index.md
+  - git-revision-date-localized
 
 # Customization
 extra:
