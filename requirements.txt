@@ -2,3 +2,4 @@ mkdocs-material
 mkdocs-minify-plugin
 mkdocs-jupyter
 mkdocs-git-committers-plugin-2
+lxml
