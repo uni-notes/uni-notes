@@ -122,20 +122,14 @@
 	
   {{ super() }}
   
-  {% if committers or last_commit_date %}
-	<div class="page-metadata-container">
-		{% if last_commit_date %}
-			<span class="last-updated-text">Last updated:</span>
-			<time role="presentation" datetime="2018-10-25T00:00:00.000Z" data-article-date-source="ms.date">{{ last_commit_date }}</time>
-		{% endif %}
-		{% if committers %}
-			<p>
-				Contributors: 
-				{% for user in committers %}
-					<a href="{{ user.url }}" data-bi-name="contributorprofile" target="_blank">{{ user.name }}</a>{% if not loop.last %}, {% endif %}
-				{% endfor %}
-			</p>
-		{% endif %}
+  {% if committers %}
+	<div class="md-source-file">
+		<small>
+			Contributors: 
+			{% for user in committers %}
+				<a href="{{ user.url }}" data-bi-name="contributorprofile" target="_blank">{{ user.name }}</a>{% if not loop.last %}, {% endif %}
+			{% endfor %}
+		</small>
 	</div>
   {% endif %}
 

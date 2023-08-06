@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: '0'
       - uses: actions/setup-python@v3
         with:
           python-version: 3.x
@@ -15,5 +17,6 @@ jobs:
       - run: pip install mkdocs-minify-plugin
       - run: pip install mkdocs-jupyter
       - run: pip install mkdocs-git-committers-plugin-2
+      - run: pip install mkdocs-git-revision-date-localized-plugin
       - run: pip install lxml
       - run: mkdocs gh-deploy --force

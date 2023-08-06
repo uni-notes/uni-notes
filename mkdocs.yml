@@ -80,6 +80,10 @@ plugins:
       exclude:
         - index.md
         - CONTRIBUTING.md
+  - git-revision-date-localized:
+      exclude:
+        - index.md
+        - CONTRIBUTING.md
 
 # Customization
 extra:

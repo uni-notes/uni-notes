@@ -3,3 +3,4 @@ mkdocs-minify-plugin
 mkdocs-jupyter
 mkdocs-git-committers-plugin-2
 lxml
+mkdocs-git-revision-date-localized-plugin

@@ -210,8 +210,3 @@ svg {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-
-.page-metadata-container{
-    font-size: small;
-    color: var(--md-default-fg-color--light);
-}
