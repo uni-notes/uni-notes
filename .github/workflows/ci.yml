@@ -7,11 +7,16 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: '0'
+      - uses: actions/setup-python@v3
         with:
           python-version: 3.x
       - run: pip install mkdocs-material
       - run: pip install mkdocs-minify-plugin
       - run: pip install mkdocs-jupyter
+      - run: pip install git+https://github.com/ojacques/mkdocs-git-committers-plugin-2@60b1a7c --user
+      - run: pip install mkdocs-git-revision-date-localized-plugin
+      - run: pip install lxml
       - run: mkdocs gh-deploy --force
