@@ -81,6 +81,8 @@ plugins:
         - index.md
         - CONTRIBUTING.md
   - git-revision-date-localized:
+      type: timeago
+      custom_format: "%d. %B %Y"
       exclude:
         - index.md
         - CONTRIBUTING.md
