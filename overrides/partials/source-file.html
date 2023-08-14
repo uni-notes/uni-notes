@@ -1,0 +1,19 @@
+{% import "partials/language.html" as lang with context %}
+
+{% if page.meta.git_revision_date_localized or committers %}
+<hr/>
+<div class="md-source-file">
+    <small>
+        {% if page.meta.git_revision_date_localized %}
+            Last Updated: {{ page.meta.git_revision_date_localized }}
+        {% endif %}
+        <br>
+        {% if committers %}
+            Contributors: 
+			{% for user in committers %}
+				<a href="{{ user.url }}" data-bi-name="contributorprofile" target="_blank">{{ user.name }}</a>{% if not loop.last %}, {% endif %}
+			{% endfor %}
+        {% endif %}
+    </small>
+</div>
+{% endif %}

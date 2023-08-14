@@ -116,22 +116,3 @@
 	});
 </script>
 {% endblock %}
-
-
-{% block content %}
-	
-  {{ super() }}
-  
-  {% if committers %}
-	<div class="md-source-file">
-		<small>
-			Contributors: 
-			{% for user in committers %}
-				<a href="{{ user.url }}" data-bi-name="contributorprofile" target="_blank">{{ user.name }}</a>{% if not loop.last %}, {% endif %}
-			{% endfor %}
-		</small>
-	</div>
-  {% endif %}
-
-  
-{% endblock %}
