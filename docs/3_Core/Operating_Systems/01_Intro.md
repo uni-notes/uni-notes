@@ -14,12 +14,11 @@ a set of programs
 > System software that acts as an interface between users and the hardware resources of a computing system.
 
 - Resource allocator
-    - Keeps track of
-    - occupied/empty portions of the primary and secondary memory
+    - Keeps track of occupied/empty portions of the primary and secondary memory
     - Status of I/O Devices
-- control porgam
+- control program
 - Kernel of a computing system
-  Kernel means most important part of any computing system/programming environment
+  Kernel is the most important part of any computing system/programming environment
     - Kernel is system software which is part of operating system
     - Kernel provides interface between hardware and software components
 
@@ -126,9 +125,9 @@ Time taken to **service** an interrupt
 ### Advantages
 
 - Save processor time
-  Processor resources are very valuable, as it can be used for some other task
+	- Processor resources are very valuable, as it can be used for some other task
 - Avoid polling
-  Going around asking I/O devices; wasting processor time
+	- Going around asking I/O devices; wasting processor time
 
 ```mermaid
 flowchart LR
@@ -179,7 +178,7 @@ Similar to instruction pointer of x86
 
 ## Storage of Multi-Byte data
 
-Little Endian = Lower Byte is stored first then Higher Byte
+Little Endian = Lower Byte is stored first then Higher Byte. 
 This is what 8086 uses
 
 Big Endian = Higher Byte is stored first then Lower Byte
@@ -309,7 +308,7 @@ Uni was before.
 |---                  | ---                                                                                                     | ---|
 |Primary memory parts | - OS area<br />- User area can be used by only 1 program                                                | - OS area<br />- User area contains multiple programs|
 |Advantage            |  | When one program is waiting for I/O, the OS sends off another program to the CPU.|
-|Disadvantage         | This had improper utilization of system resources, especially when I/O devices are being used. | Malicious program can affect the other program’s segments; before it was even possible for them to affect the OS|
+|Disadvantage         | This has improper utilization of system resources, especially when I/O devices are being used. | Malicious programs can affect the other program’s segments; before it was even possible for them to affect the OS|
 
 ## Modes of Operations
 
@@ -322,9 +321,9 @@ This mode bit will change continuously.
 
 ## Privileged Execution of Instruction
 
-Priviledge signifies access level of a program
+Privilege signifies the access level of a program
 
-I/O, memory, timer, CPU, Interrupts are privileged
+I/O, memory, timer, CPU, and Interrupts are privileged
 
 Privilege level varies from
 
