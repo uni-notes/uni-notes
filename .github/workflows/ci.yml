@@ -19,4 +19,6 @@ jobs:
       - run: pip install git+https://github.com/ojacques/mkdocs-git-committers-plugin-2@60b1a7c --user
       - run: pip install mkdocs-git-revision-date-localized-plugin
       - run: pip install lxml
+      - run: git push --delete origin gh-pages
+        continue-on-error: true
       - run: mkdocs gh-deploy --force
