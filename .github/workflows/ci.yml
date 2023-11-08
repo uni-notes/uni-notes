@@ -16,7 +16,7 @@ jobs:
       - run: pip install mkdocs-material
       - run: pip install mkdocs-minify-plugin
       - run: pip install mkdocs-jupyter
-      - run: pip install git+https://github.com/ojacques/mkdocs-git-committers-plugin-2@60b1a7c --user
+      - run: pip install mkdocs-git-committers-plugin-2
       - run: pip install mkdocs-git-revision-date-localized-plugin
       - run: pip install lxml
       - run: git push --delete origin gh-pages
