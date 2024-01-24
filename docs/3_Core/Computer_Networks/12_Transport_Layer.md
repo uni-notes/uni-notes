@@ -102,9 +102,11 @@ Sequence numbers can be repeated
 If the header of the frame allows $m$ bits for sequence number, the sequence numbers range from $0 \iff 2m – 1$
 
 The values are modulo $2^m$
+
 $$
 \text{Final seq no} = \text{Actual Seq Number } \% \ 2^m
 $$
+
 For m = 3, sequence numbers are: 0, 1, 2, 3, 4, 5, 6, 7.
 
 ### Acknowledgement

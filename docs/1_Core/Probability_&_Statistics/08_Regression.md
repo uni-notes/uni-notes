@@ -44,9 +44,9 @@ $$
 
 |     |   Type    |    Correlation    |
 | :-------: | :-------: | :---------------: |
-| **Strength**  |   Weak    |   $\| r \| \le 0.5$   |
-|           | Moderate  | $0.5 < \| r \| < 0.8$ |
-|           |  Strong   |   $\| r \| \ge 0.8$   |
+| **Strength**  |   Weak    |   $\vert  r  \vert \le 0.5$   |
+|           | Moderate  | $0.5 < \vert  r  \vert < 0.8$ |
+|           |  Strong   |   $\vert  r  \vert \ge 0.8$   |
 | **Direction** | Directly  |      $r > 0$      |
 |           | Inversely |      $r < 0$      |
 

@@ -1,3 +1,13 @@
+# Introduction
+
+## 2 Approaches
+
+|                  | Bayesian                                           | Frequentist                            |
+| ---------------- | -------------------------------------------------- | -------------------------------------- |
+| Probability      | Subjective, based degree of certainty in the event | Limiting case of repeated measurements |
+| Model parameters | Unknown constants                                  | Random variables                       |
+| Data             | Random variables                                   | Constants                              |
+
 ## Formulae
 
 $$
@@ -38,3 +48,4 @@ $$
 $$
 P(A|B) = \frac{P(A \cap B)}{P(B)} \quad P(B) \ne 0
 $$
+

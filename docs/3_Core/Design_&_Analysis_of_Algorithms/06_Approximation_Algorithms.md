@@ -29,8 +29,8 @@ eg: 0/1 knapsack, traveling salesperson
 
 | Type       | Meaning                                                      | Application                                                |
 | ---------- | ------------------------------------------------------------ | ---------------------------------------------------------- |
-| Absolute   | $\|\hat F(I) - \overset{\star} F (I)\| \le k$, for some constant $k$<br />for every $I$ of $P$ | Planar Graph Coloring<br />Maximum Programs Stored Problem |
-| $f(n)$     | $\frac{\|\hat F(I) - \overset{\star} F (I) \|}{\overset{\star} F (I)} \le f(n)$, for $\overset{\star} F (I) > 0$<br />for every $I$ of $P$ |                                                            |
+| Absolute   | $\vert \hat F(I) - \overset{\star} F (I) \vert \le k$, for some constant $k$<br />for every $I$ of $P$ | Planar Graph Coloring<br />Maximum Programs Stored Problem |
+| $f(n)$     | $\frac{\vert \hat F(I) - \overset{\star} F (I)  \vert}{\overset{\star} F (I)} \le f(n)$, for $\overset{\star} F (I) > 0$<br />for every $I$ of $P$ |                                                            |
 | $\epsilon$ | $f(n)$ approximation algo for which $f(n) \le \epsilon$, where $\epsilon$ is some constant |                                                            |
 
 ## Planar Graph Coloring

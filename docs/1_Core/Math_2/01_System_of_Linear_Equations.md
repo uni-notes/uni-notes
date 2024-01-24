@@ -83,7 +83,7 @@ no of non-zero rows of a matrix in REF/RREF
    
 	 $n$ is the number of unknown variables
    
-   | Rank(A\|B)        |                    |
+   | Rank(A\vert B)        |                    |
    | ----------------- | ------------------ |
    | $\ne$ rank(A)     | no solutions       |
    | $=$ rank(A) $= n$ | unique solutions   |

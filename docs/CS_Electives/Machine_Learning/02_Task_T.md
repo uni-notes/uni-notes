@@ -1,3 +1,5 @@
+# Task $T$
+
 Process of learning itself is not the task; learning is the means of attaining ability to perform the task
 
 Usually described in terms of how the machine
@@ -18,3 +20,35 @@ learning system should process an instance (collection of features), which is us
 | Denoising                        | Predict clean output from corrupt input                      |                            | Image/Video denoising                                        |
 | Density Estimation               | Identify underlying probability distribution of set of inputs |                            |                                                              |
 
+## Types of Predictions
+
+|                | Interpolation                                                | Extrapolation                                                |
+| -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| $x_\text{new}$ | $\in [X_{\text{train}_\text{min}}, X_{\text{train}_\text{max}}]$ | $\not \in [X_{\text{train}_\text{min}}, X_{\text{train}_\text{max}}]$ |
+| Uncertainty    | Low                                                          | High                                                         |
+
+## Regression
+
+Process of predicting continuous values.
+$$
+\hat y = f(X)
+$$
+
+## Classification
+
+Supervised learning technique, which works with labelled dataset
+
+Deals with categorical data
+
+In a classication dataset, you have
+
+- Independent attributes $<A_1, A_2, A_3>$
+
+- Discrete Target attribute
+
+- Tuples/records/data objects/sample instance
+
+  Tuple $= (x, y)$
+
+    - $x =$ Feature Vector
+    - $y =$ Class Label

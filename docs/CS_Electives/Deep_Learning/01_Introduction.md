@@ -86,18 +86,3 @@ So if the width and height of image are $w, h$
 ## Transfer Learning
 
 ![image-20230527151527131](./../assets/image-20230527151527131.png)
-
-## Dropout
-
-Dropout is applied on the output of hidden fully-connected layers
-
-![image-20230527200246203](./../assets/image-20230527200246203.png)
-$$
-\begin{aligned}
-h  &= \sigma(W_1 x + b_1) \\
-h' &= \text{dropout}(h) \\
-o  &= W_2 h' + b_2 \\
-y  &= \text{softmax}(o)
-\end{aligned}
-$$
-At inference time, dropout is inactive, i.e. $h' = \text{dropout}(h)$

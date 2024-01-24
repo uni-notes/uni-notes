@@ -36,12 +36,12 @@ if price of commodity changes by some $k \%$, demand for it changes by $k \times
 
 Note that the following shows the magnitude only
 
-|          $\|e_x^p\|$ | Demand                                                       |
+|          $\vert e_x^p \vert$ | Demand                                                       |
 | -----------------: | ------------------------------------------------------------ |
 |                  0 | perfectly inelastic<br />(demand curve vertical - parallel to price axis) |
-|      $0 < \|e\| < 1$ | inelastic (low sensitivity)                                  |
+|      $0 < \vert e \vert < 1$ | inelastic (low sensitivity)                                  |
 |                  1 | unitary elastic                                              |
-| $1 < \|e\| < \infty$ | elastic                                                      |
+| $1 < \vert e \vert < \infty$ | elastic                                                      |
 |           $\infty$ | perfectly elastic<br />(demand curve horizontal - parallel to demand axis)<br />happens in perfectly-competitive market |
 
 ![Elasticity](img/demandElasticity.svg){ loading=lazy }

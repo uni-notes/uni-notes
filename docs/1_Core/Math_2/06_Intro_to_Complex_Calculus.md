@@ -28,14 +28,14 @@ $$
 
 |                   |                                   |
 | ----------------- | --------------------------------- |
-| $\| z \| = r$     | circle with radius $r$ @ $(0, 0)$ |
-| $\| z-z_0 \| = r$ | circle with radius $r$ @ $z_0$    |
+| $\vert  z  \vert = r$     | circle with radius $r$ @ $(0, 0)$ |
+| $\vert  z-z_0  \vert = r$ | circle with radius $r$ @ $z_0$    |
 
 ## Triangle Inequality
 
 | Upper Bound                         | Lower Bound                                    |
 | ----------------------------------- | ---------------------------------------------- |
-| $\| z_1 \pm z_2 \| \le \| z_1 \| + \| z_2 \|$ | $\| z_1 \pm z_2 \| \ge \text{abs} (\| z_1 \| - \| z_2 \|)$ |
+| $\vert  z_1 \pm z_2 \vert  \le \vert  z_1 \vert  + \vert  z_2 \vert$ | $\vert  z_1 \pm z_2 \vert  \ge \text{abs} (\vert  z_1 \vert  - \vert  z_2  \vert )$ |
 
 **abs** refers to absolute value
 

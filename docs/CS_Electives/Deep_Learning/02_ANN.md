@@ -6,8 +6,6 @@ They are loosely based on how our human brain works.
 
 ![Neural network visualization](./../assets/neural%20network.png)
 
-For more advanced concepts, refer to [Deep Learning](./../Deep_Learning/).
-
 ## Neuron
 
 Most basic unit of a neural network
@@ -151,25 +149,25 @@ $$
 
 As you increase the number of hidden layers, the possibility of open decision boundary decreases (which is good).
 
-## Activation Functions
-
-|                  Name                  |                        Output $f(x)$                         | Output Type |        Range        |
-| :------------------------------------: | :----------------------------------------------------------: | ----------- | :-----------------: |
-|                Identity                |                             $x$                              | Continuous  |      $[-1, 1]$      |
-|            Binary<br />Step            |    $\begin{cases} 0, &x < 0 \\ 1, & x \ge 0 \end{cases}$     | Binary      |      ${0, 1}$       |
-|           Tariff/<br />Tanh            |                          $\tanh(x)$                          | Discrete    |      $[-1, 1]$      |
-|                 ArcTan                 |                       $\tan^{-1} (x)$                        | Continuous  |  $(-\pi/2, \pi/2)$  |
-|   ReLU (Rectified<br />Linear Unit)    |    $\begin{cases} 0, &x < 0 \\ x, & x \ge 0 \end{cases}$     | Continuous  |    $[0, \infty]$    |
-|   SoftPlus<br />(smooth alt to ReLU)   |                        $\log(1+e^x)$                         | Continuous  |    $[0, \infty]$    |
-|      Parametric/<br />Leaky ReLU       | $\begin{cases} \alpha x, &x < 0 \\ x, & x \ge 0 \end{cases}$ | Continuous  | $[-\infty, \infty]$ |
-|      Exponential<br />Linear Unit      | $\begin{cases} \alpha (e^x-1), &x < 0 \\ x,&  x \ge 0 \end{cases}$ | Continuous  | $[-\infty, \infty]$ |
-| Sigmoid/<br />Logistic/<br />Soft Step |                    $\dfrac{1}{1+e^{-x}}$                     | Binary      |      $[0, -1]$      |
-|                Softmax                 | $\dfrac{e^{x}}{\sum_{i=1}^k e^{x_i}}$<br />where $k=$ no of classes<br />such that $\dfrac{\sum p_i}{k} = 1$ | Discrete    |      $[0, 1]$       |
-
-![activation_functions.svg](./../assets/activation_functions.svg)
-
 ## Back-Propagation
 
 Occurs at every neuron
 
 In a perceptron, it occurs only once, as there is only one neuron in the output layer
+
+## Dropout
+
+Dropout is applied on the output of hidden fully-connected layers
+
+![image-20230527200246203](./assets/image-20230527200246203.png)
+
+$$
+\begin{aligned}
+h  &= \sigma(W_1 x + b_1) \\
+h' &= \text{dropout}(h) \\
+o  &= W_2 h' + b_2 \\
+y  &= \text{softmax}(o)
+\end{aligned}
+$$
+
+At inference time, dropout is inactive, i.e. $h' = \text{dropout}(h)$

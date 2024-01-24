@@ -210,8 +210,8 @@ $$
 
 |                      Direction                      |           f            |        DD         |
 | :-------------------------------------------------: | :--------------------: | :---------------: |
-|                      $\nabla f$                      | increases more rapidly |  $\| \nabla f \|$  |
-|                     $- \nabla f$                     | decreases more rapidly | $- \| \nabla f \|$ |
+|                      $\nabla f$                      | increases more rapidly |  $\vert  \nabla f  \vert$  |
+|                     $- \nabla f$                     | decreases more rapidly | $- \vert  \nabla f  \vert$ |
 | $\perp \text{to } (\nabla f) \text{ or } (-\nabla f)$ |       no change        |         0         |
 
 ## Tangent Plane

@@ -11,6 +11,7 @@ Replace $\phi$ of updates with MLP
 Rather than using just 1 hidden layer, we use more hidden layers, ie, each time stamp of RNN has multiple cells
 
 ![image-20230527183513296](./../assets/image-20230527183513296.png)
+
 $$
 \begin{aligned}
 H_t^j &= f_j(H_{t-1}^j, H_t^{j−1}) \\
@@ -65,6 +66,7 @@ Adding a layer to a model changes function  class.
 ![image-20230527184430838](./../assets/image-20230527184430838.png)
 
 We want to add to the function class, using Taylor expansion  style parametrization
+
 $$
 f(x) = x + g(x)
 $$
@@ -82,6 +84,7 @@ $$
 Concatenate outputs of previous layers as input to next layer, with occasional transition layers to reduce dimensionality
 
 ![image-20230527195815669](./../assets/image-20230527195815669.png)
+
 $$
 \bar H_t^{(t)} = [H_t^{(t)}, \bar H_t^{t−1}]
 $$

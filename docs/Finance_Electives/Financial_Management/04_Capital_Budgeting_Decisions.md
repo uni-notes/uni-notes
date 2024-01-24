@@ -2,7 +2,7 @@ Corporations face multiple decisions, but have to pick wisely due to limited cap
 
 ## Capital Budgeting
 
-Process of evaluating firm’s long-term nvestment opportunities
+Process of evaluating firm’s long-term investment opportunities
 
 Large investments usually consist of smaller investment decisions.
 

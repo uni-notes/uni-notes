@@ -8,13 +8,29 @@ The benefits of improving a particular country/sector will improve others also e
 2. Inflation
 3. Unemployment
 
-## Basic Economic Models
+## What is a Model?
+
+Simplified representation of a system with assumptions
+
+### Purpose
 
 - simplify economic decisions
 - how to change outcomes
 - focus on what's important
 - built with assumptions
 - omits details
+
+### Characteristics of a good model
+
+1. Simple
+2. Easy to work with
+3. Insightful
+4. Generalizable
+5. Easy to test, and thereby accept/reject
+6. Empirically consistent
+7. Predictive precision
+
+## Basic Economic Models
 
 we are gonna learn 2 models
 

@@ -1,4 +1,6 @@
-Special case of LP, which deals with shipping of commodites from $m$ sources to $n$ nodes
+# Transportation Model
+
+Special case of LP, which deals with shipping of commodities from $m$ sources to $n$ nodes
 
 The number of basic vars and independent constraints will be $(m+n-1)$
 
@@ -8,13 +10,12 @@ To solve, we've to
 1. [Find initial BFS](#find-initial-bfs)
 2. [Find optimal solution](#find-optimal-solution)
 
-
-
 ## Matrix
 
 $m \times n$
 
 For every cell $v_{ij}$, make sure that
+
 $$
 \begin{aligned}
 v_{ij} &= \text{argmin}(D_i, S_j) \\
@@ -64,7 +65,7 @@ Checking optimality
 
 1. Set $u_1 = 0$
 
-2. Find $u_i, u_j$ for cells with $u_i + v_j = c_{ij}$
+2. Find $u_i, u_j$ for cells with $u_i + v_j = c_{ij}$
 3. Find BIJ for **empty** cells: $\text{BIJ} = u_i + v_j-c_{ij}$
 4. If BIJ $\le 0$ for **empty** cells, solution is optimal (this is minimization problem)
 5. Else, non-optimal
@@ -75,8 +76,8 @@ Optimizing
 2. Put $\theta$ there
 3. Make a square/rectangle, with corners as non-empty cells or $\theta$ cell
 4. Add
-   1. $-\theta$ to corner cells in the same row/col as $\theta$ cell
-   2. $+\theta$ to other corner cells
+   1. $-\theta$ to corner cells in the same row/col as $\theta$ cell
+   2. $+\theta$ to other corner cells
 5. $\theta$ = Max value that $\theta$ can assume, which is obtained using the cells in the same row/column of $\theta$ cell
 6. Evaluate all the cells
 

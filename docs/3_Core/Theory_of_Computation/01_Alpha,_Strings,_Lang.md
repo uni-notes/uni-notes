@@ -14,7 +14,7 @@ A problem that cannot be solved by a Turing Machine is **not computable**.
 | :-----------: | ---------------------------- | ------------------------------------------------------------ |
 |   $\Sigma$    | Set of Alphabet              | Non-empty finite set of symbols<br />eg: $\{0, 1 \}$         |
 |               | String                       | Finite sequence of zero/symbols                              |
-|     $\| s \|$     | Length of string s           |                                                              |
+|     $\vert  s  \vert$     | Length of string s           |                                                              |
 |  $\Sigma^k$   | Set of strings of length $k$ |                                                              |
 |  $\Sigma^1$   | Set of strings of length 1   | eg: $\{0, 1 \}$                                              |
 |  $\epsilon$   | Empty String                 | “”                                                           |
@@ -43,7 +43,7 @@ A problem that cannot be solved by a Turing Machine is **not computable**.
  = &\Sigma^* - L \end{aligned}$        | Opposite of defined language<br />Swap all accepting and rejecting states |
 | Closure of languages    | $L^*$                                                        | Similar to that of string                                    |
 | Power Set of $\Sigma^*$ | $\begin{aligned} P(S) &= 2^{\Sigma^*} \\
- \| P(S) \| &= 2^{\|S\|} \end{aligned}$ | Set of all subsets of $\Sigma^*$                             |
+ \vert  P(S) \vert  &= 2^{\vert S \vert} \end{aligned}$ | Set of all subsets of $\Sigma^*$                             |
 
 $$
 \begin{aligned}

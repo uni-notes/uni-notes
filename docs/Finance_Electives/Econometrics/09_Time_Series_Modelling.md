@@ -4,6 +4,56 @@ For all the following models
     - Else, use non-stationary $\to$ stationary transformation
 - We drop parameters if they are significantly equal to 0
 
+## Simple/Baseline Models
+
+| Method         |                                                              | $\hat y_{t+h}, \ h>=0$                                | Appropriate for                                              |
+| -------------- | ------------------------------------------------------------ | ----------------------------------------------------- | ------------------------------------------------------------ |
+| Average        | Average of past values                                       | $\overline{ \{ y_{t-k} \} }$                          |                                                              |
+| Naive          | Last value                                                   | $y_{t-1}$                                             | Random walk process<br />(Consequence of efficient market hypothesis) |
+| Seasonal Naive | Last seasonal value                                          | ${\large y}_{t+h-mk}$<br />where $m=$ seasonal period |                                                              |
+| Drift Method   | Last value plus average change<br />Equivalent to extrapolating line between first and last point | ${\large y}_{t-1} + \overline{ \{ y_t - y_{t-1} \} }$ |                                                              |
+
+Where $k > 0$
+
+## Simulation Models
+
+We do not use the observed values of the process as inputs
+
+Preferred for long-term forecasts
+
+### ETS Model
+
+Errors, Trend, Seasonality
+
+$$
+\hat y_t = f(t, S, u_t)
+$$
+
+### Monte-Carlo Simulation
+
+$$
+\hat y_t = f(\hat y_{t-1}, u_t)
+$$
+
+### FIR Model
+
+Only using input features
+
+$$
+\hat y_t = f(X_{t-k}, u_t)
+$$
+
+$k$ is the no of lagged input features
+
+### Output Error Model/Recursive Forecasting
+
+FIR model using past estimations also. Ideally you should develop a model for this (infinite-step forecasting), and then work on using the same model for multi-step forecasting.
+
+$$
+y_t =
+\sum_{i=p} \hat y_{t-i} +\sum_{i=\textcolor{hotpink}{0}} \hat X_{t-k} + u_t
+$$
+
 ## AR Model/Process
 
 AutoRegressive Model
@@ -104,29 +154,13 @@ subgraph d[Diagnostics]
 end
 ```
 
-|                | ACF Correlogram             | PACF Correlogram          |
-| -------------- | --------------------------- | ------------------------- |
-| White Noise    | No significant spikes       | No significant spikes     |
-| AR$(p)$        | Damps out                   | Spikes cut off at lag $p$ |
-| MA$(q)$        | Spikes cut off at lag $q$   | Damps out                 |
-| ARMA$(p, q)$   | Damps out                   | Damps out                 |
-| Non-Stationary | Spikes damp out very slowly | Spikes cut off at lag $p$ |
-
-## Best Model Evaluation
-
-1. Most Significance of coefficients
-2. Highest ${R^2}_\text{adj}$
-3. Highest log likelihood
-4. Lowest AIC, SC, HQ values
-
-## Durbin-Watson Stat
-
-Kinda like $t$ value
-
-|   DWS   | Accepted? | Reason                        |
-| :-----: | :-------: | ----------------------------- |
-|  $< 2$  |     ❌     | $u_t$ has auto-correlation    |
-| $\ge 2$ |     ✅     | $u_t$ has no auto-correlation |
+| ACF Correlogram             | PACF Correlogram          | ->   | Conclusion                      | Model                                       |
+| --------------------------- | ------------------------- | ---- | ------------------------------- | ------------------------------------------- |
+| No significant spikes       | No significant spikes     |      | White Noise                     |                                             |
+| Damps out                   | Spikes cut off at lag $p$ |      | Stationary                      | AR$(p)$                                     |
+| Spikes cut off at lag $q$   | Damps out                 |      | Stationary                      | MA$(q)$                                     |
+| Damps out                   | Damps out                 |      | Stationary                      | ARMA$(p, q)$                                |
+| Spikes damp out very slowly | Spikes cut off at lag $p$ |      | Random Walk<br />Non-Stationary | Monte-Carlo Simulation<br />Take difference |
 
 ## Correlogram
 
@@ -135,20 +169,15 @@ Kinda like $t$ value
 | all bars inside the marked lines                       |     ✅     | $u_t$ has **no** auto-correlation |
 | one/more bars outside marked lines                     |     ❌     | $u_t$ has auto-correlation        |
 
-## ARIMA Forecast Confidence Interval
+## Forecast Confidence Interval
 
-Range = $\pm 2\sigma$
+It shows the range upto which the forecast is expected to deviate
 
-It shows the deviations upto which the forecast is expected to deviate
+$$
+\text{CI }{y_{t+h}} = \hat y_{t+h} \pm h \sigma_{y+h}
+$$
 
-## Inflation-Welfare Cost Relation
-
-![inflation_welfare_costs](assets/inflation_welfare_costs.svg){ loading=lazy }
-
-|                      | Optimal Inflation Rate |
-| -------------------- | ---------------------- |
-| Developed Countries  | 2%                     |
-| Developing Countries | 4-6%                   |
+If standard deviation remains constant across all time points, $\sigma_{y+h} = \sigma_y$
 
 ## VAR
 
@@ -161,22 +190,6 @@ Consider the following regression
 $$
 y_t = \alpha_1 x + u_t
 $$
-
-## Spurious Regression
-
-Occurs when we perform regression between
-
-- 2 non-stationary variables
-  and/or
-- 2 independent variables
-
-You may get $R^2$ and $t$ values, but $u_t$ is not white noise (it is non-stationary)
-
-Variance of error term becomes infinite as we go further in time
-
-### Identification
-
-If $R^2 >$ DW Statistic
 
 ## Cases
 
@@ -206,30 +219,6 @@ $$
 where
 - $h$ is the horizon
 - $f(h)$ is the captured mapping for $h$. You may have to perform binary encoding (such as one-hot, etc).
-
-## Simulation Models
-
-We do not use the observed values of the process as inputs
-
-### FIR Model
-
-Only using input features
-
-$$
-y_t =
-\sum_{i=\textcolor{hotpink}{0}} \hat X_{t-k} + u_t
-$$
-
-$k$ is the no of lagged input features
-
-### Output Error Model/Recursive Forecasting
-
-FIR model using past estimations also. Ideally you should develop a model for this (infinite-step forecasting), and then work on using the same model for multi-step forecasting.
-
-$$
-y_t =
-\sum_{i=p} \hat y_{t-i} +\sum_{i=\textcolor{hotpink}{0}} \hat X_{t-k} + u_t
-$$
 
 ## Further Reading
 

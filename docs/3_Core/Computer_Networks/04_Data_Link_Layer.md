@@ -113,6 +113,7 @@ If syndrome = 0 at the receiver, there is no error
 ## Mac Layer Throughput
 
 Number of bits sent by MAC (Data Link) layer in given period of time
+
 $$
 \begin{aligned}
 \text{Throughput} = \frac{\text{Payload}}{\text{Total Time}}

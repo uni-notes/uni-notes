@@ -42,7 +42,6 @@ $$
 &= \frac{1}{1+k \left( 
 \frac{\text{Distance} \times \text{Bandwidth}}{\text{Speed} \times \text{Data Size}}
 \right)} \\
-
 \implies E &\propto \frac{1}{\text{Bandwidth}}
 \end{aligned}
 $$
@@ -50,6 +49,7 @@ $$
 ## CSMA/CA
 
 ![image-20230508093131452](./assets/image-20230508093131452.png)
+
 $$
 \begin{aligned}
 \text{Maximize Size of contention window}

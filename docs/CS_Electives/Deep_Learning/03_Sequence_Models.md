@@ -1,6 +1,7 @@
 # Sequence Models
 
 Consider a phenomenon where an observation is determined by its past values, eg: any time series variable, such as weather, precipitation, etc.
+
 $$
 p(x) = p(x_1) \cdot p(x_2 | x_1) \ldots p(x_t | x_1, \dots, x_{t−1})
 $$
