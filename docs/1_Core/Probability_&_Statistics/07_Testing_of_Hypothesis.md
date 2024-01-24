@@ -1,3 +1,5 @@
+# Testing of Hypothesis
+
 $\alpha$
 
 - level of significance
@@ -32,8 +34,7 @@ $$
 | :-----: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 |  $H_1$  |                        $\mu < \mu_0$                         |                       $\mu \ne \mu_0$                        |                        $\mu > \mu_0$                         |
 | p-value |              $F(z_c)$ <br /> $\alpha(t-\text{dist})$               |           $2[ F(-z_c) ]$ <br /> $2 \alpha(t-\text{dist})$           |              $F(-z_c)$ <br /> $\alpha(t-\text{dist})$              |
-|  Cases  | Accept $H_1$ if <br />$\begin{aligned} z_c & \le -z_\alpha \\
- t_c &\le -t_{(n-1), \alpha} \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{aligned} z_c \le -z_{\alpha/2} &\text{ or } z_c \ge +z_{\alpha/2}\\ t_c \le -t_{(n-1), (\alpha/2)} &\text{ or } t_c \ge +t_{(n-1), (\alpha/2)} \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{aligned} z_c &\ge +z_\alpha \\ t_c &\ge +t_{(n-1), \alpha} \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ |
+|  Cases  | Accept $H_1$ if <br />$\begin{aligned} z_c & \le -z_\alpha \\ t_c &\le -t_{(n-1), \alpha} \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{aligned} z_c \le -z_{\alpha/2} &\text{ or } z_c \ge +z_{\alpha/2}\\ t_c \le -t_{(n-1), (\alpha/2)} &\text{ or } t_c \ge +t_{(n-1), (\alpha/2)} \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{aligned} z_c &\ge +z_\alpha \\ t_c &\ge +t_{(n-1), \alpha} \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ |
 
 ## Proportion
 
@@ -53,8 +54,7 @@ $$
 | :-----: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 |  $H_1$  |                          $p < p_0$                           |                         $p \ne p_0$                          |                          $p > p_0$                           |
 | p-value |                           $F(z_c)$                           |                        $2[ F(-z_c) ]$                        |                          $F(-z_c)$                           |
-|  Cases  | Accept $H_1$ if <br />$\begin{aligned}z_c &\le -z_\alpha \\
- p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{aligned} z_c \le -z_{\alpha/2} &\text{ or } z_c \ge +z_{\alpha/2} \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{aligned} z_c &\ge +z_\alpha \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ |
+|  Cases  | Accept $H_1$ if <br />$\begin{aligned}z_c &\le -z_\alpha \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{aligned} z_c \le -z_{\alpha/2} &\text{ or } z_c \ge +z_{\alpha/2} \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{aligned} z_c &\ge +z_\alpha \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ |
 
 ## Variance/SD
 
@@ -72,21 +72,25 @@ $$
 | :-----: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 |  $H_1$  |                          $p < p_0$                           |                         $p \ne p_0$                          |                          $p > p_0$                           |
 | p-value |                     1 - $\alpha$(table)                      |                     1 - $\alpha$(table)                      |                     1 - $\alpha$(table)                      |
-|  Cases  | Accept $H_1$ if <br />$\begin{aligned}\chi_c^2 &\le \chi^2_{(n-1), (1-\alpha)}  \\
- p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{aligned}\chi_c^2 \le \chi^2_{(n-1), (1-\alpha/2)} &\text{ or } \chi_c^2 \ge \chi^2_{(n-1), (\alpha/2)} \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{aligned}\chi_c^2 &\ge \chi^2_{(n-1), \alpha}  \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ |
+|  Cases  | Accept $H_1$ if <br />$\begin{aligned}\chi_c^2 &\le \chi^2_{(n-1), (1-\alpha)}  \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{aligned}\chi_c^2 \le \chi^2_{(n-1), (1-\alpha/2)} &\text{ or } \chi_c^2 \ge \chi^2_{(n-1), (\alpha/2)} \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ | Accept $H_1$ if <br />$\begin{aligned}\chi_c^2 &\ge \chi^2_{(n-1), \alpha}  \\ p &\le \alpha \end{aligned}$<br /><br />else accept $H_0$ |
 
 ## Errors
 
-|              | $H_0$ is true           | $H_0$ is false         |
-| ------------ | ----------------------- | ---------------------- |
-| Reject $H_0$ | Type 1 Error = $\alpha$ | correct                |
-| Accept $H_0$ | correct                 | Type 2 Error = $\beta$ |
+|              | $H_0$ is true           | $H_0$ is false         | $H_0$ is incorrect                                   |
+| ------------ | ----------------------- | ---------------------- | ---------------------------------------------------- |
+| Reject $H_0$ | Type 1 Error = $\alpha$ | Correct                | Type 3 Error<br />Right answer to the wrong question |
+| Accept $H_0$ | Correct                 | Type 2 Error = $\beta$ |                                                      |
 
 Type 1 error is alright, but Type 2 error is dangerous
 
 - $\alpha$ = P(reject $H_0$ | $H_0$ is true)
 - $\beta$ = P(accept $H_0$ | $H_0$ is false)
 
-Power of Test = $1 - \beta$
+## Power of Test
+
+$$
+\text{Power of Test} = 1 - \beta
+$$
+
 Greater the power of test, the better
 means that we can more accurately detect when $H_0$ is false

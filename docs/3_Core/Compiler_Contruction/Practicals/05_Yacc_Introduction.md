@@ -93,6 +93,7 @@ $$
 $$
 
 Example
+
 $$
 \begin{aligned}
 \$\$ &= \$1 \text{ + } \$3 \\

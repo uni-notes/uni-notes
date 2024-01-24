@@ -215,7 +215,7 @@ int x = (x<5)?5:0;
 |   >>>    | unsigned right shift |     Divide by 2^n^     | x>>>3   |
 |    &     |     Bitwise AND      | perform AND bit-by-bit | x&y     |
 |    ^     | Bitwise exclusive OR | perform OR bit-by-bit  | x^y     |
-|    \|    | Bitwise inclusive OR | perform OR bit-by-bit  | x\|y    |
+|   \vert     | Bitwise inclusive OR | perform OR bit-by-bit  | x \vert y    |
 
 ## Type Casting
 

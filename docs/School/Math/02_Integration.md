@@ -12,10 +12,10 @@ For simplicy, I’ve excluded
 | **Coefficient**  |           $f(ax+b)$            |                    $\frac{F(ax + b)}{a}$                     |                                   |
 | **Trignometric** |            $\sin x$            |                          $- \cos x$                          |                                   |
 |                  |            $\cos x$            |                           $\sin x$                           |                                   |
-|                  |            $\tan x$            |                       $\log \|\sec x\|$                        |          $-\log\|\cos x\|$          |
-|                  |            $\cot x$            |                       $\log \|\sin x\|$                        |     $-\log\|\text{cosec } x\|$      |
-|                  |            $\sec x$            |                   $\log\|\sec x + \tan x\|$                    |     $-\log\|\sec x - \tan x\|$      |
-|                  |        $\text{cosec }x$        |               $\log\|\text{cosec } x - \cot x\|$               | $-\log\|\text{cosec } x + \cot x\|$ |
+|                  |            $\tan x$            |                       $\log \vert \sec x\vert$                        |          $-\log\vert \cos x \vert$          |
+|                  |            $\cot x$            |                       $\log \vert \sin x\vert$                        |     $-\log\vert \text{cosec } x \vert$      |
+|                  |            $\sec x$            |                   $\log\vert \sec x + \tan x\vert$                    |     $-\log\vert \sec x - \tan x \vert$      |
+|                  |        $\text{cosec }x$        |               $\log\vert \text{cosec } x - \cot x\vert$               | $-\log\vert \text{cosec } x + \cot x \vert$ |
 |                  |        $\sec x \tan x$         |                           $\sec x$                           |                                   |
 |                  |    $\text{cosec }x \cot x$     |                      $-\text{cosec } x$                      |                                   |
 |                  |           $\sec^2 x$           |                           $\tan x$                           |                                   |
@@ -24,14 +24,14 @@ For simplicy, I’ve excluded
 |                  |    $\frac{1}{\sqrt{1+x^2}}$    |                        $\tan^{-1} x$                         |          $-\cot^{-1} x$           |
 |                  |  $\frac{1}{x \sqrt{x^2 - 1}}$  |                        $\sec^{-1} x$                         |     $- \text{ cosec}^{-1} x$      |
 |   **Squares**    |     $\frac{1}{a^2 + x^2}$      |      $\frac{1}{a} \tan^{-1} \left( \frac{x}{a} \right)$      |                                   |
-|                  |     $\frac{1}{x^2 - a^2}$      |       $\frac{1}{2a} \log\left\|\frac{x-a}{x+a}\right\|$        |                                   |
-|                  |     $\frac{1}{a^2 - x^2}$      |       $\frac{1}{2a} \log\left\|\frac{a+x}{a-x}\right\|$        |                                   |
+|                  |     $\frac{1}{x^2 - a^2}$      |       $\frac{1}{2a} \log\left\vert \frac{x-a}{x+a}\right \vert$        |                                   |
+|                  |     $\frac{1}{a^2 - x^2}$      |       $\frac{1}{2a} \log\left\vert \frac{a+x}{a-x}\right \vert$        |                                   |
 |  **Den Roots**   |  $\frac{1}{\sqrt{a^2 - x^2}}$  |            $\sin^{-1} \left( \frac{x}{a} \right)$            |                                   |
-|                  |  $\frac{1}{\sqrt{x^2 + a^2}}$  |          $\log\left\| x + \sqrt{x^2 + a^2} \right\|$           |                                   |
+|                  |  $\frac{1}{\sqrt{x^2 + a^2}}$  |          $\log\left\vert  x + \sqrt{x^2 + a^2} \right \vert$           |                                   |
 |                  | $\frac{1}{x \sqrt{x^2 - a^2}}$ |       $\frac{1}{a} \sec^{-1} \left(\frac{x}{a}\right)$       |                                   |
 |  **Num Roots**   |       $\sqrt{a^2 - x^2}$       | $\frac{x}{2} \sqrt{a^2 - x^2} + \frac{a^2}{2} \sin^{-1}\left(\frac{x}{a}\right)$ |                                   |
-|                  |       $\sqrt{a^2 + x^2}$       | $\frac{x}{2} \sqrt{a^2 + x^2} + \frac{a^2}{2} \log \|x + \sqrt{a^2 + x^2} \|$ |                                   |
-|                  |       $\sqrt{x^2 - a^2}$       | $\frac{x}{2} \sqrt{x^2 - a^2} - \frac{a^2}{2} \log \|x + \sqrt{x^2 - a^2}\|$ |                                   |
+|                  |       $\sqrt{a^2 + x^2}$       | $\frac{x}{2} \sqrt{a^2 + x^2} + \frac{a^2}{2} \log \vert x + \sqrt{a^2 + x^2}  \vert$ |                                   |
+|                  |       $\sqrt{x^2 - a^2}$       | $\frac{x}{2} \sqrt{x^2 - a^2} - \frac{a^2}{2} \log \vert x + \sqrt{x^2 - a^2} \vert$ |                                   |
 |     **IDK**      | $e^x \Big(f(x) + f'(x) \Big)$  |                          $e^x f(x)$                          |                                   |
 |                  |  $x \Big(f(x) + f'(x) \Big)$   |                           $x f(x)$                           |                                   |
 | **Parts/ILATE**  |         $\int (uv) dx$         |    $u \int vdx + \int \left(u' {\small \int} vdx \right)$    |                                   |

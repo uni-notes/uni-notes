@@ -134,19 +134,14 @@ Chance of default is lowest.
 
 ## Preference Shares
 
-Hybrid of debt and common shares
+- Hybrid of debt and common shares
+- Fixed dividends
+- Deferrable dividends
+- They don’t have voting rights
+- There is no expiration date
+- It is the only real example of perpetuity
+- Usually higher return than bonds
 
-Fixed dividends
-
-Deferrable dividends
-
-They don’t have voting rights
-
-There is no expiration date
-
-It is the only real example of perpetuity
-
-Usually higher return than bonds
 $$
 k_p = \frac{d_p}{p_p} \quad \left(\frac{c}{r} \text{ from Perpetuity} \right)
 $$

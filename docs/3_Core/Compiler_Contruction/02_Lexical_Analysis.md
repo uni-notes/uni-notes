@@ -129,7 +129,7 @@ In order of precedence
 | Languages | Kleene closure | $L^*$                      |
 |           | Posive closure | $L^+$                      |
 |           | Concatenation  | $L_1 \cdot L_2$            |
-|           | Union          | $L_1$ \| $L_2$<br />$L_1 \cup L_2$ |
+|           | Union          | $L_1$ \vert $L_2$<br />$L_1 \cup L_2$ |
 
 ## Regular Definitions
 

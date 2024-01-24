@@ -72,9 +72,9 @@ Let $L_1, L_2$ have grammar $G_1 = \{S_1 \to A\}, G_2 = \{S_2 \to B\}$
 
 | Operation                            | New Grammar $G_\text{new}$ |
 | ------------------------------------ | -------------------------- |
-| $L^*$                                | $\{SS \| \epsilon \}$       |
+| $L^*$                                | $\{SS \vert  \epsilon \}$       |
 | $L_1 \cdot L_2$<br />(concatenation) | $\{S_1 \cdot S_2 \}$       |
-| $L_1 \cup L_2$                       | $\{S_1 \| S_2\}$            |
+| $L_1 \cup L_2$                       | $\{S_1 \vert  S_2\}$            |
 
 #### Note
 

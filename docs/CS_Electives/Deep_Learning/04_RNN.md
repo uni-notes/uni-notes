@@ -19,6 +19,7 @@ We introduce a latent variable, that summarizes all the relevant information abo
 ![image-20230527163547959](./../assets/image-20230527163547959.png)
 
 ![image-20230527163555542](./../assets/image-20230527163555542.png)
+
 $$
 h_t = f(x_1, \dots, x_{t−1}) = f(h_{t−1},x_{t−1})
 $$
@@ -95,6 +96,7 @@ Often outputs of current state are used as input for next hidden state (and thus
 ### Output Decoding
 
 ![image-20230527165223776](./../assets/image-20230527165223776.png)
+
 $$
 P(y|o) \propto \exp(V_y^T \ o) = \exp(o[y])
 $$
@@ -112,12 +114,14 @@ Gradients can have [problems](#gradient-problems)
 Accuracy is usually measured in terms of log-likelihood. However, this makes outputs of different length incomparable (bad model on short output has higher likelihood than excellent model on very long output).
 
 Hence, we normalize log-likelihood to sequence length
+
 $$
 \begin{aligned}
 \pi &= - \textcolor{hotpink}{\frac{1}{T}} \sum_{t=1}^T \log P(y_t|\text{model}) \\
 \text{Perplexity} &= \exp(\pi)
 \end{aligned}
 $$
+
 Perplexity is effectively number of possible choices on average
 
 ## Truncated BPTT
@@ -148,6 +152,7 @@ IDK
 ### Zoneout
 
 Skip hidden state update and keep the same as previously during training
+
 $$
 h_t = h_{t−1}
 $$
@@ -187,8 +192,9 @@ We can avoid this by initializing the weights very carefully
 ### Clipping
 
 rescales gradient to size at most $\theta$.
+
 $$
-g \leftarrow \min \left( 1, \frac{\theta}{\|g\|}  \right) g
+g \leftarrow \min \left( 1, \frac{\theta}{\vert g \vert}  \right) g
 $$
 
 If the weights are large, the gradients grow exponentially during back-propagation

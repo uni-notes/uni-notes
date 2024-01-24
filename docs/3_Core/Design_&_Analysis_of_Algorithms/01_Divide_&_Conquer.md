@@ -116,7 +116,8 @@ Refer DSA
 
 ## Master’s Theorem
 
-Consider an recurrence r elation
+Consider a recurrence relation
+
 $$
 T(n) = a T \left( \frac{n}{b} \right) + n^d
 $$

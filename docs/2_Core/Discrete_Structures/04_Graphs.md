@@ -191,9 +191,9 @@ end
 
 |               | Closed | Open | Circuit | Cycle | Wheel | Regular graph       |      Complete Graph       |
 | ------------- | :----: | :--: | :-----: | :---: | :---: | ------------------- | :-----------------------: |
-| \|V\|         |   n    |  n   |    n    |   n   |       | n                   |             n             |
+| \vert V \vert         |   n    |  n   |    n    |   n   |       | n                   |             n             |
 | deg of vertex |        |      |         |       |       | d                   |            n-1            |
-| \|E\|         |   n    | n-1  |    n    |   n   |       | $\frac{n \times d}{2}$ | $\frac{n(n-1)}{2} = nC_2$ |
+| \vert E \vert         |   n    | n-1  |    n    |   n   |       | $\frac{n \times d}{2}$ | $\frac{n(n-1)}{2} = nC_2$ |
 
 ## Theorem
 

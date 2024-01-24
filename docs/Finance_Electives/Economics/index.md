@@ -34,6 +34,6 @@ eg: output level of economy, inflation, unemployment
 ## Movies
 
 - [x] The Big Short
-- [ ] the good the bad the ugly
+- [x] the good the bad the ugly
 - [x] coach carter movie
 - [x] the beautiful mind

@@ -65,52 +65,22 @@ e -->|Best Result Obtained| st[/Stop/]
 
 ### Data Augmentation
 
-- Duplication
-- Fit it a distribution
+- Images
+  - Flip
+  - Rotation
+  - Adding noise
+  - Warping
+- Fit it to a distribution
 
 ## Dimensionality Reduction Algorithms
 
-### PCA
-
-Principal Component Analysis
-
-Useful for continuous-valued attributes
-
-Uses concepts of linear algebra, such as matrices, eigen values, eigen vectors
-
-The new features are called as **Principal Components**
-
-- Linear combinations of original attributes
-- Perpendicular to each other
-- Capture maximum amount of variance of data
-
-(LDA is labelled data, PCA is for unlabelled data)
-
-### Steps
-
-1. Same steps as LDA (Linear Discriminant Analysis)
-
-2. Choose the best Principal Component
-
-3. $$
-   \begin{aligned}
-   P_{ij} &= {\text{PC}_i}^T
-   \begin{bmatrix}
-   x_j - \bar x \\
-   y_j - \bar y
-   \end{bmatrix} \\
-   i &= \text{Which PC we are using} \\
-   j &\in [1, n] \\   n &= \text{Sample Size}
-   \end{aligned}
-   $$
-
-4. Now use this $P$ vector as the new reduced dimension feature
-
-
-
-### SVD
-
-Singular Value Decomposition
+| Technique               | Working                           | Reduce dimensionality while              | Learning Type | No Hyperparameter Tuning Required | Fast | Deterministic | Linearity  |
+| ----------------------- | --------------------------------- | ---------------------------------------- | ------------- | --------------------------------- | ---- | ------------- | ---------- |
+| LDA                     | Maximize distance between classes | Separating pre-known classes in the data | Supervised    | ✅                                 | ✅    | ✅             | Linear     |
+| PCA/<br />SVD using PCA | Maximize variance in data         | Generating clusters previously not known | Unsupervised  | ✅                                 | ✅    | ✅             | Linear     |
+| MDS                     |                                   | ^^                                       | Unsupervised  | ❌                                 | ❌    | ❌             | Non-Linear |
+| t-SNE                   |                                   | ^^                                       | Unsupervised  | ❌                                 | ❌    | ❌             | Non-Linear |
+| UMAP                    |                                   | ^^                                       | Unsupervised  | ❌                                 | ✅    | ❌             | Non-Linear |
 
 ## Feature Selection
 
@@ -183,17 +153,23 @@ subgraph Black Box["Ran n times"]
 end
 ```
 
-## Feature Creation
+## Feature Engineering
 
-- Feature extraction
-- Mapping data to new space
-    - Time series data $\to$ frequency domain
-    - For eg, fourier transformation
-- Feature construction
-    - Construct features from pre-existing ones
-    - Eg
-    - Area = length * breadth
-    - Density = mass/volume
+### Feature extraction
+
+
+
+### Mapping data to new space
+
+- Time series data $\to$ frequency domain
+- For eg, fourier transformation
+
+### Feature construction
+
+- Construct interaction terms from existing features
+- Eg
+  - Area = length * breadth
+  - Density = mass/volume
 
 ## Discretization
 
@@ -225,9 +201,72 @@ Then convert using binarization. But, why?
 
 ## Attribute Tranformation
 
-|                        |                             $x'$                             |                                                              |        Property         |
-| ---------------------- | :----------------------------------------------------------: | ------------------------------------------------------------ | :---------------------: |
-| Simple                 |                      $x^2, \log x, \| x \|$                      |                                                              |                         |
-| Min-Max Normalization  | $\frac{x - x_{\text{min}}}{x_{\text{max}} - x_{\text{min}}}$ | $\frac{x - x_{\text{min}}}{x_{\text{max}} - x_{\text{min}}} * ({\max}_{\text{new}} - {\min}_{\text{new}}) + {\min}_{\text{new}}$<br />I didn’t exactly understand this |     $0 \le x \le 1$     |
-| Standard Normalization |                    $\frac{x-\mu}{\sigma}$                    |                                                              | $\mu' = 0, \sigma' = 1$ |
+|                        |                             $x'$                             |        Property         |
+| ---------------------- | :----------------------------------------------------------: | :---------------------: |
+| Simple                 |                    $x^2, \log x, \vert  x  \vert$                    |                         |
+| Min-Max Normalization  | $\frac{x - x_{\text{min}}}{x_{\text{max}} - x_{\text{min}}}$ |     $0 \le x \le 1$     |
+| Standard Normalization |                    $\frac{x-\mu}{\sigma}$                    | $\mu' = 0, \sigma' = 1$ |
 
+## Target Transformation
+
+Not recommended, as you will face all the disadvantages of [MSLE](../Machine_Learning/04_Performance_Measure_P.md#Regression) 
+
+### Box-Cox/Bickel-Doksum Transformations
+
+$$
+y'_t = \begin{cases}
+\log \vert y_t \vert, & \lambda = 0 \\
+\dfrac{\text{sign}(y_t) \vert y_t \vert ^\lambda - 1}{\lambda}, & \lambda \ne 0
+\end{cases}
+$$
+
+|   $\lambda$    | Transformation                         |
+| :------------: | -------------------------------------- |
+|       1        | None                                   |
+| $\dfrac{1}{2}$ | Square root plus linear transformation |
+|       0        | Natural log                            |
+|       -1       | Inverse plus 1                         |
+
+### Back Transformation
+
+$$
+\hat y_t = \text{Med (y|t)} = \begin{cases}
+\exp(\hat y'_t), & \lambda = 0 \\
+\text{sign}(\lambda \hat y'_t + 1) \cdot {\vert \lambda \hat y'_t + 1 \vert}^{1/\lambda}, & \lambda \ne 0
+\end{cases}
+$$
+
+Back-transformed Prediction Intervals have correct coverage, but point forecasts are medians
+
+Hence, if we need the mean, we need to perform correction. (Didn’t really understand the correction.)
+
+$$
+E[y_t] = \begin{cases}
+\exp(\hat y'_t) \left[1 + \dfrac{\sigma^2}{2} \right], & \lambda = 0 \\
+(\lambda \hat y'_t + 1)^{1/\lambda} \left[1 + \dfrac{\sigma^2 (1-\lambda)}{2(\lambda \hat y'_t + 1)^2} \right], & \lambda \ne 0
+\end{cases}
+$$
+
+## Linear Basis Function
+
+$$
+\begin{aligned}
+\phi_i
+&= \text{exp}
+\left\{
+\frac{-(x- \mu_i)^2}{2 \sigma^2}
+\right\} \\
+&= \begin{cases}
+0, & |x_i - x| \to \infty \\
+1, & |x_i - x| \approx 0
+\end{cases}
+\end{aligned}
+$$
+
+- $\mu$ = pivot
+- $\sigma^2$ = bandwidth
+  - Higher, smoother
+  - Lower, sharper
+
+
+![image-20231203141417397](./assets/image-20231203141417397.png)

@@ -1,48 +1,6 @@
+# Learning Experience $E$
+
 Deals with how we train the model
-
-## Data
-
-Data can be structured/unstructured
-
-- Each column = feature
-- Each row = instance
-
-### Train-Validation-Test Split
-
-- Split is usually 60:20:20
-- Split should be mutually-exclusive, to ensure good out-of-sample accuracy
-
-The size of test set is important; small test set implies statistical uncertainty around the estimated average test error, and hence cannot claim algo A is better than algo B for given task.
-
-Random split is the best. However, random split will not work well all the time, where there is auto-correlation, for eg: time-series data
-
-```mermaid
-flowchart LR
-
-td[(Training Data)] -->
-|Training| m[Model] -->
-|Validation| vd[(Validation)] -->
-|Tuning| m --->
-|Testing| testing[(Testing Data)]
-```
-
-### Multi-Dimensional Data
-
-can be hard to work with as
-
-- requires more computing power
-- harder to interpret
-- harder to visualize
-
-### Feature Selection
-
-### Dimension Reduction
-
-Using Principal Component Analysis
-
-Deriving simplified features from existing features
-
-Easy example: using area instead of length and breadth.
 
 ## Model
 
@@ -72,4 +30,31 @@ A functional mapping between input and output
 
 Parameters that affect the prediction of a model.
 
+## Types of Learners
+
 They are not adapted by the ML algo itself, but we can use nested learning, where other algorithms optimize the hyperparameter for the ML algo.
+
+|                      | Eager Learner                                        | Lazy Learner                                 |
+| -------------------- | ---------------------------------------------------- | -------------------------------------------- |
+| During<br />Training | Learns relationship between class label & attributes | Stores traing records                        |
+| During<br />Testing  |                                                      | Perform computations to classify test record |
+| Example              | - Decision Tree<br />- Rule-Based Classifier         | - Nearest-neighbor classifier                |
+
+## Number of Variables
+
+|          | Univariate Regression   | Multi-Variate                     |
+| -------- | ----------------------- | --------------------------------- |
+| $\hat y$ | $f(X_1)$                | $f(X_1, X_2, \dots, X_n)$         |
+| Equation | $\beta_0 + \beta_1 X_1$ | $\sum\limits_{i=0}^n \beta_i X_i$ |
+| Best Fit | Straight line           | Place                             |
+
+## Degree of Model
+
+|          | Simple Linear Regression              | Curve-Fitting<br />Polynomial Linear Regression              | Curve-Fitting/<br />Non-Linear Regression                    |
+| -------- | ------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Equation | $\sum\limits_{j=0}^k \beta_j X_j$     | $\sum \limits_{j=0}^k \sum\limits_{i=0}^n \beta_{ij} (X_j)^i$ | Any of the $\beta$ is not linear                             |
+| Example  | $\beta_0 + \beta_1 X_1 + \beta_1 X_2$ | $\beta_0 + \beta_1 X_1 + \beta_1 X_1^2 + \beta_1 X_2^{10}$   | $\beta_0 + e^{\textcolor{hotpink}{\beta_1} X_1}$             |
+| Best Fit | Straight line                         | Curve                                                        | Curve                                                        |
+|          |                                       |                                                              | You can alternatively perform transformation to make your regression linear, but this isn’t best<br/>1. Your regression will minimize transformed errors, not your back-transformed errors (what actually matters). So the weights of errors will not be what is expected<br/>2. Transformed errors will be random, but your back-transformed errors (what actually matters) won’t be a random process |
+
+The term linear refers to the linearity in the coefficients $\beta$s, not the predictors

@@ -39,8 +39,8 @@ $$
 | ------------ | ------------------------------ | --------------------------- |
 | Velocity     | $\frac{d \vec r}{d t}$        |                             |
 | Acceleration | $\frac{d \vec V}{d t}$        | $\frac{d^2 \vec r}{d t^2}$ |
-| Speed        | $\|\vec V\|$                 |                             |
-| Direction    | $\frac{\vec V}{\|\vec V\|}$ |                             |
+| Speed        | $\vert\vec V\vert$                 |                             |
+| Direction    | $\frac{\vec V}{\vert\vec V\vert}$ |                             |
 
 ### Note
 
@@ -114,9 +114,9 @@ $$
 
 | Vector | Symbol |                                                              |                                 |
 | :--------------------------- | :------: | :----------------------------------------------------------: | :-----------------------------: |
-| Unit Tangent Vector          | $\hat T$ | $\frac{ \frac{d \vec r}{dt} }{ \|\frac{d \vec r}{dt}\| }$ | $\frac{\vec V}{\| \vec V \|}$ |
-| Principle Unit Normal Vector | $\hat N$ | $\frac{ \frac{d \vec T}{dt} }{ \|\frac{d \vec T}{dt}\|}$ |                                 |
-| Curvature <br />Rate of change in direction of curve, wrt arc length |   $k$    |                    $\frac{d \vec T}{d s}$                    | $\frac{1}{\| \vec V \|} \cdot \|\frac{d \hat T} {dt}\|$ |
+| Unit Tangent Vector          | $\hat T$ | $\frac{ \frac{d \vec r}{dt} }{\vert\frac{d \vec r}{dt}\vert}$ | $\frac{\vec V}{\vert \vec V \vert}$ |
+| Principle Unit Normal Vector | $\hat N$ | $\frac{ \frac{d \vec T}{dt} }{\vert\frac{d \vec T}{dt}\vert}$ |                                 |
+| Curvature <br />Rate of change in direction of curve, wrt arc length |   $k$    |                    $\frac{d \vec T}{d s}$                    | $\frac{1}{\vert \vec V \vert} \cdot \vert\frac{d \hat T} {dt}\vert$ |
 | Radius of Curvature | $\rho$ | $\frac{1}{k}$ |  |
 
 Curvature @ any point on a
@@ -130,8 +130,8 @@ If $\vec a = a_t \cdot \hat T + a_N \cdot \hat N$, then
 
 | Component  | Symbol |                        |                                    |
 | ---------- | :----: | :--------------------: | :--------------------------------: |
-| Tangential | $a_T$  | $\frac{d \|V \|}{dt}$ |                                    |
-| Normal     | $a_N$  |     $k \|V\|^2$      | $\sqrt{ \|\vec a\|^2 - {a_T}^2}$ |
+| Tangential | $a_T$  | $\frac{d \vertV \vert}{dt}$ |                                    |
+| Normal     | $a_N$  |     $k \vertV\vert^2$      | $\sqrt{\vert\vec a\vert^2 - {a_T}^2}$ |
 
 ### Note
 

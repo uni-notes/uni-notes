@@ -23,10 +23,11 @@ There also exists a limit $m$ which is the max weight you can pick
 ### Goal
 
 maximize profit $P$, while adhering to the limit.
+
 $$
 \begin{aligned}
-\text{max } P = &\sum p_i x_i \\
-\text{such that} &\sum w_i x_i \le m
+\text{max } P = & \sum p_i x_i \\
+\text{such that} & \sum w_i x_i \le m
 \end{aligned}
 $$
 
@@ -82,7 +83,7 @@ Directed and weighted binary tree
 
 1. Traverse from bottom
 2. Split a node from the tree if $d(u) > \delta$
-   - $d(u) = 0$ for leaves
+   - $d(u) = 0$ for leaves
    - $d(u) = \underset{v \in c(u)}{\max} \{ d(v) + w(u, v) \}$
 3. Traverse upward
 

@@ -1,3 +1,5 @@
+# Introduction
+
 This introductory page is a big long, but that's because all the below concepts are common to every upcoming topic.
 
 ## Machine Learning
@@ -6,7 +8,7 @@ Field of study that enables computers to learn without being explicitly programm
 
 Machine learning is necessary when it is not possible for us to make rules, ie, easier for the machine to learn the rules on its own
 
-![img](./../../assets/overview_ai_ml_dl_ds.svg)
+![img](./../assets/overview_ai_ml_dl_ds.svg)
 
 ```mermaid
 flowchart LR
@@ -40,9 +42,15 @@ To perform tasks which are easy for humans, but difficult to generate a computer
 flowchart LR
 td[Task<br/>Definition] -->
 cd[(Collecting<br/>Data)] -->
-t[Training] -->
-Testing -->
-Validation --> t & Stop([Save Model])
+l[Learning<br/>Type] -->
+c[Define Cost] -->
+Optimize -->
+Evaluate -->
+Tune -->
+save([Save Model]) -->
+Deploy
+
+ld[(Live <br/>Data)] --> Deploy
 ```
 
 ## Open-source Tools

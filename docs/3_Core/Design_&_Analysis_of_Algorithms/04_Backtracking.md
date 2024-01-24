@@ -87,7 +87,7 @@ Place $n$ queen pieces on a chess board such that
 | -------- | ------------------------------------------------------------ |
 | Row      | Won’t happen cuz every iteration goes to next row implicitly |
 | Column   | If a queen is placed in column i, no other queen is placed in the same column |
-| Diagonal | If two queens are placed at positions $(i,j)$ and $(k,l)$, then they are on the same diagonal only if<br/>$\|j – l\| = \|i – k\|$ |
+| Diagonal | If two queens are placed at positions $(i,j)$ and $(k,l)$, then they are on the same diagonal only if<br/>$\vert j – l\vert  = \vert i – k \vert$ |
 
 ```pseudocode
 Algorithm NQueens(k, n)

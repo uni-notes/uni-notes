@@ -119,12 +119,12 @@ Govt can help improve market outcomes
         For community resources(like fishing ponds, forests), the govt comes in to prevent over-utilization of the resources; supports sustainability
 
 3. Market failure
-    
+   
     1. Market fails when it comes to non-excludable commodity
     2. Govt interferes in fields where private investors are not interested
 
     Examples
-       
+    
       - national defence
       - community services
       - landscapes
@@ -291,6 +291,31 @@ Rate at which prices of commodities increase
 happens when economy is doing well
 
 upto 2-5% inflation is acceptable
+
+#### Inflation Models
+
+##### Taylor Rule
+
+Inflation rate something
+
+$$
+I_t = \beta_1 + \beta_2 (\pi_t - \pi_t^*) + e_t
+$$
+
+##### Money Supply
+
+$$
+I_t = \beta_1 + \beta_2 M_t + e_t
+$$
+
+#### Inflation-Welfare Cost Relation
+
+![inflation_welfare_costs](./assets/inflation_welfare_costs.svg){ loading=lazy }
+
+|                      | Optimal Inflation Rate |
+| -------------------- | ---------------------- |
+| Developed Countries  | 2%                     |
+| Developing Countries | 4-6%                   |
 
 #### Micro Effects
 

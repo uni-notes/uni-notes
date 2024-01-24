@@ -101,6 +101,7 @@ List of **overages** of the ledger accounts at a particular point of time
 The selected side (debit/credit) is the one having the amount brought down to next period.
 
 If everything is right, the trial balance should result in
+
 $$
 \sum \text{Debit Overages} = \sum \text{Credit Overages}
 $$

@@ -1,8 +1,52 @@
-## Overview
+Many times very high-quality professionals are not able to produce well, as they are usually incentivized to use complex methodologies. But data science is best when you actually solve the problem at hand, and help make decisions.
+
+## Fields Overview
+
+|           | Analytics   | AI/ML                                          | Statistical Inference               |
+| --------- | ----------- | ---------------------------------------------- | ----------------------------------- |
+| Goal      | Descriptive | Predictive                                     | Prescriptive                        |
+| Decisions | None        | Large scale repetitive<br />(with uncertainty) | Small scale<br />(with uncertainty) |
 
 ![Data Roles](../assets/Data_Roles.svg)
 
-![img](./../../assets/overview_ai_ml_dl_ds.svg)
+![img](./../assets/overview_ai_ml_dl_ds.svg)
+
+## Project Lifecycle
+
+```mermaid
+flowchart TB
+
+subgraph Scoping
+	dp[Define<br/>Project] -->
+	me["Define Metrics<br/>(Accuracy, Recall)"] -->
+	re[Resources<br/>Budget] -->
+    ba["Establish<br />Baseline"]
+end
+
+subgraph Data
+	d[(Data Source)] -->
+	l[Label &<br />Organize Data]
+end
+
+subgraph Modelling
+  pre[Preprocessing] -->
+	s[Modelling] -->
+	train[Training] -->
+  pp[Post<br />Processing] -->
+	vt[Validation &<br />Testing] -->
+	e[Error Analysis] -->
+	pre
+end
+
+subgraph Deploy
+	dep[Deploy in<br />Production] -->
+	m[Monitor &<br />Maintain] & dss[Decision<br />Support System]
+end
+
+Scoping --> Data --> Modelling --> Deploy
+```
+
+https://www.youtube.com/watch?v=UyEtTyeahus&list=PLkDaE6sCZn6GMoA0wbpJLi3t34Gd8l0aK&index=5
 
 ## Data Mining
 
@@ -10,32 +54,16 @@ Generate Decision Support Systems
 
 > Non-trivial extraction of implicit, previously-unknown and potentially useful information from data
 
-> Automatic/Semi-automatic means of discovreing meaningful patterns from large quantities of data
+> Automatic/Semi-automatic means of discovering meaningful patterns from large quantities of data
 
-## KDD
-
-Knowledge Discovering from Databases
-
-```mermaid
-flowchart LR
-
-id[Input Data] -->
-|Collect & Merge Data| Preprocessing -->
-|Preparation <br /> Feature Selection <br />Redundancy Removal <br /> Dimensionality Reduction <br /> Subsetting <br /> Tranformation/Normalization| dma[Data Mining Algorithm] -->
-pp[Post Processing] -->
-|Filtering <br /> Visualization <br /> Pattern Interpretation| dss[Decision Support System]
-```
-
-Redundant means repeated data
-
-## Predictive Task
+## Predictive Tasks
 
 Predict value of target/independent variable using values of independent variables
 
 - Regression - Continuous
 - Classification - Discrete
 
-## Descriptive Task
+## Descriptive Tasks
 
 Goal is to find
 
@@ -71,14 +99,13 @@ Grouping similar customers
 
   2. Generate document-term frequency matrix
 
-     | Document \| Term | T1   | T2   | …    | Tn   |
+     | Document \vert  Term | T1   | T2   | …    | Tn   |
      | ---------------- | ---- | ---- | ---- | ---- |
      | D1               |      |      |      |      |
      | D2               |      |      |      |      |
      | …                |      |      |      |      |
      | Dm               |      |      |      |      |
 
-     
 
 ### Deviation/Outlier/Anomaly Detection
 
@@ -94,9 +121,3 @@ Don’t mistake outlier for noise.
 
 - Network Intrusion Detection
 - Identify anomalous behavior from surveillance camera videos
-
-## Learning Types
-
-- Supervised - Labelled data
-- Unsupervised - Unlabelled data
-

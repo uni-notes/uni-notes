@@ -46,10 +46,13 @@ Each grid cell predicts B bounding boxes and confidence
 scores for those boxes; each bounding box consists of 5 predictions: $x, y, w, h$, and confidence. These confidence scores reflect how
 confident the model is that the box contains an object and
 how accurate it thinks the box is that it predicts.
+
 $$
 \text{Confidence} = P(\text{Object}) \times \text{IOU}
 $$
+
 Each grid cell also predicts C conditional class probabilities $P(\text{Class}_i|\text{Object})$
+
 $$
 P(\text{Class}_i|\text{Object}) \times P(\text{Object}) \times \text{IOU} = Pr(\text{Class}_i) \times \text{IOU}
 $$

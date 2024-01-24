@@ -93,21 +93,6 @@ There are multiple outcomes possible, and there exists an underlying probability
 
 2 random variables cannot perfectly correlated; otherwise it has some cause.
 
-- Normally-Distributed
-- Mean = 0
-- Variance $\ne$ 0
-- Skewness = 0
-  
-$$
-\tilde{\mu}_3=\frac{\sum_i^N\left(X_i-\bar{X}\right)^3}{(N-1) * \sigma^3}
-$$
-
-- Kurtosis = 3
-
-$$
-Kurt = \frac{\mu_4}{\sigma^4}
-$$
-
 ## Systematic Event
 
 only one outcome is possible

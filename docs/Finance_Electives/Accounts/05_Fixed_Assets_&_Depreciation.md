@@ -82,6 +82,7 @@ Refer to [Accounting Equation](03_Process_of_Accounting.md#Accounting Equation)
 | Book    | Estimate asset value at any point in time           |
 
 At the end of useful life
+
 $$
 \begin{aligned}
 \text{Book Value} &= \text{Scrap Value} \\

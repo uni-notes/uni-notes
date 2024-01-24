@@ -35,6 +35,7 @@ where
 LHS of any production/rule can only be a single non-terminal
 
 If $S$ is the start symbol and $L(G)$ is the language of $G$, then $L(G)$ is the set of strings that can be derived from $S$
+
 $$
 (a_1 \dots a_n) | S \overset{*}{\implies} a_1 \dots a_n , \forall a_i \in T
 $$
@@ -283,9 +284,8 @@ Not every substring that matches the right side of a production rule is a handle
 Any string derivable from the start symbol
 
 A derivation is a series of rewrite steps
-$$
-\small
 
+$$
 S \implies \gamma_0 \implies \gamma_1 \implies \dots \implies \gamma_n ⇒ \text{Sentence}
 $$
 
@@ -373,9 +373,11 @@ Meaning
 - Lookahead of $k$ i/p symbols at each step; if $k$ not mentioned, $k=1$
 
 Class of grammars parsable by LR is proper superset of class of grammars parsable with predictive parsers
+
 $$
 \text{LL(1) Grammars} \subset \text{LR(1) Grammars}
 $$
+
 Can detect syntactic error as soon it performs left-to-right scan of input
 
 ### Why?
@@ -404,7 +406,7 @@ The parser action is determined by $S_m$, $a_i$, and parsing action table
 |          action[$S_m, a_i$]          | Meaning                                                      |
 | :----------------------------------: | ------------------------------------------------------------ |
 |               Shift s                | Shift new input symbol and next state $s_i$ into stack       |
-| Reduce<br />$A \to \beta$ (or) $r_j$ | 1. Reduce by production no $j$<br />2. Pop 2 $\|\beta\|$ items from stack (grammar symbol & state symbol)<br />3. Use goto table<br />4. Push $A$ and $s$ where $s=\text{goto} [s_{m-r}, A]$<br /><br />(current input symbol not affected) |
+| Reduce<br />$A \to \beta$ (or) $r_j$ | 1. Reduce by production no $j$<br />2. Pop 2 $\vert \beta \vert$ items from stack (grammar symbol & state symbol)<br />3. Use goto table<br />4. Push $A$ and $s$ where $s=\text{goto} [s_{m-r}, A]$<br /><br />(current input symbol not affected) |
 |                 acc                  | Accept                                                       |
 |                blank                 | Error                                                        |
 

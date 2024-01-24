@@ -1,3 +1,24 @@
+## Assumptions of Classical Economics
+
+1. stable & well-defined preferences
+2. rational behavior
+3. maximize utility function (happiness, etc)
+4. only have self-interest
+   1. People don’t care about others’ interests
+   2. No peer-pressure
+
+5. risk-averse
+6. Perfect Bayesian information processors
+   1. process information optimally
+   2. pay perfect attention to all details
+   3. don’t forget information
+
+7. No biases
+8. preferences over final outcomes, not changes
+9. no “taste” for beliefs/information; purely objective
+
+These may seem like we are making very incorrect assumptions. But these assumptions are required to understand the main concepts. For more accurate modelling, we use [Behavioral Economics](./../Behavioral_Economics)
+
 ## Trade
 
 Voluntary transaction between parties, resulting in their betterment.

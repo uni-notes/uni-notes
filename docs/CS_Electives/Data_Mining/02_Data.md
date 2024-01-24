@@ -75,6 +75,19 @@ Attributes where only non-zero values are important. It can be
 
 ## Characteristics of Dataset
 
+### Sample Size
+
+|         | $n_\text{min}$  | $n_\text{recommended}$ |
+| ------- | --------------- | ---------------------- |
+| Tabular | $k+1$           | $10^k$                 |
+| Image   | $1000 \times C$ |                        |
+
+where
+
+- $n =$ no of sample points
+- $k =$ no of input variables
+- $C =$ no of classes
+
 ### Dimensionality
 
 No of features
@@ -182,3 +195,48 @@ Data has both spatial and temporal attributes
 | Discrete       | Mode                                          | Grade   |
 | Continuous     | Mean/Median<br />(depending on the situation) | Marks   |
 
+## Data
+
+Data can be structured/unstructured
+
+- Each column = feature
+- Each row = instance
+
+### Data Split
+
+- Train-Inner Validation-Outer Validation-Test is usually 60:10:10:20
+- Split should be mutually-exclusive, to ensure good out-of-sample accuracy
+
+The size of test set is important; small test set implies statistical uncertainty around the estimated average test error, and hence cannot claim algo A is better than algo B for given task.
+
+Random split is the best. However, random split will not work well all the time, where there is auto-correlation, for eg: time-series data
+
+```mermaid
+flowchart LR
+
+td[(Training Data)] -->
+|Training| m[Model] -->
+|Validation| vd[(Validation)] -->
+|Tuning| m --->
+|Testing| testing[(Testing Data)]
+```
+
+### Multi-Dimensional Data
+
+can be hard to work with as
+
+- requires more computing power
+- harder to interpret
+- harder to visualize
+
+### Feature Selection
+
+
+
+### Dimension Reduction
+
+Using Principal Component Analysis
+
+Deriving simplified features from existing features
+
+Easy example: using area instead of length and breadth.

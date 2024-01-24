@@ -44,12 +44,12 @@ $$
 
 |                  |                                             |                    Converges                     |    Diverges     |
 | :--------------: | :-----------------------------------------: | :----------------------------------------------: | :-------------: |
-| Geometric Series |           $a + ar + ar^2 + \dots$           | $\| r \| < 1$<br />converges to $\dfrac{a}{1-r}$     | $\| r \| \ge 1$ |
+| Geometric Series |           $a + ar + ar^2 + \dots$           | $\vert  r \vert  < 1$<br />converges to $\dfrac{a}{1-r}$     | $\vert  r  \vert \ge 1$ |
 |     p-series     | $\sum\limits_{n = 1}^\infty \dfrac{1}{n^p}$ |                     $p > 1$                      |    $p \le 1$    |
 
 $$
 \begin{aligned}
-\lim\limits_{n \to \infty} \frac{ \ln \|n\| }{n} &= 0 \quad (\ln \| n \| \text{ always } < n, \text{ so den reaches } \infty \text{ faster} ) \\
+\lim\limits_{n \to \infty} \frac{ \ln \vert n\vert  }{n} &= 0 \quad (\ln \vert  n  \vert \text{ always } < n, \text{ so den reaches } \infty \text{ faster} ) \\
 \lim\limits_{n \to \infty} x^{\frac{1}{n}} &= 1 \\
 \lim\limits_{n \to \infty} n^{\frac{1}{n}} &= 1 \\
 (x^0 = n^0 &= 1) \\
