@@ -15,7 +15,7 @@ body:
       label: Idea Contribution
       description: This project has Contribution Guidelines that all participants are expected to understand and follow.
       options:
-        - label: "I have read and agree to the project's [Contribution Guidelines](https://github.com/unnamed-project/.github/CODE_OF_CONDUCT.md)📜"
+        - label: "I have read and agree to the project's [Contribution Guidelines](https://github.com/uni-notes/uni-notes/blob/main/contributing_guidlines.md)📜"
           required: true 
   - type: textarea 
     id: whats-your-idea 
