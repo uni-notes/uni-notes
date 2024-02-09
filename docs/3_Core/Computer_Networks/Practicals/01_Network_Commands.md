@@ -8,6 +8,6 @@
 | `arp`       | `arp -a`                                 | ARP cache of current machine                                 | Address Resolution Protocol |                        |
 | `hostname`  | `hostname`                               | Gives the machine name                                       |                             |                        |
 | `nslookup`  | `nslookup`<br />`nslookup www.google.ae` | Look and diagnose the DNS of a location                      | Name System                 |                        |
-| `tracert`   | `tracert www.google.ae`                  | Shows the RTT from source and destination node, and also all the intermediary nodes | Trace Root                  |                        |
+| `tracert`   | `tracert www.google.ae`                  | Shows the RTT from source and destination node, and also all the intermediary nodes | Trace Root                  |    `traceroute`                    |
 | `pathping`  | `pathping www.google.ae`                 | Combination of `ping` and `tracert`                          |                             |                        |
 
