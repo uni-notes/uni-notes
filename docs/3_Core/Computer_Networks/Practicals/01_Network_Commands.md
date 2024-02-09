@@ -1,4 +1,4 @@
-| Command     | Usage                                    | Displays                                                     | Full Form                   | MacOS<br />alternative |
+| Command     | Usage                                    | Displays                                                     | Full Form                   | Unix<br />Alternative |
 | ----------- | ---------------------------------------- | ------------------------------------------------------------ | --------------------------- | ---------------------- |
 | `getmac`    | `getmac`                                 | Get mac address of current machine                           |                             | `ipconfig`             |
 | `ipconfig`  | `ipconfig`                               | computer’s IP details                                        |                             |                        |
