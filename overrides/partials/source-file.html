@@ -1,13 +1,14 @@
 {% import "partials/language.html" as lang with context %}
 
 {% if page.meta.git_revision_date_localized or committers %}
-<hr/>
 <div class="md-source-file">
     <small>
         {% if page.meta.git_revision_date_localized %}
             Last Updated: {{ page.meta.git_revision_date_localized }}
         {% endif %}
-        <br>
+	{% if page.meta.git_revision_date_localized and committers %}
+            ;
+	{% endif %}
         {% if committers %}
             Contributors: 
 			{% for user in committers %}

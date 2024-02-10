@@ -87,7 +87,7 @@ Contours of where the penalty is equal to 1 for the three penalties L1, L2 and e
 
 ### Early-Stopping
 
-![Training vs. Validation Error for Overfitting](./assets/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f6a656666686561746f6e2f7438315f3535385f646565705f6c6561726e696e672f6d61737465722f696d616765732f636c6173735f335f747261696e696e675f76616c2e706e67.png)
+![Training vs. Validation Error for Overfitting](./assets/error_graph.png)
 
 ### Dropout
 

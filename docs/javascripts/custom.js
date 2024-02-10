@@ -34,6 +34,16 @@ document$.subscribe(() => {
 	}
 })
 
+document$.subscribe(() => {
+	// To move metadata
+	const firstH1 = document.querySelector("h1");
+	const metadata = document.querySelector(".md-source-file");
+
+	if (metadata && firstH1) {
+		firstH1.parentNode.insertBefore(metadata, firstH1.nextSibling);
+	}
+})
+
 // load event gets fired only once; this script gets called every time
 
 window.addEventListener("load", function () {
