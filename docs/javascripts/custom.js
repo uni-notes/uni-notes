@@ -36,8 +36,8 @@ document$.subscribe(() => {
 
 document$.subscribe(() => {
 	// To move metadata
-	var firstH1 = document.querySelector("h1");
-	var metadata = document.querySelector(".md-source-file");
+	const firstH1 = document.querySelector("h1");
+	const metadata = document.querySelector(".md-source-file");
 
 	if (metadata && firstH1) {
 		firstH1.parentNode.insertBefore(metadata, firstH1.nextSibling);
