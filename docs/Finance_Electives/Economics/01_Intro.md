@@ -47,17 +47,6 @@ Trade offs are there as everything has pros/cons, gains/costs; other options cou
 | Investments       | Lowering interest rate<br/>Providing subsidies               |
 | Consumer spending | Universal Basic Income/Direct income transfers to people (only effective till a limit - excessive causes inflation)<br/>Reducing taxes |
 
-
-## Methodology in Economomic Analysis
-
-|                 | Positive analysis                                            | Normative Analysis       |
-| :-------------: | ------------------------------------------------------------ | ------------------------ |
-|      Topic      | **What** is the problem?                                          | **How** the world should be  |
-|     Nature      | Objective                                                    | Subjective               |
-| Characteristics | Analytic & Descriptive                                     | Prescripitive            |
-|      Extra      | Why the problem came up<br />no emotions/explanations if good or bad | what actions to be taken |
-|    Examples     | Increasing taxes will lower consumer spending<br />Increasing interest rate will lower demand for loans<br />Raising minimum wage will increase unemployment | Taxes must be increased  |
-
 ## Budget Deficit
 
 Scenario where Govt Expenditure > Revenue. This happens a lot in developing countries, as they are trying to develop as rapidly as possible.

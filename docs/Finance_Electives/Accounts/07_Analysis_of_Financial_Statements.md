@@ -140,10 +140,10 @@ If total shareholders funds increases over time, the company is very good, regar
 
 ### Types of Investments
 
-|   Relationship    |    Amount     |
-| :---------------: | :-----------: |
-|    Subsidiary     |     > 50%     |
-|     Associate     | 20% < A < 50% |
+| Relationship      |    Amount     |
+| :---------------- | :-----------: |
+| Subsidiary        |     > 50%     |
+| Associate         | 20% < A < 50% |
 | Minority Interest |     < 20%     |
 
 ### Shares

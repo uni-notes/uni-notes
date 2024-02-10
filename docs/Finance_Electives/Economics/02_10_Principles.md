@@ -52,11 +52,19 @@ Individual gains depends on
 
 ### Benefits of scale
 
-you get larger benefits with lower costs if you focus on specialization at large scale
+You get larger benefits with lower costs if you focus on specialization at large scale
 
-the average cost reduces when the volume of production increases
+Larger systems are more productive per unit input
+
+The average cost reduces when the volume of production increases
 
 eg: college mess cooking
+$$
+\text{Cost}(y) = y^\alpha
+$$
+Where $y =$ output quantity
+
+Benefits of scale exists if $\alpha < 1$
 
 ### Elasticity of demand
 

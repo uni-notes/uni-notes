@@ -1,10 +1,27 @@
-# Artifical Neural Networks
+# Artificial Neural Networks
 
 A neural network is simply made out of layers of [neurons](#neuron), connected in a way that the input of one layer of neuron is the output of the previous layer of neurons (after activation)
 
 They are loosely based on how our human brain works. 
 
 ![Neural network visualization](./../assets/neural%20network.png)
+
+You can think of a neural network as combining multiple non-linear decision surfaces into a single decision surface.
+
+## Hyperparameters
+
+- Batch size
+- Input size
+- Output size
+- No of hidden layers
+- No of neurons in hidden layers
+- Regularization
+- Loss function
+- Weight initialization technique
+- Optimization
+  - Algorithm
+  - Learning rate
+  - No of epochs
 
 ## Neuron
 
@@ -149,25 +166,3 @@ $$
 
 As you increase the number of hidden layers, the possibility of open decision boundary decreases (which is good).
 
-## Back-Propagation
-
-Occurs at every neuron
-
-In a perceptron, it occurs only once, as there is only one neuron in the output layer
-
-## Dropout
-
-Dropout is applied on the output of hidden fully-connected layers
-
-![image-20230527200246203](./assets/image-20230527200246203.png)
-
-$$
-\begin{aligned}
-h  &= \sigma(W_1 x + b_1) \\
-h' &= \text{dropout}(h) \\
-o  &= W_2 h' + b_2 \\
-y  &= \text{softmax}(o)
-\end{aligned}
-$$
-
-At inference time, dropout is inactive, i.e. $h' = \text{dropout}(h)$

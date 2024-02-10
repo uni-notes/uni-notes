@@ -80,7 +80,7 @@ Used for Client-Server model
 
 ### Types
 
-|                                                | Non-Persistent HTTP                                          | Persistent HTTP without Pipelining                           | Persistent HTTP with Pipelining                              |
+|                                                | Non-Persistent HTTP                                          | Persistent HTTP without Pipelining                           | Persistent HTTP with Pipelining                              |
 | ---------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Max no of objects sent over TCP connection     | 1                                                            | Multiple                                                     | Multiple                                                     |
 | Used in HTTP Version                           | HTTP/1.0                                                     |                                                              | HTTP/1.1                                                     |

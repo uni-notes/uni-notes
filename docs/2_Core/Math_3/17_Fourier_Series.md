@@ -1,4 +1,6 @@
-represent periodic signals in terms of cosines and sines.
+# Fourier Series
+
+Represent periodic signals in terms of cosines and sines.
 
 ## Periods
 

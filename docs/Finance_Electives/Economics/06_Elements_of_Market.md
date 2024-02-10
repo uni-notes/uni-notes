@@ -341,3 +341,10 @@ It mainly did one thing: introduction of a new commodity: old currency
 ### Fake Currency
 
 Fake currency is only an issue if it facilitates illegal activities. However, as long as fake currency is used for legal activities, then there is no problem from the perspective of economics. However, if the proportion of fake money is too large, then there is risk of inflation
+
+## Monopoly
+
+![image-20240213224223004](./assets/image-20240213224223004.png)
+
+Monopoly supplier produces at the quantity where Marginal Revenue & Marginal Cost intersect
+

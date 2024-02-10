@@ -5,6 +5,8 @@ $\alpha$
 - level of significance
 - size of critical region
 
+Confidence level = $(1-\alpha) \times 100 \%$
+
 The entire distribution is divided into 2 regions
 
 1. Critical Region

@@ -7,6 +7,7 @@
 *.war
 *.mp3
 *.mp4
+*.bkp
 # Directories to ignore
 target/
 .build/

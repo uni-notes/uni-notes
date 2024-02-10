@@ -65,13 +65,6 @@ Lenders cannot be owners of the corporation. Payment of interest is a legal obli
 
 If company fails to pay interest, they have to file for bankruptcy. A legal authority comes in, and sells the company’s assets to pay off the debt/bonds
 
-## Markets
-
-|                                      | Investors trade with |
-| ------------------------------------ | -------------------- |
-| Primary Market                       | company directly     |
-| Secondary Market<br />(Stock change) | each other           |
-
 ## Company Summary
 
 | Category       |                                 | Sign |
@@ -85,20 +78,6 @@ If company fails to pay interest, they have to file for bankruptcy. A legal auth
 |                | Net Margin                      | +/-  |
 
 EBITDA (I was too shy to ask sir)
-
-## Types of Assets
-
-| Type                       | Purpose                 | Example                                                      |
-| -------------------------- | ----------------------- | ------------------------------------------------------------ |
-| Real Asset                 | Functioning of business | Tangible (Machinery, property)<br />Intangible (Technical know-ho) |
-| Financial Asset/Securities | Raise funds             | Shares<br />Bonds                                            |
-
-Interest rate of bond depends on
-
-- Credit rating of corporation
-- Duration
-  - Short-term bond has low interest rate
-  - Long-term bond has high interest rate
 
 ## Clientele Effect
 

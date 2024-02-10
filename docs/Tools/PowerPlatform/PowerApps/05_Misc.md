@@ -71,7 +71,7 @@ Filter(
   If(
     Not(false in ForAll( // <- and: match all substrings
       Split(
-        Trim(Search_Input.Text),
+        Trim(Substitute(Search_Input.Text, " ", "")), // Trim(Search_Input.Text),
         " "
       ) As substring,
       true in ForAll( // <- or: match any column
@@ -207,27 +207,33 @@ app_name & " | " & App.ActiveScreen.Name
 
 ## Get first names
 
-```javascript
-// get first name
+Multi-person column
 
-// multi-person column
+```javascript
+// Ahmed
+// Ahamed
+// Mohammed
 
 ForAll(
-        users_all As user,
-        First(
-            Split(
-                Last(
-                    Split(
-                        user.Name.DisplayName,
-                        ", "
-                    )
-                ).Value,
-                " "
-            )
-        ).Value
-    )
+      users_all As user,
+      First(
+          Split(
+              Last(
+                  Split(
+                      user.Name.DisplayName,
+                      ", "
+                  )
+              ).Value,
+              " "
+          )
+      ).Value
+  )
+```
 
-// List
+From a List to a string
+
+```js
+// Ahmed; Ahamed; Mohammed
 
 Concat(
     ForAll(
@@ -237,7 +243,7 @@ Concat(
                 Last(
                     Split(
                         user.Name.DisplayName,
-                        ", "
+                        "; "
                     )
                 ).Value,
                 " "
@@ -247,8 +253,12 @@ Concat(
     Value,
     Char(10)
 )
+```
 
-// Gallery
+From a table to a string for a cell in a Gallery
+
+```js
+// Ahmed; Ahamed; Mohammed
 Concat(
     ForAll(
         ThisItem.Owner As ItemOwner,
@@ -257,7 +267,7 @@ Concat(
                 Last(
                     Split(
                         ItemOwner.DisplayName,
-                        ", "
+                        "; "
                     )
                 ).Value,
                 " "
@@ -266,6 +276,36 @@ Concat(
     ),
     Value,
     ", "
+)
+```
+
+default selected items for a dropdown
+
+```js
+// Ahmed; Ahamed; Mohammed
+Filter(
+    AddColumns(
+        ForAll(
+            users_all,
+            Name
+        ),
+        "FirstName",
+        First(
+            Split(
+                Last(
+                    Split(
+                        DisplayName,
+                        "; "
+                    )
+                ).Value,
+                " "
+            )
+        ).Value
+    ),
+    Email in ForAll(
+        ThisItem.Owner, // don't use Parent.Default, as it gives weird results
+        Email
+    )
 )
 ```
 

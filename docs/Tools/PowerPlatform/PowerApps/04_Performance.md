@@ -137,15 +137,8 @@ Ungroup(
 
 ## Optimizing Gallery
 
-- Use gallery whenever possible instead of individual buttons/boxes
 - Set `DelayItemLoading` to `true`
 - Set `LoadingSpinner` to `LoadingSpinner.Data` or `LoadingSpinner.Controls`
-- Dynamic height for menus container
-
-```javascript
-Gallery_Item.Height * Gallery.AllItemsCount
-```
-
 - Eliminate multi-screen dependency
 
   - This will prevent Powerapps from load everything from other screen
@@ -153,6 +146,7 @@ Gallery_Item.Height * Gallery.AllItemsCount
   - For example: Use global variable instead of `gallery.selected` for form
 
     row selection: `Onselect` will be `Set(current_item, ThisItem)`
+
 
 ## Settings
 
@@ -170,7 +164,7 @@ Hidden controls will not be created until they become visible
 
 - Use components wherever possible
 - Use `Lookup()` instead of `First(Filter())`
-  - `Lookup()` is delegable, `First(Filter())` is non-delegable
+  - `Lookup()` is delegable, `First(Filter())` is non-delegable, `First(Filter())` will load all the data into memory then perform the `Filter()`, then perform the `First()`
   - Lookup will stop at first match, `First(Filter())` will search the entire data even after first match and then return the first
 - Change order of filters to further optimize logic
 - Use Named Formulas

@@ -11,6 +11,17 @@ Many times very high-quality professionals are not able to produce well, as they
 
 ![img](./../assets/overview_ai_ml_dl_ds.svg)
 
+## Types of Analysis
+
+| Type | Topic                                 | Nature               | Time   | Comment                                 | Examples|
+|---                          | ---                                   | ---                  | ---    | ---                                     | ---|
+|Descriptive/<br />Positive   | **What** is happening?                | Objective            | Past   | No emotions/explanations if good or bad | Increasing taxes will lower consumer spending<br />Increasing interest rate will lower demand for loans<br />Raising minimum wage will increase unemployment|
+|Diagnostic                   | **Why** is it happening?              | Objective/Subjective | Past   | Helps in understanding root cause       | |
+|Predictive                   | **What will happen** if condition happens | Subjective           | Future | Understanding future, using history     | |
+|Prescriptive/<br />Normative | **What** to do                        | Subjective           | Future | what actions to be taken                | Taxes must be increased|
+
+The complexity increases as we go down the above list, but the value obtained increases as well
+
 ## Project Lifecycle
 
 ```mermaid

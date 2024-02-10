@@ -1,3 +1,5 @@
+# Time Value of Money
+
 You should never compare money across different time instants. We can only compare at the same instant.
 
 | When we take cashflow ___ in time | Name        |
@@ -120,13 +122,25 @@ This is the value of $r$ we use when calculating present/future value
 
 As we go from annual compounding towards more frequent compounding frequency, we are moving from **discrete compounding** to **continuous compounding**
 
-## Compounding
+## Compounding Cycle
 
+Frequency of compounding
+
+Let $m$ be the compounding cycle, ie number of compounding per year
 $$
 \begin{aligned}
-\text{FV} &= \text{PV} (1+r)^t \\
-&= \text{PV} \left(1 + \frac{r}{m} \right)^{mt} & \text{(Discrete)} \\
+\text{FV} &= \text{PV} \cdot (1+r)^t \\
+&= \text{PV} \left(1 + \dfrac{r}{m} \right)^{mt} & \text{(Discrete)} \\
 &= \text{PV} \times e^{rt} & \text{(Continuous)}
 \end{aligned}
 $$
 
+## IDK
+
+If you are in the middle of time period, and certain cashflows have already been taken,
+$$
+\text{PV}' = \text{PV} \times \dfrac{1}{(1+r)^{t_a/t_b}}
+$$
+
+- $t_a=$ Time elapsed in current time period
+- $t_b=$ Time Period

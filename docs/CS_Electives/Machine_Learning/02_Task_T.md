@@ -29,26 +29,98 @@ learning system should process an instance (collection of features), which is us
 
 ## Regression
 
-Process of predicting continuous values.
+### Probabilistic Regression
+
+- Probability of prediction is required
+- Understand impact of input
+- Regression target is the sum of individual binary outcomes
+
 $$
-\hat y = f(X)
+y'_i = p_i = \dfrac{y_i}{n_i}
 $$
+
+#### Binary Aggregate Outcomes
+
+$$
+\begin{aligned}
+y_i &\sim \text{Binomial}(n_i, p_i) \\
+p_i &= \sigma(\beta x_i) \\ 
+\implies y_i &\sim \text{Bernoulli}\Big( \sigma(x_i' \beta) \Big)
+\end{aligned}
+$$
+
+```
+	temperature	fields cultivated percentCultivated
+1 13.18475				 63         49	0.7777778
+2 12.35680				165        147	0.8909091
+3 17.57882				 38         30	0.7894737
+4 20.86867				152         95	0.6250000
+5 13.88084				 88         69	0.7840909
+6 17.18088				191        141	0.7382199
+```
+
+
+
+#### Multiple Aggregate Outcomes
+
+$$
+\begin{aligned}
+y_i &\sim \text{Multinomial}(n, p) \\
+p_j &= \text{Softmax}(\beta_j x) \\
+&= \dfrac{\exp(\beta_j x)}{\sum_k^K \exp(\beta_k x) }
+\end{aligned}
+$$
+
+When $n_i=1,$ this becomes multi-class classification
+
+Example
+
+```
+		 temperature  rainfall fields noncrop corn wheat rice
+1    13.18475			75.26666     63       8   31    17    7
+2    12.35680			102.37572    165       7  100    30   28
+3    17.57882			101.61363     38       1   26     3    8
+4    20.86867			64.35788    152      45   78    12   17
+5    13.88084			107.54101     88       4   54    15   15
+```
 
 ## Classification
 
-Supervised learning technique, which works with labelled dataset
+### Decision Boundary/Surface
 
-Deals with categorical data
+The boundary/surface that separates different classes
 
-In a classication dataset, you have
+Generated using decision function
 
-- Independent attributes $<A_1, A_2, A_3>$
+If we have $d$ dimensional data, our decision boundary will have $(d-1)$ dimensions
 
-- Discrete Target attribute
+### Linear Separability
 
-- Tuples/records/data objects/sample instance
+Means the ability to separate points of different classes using a line, with/without a non-linear activation function
 
-  Tuple $= (x, y)$
+$$
+f(u) = \begin{cases}
+1, & u \ge 0 \\
+0, & \text{otherwise}
+\end{cases}
+$$
 
-    - $x =$ Feature Vector
-    - $y =$ Class Label
+| Logic Gate | Linearly-Separable? | Comment                                                 |
+| :--------: | :-----------------: | ------------------------------------------------------- |
+|    AND     |          ✅          |                                                         |
+|     OR     |          ✅          |                                                         |
+|    XOR     |          ❌          | Linearly separable if we add $(x \cdot y)$ as a feature |
+|    XNOR    |          ❌          | Linearly separable if we add $(x \cdot y)$ as a feature |
+
+![Linear Separability of Logic Gates](./assets/linear_separability.svg)
+
+### Discriminant Function
+
+Functions which takes an input vector $x$ and assigns it to one of the $k$ classes
+
+### Multi-Class Classification
+
+|                   | One-vs-Rest                                            | One-vs-One                               |
+| ----------------- | ------------------------------------------------------ | ---------------------------------------- |
+| No of classifiers | $k-1$                                                  | $\frac{k(k-1)}{2}$                       |
+| Limitation        | Some point may have multiple classes/no classes at all | Multiple classes assigned to some points |
