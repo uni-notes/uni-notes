@@ -2,23 +2,40 @@
 
 Display of data in a graphical/tabular format
 
-Helps us undertand the data
+Helps us understand the data
 
-## Box/Box-Whiskers Plot
+## Why is visualization important?
+
+Widely different distributions can have the same statistical properties
+
+Below is the Anscombe’s quartet
+
+![image-20240217123311778](./assets/image-20240217123311778.png)
+
+## Note
+
+Use the correct minimum & max range, such that only possible values are included
+
+- Do not skew the axis
+- For eg: for human body temperature, you should show 98-105 F; you shouldn’t start at 0
+
+## Uni-Variate
+
+### Box/Box-Whiskers Plot
 
 Helps understand the range and central tendancy of a variable
 
 ![box_plot](../assets/box_plot.svg){ loading=lazy }
 
-## 1D Histogram
+### 1D Histogram
 
 Visualizes the frequency distribution of attribute
 
-### Categorical Data
+#### Categorical Data
 
 Each category will have a line denoting the frequency associated with that category
 
-### Continuous Data
+#### Continuous Data
 
 - Apply binning
     - Usually equal-width binning
@@ -32,17 +49,31 @@ The convention of analyzing these bins
 >
 > ~ Oracle Docs
 
-## 2D Histogram
+### Q-Q Plot
+
+Quantile-Quantile plot comparing a distribution’s quantiles with quantiles of a known distribution (such as Normal distribution)
+
+## Bi-Variate
+
+### Scatter Plot
+
+
+
+### Line Plot
+
+
+
+### 2D Histogram
 
 Helps understand frequency of co-occurance of 2 attributes
 
 ![img](../assets/2d_histogram.png){ loading=lazy }
 
-## Pair Plot
+### Pair Plot
 
 Basically a matrix of scatter plots
 
-## Stem & Leaf Plots
+### Stem & Leaf Plots
 
 Understand the distribution of values of an attribute
 
@@ -56,6 +87,21 @@ Useful when there aren’t many values
     - Leaves will be the lower-order digits
 - Plot stems vertically and leaves horizontally
 
-## Contour Plots
+## Tri-Variate
+
+### Contour Plots
 
 Used for spacial data
+
+## Multi-Variate
+
+### Parallel Coordinates
+
+
+
+## Conditional Quantitative Plots
+
+- Bin quantitative data
+- Make different plots
+
+This will be useful for error distribution inspection

@@ -9,13 +9,17 @@ Involves
 - Summary Statistics
 - Visualization
 
+## Summary Statistics
+
+Note: Statistics about the data $\ne$ data itself
+
 ### Robustness
 
 Ability of a statistical procedure to handle a variety of non-normal distributions, including outliers
 
 There is a trade-off between efficiency and robustness
 
-#### Breakdown Point
+### Breakdown Point
 
 Fraction of contaminated data in a dataset that can be tolerated by the statistical procedure
 
@@ -23,28 +27,37 @@ Fraction of contaminated data in a dataset that can be tolerated by the statisti
 
 Minimal set of value(s) that captures the characteristics of large amounts of data, and show the properties of a distribution
 
-|                                    | Meaning                                             | Formula                                                      | Moment           | Breakdown Point | Comment                                                      |
-| ---------------------------------- | --------------------------------------------------- | ------------------------------------------------------------ | ---------------- | :-------------: | ------------------------------------------------------------ |
-| Mean/<br />Arithmetic Mean         | Central tendency of distribution                    | $\dfrac{\sum x_i}{n}$                                        | 1st              | $\dfrac{1}{n}$  |                                                              |
-| Trimmed Mean                       |                                                     |                                                              |                  | $\dfrac{k}{n}$  |                                                              |
-| Weighted Mean                      |                                                     | $\dfrac{\sum w_i x_i}{n}$                                    |                  | $\dfrac{1}{n}$  |                                                              |
-| Geometric Mean                     |                                                     | $\sqrt[{\Large n}]{\Pi x}$                                   |                  | $\dfrac{1}{n}$  |                                                              |
-| Harmonic Mean                      |                                                     | $\dfrac{n}{\sum \frac{1}{x}}$                                |                  | $\dfrac{1}{n}$  | Gives more weightage to smaller values                       |
-| Median                             | Middle most observation<br />50th quantile          | $\begin{cases} x_{{n+1}/2}, & n = \text{odd} \\ \dfrac{x_{n} + x_{n+1}}{2}, & n = \text{even}\end{cases}$ |                  | $\dfrac{1}{2}$  | Robust to outliers                                           |
-| Mode                               | Most frequent observation                           |                                                              |                  |                 | Unstable for small samples                                   |
-| Variance                           | Squared average deviation of observations from mean |                                                              | 2nd Centralised  | $\dfrac{1}{n}$  |                                                              |
-| Standard Deviation                 | Average deviation of observations from mean         |                                                              |                  | $\dfrac{1}{n}$  |                                                              |
-| MAD<br />Median Absolute Deviation | Median deviation of observations from mean          | $1.4826 \times \text{Med} \Big(\vert x_i - \text{Med}(x) \vert \Big)$ |                  | $\dfrac{1}{2}$  |                                                              |
-| Skewness                           | Direction of tail                                   | $\dfrac{\sum (x_i - \mu)^3}{n \sigma^3}$<br />$\dfrac{3(\mu - \text{Md})}{\sigma}$<br />$\dfrac{\mu - \text{Mo}}{\sigma}$ | 3rd Standardized |                 | 0: Symmetric<br />$[-0.5, 0.5]$: Approximately-Symmetric<br />$[-1, 1]$: Moderately-skewed<br />else: Higly-skewed |
-| Kurtosis                           | Peakedness of distribution                          | $\dfrac{\sum (x_i - \mu)^4}{n \sigma^4}$                     | 4th standardized |                 |                                                              |
-| Max                                |                                                     |                                                              |                  |                 |                                                              |
-| Min                                |                                                     |                                                              |                  |                 |                                                              |
-| Quantile                           | Divides distributions into 100 parts                |                                                              |                  |                 | Unstable for small datasets                                  |
-| Quartile                           | Divides distributions into 4 parts                  |                                                              |                  |                 |                                                              |
-| Decile                             | Divides distributions into 10 parts                 |                                                              |                  |                 |                                                              |
-| Range                              | Range of values                                     | Max-Min                                                      |                  |                 | Susceptible to outliers                                      |
-| IQR<br />Interquartile Range       |                                                     | Q3 - Q1                                                      |                  | $\dfrac{1}{4}$  | Robust to outliers                                           |
-| CV<br />Coefficient of Variation   |                                                     | $\dfrac{\sigma}{\mu}$                                        |                  |                 |                                                              |
+|                                    | Meaning                                                      | Formula                                                      | Moment           | Breakdown Point | Standard Error                                      | Comment                                                      |
+| ---------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---------------- | :-------------: | --------------------------------------------------- | ------------------------------------------------------------ |
+| Mean/<br />Arithmetic Mean         | Central tendency of distribution                             | $\dfrac{\sum x_i}{n}$                                        | 1st              | $\dfrac{1}{n}$  | $\dfrac{s}{\sqrt{n}}$                               |                                                              |
+| Trimmed Mean                       | $k \%$ obs from top of dist are removed<br />$k \%$ obs from bottom of dist are removed<br />$\implies 2k \%$ obs are removed in total |                                                              |                  | $\dfrac{k}{n}$  | $\left( 1+\dfrac{2k}{n} \right)\dfrac{s}{\sqrt{n}}$ | For $k>12.5$, better to instead use median                   |
+| Winsorized Mean                    | $k \%$ obs from top of dist are replaced with $(1-k)$th percentile<br />$k \%$ obs from bottom of dist are replaced with $k$th percentile<br />$\implies 2k \%$ obs are replaced in total |                                                              |                  | $\dfrac{k}{n}$  | $\left( 1+\dfrac{2k}{n} \right)\dfrac{s}{\sqrt{n}}$ | For $k>12.5$, better to instead use median                   |
+| Weighted Mean                      |                                                              | $\dfrac{\sum w_i x_i}{n}$                                    |                  | $\dfrac{1}{n}$  |                                                     |                                                              |
+| Geometric Mean                     |                                                              | $\sqrt[{\Large n}]{\Pi x}$                                   |                  | $\dfrac{1}{n}$  |                                                     |                                                              |
+| Harmonic Mean                      |                                                              | $\dfrac{n}{\sum \frac{1}{x}}$                                |                  | $\dfrac{1}{n}$  |                                                     | Gives more weightage to smaller values                       |
+| Median                             | Middle most observation<br />50th quantile                   | $\begin{cases} x_{{n+1}/2}, & n = \text{odd} \\ \dfrac{x_{n} + x_{n+1}}{2}, & n = \text{even}\end{cases}$ |                  | $\dfrac{1}{2}$  | $1.253 \dfrac{s}{\sqrt{n}}$                         | Robust to outliers                                           |
+| Mode                               | Most frequent observation                                    |                                                              |                  |                 |                                                     | Unstable for small samples                                   |
+| Variance                           | Squared average deviation of observations from mean          | $\dfrac{\sum (x_i - \mu)^2}{n}$                              | 2nd Centralised  | $\dfrac{1}{n}$  |                                                     |                                                              |
+| Standard Deviation                 | Average deviation of observations from mean                  | $\sqrt{\text{Variance}}$                                     |                  | $\dfrac{1}{n}$  |                                                     |                                                              |
+| Standard Error of mean             |                                                              | $\dfrac{s}{\sqrt{n}}$                                        |                  |                 |                                                     |                                                              |
+| MAD<br />Median Absolute Deviation | Median deviation of observations from mean                   | $1.4826 \times \text{Med} \Big(\vert x_i - \text{Med}(x) \vert \Big)$ |                  | $\dfrac{1}{2}$  |                                                     |                                                              |
+| Skewness                           | Direction of tail                                            | $\dfrac{\sum (x_i - \mu)^3}{n \sigma^3}$<br />$\dfrac{3(\mu - \text{Md})}{\sigma}$<br />$\dfrac{\mu - \text{Mo}}{\sigma}$ | 3rd Standardized |                 |                                                     | 0: Symmetric<br />$[-0.5, 0.5]$: Approximately-Symmetric<br />$[-1, 1]$: Moderately-skewed<br />else: Higly-skewed |
+| Kurtosis                           | Peakedness of distribution                                   | $\dfrac{\sum (x_i - \mu)^4}{n \sigma^4}$                     | 4th standardized |                 |                                                     |                                                              |
+| Max                                |                                                              |                                                              |                  |                 |                                                     |                                                              |
+| Min                                |                                                              |                                                              |                  |                 |                                                     |                                                              |
+| Quantile                           | Divides distributions into 100 parts                         |                                                              |                  |                 |                                                     | Unstable for small datasets                                  |
+| Quartile                           | Divides distributions into 4 parts                           |                                                              |                  |                 |                                                     |                                                              |
+| Decile                             | Divides distributions into 10 parts                          |                                                              |                  |                 |                                                     |                                                              |
+| Range                              | Range of values                                              | Max-Min                                                      |                  |                 |                                                     | Susceptible to outliers                                      |
+| IQR<br />Interquartile Range       |                                                              | Q3 - Q1                                                      |                  | $\dfrac{1}{4}$  |                                                     | Robust to outliers                                           |
+| CV<br />Coefficient of Variation   |                                                              | $\dfrac{\sigma}{\mu}$                                        |                  |                 |                                                     |                                                              |
+
+![image-20240214234851447](./assets/image-20240214234851447.png)
+
+### Standard Error of Statistic
+
+- Standard deviation of statistic in sampling distribution
+- Measure of uncertainty in the sample statistic wrt true population mean
 
 ### Relationship between Mean, Median, Mode
 
@@ -141,3 +154,14 @@ where $k=$ No of estimators
 
 1. High probability that variance of sample is low, so we correct for that
 1. Lost degree of freedom
+
+## Standard error of mean
+
+![image-20240129172628707](./assets/image-20240129172628707.png)
+
+| Error bars overlap | Error bars contain both the sample means | Inference                                                    |
+| ------------------ | ---------------------------------------- | ------------------------------------------------------------ |
+| ✅                  | ✅                                        | Strong evidence that populations are **not** different       |
+| ✅                  | ❌                                        | **No** strong evidence that populations are **not** different |
+| ❌                  | ❌                                        | Strong evidence that populations are different               |
+

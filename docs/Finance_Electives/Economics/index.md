@@ -37,3 +37,9 @@ eg: output level of economy, inflation, unemployment
 - [x] the good the bad the ugly
 - [x] coach carter movie
 - [x] the beautiful mind
+
+## References
+
+- [x] Dr. Sartaj Principles of Economics
+- [ ] [Ashley Hodgson](https://www.youtube.com/@AshleyHodgson)
+- [ ] [60 Second Adventures in Economics | The Open University](https://www.youtube.com/watch?v=LCRNI04tnN8&list=PLhQpDGfX5e7DDGEQvLonjDQsbclAF2N-t&index=7)

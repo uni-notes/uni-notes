@@ -99,3 +99,14 @@ $$
 
 - Subjective payback period
 - Only focusing on short-term gains
+
+## Required Rate of Return
+
+$$
+\text{RRR} = R_f + \beta \cdot \text{RP}
+$$
+
+where
+
+- $R_f=$ Risk Free Return
+- $\text{RP} =$ Risk Premium

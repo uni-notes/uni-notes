@@ -76,13 +76,6 @@ It is the rate of return the firm’s lenders demand when they loan money to the
 | CD (Certificate of Deposit)                     |            |        |
 | Rapport                                         |            |        |
 
-### Capital vs Money Market
-
-|                | Duration   | Cost      | Example                                                   |
-| -------------- | ---------- | --------- | --------------------------------------------------------- |
-| Money Market   | Short-term | Cheaper   | Credit cards<br />Rapport<br />Reverse rapport<br />TBill |
-| Capital Market | Long-term  | Expensive |                                                           |
-
 ### Bond
 
 Certificate of 
@@ -205,12 +198,3 @@ where
 - $r_f =$ Risk-Free rate
 - $r_m =$ Stock market return
   - Take only recent data (say, 1 year or so)
-
-## Risk
-
-| Types of Risk               | Applicable to all corporations | Risk compensation required? |
-| --------------------------- | :----------------------------: | :-------------------------: |
-| Systematic                  |               ✅                |              ✅              |
-| Unsystematic/<br />Specific |               ❌                |              ❌              |
-
-Portfolio should be created in a way that unsystematic risk is overcome, by picking stocks ideally be negatively-correlated with each other

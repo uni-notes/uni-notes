@@ -2,6 +2,15 @@
 
 Method to affect consumer behavior
 
+## The Impossible Trinity
+
+```mermaid
+flowchart LR
+fer[Fixed Exchange Rate] <--> fcf[Free Capital Flow] <--> smp[Sovereign Money Policy] <--> fer
+```
+
+It is not possible to achieve all 3 simultaneously
+
 ## Common Types
 
 1. Price control

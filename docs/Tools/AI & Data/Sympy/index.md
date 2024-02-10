@@ -127,3 +127,44 @@ u.norm()
 u.dot(v)
 u.cross(v)
 ```
+
+## Fourier Transform (Analytic)
+
+### Continuous Time & Frequency
+
+```python
+# symbols need to be defined with correct characteristics
+
+t, f = smp.symbols("t, f", real=True)
+k = smp.symbols("k", real=True, positive=True)
+x = smp.exp(-k * t**2) * k * t
+x
+```
+
+```python
+from sympy.integrals.transforms import fourier_transform as ft
+x_FT = ft(x, t, f)
+```
+
+### Continuous Time & Discrete Frequency
+
+```python
+t = smp.symbols("t", real=True)
+k, n, T = smp.symbols("k, n, T", real=True, positive=True)
+fn = n/T
+x = smp.exp(-k * t)
+```
+
+```python
+x_FT = smp.integrate(
+  1/T * x * smp.exp(-2*smp.pi*smp.I*fn*t),
+  (t, 0, T)
+).simplify()
+```
+
+```python
+get_FT = smp.lambdify([k, T, n], x_FT)
+ns = np.arange(0, 20, 1)
+xFT = get_FT(k=1, T=4, n=ns)
+```
+

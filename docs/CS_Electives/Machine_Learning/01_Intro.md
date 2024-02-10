@@ -34,7 +34,7 @@ end
 
 ## Why do we need ML?
 
-To perform tasks which are easy for humans, but difficult to generate a computer program for it.
+To perform tasks which are easy for humans, but difficult to generate a computer program for it
 
 ## Stages of ML
 
@@ -67,3 +67,6 @@ ld[(Live <br/>Data)] --> Deploy
 | PaddlePaddle |      |
 | Weka         |      |
 
+## Entropy
+
+> Entropy, as it relates to machine learning, is **a measure of the randomness in the information being processed**. The higher the entropy, the harder it is to draw any conclusions from that information. 
