@@ -1,9 +1,24 @@
-.md-content h2:not(:first-child):not(h1+h2)
+.md-typeset h1{
+    margin-bottom: 0.2em;
+}
+
+.md-source-file {
+    border-bottom: 0.1rem solid var(--md-default-fg-color--lightest);
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.md-content h2:not(:first-child):not(h1+h2):not(.md-source-file+h2)
 {
     border-top: 0.1rem solid var(--md-default-fg-color--lightest);
     border-radius: 0;
     padding-top: 0.5em;
     margin-top: 0;
+}
+
+.md-content h2:is(.md-source-file+h2)
+{
+    margin-top: 0.5em;
 }
 
 table {
