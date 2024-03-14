@@ -1,6 +1,6 @@
 # Generalization
 
-The ability of trained model to be able to perform well on unseen inputs. Better validation result $\implies$ Better generalization
+The ability of trained model to be able to perform well on unseen data. Better validation result $\implies$ Better generalization
 
 Note: Always try to overfit with a very small sample and then focus on generalization
 
@@ -145,3 +145,10 @@ Hence, we can reduce variance by shrinking small coefficients to zero
 When using feature selection/LASSO regularization, stop one standard deviation > the optimal point, as even though bias has increased by a small amount, variance can be decreased a lot
 
 ![image-20240301152524973](./assets/image-20240301152524973.png)
+
+## Generalization Bound vs Generalization Gap
+
+|                 | Generalization Gap                | Generalization Bound                                    |
+| --------------- | --------------------------------- | ------------------------------------------------------- |
+| Associated with | Model<br />- Bias<br />- Variance | Testing method<br />- Test Set Size<br />- No of trials |
+

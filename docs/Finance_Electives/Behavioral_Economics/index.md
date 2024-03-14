@@ -27,4 +27,4 @@
 
 ## References
 
-- https://www.youtube.com/playlist?list=PLUl4u3cNGP63Z979ri_UXXk_1zrvrF77Q
+- [ ] [MIT 14.13 Psychology and Economics](https://www.youtube.com/playlist?list=PLUl4u3cNGP63Z979ri_UXXk_1zrvrF77Q)

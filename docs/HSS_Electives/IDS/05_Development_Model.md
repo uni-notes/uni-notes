@@ -60,4 +60,6 @@ Modern welfare states: France, Finland, Belgium, Netherlands
 - Govts don’t keep education as a point in their agenda
 - Life expectancy: Mental health is often forgotten 
 - Electricity consumption as an indicator of development is not ideal, as governments will be incentivized to increase consumption and hence increase CO2
-- Creating more awareness of 
+- Creating more awareness about smoking
+
+## Case Studies

@@ -81,3 +81,22 @@ $$
 - $r =$ Real Interest Rate
 - $i=$ Nominal interest rate
 - $\pi_e =$ Expected inflation rate
+
+## Structure of Interest
+
+|                |                                    |
+| -------------- | ---------------------------------- |
+| Risk Structure | Different bonds at same time point |
+| Term Structure | Same bond over time                |
+
+### Risk Structure
+
+| Risk Type            |             | Shift in Demand Curve | Bond Price | Interest Rate of Bond |
+| -------------------- | ----------- | --------------------- | ---------- | --------------------- |
+| Default Risk         | Bond Rating | Left                  | Dec        | Inc                   |
+| Liquidity            |             | Right                 | Inc        | Dec                   |
+| Income tax exemption |             | Right                 | Inc        | Dec                   |
+
+High spread means 
+
+Increase in interest rate of bond1 causes a decrease in another bond, due to its change in demand curve

@@ -14,26 +14,15 @@
   - false positives and false negatives are seldom equivalent
   - understand the problem to known the right tradeoff
 
+## Model Selection
 
-## IDK
+1. Fit multiple models $g_i$ on the training data
+2. Use interval validation data for hyper parameter tuning of each model $g_i$
+3. Use external validation data for model selection and obtain $g^*$
+4. Combine the training and validation data. Refit $g^*$ on this set to obtain $g^{**}$
+5. Assess the performance of $g^{**}$ on the test data
 
-- Stratification: Train, Validation and Test sets should have the same distribution
-
-## Data Leakage
-
-Cases where some information from the training set has “leaked” into the validation/test set. Estimation of the performances is likely to be optimistic
-
-Due to data leakage, model trained for $y_t = f(x_j)$ is more likely to be ‘luckily’ accurate, even if $x_j$ is irrelevant
-
-Causes
-
-- Perform feature selection using the whole dataset
-- Perform dimensionality reduction using the whole dataset
-- Perform parameter selection using the whole dataset
-- Perform model or architecture search using the whole dataset
-- Report the performance obtained on the validation set that was used to decide when to stop training (in deep learning)
-- For a given patient, put some of its visits in the training set and some in the validation set
-- For a given 3D medical image, put some 2D slices in the train- ing set and some in the validation set
+Finally, train $g^{**}$ on the entire data to obtain $\hat f$
 
 ## Baseline
 
@@ -62,112 +51,6 @@ Always establish a baseline
 All the evaluation should be performed relative to the baseline.
 
 For eg: Relative RMSE = RMSE(model)/RMSE(baseline), with “good” threshold as 1
-
-## Train-Test
-
-The training set has an optimistic
-bias, since it is used to choose a hypothesis that looks good on it
-
-Hence, we use a test set as it is not biased
-
-Once a data set has been used in the learning/validation process, it is “contaminated” – it obtains an optimistic bias, and the error calculated on the data set no longer has the tight generalization bound.
-
-### Tradeoff
-
-The cost of a small test set is large generalization bound.
-
-The cost of a large test set is worse model, due to smaller training dataset size.
-
-## Model Selection
-
-1. Fit multiple models $g_i$ on the training data
-2. Use interval validation data for hyper parameter tuning of each model $g_i$
-3. Use external validation data for model selection and obtain $g^*$
-4. Combine the training and validation data. Refit $g^*$ on this set to obtain $g^{**}$
-5. Assess the performance of $g^{**}$ on the test data
-
-Finally, train $g^{**}$ on the entire data to obtain $\hat f$
-
-## Data Splits
-
-
-|                                   | Type          | Error Representation | Error Names                                                  | Purpose                                                      | Color Scheme Below                                        |                              |
-| --------------------------------- | ------------- | -------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | --------------------------------------------------------- | ---------------------------- |
-| Training evaluation               | In Sample     | $E_\text{in}$        | Training error/<br />In-Sample Error/<br />Empirical Error/<br />Empirical Risk | Evaluating data fit<br />Under-fitting                       | <span style="background:green;color:white">Green</span>   |                              |
-| Inner Validation                  | Out of Sample |                      |                                                              | Model tuning<br />Hyperparameter tuning                      | <span style="background:orange;color:white">Orange</span> |                              |
-| Outer Validation                  | Out of Sample |                      |                                                              | Model Selection<br />Evaluating overfitting                  | <span style="background:yellow;color:black">Yellow</span> | Try not to look at the data! |
-| Testing evaluation<br />(Holdout) | Out of Sample | $E_\text{test}$      | Out-of-sample error<br />Expected error<br />Prediction error<br />Risk | Reporting accuracy performance<br />Should not be used for anything else | <span style="background:Red;color:white">Red</span>       | Do not look at the data!     |
-
-The generalization gap (difference in train error and validation error) should be small
-
-## Validation Sampling Types
-
-Repeatedly drawing samples from a training set and refitting a model of interest on each sample in order to obtain additional information about the fitted model.
-
-Hence, these help address the issue of a simple validation: Results can be highly variable, depending on which observations are included in the training set and which are in the validation set
-
-|                  | Sampling        | Comment                                            | Better for identifying uncertainty in model |
-| ---------------- | --------------- | -------------------------------------------------- | ------------------------------------------- |
-| Bootstrapping    | w/ Replacement  | Better as we can have a large repetitions of folds | parameters                                  |
-| Cross Validation | w/o Replacement |                                                    | accuracy                                    |
-
-### Cross Validation Types
-
-|                                  |                                                              | Purpose                                                      |
-| -------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Regular                          | ![img](./assets/1*1L9DQtU1b7AHp8Bk4vr6QQ.png)                |                                                              |
-| Leave-One-Out                    |                                                              |                                                              |
-| Shuffled                         | ![img](./assets/1*SUZHoDzHqYobxgtIZxRjrQ.png)                |                                                              |
-| Random Permutation               | ![img](./assets/1*DD6nnhiXEpCZK406avyn6Q.png)                |                                                              |
-| Stratified                       | ![](./assets/1*_Q298WoataU8CAhytaRAZA.png)                   |                                                              |
-| Stratified Shuffle               | ![img](./assets/1*c0fZiiLBNxHtw7-X7PJSGA.png)                |                                                              |
-| Grouped                          | ![img](./assets/1*c1-TwkOsV_SwQWa-6qzKAg.png)<br />![](./assets/1*9v76vZK6lThlz0iehGd3vw.png) |                                                              |
-| Grouped - Leave One Group Out    | ![img](./assets/1*sbITCGXoQEHSSm0xfjLD1A.png)                |                                                              |
-| Grouped with Random Permutation  | ![img](./assets/1*oTIxF_Pjp13Y22ykDLLyKA.png)                |                                                              |
-| Walk-Forward Expanding Window    | ![image-20240312120935236](./assets/image-20240312120935236.png)<br />![img](./assets/1*eVzEdnVo9BBAU33yM04ylA.png) |                                                              |
-| Walk-Forward Rolling Window      | ![image-20240312120950200](./assets/image-20240312120950200.png) |                                                              |
-| Blocking                         | ![img](./assets/1*MZ984wDUzAfWk6N8NNs9Rg.png)                |                                                              |
-| Purging                          | ![img](./assets/1*rmkHSTJghRCa45lWCf9H_A.png)<br />![purged_cv](./assets/purged_cv.png)<br />![image-20240312120912110](./assets/image-20240312120912110.png) | Remove train obs whose labels overlap in time with test labels |
-| Purging & Embargo                | ![img](./assets/1*a6x2YNDJkrwZD8VfV-YyPA.png)                | Prevent data leakage due to serial correlation $x_{\text{train}_{-1}} \approx x_{\text{test}_{0}}$<br />$y_{\text{train}_{-1}} \approx y_{\text{test}_{0}}$ |
-| CPCV<br />(Combinatorial Purged) | ![image-20240312121125929](./assets/image-20240312121125929.png) |                                                              |
-
-### Bootstrapping Types
-
-|                                  |                |                                                              |
-| -------------------------------- | -------------- | ------------------------------------------------------------ |
-| Random sampling with replacement | IID            |                                                              |
-| ARIMA Bootstrap                  | Parametric     |                                                              |
-| Moving Block Bootstrap           | Non-parametric | ![image-20240312121539820](./assets/image-20240312121539820.png) |
-| Circular Block Bootstrap         | Non-parametric |                                                              |
-| Stationary Bootstrap             | Non-parametric |                                                              |
-
-## Validation Split Types
-
-==Make sure to **shuffle** all splits for cross-sectional data==
-
-| Type                       |                       Cross-Sectional                        |                         Time Series                          | Notes                                                        |
-| -------------------------- | :----------------------------------------------------------: | :----------------------------------------------------------: | ------------------------------------------------------------ |
-| Train-Test                 |      ![train_test_split](./assets/train_test_split.svg)      |      ![train_test_split](./assets/train_test_split.svg)      |                                                              |
-| $k$- Fold Sampling         | ![k_fold_cross_validation](./assets/k_fold_cross_validation_cross_sectional_data.svg) | ![k_fold_cross_validation](./assets/k_fold_cross_validation_time_series_data.svg) | 1. Split dataset into $k$ subsets<br/>2. Train model on $(k-1)$ subsets<br />3. Evaluate performance on $1$ subset<br/>4. Summary stats of all iterations |
-| Repeated $k$-Fold Sampling | ![repeated_k_fold_cross_validation](./assets/repeated_k_fold_cross_validation_cross_sectional_data.svg) |                              ❌                               | Repeat $k$ fold with different splits and random seed        |
-| Nested Train-Test          | ![nested train_test_split](./assets/nested_train_test_split_cross_sectional_data.svg) | ![nested train_test_split](./assets/nested_train_test_split_time_series_data.svg) |                                                              |
-| Nested $k$-Fold            | ![nested_k_fold_cross_validation](./assets/nested_k_fold_cross_sectional_data.svg) | ![nested_k_fold_cross_validation](./assets/nested_k_fold_time_series_data.svg) |                                                              |
-| Nested Repeated $k$-Fold   | ![nested_repeated_k_fold_cross_validation](./assets/nested_repeated_k_fold_cross_sectional_data.svg) |                              ❌                               |                                                              |
-
-### Decision Parameter $k$
-
-There is a tradeoff
-
-|        | Small $k$ | Large $k$ |
-|---        | ---   | ---|
-|Train Size | Small | Large|
-|Test Size  | Large | Small|
-|Bias       | High  | Low|
-|Variance   | Low   | High|
-
-Usually $k$ is taken as 4
-
-When $k=n$, it is called as LOOCV (Leave-One-Out CV)
 
 ## Probabilistic Evaluation
 
