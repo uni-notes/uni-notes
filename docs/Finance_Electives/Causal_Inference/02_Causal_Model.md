@@ -374,3 +374,34 @@ The statement holds true as the only way parent’s education affects individual
 
 City captures ability, school quality, productivity and other unobserved factors
 
+## Types of Intermediary Variables
+
+```mermaid
+flowchart TB
+
+subgraph Mediator
+direction TB
+z3((z)) --> y3
+x3((x)) --> y3((y))
+x3((x)) --> z3
+end
+
+subgraph Collider
+direction TB
+x2((x)) --> y2((y))
+x2((x)) & y2((y)) --> z2((z)) 
+end
+
+subgraph Confounder
+direction TB
+x1((x)) --> y1((y))
+z1((z)) --> x1((x)) & y1((y))
+end
+```
+
+| Type       | Should Condition |
+| ---------- | ---------------- |
+| Confounder | ✅                |
+| Collider   | ❌                |
+| Mediator   | ❌                |
+

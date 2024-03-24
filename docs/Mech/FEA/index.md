@@ -19,3 +19,11 @@ FEA helps identify if a product will break, wear out, or work the way it was des
 - Run jobs
 
 Job = Simulation
+
+## Controls
+
+|                      | Apply        | Calculate    |
+| -------------------- | ------------ | ------------ |
+| Force Control        | Force        | Displacement |
+| Displacement Control | Displacement | Force        |
+

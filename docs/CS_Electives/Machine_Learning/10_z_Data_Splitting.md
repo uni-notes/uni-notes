@@ -19,15 +19,15 @@ Once a data set has been used in the learning/validation process, it is “conta
 
 |                              | Train                                                                           | Inner Validation                                          | Outer Validation                                          | Test<br />(Holdout)|
 |---                              | ---                                                                             | ---                                                       | ---                                                       | ---|
-|EDA Allowed                      | ✅                                                                               | ❌                                                         | ❌                                                         | ❌|
+|EDA                      | ✅                                                                               | ❌                                                         | ❌                                                         | ❌|
 |Evaluation & tuning for underfit | ✅                                                                               | ❌                                                         | ❌                                                         | ❌|
 |Evaluation & tuning for overfit  | ❌                                                                               | ✅                                                         | ❌                                                         | ❌|
 |Model Selection                  | ❌                                                                               | ❌                                                         | ✅                                                         | ❌|
 |Performance Evaluation           | ❌                                                                               | ❌                                                         | ❌                                                         | ✅|
 |Type                             | In Sample                                                                       | Out of Sample                                             | Out of Sample                                             | Out of Sample|
 |Error Representation             | $E_\text{in}$                                                                   |                                                           |                                                           | $E_\text{test}$|
-|Error Names                      | Training error/<br />In-Sample Error/<br />Empirical Error/<br />Empirical Risk |                                                           |                                                           | Out-of-sample error<br />Expected error<br />Prediction error<br />Risk|
-|Color Scheme Below               | <span style="background:green;color:white">Green</span>                         | <span style="background:orange;color:white">Orange</span> | <span style="background:yellow;color:black">Yellow</span> | <span style="background:Red;color:white">Red</span>|
+|Error Names                      | Training error/<br />In-Sample Error/<br />Empirical Error/<br />Empirical Risk | Validation Error | Validation Error | Out-of-sample error<br />Expected error<br />Prediction error<br />Risk|
+|Color Scheme Below               | <span style="background:green;color:white">Green</span>                         | <span style="background:yellow;color:black">Yellow</span> | <span style="background:orange;color:white">Orange</span> | <span style="background:Red;color:white">Red</span>|
 
 The generalization gap (error difference b/w seen and unseen data) should be small
 
@@ -116,3 +116,6 @@ Causes
 - For a given patient, put some of its visits in the training set and some in the validation set
 - For a given 3D medical image, put some 2D slices in the train- ing set and some in the validation set
 
+## Learning Curve
+
+![Learning_Curve](./assets/Learning_Curve.png)

@@ -100,3 +100,4 @@ $$
 High spread means 
 
 Increase in interest rate of bond1 causes a decrease in another bond, due to its change in demand curve
+

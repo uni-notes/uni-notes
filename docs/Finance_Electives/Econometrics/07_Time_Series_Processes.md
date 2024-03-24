@@ -28,15 +28,18 @@ This is due to
 
 ## Components of Time Series Processes
 
-|                  | Characteristic | Frequency |
-| ---------------- | -------------- | --------- |
-| Auto-Correlation |                |           |
-| Trend            |                | Low       |
-| Seasonality      |                | Low       |
-| Drift            | Exogeneous     |           |
-| Noise            | Random         | High      |
-| Shocks           |                |           |
-| Structural Break |                |           |
+|                  | Characteristic          | Frequency              |                |
+| ---------------- | ----------------------- | ---------------------- | -------------- |
+| Auto-Correlation |                         |                        |                |
+| Level            | Average value of series |                        |                |
+| Trend            | Gradual                 | Low                    |                |
+| Seasonality      |                         | Daily, Weekly, Monthly |                |
+| Cycles           |                         | > 1 year               | Economy cycle  |
+| Holidays         |                         |                        | Eid, Christmas |
+| Drift            | Exogeneous              |                        |                |
+| Structural Break |                         |                        |                |
+| Shocks           |                         |                        |                |
+| Noise            | Random                  | High                   |                |
 
 ### Auto-correlation
 
@@ -253,7 +256,7 @@ $$
 
 ## Differentiation
 
-When converting a non-stationary series $y_t$ into a stationary series $y'_t$, we want
+When converting a non-stationary series $y_t$ into a stationary series $y'_t$, we want
 
 - Obtain stationarity: ADF Stat at 95% CL as $-2.8623$
 - Retain memory: Similarity to original series; High correlation b/w original series and differentiated series

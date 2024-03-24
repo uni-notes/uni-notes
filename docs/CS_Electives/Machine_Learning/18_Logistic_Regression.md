@@ -63,14 +63,22 @@ Meaning: $\exp( \beta x')$ is the probability of $y=1$ relative to $y=0$
 ### Binary 
 
 $$
-\hat y = \begin{cases}
+\begin{aligned}
+\hat y &= \begin{cases}
 1, & p \ge p_1 \\
 0, & p \le p_0 \\
-\text{Unsure} & \text{o.w} \\
-\end{cases}
+\text{Unsure} & \text{o.w}
+\end{cases} \\
+p_1 &= \dfrac{1}{1 + c}
+\end{aligned}
 $$
 
-where $p_0, p_1 =$ thresholds and is commonly taken as 0.5
+where
+
+- $c =$ relative cost of FN wrt FP (misclassifying $y=1$ wrt $y=0$)
+  - $c =$ usually 1
+- $p_0, p_1 =$ thresholds
+  - $p_0, p_1$ are commonly taken as 0.5
 
 ### Multi-Class
 

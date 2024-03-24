@@ -104,7 +104,14 @@ best_accuracy = 0.0
 best_classifier = 0
 best_pipeline=""
 ```
+### Pipeline Parameters
+
+```python
+pipe.get_params()
+```
+
 ### Training/Fitting
+
 ```python
 ## Fit the pipelines
 for pipe in pipelines:
@@ -150,9 +157,13 @@ model = LogisticRegression(loss=custom_loss)
 Voting
 Stacking
 ## Hyperparameter Tuning
+
 ```python
 ## create the Pipeline
-pipe = Pipeline([('preprocessor', ct), ('classifier', clf1)])
+pipe = Pipeline(
+  [('preprocessor', ct), ('classifier', clf1)],
+  memory = "cache_name" # cache results, especially useful for grid-search
+)
 
 ## create the parameter dictionary for clf1
 params = [
@@ -167,10 +178,24 @@ params = [
     classifier = [my_decision_tree]
   )
 ]
-
-print(GridSearchCV(pipe, params).fit(X, y).best_params_)
 ```
+```python
+grid = GridSearchCV(
+  pipe,
+  param_grid = params,
+  cv = 5,
+  refit = False, # True forces to refit model at the end; pointless if you are doing cv
+  n_jobs = -1,
+  
+)
+
+grid.fit(X, y)
+
+print(grid.best_params_)
+```
+
 ## Custom Estimator
+
 using scipy  
 ```python
 class CustomRegressionModel(BaseEstimator):

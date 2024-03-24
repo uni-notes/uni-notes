@@ -18,11 +18,11 @@
 ## References
 
 - [x] Econometric Methods | Dr. Sartaj Rasool Rather
-- [ ] [Forecasting: Principles & Practice](https://www.youtube.com/playlist?list=PLyCNZ_xXGzpm7W9jLqbIyBAiSO5jDwJeE)
-- [ ] [MIT 18.S096 Topics in Mathematics w Applications in Finance](https://www.youtube.com/playlist?list=PLUl4u3cNGP63ctJIEC1UnZ0btsphnnoHR)
+- [x] [Forecasting: Principles & Practice](https://www.youtube.com/playlist?list=PLyCNZ_xXGzpm7W9jLqbIyBAiSO5jDwJeE)
+- [x] [MIT 18.S096 Topics in Mathematics w Applications in Finance](https://www.youtube.com/playlist?list=PLUl4u3cNGP63ctJIEC1UnZ0btsphnnoHR)
+- [ ] [Business Analytics Using Forecasting | Galit Shmueli](https://www.youtube.com/playlist?list=PLoK4oIB1jeK0LHLbZW3DTT05e4srDYxFq)
 - [ ] [Introduction to Econometrics - 2021 | Pedram Jahangiry](https://www.youtube.com/playlist?list=PL2GWo47BFyUOUbaiqETxuC7CuycdN7vIf)
 - [ ] [Forecasting | Michael Sinkey](https://www.youtube.com/@michaelsinkey139/videos)
-- [ ] [Business Analytics Using Forecasting | Galit Shmueli](https://www.youtube.com/playlist?list=PLoK4oIB1jeK0LHLbZW3DTT05e4srDYxFq)
 - [ ] [MIT 6.262 Discrete Stochastic Processes, Spring 2011](https://www.youtube.com/playlist?list=PLEEF5322B331C1B98)
 - [ ] [MIT 15.S50 Poker Theory and Analysis](https://www.youtube.com/playlist?list=PLUl4u3cNGP61kfOW3zAIfpNhf0piao8oo): Applications of poker analytics to investment management and trading
 - [ ] [NPTEL-NOC IITM | Introduction to Econometrics](https://www.youtube.com/playlist?list=PLyqSpQzTE6M-YZKVfuVSYqZnMfyDNLtkw)

@@ -9,10 +9,13 @@ import pandas as pd
 class DB():
   def __init__(self, db_name = "file.db"):
     self.db_name = db_name
-    self.con = db.connect(self.db_name)
 
-  def __del__(self):
-  	self.con.close()
+  def execute(self, query):
+    with duckdb.connect(self.db_name) as con:
+      try:
+          return con.sql(query).df()
+      except:
+        return False
 
   def create(self, table_name = "Series"):
     if table_name == "Series":
@@ -53,12 +56,7 @@ class DB():
       )
       """
     
-    try:
-      self.con.sql(query)
-      return True
-    except Exception as e:
-      print(str(e))
-      return False
+    return self.execute(query)
   
   def read(self, table_name, pivot=True):
     query = f"""
@@ -66,13 +64,12 @@ class DB():
     from {table_name}
     """
 
-    try:
-      query_result = self.con.sql(query)
-    except Exception as e:
-      print(str(e))
+    query_result = self.execute(query)
+
+    if query_result is False:
       return False
 
-    df = query_result.df()
+    df = query_result
     
     if pivot:
       if table_name == "Series":
@@ -115,22 +112,17 @@ class DB():
       select * from {var(df)}
       """
     
-    try:
-      self.con.sql(query)
-      return True
-    except Exception as e:
-      print(str(e))
-      return False
+    return self.execute(query)
 ```
 
 ```python
 economic_db = DB("economic.db")
 
-# economic_db.create("Series")
-# economic_db.upsert("Series", series_data, melt=True)
-economic_db.read("Series", pivot=True)
-
 # economic_db.create("Variables")
 # economic_db.upsert("Variables", series_list_df)
 economic_db.read("Variables")
+
+# economic_db.create("Series")
+# economic_db.upsert("Series", series_data, melt=True)
+economic_db.read("Series", pivot=True)
 ```

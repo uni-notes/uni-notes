@@ -1,3 +1,5 @@
+# Cost of Capital
+
 Depends primarily on the use of funds, not the source, because every investment has a different risk associated with it.
 
 Debt is almost always the cheapest source of capital, but has some trouble associated with it. This will be covered in a future topic.
@@ -97,7 +99,7 @@ Certificate of
 #### Bond Price
 
 $$
-\text{Bond Price} = \sum_{t=0}^T \frac{\text{Coupon } t}{(1+\text{YTM})^t} + \frac{\text{PAR}}{(1+\text{YTM})^T}
+\text{Bond Price} = \sum_{t=1}^T \frac{\text{Coupon } t}{(1+\text{YTM})^t} + \frac{\text{PAR}}{(1+\text{YTM})^T}
 $$
 
 $$
@@ -161,11 +163,16 @@ It is frowned upon for a corporation to reduce dividends. Hence, if a increases 
 $$
 \begin{aligned}
 D_t &= D_{t-1} \times (1+g)^t \\
-\implies P_t &= \frac{D_{t+1}}{k_\text{CS}} - g \quad \cancel{+ \frac{P_\infty}{(1+r)^\infty}}
+\implies
+P_t &= \frac{D_{t+1}}{k_\text{CS} - g} \quad \cancel{+ \frac{P_\infty}{(1+r)^\infty}}
 \end{aligned}
 $$
 
-where $g$ is a non-zero constant percentage change of dividede from one year to next. If non-constant, we take average $g$ over a few years.
+where
+
+- $g =$ dividend growth rate
+  - non-zero constant percentage change of dividend from one year to next. If non-constant, we take average $g$ over a few years
+- $k=$ market discount rate
 
 |                           |   $g$   |
 | ------------------------- | :-----: |

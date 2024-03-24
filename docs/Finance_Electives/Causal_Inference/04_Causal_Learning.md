@@ -16,16 +16,14 @@
 
 ## Causal Mechanism Learning
 
-To understand the true meaning and scope of a causal effect, we need to understand the underlying causal mechanism, based on **prior knowledge** - information and analyses.
+To understand the true meaning and **scope** of a causal effect, we need to understand the underlying causal mechanism, based on **prior knowledge** - information and analyses.
 
 This is important to understand
 
 - causal effect - what it means, where it applies
 - transportability of results
 
-We have to understand the true mechanism and reason why a treatment affects the outcome. A randomized experiment is not a suitable reason to skip that step.
-
-If the mechanisms in play are globally-applicable, then we can conclude that results of the study can be applied everywhere. Otherwise, we can**not** confidently conclude that.
+Blindly following the causal effect, without understanding the underlying mechanism, is incorrect.
 
 ## Manipulation of $x$
 
@@ -79,13 +77,15 @@ According to the lecturer, a lot of modern-day AI is **not** ‘intelligence’.
 
 Causal effects do not exist in a vacuum. They are usually the effects of complex and economic processes.
 
-Causal effects are limited to the [scope](#Scope) of the study, ie, population-specific. When we talk about “the causal effect of $x$ on $y$”, it is always wrt to a specific population within a specific social, cultural, and economic enviroment.
+Causal effects are limited to the [scope](#Scope) of the study, ie, population-specific. When we talk about “the causal effect of $x$ on $y$”, it is always wrt to a specific population within a specific social, cultural, and economic environment.
 
-This may **not** be accurate because
+The effect of $x$ on $y$ can differ in 2 populations because:
 
 1. Causal mechanism is different in both populations
+   
    eg: Consider a country where oil prices are determined by market, and another country where prices are determined by govt. The effect of decreasing oil supply on gas price will be different 
 2. Distribution of effect modifier $P(s)$ is different
+   
    Eg: Consider 2 countries with the same economic structure, but different population age structures. The effect of raising retirement age will be completely different.
 
 ## Causal Inference Models
@@ -110,3 +110,4 @@ Causal effect of a treatment is a probability distribution: it is not the same f
 - Learning the pdf of the effect is hard
 
 Hence, we use the Average Treatment Effect
+

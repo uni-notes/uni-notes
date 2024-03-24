@@ -1,4 +1,4 @@
-## Randomized Tests
+# Randomized Tests
 
 ## Randomization
 
@@ -6,8 +6,10 @@ ensures that correlation = causation
 
 helps estimate counterfactual outcome by ensuring
 
-- independence/exchangeability of $x$
-- similarity of population and treated sample
+- $y^0, y^1 \perp \!\!\! \perp x$: independence/exchangeability of $y^0, y_1$ wrt $x$
+  - Treatment $x$ is exogenous
+
+- Similarity of population and treated sample
 
 $$
 \text{ATE = ATT = ATU} \notag
@@ -38,27 +40,6 @@ $$
 
 To ensure that $E(y|x=1) = E(y^1)$, we need to ensure that the population and treated-sample are the similar in their features.
 
-### Without Randomization
-
-There will be statistical correlation without causal correlation (to be avoided). This is due to [Self-Selection Effect](#Self-Selection Effect). So the selection will be biased.
-
-$$
-\begin{aligned}
-& E(y | x = 1) - E(y | x = 0) \\
-=& 
-\underbrace{
-	E( y|x = 1) \textcolor{orange} {- E(y^0|x=1)}
-}_\text{ATT}
-+
-\underbrace{
-\textcolor{orange}{ E(y^0|x=1) } - E(y | x = 0)
-}_{ \ne \text{ATU} }
-\\
-
-\ne & E(y' - y^0) (\text{Unrandomized})
-\end{aligned}
-$$
-
 ### Derivations from Randomized Tests
 
 | Property                         | Meaning                                            |
@@ -67,9 +48,90 @@ $$
 | Causation                        | $P(y^a) \ne P(y^b)$                                |
 | Correlation $\implies$ Causation | Random assignment of $x \implies (y^a) = P(y|x=a)$ |
 
-### Limitations
+## Effect of Randomization on deriving ATE
 
-Without understanding the various [Effect Modifiers](## Effect Modifiers), we will get wrong inferences, because you will **mistake** a local effect for a global effect that applies for all scenarios. Hence, there are limits for Random testing without understanding the causal effects.
+### Without Randomization
+
+There will be statistical correlation without causal correlation (to be avoided). This is due to [Self-Selection Effect](#Self-Selection Effect). So the selection will be biased.
+
+$$
+\begin{aligned}
+& E(y | x = 1) - E(y | x = 0)  \\
+=& 
+\underbrace{
+	E( y|x = 1) \textcolor{orange} {- E(y^0|x=1)}
+}_\text{ATT}
+\\
+&+
+\underbrace{
+\textcolor{orange}{ E(y^0|x=1) } - E(y | x = 0)
+}_{\text{Self-Selection Bias } \ne \text{ATU} }
+\\
+
+\ne & E(y' - y^0) \\
+\ne & \text{ATE}
+\end{aligned}
+$$
+
+### With Randomization
+
+$$
+\begin{aligned}
+A \perp \!\!\! \perp B &\iff P(A) = P(A \vert B=0) = P(A \vert B=1) \\
+\\
+\implies
+y^0 \perp \!\!\! \perp x &\iff P(y^0) = P(y^0 \vert x=0) = P(y^0 \vert x=1) = P(y \vert x=0) \\
+\implies
+y^1 \perp \!\!\! \perp x &\iff P(y^1) = P(y^1 \vert x=0) = P(y^1 \vert x=1) = P(y \vert x=1)
+\end{aligned}
+$$
+
+$$
+E[y^1 - y^0] = E[y \vert x=1] - E[y \vert x=0]
+$$
+
+$$
+\begin{aligned}
+&\text{ATE} = \text{ATT} = \text{ATE} \\
+&= E[y \vert x=1] - E[y \vert x=0]
+\end{aligned}
+$$
+
+This only applies since main is a linear operator. This does **not** apply for non-linear operators: median, variance, percentiles
+
+## Conditional Randomized Experiments
+
+If one or more external parameters affect the causal effect of the treatment on the outcomes, then we have to do different randomized conditions.
+
+By independent testing at different conditions, we can keep the effect of the external parameter as a constant, and we will get the true causal effect of the treatment.
+
+It leads to **conditional exchangeability**, for the particular sub-population
+$$
+x \perp \!\!\! \perp
+(y^1, \dots, y^A) | s
+$$
+where $s$ are the fixed [Effect Modifiers](## Effect Modifiers)
+$$
+\begin{aligned}
+E[y^a]
+&= \sum_{j=1}^S E[y^a \vert s=j] \cdot p(s=j) \\
+&= \sum_{j=1}^S E[y \vert x=a, s=j] \cdot p(s=j)
+\end{aligned}
+$$
+In experimental design, effect modifiers $s$ are called the nuisance factors that experimenter controls when performing the RCT. Nuisance factors are vars that can affect $y$ either directly/indirectly, but is not of primary interest to the experimenter.
+
+## Self-Selection Effect/Bias
+
+In economics, we assume that everyone
+
+- is rational
+- makes decisions/selections to maximize self-interests
+
+When individuals choose their own treatments, those who choose to receive a treatment may be systematically different than those who choose not to, leading to a correlation between treatment and outcome that is not due to direct causation
+
+## Limitations
+
+Without understanding the various [Effect Modifiers](## Effect Modifiers), we will get wrong inferences, because you will **mistake** a local effect for a global effect that applies for all scenarios. Hence, there are limits for Random testing without understanding the causal mechanism.
 
 Only [Conditional Randomized Experiments](#Conditional Randomized Experiments) give correct readings, because it helps obtain the true causality without effect of any other factors. For eg, a lot of Psychology studies are performed on Psychology students, hence it doesn’t really give true research findings.
 
@@ -112,27 +174,6 @@ Unlike medical sciences, socio-economic outcomes are often results of individual
 | Micro | Social/Strategic Interaction<br />(Firm competition in oligopolistic markets) |
 | Macro | General Equilibrium effects                                  |
 
-
-## Conditional Randomized Experiments
-
-If one or more external parameters affect the causal effect of the treatment on the outcomes, then we have to do different randomized conditions.
-
-By independent testing at different conditions, we can keep the effect of the external parameter as a constant, and we will get the true causal effect of the treatment.
-
-It leads to **conditional exchangeability**
-$$
-x \perp \!\!\! \perp
-(y^1, \dots, y^A) | s
-$$
-where $s$ is the sub-population. This is the [Effect Modifiers](## Effect Modifiers)
-
-## Self-Selection Effect
-
-In economics, we assume that everyone
-
-- is rational
-- makes decisions/selections to maximize self-interests
-
 ## Examples
 
 ### Exams
@@ -144,7 +185,7 @@ For eg, if there are 2 exam sets. The *treatments* are
 
 | Scenario                                   | Variable            | Comment                                                      |
 | ------------------------------------------ | ------------------- | ------------------------------------------------------------ |
-| Asking students to volunteer for hard test | $E(y | x = 1)$      | Only a certain type of students will volunteer to do so<br />[Self-Selection Effect](## Self-Selection Effect) |
+| Asking students to volunteer for hard test | $E(y | x = 1)$      | Only a certain type of students will volunteer to do so [Self-Selection Effect](## Self-Selection Effect) |
 | Forcing everyone to take the hard test     | $E(y^1)$            | Everyone has received the input (taking hard test)           |
 | Randomly assigning sets                    | $E(y|x=1) = E(y^1)$ | The population and treated sample will **very likely** have the same type of people |
 
@@ -152,12 +193,7 @@ For eg, if there are 2 exam sets. The *treatments* are
 
 #### Goal
 
-to know consumer demand for a product
-
-#### Problem with observational data
-
-We cannot directly use P and Q to estimate the demand/supply function.
-This is because every point is an equilbrium point. So, self-selection effect comes into play.
+to know consumer demand for a product wrt price
 
 #### Given Data
 
@@ -167,29 +203,50 @@ D = \{
 \}
 $$
 
+- $q_i = Q_i^L \cdot (p_i==L) \ + \ Q_i^H \cdot (p_i==H)$
+- $\{ (p_1, Q_1^L, Q_1^H), \dots, (p_n, Q_n^L, Q_n^H) \} \overset{\text{iid}}{\sim} P(p, Q^L, Q^H)$
+
 #### Method
 
-- treatment - price
-- outcome - purchase
+- treatment - price $p$
+- outcome - purchases $q$
 
-Let’s assume there are only
+Let’s assume there are only 2 inputs (price level) - $p \in \{ L, H \}$. Then $\exists$
 
-- 2 inputs (price level) - $p \in \{ L, H \}$
 - 2 potential outcomes (demand level) - $q \in \{ Q^L, Q^H \}$
+- Desired causal effect
 
 $$
 \text{ATE} = E[Q^L - Q^H]
 $$
 
-#### Problem
+From the data, we can learn $P(q \vert p = a), a \in L, H$
 
-But changing price will **not** help in determination of the causal effect of price change.
+#### 
+
+#### Problem with observational data
+
+We cannot directly use P and Q to estimate the demand/supply function.
+This is because every data point is an equilibrium point and cannot be taken as the demand/supply curve. So, self-selection effect comes into play.
+
+Without exchangeability, $P(Q^a) \ne P(Q^a \vert p=a) = P(q \vert p=a)$
+
+The group that “received” the treatment $p=L$ could be systematically different than the group that “received” $p=H$
+
+- People that buy when price is high can be richer than those who buy when price is low
+- If we observe the person over time, then their income may be different when the price is low vs price is high
+
+Hence, there will be effect of income elasticity which will alter our understanding the price elasticity
+
+Changing price will **not** help in determination of the causal effect of price change.
 $$
 \text{ATE} \ne E(q|p = l) - E(q|p = h)
 $$
 This is because, in real life, $p$ is **not** randomly-assigned. So, the people who buy at high price and low price are completely-different; the populations are different in both the cases. So, the effect of income comes into picture. Therefore, the true and direct causal effect of price will not be understood.
 
 #### Solution
+
+Companies could run experiments by randomly assigning prices to customers in different markets and over time
 
 Companies could perform A/B testing by running experiments by randomly assigning prices in different markets and over time. This change in price will target the individual, so the true treatment effect will be learnt, as the income of people is quite constant.
 
@@ -204,12 +261,14 @@ Higher prices are often associated with more purchases, but is it
 - higher demand causing both higher prices and more purchases, or
 - higher prices causing people to buy more (Giffen behavior)
 
+The prices are “chosen”, so the analysis using observed increased prices is not necessarily a treatment and does not help us obtain the true causal effect
+
 We need to keep in mind
 
 1. inflation
 2. increase in wages
 
-However, with randomization, we can analyze the giffen behavior and hence make correct analysis.
+However, with randomized treatment (such as subsidies for the commodity), we can derive the true giffen behavior and hence make correct analysis.
 
 ### Classroom Size
 
@@ -238,6 +297,14 @@ Let’s assume there are only
 $$
 \text{ATE} = E[p^L - p^S]
 $$
+
+#### Problem
+
+Weaker students often deliberately grouped into smaller classes
+
+Hence, Many studies of education production using non-experimental data suggest there is little or no link between class size and student learning
+
+#### Solution
 
 Randomized assignment of classroom size is necessary, as usually the more well-off students will be in private schools , so clearly there is self-selection effect here. So we will take the same group of kids, and randomly assign a small and large room.
 
@@ -277,18 +344,18 @@ to know the effect of fertilizer on crop output
 
 #### Problem
 
-The result might not be accurate with just randomized experiment. This is because, the effectiveness of fertilizer depends on the temperature.
+The result might not be accurate with just randomized experiment. This is because, the effectiveness of fertilizer depends on the temperature (effect modifier)
 
 #### Solution
 
 [Conditional Randomized Experiment](## Conditional Randomized Experiment)
 
-We have to do randomized experiments at different temperatures. This is because, the temperature affects the causal effect of fertilizer on the crop output. By independent testing at different temperatures, we can keep the effect of temperature as a constant, and we will get the true causal effect of fertilizer.
-
-So we have to do
+Randomized experiments at different temperatures
 
 - a randomized experiment at low temperature
 - a randomized experiment at high temperature
+
+This is because, the temperature affects the causal effect of fertilizer on the crop output. By independent testing at different temperatures, we can keep the effect of temperature as a constant, and we will get the true causal effect of fertilizer.
 
 ## IDK
 

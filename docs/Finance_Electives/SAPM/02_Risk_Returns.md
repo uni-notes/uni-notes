@@ -142,5 +142,8 @@ $$
 \end{aligned}
 $$
 
+There are 252 trading days in a year
+
 ## IDK
 
+Fixed-income securities are also very volatile

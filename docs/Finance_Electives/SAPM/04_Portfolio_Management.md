@@ -38,3 +38,6 @@ $w_i<0 \implies$ Loan
 ## IDK
 
 Nifty50 makes a 12% average return, but actually, entire pool of Indian stock market makes a negative return
+
+
+

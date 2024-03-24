@@ -46,3 +46,14 @@ Mini-max algorithm is complete and optimal
 - Prune a subtree once it is known to be worse than the current α or β.
 
 ![Alpha beta pruning](../assets/alpha-beta-pruning-steps.png)
+
+## Deep Blue
+
+- Minimax
+- $\alpha \beta$ pruning
+- Progressive deepening
+- Parallel computing
+- uneven tree development
+
+14-16 levels deep
+

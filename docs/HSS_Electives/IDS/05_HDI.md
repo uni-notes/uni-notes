@@ -1,4 +1,4 @@
-# IDK
+# Human Development Index Model
 
 - Argues for holistic development
 - Capability approach
@@ -63,3 +63,50 @@ Modern welfare states: France, Finland, Belgium, Netherlands
 - Creating more awareness about smoking
 
 ## Case Studies
+
+
+
+## Bihar Sithamali
+
+Open Defecation: Gives a chance to interact with each other
+
+## Kerala Development Model
+
+### Advantages
+
+
+
+### Disadvantages
+
+- Agricultural stagnation
+- Industrial stagnation
+- Power deficiency
+- Lack of good infrastructure
+- Private sector declining
+- Rising local unemployment in the state
+- Poor investment in climate (2018, 2019, 2020 Floods)
+- Headland workers: Harthal and Bandh
+
+## IDK
+
+- Remove table
+- 3rd person: This paper highlights/attempts
+  - 1st person may cause bias
+  - Future/present-perfect study
+    - Will analyze
+    - analyzes
+
+## Drawbacks
+
+Measurement
+
+- Civil war
+- We are not considering other external factors such as
+  - Invasion
+  - Natural disasters
+
+## Steps
+
+- Objective
+- Measurement
+- Outcome

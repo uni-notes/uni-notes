@@ -9,7 +9,8 @@ E(y \vert \text{do}(x), s)
 &=\dfrac{d}{dx} \hat E[y \vert \text{do}(x), s] \\
 &= \dfrac{d}{dx} E_s \Big[ \hat E[y \vert \text{do}(x), s] \Big] \\
 &= \dfrac{d}{dx} E_s \Big[ \hat E[y \vert x, s] \Big] \\
-&= E_s \left[ \dfrac{\partial}{\partial x} \hat E[y \vert x, s] \right] \end{aligned}
+&= E_s \left[ \dfrac{\partial}{\partial x} \hat E[y \vert x, s] \right]
+\end{aligned}
 $$
 
 HTE = Heterogeneous Treatment Effect = ATE with high dimensional $s$ 
@@ -18,15 +19,15 @@ If $x$ is binary
 $$
 \begin{aligned}
 x &\in \{ 0, 1 \} \\
-\implies \text{ATE}(x, z)
+\implies \text{ATE}(x, s)
 &= E[ y \vert \text{do}(x=1) ] \ - \ E[ y \vert \text{do}(x=0) ] \\
-&= E_z \Bigg[ E[y \vert x=1, z ] \  - \ E[ y \vert x=0, z] \Bigg] \\
+&= E_s \Bigg[ E[y \vert x=1, s ] \  - \ E[ y \vert x=0, s] \Bigg] \\
 \end{aligned}
 $$
 
 | Treatment                    | Model                                                   | $\widehat{\text{ATE}}(x)$ |
 | ---------------------------- | ------------------------------------------------------- | ------------------------- |
-| Binary                       | Linear $\hat \beta_0 + \hat \beta_1 x + \hat \beta_2 z$ | Constant $\hat \beta_1$   |
+| Binary                       | Linear $\hat \beta_0 + \hat \beta_1 x + \hat \beta_2 s$ | Constant $\hat \beta_1$   |
 | Multi-Level/<br />Continuous | Non-linear                                              | Functional                |
 
 ## Heterogeneous Treatment Effects
@@ -58,7 +59,7 @@ If no crop was grown the previous year, then we
 
 ## Regression Discontinuity Design
 
-Causal effect cannot be obtained directly due to lack of overlap for different $z$, hence we take the neighborhood
+Causal effect cannot be obtained directly due to lack of overlap for different $s$, hence we take the neighborhood
 
 When a quasi-experiment partially determines the
 treatment status, the “as if” randomness can be used as an instrument for identifying the causal effect of interest
