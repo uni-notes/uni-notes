@@ -17,41 +17,45 @@ kf[[Kalman Filter]] -->
 oe[/y_e/]
 ```
 
-This concept can be used in any field where estimation and prediction are required.
+## Filters vs Rolling Statistics
 
-## Types
+The Kalman filter is better suited for estimating things that change over time. The Kalman Filter lets you add more information about how the system you're filtering works. In other words, you can use a signal model to improve the output of the filter.
 
-Alpha, Beta, Gamma, Kalman, Extended Kalma, Particle Filters
+Sure, a moving average filter can give very good results when you're expecting a close-to-constant output. But as soon as the signal you're modelling is dynamic (think speech or position measurements), then the simple moving average filter will not change quickly enough (or at all) compared with what the Kalman Filter will do.
 
-## Measurement Uncertainty
+The Kalman filter uses the signal model, which captures your knowledge of how the signal changes, to improve its output in terms of the variance from "truth".
 
-Most modern systems are equipped with multiple sensors that provide estimation of hidden/unknown variables based on series of measurements
+## Concepts
 
-One of the biggest challenges of tracking and control systems is to provide accurate and precise estimation of the hidden variables in the presence of uncertainty.
+|             |               | Denotation        |
+| ----------- | ------------- | ----------------- |
+| Measurement |               | $x_{t, t}$        |
+| Estimation  | Current state | $\hat x_{t, t}$   |
+| Prediction  | Future state  | $\hat x_{t, t-1}$ |
 
-## Measurement Bias & Variance
+## Applications
 
-Very similar to Machine Learning [Prediction Bias & Variance](../Machine_Learning/07_Evaluation.md#Prediction-Bias-&-Variance) 
+These can be used in any field, but a few examples
 
-## Kalman Filter
+- Guidance
+- Navigation
+- Control of vehicles
 
-Assumes measurement error is normally-distributed
+## Filter Design
 
-### State Update Equation
+1. Define problem which consists of the state
+2. Define the motion model
+3. Define how the state will be measured
+4. Define uncertainty in system’s dynamic model
+5. Implement & test the filter with know inputs & outputs
+6. Tune the filter
 
-$$
-\begin{aligned}
-&{\small \text{Estimated current state}} \\
-&= {\small \text{Mean of all measurements}} \\
-&= {\small 
-\text{Predicted current state} + \text{Factor} \times (\text{Measurement - Predicted current state})
-} \\
-\implies &\hat x_{n, n} = \hat x_{n, n-1} + \alpha_n (x_n - \hat x_{n, n-1})
-\end{aligned}
-$$
+## Batch vs Recursive
 
-The $\alpha$ factor is called as Kalman Gain, and is taken as $\alpha_n = \dfrac{1}{n}$. As number of measurements increase, each successive measurement has less weight in estimation, as $n \uparrow \implies \alpha \downarrow$
+|            | Batch  | Recursive |
+| ---------- | ------ | --------- |
+| Complexity | $O(n)$ | $O(1)$    |
+|            |        | Preferred |
 
-Kalman filter requires an initial guess as a preset; it may be approximate. 
 
-$(x_{n, n} - \hat x_{n, n-1})$ is called the measurement residual
+

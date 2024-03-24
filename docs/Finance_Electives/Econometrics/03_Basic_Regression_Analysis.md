@@ -74,8 +74,7 @@ $$
 ### Components
 
 - Systematic/Deterministic/Common/Explained component
-- Non-Systematic/Random/Disturbance component
-  Incorporates
+- Non-Systematic/Random/Disturbance/Idiosyncratic component
     - effect of all omitted variables
     - random effects
     - effect of measurement error
@@ -118,10 +117,6 @@ eg:
 
 - Age and Experience
 - CPI and Inflation
-
-## ARCH
-
-Auto Regressive Conditional Heteroscedacity
 
 ## Types of Relationships
 

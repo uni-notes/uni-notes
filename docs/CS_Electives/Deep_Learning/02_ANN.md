@@ -6,6 +6,8 @@ They are loosely based on how our human brain works.
 
 ![Neural network visualization](./../assets/neural%20network.png)
 
+You can think of a neural network as combining multiple non-linear decision surfaces into a single decision surface.
+
 ## Neuron
 
 Most basic unit of a neural network

@@ -69,12 +69,19 @@ So if the width and height of image are $w, h$
 - Hardware costs
 - Flexibility
 
-## Major Neural Networks
+## Major Architectures
 
-|                          | Meaning                                               | Efficient<br />at         | Major<br />Application | Computation<br />Complexity |
-| ------------------------ | ----------------------------------------------------- | ------------------------- | ---------------------- | --------------------------- |
-| CNN<br />(Convolutional) |                                                       | Detecting spatial pattens | Images, Videos         | High                        |
-| RNN<br />(Recurrent)     | Forward-feed, backward-feed, and self-loop is allowed |                           | Time series            |                             |
+|                                | Meaning                                               | Efficient<br />at         | Major<br />Application                                       | Computation<br />Complexity |
+| ------------------------------ | ----------------------------------------------------- | ------------------------- | ------------------------------------------------------------ | --------------------------- |
+| CNN<br />(Convolutional)       |                                                       | Detecting spatial pattens | Images, Videos                                               | High                        |
+| RNN<br />(Recurrent)           | Forward-feed, backward-feed, and self-loop is allowed |                           | Time Series                                                  |                             |
+| ResNet<br />(Residual Network) |                                                       |                           | Time Series                                                  |                             |
+| U-Net                          |                                                       |                           | Basis of diffusion models<br />Segmentation<br />Super-Resolution<br />Diffusion Models |                             |
+| PINN<br />(Physics-Informed)   |                                                       |                           |                                                              |                             |
+| Lagrangian                     |                                                       |                           |                                                              |                             |
+| Deep Operator                  |                                                       |                           |                                                              |                             |
+| Fourier Neural Operator        |                                                       |                           |                                                              |                             |
+| Graph Neural Networks          |                                                       |                           |                                                              |                             |
 
 ## Popular Models & Datasets
 
@@ -86,3 +93,7 @@ So if the width and height of image are $w, h$
 ## Transfer Learning
 
 ![image-20230527151527131](./../assets/image-20230527151527131.png)
+
+## IDK
+
+![image-20240309214029828](./assets/image-20240309214029828.png)

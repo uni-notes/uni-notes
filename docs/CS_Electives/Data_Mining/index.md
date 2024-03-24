@@ -1,7 +1,5 @@
 # Data Mining
 
-Taught by Dr. Angel
-
 This course covers the concepts regarding Data Analysis.
 
 ## Why Data Mining
@@ -24,25 +22,11 @@ To fill in areas where traditional data analysis methods cannot be applied
     - Captioning
 - Object Detection
 
-## Concepts of this course
-
-1. Data Preprocessing
-2. Classification
-3. Association Rule mining
-4. Clustering
-5. Outlier Detection
-
-The course doesn’t cover regression.
-
-## Project
-
-1. Title
-2. Introduction
-3. Literature Review
-4. Dataset Description
-5. Proposed Method
-6. References (20 papers)
-
 ## Sources
 
 Kaggle, UCI ML repository
+
+## References
+
+- [ ] Dr. Angel Arul Jothi Lectures
+- [ ] [IIT Roorkee July 2018 | Data Analytics with Python](https://www.youtube.com/playlist?list=PLLy_2iUCG87CNafffzNZPVa9rW-QmOmEv)

@@ -22,13 +22,19 @@ z_\text{sample} &= \frac{\bar x - \mu}{ \sigma/\sqrt n }
 \end{aligned}
 $$
 
-## Central Limit Theorem
+## Sample vs Population Standard Deviation
 
-PDF for any sample with $n>30$ tends to normal distribution
+### For Different Distributions
 
-$$
-\bar x \sim N \left(\mu, \frac{\sigma^2}{n} \right)
-$$
+![image-20240128195458648](./assets/image-20240128195458648.png)
+
+Higher the skew of population distribution, larger the sample size required to approximate the sample size to the population
+
+### For the different population size
+
+![image-20240128195800706](./assets/image-20240128195800706.png)
+
+Sample vs Population SD does not depend on population size
 
 ## Estimation
 
@@ -54,8 +60,8 @@ $$
 | :-------------------------------: | :---: | :-------------------------------: | :------: |
 | known | any   | $z = \dfrac {\bar x - \mu}{\sigma / \sqrt n}$ | $\bar x \pm z_{\alpha/\small 2} \cdot \dfrac \sigma {\sqrt n}$ |
 | unknown | $>30$ | $z = \dfrac {\bar x - \mu}{s/ \sqrt n}$ | $\bar x \pm z_{\alpha/\small 2} \cdot \dfrac s {\sqrt n}$ |
-| unknown | $\le 30$ | $t = \dfrac {\bar x - \mu}{s / \sqrt n}$ | $\bar x \pm t_{\small n-1, \alpha/\small 2} \cdot \dfrac s {\sqrt n} \\
- (n-1) \to \text{deg of freedom}$ |
+| unknown | $\le 30$ | $t = \dfrac {\bar x - \mu}{s / \sqrt n}$ | $\bar x \pm t_{\small n-1, \alpha/\small 2} \cdot \dfrac s {\sqrt n} \\(n-1) \to \text{deg of freedom}$ |
+
 
 $$
 \begin{aligned}
@@ -91,3 +97,25 @@ $$
 \end{aligned}
 $$
 
+## Inequalities
+
+Let $x$ be a random variable such that $x_i \in [a, b]$
+
+Consider
+
+- sample size $n$
+- $\epsilon > 0$
+
+### Hoeffding’s Inequality
+
+$$
+P (\vert \bar x − \mu \vert > \epsilon) \le 2 \exp \left[ \dfrac{-2 n \epsilon^2}{(b-a)^2} \right]
+$$
+
+### Vapnik-Chervonenkis Inequality
+
+$$
+P (\vert \bar x − \mu \vert > \epsilon) \le 4 \cdot m_h(2n) \cdot \exp \left[ \dfrac{-1}{8} n \epsilon^2 \right]
+$$
+
+Where $m_h(n) = 2^n$

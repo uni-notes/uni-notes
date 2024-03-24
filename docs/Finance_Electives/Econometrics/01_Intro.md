@@ -65,7 +65,7 @@ However, this may **not always** be true
 
 Randomness due to nature of the real world.
 
-### Heteroscedasticity
+### Heteroskedasticity
 
 Variance in distribution of possible outcomes will change over different time, location, settings.
 

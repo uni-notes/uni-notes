@@ -3,6 +3,16 @@
 - Sell a minimum number of seats without selling every seat at discount prices, such that it is enough to cover fixed operating costs
 - Sell remaining seats at higher rates to maximize revenue
 
+## Profit
+
+$$
+\begin{aligned}
+\text{Profit}
+&= \text{Income} - \text{Expenses} \\
+&= \text{Sale Price} \times \min(\text{Demand}, \text{Quantity}) - \text{Cost} \times \text{Quantity}
+\end{aligned}
+$$
+
 ## Passengers
 
 Passengers have different valuations

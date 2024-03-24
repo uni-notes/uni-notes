@@ -116,7 +116,20 @@ When $y_{t+1} = y_t$, the convolution $(f \circ g)$ has a slope > 1. This happen
 
 In some cases, food is affordable, so $g$ won’t be steep.
 
-## Calories wrt Per capita expenditure
+## Nutrition-based Poverty Trap
+
+- Not much basis for Nutrition-based Poverty Trap, as food is relatively cheap
+- When people become richer, they tend to spend more on food
+  - Half of the increase into better food
+  - Half of the increase into more calories
+- Clear relationship between per capita expenditure vs calorie consumption
+  - Relationship does not appear to be non-linear, at least in this range, despite the fact it is probably an over-estimate due to reverse-causality
+- Strong log-linear relationship between price of calories and expenditures, indicating a lot of substitution towards more expensive calories
+- Duration of study affects people behavior
+  - When subsidies are provided for short-period, people focus on eating “better” food than to improve nutritional status
+  - if this was a long-term, then the behavior may have been different
+
+### India
 
 ![Local Regression at different points of log(calories) vs log(per capita expenditure)](./assets/image-20231129014424156.png)
 
@@ -130,6 +143,13 @@ As you can see, as people get richer, they eat more expensive calories. This mea
 
 Even though the number of extremely poor people has gone down in India, the per capita consumption has not increased, as the Calorie Engel curve has moved rightward.
 
-## IDK
+### China
 
-In a log-log relationship, the slope is the elasticity
+Subsidize staple food in 2 regions fro randomly selected household
+
+In both regions, substitution towards more expensive calories
+
+Elasticity of calorie consumption with income is low
+
+## Graduation Programs
+

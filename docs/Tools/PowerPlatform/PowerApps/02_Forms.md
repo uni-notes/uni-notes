@@ -1,4 +1,4 @@
-General
+# Forms
 
 - Gallery
   Onselect: Set(SelectedItem, ThisItem)
@@ -6,7 +6,15 @@ General
   Datasource: Live Source
 - Item: SelectedItem
 
-## Forms
+## DisplayMode
+
+|      |      |
+| ---- | ---- |
+| New  |      |
+| Edit |      |
+| View |      |
+
+## IDK
 
 For date inputs, Set `IsEditable` to `false`
 
@@ -24,7 +32,7 @@ ResetForm(Form_Name);
 Notify("Failure", Form_Name.Error, Form_Name.ErrorKind)
 ```
 
-### Dropdown for text column
+## Dropdown for text column
 
 ```
 // Default_selected_items 

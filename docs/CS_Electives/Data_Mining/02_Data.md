@@ -12,6 +12,8 @@ Data can be anything. It depends on the data engineer on what the input and outp
 
 ## Means of data collection
 
+Garbage-in, Garbage-out
+
 - Manual Labelling
   - Manually marking as cat/not cat, etc.
 - Observing Behaviour
@@ -240,3 +242,28 @@ Using Principal Component Analysis
 Deriving simplified features from existing features
 
 Easy example: using area instead of length and breadth.
+
+## Categories of Data
+
+|                                                           | Mediocristan                              | Extremistan                                                  |
+| --------------------------------------------------------- | ----------------------------------------- | ------------------------------------------------------------ |
+| Each observation has **low** effect on summary statistics | ✅                                         | ❌                                                            |
+| Example                                                   | IQ, Weight, Height, Calories, Test Scores | Wealth, Sales, Populations, Pandemics                        |
+| Law of Large Numbers                                      |                                           | Requires more samples for approaching the true mean          |
+|                                                           |                                           | Mean is meaningless                                          |
+|                                                           |                                           | Regression does not work<br />$R^2$ reduces with larger sample sizes |
+|                                                           |                                           | Payoffs diverge from probabilities<br />It’s not just about how often you are right, but also what happens when you’re wrong: Being wrong 1 time can erase the gain of being right 99 times |
+
+![image-20240210110725937](./assets/image-20240210110725937.png)
+
+## “Fat-Tailedness”
+
+Degree to which rare events drive the aggregate statistics of a distribution
+
+- Lower $\alpha \implies$ Fatter tails
+  - ![image-20240210111139587](./assets/image-20240210111139587.png)
+- Kurtosis (breaks down for $\alpha \le 4$)
+- Variance of Log-Normal distribution
+  - ![image-20240210111118533](./assets/image-20240210111118533.png)
+- Taleb’s $\kappa$ metric
+  - ![image-20240210111052050](./assets/image-20240210111052050.png)

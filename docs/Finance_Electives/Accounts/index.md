@@ -10,6 +10,7 @@ Available in different formats
 - [Google Sheets](https://docs.google.com/spreadsheets/d/1bv3lSLNlvbCq1KiVeV2V3HI49OwRfLbdSf1YsKhET7g)
 - [Excel](./sheets/FFA.xlsx)
 
-## Financial Statements Analysis
+## Financial Statements Dashboard
 
-- [financial-statements.streamlit.app](https://financial-statements.streamlit.app)
+- [Dashboard](https://financial-statements.streamlit.app)
+- [GitHub Repository](https://github.com/ahmedthahir/financial_statements/)
