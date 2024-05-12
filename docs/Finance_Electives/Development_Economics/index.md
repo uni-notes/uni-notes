@@ -29,4 +29,6 @@
 
 ## References
 
-- https://www.youtube.com/playlist?list=PLUl4u3cNGP61kvh3caDts2R6LmkYbmzaG
+- [ ] https://www.youtube.com/playlist?list=PLUl4u3cNGP61kvh3caDts2R6LmkYbmzaG
+- [ ] https://www.youtube.com/playlist?list=PLUl4u3cNGP620R91K4KP_fO4l3eeK5lDn
+- [ ] [IIT Roorkee | Health Economics](https://www.youtube.com/playlist?list=PLLy_2iUCG87DJ2UAy3j3d50ThmDnTSTtG)

@@ -1,7 +1,5 @@
 # Data Mining
 
-Taught by Dr. Angel
-
 This course covers the concepts regarding Data Analysis.
 
 ## Why Data Mining
@@ -24,25 +22,20 @@ To fill in areas where traditional data analysis methods cannot be applied
     - Captioning
 - Object Detection
 
-## Concepts of this course
-
-1. Data Preprocessing
-2. Classification
-3. Association Rule mining
-4. Clustering
-5. Outlier Detection
-
-The course doesn’t cover regression.
-
-## Project
-
-1. Title
-2. Introduction
-3. Literature Review
-4. Dataset Description
-5. Proposed Method
-6. References (20 papers)
-
 ## Sources
 
 Kaggle, UCI ML repository
+
+## References
+
+- [x] Data Mining | Dr. Angel Arul Jothi
+- [ ] [From Data to Decisions | Chris Mack](https://www.youtube.com/playlist?list=PLM2eE_hI4gSDnF-mEa9mrIYx7GCLQVN89)
+- [ ] [Statistics literacy for non-statisticians | Mike x Cohen](https://www.youtube.com/playlist?list=PLn0OLiymPak1NA71bAr1CDN9b-lsofgh-)
+- [ ] [Big Data Analytics | Caltech](https://www.youtube.com/playlist?list=PL8_xPU5epJdcBqm0mgFoY52yywOHmOI7y)
+- [ ] [MIT 14.310x Data Analysis for Social Scientists, Spring 2023](https://www.youtube.com/playlist?list=PLUl4u3cNGP61ATaGTFcSp7bhogloD2wHP)
+- [ ] [IIT Roorkee July 2018 | Data Analytics with Python](https://www.youtube.com/playlist?list=PLLy_2iUCG87CNafffzNZPVa9rW-QmOmEv)
+- [ ] [ORIE 5355 -- People, Data, Systems -- Fall 2021 -- Cornell Tech](https://www.youtube.com/playlist?list=PLPjsPBAj-5PWX8dWDcqYfMvEuh7DWuBEJ)
+- [ ] [Mining Massive Datasets | Stanford University](https://www.youtube.com/playlist?list=PLLssT5z_DsK9JDLcT8T62VtzwyW9LNepV)
+- [ ] [Quantitative Social Science Methods | Harvard](https://www.youtube.com/playlist?list=PL0n492lUg2sgSevEQ3bLilGbFph4l92gH)
+- [ ] [Data Mining | University of Utah](https://www.youtube.com/playlist?list=PLbuogVdPnkCrnLNqZPnTuG_s19TNDoad0)
+- [ ] [Visualization for Data Science | University of Utah](https://www.youtube.com/playlist?list=PLbuogVdPnkCqxVyErIw9jYeCnznwMEHa3)

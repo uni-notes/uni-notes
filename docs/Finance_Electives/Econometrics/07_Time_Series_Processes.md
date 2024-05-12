@@ -1,3 +1,5 @@
+# Time Series Processes
+
 ## Time Series
 
 Observation of random variable ordered by time
@@ -22,8 +24,22 @@ This is due to
 - history/memory effect
     - Medical industry always looks at the records of your medical history
 - Inertia of change
+- Limited data
 
 ## Components of Time Series Processes
+
+|                  | Characteristic          | Frequency              |                |
+| ---------------- | ----------------------- | ---------------------- | -------------- |
+| Auto-Correlation |                         |                        |                |
+| Level            | Average value of series |                        |                |
+| Trend            | Gradual                 | Low                    |                |
+| Seasonality      |                         | Daily, Weekly, Monthly |                |
+| Cycles           |                         | > 1 year               | Economy cycle  |
+| Holidays         |                         |                        | Eid, Christmas |
+| Drift            | Exogeneous              |                        |                |
+| Structural Break |                         |                        |                |
+| Shocks           |                         |                        |                |
+| Noise            | Random                  | High                   |                |
 
 ### Auto-correlation
 
@@ -135,9 +151,11 @@ Two ways to encode
 
 ### Volatility
 
+Annualized standard deviation of change of a random variable
+
 Measure of variation of a variable from its expected value
 
-If the variance is heteroschedastic (changes over time), the variable is volatile
+If the variance is heteroskedastic (changes over time), the variable is volatile
 
 $$
 \begin{aligned}
@@ -152,32 +170,6 @@ $$
 $$
 y_t = \beta_0 + \beta_1 y_{t-1} + \beta_2 \sigma^2_{t-1}
 $$
-
-## Volatility Models
-
-### ARCH
-
-AutoRegressive Conditional Heteroschedacity models
-
-1. Calculate $y_t = f(y_{t-1}, u_t)$
-
-2. Calculate $\hat u_t$
-
-3. $$
-   y_t = u_t \implies \sigma^2 (y_t) = \sigma^2 (u_t)
-	$$
-
-4. So our model becomes
-   
-$$
-(u_t)^2 = \lambda_0 + \lambda_1 (u_{t-1})^2 + \dots
-$$
-
-5. Something
-
-### GARCH
-
-Generalized AutoRegressive Conditional Heteroschedacity models
 
 ## Lag Terms
 
@@ -204,196 +196,84 @@ Here, $\rho_1$ is total autocorrelation coefficient of $y_{t-2}$ on $y_t$
 
 We choose the number of lags by trial-and-error and checking which coefficients are significant ($\ne 0$)
 
-## Data-Generating Process
+## Stochastic Data-Generating Processes
 
-### White Noise Series
+Stochastic process is a sequence of random observations indexed by time
 
-$y_t$ whose lags have no impact on current value ($y_t$ is independent of lags), ie, both partial autocorrelation coefficient **and** total autocorrelation coefficient associated with each lag is statistically 0.
+### Markov Chain
 
-Consider a distribution of $y$ for each time period has
+Stochastic process where effect of past on future is summarized only by current state
+$$
+P(y_{t+1} = a \vert x_0, x_1, \dots x_t) = P(x_{t+1} = a \vert x_t)
+$$
+If possible values of $x_i$ is a finite set, MC can be represented as a transition probability matrix
 
-- 0 mean
-- 0 correlation between $x$ and $y$
-- Identical variance
+### Martingale
 
+Stochastic processes which are a “fair” game
+$$
+E[y_{t+1} \vert y_t] = y_t
+$$
+Follow optimal stopping theorem
+
+### Subordinated
+
+
+
+### Stationarity
+
+| Type                  | Meaning                                                      |
+| --------------------- | ------------------------------------------------------------ |
+| Stationary            | Constant mean: $E(y_t) = \mu$<br />Constant variance: $\text{Var}(y_t) = \sigma^2$ |
+| Covariance Stationary | Constant mean: $E(y_t) = \mu$<br />Constant variance: $\text{Var}(y_t) = \sigma^2$<br/>Constant auto-covariance: $\text{Cov}(y_{t+h}, y_t) = \gamma(\tau)$ |
+| Non-Stationary        | Will have either ==**one/both**== of the following<br/><br/>- Mean at each time period is ==**different**== across all time periods<br/>  - Mean of distribution of possible outcomes corresponding to each time period is different<br/>- Variance at each time period is ==**different**== across all time periods<br/>  - Variance of distribution of possible outcomes corresponding to each time period is different<br/><br/>We need to transform this somehow, as OLS and [GMM](#GMM) cannot be used for non-stationary processes, because the properties of OLS are violated - heteroskedastic variance of error term |
+
+## Types of Stochastic Processes
+
+Consider $u_t = N(0, \sigma^2)$
+
+| Process                                          | Characteristics                                  | $y_t$                                                        | Comments                                                     | Mean                                       | Variance     | Memory | Example                                                      |
+| ------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------ | ------------ | ------ | ------------------------------------------------------------ |
+| White Noise                                      | Stationary                                       | $u_t$                                                        | PAC & TAC for each lag = 0                                   | 0                                          | $\sigma^2$   | None   | If a financial series is a white noise series, then we say that the ‘market is efficient’ |
+| Ornstein Uhlenbeck Process/<br />Vasicek Model   | Stationary<br />Markov chain                     | $\beta_1 y_{t-1} + u_t; \ 0 < \vert \beta_1 \vert < 1$       | Series has Mean-reverting Earlier past is less important compared to recent past.<br />Less susceptible to permanent shock<br />Series oscilates | 0/non-zero                                 | $\sigma^2$   | Short  | GDP growth<br />Interest rate spreads<br />Real exchange rates<br />Valuation ratios (divides-price, earnings-price) |
+| Covariance Stationary                            |                                                  | $y_t = V_t + S_t$ (Wold Representation Theorem)<br />$V_t$ is a linear combination of past values of $V_t$ with constant coefficients<br />$S_t = \sum \psi_i u_{t-i}$ is an infinite moving-average process of error terms, where $\psi_0=1, \sum \psi_i^2 < \infty$; $\eta_t$ is linearly-unpredictable white noise and $u_t$ is uncorrelated with $V_t$ |                                                              |                                            |              |        |                                                              |
+| Simple Random Walk                               | Non-Stationary<br />Markov chain<br />Martingale | $\begin{aligned} &= y_{t-1} + u_t \\ &= y_0 + \sum_{i=0}^t u_i \end{aligned}$ | PAC & TAC for each lag = 0<br />$y_{t+h} - y_t$ has the same dist as $y_h$<br /> | $y_0$                                      | $t \sigma^2$ | Long   |                                                              |
+| Explosive Process                                | Non-Stationary                                   | $\beta_1 y_{t-1} + u_t; \  \vert \beta_1 \vert > 1$          |                                                              |                                            |              |        |                                                              |
+| Random Walk w/ drift                             | Non-Stationary                                   | $\begin{aligned} &= \beta_0 + y_{t-1} + u_t \\ &= t\beta_0 + y_0 + \sum_{i=0}^t u_i \end{aligned}$ |                                                              | $t \beta_0 + y_0$                          | $t \sigma^2$ | Long   |                                                              |
+| Random Walk w/ drift and deterministic trend     | Non-Stationary                                   | $\begin{aligned} &= \beta_0 + \beta_1 t + y_{t-1} + u_t \\ &= y_0 + t \beta_0 + \beta_1 \sum_{i=1}^t i + \sum_{i=1}^t u_t \end{aligned}$ |                                                              | $t \beta_0 + \beta_1 \sum_{i=1}^t i + y_0$ | $t \sigma^2$ | Long   |                                                              |
+| Random Walk w/ drift and non-deterministic trend | Non-Stationary                                   | Same as above, but $\beta_1$ is non-deterministic            |                                                              |                                            |              |        |                                                              |
+
+Impulse Response Function of covariance stationary process $y_t$ is
 $$
 \begin{aligned}
-\text{Consider } y_t
-&= \sum \rho_i y_{t-i} + u_t \\
-&= \sum \textcolor{hotpink} 0 \times y_{t-i} + u_t
-\quad \text{(Independent of lags)} \\
-\implies y_t &= u_t \\
-& \text{and} \\
-E(y_t) &= \mu = 0 \\
-E[(y_t - \mu)^2] &= \sigma^2
+\text{IR}(j)
+&= \dfrac{\partial y_t}{\partial \eta_{t-j}} \\
+&= \psi_j \\
+\implies \sum \text{IR}(j) &= \phi(L), \text{with L=}1 \\
+&\text{ (L is lag operator)}
 \end{aligned}
 $$
 
-If a financial series is a white noise series, then we say that the ‘market is efficient’
+## Differentiation
 
-### Stationary Stochastic
+When converting a non-stationary series $y_t$ into a stationary series $y'_t$, we want
 
-Earlier past is less important compared to recent past. Less susceptible to permanent shock
-
-$$
-y_t = \beta_1 y_{t-1} + u_t \\
-0 < |\beta_1| < 1
-$$
-
-This is basically a wave (for eg, sound-wave), and $\beta$ is basically the amplitude of the wave
-
-- $0 < |\beta_1| < 1$
-    - Series oscillates
-    - Series has Mean-reverting tendancy
-    - Otherwise if
-    - $|\beta_1| > 1$, it’ll be explosive (linearly-increasing/decreasing)
-      - This is theoretically-possible, but not possible in real-world
-- Mean, variance and autocovariance are time-invariant
-  (Mean, variance of distribution of possible outcomes, corresponding to each time period is same)
-    - Distribution of the variable remains constant for each time instant ==(not across time periods)==
-    - Basically this series have homoscedascity of time-series variable
-    - $E(y_t) = \mu$ can be zero/non-zero
-    - $E[(y_t - \mu)^2] = \sigma^2$
-    - $E[(y_t - \mu)(y_{t+k}-\mu)] = r_k$
-    - Hence, in case of any shocks, the series returns to the original
-  
-
-#### Example
-
-- GDP Growth rate
-  GDP keeps changing (mostly increasing), but the rate of growth remains constant
-- Interest rate
-
-#### Derivation of properties
+- Obtain stationarity: ADF Stat at 95% CL as $-2.8623$
+- Retain memory: Similarity to original series; High correlation b/w original series and differentiated series
 
 $$
-\begin{aligned}
-y_t &= \beta^t y_0 + \sum_{i=0}^{t-1} \beta^i u_{t-1} + u_t \\
-\implies
-E(y_t) &= \beta^t y_0 \to \text{Constant} \\
-\implies
-E[y_t-\beta^t y_0] &= \sum_{i=0}^t \beta^t \sigma^2 \\
-&= \alpha(1 + \beta + \beta^2 + \dots) \\
-&= \frac{\sigma^2}{1 - \beta} \to \text{Constant}
-\end{aligned}
+y'_t = y_t - d y_{t-1} \\
+d \in [0, 1] \\
+d_\text{usual} \in [0.3, 0.5]
 $$
 
-### Non-Stationary Stochastic
+| $d$                                        | Stationarity | Memory |
+| ------------------------------------------ | ------------ | ------ |
+| 0                                          | ❌            | ✅      |
+| $(0, 1)$<br />(Fractional differentiation) | ✅            | ✅      |
+| 1                                          | ✅            | ❌      |
 
-Will have either ==**one/both**== of the following
-
-- Mean at each time period is ==**different**== across all time periods
-    - Mean of distribution of possible outcomes corresponding to each time period is different
-
-- Variance at each time period is ==**different**== across all time periods
-    - Variance of distribution of possible outcomes corresponding to each time period is different
-
-We need to tranform this somehow, as OLS and [GMM](#GMM) cannot be used for non-stationary processes, because the properties of OLS are violated - heteroscedastic variance of error term
-
-#### Random Walk w/o drift (Pure random walk process)
-
-- Mean is constant over time
-- Variance varies over time
-
-It is a long memory series
-
-$$
-\begin{aligned}
-y_t
-&= \beta_1 y_{t-1} + u_t \\
-&= 1 y_{t-1} + u_t & (\beta_1 = 1) \\
-&= y_{t-1} + u_t \\
-\implies
-y_t &= y_0 + \sum_{i=0}^t u_i
-\end{aligned}
-$$
-
-Every value is basically the
-
-- Previous value $\pm$ something
-- Initial value + cumulative sum of disturbances
-
-$$
-\begin{aligned}
-E(y_t)
-&= E(y_0) + E(u_1) + E(u_2) + \dots + E(u_t) \\
-&= y_0 + 0 \\
-\implies E(y_t) &= y_0
-\end{aligned}
-$$
-
-$$
-E[(y_t - y_0)^2] = t \sigma^2
-$$
-
-Volatility increases over time
-
-#### Random Walk w/ drift
-
-- Mean varies over time
-- Variance varies over time
-
-It is a [Long memory series](#Long-memory-series)
-
-Similar to [Random Walk w/o drift](#Random-Walk-w/o-drift), but has  $\beta_0$ as well
-
-$$
-\begin{aligned}
-y_t
-&= \beta_0 + y_{t-1} + u_t \\
-&= t\beta_0 + y_0 + \sum_{i=0}^t u_i
-\end{aligned}
-$$
-
-$$
-E(y_t) = t \beta_0 + y_0
-$$
-
-$$
-\begin{aligned}
-\text{Var}
-&= E[(y_t - t\beta_0 - y_0)^2] \\
-&= t \sigma^2
-\end{aligned}
-$$
-
-Volatility increases over time
-
-#### Random Walk w/ drift and deterministic trend
-
-- Mean changes over time
-- Variance changes over time
-
-$$
-\begin{aligned}
-y_t
-&= \beta_0 + \beta_1 t + y_{t-1} + u_t
-& (\beta_0 \ne 0, \beta_1 \ne 0) \\
-&= y_0 + t \beta_0 + \beta_1 \sum_{i=1}^t i + \sum_{i=1}^t u_t
-\end{aligned}
-$$
-
-$\beta_1$ is deterministic = stochastic = non-random
-
-$$
-E(y_t) = t \beta_0 + \beta_1 \sum_{i=1}^t i + y_0
-$$
-
-$$
-\begin{aligned}
-\text{Var}
-&= E\Big[
-(y_t - t \beta_0 - \beta_1 \sum_{i=1}^t i - y_0 )^2
-\Big] \\
-&= t \sigma^2
-\end{aligned}
-$$
-
-#### Random Walk w/ drift and non-deterministic trend
-
-$\beta_1$ is non-deterministic = non-stochastic = random
-
-We cannot predict this easily
+![image-20240312122111883](./assets/image-20240312122111883.png)
 
 ## Integrated/DS Process
 
@@ -507,10 +387,6 @@ Earlier past is as important as recent past
 ## Q Statistic
 
 Test statistic like $z$ and $t$ distribution, which is used to test ‘joint hypothesis’
-
-## GMM
-
-Generalized method of moments
 
 ## Inertia of Time Series Variable
 

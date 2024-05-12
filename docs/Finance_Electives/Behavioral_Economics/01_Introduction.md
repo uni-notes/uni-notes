@@ -41,10 +41,6 @@ Dictator’s game
 1. Recipient informed about the circumstances of the decision. Self-image
 2. Recipient might never notice (money is wired anonymously). Pure altruism 
 
-## Present Bias
+## Anchoring
 
-Humans have a tendency to put more weight into the present rather than the future when making decision
-
-## IDK
-
-People think in relative terms, not absolute terms of money. Anchoring. 
+People think in relative terms, not absolute terms of money

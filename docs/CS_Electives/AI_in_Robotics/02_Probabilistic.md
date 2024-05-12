@@ -14,4 +14,4 @@ Goal is an incrementally-updated probabilistic estimate of position of robot rel
 - Discrete & Continuous Random Variables
 - Total Probability
 - Gaussian Distribution
-- Baye’s Rule
+- Bayes Rule

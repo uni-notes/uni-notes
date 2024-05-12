@@ -4,8 +4,6 @@ takes finite/countably-infinite no of values
 
 ## PDF
 
-Probability Density Function
-
 $$
 \begin{aligned}
 f(x) &= P(X = x) \\
@@ -15,8 +13,6 @@ f(x) &\ge 0 \\
 $$
 
 ## CDF
-
-Cumulative Distribution Function
 
 $$
 \begin{aligned}
@@ -45,11 +41,14 @@ $$
 
 ## Distributions
 
-| Distribution   |                                                      |                            $f(x)$                            |            $\mu$             |                            $V(x)$                            |
-| -------------- | ---------------------------------------------------- | :----------------------------------------------------------: | :--------------------------: | :----------------------------------------------------------: |
-| Binomial       | - 2 outcomes<br />- independent and identical trials |              $nC_x \cdot p^x \cdot (1-p)^{n-x}$              |             $np$             |                          $np(1-p)$                           |
-| Hypergeometric | dependent trials without replacement                 | $f(x) = \frac{MC_x \times (N-M) C_{(n-x)} }{NC_n}$ <br /> $\text{max}\Big(0, n- (N-m) \Big) \le x \le \text{min}(n, M)$ | $n \left(\dfrac M N \right)$ | $\left( \dfrac{N-n}{N-1} \right) \cdot n \cdot \dfrac M N \left( 1 - \dfrac M N \right)$ |
-| Poisson        | discrete phenomenon in continuous interval           |    $\dfrac {e^{-\mu} \times \mu^x}{x!}, \mu = \alpha t$     |          $\alpha t$          |                          $\alpha t$                          |
+| Distribution      |                                                              |                            $f(x)$                            |            $\mu$             |                            $V(x)$                            |
+| ----------------- | ------------------------------------------------------------ | :----------------------------------------------------------: | :--------------------------: | :----------------------------------------------------------: |
+| Bernoulli         | - 2 outcomes<br />- independent & identical trial            |                                                              |             $p$              |                           $p(1-p)$                           |
+| Binomial          | $n$ indepedent Bernoulli events w/ replacement               |              $nC_x \cdot p^x \cdot (1-p)^{n-x}$              |             $np$             |                          $np(1-p)$                           |
+| Hypergeometric    | $n$ dependent Bernoulli trials without replacement           | $f(x) = \frac{MC_x \times (N-M) C_{(n-x)} }{NC_n}$ <br /> $\text{max}\Big(0, n- (N-m) \Big) \le x \le \text{min}(n, M)$ | $n \left(\dfrac M N \right)$ | $\left( \dfrac{N-n}{N-1} \right) \cdot n \cdot \dfrac M N \left( 1 - \dfrac M N \right)$ |
+| Negative Binomial | $p=$ Probability of success after $(r-1)$ failures           | $f_x(x) = \begin{cases} \begin{pmatrix} x-1\\ r-1 \end{pmatrix} p^r q^{x-r}, & x= r, r+1, \dots  \\ 0, & \text{o.w.} \end{cases}$ |       $\dfrac{rq}{p}$        |                      $\dfrac{rq}{p^2}$                       |
+| Geometric         | Negative binomial dist with $r=1$<br />No of failures before first success |                                                              |                              |                                                              |
+| Poisson           | discrete phenomenon in continuous interval<br />Poisson dist can simulate binomial dist with small value of $p$ |             $\dfrac {e^{-\mu} \times \mu^x}{x!}$             |          $\alpha t$          |                          $\alpha t$                          |
 
 ### Rate Parameter $(\alpha)$
 

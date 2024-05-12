@@ -1,5 +1,7 @@
 # Behavioral Economics
 
+## Overview
+
 1. Introduction
 2. Preferences
    1. Time preferences
@@ -27,4 +29,9 @@
 
 ## References
 
-- https://www.youtube.com/playlist?list=PLUl4u3cNGP63Z979ri_UXXk_1zrvrF77Q
+- [ ] [MIT 14.13 Psychology and Economics](https://www.youtube.com/playlist?list=PLUl4u3cNGP63Z979ri_UXXk_1zrvrF77Q)
+- [ ] [Neuroeconomics | Saul Leung UvA](https://www.youtube.com/playlist?list=PL_Ig1a5kxu55aeImVJL5WlTmdR7vIdXKj)
+
+## Next video
+
+https://www.youtube.com/watch?v=8WhNaFsFC8I&list=PLUl4u3cNGP63Z979ri_UXXk_1zrvrF77Q

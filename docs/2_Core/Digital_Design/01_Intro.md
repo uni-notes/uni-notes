@@ -174,4 +174,7 @@ module circuit_1(I0, I1, S, y);
     end
     ```
     
-    
+
+## Breadboard
+
+![Breadboard](./assets/Breadboard.svg)

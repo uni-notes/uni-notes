@@ -70,17 +70,22 @@ e -->|Best Result Obtained| st[/Stop/]
   - Rotation
   - Adding noise
   - Warping
+- Mixup
+  - Convert labels
+  - $x' = \lambda x_i + (1-\lambda) x_j; y' = \lambda x_i + (1-\lambda) x_j$
+  - ![image-20240413171509384](./assets/image-20240413171509384.png)
+
 - Fit it to a distribution
 
 ## Dimensionality Reduction Algorithms
 
-| Technique               | Working                           | Reduce dimensionality while              | Learning Type | No Hyperparameter Tuning Required | Fast | Deterministic | Linearity  |
-| ----------------------- | --------------------------------- | ---------------------------------------- | ------------- | --------------------------------- | ---- | ------------- | ---------- |
-| LDA                     | Maximize distance between classes | Separating pre-known classes in the data | Supervised    | ✅                                 | ✅    | ✅             | Linear     |
-| PCA/<br />SVD using PCA | Maximize variance in data         | Generating clusters previously not known | Unsupervised  | ✅                                 | ✅    | ✅             | Linear     |
-| MDS                     |                                   | ^^                                       | Unsupervised  | ❌                                 | ❌    | ❌             | Non-Linear |
-| t-SNE                   |                                   | ^^                                       | Unsupervised  | ❌                                 | ❌    | ❌             | Non-Linear |
-| UMAP                    |                                   | ^^                                       | Unsupervised  | ❌                                 | ✅    | ❌             | Non-Linear |
+| Technique               | Working                           | Reduce dimensionality while              | Learning Type | Comment                                                 | No Hyperparameter Tuning Required | Fast | Deterministic | Linearity  |
+| ----------------------- | --------------------------------- | ---------------------------------------- | ------------- | ------------------------------------------------------- | --------------------------------- | ---- | ------------- | ---------- |
+| LDA                     | Maximize distance between classes | Separating pre-known classes in the data | Supervised    |                                                         | ✅                                 | ✅    | ✅             | Linear     |
+| PCA/<br />SVD using PCA | Maximize variance in data         | Generating clusters previously not known | Unsupervised  | $2k$ contaminated points can destroy top $k$ components | ✅                                 | ✅    | ✅             | Linear     |
+| MDS                     |                                   | ^^                                       | Unsupervised  |                                                         | ❌                                 | ❌    | ❌             | Non-Linear |
+| t-SNE                   |                                   | ^^                                       | Unsupervised  |                                                         | ❌                                 | ❌    | ❌             | Non-Linear |
+| UMAP                    |                                   | ^^                                       | Unsupervised  |                                                         | ❌                                 | ✅    | ❌             | Non-Linear |
 
 ## Feature Selection
 
@@ -199,7 +204,7 @@ Then convert using binarization. But, why?
 | No unusual relationship                |            ❌             |        ✅         |
 | Fewer variables?                       |            ✅             |        ❌         |
 
-## Attribute Tranformation
+## Attribute Transform
 
 |                        |                             $x'$                             |        Property         |
 | ---------------------- | :----------------------------------------------------------: | :---------------------: |
@@ -207,11 +212,18 @@ Then convert using binarization. But, why?
 | Min-Max Normalization  | $\frac{x - x_{\text{min}}}{x_{\text{max}} - x_{\text{min}}}$ |     $0 \le x \le 1$     |
 | Standard Normalization |                    $\frac{x-\mu}{\sigma}$                    | $\mu' = 0, \sigma' = 1$ |
 
-## Target Transformation
+### Naming
+
+|                   |                  |
+| ----------------- | ---------------- |
+| Feature Transform | Input variables  |
+| Target Transform  | Output variables |
+
+### Target Transform
 
 Not recommended, as you will face all the disadvantages of [MSLE](../Machine_Learning/04_Performance_Measure_P.md#Regression) 
 
-### Box-Cox/Bickel-Doksum Transformations
+#### Box-Cox/Bickel-Doksum Transform
 
 $$
 y'_t = \begin{cases}
@@ -227,7 +239,7 @@ $$
 |       0        | Natural log                            |
 |       -1       | Inverse plus 1                         |
 
-### Back Transformation
+### Back Transform
 
 $$
 \hat y_t = \text{Med (y|t)} = \begin{cases}
@@ -270,3 +282,99 @@ $$
 
 
 ![image-20231203141417397](./assets/image-20231203141417397.png)
+
+## LDA
+
+Linear Discriminant Analysis, using Fisher Linear Discriminant
+
+Maximizes separation using multiple classes, by seeking a projection that best **discriminates** the data
+
+It is also used a pre-processing step for ML application
+
+#### Goals
+
+- Find directions along which the classes are best-separated (ie, increase discriminatory information)
+  - Maximize inter-class distance
+  - Minimize intra-class distance
+- It takes into consideration the scatter(variance) **within-classes** and **between-classes**
+
+#### Steps
+
+1. Find within-class Scatter/Covariance matrix
+
+   $S_w = S_1 + S_2$
+
+   - $S_1 \to$ Covariance matrix for class 1
+   - $S_2 \to$ Covariance matrix for class 2
+
+$$
+S_1 = \begin{bmatrix}
+\text{cov}(x_1, x_1) & \text{cov}(x_1, x_2) \\
+   \text{cov}(x_2, x_1) & \text{cov}(x_2, x_2)
+\end{bmatrix}
+$$
+
+$$
+\begin{aligned}
+\text{Cov}(x_j, x_k) &= \frac{1}{n_j - 1} \sum_{i=1, x \in C_j}^{n_1} (x_i - \mu_1)(x_i - \mu_1) \\
+\text{Cov}(x_1, x_1) &= \frac{1}{n_1 - 1} \sum_{i=1, x \in C_1}^{n_1} (x_i - \mu_1)^2
+\end{aligned}
+$$
+
+2. Find between-class scatter matrix
+
+$$
+S_B =
+(\mu_1 - \mu_2)
+(\mu_1 - \mu_2)^T
+$$
+
+3. Find [Eigen Value](#Eigen-Value)
+
+4. Find [Eigen Vector](#Eigen-Vector)
+
+5. Generate LDA Projection [Normalized Eigen Vector](#Normalized-Eigen-Vector)
+
+6. Generate LDA score (projected value) in reduced dimensions
+
+$$
+\text{LDA Score} = x_1 v_1 + x_2 v_2
+$$
+
+### Eigen Value
+
+$$
+| A - \lambda I | = 0 \\
+|S_w^{-1} S_B - \lambda I| = 0
+$$
+
+- $\lambda =$ Eigen Value(s)
+  - If we get multiple eigen values, we only take the highest eigen value
+  - It helps preserve more information. How??
+- $I =$ Identity Matrix
+
+We are taking $A=S_w^{-1} S_B$ because taking $S_w^{-1}$ helps us maximize $\frac{1}{x}, x \in S_w$
+
+- Hence $x$ is minimized
+- Thereby, within-class distance is minimized
+
+### Eigen Vector
+
+$$
+(S_w^{-1} S_B - \lambda I) 
+\textcolor{hotpink}{V}
+= 0
+$$
+
+- $\lambda =$ Highest eigen value
+- $V =$ Eigen Vector
+
+### Normalized Eigen Vector
+
+$$
+V_\text{norm} =
+\begin{bmatrix}
+\frac{v_1}{\sqrt{v_1^2 + v_2^2}} \\
+\frac{v_2}{\sqrt{v_1^2 + v_2^2}}
+\end{bmatrix}
+$$

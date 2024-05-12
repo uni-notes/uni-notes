@@ -64,6 +64,17 @@ Profits can be maximized by cost minimization through optimization of input mix.
 
 Labor is preferred due to lower price; capital is preferred due to higher productivity
 
+$$
+\text{Profit}_\max = \max_p \Bigg\{ p q_m - c \Big( q_m(p) \Big) \Bigg\} \\
+\implies c'(q_m) = p_m + \dfrac{q_m}{q'_m(p_m)}
+$$
+where 
+
+- $p$ is unit sale price
+- $q(p)$ is units sold
+- $c \Big( q(p) \Big)$ is cost
+- $c' \Big( q(p) \Big)$ is the marginal cost
+
 ## Problem with Capitalism
 
 humans are getting replaced by machines. This is causing consumers to run out of money. Wealth is heavily-skewed, to the point that consumers cannot buy anymore. Most recessions have been due to low demand, not low supply
@@ -84,7 +95,7 @@ input mix is said to be
   if it is impossible to maintain the same output, without keeping the same inputs
   if any input decreases, the output also decreases
     - in india, we have a technically inefficient agricultural sector. This is proved by the fact that:
-    even though many people moved to tertiary sector, it did not affect agricultural output
+      even though many people moved to tertiary sector, it did not affect agricultural output
 
 ## Costs
 

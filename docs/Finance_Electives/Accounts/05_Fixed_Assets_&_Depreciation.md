@@ -96,3 +96,10 @@ $$
 \text{Returns from consumption} \propto
 \frac{1}{\text{Consumption Amount}}
 $$
+
+## Sinking Fund
+
+“A sinking fund is an account a corporation uses to set aside money earmarked to pay off the debt from a bond or other debt issue”
+
+- Long-term provision
+- Short-term provision

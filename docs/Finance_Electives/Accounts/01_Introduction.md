@@ -98,6 +98,59 @@ eg: Prepaid Telephone Service, Accrued income (deferred income; revenue that's b
 | Non-current/Fixed |                                                    | Long     | ❌              |               Land, Buildings                |
 | Fictitious        | deferred revenue expenditures with no resale value |          |                | Set up costs<br />Company Logo<br />Goodwill |
 
+## Types of Assets
+
+|                            | Real Asset                                                   | Financial Asset/Securities                                   |
+| -------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+|                            | Something that can generate revenue                          | Contracts that provide a right to gain income from real assets<br />One party’s financial assets are another party’s liability |
+| Can be tangible/intangible | ✅                                                            | ✅                                                            |
+| Liquidity                  | Low                                                          | High                                                         |
+| Examples                   | Tangible (Machinery, property)<br />Intangible (Technical know-ho) | Shares<br />Bonds<br /><br />These can be tangible (hard-copy)/intangible |
+| Purpose                    | Functioning of business<br />Represents society’s wealth     | Separation of ownership & management<br />Efficient allocation of capital<br />Efficient allocation of risk |
+
+Securities are actually financial assets with collateral, but they are used interchangeably
+
+### Financial Assets
+
+|                                                            |           | Income   |
+| ---------------------------------------------------------- | --------- | -------- |
+| Ownership/Equity Claims<br />(Equity Shares/Common Stocks) |           | Variable |
+| Creditor Claims<br />(Bonds)                               |           | Fixed    |
+| Hybrid Claims<br />(Preferential Stocks)                   |           | Hybrid   |
+| Derivatives<br />(Claims on other financial assets)        | Synthetic |          |
+| Indirect Financial Assets<br />(Mutual funds, Hedge funds) | Synthetic |          |
+
+### Bonds
+
+Interest rate of bond depends on
+
+- Credit rating of corporation
+- Duration
+  - Short-term bond has low interest rate
+  - Long-term bond has high interest rate
+
+### Derivatives
+
+Synthetically-created instrument that obtains value from underlying set of assets
+
+- Spot price
+- Expiry
+- Exercise price
+
+#### Types
+
+| Type                                  |                        |
+| ------------------------------------- | ---------------------- |
+| Forward                               |                        |
+| Future contract                       |                        |
+| Call Option                           | Right to buy an asset  |
+| Put Option                            | Right to sell an asset |
+| Swap<br />- CDS (Credit Default Swap) |                        |
+
+### Indirect Investing
+
+- Hedge funds invest at a higher risk-return compared to Mutual funds
+
 ## Liability
 
 Anything that has requirement for you to pay for it

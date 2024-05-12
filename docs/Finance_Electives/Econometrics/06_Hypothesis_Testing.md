@@ -1,3 +1,5 @@
+# Hypothesis Testing
+
 Hypothesis testing involves testing the following question
 
 > Is the estimated value sufficiently close to stated value?

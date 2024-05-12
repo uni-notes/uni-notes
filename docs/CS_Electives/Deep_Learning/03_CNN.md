@@ -184,3 +184,7 @@ $$
 | ResNet            |                                              |
 | CUImage           |                                              |
 | SENet & SE-ResNet |                                              |
+
+## Depth-wise Convolution
+
+![image-20240416004743866](./assets/image-20240416004743866.png)
