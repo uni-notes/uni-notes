@@ -2,6 +2,15 @@
 
 Course will focus on investing, not on trading/speculationCourse is not going to give tips to earn super-normal profits
 
+## Tools
+
+- [https://finance.yahoo.com/screener/](https://finance.yahoo.com/screener/)
+- https://wallmine.com/screener
+- http://alphavantage.co/
+- https://iexcloud.io/
+- https://finnhub.io/
+- https://alpaca.markets/
+
 ## Recommended Readings
 
 - [ ] Investment Fables

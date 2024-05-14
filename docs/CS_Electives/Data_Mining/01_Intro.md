@@ -1,11 +1,71 @@
+# Introduction
+
 Many times very high-quality professionals are not able to produce well, as they are usually incentivized to use complex methodologies. But data science is best when you actually solve the problem at hand, and help make decisions.
+
+## Data Professionals
+
+![img](./assets/data_professionals.jpg)
+
+## Decision-Making
+
+Iterative process with feedback loops; not linear
+
+### Knowledge Hierarchy
+
+Chain of increasing value
+
+```mermaid
+flowchart LR
+Data -->
+Information -->
+Knowledge -->
+Decision
+```
+
+|             |                                                              |
+| ----------- | ------------------------------------------------------------ |
+| Data        | Collection of numbers with known context and uncertainty estimates |
+| Information | Right data at right time in right context, organized for access |
+| Knowledge   | Interpretation of information based on model (understanding) of cause and effect |
+| Decision    | Acting on knowledge for benefit                              |
+
+### Process
+
+- Preparation: Plan to turn data into information, with a specific model and decision in mind
+- Testing/Experimenting/Measurement
+- Analysis, with uncertainty: Use model to turn information to knowledge
+- Decision
+  - Using uncertainty
+  - Risk/benefit analysis
+- Post-mortem: Learnings to improve things
+
+## Notes
+
+- All models are wrong, some are useful
+- Applying data mining algorithms on data that you don’t understand may result in false conclusions
+- Always keep track of performed tests & analyses, to factor in data snooping
+
+## Questions
+
+| Question |                                                              |
+| -------- | ------------------------------------------------------------ |
+| Why      | Precise (not vague)<br /><br />Bad:<br />- Planning<br />- Decision-making<br /><br />Good<br />- What plans/decisions<br />- How are these plans/decisions made<br />- How would data mining help |
+| What     | Goal, Level of aggregation, Forecast horizon<br /><br />Bad<br />- Sales<br />- Market share<br /><br />Good<br />- Demand |
+| When     | Frequency<br />Time of day/year                              |
+| Who      | Human judgement<br />Computer-generated with human judgement<br />Computer-generated<br /><br />Considerations<br />- Number & frequency of predictions<br />- Availability of historical data<br />- Relative accuracy of options |
+| Where    | Predictions originate in different departments               |
+| How      |                                                              |
+
+![image-20240529002700056](./assets/image-20240529002700056.png)
+
+![image-20240529014446419](./assets/image-20240529014446419.png)
 
 ## Fields Overview
 
 |           | Analytics   | AI/ML                                          | Statistical Inference               |
 | --------- | ----------- | ---------------------------------------------- | ----------------------------------- |
 | Goal      | Descriptive | Predictive                                     | Prescriptive                        |
-| Decisions | None        | Large scale repetitive<br />(with uncertainty) | Small scale<br />(with uncertainty) |
+| Decisions |             | Large scale repetitive<br />(with uncertainty) | Small scale<br />(with uncertainty) |
 
 ![Data Roles](../assets/Data_Roles.svg)
 
@@ -132,3 +192,37 @@ Don’t mistake outlier for noise.
 
 - Network Intrusion Detection
 - Identify anomalous behavior from surveillance camera videos
+
+## Misconceptions
+
+- All forecasts will be inaccurate, so no point
+- If we had the latest forecasting technology, all problems would be solved
+
+## IDK
+
+Ensure you are looking at the correct scale
+
+Model $y_t/y_0$ instead of $y_t$ to standardize all time series
+
+## Common problems with analysis
+
+- Poorly-defined goals
+- Data doesn’t meet needs of analysis objectives
+- Analysis makes unwarranted assumptions
+- Model is wong
+- Data doesn’t support conclusion
+
+Learning Process
+
+1. Model building: Functional form
+2. Identify parameter weights
+3. Distribution of random errors
+
+Each of them can have different levels of generalizability
+
+For eg: Ohm’s Law
+
+1. $V=IR$ remains constant for all materials (under certain conditions)
+2. $R$ Changes for different materials
+3. Errors are dependent on measurement and experimental methods, and are independent of materials
+

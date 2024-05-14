@@ -2,6 +2,8 @@
 
 Statistical concepts such as Parameter estimation, Bias, Variance help in the aspects of generalization, over-fitting and under-fitting
 
+IID: Independent & identically distributed
+
 ## Estimation Types
 
 | Estimation Type | Regression Output                         | Classification Output                                        |
@@ -59,40 +61,20 @@ Helps understand performance when we observe only the training set, through assu
 
    - We need more variation in values of $X$
    - Indian stock market is very volatile. But not in UAE; so it's hard to use it an independent var. Similarly, we cant use exchange rate in UAE as a regressor, as it is fixed to US dollars
+- No variable interaction
+   - Variable interaction: effect of $x_i$ on $y$ depends on $x_j$
+
+   - Solution: add interaction terms
+
 - No collinearity
+- No [multicollinearity](#multicollinearity)
+- Homoskedasticity
 
-   - Collinearity: 2 variables are correlated
+   - Constant variance
 
-   - There can be multiple solutions for $\beta$
-     - Both variables will be insignificant if both are included in the regression model
-   
-     - Dropping one will likely make the other significant
-   
-     - Hence we can’t remove two (or more) supposedly insignificant predictors simultaneously: significance depends on what other predictors are included
-   
-   - Can be inspected through correlation matrix of 2 variables
-   
-   - Solution: drop one of the problematic variables
-   
-   - Variance Inflation Factor
-     - VIF $\ge 1 \implies$ Problematic amount of collinearity
+   - $\sigma^2 (y_i|x_i) = \text{constant}$ should be same $\forall i$
 
-$$
-\text{VIF}(\hat \beta_j) = \dfrac{1}{1-R^2_{x_j \vert x_{j'}}} \\
-j' = i, \forall i \ne j
-$$
-
-- No multi-collinearity
-
-   - Multi-Collinearity: Collinearity between 3 or more variables, even if no pair of variables are correlated
-
-- No [autocorrelation](#Autocorrelation) between $u_i$ and $u_j$: $\text{cov}[ (u_i, u_j) | (x_i, x_j) ]=0$
-
-   - Residual series should be independent of other residual series
-
-   - For any 2 values $x_i$ and $x_j$, the correlation between $u_i$ and $u_j$ is $0$
-
-      - If we plot the scatter plot between $u_i$ and $u_j$, there should be no sign of correlation
+   - [Causes of Heteroskedascity](#Causes-of-Heteroskedascity)
 
 - There is no measurement error $\delta_i$ in $X$ or $Y$
 
@@ -106,14 +88,30 @@ $$
 
 - If there exists autocorrelation in time series, then we have to incorporate the lagged value of the dependent var as an explanatory var of itself
 
+- For the Variance of distribution of potential outcomes, the range of distribution stays same over time
+
+   - $\sigma^2 (x) = \sigma^2(x-\bar x)$:   else, the variable is **volatile**; hard to predict; **we cannot use OLS** and hence have to use weighted regression
+   - if variance decreases, value of $y$ is more reliable as training data
+
+   - if variance increases, value of $y$ is less reliable as training data
+
+     - We use volatility modelling (calculating variance) to predict the pattern in variance
+
+
 But rarely used in practice with deep learning, as
 
 - bounds are loose
 - difficult to determine capacity of deep learning algorithms
 
-## Attenuation Bias
+## Input Error
+
+For higher order model, errors in $x$ will look like heteroskedasticity
+
+### Attenuation Bias
 
 High measurement error $\delta$ and random noise $u$ causes our estimated coefficients to be lower than the true coefficient
+
+Hence, for straight line model, error in $x$  will bias the OLS estimate of slope towards zero
 $$
 \begin{aligned}
 \lim_{n \to \infty} \hat \beta &= \beta \times \text{SNR} \\
@@ -121,7 +119,7 @@ $$
 \end{aligned}
 $$
 
-## Errors-in-Measurement Correction
+### Errors-in-Measurement Correction
 
 This can be applied to
 
@@ -130,7 +128,7 @@ This can be applied to
 
 Let’s say true values of a regressor variable $X_1$ was measured as $X_1^*$ with measurement error $\delta_1$, where $\delta_1 \ne N(0, 1)$. Here, we cannot ignore the error.
 
-### Step 1: Measurement Error
+#### Step 1: Measurement Error
 
 Use an appropriate distribution to model the measurement error. Not necessary that the error is random.
 
@@ -140,7 +138,7 @@ $$
 \delta_1 = N(\mu_{X_1}, \sigma^2_{X_1}, \text{Skew}_{X_1}, \text{Kurt}_{X_1})
 $$
 
-### Step 2: Measurement
+#### Step 2: Measurement
 
 Model the relationship between the error and the measured value.
 
@@ -153,7 +151,7 @@ X_1^* &= X_1 + \delta_1 \\
 \end{aligned}
 $$
 
-### Step 3: Model
+#### Step 3: Model
 
 Since $X_1^*$ is what we have, but we want the mapping with $X_1$,
 
@@ -183,6 +181,7 @@ Independence of Irrelevant Alternatives
 The IIA property is the result of assuming that errors are independent of each other in a classification task
 
 The probability of $y = j$ relative to $y = k$ depends is not affected by the existence and the properties of other classes
+
 $$
 \begin{aligned}
 p(y=j \vert x, z)
@@ -208,7 +207,104 @@ IIA property should be a desirable property for well-specified models
 - the error for one alternative provides no information about the error for another alternative. This should be the property of a well-specified model such that the unobserved portion of utility is essentially “white noise.
 - However, when a model omits important unobserved variables that explain individual choice patterns, however, the errors can become correlated over alternatives
 
-## IID
+## Heteroskedascity
 
-Independent & identically distributed
+### Causes of Heteroskedascity
+
+- Misspecified model
+- If output is $\bar y$, but the sample size is different for each calculated mean
+  - $s_{\bar y} = \sigma_y/ \sqrt{n}$
+  - Eg: Average income vs years of college
+- Variance/standard error is relative to the $y$
+  - Eg: Precision of tool is relative to the observed value, such as weighing scale
+- Variance has been experimentally determined for each $y$ value
+- Some distributions naturally have variance that is a function of the
+  - Mean: Poisson
+  - Mean & Variance: Gamma
+
+### Statistical Test
+
+- Sort residuals $u_i$ wrt corresponding $\vert y_i \vert$
+- Divide residuals (esr for fits) into $g$ subgroups
+- Test to see if sub-groups share same variance
+  - $H_0:$ all groups have same variance
+
+|                                      |                                                              | Distribution of statistic             | Null Hypothesis                    | Formula                                                      |
+| ------------------------------------ | ------------------------------------------------------------ | ------------------------------------- | ---------------------------------- | ------------------------------------------------------------ |
+| Barlett                              | Assumes normal distribution (sensitive to deviations from normality) | $\chi^2$ distributed with $(g-1)$ DOF | $k$ sub-groups have equal variance | $\dfrac{(n-g) \ln s^2_\text{pool} - \sum\limits_{j=1}^g (n_j - 1) \ln s^2_j }{ 1 + \Big[ 1/[3(g-1)] \Big] \left[ \Big( \sum\limits_{j=1}^g \dfrac{1}{(n_j - 1)} \Big) - \dfrac{1}{n-g} \right] }$ |
+| Brown-Forsythe/<br />Modified Levene | compares deviations from median; it is robust to deviations from normality, but has lower power<br /><br />$n_j > 25 \quad \forall j \in k$ | $t$ distribution with DOF = $n-g$     | Constant variance                  | $\dfrac{\vert \bar d_1 - \bar d_2 \vert}{s_\text{pool} \sqrt{\dfrac{1}{n_1} + \dfrac{1}{n_2}}}$<br />$d_{ij}=\vert x_{ij} - \text{med}_j \vert$ |
+| White Test                           | Perform linear regression of $u_i^2$ with $x$ and test $nR^2$ as $X^2_{k-1}$ |                                       |                                    |                                                              |
+| Breusch-Pagan                        | Variation of white test where $x$ is replaced with any variable of interest |                                       |                                    |                                                              |
+| Park                                 | Perform linear regression of $\ln \vert u_i^2 \vert$ vs $\ln \vert x \vert$ and test significance of slope different from 0 |                                       |                                    |                                                              |
+
+where
+
+- $n=$ total number of data points
+- $k=$ number of subgroups
+- $n_j=$ sample size of $j$th sub-group
+- $s^2_j =$ variance of $j$th sub-group
+- $s^2_\text{pool} = \dfrac{1}{n-k} \sum\limits_{j=1}^k (n_j - 1) s^2_j$
+- $\text{med}_j =$ median of $j$th sub-group
+
+### Correcting
+
+| Dependence of variance on $y_i$ | Solution                                       |
+| ------------------------------- | ---------------------------------------------- |
+| Known                           | Weighted regression                            |
+|                                 | Data transformation                            |
+| Unknown                         | GMM, generalized methods of moments estimation |
+
+## Collinearity
+
+2 variables are correlated
+
+- Can be inspected through correlation matrix of 2 variables
+
+### Implication
+
+- Adding/removing predictor variables changes the estimated effect of the vars (for eg: regression coefficients)
+- Standard errors of coefficients become larger
+- Individual regression coefficients may not be significant, even if the overall model is significant
+- Some regression coefficients may be significantly different than expected (even opposing sign)
+- There can be multiple solutions for $\beta$
+- Both variables will be insignificant if both are included in the regression model
+
+- Dropping one will likely make the other significant
+
+- Hence we can’t remove two (or more) supposedly insignificant predictors simultaneously: significance depends on what other predictors are included
+
+### Causes
+
+| Cause                           |                                                              |                                                              |
+| ------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| No data: Inappropriate sampling | We only sample regions where predictors are correlated       | ![image-20240618225457951](./assets/image-20240618225457951.png) |
+| Inappropriate model             | If range of predictors is small: $r(x, x^2) \ne 0$           |                                                              |
+| True Population                 | Collinearity indeed exists in the true population (for eg, height and weight) |                                                              |
+
+### Multicollinearity
+
+Collinearity between 3 or more variables, even if no pair of variables are correlated
+
+eg: $r(x_1, x_2) = r(x_1, x_3) = 0$, but $r(x_1, x_2+x_3) \ne 0$
+
+### Detection
+
+|                                    |                                                              |
+| ---------------------------------- | ------------------------------------------------------------ |
+| Correlation matrix                 |                                                              |
+| VIF<br />Variance Inflation Factor | How much is the variance of the $k$th model coefficient **inflated** compared to case of no inflation<br /><br />$\text{VIF}(\hat \beta_j) = \dfrac{1}{1 - R^2_{x_j \vert x_{j'} }} = (\tilde X^T \tilde X)_{jj}^{-1}  \\ j' \in [0, k] - \{ j \}$<br/><br/>$R^2_{x_j \vert x_{j'}}$ is $R^2$ when $x_j$ is regressed against all other predictor vars<br /><br />$1/\text{VIF}_{x_j \vert x_{j'}}=$ “tolerance”<br /><br />$\text{VIF}_{x_j \vert x_{j'}} \ge 4 \implies$ Investigate<br />$\text{VIF}_{x_j \vert x_{j'}} \ge 10 \implies$ Act<br />$E[\text{VIF}_{x_j \vert x_{j'}}] \quad \forall j > 1 \implies$ Problematic |
+| Eigensystem Analysis               | Find eigenvalues of correlation matrix, ie $\tilde X^T \tilde X$<br /><br />If all eigenvalues are about the same magnitude, no multicollinearity<br />Else calculate condition number<br /><br />$\kappa = \lambda_\max/\lambda_\min$<br />If $\kappa > 100 \implies$ problem |
+
+### Solution
+
+- Derive theoretical constraints relating input vars: helps simplify model; can be linear/non-linear
+- If we only care about prediction, restrict scope of model for interpolation only, ie new inputs should coincide with range of predictor vars that exhibit the same pattern of multicollinearity
+- Drop problematic variables, ie ones with highest VIF
+- Collect more data that breaks pattern of multicollinearity
+- Measure coefficients in separate experiment (then fix those coefficients)
+- Regularization: Even for perfect multicollinearity, the ridge regression solution will always exist
+- PCA
+  - Separates the high SE of coefficients from multicollinearity into components with low SE and high SE; you’d only include the low SE components
+  - Helps identify unknown linear constraints
+  - Limitation: cannot help with non-linear relationship
 

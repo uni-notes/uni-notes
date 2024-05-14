@@ -17,3 +17,12 @@
 - Random sampling: Won’t work with caching
 
 ![image-20240317160544276](./assets/image-20240317160544276.png)
+
+## Clustering
+
+### Elbow Method
+
+Plot cost function as function of no of clusters
+
+![image-20240711155441455](./assets/image-20240711155441455.png)
+

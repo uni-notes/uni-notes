@@ -4,7 +4,23 @@ Piecewise constant model that adaptively learns to divide predictor space into d
 
 Can be applied for regression and classification
 
-## Tems
+## Advantages
+
+- Interpretable, for small trees
+- Little data processing required
+
+## Disadvantages
+
+- Small trees are not powerful
+- Large trees tend to overfit, and are hard to regularize
+- Do not work well for modelling linear relationships
+- Cannot extrapolate well
+- Decision regions tend to be highly-fragmented
+- Resulting function (also Decision boundary for classification) is very non-smooth and blocky
+
+![image-20240709120643099](./assets/image-20240709120643099.png)
+
+## Terms
 
 | Term                | Meaning                                                      |
 | ------------------- | ------------------------------------------------------------ |

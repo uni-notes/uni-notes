@@ -10,10 +10,24 @@ if torch.cuda.is_available():
 else:
 	device = torch.device("cpu")
 
+print(f"Using {device}")
+```
+
+```python
+# tensors
+input = input.to(device).half()
+output = output.to(device).half()
+
+# model
 model = NeuralNet().to(device)
 model.half()
-input = input.half().to(device)
-output = output.half().to(device)
+
+# Optimizer
+optimizer = SGD(model.parameters(), lr=learning_rate)
+for state in optimizer.state.values():
+  for k, v in state.items():
+    if isinstance(v, torch.Tensor):
+      state[k] = v.to(device).half()
 ```
 
 ### IDK

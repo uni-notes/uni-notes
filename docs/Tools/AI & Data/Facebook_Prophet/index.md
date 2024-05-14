@@ -1,4 +1,12 @@
+
+
 # Facebook Prophet
+
+## Limitations
+
+- Basically glorified curve-fitting to time variable
+- Tends to overfit
+- Does not extrapolate well
 
 ## Improve `.fit()`
 

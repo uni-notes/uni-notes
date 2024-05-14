@@ -1,3 +1,5 @@
+# 10 Principles of Economics
+
 ## There's always Trade-offs
 
 Refers to the fact that when picking an option, you're always giving up on something else; ie there is always an opportunity cost
@@ -169,33 +171,22 @@ where it is impossible to exclude those who did not pay for it
 
 eg: national defence, community parks
 
-### Efficiency vs Equity
+### Idk
 
 There is always a conflict b/w efficiency vs equity.
 
-#### Efficiency
-
-optimization to maximize output with minimum input
-
-#### Equity
-
-Morals
-
-upholding social norms, benefitting society/the world
+| Term          | Meaning                                                      |                        |
+| ------------- | ------------------------------------------------------------ | ---------------------- |
+| Efficiency    | optimization to maximize output with minimum input           | doing things right     |
+| Effectiveness | Impact of output                                             | doing the right things |
+| Equity        | Upholding morals, social norms, benefitting society/the world |                        |
 
 ### Rivalry of consumption
 
-#### Rivalled consumption
-
-When the consumption of a product makes it unavailable for consumption for others
-
-#### Non-rivalled consumption
-
-When the availability of a product is independent of its consumption
-
-That's one of the best things of digital revolution: it has enabled non-rivalry
-
-Eg: national defence, fresh air, lighthouses, netflix subscription
+| Consumption  |                                                              |
+| ------------ | ------------------------------------------------------------ |
+| Rivalled     | Availability of a product is dependent of its consumption    |
+| Non-rivalled | Availability of a product is independent of its consumption<br/><br/>That's one of the best things of digital revolution: it has enabled non-rivalry<br/><br/>Eg: national defence, fresh air, lighthouses, netflix subscription |
 
 ### Goods
 
@@ -240,28 +231,19 @@ i don’t exactly agree with this cuz women have a history of earning less for t
 
 ### Income
 
-#### Nominal income
-
-monetary income
-
-#### Real income
-
-$\frac{\text{nominal income}}{\text{average of prices of all goods and services bought}}$
-
-it reflects the quantity of goods and services you can buy
+|                               |                                                              |
+| ----------------------------- | ------------------------------------------------------------ |
+| Nominal income                | monetary income                                              |
+| Real income                   | $\dfrac{\text{Nominal income}}{\text{Avg cost of purchases}}$<br />Reflects purchasing power: the quantity of goods and services you can buy |
+| IDK<br />isn’t this the best? | $\text{Value of savings wrt exchange rate}$<br />$\text{Savings} = \text{Nominal income}-\text{Avg cost of purchases}$ |
 
 ### GDP & GNP
 
-#### Gross Domestic Product
-
-total value of final goods and services produced within the borders of a country (regardless of nationality)
-
-From the consumer's perspective, it is the same as national income
-ie, sum of incomes of all individuals is mathematically = GDP
-
-#### Gross National Product
-
-total value of final goods and services produced only by the nationals/citizens of a country (regardless of location)
+|                                                  | GDP                                                          | GNP                                                         |
+| ------------------------------------------------ | ------------------------------------------------------------ | ----------------------------------------------------------- |
+| Full Form                                        | Gross Domestic Product                                       | Gross National Product                                      |
+| Total value of final goods and services produced | within the borders of a country (regardless of nationality)  | by nationals/citizens of a country (regardless of location) |
+|                                                  | From the consumer's perspective, it is the same as national income<br/>ie, sum of incomes of all individuals is mathematically = GDP |                                                             |
 
 #### Nominal GDP & GNP
 

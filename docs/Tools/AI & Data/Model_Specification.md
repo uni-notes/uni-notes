@@ -4,139 +4,188 @@
 
 ```python
 class Math:
-  def __str__(self):
-	  return self.latex()
-  def __repr__(self):
-  	return str(self)
-  def equation(self):
-	  return ""
-  def latex(self):
-  	return ""
+    def __str__(self):
+        return self.latex()
+    def __repr__(self):
+        return str(self)
+    def equation(self):
+        return ""
+    def latex(self):
+        return ""
 ```
 ## Cost Functions
 ```python
-class Huber(Math):
-  def cost(self, pred, true, sample_weight, delta=None):
-    error = pred - true
-    error_abs = np.abs(error)
+class LogCosh(Math):
+    def cost(self, pred, true, sample_weight, delta=None):
+        error = pred - true
 
-    if delta is None:
-      ## delta = 0.1
-      delta = 1.345 * np.std(error)
-
-    ## huber loss
-    loss = np.where(
-      error_abs > delta,
-      (error**2 / 2),
-      (
-        delta * error_abs -
-        delta**2 / 2
-      )
-    )
-
-    cost = np.mean(
-      sample_weight * loss
-    )
-    return cost
-
-  def latex(self):
-    return r"""
-    $$
-    \Large
-    \text{mean}
-    \begin{cases}
-    \dfrac{u_i^2}{2}, & \vert u_i \vert > \delta \\
-    \delta \vert u_i \vert - \dfrac{\delta^2}{2}, & \text{otherwise}
-    \end{cases} \\
-    \delta_\text{recommended} = 1.345 \sigma_u
-    $$
-    """
+        loss = np.log(np.cosh(error))
+        
+        cost = np.mean(
+            sample_weight * loss
+        )
+        return cost
+    
+    def latex(self):
+        return r"""
+        $$
+        \Large
+        \text{Mean Log Cosh}: \text{mean} \Big\{ \log \left \vert \ \cosh (u_i) \ \right \vert \Big \} \\
+        \text{where } u_i = \text{ Prediction - True}
+        $$
+        """
 ```
 ## Models
+
+```python
+from utils.math import *
+
+from inspect import getfullargspec, getsource
+from string import Template
+```
+
 ```python
 class Model(Math):
-  def __init__(self):
-    args = getfullargspec(self.equation).args
-    self.args = tuple([arg for arg in args if arg not in ["self", "x"]])
+    def __init__(self):
+        name = (
+            self.__class__.__name__
+            .replace("_", " ")
+            .replace("Model", "")
+            .strip()
+        )
+        self.__class__.__name__ = name
+        self.__name__ = name
+        
+        args = getfullargspec(self.equation).args
+        self.args = tuple([arg for arg in args if arg not in ["self", "x"]])
+        self.k = len(self.args)
+        
+        self.defaults = list(getfullargspec(self.equation).defaults)
+        
+        self.param_initial_guess = [
+            x[0]
+            for x
+            in self.defaults
+        ]
+        
+        self.param_initial_guess = (
+            [0 for arg in self.args]
+            if (self.param_initial_guess is None) or (self.k != len(self.param_initial_guess))
+            else self.param_initial_guess
+        )
+        
+        self.param_bounds = [
+            x[1]
+            for x
+            in self.defaults
+        ]
+        
+        self.param_bounds = (
+            [(None, None) for arg in self.args]
+            if (self.param_bounds is None) or (self.k != len(self.param_bounds))
+            else self.param_bounds
+        )
+        
+        if "constraints" not in dir(self):
+            self.constraints = []
+        
+        self.fitted_coeff = None
 
-    self.defaults = getfullargspec(self.equation).defaults
-
-    self.initial_guess = (
-      [0 for arg in self.args]
-      if (self.defaults is None) or (len(self.args) != len(self.defaults))
-      else self.defaults
-    )
-
-    self.fitted_coeff = None
-
-  def set_fitted_coeff(self, *fitted_coeff):
-    self.fitted_coeff = fitted_coeff
-  
-  def __str__(self):
-    fillers = (
-      self.args
-      if self.fitted_coeff is None
-      else self.fitted_coeff
-    )
-
-    return self.latex() % fillers
+    def set_fitted_coeff(self, *fitted_coeff):
+        self.fitted_coeff = fitted_coeff
+    def __str__(self):
+        fillers = (
+            self.args
+            if self.fitted_coeff is None
+            else self.fitted_coeff
+        )
+        
+        fillers = dict()
+        
+        if self.fitted_coeff is None:
+            a, b = self.args, self.args
+        else:
+            a, b = self.args, self.fitted_coeff
+    
+        for key, value in zip(a, b):
+            fillers[key] = value
+            
+        equation = Template(self.latex()).substitute(fillers).replace("$", "$$")
+        # st.code(string)
+              
+        return rf"""
+        $$
+        \text{{ {self.__class__.__name__} }}
+        $$
+        
+        {equation}
+        """
 ```
-```python
-class Arrhenius(Model):
-  def equation(self, x, k):  ## hypothesis
-    i = x["Initial_Reading"]
-    t = x["Time_Point"]
-    return i * np.exp(-1 * k * t)
-  def latex(self):
-    return r"""
-    $$
-    \begin{aligned}
-    {\huge c_t} & {\huge = c_0 \cdot e^{
-      \overbrace{\textcolor{hotpink}{-%s}}^{\small \mathclap{\small \mathclap{\text{Rate Constant}}}} t
-    } } & \text{(Arrhenius Eqn)} \\
-    \text{where }
-    c_t &= \text{Concentration} \\
-    c_0 &= \text{Initial Concentration} \\
-    t &= \text{Time (weeks)}
-    \end{aligned}
-    $$
-    """
-```
-```python
-class Exponential_Combined_Model(Model):
-  def equation(self, x, a=0, b=0, n=1):
-    i = x["Initial_Reading"]
-    t = x["Time_Point"]
-    T = x["Temperature"]
+### Example
 
-    return i * np.exp(
-      a * np.exp(b * T) * (t**n)
-    )
+```python
+class Zero_Order(Model):
+    def equation(
+        self, x,
+        k = [0, (0, None)]
+    ):  # hypothesis
+        ca = x["Previous_Reading"]
+        # ta = x["Time_Point_Diff"]
+        # tb = x["Time_Point"]
+        t = x["Time_Point_Diff"]
+        return np.clip(
+            (
+                ca - k * t
+            ),
+            0,
+            np.inf
+        )
+    def latex(self):
+        return r"""
+        $$
+        \begin{aligned}
+        {\huge c_t} &
+        {\huge = c_0 - \textcolor{hotpink}{$k} t} \\
+        \\
+        c_t &= \text{Concentration} \\
+        c_0 &= \text{Initial Concentration} \\
+        t &= \text{Time (weeks)}
+        \end{aligned}
+        $$
+        """
 
-  def latex(self):
-    return r"""
-    $$
-    \begin{aligned}
-    {\huge c_t} & {
-    \huge = c_0 \cdot e^{
-      \overbrace{\textcolor{hotpink}{%s} (e^{
-      \footnotesize \textcolor{hotpink}{%s} T} )}^{\mathclap{\small \text{Rate Constant}}} \ t^ {
-        \overset{
-        \mathclap{\quad \quad \quad \quad
-        {\tiny \nearrow} \ \substack{ {\small \text{Order of Rxn}} \\ \\ }
-        }
-        }{
-        \textcolor{hotpink}{%s}
-        }
-      }
-    }
-    } \\
-    \text{where }
-    c_t &= \text{Concentration} \\
-    c_0 &= \text{Initial Concentration} \\
-    T &= \text{Temperature} \\
-    t &= \text{Time (weeks)}
-    \end{aligned}
-    $$
-    """
+class First_Order(Model):
+    def equation(
+        self, x,
+        k = [0, (0, None)]
+    ):  # hypothesis
+        ca = x["Previous_Reading"]
+        # ta = x["Time_Point_Diff"]
+        # tb = x["Time_Point"]
+        t = x["Time_Point_Diff"]
+        return (
+            ca
+            *
+            np.exp(
+                -k
+                *
+                t # (tb-ta)
+            )
+        )
+    def latex(self):
+        return r"""
+        $$
+        \begin{aligned}
+        {\huge c_t} &
+        {\huge = c_0 \cdot
+        \exp \{
+            \overbrace{- \textcolor{hotpink}{$k}}^{\small \mathclap{\small \mathclap{\text{Rate const}}}} t
+        \} } \\
+        \\
+        c_t &= \text{Concentration} \\
+        c_0 &= \text{Initial Concentration} \\
+        t &= \text{Time (weeks)}
+        \end{aligned}
+        $$
+        """
 ```

@@ -73,3 +73,9 @@ ROC-AUC signifies how accurately the classifier can distinguish between the sets
 ## Model Serving
 
 ![image-20240118224856092](./assets/image-20240118224856092.png)
+
+## Handling Data Drift
+
+- Use a batch-streaming hybrid
+  - Works when we have the label associated with every data point, such as in Recommender Systems
+- Give higher sample weight to recent datapoints

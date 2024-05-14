@@ -48,14 +48,17 @@ Zero-sum game
 |Regulator | Central Bank | Capital Market Regulator/SEC<br />(except for Govt Bonds)<br /><br />Central bank (for cross-border transactions) |
 |Cost of capital         | Cheaper<br />(lower risk)                               | Expensive|
 |Participants | Central bank<br />Large corporations                     | Commercial Banks<br />Retail investors/borrowers |
-|Purpose | Working capital | Long-term investments |
+|Purpose | Borrowers: Working capital<br />Lenders: Investing temporary overage | Borrowers: Expenditure<br />Lenders: Long-term investments |
 |Comment | Interest-bearing instruments are usually zero-coupon bonds |  |
+|Comment | Money doesn’t actually flow, it’s just recorded on financial statements | |
 
 Why are bonds preferred over equity
 
 - Retaining ownership & control
 - Equity may cause noise in valuation, due to large number of players
 - Tax deductibility
+
+Call money
 
 ### Money Market Instruments
 

@@ -1,3 +1,5 @@
+# Introduction
+
 ## Data Communication
 
 Exchange of data b/w devices via transmission medium, where data is information presented in form agreed by involved parties. Termed from ‘telecommunication’ - communication at a distance

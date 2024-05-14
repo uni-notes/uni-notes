@@ -1,5 +1,20 @@
 # Anomaly Detection
 
+## Note
+
+When using AD as a secondary model to filter data for the primary model, you need not use the same input features for both
+
+Let
+
+- $\mathcal{X}, \mathcal{y} \in \mathcal{D}$ be all the data you have
+- $\mathcal{X}_a$ be used for primary model
+- $X_b$ be used for anomaly detection
+
+Then, all these perfectly reasonable
+- $\vert \mathcal{X}_a \vert  = \vert \mathcal{X}_b \vert$
+- $\vert \mathcal{X}_a \vert > \vert \mathcal{X}_b \vert$
+- $\vert \mathcal{X}_a \vert < \vert \mathcal{X}_b \vert$
+
 ## Density Estimation
 
 ![image-20231103185150834](./assets/image-20231103185150834.png)
@@ -27,7 +42,7 @@
 
 Include features that have very small/large values for anomalies
 
-If anomalies don’t have such values, then try to find a combination of features such as $x_1 \cdot x_2$ to achieve it
+If anomalies don’t have such values, then try to find a combination of features such as $x_1 \cdot x_2$ to achieve it
 
 ## Dealing with Non-Gaussian Features
 
@@ -35,4 +50,4 @@ Transformation of training, validation, and test set.
 
 ![image-20231104164633793](./assets/image-20231104164633793.png)
 
-If you have x values as 0, then $\log(x)$ as $\log(0)$ is undefined. So you use $\log(x+c)$, where $c>0$
+If you have x values as 0, then $\log(x)$ as $\log(0)$ is undefined. So you use $\log(x+c)$, where $c>0$

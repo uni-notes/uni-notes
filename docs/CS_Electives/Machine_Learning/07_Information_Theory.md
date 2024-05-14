@@ -1,5 +1,9 @@
 # Information Theory
 
+## Entropy
+
+> Entropy, as it relates to machine learning, is **a measure of the randomness in the information being processed**. The higher the entropy, the harder it is to draw any conclusions from that information. 
+
 Information entropy is developed to describe the avg amount of info needed to specify the state of a RV
 
 Quantifies how much **new** information about a RV $x$ is obtained when we observe a specific value $x_i$
@@ -67,13 +71,16 @@ D_\text{KL}(p \vert \vert q)
 &= \text{Cross Entropy} - \text{Entropy} \\
 &= H(p, q) - H(p) \\
 & = \sum_x \log \left \vert \dfrac{p(x)}{q(x)} \right \vert \cdot p(x) & \text{(Discrete)} \\
-& = \int_x \log \left \vert \dfrac{p(x)}{q(x)} \right \vert \cdot p(x) & \text{(Continuous)} \\
-D_\text{KL}(p \vert \vert q) &\ge 0
+& = \int_x \log \left \vert \dfrac{p(x)}{q(x)} \right \vert \cdot p(x) & \text{(Continuous)}
 \end{aligned}
 $$
-Note: KL divergence is not symmetric $\implies D_\text{KL}(p \vert \vert q) \ne D_\text{KL}(q \vert \vert p)$. Hence it is not a proper distance measure
+Propreties
 
-Given a **fixed** distribution $p$, optimizing for a $q$ for the following 3 goals are equivalent
+- $D_\text{KL}(p \vert \vert q) = 0 \iff p=q$
+- KL divergence is asymmetric $\implies D_\text{KL}(p \vert \vert q) \ne D_\text{KL}(q \vert \vert p)$. Hence it is not a proper distance measure
+- Non-Negative: $D_\text{KL}(p \vert \vert q) \ge 0$
+
+Given a **fixed** distribution $p$, optimizing for a $q$ for the following 3 goals are equivalent
 
 - minimize $D_\text{KL}(p \vert \vert q)$
 - minimize $H(p, q)$

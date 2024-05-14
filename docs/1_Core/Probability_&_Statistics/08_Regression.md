@@ -1,4 +1,4 @@
-## Regression
+# Regression
 
 used to predict for the dependent variable on the basis of past information available on dependent and independent variables.
 
@@ -30,17 +30,61 @@ $$
 
 ## Correlation
 
-gives the degree of linear relationship between the 2 variables $x$ and $y$
-$-1 \le r \le +1$
+gives the degree of **linear** relationship between 2 vars
+
+Properties
+
+- Dimensionless
+- Symmetric: $r(x, y)=r(y, x)$
+- $r \in [-1, +1]$
 
 $$
-r = \frac{
+r(x, y) = \dfrac{\text{cov}(x, y)}{\sigma_x \sigma_y}
+$$
+
+### Pearson’s Correlation
+
+Also called product moment correlation
+$$
+\begin{aligned}
+r
+&= \dfrac{1}{n-1} \sum_{i=1}^n z_{xi} z_{yi} \\
+&= \dfrac{
+	\sum (x_i - \bar x)(y_i - \bar y)
+}{
+\sqrt{\sum (x_i - \bar x)^2 \sum (y_i - \bar y)^2}
+}
+\\
+&= \dfrac{
 	n \sum(xy) - \sum x \sum y
 }{
-	\sqrt{ n \sum (x^2) - \big(\sum x \big)^2 }
-	\sqrt{ n \sum (y^2) - \big(\sum y \big)^2 }
+	n
+	\sqrt{\sum (x^2) - \big(\sum x \big)^2 }
+	\sqrt{ \sum (y^2) - \big(\sum y \big)^2 }
+}
+\end{aligned}
+$$
+
+Measures whether 2 vars are above/below mean at the same time
+
+### Modified Correlation
+
+Setting the center as origin $\implies \bar x=\bar y=0$
+
+- Contributes +vely if both vars are positive
+- Contributes +vely if both vars are negative
+- Contributes -vely if both vars are opposing sign
+
+$$
+r_0
+= \dfrac{
+	\sum x_i y_i
+}{
+\sqrt{\sum (x_i)^2 \sum (y_i)^2}
 }
 $$
+
+Useful for comparing time-series, returns, etc
 
 |     |   Type    |    Correlation    |
 | :-------: | :-------: | :---------------: |

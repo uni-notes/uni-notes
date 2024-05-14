@@ -27,3 +27,23 @@ Its position does not affect other elements
 x \underbrace{y}_{\text{Long Text}} z \\
 x \underbrace{y}_{\mathclap{\text{Long Text}}} z
 ```
+
+## Align
+
+- `{aligned}`
+- `{alignedat}{1}`
+
+```latex
+\begin{alignedat}{1}
+E[&\text{PVGO}]
+&&= P_{\text{Growth}}
+&- P_{\text{No Growth}}
+\\
+&\text{PVGO}_\text{Actual}
+&&= P_\text{Actual}
+&- P_{\text{No Growth}}
+\end{alignedat}
+```
+
+
+

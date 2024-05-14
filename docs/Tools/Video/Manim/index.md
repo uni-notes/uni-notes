@@ -1,3 +1,5 @@
+# Manim
+
 ## Workflow
 
 1. render manim animation
@@ -245,3 +247,7 @@ command = "manim -hq -p file.py Scene_Name"
 import subprocess
 subprocess.Popen(command)
 ```
+
+## References
+
+- [Mathematical Animations WITH EASE | Benjamin Hackl](https://www.youtube.com/playlist?list=PLsMrDyoG1sZm6-jIUQCgN3BVyEVOZz3LQ)

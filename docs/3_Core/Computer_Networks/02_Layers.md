@@ -11,7 +11,7 @@ There are 2 network standards
 
 ## ISO OSI Standard
 
-Open System Interconnection
+International Organization of Standardization-Open System Interconnection
 
 The upper 3 layers of the OSI model (application, presentation and session—Layers 7, 6 and 5) are orientated more toward services to the applications
 

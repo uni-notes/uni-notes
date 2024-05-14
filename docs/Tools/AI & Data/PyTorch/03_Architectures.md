@@ -4,22 +4,18 @@
 
 ```python
 class NeuralNet(nn.Module):
-	def __init__(self, init_dl, hidden_layers):
+	def __init__(self, init_data, hidden_layers):
 		super().__init__()
 
-		for x, y in init_dl:
+		for x, y in DataLoader(init_data):
+			self.input_size = x.shape[-1]
+			self.output_size = y.shape[-1]
 			break
-
-		self.input_size = x.shape[-1]
-		self.output_size = y.shape[-1]
-
-		# input_layer = 
-		
 		
 		output_layer = nn.LazyLinear(self.output_size) # output layer
 		
 		layers = (
-      		# [input_layer] +
+	  		# [input_layer] +
 			hidden_layers +
 			[output_layer]
 		)

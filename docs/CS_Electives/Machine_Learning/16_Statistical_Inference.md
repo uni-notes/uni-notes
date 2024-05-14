@@ -49,7 +49,7 @@ $$
 
 $$
 \begin{aligned}
-\text{What actually} & \text { needed} \\
+\text{What actually} & \text { needed}\\
 P(H_0
 = \text{True} \vert D)
 &= \dfrac{P(D \vert H_0) \cdot P(H_0)}{P(D)} \\
@@ -62,7 +62,7 @@ where $D$ is the data
 
 When $P(H_1) < 0.1$, we may need the p−value to be much smaller than the conventional threshold of $\alpha = 0.05$ in order to “confidently” reject $H_0$
 
-- For example, to concluding that a coin is biased would require a significant number of one-sided results 
+- For example, concluding that a coin is biased would require a significant number of one-sided results 
 
 Hypothesis tests are only valid for large sample size, as they are based on the asymptotic properties of test statistics.  Hence, Bootstrapping can be used to obtain more accurate p−value estimates
 
