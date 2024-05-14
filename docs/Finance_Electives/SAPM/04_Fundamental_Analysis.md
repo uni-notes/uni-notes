@@ -78,17 +78,12 @@ An industry is set of companies that serves a particular niche of consumers
 
 Identify which phase of the life cycle the industry belongs to
 
-| Phase      |                                                 |
-| ---------- | ----------------------------------------------- |
-| Pioneering | Trial phase<br />Potential to be commercialized |
-| Expansion  | Starting to be commercialized                   |
-| Stabilized | Fully commercialized                            |
-| Decay      | Being abandoned                                 |
-
-- Pioneering
-- Expansion
-- Stabilization/Maturation
-- Decay
+| Phase                   |                                                 |
+| ----------------------- | ----------------------------------------------- |
+| Pioneering              | Trial phase<br />Potential to be commercialized |
+| Expansion               | Starting to be commercialized                   |
+| Stabilized/<br />Mature | Fully commercialized                            |
+| Decay                   | Being abandoned                                 |
 
 ### Structural Analysis
 
@@ -114,3 +109,69 @@ Michael Porter’s Model: Rivalry among existing competitors depends on
   - Does this company fall under strict Govt regulations
   - Disputes & contingent liabilities
   - Availability of inputs
+  - Industrial relations
+
+## Equity Valuation
+
+[07_Equity_Valuation.md](../Corporate_Finance/07_Equity_Valuation.md) 
+
+Check if stock is under-valued/over-valued
+
+## Ratios
+
+### P/E Ratio 
+
+Price that market is willing to pay for one unit of earning
+
+Lower is better; extreme P/E ratios are not desirable
+
+Provides a benchmark in determining the value of a share and hence the value of shareholders
+
+There is a strong connection between P/E, dividend discount models, and fundamentals
+$$
+\begin{aligned}
+\text{P/E}
+&= \dfrac{P_\text{Dividend Growth Model}}{\text{Earnings}} \\
+&= \dfrac{1}{\text{Earnings}} \times \dfrac{D_{t+1}}{k-g} \\
+&= \dfrac{1}{\text{Earnings}} \times \dfrac{D_t (1+g)}{k-g} \\
+&= \dfrac{D_t}{\text{Earnings}} \times \dfrac{1+g}{k-g} \\
+&= \text{Dividend Payout Ratio} \times \dfrac{1+g}{k-g} 
+\end{aligned}
+$$
+![image-20240528200951653](./assets/image-20240528200951653.png)
+
+How to determine if P/E ratio is good
+
+- Company growth rate
+  - How fast has company been growing in the past?
+  - Are these rates expected to increase in the future
+- Industry
+
+### PEG Ratio
+
+Good way to decide if P/E ratio of company is high/low
+$$
+\text{PEG} = \dfrac{\text{P/E}}{\text{Earnings Growth}}
+$$
+
+| PEG Ratio        | Interpretation | Action            |
+| ---------------- | -------------- | ----------------- |
+| $(0, 0.50)$      | Undervalued    | Buy               |
+| $[0.50, 0.65)$   |                | Consider buying   |
+| $[0.65, 1.00)$   |                | Watch/Hold        |
+| $[1.00, 1.30)$   |                | Consider selling  |
+| $[1.30, 1.70)$   |                | Consider shorting |
+| $[1.70, \infty)$ | Overvalued     | Short             |
+
+## Preferred Values
+
+|                 | Preferred |
+| --------------- | --------- |
+| PV of dividends | High      |
+| P/E             | Low       |
+| P/Dividends     | Low       |
+| P/Book Value    | Low       |
+| P/Sales         | Low       |
+| PEG             | Low       |
+| Capitalization  | Low       |
+

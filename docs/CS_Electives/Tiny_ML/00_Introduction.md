@@ -10,7 +10,7 @@ No more “free lunch” from material science improvements
 
 |                 | Comment                                                      |                                                              |
 | --------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Moore’s law     | Slowing down<br />In 1970-2010, we were able to put more transistors on a chip and get exponentially more performance; but now this is ending | ![image-20240413214824706](./assets/image-20240413214824706.png) |
+| Moore’s law     | Slowing down<br />In 1970-2010, we were able to put more transistors on a chip and get exponentially more performance; but now this is ending | ![Untitled_2](./assets/Untitled_2.png)                       |
 | Dennard scaling | essential stopped                                            | ![image-20240413214842554](./assets/image-20240413214842554.png) |
 
 Costly for companies to use cloud-based systems; would prefer edge-computing to reduce their energy consumption

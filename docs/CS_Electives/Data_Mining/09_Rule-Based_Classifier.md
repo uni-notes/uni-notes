@@ -1,4 +1,4 @@
-## Rule-Based Classifier
+# Rule-Based Classifier
 
 Knowledge about dataset is stored in the form of if-then rules, in a rule database $R$
 

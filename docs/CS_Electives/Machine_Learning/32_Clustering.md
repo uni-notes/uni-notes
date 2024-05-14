@@ -1,3 +1,5 @@
+# Clustering
+
 ## Proximity Measures
 
 - Similarity
@@ -35,14 +37,13 @@ We should be careful; first study the problem and apply only if it is logical to
 | :---------------------------------------------------------: | :----------------------: |
 | $s' = \frac{s - s_\text{min}}{s_\text{max} - s_\text{min}}$ |   $d' = \frac{d}{1+d}$   |
 
-## Something
+## IDK
 
-| Attribute Type                                               | Dissimilarity                                                | Similarity                                                   |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Nominal                                                      | $\begin{cases} 0, & p=q \\                                   |                                                              |
-| 1, &p \ne q \end{cases}$          | $\begin{cases} 1, & p=q \\ 0, &p \ne q \end{cases}$ |                                                              |                                                              |
-| Ordinal                                                      | $\dfrac{\vert  p-q \vert}{n-1}$<br />Values mapped to integers: $[0, n-1]$, where $n$ is the no of values | $1- \dfrac{\vert  p-q  \vert}{n-1}$                                  |
-| Interval/Ratio                                               | $\vert p-q \vert$                                                    | $-d$ <br /> $\dfrac{1}{1+d}$ <br /> $1 - \dfrac{d-d_\text{min}}{d_\text{max}-d_\text{min}}$ |
+| Attribute Type | Dissimilarity                                                | Similarity                                                   |
+| -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Nominal        | $\begin{cases} 0, & p=q \\1, &p \ne q \end{cases}$           | $\begin{cases} 1, & p=q \\ 0, &p \ne q \end{cases}$          |
+| Ordinal        | $\dfrac{\vert  p-q \vert}{n-1}$<br />Values mapped to integers: $[0, n-1]$, where $n$ is the no of values | $1- \dfrac{\vert  p-q  \vert}{n-1}$                          |
+| Interval/Ratio | $\vert p-q \vert$                                            | $-d$ <br /> $\dfrac{1}{1+d}$ <br /> $1 - \dfrac{d-d_\text{min}}{d_\text{max}-d_\text{min}}$ |
 
 ## Dissimilarity Matrix
 
@@ -181,51 +182,6 @@ pq
 }{
 ||p||^2 + ||q||^2 - pq
 }
-$$
-
-## Correlation
-
-Used for continuous attributes
-
-### Pearson’s Correlation Coefficient ($r$)
-
-Range = $[-1, +1]$
-
-| $r$  |                      |
-| ---- | -------------------- |
-| $-1$ | High -ve correlation |
-| $0$  | No correlation       |
-| $+1$ | High +ve correlation |
-
-$$
-\begin{aligned}
-r(x, y)
-&= \frac{
-\text{Covariance}(x, y)
-}{
-\text{STD(x) } \text{ STD(y)}
-} \\
-& = \frac{
-\sigma_{xy}
-}{
-\sigma_x \sigma_y
-}
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-\sigma_{xy}
-&= \frac{1}{n} \sum_{i=1}^n (x_i - \bar x)(y_i - \bar y) \\
-\sigma_{x}
-&= \sqrt{
-\frac{1}{n-1} \sum_{i=1}^n (x_i - \bar x)^2
-} \\
-\sigma_{y}
-&= \sqrt{
-\frac{1}{n-1} \sum_{i=1}^n (y_i - \bar y)^2
-}
-\end{aligned}
 $$
 
 ## Clustering

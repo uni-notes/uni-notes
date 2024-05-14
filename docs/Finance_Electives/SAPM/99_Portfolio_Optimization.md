@@ -28,27 +28,6 @@ If the portfolio has one unit of each security whose prices are tracked in the C
 
 If set of positions $X=\{ x_1, x_2, \dots \}$, then the variance of the portfolio is given by $\hat \sigma_p^2 = X' \text{Cov}_{XX}  X$
 
-## Markowitz Mean-Variance Analysis
-
-$$
-\text{Obj}_\max = E[R_p] - \lambda \text{Var}[R_p]
-$$
-
-### Limitations
-
-- Variance is not ideal risk measurement since it penalizes both unwanted high losses and desired low losses
-  - Solution: VaR, CVaR, etc
-- Sensitive to estimated parameters $\mu$ and $\sum$
-  - Solution: Robust optimization
-
-## Von Neumann-Morgenstern Utility Theory
-
-- Rational portfolio choice must apply preferences based on expected utility
-- Optimal pro folio solves the expected utility max problem
-
-- Wealth after one period: $W = W_0 (1+R_p)$
-- Expected utility: $E[u(W)] = E[ \ u \Big( W_0(1+R_p) \Big) \ ]$
-
 ## Index Tracking/Benchmark Replication
 
 Portfolio compression strategy aimed at mimicking the risk/return profile of a financial instrument, by focusing on a reduced basket of representative assets
@@ -117,6 +96,8 @@ When designing your portfolio, you need to incorporate external factors and othe
 
 ## Kelly Criterion
 
+
+
 ## Simulation for Optimization
 
 - Simulate the validation prices series
@@ -142,38 +123,4 @@ When designing your portfolio, you need to incorporate external factors and othe
     - $\implies$ Solving MLE
 
 ![image-20240312132844107](./assets/image-20240312132844107.png)
-
-## Sharpe Ratio
-
-$$
-\begin{aligned}
-\text{SR} &= \dfrac{R_p - R_f}{\sigma(R_p)}
-\end{aligned}
-$$
-
-![sharpe_ratio](./assets/sharpe_ratio.svg)
-
-### Limitations
-
-![image-20240312125247782](./assets/image-20240312125247782.png)
-
-Selection bias of strategies results in false-positives regarding the success of a strategy
-
-### Deflated Sharpe Ratio
-
-![image-20240312124816425](./assets/image-20240312124816425.png)
-
-Probability that SR is statistically-significant, after controlling for inflationary effect of
-
-- No of independent trials with the strategy $k$
-  - List all the returns of all strategies
-  - Find the independent series
-
-- Data Dredging $V \left[ \widehat{\text{SR}}_k \right]$
-- Non-normality of returns: $\hat y_3, \hat y_4$
-- Length of time series $T$
-
-Can help identify if the 
-
-## Calmar Ratio
 

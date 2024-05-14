@@ -78,13 +78,25 @@ $$
 - RMSE = RMSE of validation data
 - If your validation error distribution is not normal, or you have a lot of data, you can use the quantiles of validation error distribution for the confidence intervals
 
-## Intervals using Models’ Prediction
+### Intervals using Models’ Prediction
 
 For each data point, take __ of multiple models
 
 - average
 - 5th quantile
 - 95th quantile
+
+## Predictive Density
+
+Describes the full probabilistic distribution $\forall x$
+
+![image-20240522140247341](./assets/image-20240522140247341.png)
+
+## Trajectories/Scena rios
+
+Equally-likely samples of multivariate predictive densities
+
+![image-20240522140752649](./assets/image-20240522140752649.png)
 
 ## Uncertainty Propagation
 

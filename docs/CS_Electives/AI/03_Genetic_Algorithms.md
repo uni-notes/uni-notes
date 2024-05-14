@@ -23,7 +23,7 @@ Neither complete nor optimal
 1. Initialize random population of solution guesses
 2. Repeat for each generation
    1. Evaluate each chromosome in population using a fitness function
-   2. Apply GA operators  to create a new population
+   2. Apply GA operators to create a new population
 3. Repeat until desired fitness/stopping criterion is met
 
 ## GA Operators

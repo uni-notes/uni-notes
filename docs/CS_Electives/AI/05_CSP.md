@@ -23,8 +23,6 @@ CSPs are represented as constraint graphs, where nodes represent variables and e
 | -------------------------------- | ------------------------------------ |
 | ![CSP problem](./assets/CSP.png) | ![CSP graph](./assets/CSP_Graph.png) |
 
-## 
-
 |             |                          |
 | ----------- | ------------------------ |
 | Variables   | WA, NT, Q, NSW, SA, V, T |

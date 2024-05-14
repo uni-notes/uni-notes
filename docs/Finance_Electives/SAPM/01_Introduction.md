@@ -39,7 +39,11 @@ Compensation for
 
 1. Set investment objectives ([Factors](#Factors))
 2. Major asset allocation
-3. Portfolio generation: Asset/Security selection
+3. Portfolio generation
+
+   1. Asset/Security selection
+   2. Proportion
+
 4. Execution
 5. Performance Review
 6. Portfolio Revision: Inclusion/exclusion of assets in an

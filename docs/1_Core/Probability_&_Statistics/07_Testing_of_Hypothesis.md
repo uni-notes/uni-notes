@@ -96,3 +96,4 @@ $$
 
 Greater the power of test, the better
 means that we can more accurately detect when $H_0$ is false
+

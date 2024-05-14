@@ -1,4 +1,4 @@
-## Planning
+# Planning
 
 Planning is a particular type of problem solving in which actions and goals are declaratively specified in logic and generally concerns performing actions in the real world.
 

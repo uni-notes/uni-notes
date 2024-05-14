@@ -1,6 +1,11 @@
 # Regression
 
 ```python
+import scipy.optimize as so
+import sympy as sp
+```
+
+```python
 def linearModelLossRSS(b, X, y):
     # Make predictions
     predY = linearModelPredict(b, X)
@@ -14,8 +19,6 @@ def linearModelLossRSS(b, X, y):
 ```
 
 ```python
-import scipy.optimize as so
-
 def linearModelFit(X, y, lossfcn):
     nrows, ncols = X.shape
     betas = np.zeros((ncols, 1))
@@ -103,5 +106,27 @@ for var in vars:
  for var_inner in vars:
    display(l.diff(var).diff(var).factor())
 
+```
+
+## IDK
+
+```python
+from scipy.optimize import minimize
+import numpy as np
+
+# x = np.array([139, ...])
+# y = np.array([151, ...])
+
+# Define the Model
+def f(x, a, b): return a * x + b
+
+# The objective Function to minimize (least-squares regression)
+def obj(x, y, a, b): return np.sum((y - f(x, a, b))**2)
+
+# define the bounds -infty < a < infty,  b <= 0
+bounds = [(None, None), (None, 0)]
+
+res = minimize(lambda coeffs: obj(x, y, *coeffs), x0=np.zeros(2), bounds=bounds)
+# res.x contains your coefficients
 ```
 

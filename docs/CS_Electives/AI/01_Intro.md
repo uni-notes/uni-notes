@@ -43,9 +43,8 @@ There are 2 types of artificial intelligence
 Don’t be too optimistic or pessimistic about AI
 
 1. Performance
-2. Explainability
+2. Explainability: AI finds it hard to justify its decisions
    
-   AI finds it hard to justify its decisions
 3. Biases due to biased data
 4. Attacks on AI
 5. Adverse use of AI

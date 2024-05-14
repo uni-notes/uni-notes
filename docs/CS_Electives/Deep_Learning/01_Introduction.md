@@ -1,3 +1,5 @@
+# Deep Learning
+
 Deep Learning is subset of machine learning, which involves a deep neural network. Large availability of data in present-day has led to the rise in demand for deep learning applications.
 
 Refer [Machine Learning](./../Machine_Learning/) concepts, to understand this course well.
@@ -47,6 +49,8 @@ dm --> cnn[Convolutional<br/>Neural<br/>Network] & dsn[Deep<br/>Stacking<br/>Net
 
 ## Challenges
 
+- Difficult for generalization
+- Difficult for efficient optimization
 - Lack of adequate data (addressed through [Transfer Learning](#Transfer Learning), Shallow learning, Incremental learning)
 - Data inconsistencies
 - Low battery life of edge devices (h/w controlling data flow at boundary b/w 2 networks)
@@ -69,20 +73,6 @@ So if the width and height of image are $w, h$
 - Hardware costs
 - Flexibility
 
-## Major Architectures
-
-|                                | Meaning                                               | Efficient<br />at         | Major<br />Application                                       | Computation<br />Complexity |
-| ------------------------------ | ----------------------------------------------------- | ------------------------- | ------------------------------------------------------------ | --------------------------- |
-| CNN<br />(Convolutional)       |                                                       | Detecting spatial pattens | Images, Videos                                               | High                        |
-| RNN<br />(Recurrent)           | Forward-feed, backward-feed, and self-loop is allowed |                           | Time Series                                                  |                             |
-| ResNet<br />(Residual Network) |                                                       |                           | Time Series                                                  |                             |
-| U-Net                          |                                                       |                           | Basis of diffusion models<br />Segmentation<br />Super-Resolution<br />Diffusion Models |                             |
-| PINN<br />(Physics-Informed)   |                                                       |                           |                                                              |                             |
-| Lagrangian                     |                                                       |                           |                                                              |                             |
-| Deep Operator                  |                                                       |                           |                                                              |                             |
-| Fourier Neural Operator        |                                                       |                           |                                                              |                             |
-| Graph Neural Networks          |                                                       |                           |                                                              |                             |
-
 ## Popular Models & Datasets
 
 | Dataset | Sample Size | Content                                                      | Classes |
@@ -97,3 +87,11 @@ So if the width and height of image are $w, h$
 ## IDK
 
 ![image-20240309214029828](./assets/image-20240309214029828.png)
+
+## Why Deep Learning?
+
+Deep networks
+
+1. empirically work better for a given parameter count
+2. provably more efficient at representing functions that neural networks cannot actually learn (such as odd/even parity)
+

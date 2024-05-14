@@ -44,6 +44,8 @@ System operator is informed about trades that occur
 
 ![image-20240408132602922](./assets/image-20240408132602922.png)
 
+![image-20240522095301733](./assets/image-20240522095301733.png)
+
 ## Social Welfare
 
 Area between consumption and generation
@@ -103,7 +105,7 @@ Constraints
 Both approaches guarantee
 
 - individual rationality: consumers will pay at most what they were ready to pay, and producers will receive at least what they were ready to receive
-- Revenue adequacy: Sum of revenues $\ge$ Sum of payments
+- Revenue adequacy: Sum of revenues $\ge$ Sum of payments
 
 ## Geographic Prices
 

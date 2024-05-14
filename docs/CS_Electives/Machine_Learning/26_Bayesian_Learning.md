@@ -1,25 +1,18 @@
-## Bayes’ Theorem
+# Bayesian Learning
 
-$$
-\underbrace{P(\theta | y)}_{\mathclap{\text{Posterior Distribution} \qquad}}
-= \frac{
-	\overbrace{P(y|\theta)}^{\mathclap{\text{Likelihood Function}\qquad \quad }}
-	\times
-	\overbrace{P(\theta)}^{\mathclap{\qquad \quad \text{Prior Distribution}}}
-}{
-	\underbrace{P(y)}_{\mathclap{\qquad \text{Normalizing constant}}}
-}
-$$
+Focus marginalization rather than optimization
 
-| Hypothesis                       |                                                              |                                                             |
-| -------------------------------- | ------------------------------------------------------------ | ----------------------------------------------------------- |
-| Maximum Likelihood               | the hypothesis (or class) that best explains the training data | $h_\text{ML} = \underset{h_i \in H}{\arg \max} \ P(D \vert  h_i)$ |
-| Maximum A Posteriori Probability |                                                              | $h_\text{MAP} = something$                                  |
+Rather than use a single setting of parameters $w$, use all settings weighted by their posterior probabilities in a Bayesian model average
 
-$\arg \max$ is like maximum of a list
+![image-20240528185724094](./assets/image-20240528185724094.png)
 
-### Disadvantage
-We need to calculate a lot of probabilities
+## Advantages
+
+Automatically calibrated complexity even with highly flexible models
+
+## Limitations
+
+Computationally-expensive for high dimensions
 
 ## Bayes Optimal Classifier
 
@@ -52,13 +45,11 @@ Lower accuracy
 One more point in slide
 
 ## Naive Bayes
-Already taught
+
 
 ## Bayesian Belief Network
 
-
-
-## IDK
+## Bayesian NN
 
 ![image-20240106143739721](./assets/image-20240106143739721.png)
 
@@ -68,38 +59,6 @@ Called as ‘Naive’ classifier, due to following assumptions
 
 - Empirically-proven
 - Scales very well
-
-## Bayesian Rule
-
-$$
-P(C | X) = \frac{
-P(X|C) \times P(C)
-}{
-P(X)
-}
-$$
-
-Posterior depends on
-
-- Likelihood
-- Prior
-
-$$
-\text{Posterior} =
-\frac{
-something
-}{
-something
-}
-$$
-
-### MAP Rule
-
-**M**aximum **A** **P**osterior
-
-Helps us decide the class during test phase
-
-Assign $x$ to $c^*$ if $P(C=c^* | X=x) > P(C=c|X=x)$
 
 ## Naive Bayes Classification
 

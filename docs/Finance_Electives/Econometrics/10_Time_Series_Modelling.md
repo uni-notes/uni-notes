@@ -140,6 +140,13 @@ Find relationship b/w moments of random variables
 
 Yule-Walker estimates
 
+## Types of Errors
+
+| Error Type |                                                              |
+| ---------- | ------------------------------------------------------------ |
+| Amplitude  | ![image-20240522143544783](./assets/image-20240522143544783.png) |
+| Phase      | ![image-20240522143556031](./assets/image-20240522143556031.png) |
+
 ## Further Reading
 
 [Forecasting Principles Practice](https://github.com/AhmedThahir/Forecasting-Principles-Practice)

@@ -8,13 +8,13 @@ learning system should process an instance (collection of features), which is us
 |                                  |                                                              | Function Mapping           | Example                                                      |
 | -------------------------------- | ------------------------------------------------------------ | -------------------------- | ------------------------------------------------------------ |
 | Regression                       | Predicting a continuous numerical output                     | $R^n \to R$                | Stock value prediction                                       |
-| Classification                   | Categorizing input into a discrete output<br/>or outputing a probability dist over classes<br />Derived from regression | $R^n \to \{1, \dots, k \}$ | Categorizing images<br />Fraud detection                     |
+| Classification                   | Categorizing input into a discrete output<br/>or outputing a probability dist over classes<br />Derived from regression<br /><br />If binary and very imbalanced dataset, use anomaly detection instead | $R^n \to \{1, \dots, k \}$ | Categorizing images<br />Fraud detection                     |
+| Anomaly Detection                | Identify abnormal events                                     |                            | Fraud detection                                              |
 | Classification w/ missing inputs | Learn distribution over all variables, solve by marginalizing over missing variables | $R^n \to \{1, \dots, k \}$ |                                                              |
 | Clustering                       | Grouping inputs into clusters                                |                            | Grouping similar images                                      |
 | Transcription                    | Convert unstructured data intro discrete textual form        |                            | OCR<br />Speech Recognition                                  |
 | Machine Translation              | Convert it<br/>into a sequence of symbols into another language |                            | Natural Language Translation                                 |
 | Structured Output                | Output data structure has<br/>relationships between elements |                            | Parsing<br />Image segmentation<br />Image captioning        |
-| Anomaly Detection                | Identify abnormal events                                     |                            | Fraud detection                                              |
 | Synthesis & Sampling             | Generate new samples similar to those in<br/>training data   |                            | Texture generation<br />Speech synthesis<br />Supersampling images |
 | Data Imputation                  | Predict values of missing entries                            |                            |                                                              |
 | Denoising                        | Predict clean output from corrupt input                      |                            | Image/Video denoising                                        |
@@ -22,10 +22,12 @@ learning system should process an instance (collection of features), which is us
 
 ## Types of Predictions
 
-|                | Interpolation                                                | Extrapolation                                                |
-| -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| $x_\text{new}$ | $\in [X_{\text{train}_\text{min}}, X_{\text{train}_\text{max}}]$ | $\not \in [X_{\text{train}_\text{min}}, X_{\text{train}_\text{max}}]$ |
-| Uncertainty    | Low                                                          | High                                                         |
+|              | $x_\text{new}$                                                        | Uncertainty|
+|---           | ---                                                                   | ---|
+| Intrapolation? | $\in X_\text{train}$ | Low |
+|Interpolation | $\in [X_{\text{train}_\text{min}}, X_{\text{train}_\text{max}}]$      | Moderate |
+|Extrapolation | $\not \in [X_{\text{train}_\text{min}}, X_{\text{train}_\text{max}}]$ | High|
+|Smoothing |  | |
 
 ## Regression
 
@@ -58,8 +60,6 @@ $$
 5 13.88084				 88         69	0.7840909
 6 17.18088				191        141	0.7382199
 ```
-
-
 
 #### Multiple Aggregate Outcomes
 
@@ -114,6 +114,12 @@ $$
 
 ![Linear Separability of Logic Gates](./assets/linear_separability.svg)
 
+### Linearly Non-Separable
+
+|                           Slightly                           |                          Seriously                           |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
+| ![image-20240628000728483](./assets/image-20240628000728483.png) | ![image-20240628000744288](./assets/image-20240628000744288.png) |
+
 ### Discriminant Function
 
 Functions which takes an input vector $x$ and assigns it to one of the $k$ classes
@@ -124,3 +130,4 @@ Functions which takes an input vector $x$ and assigns it to one of the $k$ class
 | ----------------- | ------------------------------------------------------ | ---------------------------------------- |
 | No of classifiers | $k-1$                                                  | $\frac{k(k-1)}{2}$                       |
 | Limitation        | Some point may have multiple classes/no classes at all | Multiple classes assigned to some points |
+

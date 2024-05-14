@@ -1,12 +1,28 @@
 # Introduction
 
-## 2 Approaches
+## Goals
 
-|                  | Bayesian                                           | Frequentist                            |
-| ---------------- | -------------------------------------------------- | -------------------------------------- |
-| Probability      | Subjective, based degree of certainty in the event | Limiting case of repeated measurements |
-| Model parameters | Unknown constants                                  | Random variables                       |
-| Data             | Random variables                                   | Constants                              |
+1. Summary statistics: Describe/summarize a large set of data with a few ‘statistics’
+2. Statistical inference: Use sample data to infer population characteristics
+
+## Probability vs Statistics
+
+- Probability: Predict behavior of sample given known knowledge of population
+- Statistics: Infer properties of population given knowledge of sample
+
+The two are tied together by sampling distribution
+
+## Approaches
+
+|                  | Frequentist                                                  | Bayesian                                                     |
+| ---------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Probability      | Limiting case of repeated measurements                       | Subjective, based degree of certainty in the event           |
+| Data             | Random variable                                              | Constant                                                     |
+| Model parameters | Unknown constant                                             | Unknown random variable                                      |
+| Basis            | Weak law of large numbers<br />Assumes IID                   |                                                              |
+| Limitations      | Not optimal for rare events                                  |                                                              |
+| Intervals        | Confidence Intervals<br /><br />With large number of repeated samples, $\alpha \%$ of such calculated confidence intervals would include the true value of the parameter | Credible Intervals<br /><br />Estimated parameter has a $95 \%$ probability of falling within the given interval |
+| Statistics       |                                                              | Use prior belief to systematically update knowledge after experiment, through Bayes theorem |
 
 ## Formulae
 

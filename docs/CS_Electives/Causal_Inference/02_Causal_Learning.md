@@ -1,5 +1,10 @@
 # Causal Learning
 
+```mermaid
+flowchart LR
+t[Theory] --> Model --> Evidence --> t
+```
+
 ## Types
 
 | Causal Effect Learning                                       | Causal Mechanism Learning                                   | Causal Inference Learning                                    |
