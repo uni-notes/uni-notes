@@ -29,7 +29,8 @@ Kaggle, UCI ML repository
 ## References
 
 - [x] Data Mining | Dr. Angel Arul Jothi
-- [ ] [From Data to Decisions | Chris Mack](https://www.youtube.com/playlist?list=PLM2eE_hI4gSDnF-mEa9mrIYx7GCLQVN89)
+- [x] [From Data to Decisions: Measurement, Uncertainty, Analysis and Modeling | Chris Mack | University of Texas](https://www.youtube.com/playlist?list=PLM2eE_hI4gSDnF-mEa9mrIYx7GCLQVN89)
+- [ ] [How to write a good scientific paper | Chris Mack | University of Texas](https://lithoguru.com/scientist/litho_papers/How%20to%20write%20a%20good%20scientific%20paper%20-%20Chris%20Mack.pdf)
 - [ ] [Statistics literacy for non-statisticians | Mike x Cohen](https://www.youtube.com/playlist?list=PLn0OLiymPak1NA71bAr1CDN9b-lsofgh-)
 - [ ] [Big Data Analytics | Caltech](https://www.youtube.com/playlist?list=PL8_xPU5epJdcBqm0mgFoY52yywOHmOI7y)
 - [ ] [MIT 14.310x Data Analysis for Social Scientists, Spring 2023](https://www.youtube.com/playlist?list=PLUl4u3cNGP61ATaGTFcSp7bhogloD2wHP)
@@ -39,3 +40,13 @@ Kaggle, UCI ML repository
 - [ ] [Quantitative Social Science Methods | Harvard](https://www.youtube.com/playlist?list=PL0n492lUg2sgSevEQ3bLilGbFph4l92gH)
 - [ ] [Data Mining | University of Utah](https://www.youtube.com/playlist?list=PLbuogVdPnkCrnLNqZPnTuG_s19TNDoad0)
 - [ ] [Visualization for Data Science | University of Utah](https://www.youtube.com/playlist?list=PLbuogVdPnkCqxVyErIw9jYeCnznwMEHa3)
+- [ ] [Winter 2017, STAT 442 / 842 Data Visualization](https://www.youtube.com/playlist?list=PLehuLRPyt1HzQoXEhtNuYTmd0aNQvtyAK)
+- [ ] [Data Visualization | IIT Madras](https://www.youtube.com/playlist?list=PLZ2ps__7DhBZ12NClTmMLsnU0mF9ZUSG_)
+- [ ] [Introduction to Bigdata | IIT Madras](https://www.youtube.com/playlist?list=PLZ2ps__7DhBZYtBcr1ERnw7Y1QGs7bI3y)
+- [ ] Empirical Methods CMU
+  - [ ] [Fall 2022](https://www.youtube.com/playlist?list=PLuPUOEODcOmsS409iKohAewobtQswdI7M)
+  - [ ] [Spring 2021](https://www.youtube.com/playlist?list=PLuPUOEODcOmu4-QpZ511uYfmrnnaQ7B4B)
+- [ ] [Introduction to Data Analysis, Design of Experiment, and Machine Learning | Ashraf Alam | Purdue University](https://www.youtube.com/playlist?list=PLtkeUZItwHK6Db1S3LyQAfWic_0RgXsRd)
+- [ ] [Data Analytics | Gary Holness | Clark University](https://www.youtube.com/playlist?list=PLuflXFChe0K_EF8CRg808pz6oDJD0lAIr)
+- [ ] [Intro to Data Science | Gary Holness | Clark University](https://www.youtube.com/playlist?list=PLuflXFChe0K8Z6F7lTOmwoFbny_L0ZZFw)
+- [ ] [Statistical Research Methods | Mikko Rönkkö](https://www.youtube.com/@mronkko/playlists)

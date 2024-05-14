@@ -2,6 +2,13 @@
 
 Project Management is the planning, organization, securing, motivation and control of resources to successfully complete a project, while minimizing unproductive efforts
 
+## IDK
+
+Every project should have the following
+
+- Clear goal
+- Project valuation: NPV
+
 ## Project Management Models
 
 |                 |                                                              | Advantage                             | Disadvantages                                                |
@@ -163,5 +170,6 @@ By breaking up story into tasks, you can understand all dependencies & potential
 
 ## References
 
-- https://www.youtube.com/playlist?list=PLUl4u3cNGP61V4W6yRm1Am5zI94m33dXk
+- [Creating Video Games | MIT](https://www.youtube.com/playlist?list=PLUl4u3cNGP61V4W6yRm1Am5zI94m33dXk)
 - [IIT Roorkee July 2018 | Project Management](https://www.youtube.com/playlist?list=PLLy_2iUCG87CBuNhvti0h6W54ZmqrSDMJ)
+- [Agile Crash Course: Intro to Agile for Developers](https://youtu.be/xp5kbbEDPOE?feature=shared)

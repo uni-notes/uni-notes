@@ -5,36 +5,89 @@
 The training set has an optimistic
 bias, since it is used to choose a hypothesis that looks good on it. Hence, we require a unseen set as it is not biased
 
-Once a data set has been used in the learning/validation process, it is “contaminated” – it obtains an optimistic bias, and the error calculated on the data set no longer has the tight generalization bound.
+Once a data set has been used in the learning/validation process, it is “**contaminated**” – it obtains an optimistic (deceptive) bias, and the error calculated on the data set no longer has the tight generalization bound.
 
 To simulate deployment, any data used for evaluation should be treated as if it does not exist at the time of modelling
-
-## Train-Test Tradeoff
-
-| Test Set Size | Model Bias | Generalization Bound |
-| ------------- | ---------- | -------------------- |
-| Small         | Low        | High                 |
-| Large         | High       | Low                  |
 
 ## Data Split Sets
 
 
-|                              | Train                                                                           | Development<br />(Inner Validation)                     | Validation<br />(Outer Validation)                       | Test<br />(Holdout)|
-|---                              | :-:                                                                             | :-:                                                       | :-:                                                       | :-:|
-|Recommend split % | 40 | 20 | 20 | 20 |
-| In-Sample<br />(‘Seen’ by model) | ✅ | ❌ | ❌ | ❌ |
-|EDA<br />(‘Seen’ by analyst)                      | ✅                                                                               | ❌                                                         | ❌                                                         | ❌|
-|Feature Engineering<br />(Selection, Transformation, …) | ✅ | ❌ | ❌ | ❌ |
-|Underfit Evaluation | ✅                                                                               | ❌                                                         | ❌                                                         | ❌|
-|Model Tuning | ✅ | ❌ | ❌ | ❌ |
-|Overfit Evaluation  | ❌                                                                               | ✅                                                         | ❌                                                         | ❌|
-|Hyperparameter Tuning | ❌ | ✅ | ❌ | ❌ |
-|Model Comparison/Selection                  | ❌                                                                               | ❌                                                         | ✅                                                         | ❌|
-|Performance Reporting           | ❌                                                                               | ❌                                                         | ❌                                                         | ✅|
-|Error Representation             | $E_\text{in}$                                                                   |                                                           |                                                           | $E_\text{test}$|
-|Error Names                      | Training error/<br />In-Sample Error/<br />Empirical Error/<br />Empirical Risk | Development Error | Validation Error | Out-of-sample error<br />Expected error<br />Prediction error<br />Risk|
-|Comment |  |  |  | Should not be used for any model decision making |
-|Color Scheme Below               | <span style="background:green;color:white">Green</span>                         | <span style="background:yellow;color:black">Yellow</span> | <span style="background:orange;color:white">Orange</span> | <span style="background:Red;color:white">Red</span>|
+|                                                              |                            Train                             |            Development<br />(Inner Validation)            |            Validation<br />(Outer Validation)             |                     Test<br />(Holdout)                      |
+| ------------------------------------------------------------ | :----------------------------------------------------------: | :-------------------------------------------------------: | :-------------------------------------------------------: | :----------------------------------------------------------: |
+| Recommend split %                                            |                              40                              |                            20                             |                            20                             |                              20                              |
+| In-Sample<br />(‘Seen’ by model)                             |                              ✅                               |                             ❌                             |                             ❌                             |                              ❌                               |
+| EDA<br />(‘Seen’ by analyst)                                 |                              ✅                               |                             ❌                             |                             ❌                             |                              ❌                               |
+| Pre-Processing “learning”<br />(Normalization, Standardization, …) |                              ✅                               |                             ❌                             |                             ❌                             |                              ❌                               |
+| Feature Engineering “learning”<br />(Selection, Transformation, …) |                              ✅                               |                             ❌                             |                             ❌                             |                              ❌                               |
+| Underfit Evaluation                                          |                              ✅                               |                             ❌                             |                             ❌                             |                              ❌                               |
+| Model Tuning                                                 |                              ✅                               |                             ❌                             |                             ❌                             |                              ❌                               |
+| Overfit Evaluation                                           |                              ❌                               |                             ✅                             |                             ❌                             |                              ❌                               |
+| Hyperparameter Tuning                                        |                              ❌                               |                             ✅                             |                             ❌                             |                              ❌                               |
+| Model Comparison/Selection                                   |                              ❌                               |                             ❌                             |                             ✅                             |                              ❌                               |
+| Performance Reporting                                        |                              ❌                               |                             ❌                             |                             ❌                             |                              ✅                               |
+| $\hat f$                                                     |                     ${\hat f}_\text{in}$                     |                   ${\hat f}_\text{dev}$                   |                   ${\hat f}_\text{val}$                   |                    ${\hat f}_\text{test}$                    |
+| $\hat f$ trained on                                          |                            Train                             |                           Train                           |                         Train+Dev                         |                        Train+Dev+Val                         |
+| $E$                                                          |                        $E_\text{in}$                         |                      $E_\text{dev}$                       |                      $E_\text{val}$                       |                       $E_\text{test}$                        |
+| Error Names                                                  | Training error/<br />In-Sample Error/<br />Empirical Error/<br />Empirical Risk |                     Development Error                     |                     Validation Error                      | $\hat E_\text{out}$<br />Expected error<br />Prediction error<br />Risk |
+| ${\vert H \vert}_\text{set}$                                 |                           $\infty$                           |                       $d_\text{vc}$                       |               ${\vert H \vert}_\text{val}$                |                             $1$                              |
+| Comment                                                      |                                                              |                                                           |    Used for “training” on “finalist” set of hypotheses    |       Should not be used for any model decision making       |
+| Color Scheme Below                                           |   <span style="background:green;color:white">Green</span>    | <span style="background:yellow;color:black">Yellow</span> | <span style="background:orange;color:white">Orange</span> |     <span style="background:Red;color:white">Red</span>      |
+
+$$
+\begin{aligned}
+\mathbb{E}[E_\text{test}]
+&= E_\text{out} \\
+\text{var}[E_\text{test}]
+&= \dfrac{\sigma^2_{u}}{n_\text{test}} \\
+\end{aligned}
+$$
+
+$$
+E_\text{out} \le E_\text{set} + O \left( \sqrt{\dfrac{\ln {\vert H \vert}_\text{set}}{n_\text{set}}} \right)
+$$
+
+## Test-Size Tradeoff
+
+$$
+E_\text{out}(\hat f)
+\underbrace{\approx}_\mathclap{n^*_\text{test} \downarrow}
+E_\text{out}(\hat f_\text{test})
+\underbrace{\approx}_\mathclap{n^*_\text{test} \uparrow}
+E_\text{test}(\hat f_\text{test})
+$$
+
+|                                                              | Small                                       | Large                                    |
+| ------------------------------------------------------------ | ------------------------------------------- | ---------------------------------------- |
+| Low Model Bias                                               | ✅                                           | ❌                                        |
+| Small Generalization Bound                                   | ❌                                           | ✅                                        |
+| Reliable $\hat E_\text{out}$<br />$E_\text{out}(\hat f_\text{test})-E_\text{test}(\hat f_\text{test})$ | ❌                                           | ✅                                        |
+| Tested model and final model are same<br />Small $E_\text{out}(\hat f) - E_\text{out}(\hat f_\text{test})$ | ✅                                           | ❌                                        |
+| Extreme case<br />Model performance reporting                | “with no certainty, the model is excellent” | “with high certainty, the model is crap” |
+
+![image-20240627171759662](./assets/image-20240627171759662.png)
+
+## Usage
+
+1. Training Data
+   1. Get $E_\text{in}$
+   2. Overfit all models
+   3. Beat baseline model(s)
+2. Dev data
+   1. Get $E_\text{dev}$
+   2. Tune all models to generalize
+   3. Beat baseline model(s)
+3. Validation data
+   1. Compare all models on $E_\text{val}$
+   2. Must beat baseline model(s)
+   3. Select best model $\hat f_\text{val}^*$
+4. Get accuracy estimate of $\hat f_\text{val}^*$ on test data: $E_\text{test}$
+
+Single metric
+
+- Use RMS (Root Mean Squared) of train and dev error estimate to compare models
+  - Harmonic mean not applicable as it gives more weight to smaller value
+
+![image-20240627171239687](./assets/image-20240627171239687.png)
 
 ## Sampling Types
 
@@ -100,9 +153,13 @@ There is a tradeoff
 | Bias       | High      | Low       |
 | Variance   | Low       | High      |
 
-Usually $k$ is taken as 4
+Usually $k$ is taken
 
-When $k=n$, it is called as LOOCV (Leave-One-Out CV)
+- Large dataset: 4
+- Small dataset: 10
+- Tiny dataset: $k=n$ , ie LOOCV (Leave-One-Out CV)
+
+![image-20240627180121829](./assets/image-20240627180121829.png)
 
 ## Data Leakage
 

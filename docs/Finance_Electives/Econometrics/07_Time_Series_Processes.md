@@ -28,22 +28,20 @@ This is due to
 
 ## Components of Time Series Processes
 
-|                  | Characteristic          | Frequency              |                |
+|                  | Characteristic          | Frequency              | Example        |
 | ---------------- | ----------------------- | ---------------------- | -------------- |
-| Auto-Correlation |                         |                        |                |
-| Level            | Average value of series |                        |                |
+| Level            | Average value of series | Constant               |                |
 | Trend            | Gradual                 | Low                    |                |
-| Seasonality      |                         | Daily, Weekly, Monthly |                |
+| Drift            | Exogeneous              | Constant               |                |
 | Cycles           |                         | > 1 year               | Economy cycle  |
-| Holidays         |                         |                        | Eid, Christmas |
-| Drift            | Exogeneous              |                        |                |
+| Seasonality      |                         | Daily, Weekly, Monthly |                |
 | Structural Break |                         |                        |                |
-| Shocks           |                         |                        |                |
+| Holidays         |                         |                        | Eid, Christmas |
+| Auto-Correlation | Relationship with past  |                        |                |
+| Shocks           |                         |                        | Power outage   |
 | Noise            | Random                  | High                   |                |
 
 ### Auto-correlation
-
-High possibility of auto-correlation
 
 Sometimes just auto-correlation is enough to learn the values of a value
 

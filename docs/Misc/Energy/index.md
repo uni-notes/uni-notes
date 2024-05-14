@@ -24,8 +24,8 @@ Main goals
 
 ## References
 
-- [ ] [DTU course | 31761 - Renewables in electricity markets](https://www.youtube.com/@-Renewablesinelectricitymarket/playlists)
+- [x] [DTU course | 31761 - Renewables in electricity markets](https://www.youtube.com/@-Renewablesinelectricitymarket/playlists)
+- [ ] [Energy and the Environment](https://www.youtube.com/@1008arnette/playlists)
 - [ ] [MIT 11.165 Urban Energy Systems and Policy, Fall 2022](https://www.youtube.com/playlist?list=PLUl4u3cNGP63SEOB1q95TFs0hwyf1d7BG)
 - [ ] [The Energy Academy | Modo Energy](https://www.youtube.com/playlist?list=PL_lhNBgOJnjQRoyhBzgpvTTQHi-5XHszM)
 - [ ] [MIT 15.031J Energy Decisions, Markets, Policies, Spring 2012](https://www.youtube.com/playlist?list=PLUl4u3cNGP62JKM25M14gy0qaHWx3QyjP)
-

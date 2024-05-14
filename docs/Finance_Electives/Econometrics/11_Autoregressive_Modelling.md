@@ -1,6 +1,22 @@
-## Auto-Regressive Models
+# Auto-Regressive Models
 
-### AR Model/Process
+## Limitations
+
+- Assumes that factors will affect in the same manner throughout
+- Temporal confounding: Makes learning of exogenous effects harder
+
+```mermaid
+flowchart TB
+xt1["x_t-1"] -->
+yt1["y_t-1"]
+
+yt1 -.-> yt
+
+xt1["x_t-1"] ---->
+yt["y_t"]
+```
+
+## AR Model/Process
 
 ```mermaid
 flowchart LR
@@ -15,7 +31,7 @@ Variable is regressed using its own lagged values; we assume $y_t$ depends only 
 
 ==More lags $\implies$ we lose more date points $\implies$ low degree of freedom==
 
-#### Types
+### Types
 
 AR$(p)$ model means that there are $p$ lags involved in the AR model
 
@@ -30,7 +46,7 @@ $$
 | AR$(1)$ | 1<br />There is only $1$ particular lag (not necessarily $y_{t-1}$) | $y_t = \beta_1 y_{t-\textcolor{hotpink}{1}} + u_t \\ \text{or} \\ y_t = \beta_1 y_{t-\textcolor{hotpink}{2}} + u_t \\ \text{or} \\ \dots \\ y_t = \beta_1 y_{t-\textcolor{hotpink}{100}} + u_t$ |
 | AR$(2)$ | 2                                                            | $y_t = \beta_1 y_{t-\textcolor{hotpink}{1}} + u_t,  y_{t-\textcolor{hotpink}{2}} + u_t \\ \text{or} \\ y_t = \beta_1 y_{t-\textcolor{hotpink}{1}} + u_t,  y_{t-\textcolor{hotpink}{100}} + u_t$ |
 
-### MA Model
+## MA Model
 
 ```mermaid
 flowchart LR
@@ -57,7 +73,7 @@ as predictors. ==**Don’t confuse this with moving average smoothing!**==
 | MA$(1)$ | 1<br />There is only $1$ particular lag (not necessarily $u_{t-1}$) | $y_t = \beta_1 u_{t-\textcolor{hotpink}{1}} + u_t \\ \Big(\text{ie, } y_t = \beta_1 (y_{t-\textcolor{hotpink}{1}}-E[y_{t-\textcolor{hotpink}{1}}]) + u_t \Big)$ |
 | MA$(2)$ | 2                                                            | $y_t = \beta_1 u_{t-\textcolor{hotpink}{1}} + \beta_2 u_{t-\textcolor{hotpink}{2}} + u_t$ |
 
-### ARMA
+## ARMA
 
 Autoregressive Moving Average Model
 
@@ -78,7 +94,7 @@ $$
 u_t
 $$
 
-### ARIMA Process
+## ARIMA Process
 
 ARIMA$(p, d, q)$ model means
 
@@ -100,7 +116,7 @@ $$
 \alpha_1 y_{t-1} + \beta_1 u_{t-1} + u_t
 $$
 
-### Box-Jenkins Decision Tree
+## Box-Jenkins Decision Tree
 
 for ARIMA Model Building
 
@@ -130,6 +146,8 @@ end
 ## VAR
 
 Vector AutoRegressive Model
+
+Each input variable time series should also be stationary
 
 $\text{VAR}(p) \equiv \text{VAR}(1)$ where
 $$
@@ -164,7 +182,7 @@ $$
 A VAR(p) model is stationary if one/both of the following
 
 - All eigen values of the companion matrix $A$ have modulus less than 1
-- All roots of $\text{det} ( \ I_m - \sum_{i=1}^p \phi_i z^p \ ) = 0$ as a function of the complex variable $z$ are **outside** the complex unit circle $\vert z \vert \le 1$
+- All roots of $\text{det} ( \ I_m - \sum_{i=1}^p \phi_i z^p \ ) = 0$ as a function of the complex variable $z$ are **outside** the complex unit circle $\vert z \vert \le 1$
 
 Mean:
 $$
@@ -179,7 +197,7 @@ y_t - \mu &= \sum_i^p \phi_i[y_{t-i} - \mu]  + u_t
 $$
 
 
-### Optimality
+## Optimality
 
 Component-wise OLS estimates are equal to the GLS estimates accounting for the general case of innovation covariance matrix with possibly unequal comment variance and non-zero correlations 
 

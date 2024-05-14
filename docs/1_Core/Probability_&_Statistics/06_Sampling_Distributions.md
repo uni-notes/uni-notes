@@ -1,6 +1,8 @@
-## Sampling
+# Sampling
 
-is used when it is not feasible to analyse the entire population
+Used when it is not feasible to analyze the entire population
+
+Estimation: Using the sample to estimate population parameter(s)
 
 ## Population v Sample
 
@@ -8,19 +10,48 @@ is used when it is not feasible to analyse the entire population
 | ------------------ | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | Definition         | comprises of all units pertaining to a particular characteristic under study | is a part of a population, which is selected such that it is representative of the entire population |
 | Size               |                             $N$                              |                             $n$                              |
-| Mean               |                            $\mu$                             |               $\bar x = \dfrac {\sum x_i}{n}$                |
-| Variance           |                          $\sigma^2$                          | $s^2 = \dfrac 1 {n-1} \left[ \sum {x_i}^2 - \dfrac { \left(\sum x_i \right)^2}{n} \right]$ |
+| Mean               |                            $\mu$                             |             $\bar x = \dfrac {\sum_i^n x_i}{n}$              |
+| Variance           |                          $\sigma^2$                          | $s^2 = \dfrac {\sum_i^n (x_i-\bar x)^2}{n \textcolor{hotpink}{-1}}$ |
 | Standard Deviation |                           $\sigma$                           |                             $s$                              |
 
 ### Relations
 
 $$
 \begin{aligned}
-E(\bar x) &= \mu, E(s^2) = \sigma^2 , E(s) = \sigma \\
-s^2 &= \frac{\sigma^2}{n} , s = \frac{\sigma}{\sqrt n} \\
-z_\text{sample} &= \frac{\bar x - \mu}{ \sigma/\sqrt n }
+\mathbb E(\bar x) &= \mu \\
+\mathbb E[s^2_x] &= \sigma^2_x \\
+\\
+s^2_{\bar x} &= \frac{\sigma^2_x}{n} , s_{\bar x} = \frac{\sigma_x}{\sqrt n} \\
+z_\text{sample} &= \frac{\bar x - \mu_x}{\sigma_x/\sqrt n }
 \end{aligned}
 $$
+
+## Bessel’s Correction
+
+$$
+\begin{aligned}
+\text{Var}(x) &= E[(x)^2] - (E[x])^2 \\
+\implies
+E[(x)^2] &= \sigma^2 + \mu^2 \\
+\\
+\text{Var}(\bar x) &= E[(\bar x)^2] - (E[\bar x])^2 \\
+\implies
+E[(\bar x)^2] &= \dfrac{\sigma^2}{n} + \mu^2 \\
+\\
+\implies \sigma^2
+&= s^2_\text{uncorrected} + \text{Bias} \\
+&= s^2_\text{uncorrected} + \dfrac{\sigma^2}{n} \\
+
+\implies \sigma^2
+&= s^2_\text{uncorrected} \times \dfrac{n}{\text{DOF}} \\
+&= s^2_\text{uncorrected} \times \underbrace{\dfrac{n}{n-1} }_{\mathclap{\text{Bessel's Correction}}}
+\end{aligned}
+$$
+
+Reasoning
+
+- Degrees of freedom: We lose a degree of freedom when estimating $\bar x$
+- Bias correction: While sampling with small sample size, less probable elements don’t show up which gives us an underestimated sample dispersion
 
 ## Sample vs Population Standard Deviation
 
@@ -35,10 +66,6 @@ Higher the skew of population distribution, larger the sample size required to a
 ![image-20240128195800706](./assets/image-20240128195800706.png)
 
 Sample vs Population SD does not depend on population size
-
-## Estimation
-
-Using the sample, we estimate population parameter(s)
 
 ## Interval Estimation
 
@@ -109,8 +136,26 @@ Consider
 ### Hoeffding’s Inequality
 
 $$
-P (\vert \bar x − \mu \vert > \epsilon) \le 2 \exp \left[ \dfrac{-2 n \epsilon^2}{(b-a)^2} \right]
+\begin{aligned}
+P (\vert \hat \mu − \mu \vert > \epsilon)
+& \le 2 \exp \left[ \dfrac{-2 n \epsilon^2}{(b-a)^2} \right]
+\\
+\sum_{b}^B P (\vert \hat \mu_b − \mu_b \vert > \epsilon)
+& \le 2 \exp \left[ \dfrac{-2 n \epsilon^2}{(b-a)^2} \right] \times B
+\end{aligned}
 $$
+
+where
+
+- $\mu$ is any parameter and $\hat \mu$ is its estimate
+- $n>0$
+- $\epsilon > 0$
+- $B=$ no of ‘bins’
+
+Notes
+
+- We want low $P (\vert \hat \mu − \mu \vert > \epsilon)$
+- Even though $P (\vert \hat \mu − \mu \vert > \epsilon)$ will depend on $\mu$, the bound is independent of $\mu$
 
 ### Vapnik-Chervonenkis Inequality
 

@@ -460,3 +460,45 @@ class EnsembleNet(nn.Module):
       return torch.sigmoid(self.final(pred))
 ```
 
+## Sklearn Integration
+
+```python
+from skorch import *
+
+model = NeuralNetRegressor(
+  Network,
+  max_epochs=100,
+  lr=0.001,
+  verbose=1
+)
+
+model = NeuralNetClassifier(
+  Network,
+  max_epochs=10,
+  lr=0.1,
+  # Shuffle training data on each epoch
+  iterator_train__shuffle=True,
+)
+```
+
+```python
+model.fit(X, y)
+pred = model.predict(X)
+pred_proba = model.predict_proba(X)
+```
+
+### Hyperparameter Tuning
+
+```python
+from sklearn.model_selection import GridSearchCV
+
+params = {
+    'lr': [0.001,0.005, 0.01, 0.05, 0.1, 0.2, 0.3],
+    'max_epochs': list(range(500,5500, 500))
+}
+
+gs = GridSearchCV(model, params, refit=False, scoring='r2', verbose=1, cv=10)
+
+gs.fit(X_trf, y_trf)
+```
+

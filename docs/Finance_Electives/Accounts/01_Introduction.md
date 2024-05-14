@@ -112,7 +112,7 @@ Securities are actually financial assets with collateral, but they are used inte
 
 ### Financial Assets
 
-|                                                            |           | Income   |
+| Asset                                                      |           | Income   |
 | ---------------------------------------------------------- | --------- | -------- |
 | Ownership/Equity Claims<br />(Equity Shares/Common Stocks) |           | Variable |
 | Creditor Claims<br />(Bonds)                               |           | Fixed    |

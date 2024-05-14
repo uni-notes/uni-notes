@@ -1,8 +1,21 @@
-# Model Tuning & Regularization
+# Model Tuning
 
-Methods that constrain the complexity of a model in order to reduce overfitting and improve out-of-sample error, by reducing variance and compromising on an increased bias
+Be data-driven with model tuning, by closely-examining actual performance
 
-## Reducing capacity
+- Sometimes you need to decide if it is worth fixing certain type of error
+
+## Regularization
+
+Methods that constrain the complexity of a model
+
+- Goal: Improve out-of-sample error by reducing overfitting & variance
+- Tradeoff: Compromising on an increased bias
+
+![image-20240627121428597](./assets/image-20240627121428597.png)
+
+Regularization allows a continuous spectrum of model complexity, rather than discrete jumps
+
+## Reducing Capacity
 
 Reduce the number of
 
@@ -57,7 +70,10 @@ c[10<br/>units] -->|10<br/>connections| d[1<br/>unit] -->|10<br/>connections| e[
 
 ## Weight Decay
 
-Also called as Shrinkage Term/Regularization Penalty
+Also called as
+
+- Shrinkage Term
+- Regularization Penalty
 
 Reduce errors by fitting the function appropriately on the given training set, to help reduce variance, and hence avoid overfitting, while minimally affecting bias.
 
@@ -67,33 +83,57 @@ Note:
 
 - All input features must be ==**standardized**==
 - Intercept should not be penalized
+- You can use different penalty for each term
+  - You can perform different regularizer and norm based on expected knowledge of **distribution** of parameter
+  
+$$
+\begin{aligned}
+J'(\theta)
+&= J(\theta) + \dfrac{\lambda}{n} 
+\underbrace{\textcolor{hotpink}{R(\theta)}}_
+{\mathclap {\qquad \text{Reg Penalty}}}
+\end{aligned}
+$$
 
+where
+
+- $\sigma_u =$ Random Standard Deviation: Stochastic Noise
+- $Q_f =$ Target Complexity: Deterministic Noise
+
+This is similar to
 $$
-J'(\theta) = J(\theta) + \dfrac{\textcolor{hotpink}{\text{Regularization Penalty}}}{\text{Sample Size}}
+\begin{aligned}
+E_\text{aug}
+&= E_\text{in} + \dfrac{\Omega}{n} \\
+&\updownarrow
+\\
+E_\text{out}
+&\le E_\text{in} + \dfrac{\Omega}{n}
+\end{aligned}
 $$
 
-This is similar to 
-$$
-E_\text{out} = E_\text{in} + O(D_{VC})
-$$
+Hence, $E_\text{aug}$ is a better proxy for $E_\text{out}$ than $E_\text{in}$
 
 | Regularizer | Penalty| Effect                                      | Robust to outliers | Unique solution? | Comments | $\hat \beta$ | Limitations | Bayesian Interpretation |
 |---                      | ---| ---                                         | ---                                   |---                      |---                      |---                      |---                      |---                      |
-| $L_0$ | $\lambda \sum \limits_j^k (\beta_{j=0} \ne 0)$<br />Number of non-zero coefficients | Enforces sparsity (Feature selection) |  |  | Computationally-expensive<br />Not Convex<br />No closed-form soln (requires grad descent) |  |  |  |
-|$L_1$<br />(Lasso: Least Absolute Shrinkage & Selection Operator)       | $\lambda \sum \limits_{j=0}^k \dfrac{\vert\beta_j - \mu_{\beta^*_j} \vert}{\sigma^2_{\beta^*_j}}$ | Encourages sparsity (Feature selection)<br />Eliminates low effect features completely | ✅                   | ❌ | Convex<br />No closed-form soln (requires grad descent) | $\begin{cases} \text{sign}({\hat \beta}_\text{OLS}) \times \left( \vert {\hat \beta}_\text{OLS} \vert - \lambda/2 \right) , & \vert {\hat \beta}_\text{OLS} \vert > \lambda/2, \\ 0, & \text{otherwise} \end{cases}$ | when $\exists$ highly-correlated features<br />- Results can be random/arbitrary and unstable <br />- Multiple solutions | Double-exponential Laplace prior with Mean $\mu_{\beta^*_j}$ |
-|$L_2$<br />(Rigde)       | $\lambda \sum \limits_{j=0}^k \dfrac{(\beta_j - \mu_{\beta^*_j})^2}{\sigma^2_{\beta_j^*}}$ | Scale down parameters<br />Reduces multi-collinearity | ❌ | ✅ | Convex<br />Closed-form soln exists | $\dfrac{{\hat \beta}_\text{OLS}}{1 + \lambda}$ |  | Normal prior with mean $\mu_{\beta^*_j}$ |
-|$L_q$ | $\lambda \sum \limits_{j=0}^k \dfrac{{\vert\beta_j - \mu_{\beta^*_j} \vert}^q}{\sigma^2_{\beta^*_j}}$ | |  |  | | |  |  |
-|Weighted | $\lambda \sum \limits_{j=0}^k w_j \cdot L_q$ | Penalize some parameters more than others | | | Useful to penalize higher order terms | |  |  |
+| $L_0$ | $\sum \limits_{j=1}^k (\beta_j \ne 0)$<br />Number of non-zero coefficients | Enforces sparsity (Feature selection) |  |  | Computationally-expensive<br />Not Convex<br />No closed-form soln (requires grad descent) |  |  |  |
+|$L_1$<br />(Lasso: Least Absolute Shrinkage & Selection Operator)       | $\sum \limits_{j=1}^k \gamma_j {\left \vert \dfrac{{\beta_j - \mu_{\beta^*_j} } }{\sigma_{\beta^*_j}} \right \vert}$ | Encourages sparsity (Feature selection)<br />Eliminates low effect features completely | ✅                   | ❌ | Convex<br />No closed-form soln (requires grad descent) | $\begin{cases} \text{sign}({\hat \beta}_\text{OLS}) \times \left( \vert {\hat \beta}_\text{OLS} \vert - \lambda/2 \right) , & \vert {\hat \beta}_\text{OLS} \vert > \lambda/2, \\ 0, & \text{otherwise} \end{cases}$ | when $\exists$ highly-correlated features<br />- Results can be random/arbitrary and unstable <br />- Multiple solutions | Laplace prior |
+|$L_2$<br />(Rigde)       | $\sum \limits_{j=1}^k \gamma_j \left( \dfrac{\beta_j - \mu_{\beta^*_j}}{\sigma_{\beta_j^*}} \right)^2$ | Scale down parameters<br />Reduces multi-collinearity | ❌ | ✅ | Convex<br />Closed-form soln exists | $\dfrac{{\hat \beta}_\text{OLS}}{1 + \lambda}$ |  | Normal prior |
+|$L_q$ | $\sum \limits_{j=1}^k \gamma_j {\left \vert \dfrac{{\beta_j - \mu_{\beta^*_j} } }{\sigma_{\beta^*_j}} \right \vert^q}$ | |  |  | | |  |  |
 |$L_3$<br />(Elastic Net) | $\alpha L_1 + (1-\alpha) L_2$|                                             | Not very | ✅ | |  |  |  |
-|Entropy                  | $\lambda \sum \limits_{j=0}^k - P(\beta_j) \ln P(\beta_j)$ | Encourage parameters to be different<br />Encourages sparsity<br />Cause high variation in between parameters |  |  | |  |  |  |
+|Entropy                  | $\sum \limits_{j=1}^k - P(\beta_j) \ln P(\beta_j)$ | Encourage parameters to be different<br />Encourages sparsity<br />Cause high variation in between parameters |  |  | |  |  |  |
 |SR3<br />(Sparse Relaxed) |  |  |  |  | |  |  |  |
 
 where
 
 - $\mu_{\beta^*_j}$ is the prior-known most probable value of $\beta_j$
-- $\sigma^2_{\beta^*_j}$ is the prior-known standard deviation of $\beta_j$
+- $\sigma_{\beta^*_j}$ is the prior-known standard deviation of $\beta_j$
+- $\gamma_j$: Weightage of weight decay
+  - Penalize some parameters more than others
+  - Useful to penalize higher order terms with $\gamma_j = 2^q$, where $q=$ complexity of term
 
-These 2 incorporate desirable Bayesian aspects in our model.
+
+$\mu_{\beta^*_j}$ and $\sigma_{\beta^*_j}$ incorporate desirable Bayesian aspects in our model.
 
 ### Bayesian Interpretation
 
@@ -126,6 +166,10 @@ Example
 
 ![image-20240301174943189](./assets/image-20240301174943189.png)
 
+### Limitations
+
+Magnitude of parameters may not always be the best estimate of complexity, especially for Deep Neural Networks
+
 ### Why is standardization required?
 
 - magnitudes of parameters need to be comparable
@@ -135,13 +179,26 @@ Example
 
 ![image-20240302112458493](./assets/image-20240302112458493.png)
 
-### Penalty Coefficient
+### Penalty Coefficient Magnitude
 
 ![image-20240301174314836](./assets/image-20240301174314836.png)
 
-### Frequentist Interpretation
+### Penalty Coefficient vs Noise
 
-Select coefficient one/two iterations **after** the optimal point, to reduce variance further
+| Stochastic Noise                                             | Deterministic Noise                                          |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![image-20240627131737675](./assets/image-20240627131737675.png) | ![image-20240627131852100](./assets/image-20240627131852100.png) |
+
+$$
+\begin{aligned}
+\lambda^* &\propto \sigma^2_u \\
+\lambda^* &\propto Q_f^2
+\end{aligned}
+$$
+
+where $\lambda^* =$ Optimal $\lambda$
+
+### Frequentist Interpretation
 
 $\lambda$ regulates the smoothness of the spline that solves
 $$
@@ -156,6 +213,43 @@ degree $2k − 1$
 | --------- | -------- | --------------------------------- |
 | 0         | Bias     | Interpolates every $(x_i, y_i)$   |
 | $\infty$  | Variance | Becomes linear least squares line |
+
+### IDK
+
+$$
+\begin{aligned}
+&\arg \min J(\theta) \\
+&\text{subject to: } \sum_{j=1}^k (\beta_j)^2 \le C
+\end{aligned}
+$$
+
+$$
+\lambda \propto \dfrac{1}{C}
+$$
+
+### Optimization Equivalent
+
+This is equivalent to:
+
+At each iteration, shrink the weights by the gradient of the regularization penalty before taking the gradient step
+
+For L2: $(1-\nu \lambda)$
+$$
+\begin{aligned}
+w_{t+1}
+&= w_{t} - \nu \Big[ \nabla w_t + \nabla R(w_t) \Big] \\
+&= \Big[ 1 - \nu \ \nabla R(w_t) \Big] w_{t} - \nu \ \nabla w_t \\
+
+\implies \text{With L2}
+&= (1- \nu \lambda) w_{t} - \nu g(t)
+\end{aligned}
+$$
+
+Most deep learning libraries incorporate weight decay in the optimizer; however, this isn’t the most conceptually best way to approach weight decay - better to incorporate in the loss function
+
+## Hinted Regularization
+
+Penalize deviation from [Model Hints](03_Model.md#Model-Hints) 
 
 ## Multi-Stage Regularization
 
@@ -180,21 +274,36 @@ Refer to PINNs for more information
 
 ![image-20240106160827581](./assets/image-20240106160827581.png)
 
-## Early-Stopping
+## Early Stopping
 
-![Training vs. Validation Error for Overfitting](./assets/error_graph.png)
-
-Stop one/two iterations before the optimal point, to reduce variance further
+- This applies to all [evaluation curves](12_Evaluation.md#Evaluation-Curves) 
+- Stopping criteria
+  - In-Sample error < Out-Sample error
+  - Evaluation metric
+    - RMSE $\le \sigma_u$
+    - MAPE $\le 1-\text{Accuracy}_\text{req}$
+- Stop few iterations/value before the optimal point, to reduce variance further: $e_\text{stop} < e^*$
 
 ## Dropout
 
 Dropout is applied on the output of hidden fully-connected layers
+
+- Makes networks “robust” to missing activations
+- Stochastic approximation
 
 ![image-20240214175258654](./assets/image-20240214175258654.png)
 
 ### Training
 
 Stochastically drop out units with probability $p_\text{drop}$ and keep with $p_\text{keep}=1-p_\text{drop}$
+
+$$
+(w'_t)_j = \begin{cases}
+0, & \text{with prob } p \\
+(w_t)_j, & \text{o.w}
+\end{cases}
+$$
+
 
 Annealed dropout
 
@@ -210,6 +319,8 @@ At inference time, dropout is inactive, as we should not predict stochastically
 
 ## Ensembling
 
+Reduces variance from high-variance models, such as trees
+
 ## Noise Injection
 
 - Add noise to inputs
@@ -219,18 +330,25 @@ Behaves similar to L2 regularization
 
 ## Label Smoothing
 
-$$
-y' =
-\begin{cases}
-y - \epsilon/m, & y = y_\text{true} \\
-y + \epsilon/m, & y = y_\text{false}
-\end{cases}
-$$
+The output of $\sigma, \tanh$ never actually really output the maximum/minimum range values. So the model will keep trying to make the predictions go to exact $0/1$ (which is never attainable), making it prone to overfitting
+
+Using label smoothing, model becomes less confident with extremely confident labels (which we want to avoid). Now, the penalty given to a model due to an incorrect prediction will be slightly lower than using hard labels which would result in smaller gradients
+
+| Modify |                                                              |
+| ------ | ------------------------------------------------------------ |
+| Target | $y' = \begin{cases} y - \epsilon, & y = y_\text{true} \\ y + \dfrac{\epsilon}{C-1}, & \text{o.w} \end{cases}$ |
+| Loss   | $L' = (1-\epsilon) L_i + \dfrac{\epsilon}{C-1} \sum_j L_j$   |
 
 where
 
 - $y_\text{true}$ is the true label
-- $m=$ total number of labels
+- $C=$ total number of classes/labels
+- $\epsilon \approx 0$
+
+Extreme cases for $\epsilon$
+
+- $\epsilon=0$: original
+- $\epsilon=1$: uniform
 
 ## Active Teaching
 
@@ -248,4 +366,18 @@ subgraph Active Teaching
   rb & m <-->|Compare & Update| c
 end
 ```
+
+## Neural Network
+
+![image-20240409112121923](./assets/image-20240409112121923.png)
+
+![image-20240409112108442](./assets/image-20240409112108442.png)
+
+| Phase | Hessian | Mode Connectivity | Model Similarity | Treatment             |
+| ----- | ------- | ----------------- | ---------------- | --------------------- |
+| 1     | Large   | -ve               | Low              | Larger network        |
+| 2     | Large   | +ve               | Low              | Smaller learning rate |
+| 3     | Small   | -ve               | Low              | Larger network        |
+| 4-A   | Small   | $\approx 0$       | Low              | Increase train size   |
+| 4-B   | Small   | $\approx 0$       | High             | ✅                     |
 

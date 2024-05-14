@@ -1,6 +1,20 @@
 # Sklearn
 
-### 
+## Basics
+
+```python
+model = model()
+
+if "n_jobs" in dir(model):
+    kwargs["n_jobs"]= -1
+if "probability" in dir(model):
+    kwargs["probability"]= True
+
+model.set_params(**kwargs)
+
+model.fit(X_train, y_train)
+model.predict(X)
+```
 
 ## PCA
 
@@ -189,207 +203,6 @@ grid.fit(X, y)
 print(grid.best_params_)
 ```
 
-## Custom Estimator
-
-using scipy  
-```python
-class CustomRegressionModel(BaseEstimator):
-	"""
-	All variables inside the Class should end with underscore
-	"""
-	def __str__(self):
-		return str(self.model)
-	def __repr__(self):
-		return str(self)
-	
-	def mse(self, pred, true, sample_weight):
-		error = pred - true
-		
-		loss = error**2
-
-		# median is robust to outliers than mean
-		cost = np.mean(
-			sample_weight * loss
-		)
-
-		return cost
-
-	def loss(self, pred, true):
-		return self.error(pred, true, self.sample_weight)
-	
-	def l1(self, params):
-		return np.sum(np.abs(params-self.model.initial_guess))
-	def l2(self, params):
-		return np.sum((params-self.model.initial_guess) ** 2)
-	def l3(self, params, alpha=0.5):
-		return alpha * self.l1(params) + (1-alpha)*self.l2(params)
-
-	def reg(self, params, penalty_type="l3", lambda_reg_weight = 1.0):
-		"""
-		lambda_reg_weight = Coefficient of regularization penalty
-		"""
-
-		if penalty_type == "l1":
-			penalty = self.l1(params)
-		elif penalty_type == "l2":
-			penalty = self.l2(params)
-		elif penalty_type == "l3":
-			penalty = self.l3(params)
-		else:
-			raise Exception
-
-		return lambda_reg_weight * penalty/self.sample_size
-
-	def cost(self, params, X, y):
-		pred = self.model.equation(X, *params)
-		return self.loss(pred, true=y) #+ self.reg(params) # regularization requires standardised parameters
-
-	def fit(self, X, y, model, method="Nelder-Mead", error = None, sample_weight=None, alpha=0.05):
-		check_X_y(X, y) #Using self.X,self.y = check_X_y(self.X,self.y) removes column names
-
-		self.X = X
-		self.y = y
-
-		self.n_features_in_ = self.X.shape[1]
-
-		if sample_weight is None or len(sample_weight) <= 1: # sometimes we can give scalar sample weight same for all
-			self.sample_size = self.X.shape[0]
-		else:
-			self.sample_size = sample_weight[sample_weight > 0].shape[0]
-
-		self.sample_weight = (
-			sample_weight
-			if sample_weight is not None
-			else np.full(self.sample_size, 1) # set Sample_Weight as 1 by default
-		)
-
-		self.error = (
-			error
-			if error is not None
-			else self.mse
-		)
-
-		self.model = model
-
-		params = getfullargspec(self.model.equation).args
-		params = [param for param in params if param not in ['self', "x"]]
-		
-		self.optimization = o.minimize(
-			self.cost,
-			x0 = self.model.initial_guess,
-			args = (self.X, self.y),
-			method = method, # "L-BFGS-B", "Nelder-Mead", "SLSQP",
-			constraints = [
-
-			],
-			bounds = [
-				(-1, None) for param in params # variables must be positive
-			]
-		)
-
-		self.dof = self.sample_size - self.model.k - 1 # n-k-1
-
-		if self.dof <= 0:
-			self.popt = [0 for param in params]
-			st.warning("Not enough samples")
-			return self
-		
-		success = self.optimization.success
-		if success is False:
-			st.warning("Did not converge!")
-
-		self.popt = (
-			self.optimization.x
-		)
-
-		self.rmse = mse(
-			self.output(self.X),
-			self.y,
-			sample_weight = self.sample_weight,
-			squared=False
-		)
-
-		cl = 1 - (alpha/2)
-
-		if "hess_inv" in self.optimization:
-			self.covx = (
-				self.optimization
-				.hess_inv
-				.todense()
-			)
-
-			self.pcov = list(
-				np.diag(
-					self.rmse *
-					np.sqrt(self.covx)
-				)
-			)
-
-			self.popt_with_uncertainty = [
-				f"""{{ \\small (
-					{round_f(popt, 6)}
-					±
-					{round_f(stats.t.ppf(cl, self.dof) * pcov.round(2), 2)}
-				)}}""" for popt, pcov in zip(self.popt, self.pcov)
-			]
-		else:
-			self.popt_with_uncertainty = [
-				f"""{{ \\small {round_f(popt, 5)} }}""" for popt in self.popt
-			]
-
-		self.model.set_fitted_coeff(*self.popt_with_uncertainty)
-		
-		return self
-	
-	def output(self, X):
-		return (
-			self.model
-			.equation(X, *self.popt)
-		)
-	
-	def get_se_x_cent(self, X_cent):
-		return self.rmse * np.sqrt(
-			(1/self.sample_size) + (X_cent.T).dot(self.covx).dot(X_cent)
-		)
-	def get_pred_se(self, X):
-		if False: # self.covx is not None: # this seems to be abnormal. check this
-			X_cent = X - self.X.mean()
-			se = X_cent.apply(self.get_se_x_cent, axis = 1)
-		else:
-			se = self.rmse
-		return se
-
-	def predict(self, X, alpha=0.05):
-		check_is_fitted(self) # Check to verify if .fit() has been called
-		check_array(X) #X = check_array(X) # removes column names
-
-		pred = (
-			self.output(X)
-			.astype(np.float32)
-		)
-
-		se = self.get_pred_se(X)
-
-		cl = 1 - (alpha/2)
-
-		ci =  stats.t.ppf(cl, self.dof) * se
-
-		return pd.concat([pred, pred+ci, pred-ci], axis=1)
-```
-```python
-model = CustomRegressionModel()
-print(model) ## prints latex
-
-model.fit(
-  X_train,
-  y_train,
-  model = Arrhenius(),
-  method = "Nelder-Mead"
-)
-model.predict(X_test)
-
-print(model) ## prints latex with coefficent values
-```
 ## Linear Regression statistical inference
 Parameter standard errors
 ```python
@@ -540,3 +353,129 @@ normalized = scaler.fit_transform(data)
 ## inverse transform
 inverse = scaler.inverse_transform(normalized)
 ```
+
+## Time-Series Split
+
+```py
+|X||V|O|O|O|
+|O|X||V|O|O|
+|O|O|X||V|O|
+|O|O|O|X||V|
+```
+
+X / V are the training / validation sets. "||" indicates a gap (parameter n_gap: int>0) truncated at the beginning of the validation set, in order to prevent leakage effects.
+
+```python
+class StratifiedWalkForward(object):
+    
+    def __init__(self,n_splits,n_gap):
+        self.n_splits = n_splits
+        self.n_gap = n_gap
+        self._cv = StratifiedKFold(n_splits=self.n_splits+1,shuffle=False)
+        return
+    
+    def split(self,X,y,groups=None):
+        splits = self._cv.split(X,y)
+        _ixs = []
+        for ix in splits: 
+            _ixs.append(ix[1])
+        for i in range(1,len(_ixs)): 
+            yield tuple((_ixs[i-1],_ixs[i][_ixs[i]>_ixs[i-1][-1]+self.n_gap]))
+            
+    def get_n_splits(self,X,y,groups=None):
+        return self.n_splits
+```
+
+Note that the datasets may not be perfectly stratified afterwards, cause of the truncation with n_gap.
+
+## Regression with Custom Loss Function
+
+[using scipy](../Scipy/04_Regression_with_Custom_Loss_Function.md) 
+
+## Decision Boundary
+
+```python
+x_min, x_max = X[:, 0].min(), X[:,0].max()
+y_min, y_max = X[:, 1].min(), X[:, 1].max()
+resolution = 100
+
+x = np.linspace(x_min - 0.1, x_max + 0.1, resolution)
+y = np.linspace(y_min - 0.1, y_max + 0.1, resolution)
+```
+
+```python
+xx, yy = np.meshgrid(x, y)
+```
+
+```python
+x_in = np.c_[xx.ravel(), yy.ravel()]
+y_pred = model.predict(x_in).reshape(xx.shape)
+```
+
+```python
+plt.contourf(xx, yy, y_pred, cmap=plt.cm.RdYlBu, alpha=0.7 )
+plt.scatter(X[:,0], X[:, 1], c=y, s=40, cmap=plt.cm.RdYlBu)
+plt.xlim(xx.min(), xx.max())
+plt.ylim(yy.min(), yy.max())
+```
+
+![img](./assets/1*nsC6mgj-WhjZ7PN0TBcEkg.png)
+
+## SVM
+
+- LinearSVC: Primal
+- SVC: Dual
+
+## Multi-Level Model
+
+```python
+from sklearn.base import BaseEstimator
+from sklearn.datasets import make_regression
+from sklearn.ensemble import GradientBoostingRegressor
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
+from sklearn.pipeline import FeatureUnion, Pipeline
+from sklearn.preprocessing import StandardScaler, QuantileTransformer
+
+X, y = make_regression(n_samples=100, n_features=10, noise=10.0, random_state=42)
+
+class Regressor(BaseEstimator):
+    def __init__(self, n_features):
+        self.n_features = n_features
+        self.linear_reg = LinearRegression()
+        self.boosting_reg = GradientBoostingRegressor(
+            n_estimators=1,
+            init="zero",
+            random_state=42
+        )
+
+    def fit(self, X, y):
+        self.linear_reg.fit(X=X[:, :self.n_features], y=y)
+        y_pred = self.linear_reg.predict(X=X[:, :self.n_features])
+        residual = y - y_pred
+        self.boosting_reg.fit(X=X[:, self.n_features:], y=residual)
+        return self
+
+    def predict(self, X):
+        y_pred_linear_reg = self.linear_reg.predict(X=X[:, :self.n_features])
+        residual = self.boosting_reg.predict(X=X[:, self.n_features:])
+        y_pred = y_pred_linear_reg + residual
+        return y_pred
+
+
+union = FeatureUnion(
+    transformer_list=[("ss", StandardScaler()),
+                      ("qt", QuantileTransformer(n_quantiles=2))]
+)
+
+X_union = union.fit_transform(X=X)
+
+n_features = 10
+pipe = Pipeline(
+    steps=[
+      ("reg", Regressor(n_features=n_features))
+    ]
+).fit(X=X_union, y=y)
+y_pred = pipe.predict(X=X_union)
+```
+

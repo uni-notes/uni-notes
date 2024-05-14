@@ -1,3 +1,5 @@
+# Deep Learning
+
 Deep Learning is subset of machine learning, which involves a deep neural network. Large availability of data in present-day has led to the rise in demand for deep learning applications.
 
 Refer [Machine Learning](./../Machine_Learning/) concepts, to understand this course well.
@@ -29,15 +31,19 @@ dm --> cnn[Convolutional<br/>Neural<br/>Network] & dsn[Deep<br/>Stacking<br/>Net
 
 ## Advantages
 
-1. Automatic
-2. Robust
-3. Generalizable
-4. Parallelizable $\implies$ Scalable
+1. Flexible
+2. Automatic
+3. Robust
+4. Generalizable
+5. Parallelizable $\implies$ Scalable
 
 ## Disadvantages
 
 1. Low interpretability (Black box)
-2. Computationally-expensive wrt to [Resource Constraints](#Resource-Constraints)
+2. Too many hyperparameters
+3. Tend to overfit; poor generalizability
+4. Require lot of data
+5. Computationally-expensive wrt to [Resource Constraints](#Resource-Constraints)
 
 ## Resource Constraints
 
@@ -47,12 +53,23 @@ dm --> cnn[Convolutional<br/>Neural<br/>Network] & dsn[Deep<br/>Stacking<br/>Net
 
 ## Challenges
 
+- Difficult for generalization
+- Difficult for efficient optimization
 - Lack of adequate data (addressed through [Transfer Learning](#Transfer Learning), Shallow learning, Incremental learning)
 - Data inconsistencies
 - Low battery life of edge devices (h/w controlling data flow at boundary b/w 2 networks)
 - Resource-constrained algorithm development issues
 - Diversity in computing units
 - Privacy & security concerns (addressed through Encryption)
+
+## Why Deep Learning?
+
+- Deep networks can represent complex functions with fewer parameters
+- Each layer of the network learns a “representation”
+
+![image-20240710182558173](./assets/image-20240710182558173.png)
+
+![image-20240710182724425](./assets/image-20240710182724425.png)
 
 ## Image Representation
 
@@ -69,20 +86,6 @@ So if the width and height of image are $w, h$
 - Hardware costs
 - Flexibility
 
-## Major Architectures
-
-|                                | Meaning                                               | Efficient<br />at         | Major<br />Application                                       | Computation<br />Complexity |
-| ------------------------------ | ----------------------------------------------------- | ------------------------- | ------------------------------------------------------------ | --------------------------- |
-| CNN<br />(Convolutional)       |                                                       | Detecting spatial pattens | Images, Videos                                               | High                        |
-| RNN<br />(Recurrent)           | Forward-feed, backward-feed, and self-loop is allowed |                           | Time Series                                                  |                             |
-| ResNet<br />(Residual Network) |                                                       |                           | Time Series                                                  |                             |
-| U-Net                          |                                                       |                           | Basis of diffusion models<br />Segmentation<br />Super-Resolution<br />Diffusion Models |                             |
-| PINN<br />(Physics-Informed)   |                                                       |                           |                                                              |                             |
-| Lagrangian                     |                                                       |                           |                                                              |                             |
-| Deep Operator                  |                                                       |                           |                                                              |                             |
-| Fourier Neural Operator        |                                                       |                           |                                                              |                             |
-| Graph Neural Networks          |                                                       |                           |                                                              |                             |
-
 ## Popular Models & Datasets
 
 | Dataset | Sample Size | Content                                                      | Classes |
@@ -97,3 +100,11 @@ So if the width and height of image are $w, h$
 ## IDK
 
 ![image-20240309214029828](./assets/image-20240309214029828.png)
+
+## Why Deep Learning?
+
+Deep networks
+
+1. empirically work better for a given parameter count
+2. provably more efficient at representing functions that neural networks cannot actually learn (such as odd/even parity)
+

@@ -1,12 +1,34 @@
 # Artificial Neural Networks
 
-A neural network is simply made out of layers of [neurons](#neuron), connected in a way that the input of one layer of neuron is the output of the previous layer of neurons (after activation)
+A neural network refers to a type of hypothesis class containing multiple, parameterized differentiable functions (layers) composed together in a manner to map the input to the output
 
-They are loosely based on how our human brain works. 
+It is made of layers of [neurons](#neuron), connected in a way that the input of one layer of neuron is the output of the previous layer of neurons (after activation)
+
+They are loosely based on how our human brain works: Biological structure -> Biological function
 
 ![Neural network visualization](./../assets/neural%20network.png)
 
 You can think of a neural network as combining multiple non-linear decision surfaces into a single decision surface.
+
+$$
+\hat y = w \times \phi(x)
+$$
+
+where $\phi$ is a non-linear function
+
+
+Neural networks can be thought of ‘learning’ (and hence optimizing loss by tweaking)
+
+- features (instead of manual feature specification)
+- parameters
+
+## Universal Function Approximation
+
+A 2 layer ANN is capable of approximate any function over a ==**finite subset**== of the input space
+
+Catch: The size of NN should be equal to number of datapoints
+
+Over-exaggerated property; same property is shared by Nearest Neighbors and splines, but no one cares
 
 ## Hyperparameters
 
@@ -23,9 +45,9 @@ You can think of a neural network as combining multiple non-linear decision surf
   - Learning rate
   - No of epochs
 
-## Neuron
+## Artificial Neuron
 
-Most basic unit of a neural network
+Most basic unit of an artificial neural network
 
 ### Tasks
 
@@ -104,65 +126,19 @@ $$
 | Continuous Curve?     |     ❌      |        ✅         |
 | Differentiable Curve? |     ❌      |        ✅         |
 
-## MLP
-
-Multi-Layer Perceptron
-
-Simple neural network with 3 Layers
-
-```mermaid
-flowchart LR
-
-x1 & x2 -->
-h1 & h2 & h3 & h4 -->
-y
-
-subgraph il[Input<br />Layer]
-	x1 & x2
-end
-
-subgraph hl[Hidden<br />Layer]
-	h1 & h2 & h3 & h4
-end
-
-subgraph ol[Output<br />Layer]
-	y
-end
-```
-
-For an input layer with $n$ nodes, we will have
-
-- 1 output
-- $2^n$ nodes in hidden layer
-
-## Feed-Forward NN
-
-NN (with $> 3$ layers) where every layer feeds forward to the next layer; backward/self-loop is not allowed
-
-For an input layer with $n$ nodes, we will have
-
-- $$
-  hidden layers = 
-  $$
-
-- $W_i$ is the weights to layer $i$
+## General Form
 
 $$
 \begin{aligned}
-\textcolor{hotpink}{\text{PreActivation}_{H_1}}
-&= b_1 + w_1 x_1 + w_2 x_2 + \dots \\
-\text{Activation}_{H_1}
-&= \frac{1}{1 + e^{- \textcolor{hotpink}{\text{PreActivation}_{H_1}}}}
+w_{ij}^{(l)}
+&= \begin{cases}
+l \in [1, L] & \text{layers} \\
+i \in [0, d^{(l-1)}] & \text{inputs} \\
+j \in [1, d^{(l)}] & \text{outputs}
+\end{cases} \\
+x_{j}^{(l)}
+&= \sigma(s_j^{(L)}) \\
+&= \sigma \left( \sum_{i=0}^{d^{(l-1)}} w_{ij}^{(l)} x_i^{(l-1)} \right)
 \end{aligned}
 $$
-
-### Decision Boundary
-
-| Hidden Layers | Shape of Region |
-| :-----------: | --------------- |
-|       0       | Open            |
-|       1       | Closed/Open     |
-|    $\ge 2$    | Closed          |
-
-As you increase the number of hidden layers, the possibility of open decision boundary decreases (which is good).
 

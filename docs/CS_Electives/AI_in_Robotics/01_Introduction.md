@@ -1,5 +1,16 @@
 # Introduction
 
+## Applications
+
+- Path Planning
+- Motion Control
+- Computer Vision
+- Machine Learning
+- Optimization
+- NLP
+- Manipulator & Mobile Robot Hardware
+- Computer Vision, Pathfinding and other tasks
+
 ## Agent
 
 Anything that can be viewed as

@@ -1,4 +1,23 @@
-Data can be anything. It depends on the data engineer on what the input and output data is.
+# Data
+
+Data can be anything. It depends on the data engineer on what the input and output data is
+
+Data = results of measurement
+
+- Definition of measurand (quantity being measured)
+- Measurement value
+  - number
+  - unit
+
+- Experimental context
+  - Test method
+  - sampling technique
+  - environment
+
+- Estimate of uncertainty
+  - Measurement uncertainty: estimate of dispersion of measurement values around true value
+  - Context uncertainty: uncertainty of controlled and uncontrolled input parameters
+- Metrology/Measurement model: science of measurement; theory, assumptions and definitions used in making measurement
 
 ## Types
 
@@ -77,12 +96,14 @@ Attributes where only non-zero values are important. It can be
 
 ## Characteristics of Dataset
 
-### Sample Size
+### Minimum Sample Size
 
-|         | $n_\text{min}$  | $n_\text{recommended}$ |
-| ------- | --------------- | ---------------------- |
-| Tabular | $k+1$           | $10^k$                 |
-| Image   | $1000 \times C$ |                        |
+To learn effectively
+
+|                     | $n_\text{min}$  |
+| ------------------- | --------------- |
+| Structured: Tabular | $k+1$           |
+| Unstructured: Image | $1000 \times C$ |
 
 where
 
@@ -181,14 +202,19 @@ Data has both spatial and temporal attributes
 
 ## Issues with Data Quality
 
-| Issue             |                                                            | Solution is to ___ data object/attributes<br />       | Example                                    |
-| ----------------- | ---------------------------------------------------------- | ----------------------------------------------------- | ------------------------------------------ |
-| Noise             | - Random component of measurement<br />- Distorts the data | Drop                                                  |                                            |
-| Artifacts         | Known Distortion                                           |                                                       |                                            |
-| Outliers          | Actual data, but very different from others                | Depends                                               |                                            |
-| Missing Values    | Null values                                                | - Eliminate<br />- Estimate/Interpolate<br />- Ignore |                                            |
-| Inconsistent Data | illogical data                                             |                                                       | 50yr old with 5kg weight                   |
-| Duplicate Data    |                                                            | De-Duplication                                        | - Same customer goes to multiple showrooms |
+| Issue                                               |                                                              | Solution is to ___ data object/attributes<br />       | Example                                    |
+| --------------------------------------------------- | ------------------------------------------------------------ | ----------------------------------------------------- | ------------------------------------------ |
+| Improper sampling                                   |                                                              |                                                       |                                            |
+| Unknown context                                     |                                                              |                                                       |                                            |
+| Noise                                               | - Random component of measurement<br />- Distorts the data   | Drop                                                  |                                            |
+| Anomaly/<br />Rare events                           | Obs that occur very rarely but it is possible                |                                                       | Height of Person is 7’5                    |
+| Artifacts/<br />Spurious Obs                        | Known Distortion that can be removed                         |                                                       | Height of Person is -10                    |
+| Outliers/<br />Flyers/<br />Wild obs/<br />Maverick | Actual data, but very different from others<br />Extreme value of $y$ | Depends                                               | Height of Person is 8’5                    |
+| Leveraged points                                    | Extreme value of $x$                                         |                                                       |                                            |
+| Influential points                                  | Outliers with high leverage<br />Removing the data point ‘substantially’ changes the regression results |                                                       |                                            |
+| Missing Values                                      | Null values                                                  | - Eliminate<br />- Estimate/Interpolate<br />- Ignore |                                            |
+| Inconsistent Data                                   | illogical data                                               |                                                       | 50yr old with 5kg weight                   |
+| Duplicate Data                                      |                                                              | De-Duplication                                        | - Same customer goes to multiple showrooms |
 
 ### Estimation
 
@@ -267,3 +293,66 @@ Degree to which rare events drive the aggregate statistics of a distribution
   - ![image-20240210111118533](./assets/image-20240210111118533.png)
 - Taleb’s $\kappa$ metric
   - ![image-20240210111052050](./assets/image-20240210111052050.png)
+
+## Leverage
+
+Leverage points = data points with extreme value of input variable(s)
+
+Like outliers, high leverage data points can have outsize influence on learning
+$$
+h_{ii} = \dfrac{\text{cov}(\hat y_i, y_i)}{\text{var}(y_i)}
+\\
+h_{ii} \in [0, 1]
+\\
+\sum h_{ii} = k \implies \bar h = p/n
+$$
+For univariate regression
+$$
+h_{ii} = \dfrac{1}{n} + \dfrac{1}{n-1} \left( \dfrac{x_i - \bar x}{s_x} \right)^2
+$$
+High leverage points have lower variance
+$$
+\text{var}(u_i) = \sigma^2_u (1-h_{ii}) \\
+\text{SE}(u_i) = \text{RMSE} \sqrt{1-h_{ii}}
+$$
+![image-20240610224730632](./assets/image-20240610224730632.png)
+
+Hence, when doing statistical tests on residuals (Grubbs’ test, skewness, etc.) you should only use externally-studentized residuals 
+
+|              | Internally                                                   | Externally                                                   |
+| ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Data         | all data are included in the calculation                     | $i$th data point is excluded from calculation of $\text{RMSE}$ |
+| Formula      | $\text{isr}_i = \dfrac{u_i}{\text{SE}(u_i)} \\ = \dfrac{u_i}{\text{RMSE} \sqrt{1-h_{ii}}}$ | $\text{esr}_i = \text{isr}_i \sqrt{\dfrac{n-p-1}{n-p- (\text{isr}_i)^2}}$ |
+| Distribution | Complicated                                                  | $t$ distributed with DOF=$n-p-1$ for $u \in N(0, \sigma_u)$  |
+
+### Normalized Leverage
+
+$$
+\begin{aligned}
+h_\text{norm}
+&= \dfrac{h_{ii}}{\bar h} \\
+&= h_{ii} \times \dfrac{n}{p} \\
+\end{aligned}
+$$
+
+### William’s Graph
+
+To inspect for both outliers and high-leverage data, plot the ESR vs Normalized Leverage
+
+![image-20240610224717680](./assets/image-20240610224717680.png)
+
+## Influence
+
+They are of concern, due to fragility of conclusions: our conclusions may depend only on a few influential data points
+
+We just identify influential points: We don’t remove/adjust highly influential points
+
+$\hat y_{j(i)}$ is $\hat y_j$ without $i$ in the training set
+
+|                      | Formula                                                      | Criterion<br />$n \le 20$<br />$n > 20$         |                                                              |
+| -------------------- | ------------------------------------------------------------ | ----------------------------------------------- | ------------------------------------------------------------ |
+| Cook’s Distance      | $\begin{aligned} & D_i \\ & = \dfrac{\sum\limits_{j=1}^n (\hat y_{j (i)} - \hat y_j)}{k \times \text{MSE}} \\ &= \dfrac{u_i^2}{k \times \text{MSE}} \times \dfrac{h_{ii}}{(1-h_{ii})^2} \\ &= \dfrac{\text{isr}_i^2}{k} \times \dfrac{h_{ii}}{(1-h_{ii})} \end{aligned}$ | $1$<br />$4/n \quad \approx F(k, n-k)$.inv(0.5) | ![image-20240611114520069](./assets/image-20240611114520069.png) |
+| Difference in Beta   | $\begin{aligned} & \text{DFBETA}_{i, j} \\ &= \dfrac{\beta_j - \beta_{j(i)}}{\text{SE}(\beta_{k(i)})} \end{aligned}$ | $1$<br />$\sqrt{4/n}$                           |                                                              |
+| Difference in Fit    | $\begin{aligned} &\text{DFFITS}_{i} \\ &= \dfrac{ \hat y - \hat y_{i(i)} }{ s_{u(i)} \sqrt{h_{ii}} } \\ &= \text{esr}_i \sqrt{ \dfrac{h_{ii}}{1-h_{ii}} } \end{aligned}$ | $1$<br />$\sqrt{4k/n}$                          |                                                              |
+| Mahalanobis Distance |                                                              |                                                 |                                                              |
+

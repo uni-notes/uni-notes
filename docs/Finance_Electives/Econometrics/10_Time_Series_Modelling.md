@@ -6,6 +6,10 @@ For all the following models
     - Else, use non-stationary $\to$ stationary transformation
 - We drop parameters if they are significantly equal to 0
 
+Difficulty
+
+- The underlying data-generating process may change; give higher sample weight to recent past
+
 ## Forecasting Types
 
 ### Single-Step Forecasting
@@ -140,7 +144,9 @@ Find relationship b/w moments of random variables
 
 Yule-Walker estimates
 
-## Further Reading
+## Types of Errors
 
-[Forecasting Principles Practice](https://github.com/AhmedThahir/Forecasting-Principles-Practice)
-
+| Error Type |                                                              |
+| ---------- | ------------------------------------------------------------ |
+| Amplitude  | ![image-20240522143544783](./assets/image-20240522143544783.png) |
+| Phase      | ![image-20240522143556031](./assets/image-20240522143556031.png) |

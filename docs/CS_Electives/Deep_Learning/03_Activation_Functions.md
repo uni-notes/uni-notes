@@ -1,19 +1,25 @@
 # Activation Functions
 
-|                  Name                  |                        Output $f(x)$                         | Output Type |        Range        |
-| :------------------------------------: | :----------------------------------------------------------: | ----------- | :-----------------: |
-|                Identity                |                             $x$                              | Continuous  |      $[-1, 1]$      |
-|            Binary<br />Step            |    $\begin{cases} 0, &x < 0 \\ 1, & x \ge 0 \end{cases}$     | Binary      |      ${0, 1}$       |
-|           Tariff/<br />Tanh            |                          $\tanh(x)$                          | Discrete    |      $[-1, 1]$      |
-|                 ArcTan                 |                       $\tan^{-1} (x)$                        | Continuous  |  $(-\pi/2, \pi/2)$  |
-|   ReLU (Rectified<br />Linear Unit)    |    $\begin{cases} 0, &x < 0 \\ x, & x \ge 0 \end{cases}$     | Continuous  |    $[0, \infty]$    |
-|   SoftPlus<br />(smooth alt to ReLU)   |                        $\log(1+e^x)$                         | Continuous  |    $[0, \infty]$    |
-|      Parametric/<br />Leaky ReLU       | $\begin{cases} \alpha x, &x < 0 \\ x, & x \ge 0 \end{cases}$ | Continuous  | $[-\infty, \infty]$ |
-|      Exponential<br />Linear Unit      | $\begin{cases} \alpha (e^x-1), &x < 0 \\ x,&  x \ge 0 \end{cases}$ | Continuous  | $[-\infty, \infty]$ |
-| Sigmoid/<br />Logistic/<br />Soft Step |                    $\dfrac{1}{1+e^{-x}}$                     | Binary      |      $[0, -1]$      |
-|                Softmax                 | $\dfrac{e^{x}}{\sum_{i=1}^k e^{x_i}}$<br />where $k=$ no of classes<br />such that $\dfrac{\sum p_i}{k} = 1$ | Discrete    |      $[0, 1]$       |
+|                      Name                       |                        Output $f(x)$                         | Output Type |        Range        |                               |
+| :---------------------------------------------: | :----------------------------------------------------------: | ----------- | :-----------------: | ----------------------------- |
+|                    Identity                     |                             $x$                              | Continuous  |      $[-1, 1]$      |                               |
+|                Binary<br />Step                 |    $\begin{cases} 0, &x < 0 \\ 1, & x \ge 0 \end{cases}$     | Binary      |      ${0, 1}$       |                               |
+|                Tariff/<br />Tanh                |                          $\tanh(x)$                          | Discrete    |      $[-1, 1]$      |                               |
+|                     ArcTan                      |                       $\tan^{-1} (x)$                        | Continuous  |  $(-\pi/2, \pi/2)$  |                               |
+|        ReLU (Rectified<br />Linear Unit)        |    $\begin{cases} 0, &x < 0 \\ x, & x \ge 0 \end{cases}$     | Continuous  |    $[0, \infty]$    |                               |
+|       SoftPlus<br />(smooth alt to ReLU)        |                        $\log(1+e^x)$                         | Continuous  |    $[0, \infty]$    |                               |
+|           Parametric/<br />Leaky ReLU           | $\begin{cases} \alpha x, &x < 0 \\ x, & x \ge 0 \end{cases}$ | Continuous  | $[-\infty, \infty]$ |                               |
+|          Exponential<br />Linear Unit           | $\begin{cases} \alpha (e^x-1), &x < 0 \\ x,&  x \ge 0 \end{cases}$ | Continuous  | $[-\infty, \infty]$ |                               |
+|                    Logistic                     |                 $\dfrac{L}{1+e^{-k(x-x_0)}}$                 | Binary      |                     |                               |
+| Sigmoid/<br />Standard Logistic/<br />Soft Step |                    $\dfrac{1}{1+e^{-x}}$                     | Binary      |      $[0, -1]$      |                               |
+|                     Softmax                     | $\dfrac{e^{x_i}}{\sum_{j=1}^k e^{x_j}}$<br />where $k=$ no of classes<br />such that $\dfrac{\sum p_i}{k} = 1$ | Discrete    |      $[0, 1]$       |                               |
+|            Softmax with Temperature             | $\dfrac{e^{x_i/{\small T}}}{\sum_{j=1}^k e^{x_j/{\small T}}}$ | Discrete    |                     | Exposes more “dark knowledge” |
 
 ![activation_functions.svg](./assets/activation_functions.svg)
+
+### Softmax with temperature
+
+![image-20240516164505175](./assets/image-20240516164505175.png)
 
 ## Why use activation function for hidden layers?
 

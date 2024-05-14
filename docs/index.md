@@ -27,10 +27,6 @@ Want to join the initiative? Check out the [guidelines](CONTRIBUTING.md) and sta
 |     **MacOS** Chrome     | Click the `+` icon in the address bar                        |
 | **MacOS** Safari | ❌<br/>😕 I hate this; open the link on Chrome                 |
 
-## Recommended Reading
-
-- [ ] [How to read a paper](https://cseweb.ucsd.edu/~dstefan/cse227-spring19/papers/keshav:how.pdf)
-
 ## ⚠️ Disclaimers
 
 - **Make sure to give due credit** when sharing these notes, to help support this project :) Publishing this as your own without crediting and using the exact Open Software License 3.0 would be bypassing the license, and demeaning this project.
