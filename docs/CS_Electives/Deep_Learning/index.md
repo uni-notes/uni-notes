@@ -19,9 +19,11 @@
 - [ ] [Maziar Raissi | Applied Deep Learning](https://www.youtube.com/playlist?list=PLoEMreTa9CNmuxQeIKWaz7AVFd_ZeAcy4)
 - [ ] [Applied Deep Learning 2023 | TU Wien](https://www.youtube.com/playlist?list=PLNsFwZQ_pkE87JO3T_mvedVTlw0sjUzKh)
 - [ ] [Deep Learning | Tübingen Machine Learning | Andreas Geiger, 2023](https://www.youtube.com/playlist?list=PL05umP7R6ij3NTWIdtMbfvX7Z-4WEXRqD)
-- [ ] Deep Learning | IITM
-  - [ ] [Part 1](https://www.youtube.com/playlist?list=PLyqSpQzTE6M9gCgajvQbc68Hk_JKGBAYT)
-  - [ ] [Part 2](https://www.youtube.com/playlist?list=PLyqSpQzTE6M-_1jAqrFCsgCcuTYm_2urp)
+- [ ] Deep Learning | IIT Madras
+  - [ ] [New](https://www.youtube.com/playlist?list=PLZ2ps__7DhBZVxMrSkTIcG6zZBDKUXCnM)
+  - [ ] Old
+    - [ ] [Part 1](https://www.youtube.com/playlist?list=PLyqSpQzTE6M9gCgajvQbc68Hk_JKGBAYT)
+    - [ ] [Part 2](https://www.youtube.com/playlist?list=PLyqSpQzTE6M-_1jAqrFCsgCcuTYm_2urp)
 - [ ] [Deep Learning Concepts (Simply Explained) | Pedram Jahangiry](https://www.youtube.com/playlist?list=PL2GWo47BFyUO6Fiy2mJCxR8sUrBEfT6BM)
 - [ ] [Deep Learning for Economics (Spring 2023) | Harvard](https://www.youtube.com/playlist?list=PLGTgQIsun7ueGTRzDlBWqgX6xBlMce-QC)
 - [ ] [Unleashing Novel Data at Scale | Harvard](https://www.youtube.com/playlist?list=PLGTgQIsun7udZFo20jeJ4gq-T8Sq6b5bU)
@@ -29,3 +31,12 @@
 - [ ] [CS 152: Neural Networks/Deep Learning—Spring, 2021 | Neil Rhodes](https://www.youtube.com/playlist?list=PL2Yggtk_pK69nyeIgJsjPN0traCIyMJ_f)
 - [ ] [Deep Learning for Autonomous Vehicles | MIT](https://www.youtube.com/playlist?list=PLO-sdZDf9odM9Nr10k9Fk_M6gyn_46boY)
 - [ ] [Local Explanations for Deep Learning Models](https://www.youtube.com/playlist?list=PLbuogVdPnkCoto690B1eTReTznuSC9qYX)
+- [ ] [Deep Learning (STAT 940) , Fall 2023 | University of Waterloo](https://www.youtube.com/playlist?list=PLehuLRPyt1HxuYpdlW4KevYJVOSDG3DEz)
+- [ ] [Deep Learning - F2023  University of Guelph](https://www.youtube.com/playlist?list=PLPrxGIUWsqP1ZO695EJmf9huZlLiRi6Ye)
+- [ ] [The spelled-out intro to neural networks and backpropagation: building micrograd | Andrej Karpathy](https://youtu.be/VMj-3S1tku0?feature=shared)
+- [ ] [Foundations of Deep Learning | Soheil Feizi | University of Maryland](https://www.youtube.com/playlist?list=PLHgjs9ncvHi80UCSlSvQe-TK_uOyDv_Jf)
+- [ ] [Deep Unsupervised Learning | UC Berkeley](https://www.youtube.com/playlist?list=PLwRJQ4m4UJjPIvv4kgBkvu_uygrV3ut_U)
+- [ ] [Deep Learning | Se Young Yun](https://www.youtube.com/playlist?list=PLsQI3WOaT8hjPRvPVM4gQHV2im1y3nlXu)
+
+
+

@@ -12,26 +12,26 @@ where
 - $P(A)$ = prior probability
 - $P(B)$ = marginal probability 
 
-### General Formula
+## General Formula
 
 $$
 \begin{aligned}
-P(A_1|B)
-&= \frac{P(A_1 \cap B)}{P(B)} \\
-&= \frac{P(B | A_1) \cdot P(A_1)}{\sum\limits_{i=1}^{n} P(B|A_i) \cdot P(A_i)} \\
+P(A_i|B)
+&= \frac{P(A_i \land B)}{P(B)} \\
+&= \frac{P(B | A_i) \cdot P(A_i)}{\sum\limits_{j=1}^{n} P(B|A_j) \cdot P(A_j)} \\
 \end{aligned}
 $$
 
-where $A_1, A_2, A_3, \dots, A_n$ are all mutually exclusive events
+where $A_1, A_2, \dots, A_n$ are all mutually exclusive events
 
-### Phrases
+## Conditions
+
+1. Events must be disjoint (no overlapping)
+2. Events must be exhaustive: they combine to include all possibilities
+
+## Phrases
 
 - “out of”
 - “of those who”
 
-### Given
-
-- $P(A_1)$
-- $P(A_2)$
-- $P(B|A_1)$
-- $P(B|A_2)$
+### 

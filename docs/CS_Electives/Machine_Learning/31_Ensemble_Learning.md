@@ -25,19 +25,19 @@ For stable models, not required
 
 ## Learning Techniques
 
-|                   | Single            | B<span style="color:hotpink">agg</span>ing<br />(Boostrap <span style="color:hotpink">agg</span>regation) | Boosting                                                     |
-| ----------------- | ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Training sequence | N/A               | Parallel                                                     | Sequential                                                   |
-|                   |                   |                                                              | Forward stage-wise also to fit an adaptive additive model (adaptive basis functions) |
-| No of learners    | 1                 | $n$                                                          | $n$                                                          |
-| Training          | Complete training | Random sampling with replacement                             | Random sampling with replacement **over weighted data**      |
-|                   |                   | <span style="color:hotpink">Agg</span>regage the results at the end |                                                              |
-|                   |                   |                                                              | Only pass over the mis-classified points<br />We boost the probability of mis-classified points to be picked again |
-| Preferred for     |                   | Linear Data                                                  | Non-Linear Data                                              |
-| Example           |                   | Random forest                                                | XGBoost                                                      |
-| Comment           |                   | - Only effective for low-bias, high-variance models<br />- Only effective if misclassification rate of individual classifiers <0.5 |                                                              |
-| Advantages        |                   | - Reduce model variance<br/>- Noisy useless signals will average out and have no effect |                                                              |
-| Disadvantages     |                   | - Reduced interpretability                                   |                                                              |
+|                   | Single            | B<span style="color:hotpink">agg</span>ing<br />(Boostrap <span style="color:hotpink">agg</span>regation) | Boosting                                                     | Blending                                    |
+| ----------------- | ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------- |
+| Training sequence | N/A               | Parallel                                                     | Sequential                                                   | Parallel/Sequential                         |
+|                   |                   |                                                              | Forward stage-wise also to fit an adaptive additive model (adaptive basis functions) | $\hat f = \sum_{m=1}^{M} \alpha_i \hat f_i$ |
+| No of learners    | 1                 | $n$                                                          | $n$                                                          | $n$                                         |
+| Training          | Complete training | Random sampling with replacement                             | Random sampling with replacement **over weighted data**      |                                             |
+|                   |                   | <span style="color:hotpink">Agg</span>regage the results at the end |                                                              |                                             |
+|                   |                   |                                                              | Only pass over the mis-classified points<br />We boost the probability of mis-classified points to be picked again |                                             |
+| Preferred for     |                   | Linear Data                                                  | Non-Linear Data                                              |                                             |
+| Example           |                   | Random forest                                                | XGBoost                                                      |                                             |
+| Comment           |                   | - Only effective for low-bias, high-variance models<br />- Only effective if misclassification rate of individual classifiers <0.5 |                                                              |                                             |
+| Advantages        |                   | - Reduce model variance<br/>- Noisy useless signals will average out and have no effect |                                                              |                                             |
+| Disadvantages     |                   | - Reduced interpretability                                   |                                                              |                                             |
 
 ### Bagging
 
@@ -49,7 +49,7 @@ Bagging a good classifier can improve predictive accuracy, but bagging a bad one
 $$
 \text{MSE}' = \dfrac{1}{k} \text{MSE} + \dfrac{k-1}{k} C
 $$
-where $C=$ covariance between each bagging classifier
+where $C=$ covariance between each bagging classifier
 
 ### Classification
 

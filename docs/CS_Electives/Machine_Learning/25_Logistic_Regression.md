@@ -58,6 +58,11 @@ We need to choose class $0$ to be the reference level, and normalize $\beta_0=0$
 
 Meaning: $\exp( \beta x')$ is the probability of $y=1$ relative to $y=0$
 
+## Disadvantages
+
+1. Decision boundary dependent on order of training data in mini-batches
+2. Suboptimal decision boundary: Does not give maximum-margin decision boundary
+
 ## Classification
 
 ### Binary 
@@ -82,7 +87,7 @@ where
 
 ### Multi-Class
 
-Soft-max function = generalized logistic function for multi-class
+Softmax function = generalized logistic function for multi-class
 
 Linear decision boundary
 $$
@@ -142,6 +147,7 @@ This assumption is fine for in-sample prediction, but inappropriate for counterf
 OLS is not appropriate for classification
 
 - OLS is not probabilistic, as it’s range can be outside $[0, 1]$
+- OLS assumes $\sigma^2_{y \vert x} = \sigma^2$, but $\sigma^2_{y \vert x} = p(1-p)$ in true Bernoulli distribution and hence is not constant
 - OLS tries to find $\hat y_i$ close to $y_i$, even though we just need $y_i = (\hat y > 0.5)$
 - OLS is sensitive to outliers, due to large deviation and high cost function
 - OLS penalizes cases where $y_i=1$ and $\hat y>1$, ie it penalizes predictions that are “too correct”
@@ -156,4 +162,22 @@ OLS is not appropriate for classification
   - OLS estimates normal linear model, but classification has a distribution very different from Gaussian
   - ![image-20240221113653102](./assets/linear_regression_multiclass_decision_boundary.png)
     - Decision boundaries produced by linear regression between 1 and 2 and between 2 and 3 are the same, so we would never predict class 2
+
+## IDK
+
+Don’t think of logistic/softmax regression as linear regression followed by logistic/softmax function
+
+Think of the logistic/softmax function embedded in the loss function itself
+
+## Odds
+
+$$
+\begin{aligned}
+\text{Odds} 
+&= \dfrac{p(1)}{p(0)} \\
+&= \dfrac{p}{1-p}
+\end{aligned}
+$$
+
+
 

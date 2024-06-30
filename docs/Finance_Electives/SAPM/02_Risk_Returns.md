@@ -59,7 +59,7 @@ Assumed to be a random walk
 ## Expected Returns
 
 $$
-E(R) = \sum_i r_i \cdot p_i
+E(R) = \sum_i r_i \cdot P(r_i)
 $$
 
 ## Risk
@@ -69,26 +69,33 @@ return
 differing from expected
 return
 
-Statistically quantified through variance of expected
-returns
+Statistically quantified through variance/standard deviation of returns’ PDF
 
-## Types of Risk
+## Types of Unknowns
 
-|                                | Systematic risk                    | Unsystematic risk                             | Uncertainty       |
-| ------------------------------ | ---------------------------------- | --------------------------------------------- | ----------------- |
-| Meaning                        | Sensitivity to market fluctuations | Personal factors                              | Unknown effects   |
-| Type                           | External                           | Internal                                      | External          |
-| Minimization                   | Cannot be reduced                  | Can be reduced through portfolio optimization | Cannot be reduced |
-| Applicable to all corporations | ✅                                  | ❌                                             | ✅                 |
-| Risk Compensation expected     | ✅                                  | ❌                                             | ❌                 |
+|                            | Systematic risk                    | Unsystematic risk                          | Uncertainty     |
+| -------------------------- | ---------------------------------- | ------------------------------------------ | --------------- |
+| Meaning                    | Sensitivity to market fluctuations | Personal factors                           | Unknown effects |
+| Type                       | External<br />Macro                | Internal<br />Micro                        | External        |
+| Minimizable                | ❌                                  | ✅<br />through diversification (portfolio) | ❌               |
+| Risk Compensation expected | ✅                                  | ✅                                          | ❌               |
+
+$$
+\begin{aligned}
+\text{Risk: } \sigma^2
+&= \text{SR} + \text{UR} \\
+\text{SR}
+&= \beta^2 \cdot \sigma^2 (R_m)
+\end{aligned}
+$$
 
 ## Risk Measures
 
-|                        |                                                              |
-| ---------------------- | ------------------------------------------------------------ |
-| Standard Deviation     | $\sigma (R_p)$                                               |
-| Beta (systematic risk) | $\dfrac{\text{cov} (R_p, R_m)}{\sigma^2(R_m)}$               |
-| Semi Deviation         | $\sigma (\text{Loss}_p)$<br />$\text{Loss}_t = \arg \max(R_t, 0)$ |
+|                                |                                                              |
+| ------------------------------ | ------------------------------------------------------------ |
+| Standard Deviation             | $\sigma (R_p)$                                               |
+| Beta<br />(Market sensitivity) | $\dfrac{\text{cov} (R_p, R_m)}{\sigma^2_{m}}$                |
+| Semi Deviation                 | $\sigma (\text{Loss}_p)$<br />$\text{Loss}_t = \arg \max(R_t, 0)$ |
 
 where $p=$ portfolio and $m=$ market
 
@@ -100,20 +107,17 @@ where $p=$ portfolio and $m=$ market
 ![securities_risk_premium](./assets/securities_risk_premium.svg)
 
 $$
-R_p - R_f = \alpha + \sigma_p \underbrace{\left (
+R_\min = R_f + \underbrace{\left (
 \dfrac{R_m - R_f}{\sigma_m}
-\right )}_\text{Market Price of Risk}
+\right )}_\text{Market Price of Risk} \sigma
 $$
-
-## Efficient Frontier
-
-![image-20240309173852371](./assets/image-20240309173852371.png)
 
 ## Jensen’s Inequality
 
 Using Jensen’s Inequality
 $$
-E[u(R)] > u(E[R])
+E[f(x)] \ne f(E[x])  \\
+\implies E[u(R)] > u(E[R])
 $$
 where
 
@@ -148,7 +152,7 @@ There are 252 trading days in a year
 
 Fixed-income securities are also very volatile
 
-## Yield
+## YTM
 
 Yield to Maturity = IRR of security if held until maturity
 

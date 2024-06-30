@@ -17,13 +17,7 @@ Unlike AI courses by CS department which focus on the algorithms, this course lo
 
   - ROS: Robotics Operating System
 
-## Applications
+## References
 
-- Path Planning
-- Motion Control
-- Computer Vision
-- Machine Learning
-- Optimization
-- NLP
-- Manipulator & Mobile Robot Hardware
-- Computer Vision, Pathfinding and other tasks
+- [ ] AI in Robotics | Dr. R. Karthikeyan | BITS Pilani Dubai Campus
+- [ ] [Self-Driving Cars | Andreas Geiger | Tübingen Machine Learning](https://www.youtube.com/playlist?list=PL05umP7R6ij321zzKXK6XCQXAaaYjQbzr)

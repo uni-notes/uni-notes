@@ -7,7 +7,13 @@ Taking DAA (Design & Analysis of Algorithms) course really helps
 ## References
 
 - [x] Artificial Intelligence | Dr. Sujala Shetty
+
 - [x] [Artificial Intelligence | John Levine](https://www.youtube.com/@johnlevine2909/videos)
+
 - [ ] [MIT 6.034 Artificial Intelligence, Fall 2010](https://www.youtube.com/playlist?list=PLUl4u3cNGP63gFHB6xb-kVBiQHYe_4hSi)
+
 - [ ] [Stanford CS221: Artificial Intelligence: Principles and Techniques | Autumn 2021](https://www.youtube.com/playlist?list=PLoROMvodv4rOca_Ovz1DvdtWuz8BfSWL2)
+
 - [ ] [How to build a career in AI](https://wordpress.deeplearning.ai/wp-content/uploads/2022/10/eBook-How-to-Build-a-Career-in-AI.pdf)
+
+  

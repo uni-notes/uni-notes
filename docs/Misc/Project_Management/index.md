@@ -2,6 +2,13 @@
 
 Project Management is the planning, organization, securing, motivation and control of resources to successfully complete a project, while minimizing unproductive efforts
 
+## IDK
+
+Every project should have the following
+
+- Clear goal
+- Project valuation: NPV
+
 ## Project Management Models
 
 |                 |                                                              | Advantage                             | Disadvantages                                                |

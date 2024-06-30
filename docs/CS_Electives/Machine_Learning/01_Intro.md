@@ -36,7 +36,27 @@ end
 
 To perform tasks which are easy for humans, but difficult to generate a computer program for it
 
-## Stages of ML
+## Requirements
+
+1. $\exists$ pattern
+   - If $\not \exists$ pattern and its just noise, it is impossible to model it
+2. We cannot quantify pattern mathematically
+3. $\exists$ data
+
+## Learning Problem
+
+Given training examples and hypothesis set of candidate models, generate a hypothesis function using a learning algorithm to estimate an unknown target function
+
+![image-20240622173136629](./assets/image-20240622173136629.png)
+
+$P(x)$ quantifies relative importance of $x$
+
+Learning model
+
+- Learning algorithm
+- Hypothesis set
+
+## Stages of Machine Learning
 
 ```mermaid
 flowchart LR
@@ -52,6 +72,38 @@ Deploy
 
 ld[(Live <br/>Data)] --> Deploy
 ```
+
+## 3 Dimensions of Prediction
+
+- Point estimate
+- Time
+- Probabilistic
+  - Intervals
+  - Density
+  - Trajectories/Scenarios
+
+## Good Prediction Characteristics
+
+- Forecast/Prediction consistency: Forecasts/Predictions should correspond to forecaster’s best judgement on future events, based on the knowledge available at the time of issuing the Forecasts/Predictions
+- Forecast/Prediction quality (accuracy): Forecasts/Predictions should describe future events as good as possible, regardless of what these Forecasts/Predictions may be used for
+- Forecast/Prediction value: Forecasts/Predictions should bring additional benefits (monetary/others) when used as input to decision-making
+
+Hence, sometimes you may choose the Forecast/Prediction with the better value even if its quality is not the best
+
+## Performance vs Parsimony
+
+- Parsimonious models are more explainable
+- Parsimonious models generalize better
+  - Small gains with deep models may disappear with dataset shift/non-stationary
+
+## Aspects
+
+| Aspect       | Equivalent in Marco Polo game |
+| ------------ | ----------------------------- |
+| Loss         | Goal                          |
+| Algorithm    | Map                           |
+| Optimization | Search                        |
+| Data         | Sound                         |
 
 ## Open-source Tools
 

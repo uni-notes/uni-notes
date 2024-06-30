@@ -31,6 +31,8 @@ Helps understand the range and central tendancy of a variable
 
 Visualizes the frequency distribution of attribute
 
+Relative uncertainty of each bin frequency $\propto \dfrac{1}{\sqrt{\text{count}}}$ 
+
 #### Categorical Data
 
 Each category will have a line denoting the frequency associated with that category
@@ -48,6 +50,12 @@ The convention of analyzing these bins
 > - Last bin is right-inclusive
 >
 > ~ Oracle Docs
+
+#### Limitations
+
+- Shape may change dramatically depending on bin settings
+- Bins with few counts have high statistical uncertainty
+- Interpretation can be difficult without huge amounts of data
 
 ### Q-Q Plot
 

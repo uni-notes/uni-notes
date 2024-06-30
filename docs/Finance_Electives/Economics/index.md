@@ -41,6 +41,7 @@ eg: output level of economy, inflation, unemployment
 ## References
 
 - [x] Dr. Sartaj Principles of Economics
+- [ ] [Managerial Economics | IIT Madras](https://www.youtube.com/playlist?list=PLZ2ps__7DhBaUpIodIKDFj_5JznWTxp1E)
 - [ ] [Ashley Hodgson](https://www.youtube.com/@AshleyHodgson)
 - [ ] [Intermediate Microeconomics | Ben Zamzow](https://www.youtube.com/playlist?list=PLlvx_7HXFW92-jpGi-EPym_6wgneREviI)
 - [ ] [Game Theory 101 Full Course | William Spaniel](https://www.youtube.com/playlist?list=PLKI1h_nAkaQoDzI4xDIXzx6U2ergFmedo)

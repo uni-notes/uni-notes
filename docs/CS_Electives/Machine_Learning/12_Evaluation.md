@@ -1,5 +1,9 @@
 # Model Evaluation
 
+## Note
+
+Always check if your model is able to learn from a synthetic dataset where you know the underlying data-generating process
+
 ## Goals
 
 1. Minimize bias
@@ -24,7 +28,7 @@
 
 Finally, train $g^{**}$ on the entire data to obtain $\hat f$
 
-## Baseline
+## Baseline/Benchark models
 
 Always establish a baseline
 
@@ -33,15 +37,25 @@ Always establish a baseline
     - Mean
     - Max
     - Min
-
+    - Random
   - Classification
     - Most frequent value
     - Random
-
   - Time series specific
-    - Lag/Seasonal Lag
-    - Last value available
-
+    - Persistence
+      - $\hat y_{t+h} = y_t$
+      - Latest value available
+      - Great for short horizons
+    - Climatology
+      - $\hat y_{t+h} = \bar y_{i \le t}$
+      - Average of all observations until present
+      - Great for short horizons
+    - Combination of Persistence and Climatology
+      - $\hat y_{t+h} = \beta_1 y_t + \beta_2 \bar y_{i \le t}$
+    - Lag: $\hat y_{t+h} = y_{t-k}$
+    - Seasonal Lag: $\hat y_{t+h} = y_{t+h-m}$
+    - Moving average
+    - Exponential average
 - Human Level Performance
 - Literature Review
 - Performance of older system
@@ -54,38 +68,46 @@ For eg: Relative RMSE = RMSE(model)/RMSE(baseline), with “good” threshold as
 
 ## Probabilistic Evaluation
 
-Now, we need to see if any increase or decrease in accuracy due to hyper-parameter tuning is statistically-significant, or just a matter of chance.
+Now, we need to see if any difference in accuracy across models/hyperparameters is statistically-significant, or just a matter of chance.
 
-## Regression Evaluation
+Summary Statistics: Don’t just look at the mean evaluation metric of the multiple splits; also get the uncertainty associated with the validation process.
 
-| Metric                                                      |                           Formula                            |   Unit   |   Range    | Preferred Value | Signifies                                                    | Advantages<br />✅                                            | Disadvantages<br />❌                                         | Comment                                                      |
-| :---------------------------------------------------------- | :----------------------------------------------------------: | :------: | :--------: | --------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | :----------------------------------------------------------- |
-| $R^2$<br />(Coefficient of Determination)                   |                       $1 - \text{RSE}$                       | Unitless |  $[0, 1]$  | $1$             | Proportion of changes in dependent var explained by regressors.<br /><br />Proportion of variance in $y$ explained by model wrt variance explained by mean<br /><br/>Demonstrates ___ of regressors<br/>- Relevance<br/>- Power<br/>- Importance |                                                              | Cannot use to compare same model on different samples, as it depends on variance of sample<br /><br />Susceptible to spurious regression, as it increases automatically when increasing predictors |                                                              |
-| Adjusted $R^2$                                              |       $1 - \left[\dfrac{(1-R^2)(n-1)}{(n-k-1)}\right]$       | Unitless |  $[0, 1]$  | $1$             |                                                              | Penalizes large number of predictors                         |                                                              |                                                              |
-| Accuracy                                                    |                     $100 - \text{MAPE}$                      |    %     | $[0, 100]$ | $100 \%$        |                                                              |                                                              |                                                              |                                                              |
-| Chi-Squared<br />$\chi^2$                                   |       $\sum \left( \dfrac{u_i}{\sigma_i^2} \right)^2$        |          |            | $0$             |                                                              |                                                              |                                                              |                                                              |
-| Spearman’s Correlation                                      | $\dfrac{ \text{Cov}(\ rg( \hat y), rg(y) \ ) }{ \sigma(\ rg(\hat y) \ ) \cdot \sigma( \ rg(y) \ ) }$ | Unitless | $[-1, 1]$  | $1$             |                                                              | Very robust against outliers<br />Invariant under monotone transformations of $y$ |                                                              |                                                              |
-| DW<br />(Durbin-Watson Stat)                                |                                                              |          |            | $> 2$           | Confidence of error term being random process                |                                                              | Not appropriate when $k>n$                                   | Similar to $t$ or $z$ value<br />If $R^2 >$ DW Statistic, there is [Spurious Regression](#Spurious Regression) |
-| AIC<br />Akaike Information Criterion                       |                       $-2 \ln L + 2k$                        |          |            | $0$             | Leave-one-out cross validation score                         | Penalizes predictors more heavily than $R_\text{adj}^2$      | For small values of $n$, selects too many predictors<br /><br />Not appropriate when $k>n$ |                                                              |
-| AIC Corrected                                               |            $\text{AIC} + \dfrac{2k(k+1)}{n-k-1}$             |          |            | $0$             |                                                              | Encourages feature selection                                 |                                                              |                                                              |
-| BIC/SBIC/SC<br />(Schwarz’s Bayesian Information Criterion) |                     $-2 \ln L + k \ln n$                     |          |            | $0$             |                                                              | Penalizes predictors more heavily than AIC                   |                                                              |                                                              |
-| HQIC<br />Hannan-Quinn Information Criterion                |            $-2 \ln L + 2k \ln \vert \ln n \vert$             |          |            | $0$             |                                                              |                                                              |                                                              |                                                              |
+- Standard error of accuracy estimate
+- Standard deviation
+- Quantiles
+- PDF
+- VaR
+
+## Bessel’s Correction
 
 $$
 \begin{aligned}
--2 \ln L
-&= n + n \ln(\text{MSE}) + n \ln (2 \pi) + \sum \ln w_i \\
-&\approx n \ln(\text{MSE})
+\text{Metric}_\text{corrected} &= \text{Metric}_\text{uncorrected} \times \dfrac{n}{\text{DOF}} \\
+\text{DOF} &= n-k-e
 \end{aligned}
 $$
 
-| $\chi^2_\text{reduced} = \dfrac{\chi^2}{n-k}$ | Meaning       |
-| --------------------------------------------- | ------------- |
-| $\approx 1$                                   | Good Fit      |
-| $>>1$                                         | Under-fitting |
-| $<<1$                                         | Over-fitting  |
+- where
+  - $n=$ no of samples
+  - $k=$ no of parameters
+  - $e=$ no of intermediate estimates (such as $\bar x$ for variance)
+- Do not perform this on metrics which are already corrected for degree of freedom (such as $R^2_\text{adj}$)
+- Modify accordingly for squares/root metrics
 
-The reason this works is because, here $\chi^2$ is just sum of normally-distributed error terms
+## Regression Evaluation
+
+| Metric                                                      |                           Formula                            |   Unit   |     Range     | Preferred Value | Signifies                                                    | Advantages<br />✅                                            | Disadvantages<br />❌                                         | Comment                                                      |
+| :---------------------------------------------------------- | :----------------------------------------------------------: | :------: | :-----------: | --------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | :----------------------------------------------------------- |
+| $R^2$<br />(Coefficient of Determination)                   |                       $1 - \text{RSE}$                       | Unitless |   $[0, 1]$    | $1$             | Proportion of changes in dependent var explained by regressors.<br /><br />Proportion of variance in $y$ explained by model wrt variance explained by mean<br /><br/>Demonstrates ___ of regressors<br/>- Relevance<br/>- Power<br/>- Importance |                                                              | Cannot use to compare same model on different samples, as it depends on variance of sample<br /><br />Susceptible to spurious regression, as it increases automatically when increasing predictors |                                                              |
+| Adjusted $R^2$                                              |      $1 - \left[\dfrac{(n-1)}{(n-k-1)} (1-R^2)\right]$       | Unitless |   $[0, 1]$    | $1$             |                                                              | Penalizes large number of predictors                         |                                                              |                                                              |
+| Accuracy                                                    |                     $100 - \text{MAPE}$                      |    %     |  $[0, 100]$   | $100 \%$        |                                                              |                                                              |                                                              |                                                              |
+| $\chi^2_\text{reduced}$                                     | $\dfrac{\chi^2}{n-k} = \dfrac{1}{n-k}\sum \left( u_i/\sigma_i \right)^2$ |          | $[0, \infty]$ | $1$             |                                                              |                                                              |                                                              | $\approx 1:$ Good fit<br />$\gg 1:$ Underfit/Low variance estimate<br />$\ll 1:$ Overfit/High variance estimate |
+| Spearman’s Correlation                                      | $\dfrac{ r(\ rg( \hat y), rg(y) \ ) }{ \sigma(\ rg(\hat y) \ ) \cdot \sigma( \ rg(y) \ ) }$ | Unitless |   $[-1, 1]$   | $1$             |                                                              | Very robust against outliers<br />Invariant under monotone transformations of $y$ |                                                              |                                                              |
+| DW<br />(Durbin-Watson Stat)                                |                                                              |          |               | $> 2$           | Confidence of error term being random process                |                                                              | Not appropriate when $k>n$                                   | Similar to $t$ or $z$ value<br />If $R^2 >$ DW Statistic, there is [Spurious Regression](#Spurious Regression) |
+| AIC<br />Akaike Information Criterion                       |                       $-2 \ln L + 2k$                        |          |               | $0$             | Leave-one-out cross validation score                         | Penalizes predictors more heavily than $R_\text{adj}^2$      | For small values of $n$, selects too many predictors<br /><br />Not appropriate when $k>n$ |                                                              |
+| AIC Corrected                                               |            $\text{AIC} + \dfrac{2k(k+1)}{n-k-1}$             |          |               | $0$             |                                                              | Encourages feature selection                                 |                                                              |                                                              |
+| BIC/SBIC/SC<br />(Schwarz’s Bayesian Information Criterion) |                     $-2 \ln L + k \ln n$                     |          |               | $0$             |                                                              | Penalizes predictors more heavily than AIC                   |                                                              |                                                              |
+| HQIC<br />Hannan-Quinn Information Criterion                |            $-2 \ln L + 2k \ln \vert \ln n \vert$             |          |               | $0$             |                                                              |                                                              |                                                              |                                                              |
 
 ### Probabilistic Evaluation
 
@@ -120,7 +142,7 @@ Variance of error term becomes infinite as we go further in time
 | **Accuracy**                                                 | $1 - \text{Error}$<br />$\dfrac{\text{TP + TN}}{\text{TP + FP + TN + FN}}$ |                          $\uparrow$                          |      %       |                          $[0, 100]$                          | $\dfrac{\text{Correct Predictions}}{\text{No of predictions}}$ |
 | **Error**                                                    |      $\dfrac{\text{FP + FN}}{\text{TP + FP + TN + FN}}$      |                           $[0, 1]$                           | $\downarrow$ | $\dfrac{\text{Wrong Predictions}}{\text{No of predictions}}$ |                                                              |
 | **F Score**<br />F~1~ Score<br />F-Measure                   |             $2 \times \dfrac{P \times R}{P + R}$             |                          $\uparrow$                          |   Unitless   |                           $[0, 1]$                           | Harmonic mean between precision and recall<br />Close to lower value |
-| ROC-AUC<br />Receiver-Operator Characteristics-Area Under Curve |     Sensitivity vs (1-Specificity)<br />= (1-FNR) vs FPR     | Larger AUC<br />Curve hugs the top left corner<br />High sensitivity, high specificity |   Unitless   |                           $[0, 1]$                           | How does the classifier compare to a classifier that predicts randomly<br />How well model can discriminate between $y=0$ and $y=1$ |
+| ROC-AUC<br />Receiver-Operator Characteristics-Area Under Curve |     Sensitivity vs (1-Specificity)<br />= (1-FNR) vs FPR     | Larger AUC<br />Curve hugs the top left corner<br />High sensitivity, high specificity |   Unitless   |                           $[0, 1]$                           | How does the classifier compare to a classifier that predicts randomly<br />How well model can discriminate between $y=0$ and $y=1$<br /><br />AUC = Probability that algo ranks a +ve over a -ve<br />Robust to unbalanced dataset |
 | **Recall**<br />Sensitivity<br />True Positive Rate          | $\dfrac{\textcolor{hotpink}{\text{TP}}}{\textcolor{hotpink}{\text{TP}} + \text{FN}}$ |                          $\uparrow$                          |   Unitless   |                           $[0, 1]$                           | How many actual +ve values were correctly predicted as +ve   |
 | **Precision**<br />PPV/<br />Positive Predictive Value       | $\dfrac{\textcolor{hotpink}{\text{TP}}}{\textcolor{hotpink}{\text{TP}} + \text{FP}}$ |                          $\uparrow$                          |   Unitless   |                           $[0, 1]$                           | Out of actual +ve values, how many were correctly predicted as +ve |
 | **Specificity**<br />True Negative Rate                      | $\dfrac{\textcolor{hotpink}{\text{TN}}}{\textcolor{hotpink}{\text{TN}} + \text{FP}}$ |                          $\uparrow$                          |   Unitless   |                           $[0, 1]$                           | Out of actual -ve values, how many were correctly predicted as -ve |
@@ -137,13 +159,17 @@ Variance of error term becomes infinite as we go further in time
 
 ### Graphs
 
-| Graph             |                                                              | Preferred                                                |
-| ----------------- | ------------------------------------------------------------ | -------------------------------------------------------- |
-|                   | ![image-20240220125218210](./assets/image-20240220125218210.png) |                                                          |
-| ROC Curve         | ![roc_curve](./assets/roc_curve.png)                         | As high as possible<br />At least higher than 45deg line |
-| Calibration Graph | ![image-20240320153822010](./assets/image-20240320153822010.png) | Along 45deg line                                         |
+| Graph             |                                                              |                                                              | Preferred                                                |
+| ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | -------------------------------------------------------- |
+| Error Rate        | ![image-20240220125218210](./assets/image-20240220125218210.png) |                                                              |                                                          |
+| ROC Curve         | ![roc_curve](./assets/roc_curve.png)                         |                                                              | As high as possible<br />At least higher than 45deg line |
+| Calibration Graph | ![image-20240528142438139](./assets/image-20240528142438139.png) | Create bins of different predicted probabilities<br />Calculate the fraction of $y=1$ for each bin<br />Confidence intervals (more uncertainty for bins with fewer samples)<br />Histogram showing fraction of samples in each bin | Along 45deg line                                         |
 
 ### Probabilistic Evaluation
+
+Wilson score interval
+
+![img](./assets/Wilson_score_interval_and_logistic_example.png)
 
 You can model accuracy as a binomial distribution with
 
@@ -151,6 +177,8 @@ You can model accuracy as a binomial distribution with
   - = No of predictions
   - = No of k folds * Validation Set Size
 - $p=$ Obtained Accuracy of classifier
+
+Similar to confidence intervals for proportion
 
 The uncertainty can be obtained from the distribution
 
@@ -166,6 +194,14 @@ for n in [100, 1_000, 10_000, 100_000]:
   print(f"Size: {interval_width/n * 100}")
   # returns alpha % of observed accuracy that fall outside the inverval --> This is the maximum further accuracy that is theoretically achievable
 ```
+
+### Decision Boundary
+
+Plot random distribution of values
+
+For eg:
+
+![0](./assets/9bca0d386fe78d1cbd051112ed2f8f1f69a70ee95971fae928749471.png)
 
 ### Confusion Matrix
 
@@ -267,54 +303,46 @@ $$
 \end{aligned}
 $$
 
-## Summary Statistics
+## Residual Inspection
 
-Don’t just look at the mean evaluation metric of the multiple splits
+Perform all the inspection on
 
-Also use standard deviation & standard error to also get the uncertainty associated with the validation process.
+- train and dev data
+- externally-studentized residuals, to correct for leverage
 
-## Residual Analysis
+There should be no explainable unsystematic component
 
-|                                   |                                                              | Numerical                                                    | Graphical Plots                                              |
-| --------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Random residuals                  |                                                              | Normality test                                               | Q-Q Plot of $u_i$<br />Histogram for $u_i$                   |
-| No explained systematic component | - No relationship between error and independent variables<br/>- If there is correlation, $\exists$ unexplained system component | $\text{Cov}(u_i, x_i) = 0; \text{Cov}(u_i^2, x_i) = 0$ : No covariance/correlation between $u_i$ and $x_i$<br/>, and $u_i^2$ and $x_i$ | Line graph: $u_i$ vs $x_i$<br />Line graph: $u_i^2$ vs $x_i$<br/>Line graph: $u_i$ vs $y_i$<br />Line graph: $u_i^2$ vs $y_i$ |
-| Goodness of fit                   |                                                              | - MLE Percentiles<br/>- Kolmogorov Smirnov                   |                                                              |
+- Symmetric distribution for values of error terms **for a given value $x$**
+- **Not** over time/different values of $x$
+- This means that
+	1. you have used up all the possible factors
+	2. $u_i$ only contains the non-systematic component
 
-Perform all the plots for train and validation data
-
-### Numeric
-
-- Series of $u_i$ are random
-
-  1. $E(u_i | x_i) = 0$
-
-    2. Symmetric distribution for values of error terms **for a given value $x$**
-    3. **Not** over time/different values of $x$
-    4. This means that
-       1. you have used up all the possible factors
-       2. $u_i$ only contains the non-systematic component
-
-  5. Homoscedascity of variance
-
-    6. $\text{var}(u_i | x_i) = \sigma^2 (u_i|x_i) = \text{constant}$ should be same $\forall i$
-    7. For the Variance of distribution of potential outcomes, the range of distribution stays same over time
-    8. $\sigma^2 (x) = \sigma^2(x-\bar x)$
-
-    else, the variable is **volatile**; hard to predict; **we cannot use OLS**
-
-    - if variance decreases, value of $y$ is more reliable as training data
-    - if variance increases, value of $y$ is less reliable as training data
-    - We use volatility modelling (calculating variance) to predict the pattern in variance
+| Ensure                                                       | Meaning                                                      | Numerical                                                    | Graphical                                                    | Implication if violated                                      | Action if violated                                           |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Random residuals                                             | - No relationship between error and independent variables<br />- No relationship between error and predictions<br/>- If there is correlation, $\exists$ unexplained system component | Normality test<br />$E(u_i |x_i) = 0$<br /><br />$r(u_i, x_i) = 0$<br />$r(\vert u_i \vert, x_i) = 0$<br />$r(u_i^2, x_i) = 0$<br /><br />$r(u_i, y_i) = 0$<br />$r(\vert u_i \vert, y_i) = 0$<br />$r(u_i^2, y_i) = 0$ | Q-Q Plot<br />Histogram<br /><br />$u_i-x_i$<br />$\vert u_i \vert -x_i$<br />$u_i^2-x_i$<br /><br />$u_i-y_i$<br />$\vert u_i \vert -y _i$<br />$u_i^2-y_i$ | ❌ Unbiased parameters                                        | Fix model misspecification                                   |
+| No autocorrelation                                           | - Random sequence of residuals should bounce between +ve and -ve according to a binomial distribution<br />- Too many/few bounces may mean that sequence is not random<br /><br />No [autocorrelation](#Autocorrelation) between $u_i$ and $u_j$ | $r(u_i, u_j \vert x_i, x_j )=0$<br />Runs test<br />DW Test  | Sequence Plot of $u_i$ vs $t$<br />Lag Plot of $u_i$ vs $u_j$ | ✅ Parameters remain unbiased<br />❌ MSE estimate will be lower than true residual variance<br /><br />Properties of error terms in presence of $AR(1)$ autocorrelation <br/><br/>- $E[u_i]=0$<br/>- $\text{var}(u_i)= \sigma^2/(1-\rho^2)$<br/>- $r(u_i, u_{i-p}) = \rho^p \text{var}(u_i) = \rho^p \sigma^2/(1-\rho^2)$ | Fix model misspecification<br />Incorporate trend<br />Incorporate lag (last resort)<br />Autocorrelation analysis |
+| No effect of outliers                                        |                                                              |                                                              |                                                              |                                                              | Outlier removal/adjustment                                   |
+| Low leverage & influence of each point                       |                                                              |                                                              |                                                              |                                                              | Data transformation                                          |
+| Homoscedasticity<br />(Constant variance)                    | $\sigma^2 (u_i|x_i) = \text{constant}$ should be same $\forall i$ |                                                              |                                                              |                                                              | Weighted regression                                          |
+| Error in input variables                                     |                                                              |                                                              |                                                              |                                                              | Total regression                                             |
+| Correct model specification                                  |                                                              |                                                              |                                                              |                                                              | Model building                                               |
+| Goodness of fit                                              |                                                              | - MLE Percentiles<br/>- Kolmogorov Smirnov                   |                                                              |                                                              |                                                              |
+| Significance in difference in residuals for models/baselines | Ensure that all the models are truly different, or is the conclusion that one model is performing better than another due to chance | [Comparing Samples](../../1_Core/Probability_&_Statistics/10_Comparing_Samples.md) |                                                              |                                                              |                                                              |
 
 ### Why is this important?
 
 For eg: Running OLS on Anscombe’s quartet gives
 
 - same curve fit for all
-- Same $R^2$ for all
+- Same $R^2$, RMSE, standard errors for coefficients for all
 
-But clearly it is not optimal
+But clearly the fit is not equally optimal
+
+1. Only the first one is acceptable
+2. Model misspecification
+3. Outlier
+4. Leverage
 
 ![image-20240217123508539](./assets/image-20240217123508539.png)
 
@@ -394,3 +422,8 @@ Always look at all curves with **uncertainties** wrt each epoch, train, hyper-pa
 | 4-A   | Small   | $\approx 0$       | Low              | Increase train size   |
 | 4-B   | Small   | $\approx 0$       | High             | ✅                     |
 
+## Diebold-Mariano Test
+
+Determine whether the two forecasts are significantly different
+
+Basically the same as [10_Comparing_Samples.md](../../1_Core/Probability_&_Statistics/10_Comparing_Samples.md) 

@@ -5,6 +5,7 @@
 ## References
 
 - [x] [Modern Data Analysis for Economics](https://jiamingmao.github.io/data-analysis/)
+- [ ] [Statistical Rethinking | Richard McElreath](https://www.youtube.com/playlist?list=PLDcUM9US4XdPz-KxHM4XHt7uUVGWWVSus)
 - [ ] [Using Big Data to Solve Economic and Social Problems | Harvard](https://www.youtube.com/playlist?list=PLalrHnPrv5uDe-vDW5dPxTByQoZu6P6Hq)
 - [ ] [Causality | Shaw Talebi](https://www.youtube.com/playlist?list=PLz-ep5RbHosVVTz9HEzpI4d6xpWsc8rOa)
 - [ ] [The Effect: An Introduction to Research Design and Causality](https://www.youtube.com/playlist?list=PLcTBLulJV_AK1hKtnO0-kYrU0D09K-kj8)
