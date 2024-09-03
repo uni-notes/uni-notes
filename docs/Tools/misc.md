@@ -1,6 +1,6 @@
-## Mirror a website
+ ## Mirror a website
 
 ```
-wget -m "https://otexts.com/fpp3"
+wget --no-parent -r -l 2 -P . "https://otexts.com/fpp3"
 ```
 

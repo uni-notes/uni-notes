@@ -1,37 +1,41 @@
-
-
 # Quantization
 
 Mapping input values from a large set (often continuous) to output values in a (countable) smaller set (often discrete)
 
+![](assets/quantization.png)
+
 ## Advantages
 
-1. Lower memory usage
-2. Lower power consumption
-3. Lowe latency
-4. Smaller chip area
+1. Faster operations
+2. Lower memory usage
+3. Lower power consumption
+4. Lower latency
+5. Smaller chip area (no need of FP hardware)
 
-## IDk
+## Disadvantages
+- Loss in accuracy
+	- ![](assets/quantization_loss_in_accuracy.png)
+- Decompressing back to FP32
+	- Loss in resolution of weights
+	- Loss in accuracy of weights
 
-- Weights/Activations
+## Types
 
-- Linear/Non-linear
-
-- Symmetric/assymetric
-
-- Quantization-aware training
-
-- Training/inference
-
+- What to quantize
+	- Weights & Biases
+	- Activations
+	- Inputs
+- How
+	- Linear/Non-linear
+	- Symmetric/Assymmetric
+	- Quantization-aware training
+- Training/Inference
 - Error
-
   Tradeoff between 2 types
-
   - Clipping
     - To reduce, you need to inc the range: dec $r_\min$ and inc $r_\max$
   - Rounding
     - To reduce, you need to reduce the range: inc $r_\min$ and dec $r_\max$
-
 - Per-tensor, per-channel
 
 ## Rounding
@@ -112,12 +116,15 @@ Solution
 
 ### Post Training
 
+![](assets/quantization-1.png)
+
 - Training –> Quantization
 - Weights
   - Frozen & do not change
   - Can precompute scale & zero point
 - Activations
   - scale & zero-points can be calibrated using a mini batch of data
+- Inputs also can be quantized to enforce int x int operations
 
 How to find scale and zero-point
 
@@ -125,9 +132,11 @@ How to find scale and zero-point
 
 ### Quantization-Aware Training
 
-Simulate quantization during training to improve model robustness, and then use Post Training Quantization
+Emulate inference-time quantization during training to improve model robustness, and then use Post Training Quantization
 
-![image-20240509075836610](./assets/image-20240509075836610.png)
+![](assets/post_training_quantization_cause_of_problems.png)
+
+![](assets/quantization_aware_training.png)
 
 “Fake quantization” nodes
 

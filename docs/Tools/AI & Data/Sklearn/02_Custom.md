@@ -29,187 +29,148 @@ class CustomRegression(BaseEstimator):
     """
     All variables inside the Class should end with underscore
     """
+    def __init__(self, model, method="Nelder-Mead", cost = None, alpha=0, l1_ratio=0.5, maxiter = 500, maxfev = 1_000):
+        self.model = model
+        self.method = method
+        self.cost = cost if cost is not None else self.mse
+        self.alpha = alpha
+        self.l1_ratio = l1_ratio
+        self.maxiter = maxiter
+        self.maxfev = maxfev
+
     def __str__(self):
-        return str(self.model)
+        return str(self.model_)
     def __repr__(self):
         return str(self)
     
-    def rmse(self, pred, true, sample_weight):
+    def mse(self, pred, true, sample_weight):
         error = pred - true
         
-        loss = error**2
+        cost = error**2
 
-        cost = np.sqrt(
-            # median is robust to outliers than mean
-            np.mean(
-                sample_weight * loss
+        cost = (
+            np.mean( # median is robust to outliers than mean
+                sample_weight * cost
             )
         )
 
         return cost
-
-    def loss(self, pred, true):
-        return self.error(pred, true, self.sample_weight)
-    
+   
     def l1(self, params):
-        return np.sum(np.abs(params-self.model.param_initial_guess))
+        return np.sum(np.abs(params-self.model_.param_initial_guess))
     def l2(self, params):
-        return np.sum((params-self.model.param_initial_guess) ** 2)
-    def l3(self, params, alpha=0.5):
-        return alpha * self.l1(params) + (1-alpha)*self.l2(params)
+        return np.sum((params-self.model_.param_initial_guess) ** 2)
+    def l3(self, params, l1_ratio=0.5):
+        return (
+            l1_ratio * self.l1(params) +
+            (1 - l1_ratio) * self.l2(params)
+        )
 
-    def reg(self, params, penalty_type="l3", lambda_reg_weight = 1.0):
+    def regularization_cost(self, params, alpha, penalty_type="l3"):
         """
-        lambda_reg_weight = Coefficient of regularization penalty
+        Regularization requires standardised parameters
         """
+        penalty = get_attr(self, penalty_type)(params, self.l1_ratio)
 
-        if penalty_type == "l1":
-            penalty = self.l1(params)
-        elif penalty_type == "l2":
-            penalty = self.l2(params)
-        elif penalty_type == "l3":
-            penalty = self.l3(params)
+        return (alpha * penalty)/self.sample_size_
+
+    def cost_total(self, params, X, y):
+        pred = self.model_.equation(X, *params)
+        cost = self.cost(y, pred, self.sample_weight)
+
+        if self.alpha == 0:
+            pass
         else:
-            raise Exception
-
-        return lambda_reg_weight * penalty/self.sample_size
-
-    def cost(self, params, X, y):
-        pred = self.model.equation(X, *params)
-        return self.loss(pred, true=y) #+ self.reg(params) # regularization requires standardised parameters
+            cost += self.regularization_cost(params, self.alpha)
+        return cost
 
     def check_enough_samples(self):
-        return self.enough_samples
+        return self.enough_samples_
 
-    def check_optimization_success(self):
-        return self.optimization.success
+    def fit(self, X, y, sample_weight=None):
+        check_X_y(X, y) # Using self.X,self.y = check_X_y(self.X,self.y) removes column names
 
-    def fit(self, X, y, model, method="Nelder-Mead", error = None, sample_weight=None, alpha=0.05):
-        check_X_y(X, y) #Using self.X,self.y = check_X_y(self.X,self.y) removes column names
-
-        self.X = X
-        self.y = y
+        self.X, self.y = X, y
 
         self.n_features_in_ = self.X.shape[1]
 
-        if sample_weight is None or len(sample_weight) <= 1: # sometimes we can give scalar sample weight same for all
-            self.sample_size = self.X.shape[0]
-        else:
-            self.sample_size = sample_weight[sample_weight > 0].shape[0]
-
+        self.sample_size_ = self.X.shape[0]
+        
         self.sample_weight = (
             sample_weight
             if sample_weight is not None
-            else np.full(self.sample_size, 1) # set Sample_Weight as 1 by default
+            else np.full(self.sample_size_, 1) # set Sample_Weight as 1 by default
         )
 
-        self.error = (
-            error
-            if error is not None
-            else self.rmse
-        )
-        
-        self.model = model # copy.deepcopy(model)
-        
-        params = getfullargspec(self.model.equation).args
-        
-        params = [param for param in params if param not in ['self', "x"]]
-        
-        self.optimization = o.minimize(
-            self.cost,
-            x0 = self.model.param_initial_guess,
+        self.sample_size_ = self.sample_weight[self.sample_weight > 0].shape[0]
+
+        self.model_ = copy.deepcopy(self.model)
+
+        self.dof_ = self.sample_size_ - self.model_.k # - 1 # n-k-1
+        if self.dof_ <= 0:
+            self.success_ = False
+            self.enough_samples_ = False
+            # raise Exception("Not enough samples")
+            return self
+        else:
+            self.enough_samples_ = True
+
+        params_all = getfullargspec(self.model_.equation).args        
+        params = [param for param in params_all if param not in ['self', "x"]]
+
+        self.optimization_ = o.minimize(
+            self.cost_total,
+            x0 = self.model_.param_initial_guess,
             args = (self.X, self.y),
-            method = method, # "L-BFGS-B", "Nelder-Mead", "SLSQP",
-            constraints = self.model.constraints,
-            bounds = self.model.param_bounds,
+            method = self.method, # "L-BFGS-B", "Nelder-Mead", "SLSQP",
+            constraints = self.model_.constraints,
+            bounds = self.model_.param_bounds,
             # [
             #     (-1, None) for param in params # variables must be positive
             # ]
             options = dict(
-                maxiter = 1_000,
-                maxfev = 1_000,
+                maxiter = self.maxiter,
+                maxfev = self.maxfev,
                 # xatol=1e-4,
                 # fatol=1e-4,
                 # adaptive=False,
             )
         )
-        
-        self.dof = self.sample_size - self.model.k - 1 # n-k-1
+        self.success_ = self.optimization_.success
 
-        if self.dof <= 0:
-            self.enough_samples = False
-            # self.popt = [0 for param in params]
-            # st.warning("Not enough samples"
-            return self
-        else:
-            self.enough_samples = True
-        
-        # success = self.optimization.success
-        # if success is False:
-        #     st.warning("Did not converge!")
-
-        self.popt = (
-            self.optimization.x
+        self.fitted_coeff_ = (
+            self.optimization_.x
         )
 
-        self.rmse = rmse(
-            self.output(self.X),
-            self.y,
-            sample_weight = self.sample_weight
+        self.fitted_coeff_formatted_ = [
+            f"""{{ {utils.round_f(popt, 4)} }}""" for popt in self.fitted_coeff_
+        ]
+            
+        self.model_.set_fitted_coeff(*self.fitted_coeff_)
+        self.model_.set_fitted_coeff_formatted(*self.fitted_coeff_formatted_)
+
+        self.rmse_response = root_mean_squared_error(
+            y,
+            self.output(X),
         )
-
-        cl = 1 - (alpha/2)
-
-        if "hess_inv" in self.optimization:
-            self.covx = (
-                self.optimization
-                .hess_inv
-                .todense()
-            )
-
-            self.pcov = list(
-                np.diag(
-                    self.rmse *
-                    np.sqrt(self.covx)
-                )
-            )
-
-            self.popt_with_uncertainty = [
-                f"""{{ (
-                    {utils.round_f(popt, 4)}
-                    ±
-                    {utils.round_f(stats.t.ppf(cl, self.dof) * pcov.round(2), 2)}
-                )}}""" for popt, pcov in zip(self.popt, self.pcov)
-            ]
-        else:
-            self.popt_with_uncertainty = [
-                f"""{{ {utils.round_f(popt, 4)} }}""" for popt in self.popt
-            ]
-
-        self.model.set_fitted_coeff(*self.popt_with_uncertainty)
+        self.rmse_link = root_mean_squared_error(
+            y,
+            self.output(X),
+        )
         
         return self
     
     def output(self, X):
-        return (
-            self.model
-            .equation(X, *self.popt)
+        return np.array(
+            self.model_
+            .equation(X, *self.fitted_coeff_)
         )
     
-    def get_se_x_cent(self, X_cent):
-        return self.rmse * np.sqrt(
-            (1/self.sample_size) + (X_cent.T).dot(self.covx).dot(X_cent)
-        )
     def get_pred_se(self, X):
-        if False: # self.covx is not None: # this seems to be abnormal. check this
-            X_cent = X - self.X.mean()
-            se = X_cent.apply(self.get_se_x_cent, axis = 1)
-        else:
-            se = self.rmse
-        return se
+        return self.rmse_response
 
-    def predict(self, X, alpha=0.05):
-        check_is_fitted(self) # Check to verify if .fit() has been called
+    def predict(self, X):
+        check_is_fitted(self, "fitted_coeff_") # Check to verify if .fit() has been called
         check_array(X) #X = check_array(X) # removes column names
 
         pred = (
@@ -217,13 +178,11 @@ class CustomRegression(BaseEstimator):
             .astype(np.float32)
         )
 
-        se = self.get_pred_se(X)
+        return pred
 
-        cl = 1 - (alpha/2)
+    def predict_quantile(self, X, q):
+        return self.model_.quantile(X, self.X, self.y, link_distribution_dof=self.dof_, link_distribution_q=q)
 
-        ci =  stats.t.ppf(cl, self.dof) * se
-
-        return pd.concat([pred, pred+ci, pred-ci], axis=1)
 
 class CustomRegressionGrouped(CustomRegression):
     def __str__(self):
@@ -232,51 +191,61 @@ class CustomRegressionGrouped(CustomRegression):
             x += f"{str(key)}: {str([utils.round_f(v, 4) for v in list(value)])} \n\n"
         
         return str(x)
-    def __init__(self, group):
-        super().__init__()
+    def __init__(self, model, cost, method="Nelder-Mead", group=None):
+        super().__init__(model=model, cost=cost, method=method)
         self.group = group
-        self.optimization = dict()
-        self.model = dict()
-        self.enough_samples = dict()
-        self.sample_size = 0
+        self.model = model
+        self.method = method
+        self.cost = cost
+
+        self.optimization_ = dict()
+        self.model_ = dict()
+        self.enough_samples_ = dict()
+        
+        self.dof_ = 0
+        self.sample_size_ = 0
     
     def get_params(self, how="dict"):
         params = dict()
-        for key, value in self.model.items():
-            params[key] = value.popt
+        for key, value in self.model_.items():
+            popt = "fitted_coeff_"
+            if popt in dir(value):
+                params[key] = getattr(value, popt)
+            else:
+                params[key] = None
             
         if how == "df":
             params = pd.DataFrame(params).T
         return params
     
-    def model_group(self, X, y, model, solver):
-        return(
-            CustomRegression()
+    def model_group(self, X, y, model, method, error, sample_weight):
+        return (
+            CustomRegression(
+                model = self.model,
+                cost = self.cost,
+                method = self.method,
+            )
             .fit(
-                X = X,
-                y = y,
-                model = model, # copy.deepcopy(model)
-                method = solver
+                X,
+                y,
+                sample_weight
             )
         )
         
-    def check_enough_samples(self):
-        enough_samples = True
-        for e in self.enough_samples.values():
-            if not e:
-                enough_samples = False
+    def check_enough_samples(self, how="all"):
+        if how == "all":
+            enough_samples = True
+            for e in self.enough_samples_.values():
+                if not e:
+                    enough_samples = False
+        elif how == "any":
+            enough_samples = self.enough_samples_
+        else:
+            pass
                 
         return enough_samples
 
-    def check_optimization_success(self):
-        success = True
-        for o in self.optimization.values():
-            if not o.success:
-                success = False
-                
-        return success
-
-    def apply_model_multiple_group(self, X, y, group, model, solver):
+    def apply_model_multiple_group(self, X, y, group, model, method, cost, sample_weight):
         for g in X[self.group].unique():
             mask = X.eval(f"{self.group} == {g}")
                 
@@ -284,50 +253,90 @@ class CustomRegressionGrouped(CustomRegression):
                 X[mask],
                 y[mask],
                 model,
-                solver
+                method,
+                cost,
+                sample_weight[mask] if sample_weight is not None else sample_weight
             )
+
+            if m.success_:
+                self.model_[g] = m
+                self.enough_samples_[g] = m.enough_samples_
+                self.optimization_[g] = m.optimization_
+                self.sample_size_ += m.sample_size_
+        
+        success = True
+        for o in self.optimization_.values():
+            if not o.success:
+                success = False
+                
+        self.success_ = success
             
-            self.model[g] = m
-            self.enough_samples[g] = m.enough_samples
-            self.optimization[g] = m.optimization
-            self.sample_size += m.sample_size
-            
-    def fit(self, X, y, model, method="Nelder-Mead", error = None, sample_weight=None, alpha=0.05):
-        self.apply_model_multiple_group(X, y, self.group, model, method)
-    def predict(self, X, alpha=0.05):
+    def fit(self, X, y, sample_weight=None):
+        self.model_ = dict()
+
+        self.apply_model_multiple_group(X, y, self.group, self.model, self.method, self.cost, sample_weight)
+    def predict(self, X):
         Xs = []
         preds = pd.DataFrame()
         
         for g in X[self.group].unique():
-            if g not in self.model.keys():
+            if g not in self.model_.keys():
                 return
             else:
                 Xg = X.query(f"{self.group} == {g}")
-                
-                pred = self.model[g].predict(
-                    X = Xg
+                index = Xg.index
+
+                pred = self.model_[g].predict(
+                    X = Xg.copy().reset_index(drop=True),
                 )
-                Xs.append(Xg)
-                
-                preds = pd.concat([preds, pred])
+
+                preds = pd.concat([
+                    preds, pd.Series(pred, index=index)
+                ])
+        return preds.sort_index()
+    
+    def predict_quantile(self, X, q):
+        Xs = []
+        preds = pd.DataFrame()
+        
+        for g in X[self.group].unique():
+            if g not in self.model_.keys():
+                return Exception(f"Model not trained for {g}")
+            else:
+                Xg = X.query(f"{self.group} == {g}")
+                index = Xg.index
+
+                pred = self.model_[g].predict_quantile(
+                    X = Xg.copy().reset_index(drop=True),
+                    q = q
+                )
+
+                preds = pd.concat([
+                    preds, pd.Series(pred, index=index)
+                ])
         
         return preds.sort_index()
 ```
 
 ```python
-curve_fit = CustomRegression()
+curve_fit = CustomRegression(
+	model = model_selected,
+	cost = regression.LogCosh().cost,
+	method = solver
+)
 print(curve_fit) ## prints latex
 
 curve_fit.fit(
-  X_train,
-  y_train,
-  model = First_Order(),
-  error = regression.LogCosh().cost,
-  method = "Nelder-Mead"
+	X_train,
+	y_train,
+	sample_weight=df_train["Sample_Weight"],
 )
 
 print(curve_fit) ## prints latex with coefficent values
+
 pred = curve_fit.predict(X_test)
+ll = curve_fit.predict_quantile(X_test, q=0.025)
+ul = curve_fit.predict_quantile(X_test, q=0.975)
 ```
 
 ## Holt-Winters
@@ -470,3 +479,68 @@ print('original series length: ', len(series))
 print('prediction length: ', len(predictions))
 ```
 
+## Soft Labels/Label Smoothing
+
+```python
+from sklearn.base import BaseEstimator, ClassifierMixin
+from sklearn.utils.validation import check_array
+from scipy.special import softmax
+import numpy as np
+
+def _log_odds_ratio_scale(X):
+    X = np.clip(X, 1e-8, 1 - 1e-8)   # numerical stability
+    X = np.log(X / (1 - X))  # transform to log-odds-ratio space
+    return X
+
+class FuzzyTargetClassifier(ClassifierMixin, BaseEstimator):
+        
+    def __init__(self, regressor):
+        '''
+        Fits regressor in the log odds ratio space (inverse crossentropy) of target variable.
+        during transform, rescales back to probability space with softmax function
+        
+        Parameters
+        ---------
+        regressor: Sklearn Regressor
+            base regressor to fit log odds ratio space. Any valid sklearn regressor can be used here.
+        
+        '''
+        
+        self.regressor = regressor
+        return
+    
+    def fit(self, X, y=None, **kwargs):
+        #ensure passed y is onehotencoded-like
+        y = check_array(y, accept_sparse=True, dtype = 'numeric', ensure_min_features=1)
+        self.regressors_ = [clone(self.regressor) for _ in range(y.shape[1])]
+        for i in range(y.shape[1]):
+            self._fit_single_regressor(self.regressors_[i], X, y[:,i], **kwargs)
+        
+        return self
+    
+    def _fit_single_regressor(self, regressor, X, ysub, **kwargs):
+        ysub = _log_odds_ratio_scale(ysub)        
+        regressor.fit(X, ysub, **kwargs)
+        return regressor    
+        
+    def decision_function(self,X):
+        all_results = []
+        for reg in self.regressors_:
+            results = reg.predict(X)
+            if results.ndim < 2:
+                results = results.reshape(-1,1)
+            all_results.append(results)
+        
+        results = np.hstack(all_results)                
+        return results
+    
+    def predict_proba(self, X):
+        results = self.decision_function(X)
+        results = softmax(results, axis = 1)
+        return results
+    
+    def predict(self, X):
+        results = self.decision_function(X)
+        results = results.argmax(1)
+        return results
+```

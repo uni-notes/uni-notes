@@ -29,22 +29,6 @@ A 2 layer ANN is capable of approximate any function over a ==**finite subset**=
 Catch: The size of NN should be equal to number of datapoints
 
 Over-exaggerated property; same property is shared by Nearest Neighbors and splines, but no one cares
-
-## Hyperparameters
-
-- Batch size
-- Input size
-- Output size
-- No of hidden layers
-- No of neurons in hidden layers
-- Regularization
-- Loss function
-- Weight initialization technique
-- Optimization
-  - Algorithm
-  - Learning rate
-  - No of epochs
-
 ## Artificial Neuron
 
 Most basic unit of an artificial neural network

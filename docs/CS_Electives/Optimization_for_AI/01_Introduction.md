@@ -1,38 +1,16 @@
 # Optimization
 
 Find a set of parameters that minimizes the loss function for the given data and algorithm
+
 $$
 \underset{\theta}{\arg \min} \ L( \ y, \hat f_\theta(D) \ )
 $$
 
+![Loss Landscape Intuition](./assets/Loss_Landscape_Intuition.png)
+
 ## IDK
 
 Always test optimization procedure on known solution
-
-## Backpropagation Steps
-
-1. Forward pass
-2. Calculate loss 
-3. Backward pass
-
-Basically just chain rule + intelligent caching of intermediate results
-
-Computationally-cheap, but large storage required for caching intermediate results
-
-Each layer needs to be able to perform vector Jacobian product: multiply the “incoming backward gradient” by its derivatives
-$$
-\begin{aligned}
-\dfrac{\partial J}{\partial \theta_l}
-&=
-\dfrac{\partial J}{\partial y_L}
-\left(
-\prod_{i=l}^L
-\dfrac{\partial y_i}{\partial y_{i-1}}
-\right)
-\dfrac{\partial y_l}{\partial \theta_l}
-\end{aligned}
-$$
-![image-20240710181826692](./assets/image-20240710181826692.png)
 
 ## Training Process
 
@@ -107,66 +85,6 @@ Encourages (not guaranteed) certain parameters to end in range values, through p
 | SGD<br />(Stochastic Gradient Descent)  | Update weights after viewing every sample point              |                                                              | ❌             | $w_t - \eta g(w_t)$               | Cheaper computation<br />Faster updates<br />Randomization helps escape ‘shallow’ local minima | May not converge to global minima for non-convex cost functions<br />Noisy/Oscillating/Erratic convergence |
 | MBGD<br />(Mini-Batch Gradient Descent) | Update weights after viewing the $b$ sample points, where $b < n$<br /><br />Usually $b=32$ | Middle ground between BGD and SGD<br />Generalizes better than Adam | ❌             |                                   |                                                              |                                                              |
 
-Rule of thumb for SGD: recommended $\eta = 0.1$
-
-## Gradient Descent
-
-Similar to trial and error
-
-1. Start with some $\theta$ vector
-2. Keep changing $\theta_0, \theta_1, \dots, \theta_n$ using derivative of cost function, until minimum for $J(\theta)$ is obtained - **Simultaneously**
-
-$$
-\theta_{\text{new}} =
-\theta_{\text{prev}} -
-\eta \ 
-{\nabla J}
-$$
-
-|                       | Meaning                                                      |
-| --------------------- | ------------------------------------------------------------ |
-| $\theta_{\text{new}}$ | Coefficients obtained from current iteration<br />(Output of current iteration) |
-| $\theta_{\text{old}}$ | Coefficients obtained from previous iteration<br />(Output of previous iteration) |
-| $\eta$                | Learning Rate                                                |
-| $\nabla J$            | Gradient vector of $J (\theta)$                              |
-
-### Gradients of the Loss Function
-
-![image-20240704165816976](./assets/image-20240704165816976.png)
-
-![image-20240704170135799](./assets/image-20240704170135799.png)
-
-### Learning Rate $\eta$
-
-$0 < \eta < 1$
-
-- Large value may lead to underfitting/overfitting
-- Small value will lead to more time taken
-
-Can be
-
-- constant
-- time-based decay
-
-![image-20240216010116161](./assets/image-20240216010116161.png)
-
-## Iterative vs Normal Equation
-
-|                              |            Iterative            |              Normal Equation               |
-| :--------------------------: | :-----------------------------: | :----------------------------------------: |
-|  $\alpha$ **not** required   |                ❌                |                     ✅                      |
-| Feature scaling not required |                ❌                |                     ✅                      |
-|       Time Complexity        |            $O(kn^2)$            |                  $O(n^3)$                  |
-|         Performance          |     Fast even for large $n$     |             Slow if $n > 10^4$             |
-|        Compatibility         |    Works for all algorithms     |      Doesn’t work for classification       |
-|        No of features        |    Works for all algorithms     | Doesn't work when $X^TX$ is non-invertible |
-|        Stop criteria         |                                 |                    None                    |
-|         Convergence          |              Slow               |                                            |
-|  Global Optimal guaranteed   |                ❌                |                     ✅                      |
-|        Loss Function         | Should be double-differentiable |                                            |
-
-Gradient-based methods find min of a function by moving in the direction in which the function decreases most steeply
-
 ## Speed Up Training
 
 - Subsetting
@@ -209,10 +127,6 @@ x'_i
 &= \frac{ x_i - \bar x }{s}
 \end{aligned}
 $$
-
-#### Batch Normalization
-
-![img](./assets/1*vXpodxSx-nslMSpOELhovg.png)
 
 ## Learning Rate
 
@@ -295,15 +209,24 @@ When training a neural network, we usually divide our data in mini-batches and g
 
 Initialization is very important: Weights don’t move “that much”, so weights tend often stay much closer to initial points than to the “final” point after optimization from different initial point
 
-If you initialize all the weights as 0, all your gradients will be 0 and ANN will not learn anything
+If you initialize all the weights as 0, ANN will not learn anything
+- all your gradients will be the same
+- all the parameter updates will be the same
+Ideally this is what we want
+
 $$
-\begin{aligned}
-W_{t=0} &= N(0, \sigma^2 I) \\
-\sigma^2_\text{recom RELU} &= \dfrac{2}{\text{no of neurons}} \\
-\sigma^2_{\text{recom } \sigma} &= \dfrac{1}{\text{no of neurons}}
-\end{aligned}
+W_{t=0} = N(0, \sigma^2 I)
 $$
+
 Kaiming Normal Initialization: based on central limit theorem, we want the entire distribution to become $N(0, 1)$
+
+Poor initialization can lead to vanishing gradients
+
+| Problem   | Visualization                              |
+| --------- | ------------------------------------------ |
+| Vanishing | ![](assets/layers_vanishing_gradients.png) |
+| Exploding | ![](assets/layers_exploding_gradients.png) |
+
 
 The choice of $\sigma^2$ will affect
 
@@ -320,21 +243,30 @@ The choice of $\sigma^2$ will affect
 
 Here $n=$ no of neurons
 
-Why is $\sigma^2 = 2/n$ the best? Because ReLU will cause half the components of the activations to be set to 0, so we need twice the variance to achieve the same final variance
+|         | $\sigma = \sqrt{\dfrac{\text{Gain}}{n}}$<br />Gain = |                                                              |
+| ------- | ---------------------------------------------------- | ------------------------------------------------------------ |
+| Linear  | $1$                                                  |                                                              |
+| Sigmoid | $1$                                                  |                                                              |
+| Tanh    | $5/3$                                                |                                                              |
+| RELU    | $\sqrt{2}$                                           | Because ReLU will cause half the components of the activations to be set to 0, so we need twice the variance to achieve the same final variance |
 
 Even when trained successfully, the effects/scales present at initialization persist throughout training
 
 ![image-20240525163200403](./assets/image-20240525163200403.png)
 
 ### Solution
+Normalization just before activation function 
 
-|           | Layer Normalization                                                                              | Batch Normalization | |
-|---        | ---                                                                                              | ---                 | ---|
-| | Normalize activations of each image at each layer | Normalize activations of all images in each mini-batch at each layer | |
-|$w'_{i+1}$ | $\dfrac{w_{i+1} - E[w_{i+1}]}{\sigma(w_{i+1}) + \epsilon}$                                      |                     | |
-| | ![image-20240525165138330](./assets/image-20240525165138330.png) | ![image-20240525165203016](./assets/image-20240525165203016.png) | |
-|           | ![image-20240525164536090](./assets/image-20240525164536090.png)                                 |                     | |
-|Limitation | Harder to train standard FCN to low loss, because the relative sizes between activations is lost | Inter-dependence of training samples (Soln: below) | |
+![img](./assets/1*vXpodxSx-nslMSpOELhovg.png)
+
+|                          | Batch<br />Normalization                                                                                                                                                                                                                                   | Layer<br />Normalization                                                                         | Group<br />Normalization |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ------------------------ |
+| Normalize activations of | each feature across all inputs at a layer in a mini-batch                                                                                                                                                                                                  | each input across all features at a layer in a mini-batch                                        |                          |
+| $\hat w_{i}$             | $\tilde w_i = \dfrac{w_{i} - E_b[w_{i}]}{\sqrt{\sigma^2_b(w_{i}) + \epsilon}}$<br />$\gamma_i \tilde w_i + \beta_i$: allows network to learn optimal distribution for activation function, and/or undo batch norm                                          | $\dfrac{w_{i} - E_i[w_{i}]}{\sqrt{\sigma^2_i(w_{i}) + \epsilon}}$                                |                          |
+| Visualization            | ![image-20240525165203016](./assets/image-20240525165203016.png)                                                                                                                                                                                           | ![image-20240525165138330](./assets/image-20240525165138330.png)                                 |                          |
+|                          |                                                                                                                                                                                                                                                            | ![image-20240525164536090](./assets/image-20240525164536090.png)                                 |                          |
+| Advantages               | - Improves gradient flow through network<br>- Allows for higher learning rates<br>- Reduces strong dependence on initialization<br>- Acts as a form of regularization due to stochastic inter-dependence of samples, and slightly reduces need for dropout |                                                                                                  |                          |
+| Limitation               | Inter-dependence of training samples causes unwanted effects (Soln: below)                                                                                                                                                                                 | Harder to train standard FCN to low loss, because the relative sizes between activations is lost |                          |
 
 Where
 
@@ -371,3 +303,11 @@ For each epoch, you can subsample the training set and then create batches
 
 - Cheaper epochs
 - More stochastic
+
+## Hyperparameters
+
+- Batch size
+- Initialization
+- Optimizer algorithm
+- Learning rate
+- No of epochs

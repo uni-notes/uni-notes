@@ -11,7 +11,7 @@ end
 
 ## Units
 
-Abacus does not have a unit system. You need to use everything based on SI/SI(mm) units.
+Abaqus does not have a unit system. You need to use everything based on SI/SI(mm) units.
 
 ## Interface
 

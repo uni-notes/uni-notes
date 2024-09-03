@@ -5,7 +5,8 @@
 ## References
 
 - [ ] ML for Healthcare | MIT
-- [ ] [Survival Analysis](https://www.youtube.com/watch?v=Wo9RNcHM_bs)
+- [ ] [Survival Analysis | DataTab](https://www.youtube.com/watch?v=Wo9RNcHM_bs)
+- [ ] [Survival Analysis | Meerkat Statistics](https://www.youtube.com/playlist?list=PLJ71tqAZr194tBivW9FqYNtZ-sopWfxwK)
 
 ## Current Video
 

@@ -2,16 +2,16 @@
 
 You don’t have to apply all these; it depends. You have to first understand the dataset.
 
-| Technique                    | Meaning                                                      | Advantage                                                    | Disadvantage                                                 |
-| ---------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Aggregation                  | Combining/Merge data objects/attributes<br />**Continuous**: Sum, mean, max, max, min, etc<br />**Discrete**: Mode, Summarization, Ignoring | - Low processing cost, space, time<br />- Higher view<br />- More stable | Losing details                                               |
-| Sampling                     | Creating **representative** subset of a dataset, whose characteristics are similar to the original dataset |                                                              |                                                              |
-| Dimensionality Reduction     | Mathematical algorithm resulting in a set of new combination of old attributes | Eliminate noise and unnecessary features<br />Better understandability<br />Reduce time, memory and other processing cost<br />Easier visualization | Getting the original data is not possible after transformation |
-| Feature Subset Selection     | Removing irrelevant and redundant attributes                 | Same as ^^                                                   | Extra resources required                                     |
-| Feature Creation             | Create new attributes that can capture multiple important features more efficiently |                                                              |                                                              |
-| Discretization               | Convert continuous attribute into categorial/discrete (for classification) |                                                              |                                                              |
-| Binarization<br />(Encoding) | Convert continuous/categorical attribute into binary (association mining) |                                                              |                                                              |
-| Attribute Transformation     | Mathematical transformations                                 |                                                              |                                                              |
+| Technique                    | Meaning                                                                                                                                     | Advantage                                                                                                                                           | Disadvantage                                                   |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| Aggregation                  | Combining/Merge data objects/attributes<br />**Continuous**: Sum, mean, max, max, min, etc<br />**Discrete**: Mode, Summarization, Ignoring | - Low processing cost, space, time<br />- Higher view<br />- More stable                                                                            | Losing details                                                 |
+| Sampling                     | Creating **representative** subset of a dataset, whose characteristics are similar to the original dataset                                  |                                                                                                                                                     |                                                                |
+| Dimensionality Reduction     | Mathematical algorithm resulting in a set of new combination of old attributes                                                              | Eliminate noise and unnecessary features<br />Better understandability<br />Reduce time, memory and other processing cost<br />Easier visualization | Getting the original data is not possible after transformation |
+| Feature Subset Selection     | Removing irrelevant and redundant attributes                                                                                                | Same as ^^                                                                                                                                          | Extra resources required                                       |
+| Feature Creation             | Create new attributes that can capture multiple important features more efficiently                                                         |                                                                                                                                                     |                                                                |
+| Discretization               | Convert continuous attribute into categorial/discrete (for classification)                                                                  |                                                                                                                                                     |                                                                |
+| Binarization<br />(Encoding) | Convert continuous/categorical attribute into binary (association mining)                                                                   |                                                                                                                                                     |                                                                |
+| Attribute Transformation     | Mathematical transformations                                                                                                                |                                                                                                                                                     |                                                                |
 
 Feature selection and Dimensionality reduction are used for **biomarkers analysis**
 
@@ -65,11 +65,24 @@ e -->|Best Result Obtained| st[/Stop/]
 
 ### Data Augmentation
 
+Think of all invariances that is important for your model
+
 - Images
   - Flip
+  - Crop
+  - Scale (Zoom)
+  - Translation (Position)
   - Rotation
   - Adding noise
   - Warping
+	  - Stretching
+	  - Shearing
+	  - Lens distortions
+  - Filters
+	  - Brightness
+	  - Contrast
+	  - Saturation
+	  - ~~Hue~~ (don't do)
 - Mixup
   - Convert labels
   - $x' = \lambda x_i + (1-\lambda) x_j; y' = \lambda y_i + (1-\lambda) y_j$
@@ -92,16 +105,16 @@ Note: It is important to standardize the data
 
 ## Dimensionality Reduction Algorithms
 
-| Technique                      | Working                                                      | Reduce dimensionality while              | Learning Type | Comment                                                 | No Hyperparameter Tuning Required | Fast | Deterministic | Linearity  |
-| ------------------------------ | ------------------------------------------------------------ | ---------------------------------------- | ------------- | ------------------------------------------------------- | --------------------------------- | ---- | ------------- | ---------- |
-| LDA                            | Maximize distance between classes                            | Separating pre-known classes in the data | Supervised    |                                                         | ✅                                 | ✅    | ✅             | Linear     |
+| Technique                      | Working                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Reduce dimensionality while              | Learning Type | Comment                                                 | No Hyperparameter Tuning Required | Fast | Deterministic | Linearity  |
+| ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------- | ------------------------------------------------------- | --------------------------------- | ---- | ------------- | ---------- |
+| LDA                            | Maximize distance between classes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Separating pre-known classes in the data | Supervised    |                                                         | ✅                                 | ✅    | ✅             | Linear     |
 | PCA/<br />SVD using PCA        | Maximize variance in data<br /><br />Find linear combinations of predictor vars that are orthogonal to each other<br /><br />1. Calculate correlation matrix of predictors<br />2. Find eigenvalues and corresponding eigenvectors of correlation matrix<br />3. Orthogonalize design matrix by multiplying by a rotation matrix made up of eigenvectors<br /><br />$\mu(\text{PC}_i)=0 \quad \forall i$<br />$\sigma^2(\text{PC}_i)=\text{Eigenvalue} \quad \forall i$<br /><br />Learning more: Correlation matrix b/w PCs and original predictors | Generating clusters previously not known | Unsupervised  | $2k$ contaminated points can destroy top $k$ components | ✅                                 | ✅    | ✅             | Linear     |
-| Kernel PCA                     |                                                              |                                          |               |                                                         |                                   |      |               |            |
-| MDS                            |                                                              | ^^                                       | Unsupervised  |                                                         | ❌                                 | ❌    | ❌             | Non-Linear |
-| t-SNE                          |                                                              | ^^                                       | Unsupervised  |                                                         | ❌                                 | ❌    | ❌             | Non-Linear |
-| UMAP                           |                                                              | ^^                                       | Unsupervised  |                                                         | ❌                                 | ✅    | ❌             | Non-Linear |
-| Variational auto-encoder       |                                                              |                                          |               |                                                         |                                   |      |               |            |
-| Independent Component Analysis | Maximize signal independence                                 |                                          |               |                                                         |                                   |      |               |            |
+| Kernel PCA                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |                                          |               |                                                         |                                   |      |               |            |
+| MDS                            |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | ^^                                       | Unsupervised  |                                                         | ❌                                 | ❌    | ❌             | Non-Linear |
+| t-SNE                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | ^^                                       | Unsupervised  |                                                         | ❌                                 | ❌    | ❌             | Non-Linear |
+| UMAP                           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | ^^                                       | Unsupervised  |                                                         | ❌                                 | ✅    | ❌             | Non-Linear |
+| Variational auto-encoder       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |                                          |               |                                                         |                                   |      |               |            |
+| Independent Component Analysis | Maximize signal independence                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |                                          |               |                                                         |                                   |      |               |            |
 
 ### PCA
 
@@ -189,6 +202,12 @@ end
 - Time series data $\to$ frequency domain
 - For eg, fourier transformation
 
+### Feature Summary Statistics
+
+Mean, Std, ...
+
+For time-series data, make sure to use rolling statistics until the current point to avoid data leakage
+
 ### Feature Construction
 
 Construct new features from existing features
@@ -236,11 +255,11 @@ Then convert using binarization. But, why?
 
 ## Attribute Transform
 
-|                        |                             $x'$                             |        Property         |
-| ---------------------- | :----------------------------------------------------------: | :---------------------: |
-| Simple                 |                    $x^2, \log x, \vert  x  \vert$                    |                         |
-| Min-Max Normalization  | $\frac{x - x_{\text{min}}}{x_{\text{max}} - x_{\text{min}}}$ |     $0 \le x \le 1$     |
-| Standard Normalization |                    $\frac{x-\mu}{\sigma}$                    | $\mu' = 0, \sigma' = 1$ |
+|                        |                             $x'$                              |        Property         |
+| ---------------------- | :-----------------------------------------------------------: | :---------------------: |
+| Simple                 |                $x^2, \log x, \vert  x  \vert$                 |                         |
+| Min-Max Normalization  | $\dfrac{x - x_{\text{min}}}{x_{\text{max}} - x_{\text{min}}}$ |     $0 \le x \le 1$     |
+| Standard Normalization |                    $\dfrac{x-\mu}{\sigma}$                    | $\mu' = 0, \sigma' = 1$ |
 
 Standardization
 

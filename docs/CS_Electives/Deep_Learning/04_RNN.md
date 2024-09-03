@@ -1,8 +1,14 @@
 # Recurrent Neural Networks
 
-A recurrent neural network (RNN) is a kind of artificial neural network mainly used in speech recognition and natural language processing (NLP).  
+A recurrent neural network (RNN) is a NN architecture mainly used for sequences, such as speech recognition and natural language processing (NLP).
+
+![](assets/RNN_usecases.png)
 
 A recurrent neural network looks similar to a traditional neural network except that a memory-state is added to the neurons.
+
+At every time step, the following are the same
+- function
+- set of parameters
 
 ![RNN diagram](./assets/rnn.png)
 
@@ -53,6 +59,12 @@ $$
 
 1. High training cost
 2. Difficulty dealing with long-range dependencies
+3. Order of input samples affects the model
+4. Poor gradient flow
+	1. vanishing gradients: largest eigenvalue < 1
+		1. Can control using gradient clipping
+	2. exploding gradients: largest eigenvalue > 1
+		1. Can control through additive interactions by using GRU/LSTM instead
 
 ## An Example RNN Computational Graph
 
@@ -78,9 +90,9 @@ Map text into sequence of IDs
 
 #### Minibatch Generation
 
-| Partitioning |                                                              | Independent samples? |            No need to reset hidden state?             |
-| ------------ | ------------------------------------------------------------ | :------------------: | :---------------------------------------------------: |
-| Random       | Pick random offest<br />Distribute sequences @ random over mini batches |          ✅           |                           ❌                           |
+| Partitioning |                                                                             | Independent samples? |            No need to reset hidden state?             |
+| ------------ | --------------------------------------------------------------------------- | :------------------: | :---------------------------------------------------: |
+| Random       | Pick random offest<br />Distribute sequences @ random over mini batches     |          ✅           |                           ❌                           |
 | Sequential   | Pick random offeset<br />Distribute sequences in sequence over mini batches |          ❌           | ✅<br />(we can keep hidden state across mini batches) |
 
 Sequential sampling is much more accurate than random, since state is carried through
@@ -137,3 +149,14 @@ Back-Propagation Through Time
 
 ![image-20230527173745367](./../assets/image-20230527173745367.png)
 
+## Multi-Layer RNN
+
+![](assets/multi_layer_RNN.png)
+
+$$
+h_t^l = \phi w^l
+\begin{pmatrix}
+h_{t}^{l-1} \\
+h_{t-1}^{l}
+\end{pmatrix}
+$$

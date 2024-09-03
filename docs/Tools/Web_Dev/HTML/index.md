@@ -1,5 +1,11 @@
 # HTML
 
+Redirect
+
+```html
+<meta http-equiv="refresh" content="0; url=https://www.conductor.com">
+```
+
 Auto-refresh page every 5sec
 
 ```html

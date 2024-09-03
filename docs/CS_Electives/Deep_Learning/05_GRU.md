@@ -1,4 +1,8 @@
-Gated Recurrent Unit
+# Gated Recurrent Unit
+
+Solves vanishing gradients issue of RNN
+
+Intuition: LSTM is to RNN what ResNet is to PlainNet
 
 Not all observations are equally relevant, so we need a mechanism to 
 

@@ -1,6 +1,14 @@
 # Introduction
 
-Many times very high-quality professionals are not able to produce well, as they are usually incentivized to use complex methodologies. But data science is best when you actually solve the problem at hand, and help make decisions.
+Data science is turning raw data into understanding, insight, and knowledge to drive data-driven decisions and solve problems
+- Collecting data
+- Analyzing data
+	- Statistics
+	- Machine learning
+	- Deep learning
+- Communicating analysis
+
+We cannot move away from domain knowledge and solely depend on algorithms
 
 ## Data Professionals
 
@@ -22,12 +30,12 @@ Knowledge -->
 Decision
 ```
 
-|             |                                                              |
-| ----------- | ------------------------------------------------------------ |
-| Data        | Collection of numbers with known context and uncertainty estimates |
-| Information | Right data at right time in right context, organized for access |
+|             |                                                                                  |
+| ----------- | -------------------------------------------------------------------------------- |
+| Data        | Collection of numbers with known context and uncertainty estimates               |
+| Information | Right data at right time in right context, organized for access                  |
 | Knowledge   | Interpretation of information based on model (understanding) of cause and effect |
-| Decision    | Acting on knowledge for benefit                              |
+| Decision    | Acting on knowledge for benefit                                                  |
 
 ### Process
 
@@ -47,14 +55,14 @@ Decision
 
 ## Questions
 
-| Question |                                                              |
-| -------- | ------------------------------------------------------------ |
-| Why      | Precise (not vague)<br /><br />Bad:<br />- Planning<br />- Decision-making<br /><br />Good<br />- What plans/decisions<br />- How are these plans/decisions made<br />- How would data mining help |
-| What     | Goal, Level of aggregation, Forecast horizon<br /><br />Bad<br />- Sales<br />- Market share<br /><br />Good<br />- Demand |
-| When     | Frequency<br />Time of day/year                              |
+| Question |                                                                                                                                                                                                                                    |
+| -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Why      | Precise (not vague)<br /><br />Bad:<br />- Planning<br />- Decision-making<br /><br />Good<br />- What plans/decisions<br />- How are these plans/decisions made<br />- How would data mining help                                 |
+| What     | Goal, Level of aggregation, Forecast horizon<br /><br />Bad<br />- Sales<br />- Market share<br /><br />Good<br />- Demand                                                                                                         |
+| When     | Frequency<br />Time of day/year                                                                                                                                                                                                    |
 | Who      | Human judgement<br />Computer-generated with human judgement<br />Computer-generated<br /><br />Considerations<br />- Number & frequency of predictions<br />- Availability of historical data<br />- Relative accuracy of options |
-| Where    | Predictions originate in different departments               |
-| How      |                                                              |
+| Where    | Predictions originate in different departments                                                                                                                                                                                     |
+| How      |                                                                                                                                                                                                                                    |
 
 ![image-20240529002700056](./assets/image-20240529002700056.png)
 
@@ -71,14 +79,31 @@ Decision
 
 ![img](./../assets/overview_ai_ml_dl_ds.svg)
 
+## Objectives
+
+| Objective                                        |                                                                                                                                                         |
+| ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Prediction                                       | Estimation of unseen data                                                                                                                               |
+| Modelling/<br />Characterization/<br />Inference | How do inputs affect output<br /><br />Obtain the Sample CEF/Conditional Distribution which closely matches the Population CEF/Conditional Distribution |
+| Optimization                                     | What input values produce desired outputs (both mean and variance)                                                                                      |
+| Control                                          | How to adjust controlled inputs to maximize control of outputs                                                                                          |
+| Simulation                                       |                                                                                                                                                         |
+| Causal Inference                                 | How does using treatment affect output                                                                                                                  |
+
+Use ML models to discover structural models, and then let the structural models to make the predictions, not the ML models
+
+- Why: Black swans can be predicted by theory, even if they cannot be predicted by ML
+- How: Use a non-parametric ML to identify important variables and then develop a parametric structural form model.
+
 ## Types of Analysis
 
-| Type | Topic                                 | Nature               | Time   | Comment                                 | Examples|
-|---                          | ---                                   | ---                  | ---    | ---                                     | ---|
-|Descriptive/<br />Positive   | **What** is happening?                | Objective            | Past   | No emotions/explanations if good or bad | Increasing taxes will lower consumer spending<br />Increasing interest rate will lower demand for loans<br />Raising minimum wage will increase unemployment|
-|Diagnostic                   | **Why** is it happening?              | Objective/Subjective | Past   | Helps in understanding root cause       | |
-|Predictive                   | **What will happen** if condition happens | Subjective           | Future | Understanding future, using history     | |
-|Prescriptive/<br />Normative | **What** to do                        | Subjective           | Future | what actions to be taken                | Taxes must be increased|
+| Type                       | Topic                                     | Nature                   | Time   | Comment                                 | Examples                                                                                                                                                     |
+| -------------------------- | ----------------------------------------- | ------------------------ | ------ | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Descriptive/<br />Positive | **What** is happening?                    | Objective                | Past   | No emotions/explanations if good or bad | Increasing taxes will lower consumer spending<br />Increasing interest rate will lower demand for loans<br />Raising minimum wage will increase unemployment |
+| Normative                  | Is this good or bad?                      | Subjective               | Past   |                                         | "Current inflation is higher than desirable"                                                                                                                 |
+| Diagnostic                 | **Why** is it happening?                  | Objective/<br>Subjective | Past   | Helps in understanding root cause       |                                                                                                                                                              |
+| Predictive                 | **What will happen** if condition happens | Subjective               | Future | Understanding future, using history     |                                                                                                                                                              |
+| Prescriptive               | **What** to do                            | Subjective               | Future | what actions to be taken                | Taxes must be increased                                                                                                                                      |
 
 The complexity increases as we go down the above list, but the value obtained increases as well
 
@@ -225,4 +250,24 @@ For eg: Ohm’s Law
 1. $V=IR$ remains constant for all materials (under certain conditions)
 2. $R$ Changes for different materials
 3. Errors are dependent on measurement and experimental methods, and are independent of materials
+
+## Communication of Results
+
+Storytelling is important
+
+### Pitfalls
+
+- Manipulation
+	- Don't lie
+	- Emphasize the story, but make the full data available
+- Misrepresentation
+	- Control expectations
+	- Exaggerate your work, but do not over-exaggerate
+- Ethos
+	- Ethos $\ne$ Credentials
+	- Credentials do not make an expert
+	- Credentials do not *not* make an expert
+- Equity
+	- Don't dumb down: Just translate in a simpler way
+	- Amplify underrepresented voices
 

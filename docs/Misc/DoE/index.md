@@ -10,3 +10,4 @@
 - [ ] [Design And Analysis Of Experiments | IITK](https://www.youtube.com/playlist?list=PLPjSqITyvDeWS9Lxp4jreGJ7eNsxHxJA8)
 - [ ] [Design of Experiments | The Open Educator](https://www.youtube.com/playlist?list=PLW-oQRxLODMcYEFXP4eg5EXBl-0hsTSe1)
 - [ ] [Design of Experiments | Adam Kashlak](https://www.youtube.com/playlist?list=PL5ND7pZq8F23NO_RejjQ0NwJe8V4wB-PZ)
+- [ ] [Design of Experiments | Cache Lack Math & Stats Lectures](https://www.youtube.com/playlist?list=PL0vEWJI_pj7QgRLDs5Fi3RMPxW2Dj4z9g)

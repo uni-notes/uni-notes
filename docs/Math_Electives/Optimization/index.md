@@ -2,4 +2,7 @@
 
 Applied mathematics that deals with maximizing/minimizing an objective, with/without constraint(s). This has various applications, such as Revenue Maximization, Cost Minimization, etc
 
-Taught by Dr. Maneesha
+## References
+
+- [ ] Optimization | Dr. Maneesha | BITS Pilani Dubai Campus
+- [ ] [Public Transportation Systems | MIT](https://www.youtube.com/playlist?list=PLUl4u3cNGP62AU7iNniqVoMl8C64tIOVk)

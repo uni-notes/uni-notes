@@ -11,3 +11,15 @@ Pre-Processing
   - Stopwords: articles
   - Filler words
   - rare words
+
+
+
+$$
+\begin{aligned}
+\text{tf(term)} &= \dfrac{n_\text{term}}{n_\text{terms in document}} \\
+\text{idf(term)} &= \ln \left \vert \dfrac{n_\text{documents}}{n_\text{documents containing term}}
+\right \vert \\
+\text{tf-idf(term)} &= \text{tf(term)} \times \text{idf(term)}
+\end{aligned}
+$$
+

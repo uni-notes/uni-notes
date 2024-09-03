@@ -49,18 +49,6 @@ Microprocessors without Interlocked Pipelined Stages
 | Role                        | Interface b/w hardware & software                 | Way comuper components are connected in a system             |
 | Programmer’s View           | Instructions<br />Addressing Modes<br />Registers | Realization of architecture<br />(Circuit Design, signals, peripherals) |
 
-## CISC vs RISC
-
-|                                          | CISC                              | RISC                              |
-| ---------------------------------------- | --------------------------------- | --------------------------------- |
-| Full Form                                | Complex Instruction Set Computing | Reduced Instruction Set Computing |
-| Gives importance to                      | Hardware                          | Software                          |
-| Can access memory directly?              | ✅                                 | ❌<br />(requires registers)       |
-| Coding Instructions                      | Simple                            | Complex                           |
-| Machine Instructions                     | Complex                           | Simple                            |
-| Clock cyles for executing an instruction | Multiple                          | $1$                               |
-| Complexity lies in                       | Microprogram                      | Compiler                          |
-
 ### Microprogram
 
 It is a microinstruction program that controls the functions of a central processing unit or peripheral controller of a computer
@@ -98,6 +86,7 @@ Typically, one machine-language instruction translates into several microcode in
 ## Components of Computer
 
 ![image-20221106165730510](assets/image-20221106165730510.png){ loading=lazy }
+
 | Component |                                                              |
 | --------- | ------------------------------------------------------------ |
 | Input     | Write data to memory<br />(from user)                        |

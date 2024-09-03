@@ -1,4 +1,4 @@
-# Kali
+## Kali
 
 ```bash
 ifconfig
@@ -31,7 +31,7 @@ nmap 172.16.22.5
 
 We can see what ports are open
 
-# Telnet vs SSH(Secure SHell)
+## Telnet vs SSH(Secure SHell)
 
 Telnet(Port 23) is unencrypted and insecure, as all traffic occurs in cleartext.
 
@@ -51,7 +51,7 @@ ssh 2020A7PS0198U@172.16.22.5
 
 All traffic will be encrypted.
 
-# Wire Shark
+## Wire Shark
 
 You can analyze network. Click ethernet
 
@@ -61,7 +61,7 @@ Understand what all nmap is doing
 ip.addr==172.16.22.5
 ```
 
-# IP Address
+## IP Address
 
 Address for 2 computers to communicate with each other
 
@@ -75,7 +75,7 @@ Private can access another Private without
 | 172.16.  | Internal |
 | 172.168. | Internal |
 
-# DNS
+## DNS
 
 Domain Naming Server
 
@@ -85,11 +85,11 @@ X. X. X \\
 X \in [0, 255]
 $$
 
-# ICMP
+## ICMP
 
 Internet Control Message Protocol
 
-# Automation Softwares
+## Automation Softwares
 
 ```mermaid
 flowchart LR
@@ -111,14 +111,14 @@ subgraph 3[Exploitation]
 end
 ```
 
-## Advantages
+### Advantages
 
 - Scalability
 - Standardization
 - Accuracy
 - Reduced manual effort
 
-# Nessus
+## Nessus
 
 ```bash
 curl --request G
@@ -128,16 +128,16 @@ curl --request G
 sudo apt install ./Nessus.deb
 ```
 
-# ngrok
+## ngrok
 
 This is like alias for wordpress localhosting
 
-# IDK
+## IDK
 
 ```bash
 showmount -e 192.168.100.25
 
-mkdir /tmp/infosec # not necessary
+mkdir /tmp/infosec ## not necessary
 mount -t nfs 192.168.100.25:/home /tmp/infosec
 ```
 

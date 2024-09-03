@@ -67,6 +67,23 @@ $$
 
 ## Ethical Issues
 
+New technologies are disruptive, not neutral
+
+AI can
+- change current practices
+- influence human decisions
+- regulate human behavior
+
+### Responsible AI
+
+- Researchers and engineers should
+	- be proactive - not reactive - about ethics
+	- anticipate how their work will impact society
+	- incorporate human values throughout all stages of product's lifecycle
+- Increased public trust means
+	- Improved marketability
+	- Higher product adoption
+
 ### Abstraction
 
 Researchers/Engineers often abstracted away from application they’re working on, hence not aware of bad things that can be used for
@@ -89,3 +106,15 @@ Federated learning
 
 - Inequitable access to computing resources
 - Inequitable access to datasets
+
+## Bias
+
+Solution
+
+| Solution           | Meaning                                                                                              | Pro                        | Con                                                                                                                            |
+| ------------------ | ---------------------------------------------------------------------------------------------------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| Group unawareness  | Sensitive attributes not included as features                                                        | Avoids disparate treatment | Possibility of highly correlated features that are proxies of the sensitive attribute<br><br>Incompatible with group threshold |
+| Group threshold    | Counteract historical biases in data by adjusting confidence thresholds independently for each group |                            | Incompatible with group unawareness                                                                                            |
+| Demographic Parity | TP + FP equal for all groups                                                                         |                            | Introduces false negatives                                                                                                     |
+| Equal opportunity  | TP + FN equal for all groups                                                                         |                            | Introduces false positives<br><br>Incompatible with equal accuracy                                                             |
+| Equal accuracy     | TP + TN equal for all groups                                                                         |                            | Higher FN for one group<br>Higher FP for one group<br><br>Incompatible with equal opportunity                                  |

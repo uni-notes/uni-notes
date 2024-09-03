@@ -174,8 +174,6 @@ def train_batch(model, optimizer, loss, x, y, train_dl_len, batch_idx, device, a
 	):
 		optimizer.step()
 
-	
-
 # @torch.compile(mode="reduce-overhead")
 def train_epoch(dl, model, optimizer, loss, train_dl_len, device, eval=False, k_frac=None):
 
@@ -210,8 +208,8 @@ def eval_batch(model, x, y, loss, device):
 		loss_value = loss(proba, y)
 		epoch_loss_array = loss_value.detach() # loss_value.item() # batch loss
 
-		true = y.argmax(axis=1)
-		pred = proba.argmax(axis=1)
+		true = model.predict_from_proba(y)
+		pred = model.predict_from_proba(proba)
 		epoch_accuracy_array = (pred == true) # torch.sum()
 
 		return epoch_loss_array, epoch_accuracy_array

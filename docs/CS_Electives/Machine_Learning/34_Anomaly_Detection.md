@@ -1,8 +1,16 @@
 # Anomaly Detection
 
+Detecting unusual events occurring outside of the train distribution
+
+## Limitations
+- False positives are a problem
+- No temporal coherence: several anomalous events in sequence do not get priority over the same events randomly sampled in time
+
 ## Note
 
-When using AD as a secondary model to filter data for the primary model, you need not use the same input features for both
+- When using AD as a secondary model to filter data for the primary model, you need not use the same input features for both
+- Anomaly detection could be used on variables that are not directly to the output
+	- Even if variable w does not affect $y$, a novel value in $w$ could indicate a structural break
 
 Let
 
@@ -23,11 +31,11 @@ Then, all these perfectly reasonable
 
 ## Procedure Methodology
 
-|            |                                                              |
-| ---------- | ------------------------------------------------------------ |
-| Training   | Only non-anomalous samples                                   |
+|            |                                                                |
+| ---------- | -------------------------------------------------------------- |
+| Training   | Only non-anomalous samples                                     |
 | Validation | Verify with known values, then validate, and then update model |
-| Testing    | Verify with known values and then test                       |
+| Testing    | Verify with known values and then test                         |
 
 ## Anomaly Detection vs Classification
 
@@ -51,3 +59,9 @@ Transformation of training, validation, and test set.
 ![image-20231104164633793](./assets/image-20231104164633793.png)
 
 If you have x values as 0, then $\log(x)$ as $\log(0)$ is undefined. So you use $\log(x+c)$, where $c>0$
+
+## Categorical Events
+
+Challenge: No metric space allowing comparison
+
+Solution: Self-supervised learning

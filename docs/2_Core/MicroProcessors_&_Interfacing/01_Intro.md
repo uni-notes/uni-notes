@@ -78,24 +78,43 @@ This is the hardware components
 3. Data Path
 4. Control Path
 
-## Types of MP
+## MPU vs MCU
 
-|                        | RISC                                   | CISC                              |
-| ---------------------- | -------------------------------------- | --------------------------------- |
-| Full Form              | Reduced Instruction Set Computing      | Complex Instruction Set Computing |
-| Amount of Instructions | Small                                  | Large                             |
-| Decoder                | Reduced Instruction Decoder            | Complex Instruction Decoder       |
-| Architecture           | Register only                          | Register-Memory                   |
-| Speed                  | Fast                                   |                                   |
-| Usage                  | Real-Time Operations                   |                                   |
-| Application            | IOT (Internet of Things)               |                                   |
-| Examples               | Microcontrollers like Arduino<br />ARM | x86 processors like 8086          |
+|                               | MPU<br>MicroProcessor Unit       | MCU<br>MicroController Unit                                         |
+| ----------------------------- | -------------------------------- | ------------------------------------------------------------------- |
+| CPU Clock rate                | > 1 GHz                          | 1 MHz - 0.4 GHz                                                     |
+| Memory location               | External                         | Internal                                                            |
+| Memory capacity               | > 0.5 GB                         | 2 KB - 512 KB                                                       |
+| Storage location              | External                         | Internal                                                            |
+| Storage capacity              | > 64 GB                          | 32 KB - 2 MB                                                        |
+| I/O                           | External                         | Internal                                                            |
+| Peripherals                   | External                         | Internal                                                            |
+| No glue logic/software needed | ❌                                | ✅                                                                   |
+| Power Consumption             | Higher<br>> 30W                  | Lower<br>$\rm{150 \micro W - 23.5 mW}$                              |
+| Size                          | Large                            | Small                                                               |
+| Design flexibility            | ✅                                | ❌                                                                   |
+| Use                           | Computer system                  | Embedded system                                                     |
+| Other names                   |                                  | SOC (System on a chip)<br>Embedded controller<br>Computer on a chip |
+|                               | ![](./assets/microprocessor.png) | ![](./assets/microcontroller.png)                                   |
 
-## Neha’s Notes
+## Types of Microprocessors
 
-Open the PDF
-
-[Neha](assets/neha.pdf)
+|                                          | RISC                              | CISC                              |
+| ---------------------------------------- | --------------------------------- | --------------------------------- |
+| Full Form                                | Reduced Instruction Set Computing | Complex Instruction Set Computing |
+| Gives importance to                      | Hardware                          | Software                          |
+| Can access memory directly?              | ✅                                 | ❌<br />(requires registers)       |
+| Amount of Instructions                   | Small                             | Large                             |
+| Coding Instructions complexity           | Complex                           | Simple                            |
+| Machine Instructions complexity          | Simple                            | Complex                           |
+| Decoder                                  | Reduced Instruction Decoder       | Complex Instruction Decoder       |
+| Architecture                             | Register only                     | Register-Memory                   |
+| Speed                                    | Fast                              |                                   |
+| Clock cyles for executing an instruction | $\ge 1$                           | $1$                               |
+| Usage                                    | Real-Time Operations              |                                   |
+| Complexity lies in                       | Microprogram                      | Compiler                          |
+| Application                              | IOT (Internet of Things)          |                                   |
+| Examples                                 | ARM                               | x86 processors like 8086          |
 
 ## x86 Family
 

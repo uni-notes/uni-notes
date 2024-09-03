@@ -1,10 +1,28 @@
-#  Convolutional Neural Networks
+# Convolutional Neural Networks
 
 Convolutional Neural Networks is a type of architecture that exploits special properties of image data and are used in computer vision applications.
 
+Convolution intuition: efficient "loop" that allows us to forward linear layers over space
+
 Images are a 3-dimensional array of features: each pixel in the 2-D space contains three numbers from 0–255 (inclusive) corresponding to the Red, Green and Blue.
 
-The first important type of layer that a CNN has is called the Convolution (Conv) layer. It uses parameter sharing and applies the same smaller set of parameters spatially across the image. 
+## Intuition
+- Low-level/frequency features
+- Medium-level/frequency features
+- High-level/frequency features
+- Logits
+
+## Components
+- Conv layer
+- Activation function (usually ReLU)
+- Pooling
+- Fully-connected
+
+![](assets/example_cnn.png)
+
+The first important type of layer that a CNN has is called the Convolution (Conv) layer. It uses parameter sharing and applies the same smaller set of parameters spatially across the image.
+- Number of filters is usually chosen as powers of 2, as many libraries handle these dimensions more efficiently.
+- Size of filters is usually odd, as they have an integer center
 
 Essentially the parameters (i.e. weights) associated to the input remain the same but the input itself is different as the layer computes the output of the neurons at different regions of the image.
 
@@ -54,24 +72,39 @@ Very nice [Youtube explanations](https://www.youtube.com/playlist?list=PLuhqtP7j
 
 ## Types of Layers
 
-|                                             | Convolutional Layer                                          | Pooling Layer                                                |
-| ------------------------------------------- | :----------------------------------------------------------- | ------------------------------------------------------------ |
-| Purpose                                     | Extracting spatially-invariant features<br /><br />Control output shape via padding, strides and channels<br />Edge Detection<br />Image Sharpening | Gradually reduce spatial resolution of hidden representations<br />Some degree of invariance to translation<br />Image size reduction, without much data loss<br />Image Sharpening |
-| Operation                                   | Cross-Correlation                                            | Pooling                                                      |
-| Representation<br />$O = $                  | $I \star F + b$<br />$\sum (I \star F + b)$ (multiple channels) |                                                              |
-| $O_{i, j} =$                                | $\sum_{k=1}^f \sum_{l=1}^f F_{k, l} \odot  I_{i+k, j+l} + b$ | $\sum_{k=1}^f \sum_{l=1}^f \text{func}(F_{k, l} \odot  I_{i+k, j+l})$ |
+|                                             | Convolutional Layer                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Pooling Layer                                                                                                                                                                                                                                                                                                                              |
+| ------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Purpose                                     | Extracting spatially-invariant features<br /><br />Control output shape via padding, strides and channels<br />Edge Detection<br />Image Sharpening                                                                                                                                                                                                                                                                                                                                                                                | Gradually reduce spatial resolution of hidden representations<br />Some degree of invariance to translation<br />Image size reduction, without much data loss<br />Image Sharpening                                                                                                                                                        |
+| Operation                                   | Cross-Correlation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Pooling                                                                                                                                                                                                                                                                                                                                    |
+| Representation<br />$O = $                  | $I \star F + b$<br />$\sum (I \star F + b)$ (multiple channels)                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |                                                                                                                                                                                                                                                                                                                                            |
+| $O_{i, j} =$                                | $\sum_{k=1}^f \sum_{l=1}^f F_{k, l} \odot  I_{i+k, j+l} + b$                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | $\sum_{k=1}^f \sum_{l=1}^f \text{func}(F_{k, l} \odot  I_{i+k, j+l})$                                                                                                                                                                                                                                                                      |
 | Steps to<br />calculate                     | 1. Perform padding<br/>2. Start from the left<br/>3. Place kernel filter over input matrix<br />(if there are multiple channels, place each filters over corr matrix)<br/>4. Output value of one element = sum of products + Bias<br />(if there are multiple channels, then sum of product of all the channels result in **one single value**)<br/>5. Perform stride rightward<br />6. Repeat steps 3-5, until there are no remaining columns on the right<br/>7. Repeat steps 2-6, until there are no remaining rows on the left | 1. Start from the left<br/>2. Place filter over input matrix<br/>3. Output value of one element = func(product of elements), where func = max, min, avg<br />4. Perform stride rightward<br/>5. Repeat steps 3-5, until there are no remaining columns on the right<br/>6. Repeat steps 2-5, until there are no remaining rows on the left |
-| Default<br />stride length                  | 1                                                            | $f$                                                          |
-| Size of<br />output                         | $\dfrac{i-f \textcolor{hotpink}{+2p}}{s} + 1$                | $\dfrac{i-f}{s} + 1$                                         |
-| When Applied                                | First                                                        | Only after convolutional layer                               |
-| Common<br />Padding<br />Value              | $f-1$                                                        | 0                                                            |
-| Common<br />Stride<br />Value               | 1                                                            | 1                                                            |
-| No of<br />input channels                   | $c$                                                          | 1                                                            |
-| No of output<br />images                    | $n$                                                          | 1                                                            |
-| No of<br />output channels per output image | 1                                                            | 1                                                            |
+| Default<br />stride length                  | 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | $f$                                                                                                                                                                                                                                                                                                                                        |
+| Size of<br />output                         | $\dfrac{i-f \textcolor{hotpink}{+2p}}{s} + 1$                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | $\dfrac{i-f}{s} + 1$                                                                                                                                                                                                                                                                                                                       |
+| When Applied                                | First                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Only after convolutional layer                                                                                                                                                                                                                                                                                                             |
+| Common<br />Padding<br />Value              | $f-1$                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | 0                                                                                                                                                                                                                                                                                                                                          |
+| Common<br />Stride<br />Value               | 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | 1                                                                                                                                                                                                                                                                                                                                          |
+| No of<br />input channels                   | $c$                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | 1                                                                                                                                                                                                                                                                                                                                          |
+| No of output<br />images                    | $n$                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | 1                                                                                                                                                                                                                                                                                                                                          |
+| No of<br />output channels per output image | 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | 1                                                                                                                                                                                                                                                                                                                                          |
 
 $$
 \text{Total output dimension } o' = o \times n \times c
+$$
+
+### Depthwise Separable Convolution
+
+Fewer multiplications
+
+1. Perform convolution for each channel separately
+2. Perform convolution of the outputs of step 1
+
+$$
+\begin{aligned}
+\text{Improvement}
+&= \dfrac{\text{No of operations in Depthwise Separable}}{\text{No of operations in Standard Conv}} \\
+&= \dfrac{1}{\text{No of filters}} + \dfrac{1}{\text{Filter Dimensions}^2}
+\end{aligned}
 $$
 
 ### Notes
@@ -95,13 +128,34 @@ Each filter in the conversation layer produces an “activation map”
 
 ## Padding & Striding
 
-|         | Padding                                                      | Striding                                                |
-| ------- | ------------------------------------------------------------ | ------------------------------------------------------- |
+|         | Padding                                                                                                                                                   | Striding                                                |
+| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
 | Meaning | Number of extra row(s) and columns added around matrix<br />If $p =$ odd, then pad $\lceil p/2 \rceil$ on one side and $\lfloor p/2 \rfloor$ on the other | Step length in movement of kernel filter on input image |
-| Purpose | Overcome loss of pixels, by increasing effective image size  |                                                         |
-|         | Zero padding means padding using 0s                          |                                                         |
+| Purpose | Overcome loss of pixels, by increasing effective image size                                                                                               |                                                         |
+|         | Zero padding means padding using 0s                                                                                                                       |                                                         |
 
 
+## Operations
+
+|                          |                                                              |                                                              |
+| ------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Padding                  | ![image-20240526124051958](./assets/image-20240526124051958.png) |                                                              |
+| Pooling                  | ![image-20240526124109474](./assets/image-20240526124109474.png) | Aggregate information                                        |
+| Striding                 | ![image-20240526124131588](./assets/image-20240526124131588.png) |                                                              |
+| Depth-wise/<br />Grouped | ![image-20240416004743866](./assets/image-20240416004743866.png)<br />![image-20240526123918071](./assets/image-20240526123918071.png) | Group together channels so that groups of channels in output only depend on corresponding groups of channels in input<br />Enforce filter weight matrices to be block-diagonal |
+| Dilations                | ![image-20240526123852770](./assets/image-20240526123852770.png) | Dilate convolution filter so that it covers more of the image<br />Requires padding to ensure same size as input |
+
+## Derivative
+
+Adjoint
+$$
+\begin{aligned}
+\bar v \dfrac{\partial \text{conv}(x, W)}{\partial x}
+&= \text{conv}(\bar v, \text{flip}(w)) \\
+\bar v \dfrac{\partial \text{conv}(x, W)}{\partial W}
+&= 
+\end{aligned}
+$$
 ## Common Filters
 
 | Application               | Filter Used                                                  |
@@ -118,23 +172,15 @@ Smoothing
 
 ![image-20240711121353680](./assets/image-20240711121353680.png)
 
-## Object Detection
-
-mAP = mean Average Precision
-
-![image-20230401231324425](./../assets/image-20230401231324425.png)
-
-![image-20230401231355386](./../assets/image-20230401231355386.png)
-
 ## Advanced CNN
 
-|               | RCNN                                                         | Fast-RCNN                                                    | Faster RCNN                                                  |
-| ------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Major idea    | Region-Based                                                 | Do not recompute features for every box independently        | Integrate bounding box proposals in CNN predictions          |
-| Steps         | 1. Generate category-independent region proposals (~2k)<br />2. Compute 4096-dimensional CNN feature vector from each region proposal<br />3. Classify regions w/ class- specific linear SVMs | 1. Produce **single** convolutional feature map with several convolutional & max-pooling layers <br />2. Region of interest (RoI) pooling layer extracts fixed-length feature vector from region feature map | 1. Compute proposals with a deep convolutional Region Proposal Network (RPN)<br />2. Merge RPN and Fast-RCNN into a single network |
-| Advantages    | Simple<br />Improved mAP compared to RNN                     | Higher mAP<br />Single end-to-end training stage<br />No disk storage required | Cost-free region proposals                                   |
-| Disadvantages | Slow<br />Multistage pipeline<br />Disk storage required for feature caching<br />Training is expensive | Proposals generation is computationally expensive            |                                                              |
-| Flowchart     | ![RCNN](./../assets/rcnn.png)                                   | ![Fast-RCNN](./../assets/image-20230401232330538.png)           | ![image-20230402000936812](./../assets/image-20230402000936812.png) |
+|               | RCNN                                                                                                                                                                                                                                                                       | Fast-RCNN                                                                                                                                                                                                    | Faster RCNN                                                                                                                                                                                                                                  |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Major idea    | Region-Based                                                                                                                                                                                                                                                               | Do not recompute features for every box independently                                                                                                                                                        | Integrate bounding box proposals in CNN predictions                                                                                                                                                                                          |
+| Steps         | 1. Generate category-independent region proposals (~2k)<br />2. Compute 4096-dimensional CNN feature vector from each region proposal<br />3. Classify regions w/ class-specific linear SVMs                                                                               | 1. Produce **single** convolutional feature map with several convolutional & max-pooling layers <br />2. Region of interest (RoI) pooling layer extracts fixed-length feature vector from region feature map | 1. Compute proposals with a deep convolutional Region Proposal Network (RPN)<br />2. Merge RPN and Fast-RCNN into a single network                                                                                                           |
+| Advantages    | Simple<br />Improved mAP compared to RNN                                                                                                                                                                                                                                   | Higher mAP<br />Single end-to-end training stage<br />No disk storage required                                                                                                                               | Cost-free region proposals<br>One network optimizing four losses<br>- RPN classification (anchor good/bad)<br>- RPN regression (anchor -> proposal)<br>- Fast RCNN classification (over classes)<br>- Fast RCNN regression (proposal -> box) |
+| Disadvantages | Slow inference: full forward pass of CNN for each region<br />Multistage pipeline<br />Disk storage required for feature caching<br />Training is expensive<br>Classifiers & regressors are post-hoc: CNN features are not updated in response to classifier and regressor | Proposals generation is computationally expensive                                                                                                                                                            |                                                                                                                                                                                                                                              |
+| Flowchart     | ![RCNN](./../assets/rcnn.png)                                                                                                                                                                                                                                              | ![Fast-RCNN](./../assets/image-20230401232330538.png)                                                                                                                                                        | ![image-20230402000936812](./../assets/image-20230402000936812.png)                                                                                                                                                                          |
 
 ## YOLO
 
@@ -173,27 +219,6 @@ Algorithm Non-Max Supression
 	more steps are there
 ```
 
-## IOU
-
-Intersection Over Union
-
-Let
-
-- True bounding box be $T$
-- Proposed bounding box be $P$
-
-$$
-\text{IOU} = \frac{\text{Area}(T \cap P)}{\text{Area}(T \cup P)}
-$$
-
-### Interpretation
-
-| IOU   |           |
-| ----- | --------- |
-| > 0.9 | Excellent |
-| > 0.7 | Good      |
-| < 0.7 | Poor      |
-
 ## Popular Architectures
 
 | Architecture Name | Description                                  |
@@ -209,24 +234,95 @@ $$
 | CUImage           |                                              |
 | SENet & SE-ResNet |                                              |
 
-## Operations
+## Visualization of Conv layer
 
-|                          |                                                              |                                                              |
-| ------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Padding                  | ![image-20240526124051958](./assets/image-20240526124051958.png) |                                                              |
-| Pooling                  | ![image-20240526124109474](./assets/image-20240526124109474.png) | Aggregate information                                        |
-| Striding                 | ![image-20240526124131588](./assets/image-20240526124131588.png) |                                                              |
-| Depth-wise/<br />Grouped | ![image-20240416004743866](./assets/image-20240416004743866.png)<br />![image-20240526123918071](./assets/image-20240526123918071.png) | Group together channels so that groups of channels in output only depend on corresponding groups of channels in input<br />Enforce filter weight matrices to be block-diagonal |
-| Dilations                | ![image-20240526123852770](./assets/image-20240526123852770.png) | Dilate convolution filter so that it covers more of the image<br />Requires padding to ensure same size as input |
+- Visualize patches (images) that maximally activate neurons
+- Visualize raw weights of filters/kernels
+	- only interpretable on the first conv layer
+- Visualize representation space from last FC layer before classifier (t-SNE)
+- Occlusion experiments
+	- ![](assets/occlusion_experiments.png)
+	- as a function of position of blank pixels
+- Human experiment comparisons
+- Visualize activations
+	- Deconv approaches (single backward pass)
+		1. Feed image into network
+		2. Forward pass until interested neuron
+		3. Set the gradient of the interested neuron to be 1.0, and all other neurons of the layer to be 0.0
+		4. Backward pass to the image
+			- Default backprop
+				- ![](assets/deconv_default_backprop.png)
+			- Guided backprop
+				- ![](assets/deconv_guided_backprop.png)
+				- Only let the gradients of the neurons with +ve activations and +ve gradients to pass
+			- Deconvnet
+				- Change the backward pass of ReLU: Only let the gradients of the neurons with +ve gradients to pass
+	- Optimization over image approaches (optimization): Find an image that maximizes the class score
+		1. Feed in zeros to the network
+		2. Set gradient of scores vector to all 0.0, except the interested class's gradient which is to be 1.0
+			1. This can be extended to arbitrary neuron
+		3. Backward pass to the image
+		4. Do a small "image update"
+		5. Forward the new image to the network
+		6. Objective function
+			- $\arg \max_{I} S_c(I) - \lambda \vert \vert I \vert \vert_2^2$
+			- $\arg \max_{I} S_c(I)$
+				- but blur image after every update
+				- take any pixel with small norm to zero (to encourage sparsity)
+		7. Go to step 2
+		8. Once converged
+			1. Visualize the final image
+				- ![](assets/optimization_over_images.png)
+			2. Visualize the data gradient
+				- ![](assets/optimization_over_images_data_gradient.png)
+				- $M_{ij} = \arg \max_c \vert w_{h(i, j, c)} \vert$
+					- At each pixel take the absolute value
+					- Max over all channels
+				- This can be used in `grabcut` for segmentation
+					- ![](assets/grabcut.png)
+			3. Reconstruction of original image
+				- ![](assets/reconstruction_of_images_from_representation.png)
 
-## Derivative
+## Hallucination
 
-Adjoint
-$$
-\begin{aligned}
-\bar v \dfrac{\partial \text{conv}(x, W)}{\partial x}
-&= \text{conv}(\bar v, \text{flip}(w)) \\
-\bar v \dfrac{\partial \text{conv}(x, W)}{\partial W}
-&= 
-\end{aligned}
-$$
+### DeepDream
+
+![](assets/deepdream_grocery_trip.png)
+
+Set the gradients of the neurons in the layer you want to hallucinate at to be equal to the activations
+
+Goal: Amplify the neurons which most activates the hallucination
+
+### NeuralStyle
+
+![](assets/neural_style.png)
+
+1. Take 2 images
+	1. Content image
+	2. Style image
+2. Extract content targets (ConvNet activations of all layers for the given content image)
+3. Extract style targets (Gram matrices of ConvNet activations of all layers for the given style image): $G = V^T T$
+4. Optimize for generating a new image with
+	1. Content of content image: activations match content
+	2. Style of style image: Gram matrices of activations match style
+5. Since it is a lightweight optimization problem with just 2 images, L-BFGS outperforms Adam
+
+## More smaller filters are better
+
+Three 3x3 conv vs one 7x7
+- same receptive field
+- fewer parameters
+- more non-linearity
+- more efficient compute
+
+## Deconvolution
+
+![](assets/deconvolution.png)
+
+Same as backward pass for regular convolution
+
+Misnomer; actual "deconvolution" means "inverse of convolution"; better terms
+- backward convolution
+- upconvolution
+- convolution transpose
+- fractionally-strided convolution

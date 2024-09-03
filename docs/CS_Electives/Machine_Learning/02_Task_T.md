@@ -7,32 +7,52 @@ learning system should process an instance (collection of features), which is us
 
 ## Tasks
 
-|                                  |                                                              | Function Mapping                                             | Example                                                      |
-| -------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Regression                       | Predicting a continuous numerical output                     | ${\mathbb R}^n \to {\mathbb R}$                              | Stock value prediction                                       |
-| Classification                   | Categorizing input into a discrete output<br/>or outputing a probability dist over classes<br />Derived from regression<br /><br />If binary and very imbalanced dataset, use anomaly detection instead | ${\mathbb R}^n \to [1, C]$                                   | Categorizing images<br />Fraud detection                     |
-| Anomaly Detection                | Identify abnormal events                                     | $\mathbb R \to [0, 1]$                                       | Fraud detection                                              |
-| Classification w/ missing inputs | Learn distribution over all variables, solve by marginalizing over missing variables | ${\mathbb R}^n \to [1, C]$                                   |                                                              |
-| Clustering                       | Assigning class label to set of unclassified items, to group observations into clusters | $\hat y = \hat f(x) = \text{Cluster}(x)$<br />${\mathbb R}^n \to [1, C ]$ | Grouping similar images                                      |
-| Density estimation               | Estimating probability distribution from data                | ${\mathbb R}^n \to P(x)$                                     |                                                              |
-| Transcription                    | Convert unstructured data intro discrete textual form        |                                                              | OCR<br />Speech Recognition                                  |
-| Machine Translation              | Convert it<br/>into a sequence of symbols into another language |                                                              | Natural Language Translation                                 |
-| Structured Output                | Output data structure has<br/>relationships between elements |                                                              | Parsing<br />Image segmentation<br />Image captioning        |
-| Synthesis & Sampling             | Generate new samples similar to those in<br/>training data   |                                                              | Texture generation<br />Speech synthesis<br />Supersampling images |
-| Data Imputation                  | Predict values of missing entries                            |                                                              |                                                              |
-| Denoising                        | Predict clean output from corrupt input                      |                                                              | Image/Video denoising                                        |
-| Density Estimation               | Identify underlying probability distribution of set of inputs |                                                              |                                                              |
+| Task                             | Meaning                                                                                                                                                                                                 | Function Mapping                                                          | Example                                                            |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| Regression                       | Predicting a continuous numerical output                                                                                                                                                                | ${\mathbb R}^n \to {\mathbb R}$                                           | Stock value prediction                                             |
+| Classification                   | Categorizing input into a discrete output<br/>or outputing a probability dist over classes<br />Derived from regression<br /><br />If binary and very imbalanced dataset, use anomaly detection instead | ${\mathbb R}^n \to [1, C]$<br><br>$C=$ no of classes                      | Categorizing images<br>Fraud detection                             |
+| Anomaly Detection                | Identify abnormal events                                                                                                                                                                                | $\mathbb R \to [0, 1]$                                                    | Fraud detection                                                    |
+| Classification w/ missing inputs | Learn distribution over all variables, solve by marginalizing over missing variables                                                                                                                    | ${\mathbb R}^n \to [1, C]$                                                |                                                                    |
+| Clustering                       | Assigning class label to set of unclassified items, to group observations into clusters                                                                                                                 | $\hat y = \hat f(x) = \text{Cluster}(x)$<br />${\mathbb R}^n \to [1, C ]$ | Grouping similar images                                            |
+| Density estimation               | Estimating probability distribution from data                                                                                                                                                           | ${\mathbb R}^n \to P(x)$                                                  |                                                                    |
+| Transcription                    | Convert unstructured data intro discrete textual form                                                                                                                                                   |                                                                           | OCR<br />Speech Recognition                                        |
+| Machine Translation              | Convert it<br/>into a sequence of symbols into another language                                                                                                                                         |                                                                           | Natural Language Translation                                       |
+| Structured Output                | Output data structure has<br/>relationships between elements                                                                                                                                            |                                                                           | Parsing<br />Image segmentation<br />Image captioning              |
+| Synthesis & Sampling             | Generate new samples similar to those in<br/>training data                                                                                                                                              |                                                                           | Texture generation<br />Speech synthesis<br />Supersampling images |
+| Data Imputation                  | Predict values of missing entries                                                                                                                                                                       |                                                                           |                                                                    |
+| Denoising                        | Predict clean output from corrupt input                                                                                                                                                                 |                                                                           | Image/Video denoising                                              |
+| Density Estimation               | Identify underlying probability distribution of set of inputs                                                                                                                                           |                                                                           |                                                                    |
+| Localization                     | Regression for position                                                                                                                                                                                 | $\mathbb{R}^n \to \{ x, y, w, h \}$                                       | Image/Video object detection<br>Image/Video instance segmentation  |
+
+## Cardinality
+
+| Type         | Diagram                          |                                                                 |
+| ------------ | -------------------------------- | --------------------------------------------------------------- |
+| One-to-one   | ![](./assets/one_to_one.png)     | Regression<br>Classification                                    |
+| One-to-many  | ![](./assets/one_to_many.png)    | Image captioning<br>Object detection                            |
+| Many-to-one  | ![](./assets/many_to_one.png)    | Sentiment classification                                        |
+| Many-to-many | ![](./assets/many_to_many_a.png) | Machine translation                                             |
+| Many-to-many | ![](./assets/many_to_many_b.png) | Video object classification<br>Video frame-level classification |
 
 ## Types of Predictions
 
-|              | $x_\text{new}$                                                        | Uncertainty|
-|---           | ---                                                                   | ---|
-| Intrapolation? | $\in X_\text{train}$ | Low |
-|Interpolation | $\in [X_{\text{train}_\text{min}}, X_{\text{train}_\text{max}}]$      | Moderate |
-|Extrapolation | $\not \in [X_{\text{train}_\text{min}}, X_{\text{train}_\text{max}}]$ | High|
-|Smoothing |  | |
+|                | $x_\text{new}$                                                        | Uncertainty |
+| -------------- | --------------------------------------------------------------------- | ----------- |
+| Intrapolation? | $\in X_\text{train}$                                                  | Low         |
+| Interpolation  | $\in [X_{\text{train}_\text{min}}, X_{\text{train}_\text{max}}]$      | Moderate    |
+| Extrapolation  | $\not \in [X_{\text{train}_\text{min}}, X_{\text{train}_\text{max}}]$ | High        |
+| Smoothing      |                                                                       |             |
 
 ## Regression
+
+- Constrain range: use appropriate transformation/[Activation_Functions](../Deep_Learning/03_Activation_Functions.md)
+	- $[a, b]$: Generalized Logistic
+	- $[0, b]$: Softplus
+	- $[a, 0]$: -ve Softplus
+- If the target is zero-inflated
+	- Classifier/Anomaly-Detection to flag as $0$ or non-zero
+		- If $0$, then 0 is the prediction
+		- If non-zero, then prediction is the output of a regressor
 
 ### Probabilistic Regression
 
@@ -50,12 +70,12 @@ $$
 \begin{aligned}
 y_i &\sim \text{Binomial}(n_i, p_i) \\
 p_i &= \sigma(\beta x_i) \\ 
-\implies y_i &\sim \text{Bernoulli}\Big( \sigma(x_i' \beta) \Big)
+%%\implies y_i &\sim \text{Bernoulli}\Big( \sigma(x_i' \beta) \Big)
 \end{aligned}
 $$
 
 ```
-	temperature	fields cultivated percentCultivated
+  temperature        fields cultivated  percentCultivated
 1 13.18475				 63         49	0.7777778
 2 12.35680				165        147	0.8909091
 3 17.57882				 38         30	0.7894737
@@ -99,7 +119,7 @@ If we have $d$ dimensional data, our decision boundary will have $(d-1)$ dimensi
 
 ### Linear Separability
 
-Means the ability to separate points of different classes using a line, with/without a non-linear activation function
+Means the ability to separate points of different classes using a line, with/without non-linear [Activation_Functions](../Deep_Learning/03_Activation_Functions.md)
 
 $$
 f(u) = \begin{cases}
@@ -119,8 +139,8 @@ $$
 
 ### Linearly Non-Separable
 
-|                           Slightly                           |                          Seriously                           |
-| :----------------------------------------------------------: | :----------------------------------------------------------: |
+|                             Slightly                             |                            Seriously                             |
+| :--------------------------------------------------------------: | :--------------------------------------------------------------: |
 | ![image-20240628000728483](./assets/image-20240628000728483.png) | ![image-20240628000744288](./assets/image-20240628000744288.png) |
 
 ### Discriminant Function
@@ -154,4 +174,3 @@ For example: 4 clusters
 | ------- | ------- | ------- |
 | $x_2=0$ | A       | B       |
 | $x_2=1$ | C       | D       |
-

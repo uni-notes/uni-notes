@@ -1,4 +1,4 @@
-# Optimization Algorithms
+# Optimization for ML
 
 ## References
 

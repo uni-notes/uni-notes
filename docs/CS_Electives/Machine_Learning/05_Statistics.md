@@ -6,9 +6,9 @@ IID: Independent & identically distributed
 
 ## Estimation Types
 
-| Estimation Type | Regression Output                         | Classification Output                                        |
-| --------------- | ----------------------------------------- | ------------------------------------------------------------ |
-| Point           | $E(y \vert X)$                            | $E(c_i \vert X)$                                             |
+| Estimation Type | Regression Output                         | Classification Output                                                          |
+| --------------- | ----------------------------------------- | ------------------------------------------------------------------------------ |
+| Point           | $E(y \vert X)$                            | $E(c_i \vert X)$                                                               |
 | Probabilistic   | $E(y \vert X)$<br />$\sigma^2(y \vert X)$ | $P(c_i \vert X)$<br />This is not the model confidence! This is the likelihood |
 
 ## Likelihood vs Confidence
@@ -36,72 +36,79 @@ where $\epsilon$ is Bayes Error
 
 ## Statistical Learning Theory
 
-Helps understand performance when we observe only the training set, through assumptions about training and test sets
+Helps understand performance when we observe only the training set, through assumptions about the dataset
 
+- Train & live data must have identical statistical properties
+	- Training & test data arise from same process
+	- Observations in each data set are independent
+	- Training set and testing set are identically distributed
+	- Techniques
+		- Adversarial validation
+		- Anomaly detection
+		- Data distributions
+			- KL divergence
+			- Jensen-Shannon
+			- Kolmogorov-Smirnov test
+			- Population Stability Index
 - i.i.d
-
-  - Training & test data arise from same process
-  - Observations in each data set are independent
-  - Training set and testing set are identically distributed
+	- every observation is independent & identically distributed
 - $X$ values are fixed in repeated sampling
 - No specification bias
-
    - We need to use the correct functional form, which is theoretically consistent
 - No Unbiasedness
-
    - Independent vars should not be correlated with each other
    - If |correlation| > 0.5 between 2 independent vars, then we drop one of the variables
 - High DOF
-
    - Degree of freedom $= n - k$, where
      - $n =$ number of observations
      - $k =$ no of independent variables
    - DOF $\to$ 0 leads to overfitting
 - High coefficient of variation in $X$
-
    - We need more variation in values of $X$
    - Indian stock market is very volatile. But not in UAE; so it's hard to use it an independent var. Similarly, we cant use exchange rate in UAE as a regressor, as it is fixed to US dollars
+- Groups are identical
+	- if groups are different add indicator and interaction terms
 - No variable interaction
-   - Variable interaction: effect of $x_i$ on $y$ depends on $x_j$
-
-   - Solution: add interaction terms
-
+	- Variable interaction: effect of $x_i$ on $y$ depends on $x_j$
+	- Solution: add interaction terms
 - No collinearity
 - No [multicollinearity](#multicollinearity)
 - Homoskedasticity
-
    - Constant variance
-
    - $\sigma^2 (y_i|x_i) = \text{constant}$ should be same $\forall i$
-
+   - Check with
+	   - Numerical
+		   - rolling statistics (average, std)
+	   - Graphical
+		   - box plot with $x$ axis as $x_j$ and $y$ axis as $y$
+		   - ridge plot with $y$ axis as $x_j$ and $x$ axis as $y$
+		   - histogram with $x$ axis as $y$ and facet as $x_j$
    - [Causes of Heteroskedascity](#Causes-of-Heteroskedascity)
-
 - There is no measurement error $\delta_i$ in $X$ or $Y$
-
    - $X_\text{measured} = X_\text{true}$
    - $y_\text{measured} = y_\text{true}$
    - $E(\delta_i)=0$
    - $\text{var}(\delta_i | x_i) = \sigma^2 (\delta_i|x_i) = \text{constant}$ should be same $\forall i$
    - $\text{Cov}(\delta_i, x_i) = 0, \text{Cov}(\delta_i, u_i) = 0$
-
-   If there is measurement error, we need to perform [correction](#Errors-in-Measurement Correction)
-
-- If there exists autocorrelation in time series, then we have to incorporate the lagged value of the dependent var as an explanatory var of itself
-
+	   - If there is measurement error, we need to perform [correction](#Errors-in-Measurement Correction)
+- Stationarity
+	- The statistical properties of the variables are bounded and remain constant over time
+	- This applies to both inputs and output variables
+- There is no autocorrelation
+	- If there exists autocorrelation in time series, then we have to incorporate the lagged value of the dependent var as an explanatory var of itself
 - For the Variance of distribution of potential outcomes, the range of distribution stays same over time
-
    - $\sigma^2 (x) = \sigma^2(x-\bar x)$:   else, the variable is **volatile**; hard to predict; **we cannot use OLS** and hence have to use weighted regression
    - if variance decreases, value of $y$ is more reliable as training data
-
    - if variance increases, value of $y$ is less reliable as training data
-
      - We use volatility modelling (calculating variance) to predict the pattern in variance
 
+### Adversarial Validation
 
-But rarely used in practice with deep learning, as
+Create a new feature in the dataset as “Set”, which signifies if the data belongs to training/test set
 
-- bounds are loose
-- difficult to determine capacity of deep learning algorithms
+Train a classifier to predict which set
+
+ROC-AUC signifies how accurately the classifier can distinguish between the sets. Higher values $\ge 0.8$ imply that Train & Test data **not** from same distribution.
 
 ## Input Error
 
@@ -289,11 +296,11 @@ eg: $r(x_1, x_2) = r(x_1, x_3) = 0$, but $r(x_1, x_2+x_3) \ne 0$
 
 ### Detection
 
-|                                    |                                                              |
-| ---------------------------------- | ------------------------------------------------------------ |
-| Correlation matrix                 |                                                              |
-| VIF<br />Variance Inflation Factor | How much is the variance of the $k$th model coefficient **inflated** compared to case of no inflation<br /><br />$\text{VIF}(\hat \beta_j) = \dfrac{1}{1 - R^2_{x_j \vert x_{j'} }} = (\tilde X^T \tilde X)_{jj}^{-1}  \\ j' \in [0, k] - \{ j \}$<br/><br/>$R^2_{x_j \vert x_{j'}}$ is $R^2$ when $x_j$ is regressed against all other predictor vars<br /><br />$1/\text{VIF}_{x_j \vert x_{j'}}=$ “tolerance”<br /><br />$\text{VIF}_{x_j \vert x_{j'}} \ge 4 \implies$ Investigate<br />$\text{VIF}_{x_j \vert x_{j'}} \ge 10 \implies$ Act<br />$E[\text{VIF}_{x_j \vert x_{j'}}] \quad \forall j > 1 \implies$ Problematic |
-| Eigensystem Analysis               | Find eigenvalues of correlation matrix, ie $\tilde X^T \tilde X$<br /><br />If all eigenvalues are about the same magnitude, no multicollinearity<br />Else calculate condition number<br /><br />$\kappa = \lambda_\max/\lambda_\min$<br />If $\kappa > 100 \implies$ problem |
+|                                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Correlation matrix                 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| VIF<br />Variance Inflation Factor | How much is the variance of the $k$th model coefficient **inflated** compared to case of no inflation<br><br>$\text{VIF}(\hat \beta_j) = \dfrac{1}{1 - R^2_{x_j \vert x_{j'} }} ; \quad j' \in [0, k] - \{ j \}$<br><br>$R^2_{x_j \vert x_{j'}}$ is the **out-of-sample** $R^2$ when $x_j$ is regressed against all other predictor vars, using linear/non-linear model; out-of-sample is important to alleviate any issues of overfitting<br><br>- $1/\text{VIF}_{x_j \vert x_{j'}}=$ “tolerance”<br><br>- $\text{VIF}_{x_j \vert x_{j'}} = 1 \implies$ No collinearity between $x_j$ and other vars<br>- $\text{VIF}_{x_j \vert x_{j'}} \ge 4 \implies$ Investigate<br>- $\text{VIF}_{x_j \vert x_{j'}} \ge 10 \implies$ Act<br><br>$E[\text{VIF}_{x_j \vert x_{j'}}] \quad \forall j > 1 \implies$ Problematic |
+| Eigensystem Analysis               | Find eigenvalues of correlation matrix, ie $\tilde X^T \tilde X$<br /><br />If all eigenvalues are about the same magnitude, no multicollinearity<br />Else calculate condition number<br /><br />$\kappa = \lambda_\max/\lambda_\min$<br />If $\kappa > 100 \implies$ problem                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
 ### Solution
 
