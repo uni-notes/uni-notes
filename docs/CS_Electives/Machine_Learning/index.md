@@ -45,6 +45,7 @@ The first few topics are common to all aspects of machine learning.
 - [ ] [Machine Learning Concepts (Simply Explained) | Pedram Jahangiry](https://www.youtube.com/playlist?list=PL2GWo47BFyUPWL5fBZSn6FFHRr1bSkX_J)
 - [ ] [Machine Learning Codes and Concepts (2023) | Pedram Jahangiry](https://www.youtube.com/playlist?list=PL2GWo47BFyUNeLIH127rVovSqKFm1rk07)
 - [ ] [Machine Learning in finance - 2021 | Pedram Jahangiry](https://www.youtube.com/playlist?list=PL2GWo47BFyUM-5XvrQ20DZB4zyzlgwp5A)
+- [ ] [Artificial Intelligence & Machine Learning in Finance | University Leibzig](https://www.youtube.com/playlist?list=PL4i4aZbplv9KZzkgz2U3RYObCcmXSHwOc)
 - [ ] [Business Analytics Using Data Mining (BADM) | Galit Shmueli](https://www.youtube.com/playlist?list=PLoK4oIB1jeK0VeChKj1F0s6w6jI3C2RUa)
 - [ ] Steve Brunton
   - [ ] [Data Driven Science & Engineering | Machine Learning, Dynamical Systems, and Control](https://databookuw.com/databook.pdf)
@@ -73,6 +74,10 @@ The first few topics are common to all aspects of machine learning.
 - [ ] [Machine Learning with Graphs | Stanford](https://www.youtube.com/playlist?list=PLoROMvodv4rOP-ImU-O1rYRg2RFxomvFp)
 - [ ] [Intro to Machine Learning and Statistical Pattern Classification | Sebastian Raschka](https://www.youtube.com/playlist?list=PLTKMiZHVd_2KyGirGEvKlniaWeLOHhUF3)
 - [x] [Fairness in Machine Learning | MIT](https://www.youtube.com/playlist?list=PLUl4u3cNGP63IFQn8FklBOUhYVcmaxpOX)
+- [ ] [MLOps | Pragmatic AI Labs](https://www.youtube.com/playlist?list=PLdfopzFjkPz9shHCeH9poe9sbAn0pIojX)
+- [ ] [Machine Learning | Islem Rekik, Basira Lab | Imperial College London](https://www.youtube.com/playlist?list=PLug43ldmRSo1LDlvQOPzgoJ6wKnfmzimQ)
+- [ ] [Cluster Analysis | TU Dortmund](https://www.youtube.com/playlist?list=PLElvkFQko9bc5mOPBA_0hOKVIbRIS0qFP)
+- [ ] [Outlier Detection | TU Dortmund](https://www.youtube.com/playlist?list=PLElvkFQko9bez56CbIGKxrwGnGi7Ue6Hr)
 
 ## Current Video
 

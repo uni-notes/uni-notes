@@ -174,8 +174,6 @@ def train_batch(model, optimizer, loss, x, y, train_dl_len, batch_idx, device, a
 	):
 		optimizer.step()
 
-	
-
 # @torch.compile(mode="reduce-overhead")
 def train_epoch(dl, model, optimizer, loss, train_dl_len, device, eval=False, k_frac=None):
 

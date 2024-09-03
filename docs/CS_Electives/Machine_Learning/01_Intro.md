@@ -70,20 +70,59 @@ Learning model
 
 ## Stages of Machine Learning
 
+![](assets/ML_Production_Aspects.png)
+
+![](assets/AI_Infrastructure.png)
+
+### Model Engineering Stages
+
 ```mermaid
 flowchart LR
+subgraph Data Engineering
+	direction LR
+	dc[(Data<br/>Collection)] -->
+	|Raw<br/>Data| di[(Data<br/>Ingestion)] -->
+	|Indexed<br/>Data| da[(Data<br/>Analysis, Curation)] -->
+	|Selected<br/>Data| dl[(Data<br/>Labelling)] -->
+	|Labelled<br/>Data| dv[(Data<br/>Validation)] -->
+	|Validated<br/>Data| dp[(Data<br/>Preparation)]
+end
+
 td[Task<br/>Definition] -->
-cd[(Collecting<br/>Data)] -->
-l[Learning<br/>Type] -->
-c[Define Cost] -->
-Optimize -->
-Evaluate -->
-Tune -->
-save[/Save Model/] -->
-d[/Deploy/] --> Model
-cd --> ad
-ld[(Live <br/>Data)] --> ad[Anomaly<br/>Detection] --> Model
+dc
+
+dp -->
+|ML-Ready<br/>Dataset| l
+
+subgraph ML Engineering
+	direction LR
+	l[Learning<br/>Type] -->
+	c[Define<br/>Cost] -->
+	mo[Optimize] -->
+	|Trained<br/>Model| me[Evaluate] -->
+	|KPIs| mv[Model<br/>Validation] -->
+	|Certified<br/>Model| md[/Deploy/]
+	
+	ad[Anomaly<br/>Detection]
+end
+
+dp -->|Train| ad
+ld[(Live <br/>Data)] --> ad
+
+md & ad --> m[Model]
 ```
+1. Design
+	1. Why am I building?
+	2. Who am I building for?
+	3. What am I building?
+	4. What are the consequences if it fails?
+2. Development
+	1. What data will be collected to train the model
+	2. Does the dataset follow AI ethics?
+3. Deployment
+	1. How will model drift be monitored?
+	2. How should preventive security measures be taken?
+	3. How to react to security breaches?
 
 ## 3 Dimensions of Prediction
 

@@ -191,15 +191,16 @@ Classification
       for i, (x_batch, y_batch) in pbar:
           y_batch_pred = model(x_batch.to(device))
           loss = loss_fn(y_batch_pred, y_batch.to(device))
-          optimizer.zero_grad()
+          optimizer.zero_grad(set_to_none=True)
           loss.backward()
           optimizer.step()
 
-          loss, current = loss.item(), (i + 1) * len(x_batch)
+          loss, current = loss.detatch(), (i + 1) * len(x_batch)
           if i == len(steps) - 1:
               model.eval()
-              pred = model(x_test)
-              vloss = loss_fn(pred, y_test)
+              with torch.inference_mode(): # turn off history tracking
+	              pred = model(x_test)
+	              vloss = loss_fn(pred, y_test)
               if es(model, vloss):
                   done = True
               pbar.set_description(
@@ -302,15 +303,17 @@ Regression
       for i, (x_batch, y_batch) in pbar:
           y_batch_pred = model(x_batch).flatten()  #
           loss = loss_fn(y_batch_pred, y_batch)
-          optimizer.zero_grad()
+          optimizer.zero_grad(set_to_none=True)
           loss.backward()
           optimizer.step()
 
-          loss, current = loss.item(), (i + 1) * len(x_batch)
+          loss, current = loss.detatch(), (i + 1) * len(x_batch)
           if i == len(steps) - 1:
               model.eval()
-              pred = model(x_test).flatten()
-              vloss = loss_fn(pred, y_test)
+          
+	          with torch.inference_mode(): # turn off history tracking
+	              pred = model(x_test).flatten()
+	              vloss = loss_fn(pred, y_test)
               if es(model, vloss):
                   done = True
               pbar.set_description(
@@ -360,7 +363,7 @@ opt = optim.SGD(model.parameters(), lr=0.1)
 for i in range(1000):
     out = model(inputs)
     loss = loss_fn(out, labels)
-    print(i, loss.item())
+    print(i, loss.detatch())
     opt.zero_grad()
     loss.backward()
     opt.step()
@@ -502,3 +505,28 @@ gs = GridSearchCV(model, params, refit=False, scoring='r2', verbose=1, cv=10)
 gs.fit(X_trf, y_trf)
 ```
 
+## Batch Normalization
+
+Flawed
+
+- Training: No bessel correction for variance
+- Inference: bessel correction for variance
+
+## Progress Bar
+
+```python
+for epoch in range(NUM_EPOCHS):
+    loop = tqdm(loader)
+    for idx, (x, y) in enumerate(loop):
+        scores = model(x)
+
+        # here we would compute loss, backward, optimizer step etc.
+        # you know how it goes, but now you have a nice progress bar
+        # with tqdm
+
+        # then at the bottom if you want additional info shown, you can
+        # add it here, for loss and accuracy you would obviously compute
+        # but now we just set them to random values
+        loop.set_description(f"Epoch [{epoch}/{NUM_EPOCHS}]")
+        loop.set_postfix(loss=torch.rand(1).detatch(), acc=torch.rand(1).detatch())
+```

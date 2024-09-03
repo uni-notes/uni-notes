@@ -1,4 +1,4 @@
-# Streamlit
+# Introduction
 
 ## Structure
 
@@ -61,7 +61,7 @@ def main():
     
     gc.set_threshold(0) # disable garbage collection
     app.main()
-    gc.collect()
+    gc.collect() # collect manually after every execution, to avoid memory issues
 
 if __name__ == "__main__":
     main()

@@ -1,14 +1,15 @@
 # Hyper-Parameter Tuning
+Sometimes better to do in log-space, rather than linear space
 
-|                |                                                              | Advantage | Disadvantage              |
-| -------------- | ------------------------------------------------------------ | --------- | ------------------------- |
-| Manual         |                                                              |           | Time-Consuming            |
-| Grid Search    |                                                              |           | Computationally-expensive |
-| Random Search  |                                                              |           | Non-deterministic         |
-| Evolutionary   | Randomization, Natural Selection, Mutation                   |           |                           |
+|                |                                                                                                                    | Advantage | Disadvantage              |
+| -------------- | ------------------------------------------------------------------------------------------------------------------ | --------- | ------------------------- |
+| Manual         |                                                                                                                    |           | Time-Consuming            |
+| Grid Search    |                                                                                                                    |           | Computationally-expensive |
+| Random Search  |                                                                                                                    |           | Non-deterministic         |
+| Evolutionary   | Randomization, Natural Selection, Mutation                                                                         |           |                           |
 | Bayesian       | Probabilistic model of relationship b/w cost function and hyper-parameters, using information gathered from trials |           |                           |
-| Gradient-Based | Treat hyper parameter tuning like parameter fitting          |           |                           |
-| Early-Stopping | Focus resources on settings that look promising<br />eg: Successive Halving |           |                           |
+| Gradient-Based | Treat hyper parameter tuning like parameter fitting                                                                |           |                           |
+| Early-Stopping | Focus resources on settings that look promising<br />eg: Successive Halving                                        |           |                           |
 
 ## Speed Up
 

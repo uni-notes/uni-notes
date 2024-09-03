@@ -1,6 +1,6 @@
 # Introduction
 
-## Init
+## Imports
 
 ```python
 import torch
@@ -24,14 +24,32 @@ print('PyTorch version', torch.__version__)
 print('Torchvision version', torchvision.__version__)
 print('Numpy version', np.__version__)
 print('Pandas version', pd.__version__)
-
+```
+## Init
+### Device
+```python
 device = (
-  "mps" if getattr(torch, "has_mps", False)
+  "mps" if torch.backends.mps.is_available() and torch.backends.mps.is_built()
   else
   "cuda" if torch.cuda().is_available()
   else
   "cpu"
 )
+```
+
+### Seed
+
+Disable these after debugging
+```python
+seed = 42
+
+random.seed(seed)
+np.random.seed(seed)
+torch.manual_seed(seed)
+
+torch.cuda.manual_seed_all(seed)
+torch.backends.cudnn.deterministic = True
+torch.backends.cudnn.benchmark = False # hit on performance
 ```
 
 ## Tensors
@@ -76,8 +94,8 @@ tensor = torch.from_numpy(array, device=device)
 ```python
 # ❌
 tensor.cpu()
-tensor.item()
 tensor.numpy()
+tensor.item() # causes synchronization
 
 # ✅
 tensor.detach()
@@ -89,7 +107,10 @@ tensor.detach()
 
 ```python
 model.train()
+
 model.eval()
+with torch.inference_mode(): # turn off history tracking
+	pass
 ```
 
 ### Sequential
@@ -145,23 +166,6 @@ class loss(nn.module):
 
 ## IDK
 
-### Forward pass
-
-```python
-model.train()
-model.eval()
-```
-
-### Backward pass
-
-```python
-with torch.set_grad_enabled(True): # turn on history tracking
-  # training
-  
-with torch.set_grad_enabled(False): # turn off history tracking
-  # testing
-```
-
 ## Time-Series
 
 ```python
@@ -189,4 +193,9 @@ for i, d in enumerate(train_loader):
 # shape: tuple((batch_size, seq_len, n_features), (batch_size))
 0 torch.Size([3, 4, 2]) torch.Size([3])
 ```
+
+## TorchServe
+
+> [!WARNING]
+> Torchserve Shelltorch exploit
 

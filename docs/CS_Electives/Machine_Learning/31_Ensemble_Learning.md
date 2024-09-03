@@ -192,3 +192,6 @@ $$
 \end{aligned}
 $$
 Works with any differentiable loss function
+## Neural Networks
+- Average predictions of multiple model checkpoints across epochs of single model
+- Model averaging across epochs

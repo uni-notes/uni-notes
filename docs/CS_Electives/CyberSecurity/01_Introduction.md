@@ -1,8 +1,24 @@
-# Security
+# Cyber-Security
 
-Achieving a goal against an adversary
+Security: Achieving a goal against an adversary
 
-## IDK
+## Cyber-Security
+- Protection of important information and related systems
+- All fields require cyber-security, especially financial and govt institutions
+- Highly influenced by military
+- There is always tradeoff between usability and security
+
+Note: Never hack into a system you’re not authorized to do so, not even a scan.
+
+
+|                |                                                                              |
+| -------------- | ---------------------------------------------------------------------------- |
+| Entity         | Every entity has an identification                                           |
+| Resource       |                                                                              |
+| Authentication | Process of proving an entity's identification                                |
+| Authorization  | Whether or not an entity can have access to a resource, after authentication |
+
+## Privileges
 
 Whenever you’re designing a system, everyone should have the least amount of privileges as possible.
 
@@ -63,27 +79,6 @@ These are very easy for hackers
 | Crime ORganizations | Medium $\iff$ High |                                             |                |
 | Nation State Actors | Very High          |                                             |                |
 | Insider Threat      | Low                |                                             | Edward Snowden |
-
-## Cyber-Security
-
-Protection of important information and related systems. All fields require cyber-security, especially financial and govt institutions.
-
-For eg, we can generate a large digital footprint of a person’s social media tracks.
-
-You should know your roles and responsibilities, which varies based on the strategy of the organization.
-
-Highly influenced by military.
-
-Never hack into a system you’re not authorized to do so, not even a scan.
-
-### Career Scope
-
-**Skilled** cyber-security professionals are in shortage. The issue is not number of people; the issue is skilled.
-
-### Basic Requirements
-
-- CLI (Linux)
-- Powershell (Windows)
 
 ## Fields of Cyber-Security
 
@@ -182,7 +177,7 @@ Defence-in-depth is followed, using a collection of these types
 - Firewall is like Locks
 - Log Monitoring is like CCTV
 
-### Risk
+## Risk
 
 Materialized threat exploiting a vulnerability
 $$
@@ -192,9 +187,9 @@ $$
 $$
 The organization should decide the residual risk it can tolerate.
 
-#### 4 ways to handle risk
+### 4 ways to handle risk
 
-- Risk assessement
+- Risk assessment
 - Risk transfer
 - Risk mitigation
 - (one more thing)

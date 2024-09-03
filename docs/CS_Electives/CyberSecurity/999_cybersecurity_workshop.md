@@ -505,12 +505,6 @@ For eg, if someone suddenly performs a `select` query of all tables
 
 Identity Access & Management
 
-### Credential Security
-
-- Something you have (password)
-- Something you are 
-- Something you know (childhood bestfriend)
-
 ## AAA Principles
 
 - Authentication
@@ -556,7 +550,7 @@ VM is paired to machine
 
 VM is subset of machine
 
-# IDK
+## IDK
 
 Go watch Chinese movies
 
@@ -564,7 +558,7 @@ Snake in the Monkey’s Shadow
 
 > The world throws questions for which there are no answers. No point in memorizing stuffe
 
-# VUCA
+## VUCA
 
 Volatile Uncertain Complex Ambiguous
 
@@ -588,10 +582,10 @@ When making a decision, first try to see if any problem is similar to past exper
 
 Nowadays, students coming out of university are **Unskilled Unemployable Something Resource**. Industry wants **Deployable Something Resource**.
 
-# Supply Chain Risk
+## Supply Chain Risk
 
 `node.js`, `faker.js`
 
-# MacOS is not safe
+## MacOS is not fully safe
 
 It is based on Linux **FreeBSD/BSD**

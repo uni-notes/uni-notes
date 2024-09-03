@@ -10,3 +10,4 @@
 - [ ] [Natural Language Processing | University of Michigan](https://www.youtube.com/playlist?list=PLLssT5z_DsK8BdawOVCCaTCO99Ya58ryR)
 - [ ] [Text Mining and Analytics [FULL COURSE] | UIUC](https://www.youtube.com/playlist?list=PLLssT5z_DsK8Xwnh_0bjN4KNT81bekvtt)
 - [ ] [Text Retrieval and Search Engines | UIUC](https://www.youtube.com/playlist?list=PLLssT5z_DsK8Jk8mpFc_RPzn2obhotfDO)
+- [ ] [NLP and Text Mining | TU Dortmund](https://www.youtube.com/playlist?list=PLElvkFQko9beKKzWAugdDUbsi22CFfMT9)

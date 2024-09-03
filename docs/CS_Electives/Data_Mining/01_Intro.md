@@ -1,6 +1,14 @@
 # Introduction
 
-Many times very high-quality professionals are not able to produce well, as they are usually incentivized to use complex methodologies. But data science is best when you actually solve the problem at hand, and help make decisions.
+Data science is turning raw data into understanding, insight, and knowledge to drive data-driven decisions and solve problems
+- Collecting data
+- Analyzing data
+	- Statistics
+	- Machine learning
+	- Deep learning
+- Communicating analysis
+
+We cannot move away from domain knowledge and solely depend on algorithms
 
 ## Data Professionals
 
@@ -71,14 +79,31 @@ Decision
 
 ![img](./../assets/overview_ai_ml_dl_ds.svg)
 
+## Objectives
+
+| Objective                                        |                                                                                                                                                         |
+| ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Prediction                                       | Estimation of unseen data                                                                                                                               |
+| Modelling/<br />Characterization/<br />Inference | How do inputs affect output<br /><br />Obtain the Sample CEF/Conditional Distribution which closely matches the Population CEF/Conditional Distribution |
+| Optimization                                     | What input values produce desired outputs (both mean and variance)                                                                                      |
+| Control                                          | How to adjust controlled inputs to maximize control of outputs                                                                                          |
+| Simulation                                       |                                                                                                                                                         |
+| Causal Inference                                 | How does using treatment affect output                                                                                                                  |
+
+Use ML models to discover structural models, and then let the structural models to make the predictions, not the ML models
+
+- Why: Black swans can be predicted by theory, even if they cannot be predicted by ML
+- How: Use a non-parametric ML to identify important variables and then develop a parametric structural form model.
+
 ## Types of Analysis
 
-| Type | Topic                                 | Nature               | Time   | Comment                                 | Examples|
-|---                          | ---                                   | ---                  | ---    | ---                                     | ---|
-|Descriptive/<br />Positive   | **What** is happening?                | Objective            | Past   | No emotions/explanations if good or bad | Increasing taxes will lower consumer spending<br />Increasing interest rate will lower demand for loans<br />Raising minimum wage will increase unemployment|
-|Diagnostic                   | **Why** is it happening?              | Objective/Subjective | Past   | Helps in understanding root cause       | |
-|Predictive                   | **What will happen** if condition happens | Subjective           | Future | Understanding future, using history     | |
-|Prescriptive/<br />Normative | **What** to do                        | Subjective           | Future | what actions to be taken                | Taxes must be increased|
+| Type                       | Topic                                     | Nature                   | Time   | Comment                                 | Examples                                                                                                                                                     |
+| -------------------------- | ----------------------------------------- | ------------------------ | ------ | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Descriptive/<br />Positive | **What** is happening?                    | Objective                | Past   | No emotions/explanations if good or bad | Increasing taxes will lower consumer spending<br />Increasing interest rate will lower demand for loans<br />Raising minimum wage will increase unemployment |
+| Normative                  | Is this good or bad?                      | Subjective               | Past   |                                         | "Current inflation is higher than desirable"                                                                                                                 |
+| Diagnostic                 | **Why** is it happening?                  | Objective/<br>Subjective | Past   | Helps in understanding root cause       |                                                                                                                                                              |
+| Predictive                 | **What will happen** if condition happens | Subjective               | Future | Understanding future, using history     |                                                                                                                                                              |
+| Prescriptive               | **What** to do                            | Subjective               | Future | what actions to be taken                | Taxes must be increased                                                                                                                                      |
 
 The complexity increases as we go down the above list, but the value obtained increases as well
 

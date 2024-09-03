@@ -1,0 +1,55 @@
+# Hazards & Emergencies
+## Hazard Perception
+- Hazard
+	- Types
+		- Actual
+		- Potential
+	- Kinds
+		- Static
+		- Dynamic
+		- Environmental
+- Cause of hazard
+- Perception
+
+## Emergencies
+- Emergency gear
+	- First aid kit
+	- Portable fire extinguisher
+	- Owner's manual
+	- High visibility safety vest ($\ge 2$)
+	- Reflective triangle
+	- Flashlight
+	- Jump cables
+	- Spare tyre
+	- Tyre jack
+	- Lug wrench
+	- Brick/wedge
+	- Tyre pressure gauge
+	- Gloves
+	- Engine oil
+	- Brake oil
+	- Coolant
+- Mechanical knowledge
+	- Stuck vehicle in sand
+		- Reduce tyre pressure
+		- Keep using quick bursts of low rpm acceleration
+	- Engine overheating
+		- Open hood
+		- Replenish coolant without turning off engine; be careful of radiator cap as it will be extremely hot
+		- If not going away, turn off engine
+	- Flat tyre
+		- 
+	- Dead battery
+		- Turn off both engines
+		- Connect like terminals
+		- Start on the good engine
+		- Be careful when removing wires
+	- Breakdown
+## Accidents
+- Minor crash
+	- Pull over
+	- Go to Dubai Police app
+	- File a report
+		- Take photo of car from afar
+- Major crash
+- Fire

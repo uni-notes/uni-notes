@@ -7,15 +7,17 @@ $$
 
 where
 
-| Denotation     | Term                                                    | Comment                                                      |
-| -------------- | ------------------------------------------------------- | ------------------------------------------------------------ |
-| $x$            | input; feature; predictor                               |                                                              |
-| $y$            | output; target; response                                |                                                              |
-| $\hat y$       | prediction                                              |                                                              |
-| $E[y \vert x]$ | CEF (Conditional Expectation Function)                  |                                                              |
-| $\hat f$       | Target function<br />Hypothesis<br />Model              | Gives mapping b/w $x$ and $y$ to obtain CEF                  |
-| $p(y \vert x)$ | Target distribution/<br />Posterior distribution of $y$ | Gives mapping b/w $x$ and $y$ to obtain Conditional Distribution |
-| $u$            | Random component                                        |                                                              |
+| Denotation          | Term                                                        | Comment                                                          |
+| ------------------- | ----------------------------------------------------------- | ---------------------------------------------------------------- |
+| $x$                 | input<br>explanatory<br>feature<br>predictor<br>independent |                                                                  |
+| $y$                 | output<br>outcome<br>target<br>response<br>dependent        |                                                                  |
+| $\hat y$            | prediction                                                  |                                                                  |
+| $E[y \vert x]$      | CEF (Conditional Expectation Function)                      |                                                                  |
+| $f$                 | Target function                                             | True relationship between $y$ and $x$                            |
+| $\hat f$            | Hypothesis function<br />Model                              | Gives mapping b/w $x$ and $y$ to obtain CEF                      |
+| $p(y \vert x)$      | Target distribution/<br />Posterior distribution of $y$     | True data-generating process                                     |
+| $\hat p(y \vert x)$ | Hypothesis distribution                                     | Gives mapping b/w $x$ and $y$ to obtain Conditional Distribution |
+| $u$                 | Random component                                            |                                                                  |
 
 ## IDK
 
@@ -52,7 +54,7 @@ Attributes of probabilistic forecast quality
 2. Sharp: informative
    1. Concentration of probability: how tight the predictive densities are
    2. Perfect probabilistic forecast gives a probability of 100% on a single value
-   3. CRPS
+   4. CRPS
       1. Average of each predictive density and corresponding observation
       2. $\text{CRPS}_{t, h} = \int_y \ \Big( \hat F_{t+h \vert t} - 1(y_{t+h} \le y) \Big)^2 \ \cdot dy$
       3. $\text{CRPS}_h = \text{avg}(\text{CRPS}_{t, h})$
@@ -88,7 +90,7 @@ Fundamentally, a parametric model can be though of data compression
 |                                                              | Discriminative/<br />Reduced Form                            | Generative/<br />Structural/<br />First-Principles           | Hybrid/<br />Discrepancy                   |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------ |
 | Characteristic                                               | Mathematical/Statistical                                     | Theoretical<br />(Scientific/Economic)                       | Mix of first principles & machine learning |
-| Effect Modifiers<br />[Read more](../Causal_Inference/08_Causal_Graphical_Model.md#Effect-Modifiers) | Assumes that effect modifiers will remain same as during learning | Incorporates effect modifiers                                |                                            |
+| Effect Modifiers<br />[Read more](../../Economics/Causal_Inference/08_Causal_Graphical_Model.md#Effect-Modifiers) | Assumes that effect modifiers will remain same as during learning | Incorporates effect modifiers                                |                                            |
 | Goal                                                         | <br /><br />1. $\hat p(y \vert x)$<br />2. $\hat y = \hat E(y \vert x)$ | 1. $\hat p(x \vert y)$<br />2. $\hat p(x, y)$<br />3. $\hat p(y \vert x)$<br />4. $\hat y = \hat E(y \vert x)$ | $\hat y = \text{g}(x) + d(x)$              |
 |                                                              |                                                              | This model defines a “story” for how the data was generated. To obtain a data point<br/><br/>1. Sample class $y \sim \text{Categorical}(p_1, p_2, \dots, p_C)$ with class proportions given by $p_c$<br/>2. Then, we sample $x$ from the gaussian distribution $\mathcal N(\mu_c, \Sigma_c)$ for each class |                                            |
 | Includes Causal Theory                                       | ❌                                                            | ✅                                                            | Same as Structural                         |

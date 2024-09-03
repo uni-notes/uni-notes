@@ -29,27 +29,6 @@ Data = results of measurement
   - Image
   - Video
 
-## Means of data collection
-
-Garbage-in, Garbage-out
-
-- Manual Labelling
-  - Manually marking as cat/not cat, etc.
-- Observing Behaviour
-  - taking data from user activity and seeing whether they purchased or not
-  - machine temperatures and observing for faults or not
-- Download from the web
-
-## Mistakes
-
-1. Waiting too long for implementing a data set
-   1. implement it early so that AI team can give feedback to the IT team
-2. Not all data is valuable
-3. Messy
-   1. Garbage in, garbage out
-   2. incorrect data
-   3. multiple types of data
-
 ## Datasets
 
 Collection of data in rows and columns
@@ -61,6 +40,57 @@ Collection of data in rows and columns
 
 - Labelled has Target variable
 - Unlabelled does not have target variable
+
+## Data Collection
+
+### Stages
+- Motivation
+- Composition
+- Collection process
+- Labelling
+- Preprocessing
+- Uses
+- Distribution
+- Maintenance
+
+### Metadata
+
+| Aspect           |                 |
+| ---------------- | --------------- |
+| Filename         |                 |
+| Format           | csv             |
+| URL              |                 |
+| Domain           | healthcare      |
+| Keywords         | medicine, drugs |
+| Type             | tabular         |
+| Rows             | 500             |
+| Columns          | 18              |
+| Missing %        | 5.2%            |
+| License          | MIT             |
+| Release Date     | Jan 2024        |
+| Time range: FROM | Aug 2020        |
+| Time range: TO   | Dec 2020        |
+| Description      |                 |
+### Means of data collection
+
+Garbage-in, Garbage-out
+
+- Manual Labelling
+  - Manually marking as cat/not cat, etc.
+- Observing Behaviour
+  - taking data from user activity and seeing whether they purchased or not
+  - machine temperatures and observing for faults or not
+- Download from the web
+
+### Mistakes
+
+1. Waiting too long for implementing a data set
+   1. implement it early so that AI team can give feedback to the IT team
+2. Not all data is valuable
+3. Messy
+   1. Garbage in, garbage out
+   2. incorrect data
+   3. multiple types of data
 
 ## Types of Attributes
 
@@ -356,3 +386,12 @@ $\hat y_{j(i)}$ is $\hat y_j$ without $i$ in the training set
 | Difference in Fit    | $\begin{aligned} &\text{DFFITS}_{i} \\ &= \dfrac{ \hat y - \hat y_{i(i)} }{ s_{u(i)} \sqrt{h_{ii}} } \\ &= \text{esr}_i \sqrt{ \dfrac{h_{ii}}{1-h_{ii}} } \end{aligned}$ | $1$<br />$\sqrt{4k/n}$                          |                                                              |
 | Mahalanobis Distance |                                                              |                                                 |                                                              |
 
+## Tidy Data
+
+Also called long data
+
+| Characteristic                   | Visual                                 |
+| -------------------------------- | -------------------------------------- |
+| Each variable has its own column | ![](assets/tiny_data_variables.png)    |
+| Each observation has its own row | ![](assets/tiny_data_observations.png) |
+| Each value has its own cell      | ![](assets/tiny_data_values.png)       |
