@@ -260,7 +260,7 @@ class BatchElasticNetRegression(object):
         optimizer = optim.Adam([learned_coefs, learned_intercepts], lr_rate)
 
         for i in range(iterations):
-            optimizer.zero_grad()
+            optimizer.zero_grad(set_to_none=True)
             res = torch.matmul(t_features, learned_coefs) + learned_intercepts
             diff_loss = (1 / (2 * n_samples)) * ((res - t_target) ** 2).sum(axis=0)
 

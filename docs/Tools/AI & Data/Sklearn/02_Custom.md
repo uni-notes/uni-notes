@@ -261,10 +261,15 @@ class CustomRegressionGrouped(CustomRegression):
         )
         
     def check_enough_samples(self):
-        enough_samples = True
-        for e in self.enough_samples.values():
-            if not e:
-                enough_samples = False
+        if how == "all":
+            enough_samples = True
+            for e in self.enough_samples.values():
+                if not e:
+                    enough_samples = False
+        elif how == "any":
+            enough_samples = self.enough_samples
+        else:
+            pass
                 
         return enough_samples
 

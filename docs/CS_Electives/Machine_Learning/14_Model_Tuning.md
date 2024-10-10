@@ -2,7 +2,7 @@
 
 Be data-driven with model tuning, by closely-examining actual performance
 
-- Sometimes you need to decide if it is worth fixing certain type of error
+Sometimes you need to decide if it is worth fixing certain type of error
 
 ## Regularization
 
@@ -54,14 +54,14 @@ c[10<br/>units] -->|10<br/>connections| d[1<br/>unit] -->|10<br/>connections| e[
 ## Increase DOF
 
 - Reduce $k$
-
   - Feature Selection
-
   - Dimensionality Reduction
-
 - Increase $n$
   - Data augmentation
 
+### Allow more opportunities
+
+Test-time data augmentation
 
 ## Subsampling at each iteration
 
@@ -114,15 +114,16 @@ $$
 
 Hence, $E_\text{aug}$ is a better proxy for $E_\text{out}$ than $E_\text{in}$
 
-| Regularizer | Penalty| Effect                                      | Robust to outliers | Unique solution? | Comments | $\hat \beta$ | Limitations | Bayesian Interpretation |
-|---                      | ---| ---                                         | ---                                   |---                      |---                      |---                      |---                      |---                      |
-| $L_0$ | $\sum \limits_{j=1}^k (\beta_j \ne 0)$<br />Number of non-zero coefficients | Enforces sparsity (Feature selection) |  |  | Computationally-expensive<br />Not Convex<br />No closed-form soln (requires grad descent) |  |  |  |
-|$L_1$<br />(Lasso: Least Absolute Shrinkage & Selection Operator)       | $\sum \limits_{j=1}^k \gamma_j {\left \vert \dfrac{{\beta_j - \mu_{\beta^*_j} } }{\sigma_{\beta^*_j}} \right \vert}$ | Encourages sparsity (Feature selection)<br />Eliminates low effect features completely | ✅                   | ❌ | Convex<br />No closed-form soln (requires grad descent) | $\begin{cases} \text{sign}({\hat \beta}_\text{OLS}) \times \left( \vert {\hat \beta}_\text{OLS} \vert - \lambda/2 \right) , & \vert {\hat \beta}_\text{OLS} \vert > \lambda/2, \\ 0, & \text{otherwise} \end{cases}$ | when $\exists$ highly-correlated features<br />- Results can be random/arbitrary and unstable <br />- Multiple solutions | Laplace prior |
-|$L_2$<br />(Rigde)       | $\sum \limits_{j=1}^k \gamma_j \left( \dfrac{\beta_j - \mu_{\beta^*_j}}{\sigma_{\beta_j^*}} \right)^2$ | Scale down parameters<br />Reduces multi-collinearity | ❌ | ✅ | Convex<br />Closed-form soln exists | $\dfrac{{\hat \beta}_\text{OLS}}{1 + \lambda}$ |  | Normal prior |
-|$L_q$ | $\sum \limits_{j=1}^k \gamma_j {\left \vert \dfrac{{\beta_j - \mu_{\beta^*_j} } }{\sigma_{\beta^*_j}} \right \vert^q}$ | |  |  | | |  |  |
-|$L_3$<br />(Elastic Net) | $\alpha L_1 + (1-\alpha) L_2$|                                             | Not very | ✅ | |  |  |  |
-|Entropy                  | $\sum \limits_{j=1}^k - P(\beta_j) \ln P(\beta_j)$ | Encourage parameters to be different<br />Encourages sparsity<br />Cause high variation in between parameters |  |  | |  |  |  |
-|SR3<br />(Sparse Relaxed) |  |  |  |  | |  |  |  |
+| Regularizer                                                       | Penalty                                                                                                                | Effect                                                                                                        | Robust to outliers | Unique solution? | Comments                                                                                   | $\hat \beta$                                                                                                                                                                                                         | Limitations                                                                                                              | Bayesian Interpretation |
+| ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------ | ---------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | ----------------------- |
+| $L_0$                                                             | $\sum \limits_{j=1}^k (\beta_j \ne 0)$<br />Number of non-zero coefficients                                            | Enforces sparsity (Feature selection)                                                                         |                    |                  | Computationally-expensive<br />Not Convex<br />No closed-form soln (requires grad descent) |                                                                                                                                                                                                                      |                                                                                                                          |                         |
+| Max Norm                                                          | $\arg\max \ \{ \beta_j \}$                                                                                             |                                                                                                               |                    |                  |                                                                                            |                                                                                                                                                                                                                      |                                                                                                                          |                         |
+| $L_1$<br />(Lasso: Least Absolute Shrinkage & Selection Operator) | $\sum \limits_{j=1}^k \gamma_j {\left \vert \dfrac{{\beta_j - \mu_{\beta^*_j} } }{\sigma_{\beta^*_j}} \right \vert}$   | Encourages sparsity (Feature selection)<br />Eliminates low effect features completely                        | ✅                  | ❌                | Convex<br />No closed-form soln (requires grad descent)                                    | $\begin{cases} \text{sign}({\hat \beta}_\text{OLS}) \times \left( \vert {\hat \beta}_\text{OLS} \vert - \lambda/2 \right) , & \vert {\hat \beta}_\text{OLS} \vert > \lambda/2, \\ 0, & \text{otherwise} \end{cases}$ | when $\exists$ highly-correlated features<br />- Results can be random/arbitrary and unstable <br />- Multiple solutions | Laplace prior           |
+| $L_2$<br />(Rigde)                                                | $\sum \limits_{j=1}^k \gamma_j \left( \dfrac{\beta_j - \mu_{\beta^*_j}}{\sigma_{\beta_j^*}} \right)^2$                 | Scale down parameters<br />Reduces multi-collinearity                                                         | ❌                  | ✅                | Convex<br />Closed-form soln exists                                                        | $\dfrac{{\hat \beta}_\text{OLS}}{1 + \lambda}$                                                                                                                                                                       |                                                                                                                          | Normal prior            |
+| $L_q$                                                             | $\sum \limits_{j=1}^k \gamma_j {\left \vert \dfrac{{\beta_j - \mu_{\beta^*_j} } }{\sigma_{\beta^*_j}} \right \vert^q}$ |                                                                                                               |                    |                  |                                                                                            |                                                                                                                                                                                                                      |                                                                                                                          |                         |
+| $L_3$<br />(Elastic Net)                                          | $\alpha L_1 + (1-\alpha) L_2$                                                                                          |                                                                                                               | Not very           | ✅                |                                                                                            |                                                                                                                                                                                                                      |                                                                                                                          |                         |
+| Entropy                                                           | $\sum \limits_{j=1}^k - P(\beta_j) \ln P(\beta_j)$                                                                     | Encourage parameters to be different<br />Encourages sparsity<br />Cause high variation in between parameters |                    |                  |                                                                                            |                                                                                                                                                                                                                      |                                                                                                                          |                         |
+| SR3<br />(Sparse Relaxed)                                         |                                                                                                                        |                                                                                                               |                    |                  |                                                                                            |                                                                                                                                                                                                                      |                                                                                                                          |                         |
 
 where
 
@@ -288,10 +289,13 @@ Refer to PINNs for more information
 
 Dropout is applied on the output of hidden fully-connected layers
 
-- Makes networks “robust” to missing activations
-- Stochastic approximation
-
 ![image-20240214175258654](./assets/image-20240214175258654.png)
+
+Advantages
+- Makes networks “robust” to missing activations, by forcing network to have redundant representation
+- Can be interpreted as training large ensemble of models (that share parameters)
+	- Each binary mask is one model, gets trained on only ~one datapoint
+- Stochastic approximation
 
 ### Training
 
@@ -311,11 +315,11 @@ Annealed dropout
 
 At inference time, dropout is inactive, as we should not predict stochastically
 
-| Approach                           | Time  |                                     | Advantages                                                   | Disadvantage                                                 |
-| ---------------------------------- | ----- | ----------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Naive approach                     | Test  | Simply not use dropout              |                                                              | All units receive $(1/p_\text{drop})$ times as many incoming signals compared to training, so responses will be different |
-| Test-Time Rescaling                | Test  | Multiply weights by $p_\text{keep}$ |                                                              | Comparing  similar architectures w/ and w/o dropout requires implementing 2 different networks at test time |
-| Dropout Inversion<br />(preferred) | Train | Divide weights by $p_\text{keep}$   | Overcome limitations of Test-Time Rescaling<br />Allows for annealed dropout |                                                              |
+| Approach                           | Time  |                                     | Advantages                                                                   | Disadvantage                                                                                                              |
+| ---------------------------------- | ----- | ----------------------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| Naive approach                     | Test  | Simply not use dropout              |                                                                              | All units receive $(1/p_\text{drop})$ times as many incoming signals compared to training, so responses will be different |
+| Test-Time Rescaling                | Test  | Multiply weights by $p_\text{keep}$ |                                                                              | Comparing  similar architectures w/ and w/o dropout requires implementing 2 different networks at test time               |
+| Dropout Inversion<br />(preferred) | Train | Divide weights by $p_\text{keep}$   | Overcome limitations of Test-Time Rescaling<br />Allows for annealed dropout |                                                                                                                           |
 
 ## Ensembling
 
@@ -380,4 +384,17 @@ end
 | 3     | Small   | -ve               | Low              | Larger network        |
 | 4-A   | Small   | $\approx 0$       | Low              | Increase train size   |
 | 4-B   | Small   | $\approx 0$       | High             | ✅                     |
+
+## Activations
+
+Ensure [Neural Network Distributions](12_Evaluation.md#Neural-Network-Distributions)
+
+- Initialization of parameters
+- Better learning rate
+- Better optimization algorithm
+- Residual connections
+- Normalization
+  - Batch
+  - Layer
+  - Group
 

@@ -11,3 +11,4 @@ This is an introductory course into Probability, Distributions, and Statistics
 - [ ] [Stanford CS109 Introduction to Probability for Computer Scientists](https://www.youtube.com/playlist?list=PLoROMvodv4rOpr_A7B9SriE_iZmkanvUg)
 - [ ] [A Student's Guide to Bayesian Statistics | Ben Lambert](https://www.youtube.com/playlist?list=PLwJRxp3blEvZ8AKMXOy0fc0cqT61GsKCG)
 - [ ] [Statistics Courses | Penn State University](https://online.stat.psu.edu/statprogram/graduate-programs)
+- [ ] [Nonparametric Statistics | FourthZ](https://www.youtube.com/@FourthZ/playlists)

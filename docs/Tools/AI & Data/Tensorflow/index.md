@@ -1,4 +1,26 @@
-# Tensorflow
+# TensorFlow
+
+![](assets/tensorflow_ecosystem.png)
+
+![](assets/tfl_architecture.png)
+
+|                                    | TensorFlow         | TensorFlow Lite                                                     | TensorFlow Lite Micro          | TensorFlow.js     | TensorFlow<br>Serving |
+| ---------------------------------- | ------------------ | ------------------------------------------------------------------- | ------------------------------ | ----------------- | --------------------- |
+| Usage                              | Model development  | Deployment to Microprocessors (laptops, mobile phones, RaspberryPi) | Deployment to Microcontrollers | Deployment to Web | Cloud, On-Prem        |
+| Optimized for                      | X86<br>TPU<br>GPU  | X86<br>ARM Cortex A                                                 | ARM Cortex M<br>DSP<br>MCU     | Browser & Node    |                       |
+| User                               | ML researcher      | Application developer                                               |                                |                   |                       |
+| Supports training                  | ✅                  | ❌                                                                   | ❌                              | ❌                 | ❌                     |
+| Supports inference                 | ✅<br>(inefficient) | ✅                                                                   | ✅                              | ✅                 | ✅                     |
+| No of ops supported                | ~1400              | ~130                                                                | ~50                            |                   |                       |
+| Native quantization support        | ❌                  | ✅                                                                   | ✅                              |                   |                       |
+| OS-independent<br>(No OS required) | ❌                  | ❌                                                                   | ✅                              |                   |                       |
+| Memory mapping of models           | ❌                  | ✅                                                                   | ✅                              |                   |                       |
+| Delegation to accelerators         | ✅                  | ✅                                                                   | ❌                              |                   |                       |
+| Distributed compute                | Needed             | Not needed                                                          | Not needed                     |                   |                       |
+| Binary size                        | > 3MB              | 100KB                                                               | ~10KB                          |                   |                       |
+| Base memory footprint              | ~ 5MB              | 300KB                                                               | 20KB                           |                   |                       |
+| Weights                            | Variable           | Fixed                                                               |                                |                   |                       |
+| Topology<br>Neuron connections     | Variable           | Fixed                                                               |                                |                   |                       |
 
 ## References
 

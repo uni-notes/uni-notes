@@ -1,11 +1,17 @@
 # Computer Vision
 
+Visual recognition using computers
 
+## Tasks
+
+![](assets/Image_Classification_tasks.png)
 
 ## References
 
-- [ ] Deep Learning for Computer Vision | Stanford
-  - [ ] [2016 | Andrej Karparthy](https://www.youtube.com/playlist?list=PLkt2uSq6rBVctENoVBg1TpCC7OQi31AlC)
-  - [ ] [2017](https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv)
+- [ ] [Deep Learning for Computer Vision | Andrej Karpathy | Stanford](https://www.youtube.com/playlist?list=PLkt2uSq6rBVctENoVBg1TpCC7OQi31AlC)
 - [ ] [Deep Learning for Computer Vision | IITM](https://www.youtube.com/playlist?list=PLyqSpQzTE6M_PI-rIz4O1jEgffhJU9GgG)
+- [ ] [Introduction to Computer Vision | UC Berkeley](https://www.youtube.com/playlist?list=PLhwIOYE-ldwL6h-peJADfNm8bbO3GlKEy)
 - [ ] [Computer Vision | UC Berkeley](https://www.youtube.com/playlist?list=PLzWRmD0Vi2KVsrCqA4VnztE4t71KnTnP5)
+- [ ] [Photo Forensics: Physics-Based Techniques | UC Berkeley](https://www.youtube.com/playlist?list=PLhwIOYE-ldwKNkco425lUSet1zTGDPF6O)
+
+## Current Video

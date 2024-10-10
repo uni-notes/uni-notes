@@ -29,6 +29,10 @@ $$
 - Robustness against skipping observations in sequence
 - Robustness of state representation relative to hidden state updates
 
+### DropConnect
+
+
+
 ### Parameter Averaging
 
 Train RNN and average weights over run

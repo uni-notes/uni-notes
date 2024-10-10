@@ -1,5 +1,7 @@
 # Knowledge Distillation
 
+![](assets/knowledge_distillation.png)
+
 Distill “knowledge” from large ANN to small ANN
 
 - Larger DNNs are easier to train

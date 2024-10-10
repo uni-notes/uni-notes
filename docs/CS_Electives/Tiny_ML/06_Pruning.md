@@ -3,7 +3,9 @@
 1. Train ANN
 2. Remove $p \%$ of parameters with smallest magnitude
 
-Terms
+![](assets/pruning.png)
+
+## Terms
 
 |               |       |
 | ------------- | ----- |

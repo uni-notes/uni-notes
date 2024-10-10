@@ -1,5 +1,61 @@
 # Performance Optimization
 
+## Compile
+
+|                    | Type    | Control Flow<br>Supported? |
+| ------------------ | ------- | -------------------------- |
+| `torch.jit.trace`  | Static  | ❌                          |
+| `torch.jit.script` | Static  | ✅                          |
+| `torch.compile`    | Dynamic | ✅                          |
+
+### Model
+```python
+model = NeuralNet()
+optimized_model = torch.compile(
+	model,
+	mode = "reduce-overhead", # "default", "reduce-overhead", "max-autotune"
+)
+```
+
+### Optimizer
+
+```python
+if torch.cuda.get_device_capability() < (7, 0):
+    print("torch.compile is not supported on this device.")
+
+@torch.compile(fullgraph=False)
+def step(opt):
+	opt.step()
+```
+
+### Fuse Layers
+
+```python
+model = torch.quantization.fuse_modules(
+	model,
+	[['conv', 'bn', 'relu']],
+)
+```
+### Fuse Operators
+```python
+@torch.jit.trace # or torch.jit.script or torch.compile
+def gelu(x):
+	return (
+		x * 0.5 *
+		(1.0 + torch.erf(x / 1.41421))
+	)
+```
+
+## Mobile
+```python
+from torch.utils.mobile_optimizer import optimize_for_mobile
+
+torchscript_model = torch.jit.script(model)
+
+torchscript_model_optimized = optimize_for_mobile(torchscript_model)
+torchscript_model_optimized.save("model.pt")
+```
+
 ## IDK
 
 ### GPU
@@ -84,6 +140,67 @@ if __name__ == "__main__":
 ```
 
 ## Quantization
+
+## Precision
+
+```python
+torch.set_float32_matmul_precision("high") # "highest", "high", "medium"
+```
+
+```python
+model.half()
+tensor = tensor.half()
+```
+
+### AMP
+Automatic Mixed Precision
+
+```python
+dtype = torch.bfloat16
+
+scaler = (
+	torch.GradScaler()
+	if (dtype == torch.float16) # Only necessary for FP16
+	else None
+)
+
+# Train Network
+for epoch in range(num_epochs):
+    for batch_idx, (data, targets) in enumerate(train_loader):
+        # Get data to cuda if possible
+        data = data.to(device=device)
+        targets = targets.to(device=device)
+
+        # forward
+        with torch.autocast(device_type = device, dtype=torch.bfloat16):
+            scores = model(data)
+            loss = criterion(scores, targets)
+
+        # backward
+        optimizer.zero_grad(set_to_none=True)
+		
+		if scaler is None:
+	        loss.backward()
+	        optimizer.step()
+	    else:
+		    scaler.scale(loss).backward()
+		    scaler.step(optimizer)
+		    scaler.update()
+```
+
+### IDK
+
+```python
+model.qconfig = torch.quantization.get_default_qconfig('qnnpack')
+torch.quantization.prepare(model, inplace=True)
+# Calibrate your model
+def calibrate(model, calibration_data):
+    # Your calibration code here
+    return model
+model = calibrate(model, [])
+torch.quantization.convert(model, inplace=True)
+```
+### IDK
 
 ```python
 class VerySimpleNet(nn.Module):
