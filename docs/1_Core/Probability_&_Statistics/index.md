@@ -1,6 +1,8 @@
 # Probability & Statistics
 
-This is an introductory course into Probability, Distributions, and Statistics
+This course explores probability theory and statistics, emphasizing their relevance to real-world phenomena and applications. Students will engage with both computational and theoretical aspects of probability, gaining skills in handling data sets and understanding statistical inference.
+
+The course highlights the diverse applications of probability theory across fields such as mathematical statistical physics, mathematical biology, theoretical computer science, and actuarial science, which evaluates financial risks in insurance and finance. By linking theoretical concepts with practical applications, students will develop a comprehensive understanding of how probability and statistics inform decision-making in various disciplines.
 
 ## References
 
