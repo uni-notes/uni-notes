@@ -5,11 +5,9 @@
 | Lecture   | Dr. Baskaran   |
 | Tutorial  | Dr. Baskaran   |
 
-This course is about
+This course delves deeper into the study of differential equations, emphasizing classical methods for solving boundary value problems. It serves as a foundation for applying differential equations, Fourier series, and Laplace transforms across various engineering and scientific disciplines.
 
-- Differential Equations
-- Laplace Transformations
-- Fourier Series
+The curriculum integrates software-based solution procedures to enhance understanding and visualization of concepts. Students will explore the applications of these mathematical techniques, preparing them to address complex problems in real-world scenarios and providing a solid groundwork for further studies in mathematics and engineering.
 
 ## Note
 
