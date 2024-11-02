@@ -1,8 +1,18 @@
 # Machine Learning
 
-One of the hottest topics right now, covers foundational concepts related to the field of ML.
+An exciting sub-area of Artificial Intelligence focused on designing machines that can learn and improve their performance from experience. This course introduces students to the key algorithms and theories that form the core of machine learning. 
 
-The first few topics are common to all aspects of machine learning.
+Students are expected to have a foundational understanding of several key concepts, including probability theory, decision theory, information theory, linear algebra, and optimization and search techniques.
+
+## Key learning objectives include:
+- Understanding major approaches to learning (supervised, unsupervised, semi-supervised, and reinforcement learning).
+- Exploring techniques made feasible by increased computational power and large volumes of data.
+- Covering fundamental topics such as regression, decision trees, support vector machines, and artificial neural networks.
+- Examining Bayesian techniques and Hidden Markov models.
+- Introducing advanced topics like active learning, deep learning, and topological learning.
+
+This course provides students with a solid foundation in machine learning principles and prepares them for practical applications and further studies in artificial intelligence.
+
 
 ## References
 
