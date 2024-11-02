@@ -1,6 +1,15 @@
 # Data Mining
 
-This course covers the concepts regarding Data Analysis.
+This course explores the concepts and techniques of data mining, a promising and flourishing frontier in database systems. Data Mining is the automated extraction of patterns representing knowledge implicitly stored in large databases, data warehouses, and other massive information repositories. It serves as a decision support tool that addresses unique problems that cannot be solved by other data analysis tools such as Online Analytical Processing (OLAP).
+
+## Key learning objectives include:
+- Understanding data mining tasks such as constructing decision trees, finding association rules, classification, and clustering.
+- Gaining broad insights into the design and use of data mining algorithms.
+- Exploring a holistic view of data mining from database, statistical, algorithmic, and application perspectives.
+- Applying data mining concepts using Python.
+
+This course equips students with the foundational knowledge and practical skills needed to leverage data mining techniques for effective decision-making and data analysis.
+
 
 ## Why Data Mining
 
