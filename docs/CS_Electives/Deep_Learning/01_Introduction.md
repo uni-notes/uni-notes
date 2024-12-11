@@ -104,10 +104,6 @@ So if the width and height of image are $w, h$
 | Little                       | Linear Classifier on FC7 | Not optimal          |
 | Large                        | Finetune few layers      | Finetune more layers |
 
-## IDK
-
-![image-20240309214029828](./assets/image-20240309214029828.png)
-
 ## Why Deep Learning?
 
 Deep networks

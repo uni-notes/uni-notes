@@ -345,6 +345,11 @@ class wu,wc dotted
 
 $w$ is a confounder to $x$ and $y$, but we do not need to observe it, as causal effect of $x$ on $y$ is identifiable by conditioning on $z$
 
+
+### Mediator
+
+![](assets/confounded_mediator.png)
+
 ### Effect Modifiers
 
 Confounders $s$ that change the causal effect of a treatment $x$, since their causal effect on the outcome $y$ interacts with treatment’s causal effect on $y$

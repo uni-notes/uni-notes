@@ -134,11 +134,13 @@ subgraph ML Engineering
 	|KPIs| mv[Model<br/>Validation] -->
 	|Certified<br/>Model| md[/Deploy/]
 	
+	od{Outlier<br/>Detection}
 	ad{Anomaly<br/>Detection}
 end
 
-dp -->|Train| ad
-ld[(Live <br/>Data)] --> ad
+dp --> od --> |Filter| ad
+
+ld[(Live <br/>Data)] --> od
 md --> m[Model]
 
 ad --> |Accept| m
