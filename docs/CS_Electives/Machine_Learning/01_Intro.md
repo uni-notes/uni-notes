@@ -70,20 +70,99 @@ Learning model
 
 ## Stages of Machine Learning
 
+Stage 1
+- Data Collection
+
+Stage 2
+- Feature importance
+- Feature selection
+
+Stage 3: Theory
+- Causal Discovery
+- Causal Theory building
+
+Stage 4: Building
+- Feature engineering
+- Model specification
+
+Stage 5: Tuning
+- Model class/Learning algorithm selection
+- Hyperparameter tuning
+
+Stage 6
+- Model comparison
+- Model selection
+
+Stage 7: Evaluation
+- Performance
+- Robustness
+
+Stage 8: Inference
+- Model prediction
+- Model explanation
+
+![](assets/ML_Production_Aspects.png)
+
+![](assets/AI_Infrastructure.png)
+
+### Model Engineering
+
 ```mermaid
 flowchart LR
+subgraph Data Engineering
+	direction LR
+	dc[(Data<br/>Collection)] -->
+	|Raw<br/>Data| di[(Data<br/>Ingestion)] -->
+	|Indexed<br/>Data| da[(Data<br/>Analysis, Curation)] -->
+	|Selected<br/>Data| dl[(Data<br/>Labelling)] -->
+	|Labelled<br/>Data| dv[(Data<br/>Validation)] -->
+	|Validated<br/>Data| dp[(Data<br/>Preparation)]
+end
+
 td[Task<br/>Definition] -->
-cd[(Collecting<br/>Data)] -->
-l[Learning<br/>Type] -->
-c[Define Cost] -->
-Optimize -->
-Evaluate -->
-Tune -->
-save[/Save Model/] -->
-d[/Deploy/] --> Model
-cd --> ad
-ld[(Live <br/>Data)] --> ad[Anomaly<br/>Detection] --> Model
+dc
+
+dp -->
+|ML-Ready<br/>Dataset| l
+
+subgraph ML Engineering
+	direction LR
+	l[Learning<br/>Type] -->
+	c[Define<br/>Cost] -->
+	mo[Optimization] -->
+	|Trained<br/>Model| me[Evaluate] -->
+	|KPIs| mv[Model<br/>Validation] -->
+	|Certified<br/>Model| md[/Deploy/]
+	
+	od{Outlier<br/>Detection}
+	ad{Anomaly<br/>Detection}
+end
+
+dp --> od --> |Filter| ad
+
+ld[(Live <br/>Data)] --> od
+md --> m[Model]
+
+ad --> |Accept| m
+ad ----> |Reject| anomaly[/Anomaly/]
+
+m --> pc{Prediction<br/>Confidence}
+pc --> |High<br/>Confidence| pred[/Prediction/]
+pc --> |Low<br/>Confidence| unsure[/Unsure/]
 ```
+
+1. Design
+	1. Why am I building?
+	2. Who am I building for?
+	3. What am I building?
+	4. What are the consequences if it fails?
+2. Development
+	1. What data will be collected to train the model
+	2. Does the dataset follow AI ethics?
+3. Deployment
+	1. How will model drift be monitored?
+	2. How should preventive security measures be taken?
+	3. How to react to security breaches?
 
 ## 3 Dimensions of Prediction
 
@@ -119,17 +198,17 @@ Hence, sometimes you may choose the Forecast/Prediction with the better value ev
 
 ## Open-source Tools
 
-|              |      |
-| ------------ | ---- |
-| Scikit-Learn |      |
-| TensorFLow   |      |
-| Keras        |      |
-| PyTorch      |      |
-| MXNet        |      |
-| CNTK         |      |
-| Caffe        |      |
-| PaddlePaddle |      |
-| Weka         |      |
+|              |     |
+| ------------ | --- |
+| Scikit-Learn |     |
+| TensorFLow   |     |
+| Keras        |     |
+| PyTorch      |     |
+| MXNet        |     |
+| CNTK         |     |
+| Caffe        |     |
+| PaddlePaddle |     |
+| Weka         |     |
 
 ## Doesn’t do well for Forecasting
 

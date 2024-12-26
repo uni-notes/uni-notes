@@ -69,6 +69,14 @@ model = LinearRegression()
 
 model.partial_fit(data_1)
 model.partial_fit(data_2)
-
 ```
 
+## Config
+
+```python
+with sklearn.config_context(
+	assume_finite = True,
+	skip_parameter_validation = True
+):
+	pass
+```

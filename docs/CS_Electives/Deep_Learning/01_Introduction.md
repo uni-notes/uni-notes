@@ -86,20 +86,23 @@ So if the width and height of image are $w, h$
 - Hardware costs
 - Flexibility
 
-## Popular Models & Datasets
+## Popular Datasets
 
-| Dataset | Sample Size | Content                                                      | Classes |
-| :-----: | ----------: | ------------------------------------------------------------ | :-----: |
-|  MNIST  |      50,000 | Images of handwritten digits (0-9)                           |   10    |
-|  CIFAR  |      60,000 | Airplanes, cars, birds, cats, deer, dogs, frogs, horses, ships, and trucks |   10    |
+| Dataset  | Sample Size | Content                                                                    | Classes |
+| :------: | ----------: | -------------------------------------------------------------------------- | :-----: |
+|  MNIST   |      50,000 | Images of handwritten digits (0-9)                                         |   10    |
+|  CIFAR   |      60,000 | Airplanes, cars, birds, cats, deer, dogs, frogs, horses, ships, and trucks |   10    |
+| ImageNet |             |                                                                            |         |
 
 ## Transfer Learning
 
 ![image-20230527151527131](./../assets/image-20230527151527131.png)
 
-## IDK
 
-![image-20240309214029828](./assets/image-20240309214029828.png)
+| ......... Similarity<br>Size | Similar                  | Different            |
+| ---------------------------- | ------------------------ | -------------------- |
+| Little                       | Linear Classifier on FC7 | Not optimal          |
+| Large                        | Finetune few layers      | Finetune more layers |
 
 ## Why Deep Learning?
 

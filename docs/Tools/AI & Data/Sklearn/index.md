@@ -1,5 +1,13 @@
 # Sklearn
 
+Always set `n_jobs` and `random_state` explicitly
+
+## Output Format
+
+```python
+transformer.set_output(transform="polars") # "pandas"
+```
+
 ## Basics
 
 ```python
@@ -38,6 +46,10 @@ X_train, X_test, y_train, y_test = train_test_split(X, y,
 ```
 ## Save & Load Model
 ## Pickle
+
+> [!WARNING]
+> Pickling is unsafe
+
 ```python
 import pickle
 file_name = "model.pkl"
@@ -165,46 +177,11 @@ model = LogisticRegression(loss=custom_loss)
 ## Custom Ensembling
 Voting
 Stacking
-## Hyperparameter Tuning
-
-```python
-## create the Pipeline
-pipe = Pipeline(
-  [('preprocessor', ct), ('classifier', clf1)],
-  memory = "cache_name" # cache results, especially useful for grid-search
-)
-
-## create the parameter dictionary for clf1
-params = [
-  dict(
-    preprocessor__vectorizer__ngram_range = [(1, 1), (1, 2)],
-    classifier__penalty = ['l1', 'l2'],
-    classifier = [my_random_forest]
-  ),
-  dict(
-    preprocessor__vectorizer__ngram_range = [(1, 1), (1, 2)],
-    classifier__n_estimators = [100, 200],
-    classifier = [my_decision_tree]
-  )
-]
-```
-```python
-grid = GridSearchCV(
-  pipe,
-  param_grid = params,
-  cv = 5,
-  refit = False, # True forces to refit best model for the entire dataset at the end; pointless if you only want cv results
-  n_jobs = -1,
-  memory = "grid_search" # caching
-)
-
-grid.fit(X, y)
-
-print(grid.best_params_)
-```
 
 ## Linear Regression statistical inference
-Parameter standard errors
+
+### Parameter standard errors
+
 ```python
 N = len(X)
 p = len(X.columns) + 1  ## plus one because LinearRegression adds an intercept term
@@ -225,7 +202,8 @@ for p_ in range(p):
     standard_error = var_beta_hat[p_, p_] ** 0.5
     print(f"SE(beta_hat[{p_}]): {standard_error}")
 ```
-## Parameter confidence intervals
+
+### Parameter confidence intervals
 
 ```python
 import numpy as np
@@ -261,7 +239,8 @@ def get_conf_int(X, y, model, alpha=0.05):
 model = LinearRegression().fit(X_train, Y_train)
 get_conf_int(X_train, y_train, model, alpha = 0.05)
 ```
-## Mean response confidence intervals
+
+### Mean response confidence intervals
 
 ```python
 import numpy as np
@@ -323,7 +302,9 @@ gap_prediction = t_val * se_prediction
 print(gap_confidence)
 #print(gap_prediction)
 ```
+
 ## Custom Scorer
+
 ```python
 from sklearn.metrics import make_scorer
 from sklearn.model_selection import cross_val_score
@@ -340,7 +321,9 @@ model = LinearRegression()
 cross_val_score(model, X, y, scoring=mean_error_scorer)
 cross_val_score(model, X, y, scoring=std_error_scorer)
 ```
+
 ## Scaling
+
 ```python
 ## demonstrate data normalization with sklearn
 from sklearn.preprocessing import MinMaxScaler
@@ -426,56 +409,317 @@ plt.ylim(yy.min(), yy.max())
 - LinearSVC: Primal
 - SVC: Dual
 
-## Multi-Level Model
+## Boosted Hybrid Model
+
+Multi-Level Model
 
 ```python
-from sklearn.base import BaseEstimator
-from sklearn.datasets import make_regression
-from sklearn.ensemble import GradientBoostingRegressor
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_squared_error
-from sklearn.pipeline import FeatureUnion, Pipeline
-from sklearn.preprocessing import StandardScaler, QuantileTransformer
+from sklearn.base import RegressorMixin, TransformerMixin
+from sklearn.utils.validation import check_is_fitted, check_array, check_X_y
 
-X, y = make_regression(n_samples=100, n_features=10, noise=10.0, random_state=42)
+class HybridBoostingRegressor(RegressorMixin, TransformerMixin):
+    def __init__(self, kwargs):
+        self.names = []
+        self.models = []
+        self.features_list = []
+        self.targets = []
 
-class Regressor(BaseEstimator):
-    def __init__(self, n_features):
-        self.n_features = n_features
-        self.linear_reg = LinearRegression()
-        self.boosting_reg = GradientBoostingRegressor(
-            n_estimators=1,
-            init="zero",
-            random_state=42
-        )
+        for name, model, features, target in kwargs:
+            self.names.append(name)
+            self.models.append(model)
+            self.features_list.append(features)
 
-    def fit(self, X, y):
-        self.linear_reg.fit(X=X[:, :self.n_features], y=y)
-        y_pred = self.linear_reg.predict(X=X[:, :self.n_features])
-        residual = y - y_pred
-        self.boosting_reg.fit(X=X[:, self.n_features:], y=residual)
+            if len(target) == 1:
+              self.targets.append(target[0])
+            else:
+              self.targets.append(target)
+
+    def filter_X(self, X, features):
+        if len(features) > 0:
+          X = X[features]
+        return X
+
+    def get_y(self, y, y_intermediate, target):
+        if len(target) == 0:
+          y = y
+        else:
+          y = y_intermediate[target]
+
+        return y
+
+    def fit(self, X, y, y_intermediate = None, **fit_params):
+        if y_intermediate is None or y_intermediate.shape[0] == 0:
+          for target in self.targets:
+            if len(target) > 0:
+              return Exception(f"y_intermediate not found for {target}")
+
+        y_res = y.copy()
+        y_intermediate_res = y_intermediate.copy()
+
+        self.fitted_models_ = []
+        for model, features, target in zip(self.models, self.features_list, self.targets):
+
+            X = self.filter_X(X.copy(), features)
+            y = self.get_y(y_res, y_intermediate_res, target)
+
+            # Check that X and y have correct shape
+            X, y = check_X_y(X, y)
+
+            model.fit(X, y, **fit_params)
+
+            self.fitted_models_.append(model)
+
+            if len(target) == 0:
+              pred = model.predict(X)
+            else:
+              pred = model.predict(X)
+
+            # residual
+            if len(target) != 0:
+              y_intermediate_res[target] = self.accumulate(y_intermediate_res[target], pred)
+            y_res = self.get_residual(y_res, pred)
+
         return self
 
     def predict(self, X):
-        y_pred_linear_reg = self.linear_reg.predict(X=X[:, :self.n_features])
-        residual = self.boosting_reg.predict(X=X[:, self.n_features:])
-        y_pred = y_pred_linear_reg + residual
-        return y_pred
+        check_is_fitted(self, "fitted_models_")
 
+        pred = self.pred_init
+        for fitted_model, features, target in zip(self.fitted_models_, self.features_list, self.targets):
+            X = self.filter_X(X.copy(), features)
 
-union = FeatureUnion(
-    transformer_list=[("ss", StandardScaler()),
-                      ("qt", QuantileTransformer(n_quantiles=2))]
+            # Input validation
+            X = check_array(X)
+
+            pred = self.accumulate(pred, fitted_model.predict(X))
+
+        return pred
+
+class AdditiveHybridBoostingRegressor(HybridBoostingRegressor):
+    """
+    y_hat = f_1(x_1) + f_1(x_2) + ...
+    """
+    def __init__(self, kwargs):
+      super().__init__(kwargs)
+      self.pred_init = 0
+    def get_residual(self, y, pred):
+      return y-pred
+    def accumulate(self, y, pred):
+      return y+pred
+
+class MultiplicativeHybridBoostingRegressor(HybridBoostingRegressor):
+    """
+    y_hat = f_1(x_1) * f_1(x_2) * ...
+    """
+    def __init__(self, kwargs):
+      super().__init__(kwargs)
+      self.pred_init = 1
+    def get_residual(self, y, pred):
+      return y/pred
+    def accumulate(self, y, pred):
+      return y*pred
+```
+
+```python
+x = np.arange(1, 1000, 1)
+X = pd.DataFrame().assign(
+  x1 = x,
+  x2 = x**2
+)
+y_intermediate = pd.DataFrame().assign(
+  trend = 10000*X["x1"] + X["x2"],
+  seasonality = np.sin(X["x1"]) + np.sin(X["x1"])
 )
 
-X_union = union.fit_transform(X=X)
+y = y_intermediate["trend"] + y_intermediate["seasonality"]
+```
 
-n_features = 10
-pipe = Pipeline(
-    steps=[
-      ("reg", Regressor(n_features=n_features))
-    ]
-).fit(X=X_union, y=y)
-y_pred = pipe.predict(X=X_union)
+```python
+from sklearn.linear_model import LinearRegression
+from sklearn.ensemble import RandomForestRegressor
+
+model = AdditiveHybridBoostingRegressor(
+	[
+		('lr', LinearRegression(), [], ["trend"]),
+		('rf', RandomForestRegressor(n_estimators=10, random_state=42, n_jobs=-1), [], ["seasonality"])
+	]
+)
+model.fit(X, y, y_intermediate)
+model.predict(X)
+```
+
+## Bootstrap
+
+```python
+from sklearn.utils import resample
+X_test_bootstrap, y_test_bootstrap = resample(
+	X_test,
+	y_test,
+	replace = True,
+	n_samples = 1_000,
+	random_state = 0
+)
+```
+
+## Variable Size Rolling Statistics
+
+```python
+import numpy as np
+import pandas as pd
+from pandas.api.indexers import BaseIndexer
+
+class VariableWindowIndexer(BaseIndexer):
+    def __init__(self, window_size, max_periods=None):
+        super().__init__()
+        self.window_size = window_size.values
+        self.max_periods = max_periods
+
+    def get_window_bounds(self, num_values, min_periods, center, closed, step):
+        temp = np.arange(0, num_values, 1)
+
+        if self.max_periods is not None:
+          self.window_size = np.where(
+              self.window_size <= self.max_periods,
+              self.window_size,
+              self.max_periods
+          )
+
+        window_end = temp + 1
+        window_start = window_end - self.window_size
+        return window_start, window_end
+```
+
+```python
+horizon = 1
+lag = df["y"].shift(horizon)
+window_size = df.index + 1
+
+rolling = lag.rolling(
+    VariableWindowIndexer(window_size=window_size, max_periods=None),
+    min_periods=1,
+    center=False
+)
+
+df[["y_rolling_mean", "y_rolling_std"]] = rolling.agg(["mean", "std"])
+```
+
+|     |   t |   y |  lag | y_rolling_mean | y_rolling_std |
+| --: | --: | --: | ---: | -------------: | ------------: |
+|   0 |   1 |   1 |  NaN |            NaN |           NaN |
+|   1 |   2 |   2 |  1.0 |            1.0 |           NaN |
+|   2 |   3 |   3 |  2.0 |            1.5 |      0.707107 |
+|   3 |   4 |   4 |  3.0 |            2.0 |      1.000000 |
+|   4 |   5 |   5 |  4.0 |            2.5 |      1.290994 |
+|   5 |   6 |   6 |  5.0 |            3.0 |      1.581139 |
+|   6 |   7 |   7 |  6.0 |            3.5 |      1.870829 |
+|   7 |   8 |   8 |  7.0 |            4.0 |      2.160247 |
+|   8 |   9 |   9 |  8.0 |            4.5 |      2.449490 |
+|   9 |  10 |  10 |  9.0 |            5.0 |      2.738613 |
+|  10 |  11 |  11 | 10.0 |            5.5 |      3.027650 |
+|  11 |  12 |  12 | 11.0 |            6.0 |      3.316625 |
+|  12 |  13 |  13 | 12.0 |            6.5 |      3.605551 |
+|  13 |  14 |  14 | 13.0 |            7.0 |      3.894440 |
+
+## Bias-Variance Decomposition
+
+```python
+from mlxtend.evaluate import bias_variance_decomp
+
+# Regression
+avg_expected_loss, avg_bias, avg_var = bias_variance_decomp(
+        reg,
+        X_train, y_train,
+        X_test, y_test, 
+        loss='mse',
+        random_seed=123
+)
+
+# Classification
+avg_expected_loss, avg_bias, avg_var = bias_variance_decomp(
+        clf,
+        X_train, y_train,
+        X_test, y_test, 
+        loss='0-1_loss',
+        random_seed=123
+)
+```
+
+## Paired T Test
+
+```python
+from mlxtend.evaluate import paired_ttest_5x2cv
+
+
+t, p = paired_ttest_5x2cv(
+	estimator1 = model1,
+    estimator2 = model2,
+    X=X, y=y,
+    random_seed=1
+)
+
+print('t statistic: %.3f' % t)
+print('p value: %.3f' % p)
+```
+
+## Feature Agglomeration 
+
+
+```python
+import numpy as np
+from matplotlib import pyplot as plt
+from scipy.cluster.hierarchy import dendrogram
+
+from sklearn.cluster import FeatureAgglomeration
+
+def plot_dendrogram(feature_clustering, names=None, title=None, **dendogram_params):
+    # Create linkage matriX and then plot the dendrogram
+
+    # create the counts of samples under each node
+    counts = np.zeros(feature_clustering.children_.shape[0])
+    n_samples = len(feature_clustering.labels_)
+    for i, merge in enumerate(feature_clustering.children_):
+        current_count = 0
+        for child_idX in merge:
+            if child_idX < n_samples:
+                current_count += 1  # leaf node
+            else:
+                current_count += counts[child_idX - n_samples]
+        counts[i] = current_count
+
+    linkage_matrix = np.column_stack(
+        [feature_clustering.children_, feature_clustering.distances_, counts]
+    ).astype(float)
+
+    if names is None:
+        cols = None
+    else:
+        cols = lambda col_index: names[col_index]
+    
+    dendrogram(linkage_matrix, leaf_label_func=cols, **dendogram_params)
+    
+    if title is not None:
+      plt.title(title)
+    # plt.xlabel("Number of points in node (or index of point if no parenthesis).")
+    plt.show()
+```
+
+```python
+matrix_similarity = mutual_information # df.corr().abs()
+matrix_distance = 1 - matrix_similarity # matrix_similarity.abs()
+
+feature_clustering = FeatureAgglomeration(distance_threshold=0, n_clusters=None, metric="precomputed", linkage="average")
+feature_clustering.fit(matrix_distance)
+```
+
+```python
+# plot the top three levels of the dendrogram
+plot_dendrogram(feature_clustering, matrix_distance.columns, title="Mutual Information", orientation = "right", truncate_mode="level")
+```
+
+## $R^2$
+
+```python
+y_baseline = np.mean(y_train)
+r2 = 1 - np.mean((y_pred - y_test) ** 2) / np.mean((y_baseline - y_test) ** 2)
 ```
 

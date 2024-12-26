@@ -11,27 +11,37 @@ To simulate deployment, any data used for evaluation should be treated as if it 
 
 ## Data Split Sets
 
+|                                                                    |                                      Train                                      |                 Development<br>Eyeball                  |                Development<br>Black Box                 |                    Validation<br>Inner                    |                    Validation<br>Outer                    |                           Test<br />(Holdout)                           |
+| ------------------------------------------------------------------ | :-----------------------------------------------------------------------------: | :-----------------------------------------------------: | :-----------------------------------------------------: | :-------------------------------------------------------: | :-------------------------------------------------------: | :---------------------------------------------------------------------: |
+| Recommend split %                                                  |                                       20                                        |                            5                            |                            5                            |                            20                             |                            20                             |                                   20                                    |
+| EDA<br />('Seen' by analyst)                                       |                                        ✅                                        |                            ❌                            |                            ❌                            |                             ❌                             |                             ❌                             |                                    ❌                                    |
+| In-Sample<br />('Seen' by model)                                   |                                        ✅                                        |                            ❌                            |                            ❌                            |                             ❌                             |                             ❌                             |                                    ❌                                    |
+| Pre-Processing 'learning'<br />(Normalization, Standardization, …) |                                        ✅                                        |                            ❌                            |                            ❌                            |                             ❌                             |                             ❌                             |                                    ❌                                    |
+| Feature Selection                                                  |                                        ✅                                        |                            ❌                            |                            ❌                            |                             ❌                             |                             ❌                             |                                    ❌                                    |
+| Causal Discovery                                                   |                                        ✅                                        |                            ❌                            |                            ❌                            |                             ❌                             |                             ❌                             |                                    ❌                                    |
+| Feature Engineering 'learning'                                     |                                        ✅                                        |                            ❌                            |                            ❌                            |                             ❌                             |                             ❌                             |                                    ❌                                    |
+| Error Analysis<br>(Inspection)                                     |                                        ✅                                        |                            ✅                            |                            ❌                            |                             ❌                             |                             ❌                             |                                    ❌                                    |
+| Model Tuning                                                       |                                        ✅                                        |                            ✅                            |                            ❌                            |                             ❌                             |                             ❌                             |                                    ❌                                    |
+| Underfit Evaluation                                                |                                        ✅                                        |                            ✅                            |                            ❌                            |                             ❌                             |                             ❌                             |                                    ❌                                    |
+| Overfit Evaluation                                                 |                                        ❌                                        |                           🟡                            |                            ✅                            |                             ❌                             |                             ❌                             |                                    ❌                                    |
+| Hyperparameter Tuning                                              |                                        ❌                                        |                            ❌                            |                            ❌                            |                             ✅                             |                             ❌                             |                                    ❌                                    |
+| Model Selection                                                    |                                        ❌                                        |                            ❌                            |                            ❌                            |                             ❌                             |                             ✅                             |                                    ❌                                    |
+| Model Evaluation<br>(Performance Reporting)                        |                                        ❌                                        |                            ❌                            |                            ❌                            |                             ❌                             |                             ❌                             |                                    ✅                                    |
+| $\hat f$                                                           |                              ${\hat f}_\text{in}$                               |                ${\hat f}_{\text{dev}_e}$                |                ${\hat f}_{\text{dev}_b}$                |                 ${\hat f}_{\text{val}_i}$                 |                 ${\hat f}_{\text{val}_o}$                 |                         ${\hat f}_\text{test}$                          |
+| $\hat f$ trained on                                                |                                      Train                                      |                          Train                          |                       Until dev_e                       |                        Until dev_b                        |                        Until val_i                        |                               Until val_o                               |
+| $E$                                                                |                                  $E_\text{in}$                                  |                   $E_{\text{dev}_e}$                    |                   $E_{\text{dev}_b}$                    |                    $E_{\text{val}_i}$                     |                    $E_{\text{val}_o}$                     |                             $E_\text{test}$                             |
+| Error Names                                                        | Training error/<br />In-Sample Error/<br />Empirical Error/<br />Empirical Risk |                Eyeball Development Error                |               Black Box Development Error               |                     Validation Error                      |                                                           | $\hat E_\text{out}$<br />Expected error<br />Prediction error<br />Risk |
+| No of $\hat f$                                                     |                                       Any                                       |                           Any                           |                           Any                           |                            Any                            |                  Low<br>(Usually < 10?)                   |                                   $1$                                   |
+| ${\vert H \vert}_\text{set}$                                       |                                    $\infty$                                     |                        $\infty$                         |                      $d_\text{vc}$                      |             ${\vert H \vert}_{\text{val}_i}$              |             ${\vert H \vert}_{\text{val}_o}$              |                                   $1$                                   |
+| Comment                                                            |                                                                                 |                                                         |                                                         |                                                           |    Used for “training” on “finalist” set of hypotheses    |            Should not be used for any model decision making             |
+| Color Scheme Below                                                 |             <span style="background:green;color:white">Green</span>             | <span style="background:green;color:white">Green</span> | <span style="background:green;color:white">Green</span> | <span style="background:yellow;color:black">Yellow</span> | <span style="background:orange;color:white">Orange</span> |           <span style="background:Red;color:white">Red</span>           |
 
-|                                                              |                            Train                             |            Development<br />(Inner Validation)            |            Validation<br />(Outer Validation)             |                     Test<br />(Holdout)                      |
-| ------------------------------------------------------------ | :----------------------------------------------------------: | :-------------------------------------------------------: | :-------------------------------------------------------: | :----------------------------------------------------------: |
-| Recommend split %                                            |                              40                              |                            20                             |                            20                             |                              20                              |
-| In-Sample<br />(‘Seen’ by model)                             |                              ✅                               |                             ❌                             |                             ❌                             |                              ❌                               |
-| EDA<br />(‘Seen’ by analyst)                                 |                              ✅                               |                             ❌                             |                             ❌                             |                              ❌                               |
-| Pre-Processing “learning”<br />(Normalization, Standardization, …) |                              ✅                               |                             ❌                             |                             ❌                             |                              ❌                               |
-| Feature Engineering “learning”<br />(Selection, Transformation, …) |                              ✅                               |                             ❌                             |                             ❌                             |                              ❌                               |
-| Underfit Evaluation                                          |                              ✅                               |                             ❌                             |                             ❌                             |                              ❌                               |
-| Model Tuning                                                 |                              ✅                               |                             ❌                             |                             ❌                             |                              ❌                               |
-| Overfit Evaluation                                           |                              ❌                               |                             ✅                             |                             ❌                             |                              ❌                               |
-| Hyperparameter Tuning                                        |                              ❌                               |                             ✅                             |                             ❌                             |                              ❌                               |
-| Model Comparison/Selection                                   |                              ❌                               |                             ❌                             |                             ✅                             |                              ❌                               |
-| Performance Reporting                                        |                              ❌                               |                             ❌                             |                             ❌                             |                              ✅                               |
-| $\hat f$                                                     |                     ${\hat f}_\text{in}$                     |                   ${\hat f}_\text{dev}$                   |                   ${\hat f}_\text{val}$                   |                    ${\hat f}_\text{test}$                    |
-| $\hat f$ trained on                                          |                            Train                             |                           Train                           |                         Train+Dev                         |                        Train+Dev+Val                         |
-| $E$                                                          |                        $E_\text{in}$                         |                      $E_\text{dev}$                       |                      $E_\text{val}$                       |                       $E_\text{test}$                        |
-| Error Names                                                  | Training error/<br />In-Sample Error/<br />Empirical Error/<br />Empirical Risk |                     Development Error                     |                     Validation Error                      | $\hat E_\text{out}$<br />Expected error<br />Prediction error<br />Risk |
-| ${\vert H \vert}_\text{set}$                                 |                           $\infty$                           |                       $d_\text{vc}$                       |               ${\vert H \vert}_\text{val}$                |                             $1$                              |
-| Comment                                                      |                                                              |                                                           |    Used for “training” on “finalist” set of hypotheses    |       Should not be used for any model decision making       |
-| Color Scheme Below                                           |   <span style="background:green;color:white">Green</span>    | <span style="background:yellow;color:black">Yellow</span> | <span style="background:orange;color:white">Orange</span> |     <span style="background:Red;color:white">Red</span>      |
+"$\hat f$ trained on" implies that data should be split amongst to be used for
+- 60: Model fitting
+- 20: Model confidence interval generation (if required), else use this also for model fitting
+- 20: Model calibration
+	- Confidence interval calibration
+	- Classification proportion calibration
 
 $$
 \begin{aligned}
@@ -56,31 +66,31 @@ E_\text{out}(\hat f_\text{test})
 E_\text{test}(\hat f_\text{test})
 $$
 
-|                                                              | Small                                       | Large                                    |
-| ------------------------------------------------------------ | ------------------------------------------- | ---------------------------------------- |
-| Low Model Bias                                               | ✅                                           | ❌                                        |
-| Small Generalization Bound                                   | ❌                                           | ✅                                        |
-| Reliable $\hat E_\text{out}$<br />$E_\text{out}(\hat f_\text{test})-E_\text{test}(\hat f_\text{test})$ | ❌                                           | ✅                                        |
-| Tested model and final model are same<br />Small $E_\text{out}(\hat f) - E_\text{out}(\hat f_\text{test})$ | ✅                                           | ❌                                        |
+|                                                              |                    Small                    |                  Large                   |
+| ------------------------------------------------------------ | :-----------------------------------------: | :--------------------------------------: |
+| Low Model Bias                                               |                      ✅                      |                    ❌                     |
+| Small Generalization Bound                                   |                      ❌                      |                    ✅                     |
+| Reliable $\hat E_\text{out}$<br />$E_\text{out}(\hat f_\text{test})-E_\text{test}(\hat f_\text{test})$ |                      ❌                      |                    ✅                     |
+| Tested model and final model are same<br />Small $E_\text{out}(\hat f) - E_\text{out}(\hat f_\text{test})$ |                      ✅                      |                    ❌                     |
 | Extreme case<br />Model performance reporting                | “with no certainty, the model is excellent” | “with high certainty, the model is crap” |
 
 ![image-20240627171759662](./assets/image-20240627171759662.png)
 
 ## Usage
 
-1. Training Data
-   1. Get $E_\text{in}$
-   2. Overfit all models
-   3. Beat baseline model(s)
-2. Dev data
-   1. Get $E_\text{dev}$
-   2. Tune all models to generalize
-   3. Beat baseline model(s)
-3. Validation data
-   1. Compare all models on $E_\text{val}$
-   2. Must beat baseline model(s)
-   3. Select best model $\hat f_\text{val}^*$
-4. Get accuracy estimate of $\hat f_\text{val}^*$ on test data: $E_\text{test}$
+1. Split data
+2. Competition
+	1. Create a self-hosted competition ('Kaggle' equivalent)
+3. Overfit to single train sample
+4. Overfit to entire dataset
+	- Beat baseline model(s)
+5. Tune to generalize to dev set
+	- Beat baseline model(s)
+6. Tune hyperparameters on inner validation set
+7. Compare all models on $E_\text{val}$ on outer validation set
+	- Must beat baseline model(s)
+8. Select best model $\hat f_{\text{val}_o}^*$
+9. Get accuracy estimate of $\hat f_\text{val}^*$ on test data: $E_\text{test}$
 
 Single metric
 
@@ -95,10 +105,17 @@ Repeatedly drawing samples from a training set and refitting a model of interest
 
 Hence, these help address the issue of a simple validation: Results can be highly variable, depending on which observations are included in the training set and which are in the validation set
 
-|                  | Sampling        | Comment                                            | Better for identifying uncertainty in model |
-| ---------------- | --------------- | -------------------------------------------------- | ------------------------------------------- |
-| Bootstrapping    | w/ Replacement  | Better as we can have a large repetitions of folds | parameters                                  |
-| Cross Validation | w/o Replacement |                                                    | accuracy                                    |
+|                                                                     | Bootstrapping                                                                               | Cross Validation |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ---------------- |
+| Sampling                                                            | w/ Replacement                                                                              | w/o Replacement  |
+| Estimate uncertainty in model parameters                            | ✅                                                                                           | ❌                |
+| Estimate expected model evaluation metric                           | ✅                                                                                           | ❌                |
+| Estimate model stability: standard error in model evaluation metric | ✅                                                                                           | ❌                |
+| Model Tuning                                                        | ✅ (check if change caused statistically-significant improvement)                            | ✅                |
+| Hyperparameter Tuning                                               | ✅ (check if change caused statistically-significant improvement)                            | ✅                |
+| Model Selection                                                     | ❌                                                                                           | ✅                |
+| Advantage                                                           | Large repetitions of folds: No assumptions for standard error estimation                    |                  |
+| Comment                                                             | The resulting distribution will give the **sampling distribution** of the evaluation metric |                  |
 
 ### Cross Validation Types
 
@@ -122,25 +139,35 @@ Hence, these help address the issue of a simple validation: Results can be highl
 
 ### Bootstrapping Types
 
-|                                  |                |                                                              |
-| -------------------------------- | -------------- | ------------------------------------------------------------ |
-| Random sampling with replacement | IID            |                                                              |
-| ARIMA Bootstrap                  | Parametric     |                                                              |
-| Moving Block Bootstrap           | Non-parametric | ![image-20240312121539820](./assets/image-20240312121539820.png) |
-| Circular Block Bootstrap         | Non-parametric |                                                              |
-| Stationary Bootstrap             | Non-parametric |                                                              |
+|                                  |                |                                                                  | Advantage                             | Disadvantage                                             |
+| -------------------------------- | -------------- | ---------------------------------------------------------------- | ------------------------------------- | -------------------------------------------------------- |
+| Random sampling with replacement | IID            |                                                                  |                                       |                                                          |
+| ARIMA Bootstrap                  | Parametric     |                                                                  |                                       |                                                          |
+| Moving Block Bootstrap           | Non-parametric | ![image-20240312121539820](./assets/image-20240312121539820.png) |                                       |                                                          |
+| Circular Block Bootstrap         | Non-parametric |                                                                  |                                       |                                                          |
+| Stationary Bootstrap             | Non-parametric |                                                                  |                                       |                                                          |
+| Test-Set Bootstrap               |                | Only bootstrap the out-of-sample set (dev, val, test)<br>        | No refitting: Great for Deep Learning | Large out-of-sample size required for good bootstrapping |
 
 ## Validation Methods
 
-==Make sure to **shuffle** all splits for cross-sectional data==
+| Type                     |                                             Cross-Sectional                                             |                                    Time Series                                    | Comment                                                                                                                                                   |
+| ------------------------ | :-----------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------: | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Holdout                  |                           ![train_test_split](./assets/train_test_split.svg)                            |                ![train_test_split](./assets/train_test_split.svg)                 |                                                                                                                                                           |
+| $k$- Fold                |          ![k_fold_cross_validation](./assets/k_fold_cross_validation_cross_sectional_data.svg)          | ![k_fold_cross_validation](./assets/k_fold_cross_validation_time_series_data.svg) | 1. Split dataset into $k$ subsets<br/>2. Train model on $(k-1)$ subsets<br />3. Evaluate performance on $1$ subset<br/>4. Summary stats of all iterations |
+| Repeated $k$-Fold        | ![repeated_k_fold_cross_validation](./assets/repeated_k_fold_cross_validation_cross_sectional_data.svg) |                                         ❌                                         | Repeat $k$ fold with different splits and random seed                                                                                                     |
+| Nested $k$-Fold          |           ![nested_k_fold_cross_validation](./assets/nested_k_fold_cross_sectional_data.svg)            |  ![nested_k_fold_cross_validation](./assets/nested_k_fold_time_series_data.svg)   |                                                                                                                                                           |
+| Nested Repeated $k$-Fold |  ![nested_repeated_k_fold_cross_validation](./assets/nested_repeated_k_fold_cross_sectional_data.svg)   |                                         ❌                                         |                                                                                                                                                           |
 
-| Type                     |                       Cross-Sectional                        |                         Time Series                          | Comment                                                      |
-| ------------------------ | :----------------------------------------------------------: | :----------------------------------------------------------: | ------------------------------------------------------------ |
-| Holdout                  |      ![train_test_split](./assets/train_test_split.svg)      |      ![train_test_split](./assets/train_test_split.svg)      |                                                              |
-| $k$- Fold                | ![k_fold_cross_validation](./assets/k_fold_cross_validation_cross_sectional_data.svg) | ![k_fold_cross_validation](./assets/k_fold_cross_validation_time_series_data.svg) | 1. Split dataset into $k$ subsets<br/>2. Train model on $(k-1)$ subsets<br />3. Evaluate performance on $1$ subset<br/>4. Summary stats of all iterations |
-| Repeated $k$-Fold        | ![repeated_k_fold_cross_validation](./assets/repeated_k_fold_cross_validation_cross_sectional_data.svg) |                              ❌                               | Repeat $k$ fold with different splits and random seed        |
-| Nested $k$-Fold          | ![nested_k_fold_cross_validation](./assets/nested_k_fold_cross_sectional_data.svg) | ![nested_k_fold_cross_validation](./assets/nested_k_fold_time_series_data.svg) |                                                              |
-| Nested Repeated $k$-Fold | ![nested_repeated_k_fold_cross_validation](./assets/nested_repeated_k_fold_cross_sectional_data.svg) |                              ❌                               |                                                              |
+For
+- cross-sectional data
+	- make sure to **shuffle** all splits
+- time-series data, always add
+	- purging
+	- embargo
+	- step size/gap between splits
+		- estimates of error/loss for nearby splits will be correlated, so no point in estimating them
+		- larger step size $\implies$ fewer splits $\implies$ saves time
+		- always take step size $>1$, as it is pointless to have step size $= 1$
 
 ### Decision Parameter $k$
 

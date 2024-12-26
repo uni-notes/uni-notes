@@ -180,6 +180,20 @@ $$
 - May overfit
 - Optimization is computationally expensive
 
+## ExtraTrees
+
+Extremely Randomized Trees
+
+Similar to Random Forest, but results in trees that are less correlated with each other, by selecting splits randomly from the range of feature values
+
+|                         | Random Forest                | Extra Trees                        |
+| ----------------------- | ---------------------------- | ---------------------------------- |
+| **Computational Speed** | Slower due to optimal splits | Faster due to random splits        |
+| **Data Sampling**       | Bootstrapped samples         | Entire dataset without replacement |
+| **Node Splitting**      | Optimal split                | Random split                       |
+| **Bias**                | Higher bias potential        | Lower bias potential               |
+| **Variance**            | Medium                       | Low                                |
+
 ## Gradient Boosting
 
 Performs functional optimization of the cost function: Functional gradient descent with approximate gradients
@@ -192,3 +206,10 @@ $$
 \end{aligned}
 $$
 Works with any differentiable loss function
+
+
+## Neural Networks
+
+- Average predictions of multiple model checkpoints across epochs of single model
+- Model averaging across epochs
+

@@ -1,5 +1,0 @@
-# Operations Management
-
-## References
-
-- 

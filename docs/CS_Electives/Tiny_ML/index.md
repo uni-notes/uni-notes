@@ -7,28 +7,21 @@ Will mainly focus on the following applications: Speech, Computer Vision, NLP
 ## Topics
 
 - Hardware
-  - Architecture & Dataflow
-  - Metrics and Analysis
-  - Efficiency
-  - Micro-architecture/Circuits
+	- Architecture & Dataflow
+	- Metrics and Analysis
+	- Efficiency
+	- Micro-architecture/Circuits
 - Model Optimization
-  - Quantization
-  - Pruning
-  - Knowledge distillation
-  - AutoML
 - Software: Optimize DNN operations through software compilation/kernel implementations
-  - Domain-specific compilers; eg: TVM
-  - Kernel implementations
-  - Mapping onto hardware
+	- Domain-specific compilers; eg: TVM
+	- Kernel implementations
+	- Mapping onto hardware
 - Systems
-  - Pre/Post Processing
-  - Distributed training
-  - Federated learning
-  - Environmental issues
+- Environmental issues
 
 ## Pre-Requisites
 
-- Computer archictecture
+- Computer architecture
 - Machine Learning
 - Python programming
 - PyTorch Basics
@@ -60,7 +53,10 @@ Will mainly focus on the following applications: Speech, Computer Vision, NLP
 - [x] Machine Learning Hardware and Systems (Cornell Tech, Spring 2022)
   - [x] [Videos](https://www.youtube.com/playlist?list=PL0mFAhrXqy9CuopJhAB8GVu_Oy7J0ery6)
   - [x] [Material](https://abdelfattah-class.github.io/ece5545/)
-- [ ] [TinyML and Efficient Deep Learning Computing | EfficientML.ai - MIT HAN Lab](https://www.youtube.com/playlist?list=PL80kAHvQbh-pT4lCkDT53zT8DKmhE0idB)
-- [ ] [Tiny Machine Learning | UPenn](https://www.youtube.com/playlist?list=PL7rtKJAz_mPe6kAbiH6Ucq02Vpa95qvBJ)
-- [ ] [AutoDL | Applied Deep Learning](https://www.youtube.com/playlist?list=PLoEMreTa9CNnQXiups8QMzmyKe4b3ge6F)
+- [ ] [TinyML and Efficient Deep Learning Computing | EfficientML.ai - MIT HAN Lab](https://www.youtube.com/playlist?list=PL80kAHvQbh-qGtNc54A6KW4i4bkTPjiRF)
+- [x] [Tiny Machine Learning | UPenn](https://www.youtube.com/playlist?list=PL7rtKJAz_mPe6kAbiH6Ucq02Vpa95qvBJ)
+- [ ] [AutoDL | Applied Deep Learning | Maziar Raissi](https://www.youtube.com/playlist?list=PLoEMreTa9CNnQXiups8QMzmyKe4b3ge6F)
 
+## Current Video
+
+https://www.youtube.com/watch?v=QF0S29IXTWk&list=PL7rtKJAz_mPe6kAbiH6Ucq02Vpa95qvBJ&index=79

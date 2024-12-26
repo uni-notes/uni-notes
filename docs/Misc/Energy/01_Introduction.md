@@ -50,10 +50,10 @@ Chile > UK > Scandinavia > California (crisis, shortage, Enron)
 
 ### Types
 
-|                   |                                                              |
-| ----------------- | ------------------------------------------------------------ |
-| Capacity          | For system operator to ensure that sufficient generation capacity is present for reliable system operation in future year and at competitive prices |
-| Energy            | Central place for optimal scheduling and settlement of energy exchanges |
+|                   |                                                                                                                                                                                                                                                                           |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Capacity          | For system operator to ensure that sufficient generation capacity is present for reliable system operation in future year and at competitive prices                                                                                                                       |
+| Energy            | Central place for optimal scheduling and settlement of energy exchanges                                                                                                                                                                                                   |
 | Ancillary Service | Any type of service that supports power system operations, directly bought by system operator<br />- Primary reserves<br />- Secondary reserves<br />- Tertiary receivers (manual)<br />- Black-start capability, short-circuit power, reactive reserves, voltage control |
 
 ### Financial
@@ -69,11 +69,11 @@ Chile > UK > Scandinavia > California (crisis, shortage, Enron)
 
 ## Challenges
 
-|                                                              |                                                              |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
+|                                                              |                                                                  |
+| ------------------------------------------------------------ | ---------------------------------------------------------------- |
 | Variable energy demand<br />“Duck Curve”                     | ![image-20240408120910623](./assets/image-20240408120910623.png) |
-| Renewable energy generation is variable and non-dispatchable | ![](./assets/image-20240408121115323.png)                    |
-| Renewable energy generation is hard to forecast              |                                                              |
+| Renewable energy generation is variable and non-dispatchable | ![](./assets/image-20240408121115323.png)                        |
+| Renewable energy generation is hard to forecast              |                                                                  |
 
 ## Economic impact of renewable energy
 
@@ -88,7 +88,7 @@ Flexibility is seen as ability to adapt to variable and unforeseen changes in op
 - Demand side
 - Integrated energy systems view (heat and gas energy systems)
 
-## IDK
+## Traditional vs Renewable
 
 |                   | Traditional  | Renewable          |
 | ----------------- | ------------ | ------------------ |

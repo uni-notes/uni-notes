@@ -179,5 +179,13 @@ $$
 \end{aligned}
 $$
 
+## Regularization
 
+Regularization __ of probabilistic boundary
+- Increases width
+- Changes orientation
+- Changes position
 
+![](assets/Logistic_Regression_Regularization.png)
+
+$c = \dfrac{1}{\alpha}$

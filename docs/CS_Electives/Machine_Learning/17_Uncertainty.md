@@ -29,12 +29,12 @@ $$
 \hat y \pm t_{\alpha/2} \times \text{SE}
 $$
 
-|                                                              | Coefficient Confidence Interval                              | Response Confidence Interval                                 | Response Prediction Interval                                 |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Denotation                                                   | $\sigma_{\hat \beta}$                                        | $\sigma\Big(\hat \mu(y \vert x) \Big)$                       | $\sigma\Big( \hat y \vert x \Big)$                           |
-| The upper and lower bound for estimated __ at a given level of significance | $\hat \beta$                                                 | $\hat \mu(y \vert x)$                                        | $\hat y \vert x$                                             |
-| SE (Standard Error) for Univariate Regression<br /><br />(Asymptotic Approach) | $\dfrac{\text{RMSE}}{\sqrt{\sum (x_{\text{pred}_\text{cent}} )^2}}$ | $\text{RMSE} \times \sqrt{ \dfrac{1}{n} + \dfrac{(x_{\text{pred}_\text{cent}} )^2}{n \sigma_x^2}}$ | $\text{RMSE}  \times \sqrt{ \textcolor{hotpink}{1 +} \dfrac{1}{n} + \dfrac{(x_{\text{pred}_\text{cent}})^2}{n \sigma_x^2}}$ |
-| SE (Standard Error) for Multivariate Regression<br /><br />(Asymptotic Approach) | ${\text{CovMatrix}_\beta}_{ii}$                              | $\text{RMSE} \times \sqrt{\dfrac{1}{n} + J'_{{x_\text{pred}}_\text{cent}} \ \text{CovMatrix}_{X} \ J'_{{x_\text{pred}}_\text{cent}}}$ | $\text{RMSE} \times \sqrt{\textcolor{hotpink}{1+} \dfrac{1}{n} + x'_{\text{pred}_\text{cent}} \ \text{CovMatrix}_{X} \ x_{\text{pred}_\text{cent}}}$ |
+|                                                                                  | Coefficient Confidence Interval                                     | Response Confidence Interval                                                                                                          | Response Prediction Interval                                                                                                                         |
+| -------------------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Denotation                                                                       | $\sigma_{\hat \beta}$                                               | $\sigma\Big(\hat \mu(y \vert x) \Big)$                                                                                                | $\sigma\Big( \hat y \vert x \Big)$                                                                                                                   |
+| The upper and lower bound for estimated __ at a given level of significance      | $\hat \beta$                                                        | $\hat \mu(y \vert x)$                                                                                                                 | $\hat y \vert x$                                                                                                                                     |
+| SE (Standard Error) for Univariate Regression<br /><br />(Asymptotic Approach)   | $\dfrac{\text{RMSE}}{\sqrt{\sum (x_{\text{pred}_\text{cent}} )^2}}$ | $\text{RMSE} \times \sqrt{ \dfrac{1}{n} + \dfrac{(x_{\text{pred}_\text{cent}} )^2}{n \sigma_x^2}}$                                    | $\text{RMSE}  \times \sqrt{ \textcolor{hotpink}{1 +} \dfrac{1}{n} + \dfrac{(x_{\text{pred}_\text{cent}})^2}{n \sigma_x^2}}$                          |
+| SE (Standard Error) for Multivariate Regression<br /><br />(Asymptotic Approach) | ${\text{CovMatrix}_\beta}_{ii}$                                     | $\text{RMSE} \times \sqrt{\dfrac{1}{n} + J'_{{x_\text{pred}}_\text{cent}} \ \text{CovMatrix}_{X} \ J'_{{x_\text{pred}}_\text{cent}}}$ | $\text{RMSE} \times \sqrt{\textcolor{hotpink}{1+} \dfrac{1}{n} + x'_{\text{pred}_\text{cent}} \ \text{CovMatrix}_{X} \ x_{\text{pred}_\text{cent}}}$ |
 
 $$
 \begin{aligned}
@@ -100,39 +100,26 @@ Equally-likely samples of multivariate predictive densities
 
 ## Uncertainty Propagation
 
-This table shows the variances and standard deviations of simple
-functions of the real variables $A,B\!$, with standard deviations
-$\sigma_A, \sigma_B,\,$
-[covariance](Covariance_and_correlation "wikilink")
-$\sigma_{AB}=\rho_{AB}\sigma_A\sigma_B\,$, and correlation $\rho_{AB}$.
-The real-valued coefficients $a$ and $b$ are assumed exactly known
-(deterministic), i.e., $\sigma_a = \sigma_b = 0$.
+| Function                    | Variance                                                                                                                                   |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| $aA$                        | $= a^2\sigma_A^2$                                                                                                                          |
+| $aA + bB$                   | $= a^2\sigma_A^2 + b^2\sigma_B^2 + 2ab\,\text{Cov(A, B)}$                                                                                  |
+| $aA - bB$                   | $= a^2\sigma_A^2 + b^2\sigma_B^2 - 2ab\,\text{Cov(A, B)}$                                                                                  |
+| $AB$                        | $\approx f^2 \left[\left(\frac{\sigma_A}{A}\right)^2 + \left(\frac{\sigma_B}{B}\right)^2 + 2\frac{\text{Cov(A, B)}}{AB} \right]$           |
+| $\frac{A}{B}$               | $\approx f^2 \left[\left(\frac{\sigma_A}{A}\right)^2 + \left(\frac{\sigma_B}{B}\right)^2 - 2\frac{\text{Cov(A, B)}}{AB} \right]$           |
+| $\frac{A}{A+B}$             | $\approx \frac{f^2}{\left(A+B\right)^2} \left(\frac{B^2}{A^2}\sigma_A^2  +\sigma_B^2 - 2\frac{B}{A} \text{Cov(A, B)} \right)$              |
+| $a A^{b}$                   | $\approx \left( {a}{b}{A}^{b-1}{\sigma_A} \right)^2 = \left( \frac{{f}{b}{\sigma_A}}{A} \right)^2$                                         |
+| $a \ln(bA)$                 | $\approx \left(a \frac{\sigma_A}{A} \right)^2$[^4]                                                                                         |
+| $a \log_{10}(bA)$           | $\approx \left(a \frac{\sigma_A}{A \ln(10)} \right)^2$[^5]                                                                                 |
+| $a e^{bA}$                  | $\approx f^2 \left( b\sigma_A \right)^2$[^6]                                                                                               |
+| $a^{bA}$                    | $\approx f^2 (b\ln(a)\sigma_A)^2$                                                                                                          |
+| $a \sin(bA)$                | $\approx \left[ a b \cos(b A) \sigma_A \right]^2$                                                                                          |
+| $a \cos \left( b A \right)$ | $\approx \left[ a b \sin(b A) \sigma_A \right]^2$                                                                                          |
+| $a \tan \left( b A \right)$ | $\left[ a b \sec^2(b A) \sigma_A \right]^2$                                                                                                |
+| $A^B$                       | $\approx f^2 \left[ \left( \frac{B}{A}\sigma_A \right)^2 +\left( \ln(A)\sigma_B \right)^2 + 2 \frac{B \ln(A)}{A} \text{Cov(A, B)} \right]$ |
+| $\sqrt{aA^2 \pm bB^2}$      | $\approx \left(\frac{A}{f}\right)^2 a^2\sigma_A^2 + \left(\frac{B}{f}\right)^2 b^2\sigma_B^2 \pm 2ab\frac{AB}{f^2}\,\text{Cov(A, B)}$      |
 
-In the columns "Variance" and "Standard Deviation", *A* and *B* should
-be understood as expectation values (i.e. values around which we're
-estimating the uncertainty), and $f$ should be understood as the value
-of the function calculated at the expectation value of $A,B\!$.
-
-| Function                    | Variance                                                     |
-| --------------------------- | ------------------------------------------------------------ |
-| $aA$                        | $= a^2\sigma_A^2$                                            |
-| $aA + bB$                   | $= a^2\sigma_A^2 + b^2\sigma_B^2 + 2ab\,\sigma_{AB}$         |
-| $aA - bB$                   | $= a^2\sigma_A^2 + b^2\sigma_B^2 - 2ab\,\sigma_{AB}$         |
-| $AB$                        | $\approx f^2 \left[\left(\frac{\sigma_A}{A}\right)^2 + \left(\frac{\sigma_B}{B}\right)^2 + 2\frac{\sigma_{AB}}{AB} \right]$[^1][^2] |
-| $\frac{A}{B}$               | $\approx f^2 \left[\left(\frac{\sigma_A}{A}\right)^2 + \left(\frac{\sigma_B}{B}\right)^2 - 2\frac{\sigma_{AB}}{AB} \right]$[^3] |
-| $\frac{A}{A+B}$             | $\approx \frac{f^2}{\left(A+B\right)^2} \left(\frac{B^2}{A^2}\sigma_A^2  +\sigma_B^2 - 2\frac{B}{A} \sigma_{AB} \right)$ |
-| $a A^{b}$                   | $\approx \left( {a}{b}{A}^{b-1}{\sigma_A} \right)^2 = \left( \frac{{f}{b}{\sigma_A}}{A} \right)^2$ |
-| $a \ln(bA)$                 | $\approx \left(a \frac{\sigma_A}{A} \right)^2$[^4]           |
-| $a \log_{10}(bA)$           | $\approx \left(a \frac{\sigma_A}{A \ln(10)} \right)^2$[^5]   |
-| $a e^{bA}$                  | $\approx f^2 \left( b\sigma_A \right)^2$[^6]                 |
-| $a^{bA}$                    | $\approx f^2 (b\ln(a)\sigma_A)^2$                            |
-| $a \sin(bA)$                | $\approx \left[ a b \cos(b A) \sigma_A \right]^2$            |
-| $a \cos \left( b A \right)$ | $\approx \left[ a b \sin(b A) \sigma_A \right]^2$            |
-| $a \tan \left( b A \right)$ | $\left[ a b \sec^2(b A) \sigma_A \right]^2$                  |
-| $A^B$                       | $\approx f^2 \left[ \left( \frac{B}{A}\sigma_A \right)^2 +\left( \ln(A)\sigma_B \right)^2 + 2 \frac{B \ln(A)}{A} \sigma_{AB} \right]$ |
-| $\sqrt{aA^2 \pm bB^2}$      | $\approx \left(\frac{A}{f}\right)^2 a^2\sigma_A^2 + \left(\frac{B}{f}\right)^2 b^2\sigma_B^2 \pm 2ab\frac{AB}{f^2}\,\sigma_{AB}$ |
-
-For uncorrelated variables ($\rho_{AB}=0$, $\sigma_{AB}=0$) expressions
+For uncorrelated variables ($\rho_{AB}=0$, $\text{Cov(A, B)}=0$) expressions
 for more complicated functions can be derived by combining simpler
 functions. For example, repeated multiplication, assuming no
 correlation, gives
@@ -144,7 +131,7 @@ $V(XY)= E(X)^2 V(Y) + E(Y)^2 V(X) + E((X-E(X))^2 (Y-E(Y))^2)$ and
 therefore we have:
 $\sigma_f^2 = A^2\sigma_B^2 + B^2\sigma_A^2 +  \sigma_A^2\sigma_B^2$
 
-## Effect of correlation on differences [effect_of_correlation_on_differences]
+## Effect of correlation on differences
 
 If *A* and *B* are uncorrelated, their difference *A-B* will have more
 variance than either of them. An increasing positive correlation
@@ -178,3 +165,10 @@ the output, $\sigma_f^2=4\sigma^2_A$ (notice $1-\rho_A=2$ for *f* = *aA*
 5. Obtain the standard deviation (volatility)
 6. Multiply volatility with one-sided $Z_1$ to estimate 99% worst-case loss
 
+## Classification
+
+$$
+[\text{Bin}(n, p)_{1-\alpha/2}, \text{Bin}(n, p)_{\alpha/2}]
+$$
+
+![](assets/Wilson%20score%20interval.png)

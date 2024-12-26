@@ -22,19 +22,6 @@ Large Language Models
    3. Data used to train reward model
 3. Policy optimization
 
-## GAN
-
-Generative Adversarial Networks
-
-```mermaid
-flowchart LR
-n[/Noise/] ---> g[Generator] --> d
-rd[Real Data] -->
-d[Discriminator] -->
-rf{Real/Fake} -.->
-|Backpropagation| d & g
-```
-
 ## Fine-Tuning
 
 Process of training model using specific data, usually with a significantly smaller learning rate

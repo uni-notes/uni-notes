@@ -1,9 +1,5 @@
 # International Relations
 
-| Class   | Instructor        |
-| ------- | ----------------- |
-| Lecture | Dr. Devika Sharma |
-
 ## Overview
 
 How countries interact with each other
@@ -24,3 +20,9 @@ Suggest a proposal to UN about possible conflict, with sufficient reasons
 - [ ] VICE movie on 2nd Gulf War
 - [ ] Oslo
 - [ ] BBC World Service - The Lazarus Heist
+
+## References
+
+- [ ] International Relations | Dr. Devika Sharma | BITS Pilani Dubai Campus
+- [ ] [International Relations | Brian Urlacher](https://www.youtube.com/playlist?list=PLxzz0tls2X9B6iUlbn9KZJqlU9zWD_b5C)
+- [ ] [International Security | Brian Urlacher](https://www.youtube.com/playlist?list=PLxzz0tls2X9CyG3EjuHFWNyYkWVszbDd0)

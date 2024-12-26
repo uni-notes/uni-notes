@@ -5,5 +5,7 @@
 ## References
 
 - [ ] [Learn PyTorch for deep learning in a day | Daniel Bourke](https://www.youtube.com/watch?v=Z_ikDlimN6A)
-- [ ] [Introduction to PyTorch | Siri STEM World](https://youtube.com/playlist?list=PLSzvumBvBae9I9T6JdsRGsi1tmB7DuZlz)
-- [ ] [Machine Learning and PyTorch Deep Dive | Siri STEM World](https://www.youtube.com/playlist?list=PLSzvumBvBae8S8Tzyx5i3a863ajie_3wk)
+- [ ] [Skorch](https://youtu.be/VhBa9dXfWiI)
+- [ ] [PyTorch | Aladdin Persson](https://www.youtube.com/playlist?list=PLhhyoLH6IjfxeoooqP9rhU3HJIAVAJ3Vz)
+- [ ] [PyTorch Lightning | Lightning AI](https://www.youtube.com/playlist?list=PLaMu-SDt_RB7QZz-kTjdE_IkNDG0ZcHr-)
+- [ ] [PyTorch Lightning | Aladdin Persson](https://www.youtube.com/playlist?list=PLhhyoLH6IjfyL740PTuXef4TstxAK6nGP)
