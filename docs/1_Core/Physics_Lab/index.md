@@ -1,5 +1,7 @@
 # Lab
 
+This course offers a hands-on approach to core-level physics through practical experiments designed for first-year engineering students. It emphasizes the fundamental principles of Mechanics, Waves, and Optics, allowing students to gain practical experience with the equipment and techniques used in scientific experimentation.
+
 Here is the demonstration of every experiment in the physics lab. 
 
 1. [Collisions - I](https://drive.google.com/file/d/1y94c_QIwEYCDM_s7W_zg8fafszlW47z8/view?usp=share_link)

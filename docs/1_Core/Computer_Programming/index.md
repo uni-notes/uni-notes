@@ -2,6 +2,20 @@
 
 This was very similar to the C++ course in CBSE 11th/12th, so haven't made detailed notes for this course, yet. Some basics have been provided though. 
 
+The primary goals of this course are to introduce:
+
+- Basic data representation and processing within a computer.
+- Techniques for specifying data, operations, and problem-solving using a programming language.
+- Systematic approaches for program construction.
+
+The course covers topics such as:
+
+- Basic Model of a Computer
+- Problem Solving: Basic Computing Steps and Flow Charting (Assignment, Sequencing, Conditionals, Iteration)
+- Programming Constructs: Expressions, Statements, Conditionals, Loops, Functions/Procedures
+- Data Types: Primitive Types, Tuples, Unions, Lists/Arrays, Pointers, and Dynamically Allocated Data
+- Input, Output, and Files
+
 ## Explainer Video
 
 This video covers till midsem

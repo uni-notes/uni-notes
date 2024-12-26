@@ -2,29 +2,16 @@
 
 Taught by Dr. Tamizharasan Periyasami
 
-This is one of the most important core courses of Computer Engineering
+This course introduces computer architecture, focusing on design aspects and current trends, alongside essential system resources like memory technology and I/O subsystems.
 
-- Operating Systems
-- ==Computer Architecture==
-- Compiler Constuction
+Key learning objectives include:
 
-## Overview
+- Understanding computer system architecture and its components, including performance assessment.
+- Learning the MIPS architecture and instruction set.
+- Exploring number representations and computer arithmetic.
+- Designing data paths and control units in MIPS architecture.
+- Understanding pipelining, data hazards, and branch prediction techniques.
+- Investigating memory hierarchy, cache memory, and virtual memory.
+- Analyzing I/O interfacing and modern processors for high-performance computing.
 
-- Components of computer
-
-- Performance and how to measure it
-
-- MIPS ISA
-    - Microprocessor without Interlocked Pipeline Stages
-    - Instruction Set Architecture
-- Computer Arithmetic
-
-- CPU and control design
-
-- Pipelining & hazards
-
-- Memory organization
-
-- Storage and I/O organization
-
-- Introduction to some advanced concepts
+Overall, the course provides a comprehensive foundation in computer architecture principles and applications.

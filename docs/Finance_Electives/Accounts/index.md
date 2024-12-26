@@ -1,6 +1,10 @@
 # Fundamentals of Finance & Accounts
 
-This course mainly focuses on financial accounting.
+This course serves as an introduction to the reporting system utilized by businesses to communicate financial information to external users, along with foundational concepts in financial markets and management.
+
+In the first part of the course, the focus is on understanding financial reports, which are the final products of the accounting system, and what insights they provide about a business enterprise.
+
+The second part emphasizes financial markets, covering topics such as market reforms, primary and secondary markets, sources of investment information, portfolio selection, and preliminary concepts of financial management.
 
 ## Accounting Spreadsheets
 
