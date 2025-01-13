@@ -258,3 +258,26 @@ GARCH Models can prescribe
 - TGARCH
 - PGARCH
 - GARCH-In-Mean
+
+## Uncertainty Quantification
+
+The most appropriate solution would be to use $\chi^2$ distribution
+
+### Before you start
+
+Firstly, make sure to use a GLM with Gamma distribution and log link as variance is a $\chi^2$ distributed variable. Do not use OLS as it assumes normally-distributed variable.
+
+### Confidence Interval
+
+Confidence intervals for significance level $\alpha$ is be given by
+
+$$
+[ Q(\sigma^2_t, \alpha/2), Q(\sigma^2_t, 1 - \alpha/2) ]
+$$
+
+where
+- $Q(\sigma^2_t, q) = \dfrac{(n-1) {\hat \sigma_t}^2}{\chi^2_q}$
+- $q$ is the quantile required (ie, 5th quantile, 95th quantile, etc)
+- ${\hat \sigma}^2_t$ is the predicted volatility by the GARCH model
+- $n$ is the number of sample points in the training data
+- $\chi^2_q$ is the $\chi^2$ for given critical value

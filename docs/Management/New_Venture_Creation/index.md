@@ -24,3 +24,4 @@ How to plan and execute a new venture
 - [ ] [Fundamentals of Business - Marketing | CMU](https://www.youtube.com/playlist?list=PLmXNcJ-VjBYpoYF6fBXgfbIt5hvKG8r3W)
 - [ ] [Marketing Research | CMU](https://www.youtube.com/playlist?list=PLmXNcJ-VjBYpwk2UylXglwY1Vq6aYFz3B)
 - [ ] [Essentials of SaaS](https://www.youtube.com/playlist?list=PLZDZwPWTxRmERsB1gyJihZAtSxwbdvU_m)
+- [ ] [Business Fundamentals | IITB](https://www.youtube.com/playlist?list=PLOzRYVm0a65fe9_dKp8AzsmTgbImtX1DR)

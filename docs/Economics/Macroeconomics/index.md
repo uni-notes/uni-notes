@@ -20,6 +20,8 @@
 - [ ] [Intermediate Macroeconomics | Liam Malloy](https://www.youtube.com/playlist?list=PL0hztMsyncWNY4vgrdUA02n9JybQb36AP)
 - [ ] [Environmental Economics | Matt Birch](https://www.youtube.com/playlist?list=PLWd1brOYtkZXNIaeT3YDDg4Iw2tEQJxBB)
 - [ ] [Macroeconomics | The Economy 2.0 | The CORE Econ Team](https://core-econ.org/the-economy/macroeconomics/)
+- [ ] [Solow Growth Models | Christopher Ball](https://www.youtube.com/playlist?list=PL5aHv-uMMpmcyUy3_eoQ5b8GHOINCPEFI)
+- [ ] [Intermediate Macroeconomics | Todd R. Yarbrough](https://www.youtube.com/playlist?list=PLnvKZoi8DG-t-sbtOWxROHDYA0u1iYp2E)
 
 ## Current Video
 

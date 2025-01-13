@@ -66,10 +66,10 @@ $$
 
 ## Types of Portfolios
 
-|                |      |
-| -------------- | ---- |
-| Value-Weighted |      |
-|                |      |
+|                |     |
+| -------------- | --- |
+| Value-Weighted |     |
+|                |     |
 
 ## Benchmark
 
@@ -83,3 +83,6 @@ Retail investors lose money due to single-stock investment
 
 Exane, Expose
 
+## Structural Break
+
+When a crisis hits, most assets quickly tend to correlations close to 1

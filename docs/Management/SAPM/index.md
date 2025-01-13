@@ -22,7 +22,7 @@ Course will focus on investing, not on trading/speculationCourse is not going to
 - [ ] Fooled by Randomness
 - [ ] Flash Boys
 
-## Recommended Movies
+## Recommended Shows/Movies
 
 - [x] Big Short
 - [x] Inside Job
@@ -32,7 +32,8 @@ Course will focus on investing, not on trading/speculationCourse is not going to
 - [ ] Barbarians at the Gate
 - [ ] Rogue Trader
 - [x] Margin Call
-- [ ] Too Big to Fail
+- [x] Too Big to Fail
+- [ ] Industry | HBO
 
 ## References
 
@@ -43,3 +44,20 @@ Course will focus on investing, not on trading/speculationCourse is not going to
 - [ ] [IIT Roorkee | Quantitative Investment Management](https://www.youtube.com/playlist?list=PLLy_2iUCG87Dn-7ofD1-0U3N-zXF3qWOt)
 - [ ] [Security Analysis & Portfolio Management | IIT Roorkee](https://www.youtube.com/playlist?list=PLLy_2iUCG87BcUZRkbqKB3U2TXjM3LinI)
 - [ ] [Mathematical Portfolio Theory | IIT Guwahati](https://www.youtube.com/playlist?list=PLwdnzlV3ogoVZdKHNNAoVbcFDVo0Wb0am)
+- [ ] CFA
+	- [ ] [Level 1 | AnalystPrep](https://www.youtube.com/playlist?list=PLIYnk9FMYcks9DjrOD0tgOvWBZSJ1YsQ1)
+	- [ ] [Level 2 | AnalystPrep](https://www.youtube.com/playlist?list=PLIYnk9FMYcku_6fuLuZYfVEQx5goJKyU2)
+	- [ ] [Level 3 | AnalystPrep](https://www.youtube.com/playlist?list=PLIYnk9FMYcks5znLSGNfS9AU4YRPLJYx0)
+- [ ] [Portfolio Management | NEDL](https://www.youtube.com/playlist?list=PLE4a3phdCOatsDWPgNzzAfLz3eLwNwLnv)
+- [ ] [Quantitative Finance | IIT](https://www.youtube.com/playlist?list=PL1tKxN2HbTNY-5_rfiQ1gfE07DckOcbW9)
+- [ ] [Quantitative Finance | Nathan Whitehead](https://www.youtube.com/playlist?list=PL8DC1113ADB63358E)
+- [ ] [Wall Street Expert Reviews | Financial Edge Training](https://www.youtube.com/playlist?list=PLvTy0bwKMIU0ltmucwLqM__McQG8rZa3t)
+- [ ] [Financial Data Science](https://www.youtube.com/playlist?list=PLyQSjcv8LwAEYiGiwGROriuCflViy-oKE)
+- [ ] [ML for Algotrading | Trade Mamba](https://www.youtube.com/playlist?list=PLCZZtBmmgxn90kZQhaJgeAeMTLD1pRD9B)
+- [ ] [Pricing for Options | Caltech](https://www.youtube.com/playlist?list=PL8_xPU5epJdfCxbRzxuchTfgOH1I2Ibht)
+- [ ] [Advanced Algorithmic Trading and Portfolio Management](https://www.youtube.com/playlist?list=PLFW6lRTa1g80AzQhQ70y04ewp9-2aKxkP)
+- [ ] [Advanced Mathematical Finance | Mike, the Mathematician](https://www.youtube.com/playlist?list=PLLXsDm32L84hA0zFTUpFCWGOiysm-fl07)
+- [ ] [Investing for Laymen | Hvass Laboratories](https://www.youtube.com/playlist?list=PL9Hr9sNUjfskmK4Grhj8pNNV275X0xLhk)
+- [ ] [Global Asset Allocation and Stock Selection | Campbell Harvey](https://www.youtube.com/playlist?list=PLE1Vu6ctbqa59kJSTqpfd4_CBCqDbZGDa)
+- [ ] [Global Financial Management | Campbell Harvey](https://www.youtube.com/playlist?list=PLE1Vu6ctbqa4DFdBaE_wcbJgpA88i_1wJ)
+- [ ] [Global Tactical Assset Allocation | Campbell Harvey](https://www.youtube.com/playlist?list=PLE1Vu6ctbqa5clIWTe9Kb4SAVAdg5GIxJ)

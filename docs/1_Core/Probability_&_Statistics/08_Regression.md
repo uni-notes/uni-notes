@@ -67,6 +67,30 @@ $$
 
 Measures whether 2 vars are above/below mean at the same time
 
+### Robust correlation
+
+- Replace mean/sum with median
+- Replace square with abs
+
+$$
+\begin{aligned}
+r
+&= \dfrac{
+	\text{med} \{ \ (x_i - \tilde x)(y_i - \tilde y) \ \}
+}{
+\text{med} (x_i - \tilde x)
+\times
+\text{med} (y_i - \tilde y)
+}
+\end{aligned}
+$$
+
+where $\tilde x = \text{med} (x)$
+
+### Spearman Correlation
+
+
+
 ### Modified Correlation
 
 Setting the center as origin $\implies \bar x=\bar y=0$
@@ -86,13 +110,17 @@ $$
 
 Useful for comparing time-series, returns, etc
 
-|     |   Type    |    Correlation    |
-| :-------: | :-------: | :---------------: |
+|               |   Type    |          Correlation          |
+| :-----------: | :-------: | :---------------------------: |
 | **Strength**  |   Weak    |   $\vert  r  \vert \le 0.5$   |
-|           | Moderate  | $0.5 < \vert  r  \vert < 0.8$ |
-|           |  Strong   |   $\vert  r  \vert \ge 0.8$   |
-| **Direction** | Directly  |      $r > 0$      |
-|           | Inversely |      $r < 0$      |
+|               | Moderate  | $0.5 < \vert  r  \vert < 0.8$ |
+|               |  Strong   |   $\vert  r  \vert \ge 0.8$   |
+| **Direction** | Directly  |            $r > 0$            |
+|               | Inversely |            $r < 0$            |
+
+## Similarity to Dissimilarity
+
+$\sqrt{2(1-r)}$
 
 ## Coefficient of Determination
 

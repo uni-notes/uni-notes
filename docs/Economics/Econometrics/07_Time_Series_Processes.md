@@ -275,15 +275,138 @@ d \in [0, 1] \\
 d_\text{usual} \in [0.3, 0.5]
 $$
 
-| $d$                                        | Stationarity | Memory |
-| ------------------------------------------ | ------------ | ------ |
-| 0                                          | ❌            | ✅      |
-| $(0, 1)$<br />(Fractional differentiation) | ✅            | ✅      |
-| 1                                          | ✅            | ❌      |
+| $d$                                     | Stationarity | Memory |
+| --------------------------------------- | ------------ | ------ |
+| 0                                       | ❌            | ✅      |
+| $(0, 1)$<br />(Fractional differencing) | ✅            | ✅      |
+| 1                                       | ✅            | ❌      |
 
 ![image-20240312122111883](assets/image-20240312122111883.png)
 
+### Fractional Differencing/Un-differencing
+
+To un-difference and approximately recover the original data:
+
+#### Pre-Requisites
+1. A fixed-sized window is used for differencing
+	1. Fractional differencing using a fixed window only considers a certain number (say, w) of past data points to compute the differenced value at each time step
+	2. Unlike standard integer differencing, fractional differencing uses a weighted sum of previous values, with the weights decaying over history but not reaching zero until you hit a threshold.
+2. The first window of original data points is saved
+	1. This means that to reconstruct (un-difference) a value at time t, you need the w most recent original (pre-differenced) or already reconstructed data points, starting with the first window.
+
+#### Method
+
+## Practical Steps: How Fractional Un-differencing Can Be Done
+
+1. During differencing:
+    - Apply fractional differencing with a fixed window length _w_; store the first _w_-1 original values (these are the boundary values you'll need later).
+2. To un-difference:
+	- For each point after the initial window, set up the equation represented by the differencing operation (i.e., the original is a weighted sum of the previous _w_-1 originals and the differenced value).
+	- Solve this recursively using the saved initial values.
+	- This is analogous to "unsmoothing", where a moving-average (or filter) can be inverted as long as enough initial data is available to resolve the system
+
+```python
+import numpy as np
+from scipy.signal import lfilter
+from fracdiff import fdiff
+
+def is_integer(d, tol=1e-10):
+    """Check if d is effectively an integer within floating point tolerance."""
+    return abs(d - round(d)) < tol
+
+def fracdiff_weights(d, N):
+    """
+    Compute fractional differencing weights for given order d and window size N.
+    Correctly handles all real d, including negative and integer.
+    """
+    if is_integer(d):
+        w = np.zeros(N)
+        w[round(d)] = (-1)**round(d)
+        return w
+    else:
+        k = np.arange(1, N)
+        mult = -(d - k + 1) / k
+        w = np.empty(N)
+        w[0] = 1.0
+        w[1:] = np.cumprod(mult)
+        return w
+
+
+def unfracdiff(y, d, x0=None, window=10):
+    """
+    Reconstruct the original series from a fractionally (or integer) differenced series y.
+
+    Parameters:
+        y: differenced series
+        d: differencing order (can be int or float)
+        x0: initial value(s) (scalar or array of size d for integer or window-1 for fractional)
+        window: used for fractional differencing only
+
+    Returns:
+        Reconstructed series x
+    """
+    N = len(y)
+
+    if is_integer(d):
+        d = int(round(d))
+        if x0 is None:
+            x0 = np.zeros(d)
+        x = y.copy()
+        for j in range(d):
+            x = np.cumsum(x)
+        return x
+
+    else:
+        # Fractional case (non-integer)
+        if x0 is None:
+            raise ValueError("Initial values x0 (length=window-1) must be provided for fractional d.")
+        w = fracdiff_weights(d, window)
+        a = w
+        b = [1.0]
+        # Pad y with initial values to simulate correct lfilter history
+        y_padded = y.copy()
+        # Apply inverse filter
+        x_reconstructed = lfilter(b, a, y_padded)
+        # Replace the initial window values with original x0
+        x_reconstructed[:window-1] = x0
+        return x_reconstructed
+
+
+# Example full working test
+import numpy as np
+from fracdiff import fdiff
+
+x = np.random.random(10)
+d = 0.5                     # Can be integer (1, 2, ...) or fractional (0.5, 0.25, ...)
+window = 10
+
+# Differencing
+if is_integer(d):
+    x_shifted = x.copy()
+    for i in range(d):
+      x_shifted = np.diff(x_shifted, n=1, prepend=[0])
+    y = x_shifted.copy()
+    x0 = x[:int(d)]
+else:
+    y = fdiff(x, n=d, window=window)
+    x0 = x[:window-1]  # Save initial window for un-fractional differencing
+
+# Un-differencing
+x_reconstructed = unfracdiff(y, d, x0=x0, window=10)
+
+print("Original x:      ", x.round(1))
+
+temp = np.ceil(d).astype(int)
+print("Diff: ", np.concatenate(
+    ([np.nan]*temp, y.round(1)[temp:])
+))
+print("Reconstructed x:", x_reconstructed.round(1))
+print()
+print("Difference:", (x - x_reconstructed).round(1))
+```
+
 ## Integrated/DS Process
+
 
 Difference Stationary Process
 

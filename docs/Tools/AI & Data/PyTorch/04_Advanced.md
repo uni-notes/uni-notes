@@ -532,3 +532,199 @@ lam = alpha = 1e-4
 cost = loss + (lam * regularization) + (alpha * grads_norm_penalty)
 cost.backward()
 ```
+
+## Smooth F1 Loss
+
+```python
+import torch
+
+class F1Loss:
+	def __init__(self, padding = 1e-7):
+		self.padding = padding
+		
+	def __call__(self, y_true, y_pred):
+	    tp = torch.sum((y_true * y_pred).float(), dim=0)
+	    tn = torch.sum(((1 - y_true) * (1 - y_pred)).float(), dim=0)
+	    fp = torch.sum(((1 - y_true) * y_pred).float(), dim=0)
+	    fn = torch.sum((y_true * (1 - y_pred)).float(), dim=0)
+	
+	    p = tp / (tp + fp + self.padding)
+	    r = tp / (tp + fn + self.padding)
+
+		s = tn / (tn + fp + self.padding)
+	    n = tn / (tn + fn + self.padding)
+	
+	    #f1 = 2 * (p * r) / (p + r + 1e-7)
+	    #f1 = torch.where(torch.isnan(f1), torch.zeros_like(f1), f1)
+	    custom_f1 = 4 * (p * r * s * n) / (p + r + s + n + self.padding)
+	    f1 = torch.where(torch.isnan(f1), torch.zeros_like(f1), f1)
+	    
+	    return 1 - torch.mean(f1)
+```
+
+## LogCosh
+
+```python
+class LogCoshLoss(torch.nn.Module):
+	def _log_cosh(x: torch.Tensor) -> torch.Tensor:
+	    return x + torch.nn.functional.softplus(-2. * x) - math.log(2.0) # math.log will be faster for a single number
+	def log_cosh_loss(y_pred: torch.Tensor, y_true: torch.Tensor) -> torch.Tensor:
+	    return torch.mean(_log_cosh(y_pred - y_true))
+
+    def forward(
+        self, y_pred: torch.Tensor, y_true: torch.Tensor
+    ) -> torch.Tensor:
+        return self.log_cosh_loss(y_pred, y_true)
+```
+
+## Tobit Regression
+
+```python
+def loglike(y, sigma, y_, up_ind, down_ind):
+    """Calculate logarithm of likelihood for censored tobit model.
+    Args:
+        Model parameters:
+            y: model output
+            sigma: variance of random error (estimated during learning)
+        True data:
+            y_: observed data
+            up_ind: boolean indication of right censoring
+            down_ind: boolean indication of left censoring
+    Returns:
+        Logharithm of likelihood
+    """
+
+    normaldist = torch.distributions.Normal(
+        zero_tensor, sigma)
+
+    # model outputs normal distribution with center at y and std at sigma
+
+    # probability function of normal distribution at point y_
+    not_censored_log = normaldist.log_prob(y_ - y)
+    # probability of point random variable being more than y_
+    up_censored_log_argument = (1 - normaldist.cdf(y_ - y))
+    # probability of random variable being less than y_
+    down_censored_log_argument = normaldist.cdf(y_ - y)
+
+    up_censored_log_argument = torch.clip(
+        up_censored_log_argument, 0.00001, 0.99999)
+    down_censored_log_argument = torch.clip(
+        down_censored_log_argument, 0.00001, 0.99999)
+
+    # logarithm of likelihood
+    loglike = not_censored_log * (1 - up_ind) * (1 - down_ind)
+    loglike += torch.log(up_censored_log_argument) * up_ind
+    loglike += torch.log(down_censored_log_argument) * down_ind
+
+    loglike2 = torch.sum(loglike)
+    # we want to maximize likelihood, but optimizer minimizes by default
+    loss = -loglike2
+    return loss
+```
+
+## Getting the Mode of Log-Normal Distribution
+
+```python
+import torch
+import torch.nn as nn
+import torch.optim as optim
+
+# Define a simple neural network to predict the parameters (mu and sigma) of the Log-Normal distribution
+class LogNormalModeModel(nn.Module):
+    def __init__(self):
+        super(LogNormalModeModel, self).__init__()
+        self.fc_mu = nn.Linear(1, 1)  # Predict mu
+        self.fc_sigma = nn.Linear(1, 1)  # Predict sigma
+    
+    def forward(self, x):
+        mu = self.fc_mu(x)
+        sigma = torch.exp(self.fc_sigma(x))  # Ensure sigma is positive
+        return mu, sigma
+
+
+# Define the loss function as Negative Log-Likelihood for a Log-Normal distribution
+def negative_log_likelihood_lognormal(y_true, mu, sigma):
+    # Log-Normal log-likelihood: 
+    # log(p(y)) = -0.5 * log(2 * pi) - log(sigma) - ((log(y) - mu) ** 2) / (2 * sigma^2)
+    log_y = torch.log(y_true)
+    nll = torch.mean(0.5 * torch.log(2 * torch.pi) + torch.log(sigma) + ((log_y - mu) ** 2) / (2 * sigma**2))
+    return nll
+
+optimizer = optim.AdamW(model.parameters(), lr=1e-9) # Define optimizer
+model = LogNormalModeModel() # Instantiate the model
+
+# Training loop
+num_epochs = 500
+for epoch in range(num_epochs):
+    model.train()
+    
+    # Forward pass: predict mu and sigma
+    mu, sigma = model(x)
+    
+    # Compute the negative log-likelihood
+    loss = negative_log_likelihood_lognormal(y_true, mu, sigma)
+    
+    # Backward pass and optimization
+    optimizer.zero_grad()
+    loss.backward()
+    optimizer.step()
+    
+    if epoch % 50 == 0:
+        print(f'Epoch [{epoch}/{num_epochs}], Loss: {loss.item():.4f}')
+
+# After training, the model will predict mu and sigma
+model.eval()
+with torch.no_grad():
+    mu_pred, sigma_pred = model(x)
+    # Calculate the mode for each predicted (mu, sigma) pair
+    mode_pred = torch.exp(mu_pred - sigma_pred**2)
+    ```
+
+## Differentiable MAD
+
+```python
+import torch
+
+def soft_median(x, alpha=1.0):
+    """
+    Compute the differentiable soft median (approximation of median).
+    
+    Parameters:
+        x (Tensor): Input tensor of shape (N,) or (batch_size, N).
+        alpha (float): Controls the "softness" of the median, higher alpha makes it closer to the true median.
+    
+    Returns:
+        Tensor: Soft median of the input tensor.
+    """
+    sorted_x, _ = torch.sort(x, dim=-1)
+    n = x.size(-1)
+    
+    # SoftMedian is the weighted average based on the sorted tensor
+    indices = torch.arange(n, dtype=torch.float32, device=x.device).unsqueeze(0)  # (1, N)
+    weights = torch.exp(-alpha * torch.abs(indices - (n - 1) / 2.0))  # weight decays based on distance from center
+    weights = weights / weights.sum(-1, keepdim=True)  # Normalize weights
+    
+    soft_median = torch.sum(sorted_x * weights, dim=-1)
+    return soft_median
+
+def soft_mad(x, alpha=1.0):
+    """
+    Compute the SoftMedian Absolute Deviation (SoftMAD) using SoftMedian.
+    
+    Parameters:
+        x (Tensor): Input tensor of shape (N,) or (batch_size, N).
+        alpha (float): Softness factor for the soft median.
+    
+    Returns:
+        Tensor: SoftMedian Absolute Deviation of the input tensor.
+    """
+    median = soft_median(x, alpha)
+    deviation = torch.abs(x - median)
+    mad = soft_median(deviation, alpha)
+    return mad
+
+# Example usage:
+x = torch.randn(10)  # Random tensor of shape (10,)
+soft_mad_value = soft_mad(x, alpha=1.0)
+print("Soft Median Absolute Deviation:", soft_mad_value)
+```

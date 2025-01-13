@@ -5,8 +5,9 @@
 ## References
 
 - [x] Deep Learning | Dr. Tamizharasan
-- [ ] [Neural Networks: Zero to Hero | Andrej Karpathy](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)
-- [ ] [Deep Learning for Computer Vision | Andrej Karpathy | Stanford](https://www.youtube.com/playlist?list=PLkt2uSq6rBVctENoVBg1TpCC7OQi31AlC)
+- [x] [Neural Networks: Zero to Hero | Andrej Karpathy](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)
+- [x] [Deep Learning for Computer Vision | Andrej Karpathy | Stanford](https://www.youtube.com/playlist?list=PLkt2uSq6rBVctENoVBg1TpCC7OQi31AlC)
+- [ ] [Full Stack Deep Learning](https://www.youtube.com/playlist?list=PL1T8fO7ArWleMMI8KPJ_5D5XSlovTW_Ur)
 - [ ] [Deep Learning - Deep Understanding | Mike x Cohen](https://www.udemy.com/course/deeplearning_x)
 - [ ] [MIT 6.S191: Introduction to Deep Learning](https://www.youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI)
 - [ ] [Deep Learning in Life Sciences | MIT](https://www.youtube.com/playlist?list=PLypiXJdtIca5sxV7aE3-PS9fYX3vUdIOX)
@@ -48,3 +49,14 @@
 - [ ] [Deep Learning | École polytechnique](https://www.youtube.com/@erwanscornet9035/playlists)
 - [ ] [Deep Learning UC Berkeley](https://www.youtube.com/playlist?list=PLZSO_6-bSqHQHBCoGaObUljoXAyyqhpFW)
 - [ ] [Deep Learning | TUM](https://www.youtube.com/playlist?list=PLQ8Y4kIIbzy_pGm2QAwF625E6nmcRu2sU)
+- [ ] Deep Learning | Meanxai
+	- [ ] [Part 1](https://www.youtube.com/playlist?list=PLgaemU2xZlTgGHSYaFMCdGwLiYdiVrcCy)
+	- [ ] [Part 2](https://www.youtube.com/playlist?list=PLgaemU2xZlTgB-AOd15ZfPjHIABI_-hwp)
+- [ ] [Deep Learning | Nando de Freitas](https://www.youtube.com/playlist?list=PLE6Wd9FR--EfW8dtjAuPoTuPcqmOV53Fu)
+- [ ] [Neural Network Theory | Caltech](https://www.youtube.com/playlist?list=PLuz4CTPOUNi6OydQwoAR0pBkLn4H1bhS6)
+- [ ] [Deep Learning | Professor Bryce](https://www.youtube.com/playlist?list=PLgPbN3w-ia_PeT1_c5jiLW3RJdR7853b9)
+- [ ] [Deep Learning | StatQuest](https://www.youtube.com/playlist?list=PLblh5JKOoLUIxGDQs4LFFD--41Vzf-ME1)
+- [ ] [Deep Learning | Alex Smola | UC Berkeley](https://www.youtube.com/playlist?list=PLZSO_6-bSqHQHBCoGaObUljoXAyyqhpFW)
+- [ ] [Deep Learning | UC Berkeley](https://www.youtube.com/playlist?list=PL_iWQOsE6TfVmKkQHucjPAoRtIJYt8a5A)
+- [ ] [Local Explanations for Deep Learning Models | University of Utah](https://www.youtube.com/playlist?list=PLbuogVdPnkCoto690B1eTReTznuSC9qYX)
+- [ ] [Deep Learning | Deepmind x UCL](https://www.youtube.com/playlist?list=PLqYmG7hTraZCDxZ44o4p3N5Anz3lLRVZF)

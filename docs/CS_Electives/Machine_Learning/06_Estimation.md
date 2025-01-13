@@ -322,3 +322,13 @@ def aic(X, y, pred):
 print(aic(X, y, pred))
 ```
 
+---
+## Estimating entire distribution
+
+Neural network with multiple outputs
+
+1.  mean and multiple quantiles, rather than estimating mean and std... This relaxes the normality assumption
+2.  Mean and std: Maximum likelihood estimation 
+
+Cost function = sum of costs of each parameter, weighted by inverse of standard error for estimates
+- quantiles will tend to have more uncertainty in estimation, so less weight should be given

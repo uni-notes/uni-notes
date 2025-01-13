@@ -18,12 +18,12 @@
 ## References
 
 - [x] Econometric Methods | Dr. Sartaj Rasool Rather
-- [x] [Forecasting: Principles & Practice](https://www.youtube.com/playlist?list=PLyCNZ_xXGzpm7W9jLqbIyBAiSO5jDwJeE)
-- [x] [MIT 18.S096 Topics in Mathematics w Applications in Finance](https://www.youtube.com/playlist?list=PLUl4u3cNGP63ctJIEC1UnZ0btsphnnoHR)
 - [x] Forecasting Principles & Practice
   - [x] [Website](https://otexts.com/fpp3)
   - [x] [Course](https://www.youtube.com/playlist?list=PLyCNZ_xXGzpm7W9jLqbIyBAiSO5jDwJeE)
   - [x] [Slides](https://github.com/AhmedThahir/Forecasting-Principles-Practice)
+- [ ] [MIT 18.S096 Topics in Mathematics w Applications in Finance](https://www.youtube.com/playlist?list=PLUl4u3cNGP63ctJIEC1UnZ0btsphnnoHR)
+- [ ] [Graduate Econometrics | Ben Lambert | Oxford](https://www.youtube.com/playlist?list=PLFDbGp5YzjqXj-nXiNzO1aaItNDm30e01)
 - [ ] [Applied Methods for Computational Finance | LMU](https://www.youtube.com/playlist?list=PLJ9XZsVSloaTkwo-6A2XxhivrI9nj2fTW)
 - [ ] Computational Finance
 	- [ ] [Computational Finance](https://www.youtube.com/playlist?list=PL6zzGYGhbWrPaI-op1UfNl0uDglxdkaOB)
@@ -64,3 +64,13 @@
 - [ ] [Demand Forecasting | MaxusKnowledge](https://www.youtube.com/playlist?list=PLlCWmLrQuBh1pb1ji_81K5c4nlK8k-XG0)
 - [ ] [Quantopian Lecture Series](https://www.youtube.com/playlist?list=PLRFLF1OxMm_UL7WUWM31iynp0jMVf_vLW)
 - [ ] [Financial Feature Engineering | PredictNow AI](https://www.youtube.com/playlist?list=PLqJkyR5xvG35O8w8qQl6BF8pViB93l9BU)
+- [ ] [Advanced Quantitative Economics | Lazarski Open Courses](https://www.youtube.com/playlist?list=PL9aqlRevPSRC5EcJfJq73xQ4tsqdImXPd)
+- [ ] [Dynamic Economic Analysis | Lazarski Open Courses](https://www.youtube.com/playlist?list=PL9aqlRevPSRBOB994SVP5icxn5S3mvoaN)
+- [ ] [Intermediate Econometrics | Timo Kuosmanen](https://www.youtube.com/playlist?list=PL1V6V9R5sTmnkgS_i5AGp-YUYERtMJhaU)
+- [ ] Introduction to Econometrics | Lazarski Open Courses
+	- [ ] [Practical](https://www.youtube.com/playlist?list=PL9aqlRevPSRD8Td8q3zrBcKCck5zhveh2)
+	- [ ] [Theoretical](https://www.youtube.com/playlist?list=PL9aqlRevPSRAcOqyMpX4YC-qMfSeh_XAP)
+- [ ] [Introduction to Economic Analysis | Lazarski Open Courses](https://www.youtube.com/playlist?list=PL9aqlRevPSRDDdjlJcIHd3HX86tYYzY0Y)
+- [ ] [Applied Econometric Analysis in Fisheries and Environmental Science | University of Washington](https://atsa-es.github.io/atsa)
+- [ ] [Forecasting for Supply Chain Planning | Nicolas Vandeput](https://youtu.be/wpjDBLkdjQ8)
+- [ ] [Supply Chain Lectures | Lokad](https://www.youtube.com/playlist?list=PLVPF96B7tFlp2re0zhkU2O0mchl8IrrNs)

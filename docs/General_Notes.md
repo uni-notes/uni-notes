@@ -16,6 +16,13 @@
 		- [ ] Organize and build systems
 		- [ ] How much is your time worth
 - [ ] Professional
+	- [ ] Interview
+		- [ ] Interview
+			- [ ] Be confident, not over-confident
+			- [ ] Make it clear that
+				- [ ] you are great what you do
+				- [ ] you have lots to learn, as one cannot know everything
+				- [ ] you need ~~hand-holding~~ guidance
 	- [ ] Understand the problem, don't immediately provide the solution
 		- [ ] "If you understand your solution better than the problem you're doing something wrong" ~ Vincent Warmerdam
 		- [ ] Understand the final goal is not the solution itself, but the solving of the problem.
@@ -47,3 +54,10 @@ Venture Capitalists know that 9/10 investments fail, but expect at least 1/10 ma
 ## General Tasks involved in Job Roles
 
 [O*Net](https://www.onetonline.org/)
+
+## Parts of Profile
+
+- Knowledge - Theory
+- Skill - Practical
+- Craft - Projects
+- Experience - Time?

@@ -1,4 +1,4 @@
-# Project Management
+# Management
 
 
 
@@ -13,6 +13,9 @@
 - [ ] [Why Agile is Bad | Thriving Technologist](https://youtu.be/1VZcOpXyS8A)
 - [ ] [Sports Management | IIT](https://www.youtube.com/playlist?list=PLyqSpQzTE6M-nTyC4_lI_U8zL59Xs2WR6)
 - [ ] [Sports Management | Ronnie Murrell](https://www.youtube.com/playlist?list=PL3GeDORvoVSSuf30PndkqUrxRSbeiBX_Q)
+- [ ] [Project Management | IIT](https://www.youtube.com/playlist?list=PLPjSqITyvDeX77O9g4E_lgJbAmLK5SFu6)
+- [ ] [Project Risk Management | Mike Clayton](https://www.youtube.com/playlist?list=PLsz8d8r2a995J2pzE1gifZoh8J0Ky7oZQ)
+- [ ] [Knowledge Management | IIT](https://www.youtube.com/playlist?list=PLPjSqITyvDeUJib9TTzcpNeUiQC7zEGRc)
 
 ## Current Video
 

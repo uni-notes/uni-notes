@@ -446,3 +446,13 @@ Studies of most Psychology studies are WEIRD: Western, Educated, Industrialized,
 - When you need immediate results
 - When you want to measure something that happened in the past
 - When it involves universal ongoing phenomena (like pandemics)
+
+## A/B Testing
+
+- hashing of `user_id`
+
+### A/B Testing vs A/A Testing
+
+A/A test 
+- ensure if testing system is working correctly
+- quantify the amount of variation that can occur between two identical groups naturally

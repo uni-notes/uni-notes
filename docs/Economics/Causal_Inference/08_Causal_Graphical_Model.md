@@ -16,6 +16,8 @@ Causal model that uses a causal graph to represent the causal structure is calle
 
 RCM was developed in statistics, causal graphical model is derived from CS/AI.
 
+You can use LLMs to help derive causal theory
+
 ## Parts of Causal Model
 
 1. Causal Structure $G$: Direction of causality (What causes what)
@@ -111,23 +113,24 @@ z --> a
 w --> y
 ```
 
-| Term                                    | Condition                                                                                                                 | Above Example                              |
-| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
-| Parent                                  | Node from which arrow(s) originate                                                                                        | $x$ is parent of $y$ and $z$               |
-| Child                                   | Node to which arrow(s) end                                                                                                | $y$ and $z$ are children of $x$            |
-| Descendants                             |                                                                                                                           |                                            |
-| Ancestors                               |                                                                                                                           |                                            |
-| Exogenous                               | vars w/o any parent                                                                                                       | $w, x$                                     |
-| Endogenous                              | vars w/ $\ge 1$ parent                                                                                                    | $y, z, a$                                  |
-| Causal Path                             | Uni-directional path                                                                                                      | $x z a$<br />$z a$ <br />$x y $<br />$w y$ |
-| Non-Causal Path                         | Bi-directed path                                                                                                          | $x y w$                                    |
-| Collider                                | Node having multiple parents, where path ‘collides’                                                                       | $y$ in the path $x y w$                    |
-| Blocked Path                            | Path with a<br />- conditioned non-collider<br />or<br />- unconditioned collider, w/o conditioned descendants            |                                            |
-| Back-Door Paths                         | Non-causal paths b/w $x$ and $y$, which if left open, induce correlation b/w $x$ and $y$ without causation                |                                            |
-| d-separated vars                        | all paths b/w vars are blocked                                                                                            |                                            |
-| d-connected vars                        | $\exists$ path between the vars which isn’t blocked                                                                       |                                            |
-| conditionally-independent vars          | If 2 vars are d-separated after conditioning on a set of vars                                                             |                                            |
-| conditionally-dependent/associated vars | If 2 vars are d-connected after conditioning on a set of vars<br /><br />w/o faithfulness condition, this may not be true |                                            |
+| Term                                    | Condition                                                                                                                                                                                                                                                                                                                                           | Above Example                              |
+| --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| Parent                                  | Node from which arrow(s) originate                                                                                                                                                                                                                                                                                                                  | $x$ is parent of $y$ and $z$               |
+| Child                                   | Node to which arrow(s) end                                                                                                                                                                                                                                                                                                                          | $y$ and $z$ are children of $x$            |
+| Descendants                             |                                                                                                                                                                                                                                                                                                                                                     |                                            |
+| Ancestors                               |                                                                                                                                                                                                                                                                                                                                                     |                                            |
+| Exogenous                               | vars w/o any parent                                                                                                                                                                                                                                                                                                                                 | $w, x$                                     |
+| Endogenous                              | vars w/ $\ge 1$ parent                                                                                                                                                                                                                                                                                                                              | $y, z, a$                                  |
+| Causal Path                             | Uni-directional path                                                                                                                                                                                                                                                                                                                                | $x z a$<br />$z a$ <br />$x y $<br />$w y$ |
+| Non-Causal Path                         | Bi-directed path                                                                                                                                                                                                                                                                                                                                    | $x y w$                                    |
+| Confounder                              | **Structural Definition**<br>Variable that allows controlling for confounding<br><br>**Non-Structural Definition**, but not suitable for colliding confounder<br>Node that satisfies:<br>1. Node associated with treatment $T$<br>2. Node associated with outcome $y$, conditioned on treatment $T$<br>3. Node not on causal path between $T$ and $y$ |                                            |
+| Collider                                | **Structural Definition**<br><br><br>**Non-Structural Definition**, but not suitable always<br>Node having multiple parents, where path ‘collides’                                                                                                                                                                                                  | $y$ in the path $x y w$                    |
+| Blocked Path                            | Path with a<br />- conditioned non-collider<br />or<br />- unconditioned collider, w/o conditioned descendants                                                                                                                                                                                                                                      |                                            |
+| Back-Door Paths                         | Non-causal paths b/w $x$ and $y$, which if left open, induce correlation b/w $x$ and $y$ without causation                                                                                                                                                                                                                                          |                                            |
+| d-separated vars                        | all paths b/w vars are blocked                                                                                                                                                                                                                                                                                                                      |                                            |
+| d-connected vars                        | $\exists$ path between the vars which isn’t blocked                                                                                                                                                                                                                                                                                                 |                                            |
+| conditionally-independent vars          | If 2 vars are d-separated after conditioning on a set of vars                                                                                                                                                                                                                                                                                       |                                            |
+| conditionally-dependent/associated vars | If 2 vars are d-connected after conditioning on a set of vars<br /><br />w/o faithfulness condition, this may not be true                                                                                                                                                                                                                           |                                            |
 
 ### Properties
 
@@ -161,7 +164,7 @@ Conditioning: Broad concept of considering or restricting analysis based on cert
 | **Implementation**                        | Typically through regression, propensity score methods, or weighting | Often through matching techniques                                         |
 | **Sample size impact**                    | Generally retains full sample                                        | May reduce sample size                                                    |
 | **Primary goal**                          | Control for confounding                                              | Create comparable groups                                                  |
-| **Typical use**                           | Accounting for confounders in full dataset                           | Creating balanced comparison groups                                       |
+| **Typical use**                           | Accounting for  confounders in full dataset                          | Creating balanced comparison groups                                       |
 | **Flexibility with continuous variables** | Generally high                                                       | Often requires categorization                                             |
 | **Risk of introducing bias**              | Possible if adjusting for inappropriate variables                    | Possible if selection criteria are inappropriate                          |
 | **Population inference**                  | Often for entire population                                          | May be limited to specific subpopulation                                  |
@@ -194,14 +197,14 @@ linkStyle 0 stroke:green
 
 ### Types
 
-| Type                                                   | $x, y$ are statistically-independent<br /><br />Correlation $=$ Causation<br/>$E[y \vert x] = E[y \vert \text{do}(x)]$ | $E[y \vert \text{do}(x)]$                                                                        | Comment                                                                | Path ‘__’ by collider $c$ | Example<br />$z$      | Example<br />$x$                                      | Example<br />$y$                                                                                                    |
-| ------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------- | ------------------------- | --------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Mutual Dependence/<br />Confounding/<br />Common Cause | ❌                                                                                                                      |                                                                                                  | Info on $x$ helps predict $y$, even if $x$ has no causal effect on $y$ |                           | Smoker                | Carrying a lighter                                    | Cancer                                                                                                              |
-| Conditioned Mutual Dependence                          | ✅                                                                                                                      | $\sum_i E[y \vert \text{do}(x), c_i] \cdot P(c_i)$<br />$=\sum_i E[y \vert x, c_i] \cdot P(c_i)$ |                                                                        | blocked                   | Smoker=FALSE          | Carrying a lighter                                    | Cancer                                                                                                              |
-| Mutual Causation/<br />Common Effect                   | ✅                                                                                                                      |                                                                                                  |                                                                        | blocked                   | Revenue of company    | Size of company                                       | Survival of company                                                                                                 |
-| Conditioned Mutual Causation                           | ❌                                                                                                                      |                                                                                                  |                                                                        | opened                    | Revenue of company    | Size of company                                       | Survival of company=TRUE<br />(we usually only have data for companies that survive)<br /><br />(Survivorship bias) |
-| Mediation                                              | ❌                                                                                                                      |                                                                                                  |                                                                        |                           |                       |                                                       |                                                                                                                     |
-| Conditioned Mediation                                  | ✅                                                                                                                      |                                                                                                  |                                                                        | blocked                   | 1. Cancer<br />2. Tax | 1. Tar deposits in lung<br />2. Economic consequences | 1. Smoking<br />2. Economic conditions                                                                              |
+| Type                                 | $x, y$ are statistically-independent<br /><br />Correlation $=$ Causation<br/>$E[y \vert x] = E[y \vert \text{do}(x)]$ | $E[y \vert \text{do}(x)]$                                                                        | Comment | Path ‘__’ by collider $c$                                              | Example<br />$z$      | Example<br />$x$                                      | Example<br />$y$                                                                                                    |        |
+| ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ------- | ---------------------------------------------------------------------- | --------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------ |
+|                                      | Mutual Dependence/<br />Confounding/<br />Common Cau                                                                   | ❌                                                                                                |         | Info on $x$ helps predict $y$, even if $x$ has no causal effect on $y$ |                       | Smoker                                                | Carrying a lighter                                                                                                  | Cancer |
+| Conditioned Mutual Dependence        | ✅                                                                                                                      | $\sum_i E[y \vert \text{do}(x), c_i] \cdot P(c_i)$<br />$=\sum_i E[y \vert x, c_i] \cdot P(c_i)$ |         | blocked                                                                | Smoker=FALSE          | Carrying a lighter                                    | Cancer                                                                                                              |        |
+| Mutual Causation/<br />Common Effect | ✅                                                                                                                      |                                                                                                  |         | blocked                                                                | Revenue of company    | Size of company                                       | Survival of company                                                                                                 |        |
+| Conditioned Mutual Causation         | ❌                                                                                                                      |                                                                                                  |         | opened                                                                 | Revenue of company    | Size of company                                       | Survival of company=TRUE<br />(we usually only have data for companies that survive)<br /><br />(Survivorship bias) |        |
+| Mediation                            | ❌                                                                                                                      |                                                                                                  |         |                                                                        |                       |                                                       |                                                                                                                     |        |
+| Conditioned Mediation                | ✅                                                                                                                      |                                                                                                  |         | blocked                                                                | 1. Cancer<br />2. Tax | 1. Tar deposits in lung<br />2. Economic consequences | 1. Smoking<br />2. Economic conditions                                                                              |        |
 
 ```mermaid
 flowchart TB
@@ -271,22 +274,23 @@ Use dagitty for help
 - https://www.dagitty.net/
 - https://ahmedthahir.github.io/dagitty/
 
-| Type                                     | Should adjust? | Adjustment Stage | Adjustment Reason                                                                                                                                                                            | Selection allowed?<br>(Selection gives same result for population?) | Selection Reason |
-| ---------------------------------------- | -------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- | ---------------- |
-| Independent                              | ❌              |                  | Not related with $y$                                                                                                                                                                         | ❌                                                                   |                  |
-| Treatment                                | ✅              | 2                | Obviously                                                                                                                                                                                    | ✅                                                                   |                  |
-| Non-treatment causes of $y$              | ✅              | 2                | Avoid omitted variable bias                                                                                                                                                                  | ❌                                                                   |                  |
-| Cause/assignment of $T$                  | ✅              | 1                | Correct for non-random assignment                                                                                                                                                            | ✅                                                                   |                  |
-| Cause/assignment of non-treatment causes | ✅              | 1                | Correct for non-random assignment                                                                                                                                                            | ✅                                                                   |                  |
-| Consequence of $T$                       | ❌              |                  | Not related with $y$                                                                                                                                                                         | ❌                                                                   |                  |
-| Confounder                               | ✅              | 2                | $z$ affects $y$<br>Close backdoor                                                                                                                                                            | ❌                                                                   |                  |
-| Cause/assignment of confounder           | ✅              | 1                | Correct for non-random assigment                                                                                                                                                             |                                                                     |                  |
-| Effect modifier                          | ✅              | 2                | Effect of $x$ on $y$ changes with $z$                                                                                                                                                        |                                                                     |                  |
-| Instrumental vars                        | ⚠️             | 1                | Only if assignment to treatment not available                                                                                                                                                |                                                                     |                  |
-| Mediator                                 | ❌              |                  | Conditioning causes over-controlling: Will take away some effect of $x$ on $y$<br><br>Any result is only valid for the conditioned value of mediator                                         | ✅                                                                   |                  |
-| Collider                                 | ❌              |                  | Conditioning causes endogeneity/selection effect<br>- Can create fake causal effects<br>- Can hide real causal effects<br><br>Any result is only valid for the conditioned value of collider | ❌                                                                   |                  |
-| Colliding mediator                       | ❌              |                  | Opens backdoor                                                                                                                                                                               | ❌                                                                   |                  |
-| Consequence of $y$                       | ❌              |                  | Logically-flawed; only predictive power, no causal power                                                                                                                                     | ❌                                                                   |                  |
+| Type                                       | Should adjust? | Adjustment Stage | Adjustment Reason                                                                                                                                                                            | Selection allowed?<br>(Selection gives same result for population?) | Selection Reason |
+| ------------------------------------------ | -------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- | ---------------- |
+| Independent                                | ❌              |                  | Not related with $y$                                                                                                                                                                         | ❌                                                                   |                  |
+| Treatment                                  | ✅              | 2                | Obviously                                                                                                                                                                                    | ✅                                                                   |                  |
+| Non-treatment causes of $y$                | ✅              | 2                | Avoid omitted variable bias                                                                                                                                                                  | ❌                                                                   |                  |
+| Cause/assignment of $T$                    | ✅              | 1                | Correct for non-random assignment                                                                                                                                                            | ✅                                                                   |                  |
+| Cause/assignment of non-treatment causes   | ✅              | 1                | Correct for non-random assignment                                                                                                                                                            | ✅                                                                   |                  |
+| Consequence of $T$                         | ❌              |                  | Not related with $y$                                                                                                                                                                         | ❌                                                                   |                  |
+| Confounder                                 | ✅              | 2                | $z$ affects $y$<br>Close backdoor                                                                                                                                                            | ❌                                                                   |                  |
+| Cause/assignment of confounder             | ✅              | 1                | Correct for non-random assigment                                                                                                                                                             |                                                                     |                  |
+| Effect modifier                            | ✅              | 2                | Effect of $x$ on $y$ changes with $z$                                                                                                                                                        |                                                                     |                  |
+| Instrumental vars                          | ⚠️             | 1                | Only if assignment to treatment not available                                                                                                                                                |                                                                     |                  |
+| Surrogate/Proxy Confounder                 | ⚠️             | 1                | Only if confounder not available                                                                                                                                                             |                                                                     |                  |
+| Mediator<br>Consequence of mediator        | ❌              |                  | Conditioning causes over-controlling: Will take away some effect of $x$ on $y$<br><br>Any result is only valid for the conditioned value of mediator                                         | ✅                                                                   |                  |
+| Collider<br>Consequence of Collider        | ❌              |                  | Conditioning causes endogeneity/selection effect<br>- Can create fake causal effects<br>- Can hide real causal effects<br><br>Any result is only valid for the conditioned value of collider | ❌                                                                   |                  |
+| Colliding mediator<br>Colliding confounder | ❌              |                  | Opens backdoor                                                                                                                                                                               | ❌                                                                   |                  |
+| Consequence of $y$                         | ❌              |                  | Logically-flawed; only predictive power, no causal power                                                                                                                                     | ❌                                                                   |                  |
 
 ### Confounding
 
@@ -295,15 +299,15 @@ Use dagitty for help
 Special case of confounding, when $z$ affects the selection of $x$ and also has a causal effect on $y$, then $z$ is confounder.
 
 ```mermaid
-flowchart TB
-c([Ability/Talent])
-a([Education])
-b([Earnings])
+flowchart LR
+c(["Ability/Talent<br/>(Z)"])
+T(["Education<br/>(T)"])
+y(["Earnings<br/>(y)"])
 
-c -->|Affects<br/>selection| a
-c -->|Directly<br/>Affects| b
+c -->|Affects<br/>selection| T
+c -->|Directly<br/>Affects| y
 
-a -->|Associated but<br/>not necessarily causes| b
+T -.->|Associated but<br/>not necessarily causes| y
 ```
 
 Here, education may **not necessarily** causally affect earnings.
@@ -350,6 +354,26 @@ $w$ is a confounder to $x$ and $y$, but we do not need to observe it, as causal 
 
 ![](assets/confounded_mediator.png)
 
+
+### Collider
+
+#### Collider Bias
+
+'Jinxing'
+
+```mermaid
+flowchart LR
+T(["Premature celebration<br/>(T)"])
+y(["Bad outcome<br/>(y)"])
+
+c["Reporting<br/>(C)"]
+
+T & y --> c
+T -.->|"Associated but<br/>not necessarily causes"| y
+```
+
+Only the bad outcomes that got 'jinxed' get reported
+
 ### Effect Modifiers
 
 Confounders $s$ that change the causal effect of a treatment $x$, since their causal effect on the outcome $y$ interacts with treatment’s causal effect on $y$
@@ -385,6 +409,8 @@ $$
 ### Instrumental Variable
 
 Independent var that affects $y$ indirectly via $T$ only
+
+Helps alleviate endogeneity bias due to simultaneity bias
 
 ```mermaid
 flowchart TB
@@ -575,12 +601,15 @@ This allows for removal of unnecessary data
 
 ### Techniques
 
-
-| Technique                            | Steps                                                                                                                                                                                                        |
-| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| KNN                                  | Find untreated observations that are very similar to treated observations based on confounders                                                                                                               |
-| PSM<br>Propensity Score Matching     | Predict treatment probability as function of confounders<br><br>Not great for matching                                                                                                                       |
-| IPW<br>Inverse probability weighting | Observations with high propensity for treatment but don't get it (and vice-versa) have higher weights<br><br>$\dfrac{\text{Treatment}}{\text{Propensity}} + \dfrac{1-\text{Treatment}}{1-\text{Propensity}}$ |
+| Method                          | Comment                                                                                        |     | Technique                            | Steps                                                                                                                                                                                                         |
+| ------------------------------- | ---------------------------------------------------------------------------------------------- | --- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Selection                       |                                                                                                |     |                                      |                                                                                                                                                                                                               |
+| Stratification/<br>Conditioning |                                                                                                |     | Regression                           |                                                                                                                                                                                                               |
+| Matching                        | Find untreated observations that are very similar to treated observations based on confounders |     | KNN<br>K-Nearest Neighbors           |                                                                                                                                                                                                               |
+|                                 |                                                                                                |     | PSM<br>Propensity Score Matching     | Predict treatment probability as function of confounders<br><br>Not great for matching                                                                                                                        |
+| G-Methods                       | Can be used in settings where treatments and confounders vary over time                        |     | IPW<br>Inverse probability weighting | Observations with high probability for treatment but don't get it (and vice-versa) have higher weights<br><br>$\dfrac{\text{Treatment}}{\text{Propensity}} + \dfrac{1-\text{Treatment}}{1-\text{Propensity}}$ |
+|                                 |                                                                                                |     | Standardization/<br>G-Formula        |                                                                                                                                                                                                               |
+|                                 |                                                                                                |     | G-Estimation                         |                                                                                                                                                                                                               |
 
 ## Conditioning
 
@@ -645,3 +674,27 @@ a --> b --> a
 end
 ```
 
+
+
+---
+
+## Measurement Bias
+
+The estimated causal relationship between observed values of $T$ and $y$ may be different from the true relationship
+
+This could be due to
+- Mismeasurement
+- Usage of instrumental variables or surrogate confounders
+
+Measurement error can be a confounder, mediator, collider
+
+Dimensions
+- Independence: measurement error in treatment and in outcome are independent
+- Differential: 
+
+| Differential | Dependent |                                                                  | Comment                |
+| ------------ | --------- | ---------------------------------------------------------------- | ---------------------- |
+| ❌            | ❌         | ![](./assets/measurement_errors_nondifferential_independent.png) | No bias under the null |
+| ❌            | ✅         | ![](./assets/measurement_errors_nondifferential_dependent.png)   | Backdoor path          |
+| ✅            | ❌         | ![](assets/measurement_errors_differential_independent.png)      | Backdoor path          |
+| ✅            | ✅         | ![](assets/measurement_errors_differential_dependent.png)        | Backdoor path          |

@@ -5,6 +5,7 @@ What are issues with Computer Systems security and How to improve them
 There isn’t exactly a textbook on this topic
 
 ## Pre-Requisites
+
 - [ ] Computer Networks
 
 ## References
@@ -24,3 +25,5 @@ There isn’t exactly a textbook on this topic
 - [ ] [Cybersecurity and Privacy | IIT Madras](https://www.youtube.com/playlist?list=PLyqSpQzTE6M-jkJEzbS5oHJUp2GWPsq6e)
 - [ ] [Ethical Hacking | FreeCodeCamp](https://youtu.be/3Kq1MIfTWCE)
 - [ ] [Introduction to Digital Forensics | DFIR Science](https://www.youtube.com/playlist?list=PLJu2iQtpGvv-2LtysuTTka7dHt9GKUbxD)
+- [ ] [Securing Autonomous Systems | Abhishek Gupta](https://www.youtube.com/playlist?list=PL_Nk3YvgORJvPffL0eK-cLj9TQnkglZxH)
+- [ ] [Network Security | IITB](https://www.youtube.com/playlist?list=PLOzRYVm0a65fnmnuvoH0DRDGnwRMrK7ec)

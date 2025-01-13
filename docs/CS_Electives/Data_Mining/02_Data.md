@@ -329,18 +329,35 @@ Degree to which rare events drive the aggregate statistics of a distribution
 Leverage points = data points with extreme value of input variable(s)
 
 Like outliers, high leverage data points can have outsize influence on learning
+
 $$
-h_{ii} = \dfrac{\text{cov}(\hat y_i, y_i)}{\text{var}(y_i)}
+\begin{aligned}
+h_{ii} &= \dfrac{\text{cov}(\hat y_i, y_i)}{\text{var}(y_i)} & h_{ii} &\in [0, 1]
 \\
-h_{ii} \in [0, 1]
-\\
-\sum h_{ii} = k \implies \bar h = p/n
+\sum h_{ii} &= k \implies \bar h = p/n
+\end{aligned}
 $$
-For univariate regression
+
+| Case         | $h_{ii}$                                                                             |
+| ------------ | ------------------------------------------------------------------------------------ |
+| Univariate   | $\dfrac{1}{n} + \dfrac{1}{n-1} \left( \dfrac{x_i - \bar x}{s_x} \right)^2$           |
+| Multivariate | $\Bigg( X_\text{out} (X_\text{in}^T W X_\text{in})^{-1} X_\text{in}^T W \Bigg)_{ii}$ |
+
 $$
-h_{ii} = \dfrac{1}{n} + \dfrac{1}{n-1} \left( \dfrac{x_i - \bar x}{s_x} \right)^2
+\begin{aligned}
+\hat y_\text{out}
+&= \hat \beta \cdot X_\text{out} \\
+&= (X_\text{in}^T W X_\text{in})^{-1} X_\text{in}^T W y_\text{in} \cdot X_\text{out} \\
+&= \underbrace{X_\text{out} (X_\text{in}^T X_\text{in})^{-1} X_\text{in}^T W}_{H} \cdot y_\text{in} \\
+\implies
+\hat y_\text{out} &= H \cdot y_\text{in}
+\end{aligned}
 $$
+
+![](assets/hat_matrix_leverage.png)
+
 High leverage points have lower variance
+
 $$
 \text{var}(u_i) = \sigma^2_u (1-h_{ii}) \\
 \text{SE}(u_i) = \text{RMSE} \sqrt{1-h_{ii}}

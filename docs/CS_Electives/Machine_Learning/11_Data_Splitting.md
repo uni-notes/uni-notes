@@ -139,14 +139,16 @@ Hence, these help address the issue of a simple validation: Results can be highl
 
 ### Bootstrapping Types
 
-|                                  |                |                                                                  | Advantage                             | Disadvantage                                             |
-| -------------------------------- | -------------- | ---------------------------------------------------------------- | ------------------------------------- | -------------------------------------------------------- |
-| Random sampling with replacement | IID            |                                                                  |                                       |                                                          |
-| ARIMA Bootstrap                  | Parametric     |                                                                  |                                       |                                                          |
-| Moving Block Bootstrap           | Non-parametric | ![image-20240312121539820](./assets/image-20240312121539820.png) |                                       |                                                          |
-| Circular Block Bootstrap         | Non-parametric |                                                                  |                                       |                                                          |
-| Stationary Bootstrap             | Non-parametric |                                                                  |                                       |                                                          |
-| Test-Set Bootstrap               |                | Only bootstrap the out-of-sample set (dev, val, test)<br>        | No refitting: Great for Deep Learning | Large out-of-sample size required for good bootstrapping |
+|                                  |                |                                                                                                                                                   | Advantage                             | Disadvantage                                             |
+| -------------------------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- | -------------------------------------------------------- |
+| Random sampling with replacement | IID            |                                                                                                                                                   |                                       |                                                          |
+| ARIMA Bootstrap                  | Parametric     |                                                                                                                                                   |                                       |                                                          |
+| Moving Block Bootstrap           | Non-parametric | ![image-20240312121539820](./assets/image-20240312121539820.png)                                                                                  |                                       |                                                          |
+| Circular Block Bootstrap         | Non-parametric |                                                                                                                                                   |                                       |                                                          |
+| Stationary Bootstrap             | Non-parametric |                                                                                                                                                   |                                       |                                                          |
+| Test-Set Bootstrap               |                | Only bootstrap the out-of-sample set (dev, val, test)<br>                                                                                         | No refitting: Great for Deep Learning | Large out-of-sample size required for good bootstrapping |
+| 0.632 Bootstrap                  |                | Metric = $\dfrac{1}{k} \text{Metric}_i$<br><br>$\text{Metric}_i = 0.632 \cdot \text{Metric}_\text{test} + 0.368 \cdot \text{Metric}_\text{train}$ |                                       |                                                          |
+| 0.632+ Bootstrap                 |                |                                                                                                                                                   |                                       |                                                          |
 
 ## Validation Methods
 

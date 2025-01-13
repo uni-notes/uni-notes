@@ -43,17 +43,47 @@ To perform tasks which are easy for humans, but difficult to generate a computer
 2. We cannot quantify pattern mathematically
 3. $\exists$ data
 
+## Modelling Lifecycle
+
+```mermaid
+flowchart TB
+
+subgraph Mathematics
+direction TB
+mp[Math problem]
+mm[Mathematical Model]
+ms[Solution]
+end
+
+subgraph Real World
+direction TB
+rwp[/Real world<br/>problem/]
+d[/Data/]
+rws[/Real world<br/>solution/]
+end
+
+d --> |Instantiate| mm
+d --> |Validate| rws
+
+rwp -->
+|Translation| mp -->
+|Model with<br/>assumptions| mm -->
+|Solve| ms -->
+|Translation| rws -->
+|Review & correct| rwp
+```
+
 ## Guiding Principles
 
-| Principle                     | Questions                                                    |
-| ----------------------------- | ------------------------------------------------------------ |
-| Relevance                     | Is the use of ML in a given context solving an appropriate problem |
-| Representativeness            | Is the training data appropriately selected                  |
+| Principle                     | Questions                                                                                                                                                                                                                                   |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Relevance                     | Is the use of ML in a given context solving an appropriate problem                                                                                                                                                                          |
+| Representativeness            | Is the training data appropriately selected                                                                                                                                                                                                 |
 | Value                         | - Do the predictions inform human decisions in a meaningful way<br />- Does the machine learning model produce more accurate predictions than alternative methods<br />- Does it explain variation more completely than alternative methods |
-| Explainability                | - Data selection, Model selection, (un)intended consequences<br />- How effectively is use of ML communicated |
-| Auditability                  | Can the model's decision process be queried/monitored by external actors |
-| Equity                        | The model should benefit/harm one group disproportionately   |
-| Accountability/Responsibility | Are there mechanisms in place to ensure that someone will be responsible for responding to feedback and redressing harms, if necessary? |
+| Explainability                | - Data selection, Model selection, (un)intended consequences<br />- How effectively is use of ML communicated                                                                                                                               |
+| Auditability                  | Can the model's decision process be queried/monitored by external actors                                                                                                                                                                    |
+| Equity                        | The model should benefit/harm one group disproportionately                                                                                                                                                                                  |
+| Accountability/Responsibility | Are there mechanisms in place to ensure that someone will be responsible for responding to feedback and redressing harms, if necessary?                                                                                                     |
 
 ## Learning Problem
 
@@ -70,36 +100,20 @@ Learning model
 
 ## Stages of Machine Learning
 
-Stage 1
-- Data Collection
 
-Stage 2
-- Feature importance
-- Feature selection
+|     | Stage             | Sub Steps                                                                   |
+| --- | ----------------- | --------------------------------------------------------------------------- |
+| 1   | Data Collection   |                                                                             |
+| 2   | Observations      | - Influence Detection (Leverage & Outliers)                                 |
+| 3   | Features          | - VIF for Multi-Collinearity<br>- Feature importance<br>- Feature selection |
+| 4   | Causality         | - Causal Discovery<br>- Causal Theory building                              |
+| 5   | Model Building    | - Feature engineering<br>- Model specification                              |
+| 6   | Tuning            | - Model class/Learning algorithm selection<br>- Hyperparameter tuning       |
+| 7   | IDK               | - Model comparison<br>- Model selection                                     |
+| 8   | Evaluation        | - Performance<br>- Robustness                                               |
+| 9   | Novelty Detection |                                                                             |
+| 10  | Inference         | - Model prediction<br>- Model explanation                                   |
 
-Stage 3: Theory
-- Causal Discovery
-- Causal Theory building
-
-Stage 4: Building
-- Feature engineering
-- Model specification
-
-Stage 5: Tuning
-- Model class/Learning algorithm selection
-- Hyperparameter tuning
-
-Stage 6
-- Model comparison
-- Model selection
-
-Stage 7: Evaluation
-- Performance
-- Robustness
-
-Stage 8: Inference
-- Model prediction
-- Model explanation
 
 ![](assets/ML_Production_Aspects.png)
 
@@ -122,9 +136,6 @@ end
 td[Task<br/>Definition] -->
 dc
 
-dp -->
-|ML-Ready<br/>Dataset| l
-
 subgraph ML Engineering
 	direction LR
 	l[Learning<br/>Type] -->
@@ -133,22 +144,60 @@ subgraph ML Engineering
 	|Trained<br/>Model| me[Evaluate] -->
 	|KPIs| mv[Model<br/>Validation] -->
 	|Certified<br/>Model| md[/Deploy/]
-	
-	od{Outlier<br/>Detection}
-	ad{Anomaly<br/>Detection}
 end
 
-dp --> od --> |Filter| ad
+subgraph Data Quality
+od{Outlier<br/>Detection}
+ad{Anomaly<br/>Detection}
+ootd{Out-of-Training-Distribution<br/>Detection}
+end
 
-ld[(Live <br/>Data)] --> od
-md --> m[Model]
+dp --> od --> |Non-Outlier| ad
+od --> |Non-Outlier| l
+od --> |Outlier| outlier
 
-ad --> |Accept| m
-ad ----> |Reject| anomaly[/Anomaly/]
+md --> rb
 
-m --> pc{Prediction<br/>Confidence}
-pc --> |High<br/>Confidence| pred[/Prediction/]
-pc --> |Low<br/>Confidence| unsure[/Unsure/]
+subgraph Models
+	rb["Rule-Based Model(s)"]
+	rb_pc{Rule-based<br/>Confidence}
+
+	ml["ML Model(s)"]
+	ml_pc{ML<br/>Confidence}
+
+	fb["Fallback Model(s)"]
+	fb_pc{Fallback<br/>Confidence}
+end
+
+ad --> |Non-Anomalous| ootd
+ad --> |Anomalous| anomaly
+
+ootd --> |In-Training-Distribution| rb
+ootd --> |Out-of-Training-Distribution| ood
+
+rb --> rb_pc
+rb_pc --> |High| rb_pred
+rb_pc --> |Low| ml
+
+ml --> ml_pc
+ml_pc --> |High| ml_pred
+ml_pc --> |Low| fb
+
+fb --> fb_pc
+fb_pc --> |High| fb_pred
+fb_pc --> |Low| us
+
+subgraph Outputs
+    outlier[/Outlier/]
+    anomaly[/Anomaly/]
+    ood[/Out of Training Distribution/]
+	rb_pred[/Rule-based Prediction/]
+	ml_pred[/ML Prediction/]
+    fb_pred[/Fallback Prediction/]
+	us[/Unsure/]
+end
+
+ld[(Live <br/>Data)] --------> od
 ```
 
 1. Design
@@ -163,6 +212,9 @@ pc --> |Low<br/>Confidence| unsure[/Unsure/]
 	1. How will model drift be monitored?
 	2. How should preventive security measures be taken?
 	3. How to react to security breaches?
+
+Confidence
+- If different "good" models give significantly different results for a particular prediction, then it is low confidence
 
 ## 3 Dimensions of Prediction
 

@@ -11,6 +11,22 @@ Causation depends on
 - Time order: $x \to y; \text{not } y \to x$
 - Non-spuriousness
 
+## Relationships between Variables
+
+2 variables can be related in the following ways
+
+1. Causal relationship, but no association
+2. Causal relationship, with association
+3. Non-causal, no association: Not related
+	- Average Treatment Effect = 0
+		- 25% are helped by medicine
+		- 50% have no effect by medicine
+		- 25% are hurt by medicine
+1. Non-causal, but associated by backdoor path: Spurious association
+2. Non-causal, but associated by chance
+	- This is why it is important to quantify effect sizes
+	- Goes away with large sample sizes
+
 ## Statistical vs Causal
 
 |                                       | Statistical Prediction                                                                                                                                     | Causal Prediction                                                                                                 |

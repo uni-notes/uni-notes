@@ -29,3 +29,5 @@
 - [ ] [Renewable Energy | Swiss Learning Exchange](https://www.youtube.com/playlist?list=PLb5SyhPhDyTehqo1rU6iqhTjeyR_PWMak)
 - [ ] [Solar Energy | TU Delft](https://www.youtube.com/playlist?list=PL92kQtqBVlONBa1F3__xNBgMv4FrKTpNe)
 - [ ] [Wind Energy | TU Denmark](https://www.youtube.com/playlist?list=PL92kQtqBVlOOUZuXjOuY-9Z2o5W8hRvta)
+- [ ] [Renewables in Energy Markets | Jalal Kazenpour | TU Denmark](https://www.youtube.com/playlist?list=PLe7H9pun_r8bsWrLZ483DhVt8zvU4jv8P)
+- [ ] [Advanced Optimization and Game Theory for Energy Markets | Jalal Kazenpour | TU Denmark](https://www.youtube.com/playlist?list=PLe7H9pun_r8YHoGv0TnYxUsgbj0xAJmMR)

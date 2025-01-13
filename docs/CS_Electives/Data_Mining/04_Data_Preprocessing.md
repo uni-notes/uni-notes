@@ -93,6 +93,7 @@ Think of all invariances that is important for your model
 ## Dimensionality Reduction
 
 Unsupervised learning problem where we find a low-dimensional representation $\mathcal Z$ of $\mathcal X$
+
 $$
 \begin{aligned}
 \mathcal{Z}
@@ -101,15 +102,28 @@ f_\theta &: R^k \to R^d \\
 d &< k
 \end{aligned}
 $$
-Note: It is important to standardize the data
+Notes
+- Ensure to standardize data prior
+- Reducing dimensionality blindly is not always ideal
+	- These are for visualization, but not good for learning due to non-causal nature
+- Reduce dimensionality while preserving maximum information:
+	1. Cluster correlated features
+	   For eg Cluster 1: Volatility features, Cluster 2: Scale features
+	2. Perform dimensionality reduction on each feature cluster separately
+	3. Obtain the first principal component for each cluster
 
-## Dimensionality Reduction Algorithms
+## Algorithms
 
 | Technique                      | Working                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Reduce dimensionality while              | Learning Type | Comment                                                 | No Hyperparameter Tuning Required | Fast | Deterministic | Linearity  |
 | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------- | ------------------------------------------------------- | --------------------------------- | ---- | ------------- | ---------- |
 | LDA                            | Maximize distance between classes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Separating pre-known classes in the data | Supervised    |                                                         | ✅                                 | ✅    | ✅             | Linear     |
-| PCA/<br />SVD using PCA        | Maximize variance in data<br /><br />Find linear combinations of predictor vars that are orthogonal to each other<br /><br />1. Calculate correlation matrix of predictors<br />2. Find eigenvalues and corresponding eigenvectors of correlation matrix<br />3. Orthogonalize design matrix by multiplying by a rotation matrix made up of eigenvectors<br /><br />$\mu(\text{PC}_i)=0 \quad \forall i$<br />$\sigma^2(\text{PC}_i)=\text{Eigenvalue} \quad \forall i$<br /><br />Learning more: Correlation matrix b/w PCs and original predictors | Generating clusters previously not known | Unsupervised  | $2k$ contaminated points can destroy top $k$ components | ✅                                 | ✅    | ✅             | Linear     |
+| PCA/<br>SVD                    | Maximize variance in data<br /><br />Find linear combinations of predictor vars that are orthogonal to each other<br /><br />1. Calculate correlation matrix of predictors<br />2. Find eigenvalues and corresponding eigenvectors of correlation matrix<br />3. Orthogonalize design matrix by multiplying by a rotation matrix made up of eigenvectors<br /><br />$\mu(\text{PC}_i)=0 \quad \forall i$<br />$\sigma^2(\text{PC}_i)=\text{Eigenvalue} \quad \forall i$<br /><br />Learning more: Correlation matrix b/w PCs and original predictors | Generating clusters previously not known | Unsupervised  | $2k$ contaminated points can destroy top $k$ components | ✅                                 | ✅    | ✅             | Linear     |
 | Kernel PCA                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |                                          |               |                                                         |                                   |      |               |            |
+| PLS<br>Partial Least Squares   | Similar to PCA but supervised<br>Create components correlated with the target                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | ^^                                       | Supervised    |                                                         | ✅                                 | ✅    | ✅             | Linear     |
+| Kernel PLS                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |                                          |               |                                                         |                                   |      |               |            |
+| Laplacian Eigenmaps            |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |                                          |               |                                                         |                                   |      |               |            |
+| LLE<br>Local Linear Embedding  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |                                          |               |                                                         |                                   |      |               |            |
+| IsoMap                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |                                          |               |                                                         |                                   |      |               |            |
 | MDS                            |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | ^^                                       | Unsupervised  |                                                         | ❌                                 | ❌    | ❌             | Non-Linear |
 | t-SNE                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | ^^                                       | Unsupervised  |                                                         | ❌                                 | ❌    | ❌             | Non-Linear |
 | UMAP                           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | ^^                                       | Unsupervised  |                                                         | ❌                                 | ✅    | ❌             | Non-Linear |
@@ -119,6 +133,33 @@ Note: It is important to standardize the data
 ### PCA
 
 ![image-20240619005634502](./assets/image-20240619005634502.png)
+
+- Eigen Vectors Matrix
+	- Each element represents how much (the weight) each original variable contributes to the corresponding principal component
+	- Row-wise sum of squared elements = 1, ie $\sum_{\text{feature } i} a_{ij}^2=1$
+	- Col-wise sum of squared elements = 1, ie $\sum_{\text{loading } j} a_{ij}^2=1$
+- Loadings matrix
+	- Each element represents correlation between the original variable and the principal component
+	- Col-wise sum of squared elements = var(PC_i), ie $\sum_{\text{loading } j} a_{ij}^2 = \sigma^2(\text{PC}_j)$
+- Varimax rotation
+
+```python
+# apply PCA
+pca = PCA(n_components=2)
+pca.fit(X)
+
+pca_eigenvectors_matrix = pd.DataFrame(
+	pca.components_.T,
+	columns=['PC1', 'PC2'],
+	index=iris.feature_names
+)
+
+pca_corr_matrix = pd.DataFrame(
+	pca.components_.T * np.sqrt(pca.explained_variance_),
+	columns=['PC1', 'PC2'],
+	index=iris.feature_names
+)
+```
 
 ## Feature Selection
 
@@ -204,9 +245,29 @@ end
 
 ### Feature Summary Statistics
 
-Mean, Std, ...
+- Mean
+- Std
+- Correlation
 
-For time-series data, make sure to use rolling statistics until the current point to avoid data leakage
+For time-series data, should only use past data
+- Make sure to use rolling statistics until the current point to avoid data leakage
+
+## Attribute Transform
+
+|                        |          Non-Sequential<br>$x'$          | Time-Series<br>$x'_t$                                                       |        Property         |
+| ---------------------- | :--------------------------------------: | --------------------------------------------------------------------------- | :---------------------: |
+| Simple                 |      $x^2, \log x, \vert  x  \vert$      |                                                                             |                         |
+| Min-Max Normalization  | $\dfrac{x - \min(x)}{\max(x) - \min(x)}$ | $\dfrac{x_t - \min(x_{t-p, t-1})}{\max(x_{t-p, t-1}) - \min(x_{t-p, t-1})}$ |     $0 \le x \le 1$     |
+| Standard Normalization |         $\dfrac{x - \bar x}{s}$          | $\dfrac{x_t - {\bar x}_{t-p, t-1}}{s_{t-p, t-1}}$                           | $\mu' = 0, \sigma' = 1$ |
+
+Standardization
+
+- Reduces collinearity: even if $r(x, x^2) \ne 0$ standardizing will ensure $r(\tilde x, {\tilde x}^2)=0$
+- However, it does NOT reduce multicollinearity
+
+For time-series data, should only use past data
+- Make sure to use rolling statistics until the current point to avoid data leakage
+- This applies to normalization and any other inter-row operation
 
 ### Feature Construction
 
@@ -245,26 +306,15 @@ Then convert using binarization. But, why?
 | Width             | $\frac{\text{Max-Min}}{\text{No of bins}}$ |                                                         |
 |                   |                                            | Make sure atleast $n-1$ bins have the correct frequency |
 
-## Binarization 
+## Discretization/Encoding
 
-|                                        |         Method 1         | One-Hot Encoding |
-| -------------------------------------- | :----------------------: | :--------------: |
-| For $m$ categories, we need ___ digits | $\lceil \log_2 m \rceil$ |       $m$        |
-| No unusual relationship                |            ❌             |        ✅         |
-| Fewer variables?                       |            ✅             |        ❌         |
+|                                        |         Method 1         | One-Hot | Ridge One-Hot                                                                                                              |
+| -------------------------------------- | :----------------------: | :-----: | ---------------------------------------------------------------------------------------------------------- |
+|                                        |      1. Perform one-hot<br>2. Perform Ridge Regression<br>3. Multiply one-hot encodings with Ridge Coefficients m  m  m  m  m  m  m  m  m  m  m  m  m  m  m  m  |
+| For $m$ categories, we need ___ d                                                                                                                                                                        |
+| No unusual rela                                                                                                                                                                                          |
+|                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
-## Attribute Transform
-
-|                        |                             $x'$                              |        Property         |
-| ---------------------- | :-----------------------------------------------------------: | :---------------------: |
-| Simple                 |                $x^2, \log x, \vert  x  \vert$                 |                         |
-| Min-Max Normalization  | $\dfrac{x - x_{\text{min}}}{x_{\text{max}} - x_{\text{min}}}$ |     $0 \le x \le 1$     |
-| Standard Normalization |                    $\dfrac{x-\mu}{\sigma}$                    | $\mu' = 0, \sigma' = 1$ |
-
-Standardization
-
-- Reduces collinearity: even if $r(x, x^2) \ne 0$ standardizing will ensure $r(\tilde x, {\tilde x}^2)=0$
-- However, it does NOT reduce multicollinearity
 
 ### Naming
 
@@ -279,12 +329,16 @@ Make sure the target range is standardized to ensure model can generalize, espec
 
 Non-linear transforms not recommended, as you will face all the disadvantages of [MSLE](../Machine_Learning/04_Performance_Measure_P.md#Regression) 
 
+One idea could be to use $y_i$ as sample weight?
+
 ### Box-Cox/Bickel-Doksum Transform
 
+$w_t = f(y_t)$
+
 $$
-y'_t = \begin{cases}
+w_t = \begin{cases}
 \log \vert y_t \vert, & \lambda = 0 \\
-\dfrac{\text{sign}(y_t) \vert y_t \vert ^\lambda - 1}{\lambda}, & \lambda \ne 0
+\dfrac{\text{sign}(y_t) \cdot \vert y_t \vert ^\lambda - 1}{\lambda}, & \lambda \ne 0
 \end{cases}
 $$
 
@@ -295,25 +349,29 @@ $$
 |       0        | Natural log                            |
 |       -1       | Inverse plus 1                         |
 
+The model will predict $\hat w_{t+h}$
+
 ### Back Transform
 
-$$
-\hat y_t = \text{Med (y|t)} = \begin{cases}
-\exp(\hat y'_t), & \lambda = 0 \\
-\text{sign}(\lambda \hat y'_t + 1) \cdot {\vert \lambda \hat y'_t + 1 \vert}^{1/\lambda}, & \lambda \ne 0
-\end{cases}
-$$
+$\hat y_{t+h} = f^{-1}(\hat w_{t+h})$
 
-Back-transformed Prediction Intervals have correct coverage, but point forecasts are medians
+| Point Estimate of response distribution | $\lambda=0$                                                                       | $\lambda \ne 0$                                                                                                                                          |
+| --------------------------------------- | --------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Median                                  | $\exp(\hat w_{t+h})$                                                              | ${\vert \lambda \hat w_{t+h} + 1 \vert}^{1/\lambda} \cdot \text{sign}(\lambda \hat w_{t+h} + 1)$                                                         |
+| Mean                                    | $\exp(\hat w_{t+h}) \left[1 \textcolor{hotpink}{+ \dfrac{\sigma^2_{\tiny \hat w_h}}{2}} \right]$ | $(\lambda \hat w_{t+h} + 1)^{1/\lambda} \left[1  \textcolor{hotpink}{+ \dfrac{\sigma^2_{\tiny \hat w_h}}{2}} \dfrac{(1-\lambda)}{(\lambda \hat w_{t+h} + 1)^2} \right]$ |
+| Mode                                    | $\exp(\hat w_{t+h}) \left[1 \textcolor{hotpink}{- \sigma^2_{\tiny \hat w_h}} \right]$            | $(\lambda \hat w_{t+h} + 1)^{1/\lambda} \left[1 \textcolor{hotpink}{- \sigma^2_{\tiny \hat w_h}} \dfrac{(1-\lambda)}{(\lambda \hat w_{t+h} + 1)^2} \right]$             |
 
-Hence, if we need the mean, we need to perform correction. (Didn’t really understand the correction.)
+where
+- $\sigma^2_{\tiny \hat w_h}$ is the $h$-step forecast variance on the **transformed scale**
 
-$$
-E[y_t] = \begin{cases}
-\exp(\hat y'_t) \left[1 + \dfrac{\sigma^2}{2} \right], & \lambda = 0 \\
-(\lambda \hat y'_t + 1)^{1/\lambda} \left[1 + \dfrac{\sigma^2 (1-\lambda)}{2(\lambda \hat y'_t + 1)^2} \right], & \lambda \ne 0
-\end{cases}
-$$
+Bias Correction
+- Back-transformed Prediction Intervals have correct coverage, but point forecasts are medians
+- Maintained
+	- Medians are maintained for monotonically increasing functions
+	- Means are not due to Jensen's inequality
+	- Mode: similarly to mean???
+- Hence, if we need the mean/mode, we need to perform correction
+- The larger the forecast variance, the larger the difference b/w median, mean, and mode
 
 ## Linear Basis Function
 
@@ -437,15 +495,18 @@ $$
 
 ## Missing Value Imputation
 
-Just replacing value with mean, without understanding the underlying process is not good
-
-- The fact that the value is missing is an important observation itself
-- Replace missing $x$ with $\arg \max \limits_x P(x_j \vert x_{\centernot j}, y)$
-- Replace missing $y$ with $\arg \max \limits_x P(y \vert x)$
-
 This may be
 
 - median
 - mode
 - min
 - max: for eg, sensors won’t take reading if temperature is too high
+
+- Just replacing value, without understanding the underlying process is not good
+	- The fact that the value is missing is an important information itself
+	- Better to just drop the row
+	- Also, imputation is bad as it may break the relationship
+		- especially univariate imputation will break the relationship, imagine linear regression with imputation
+		- Last resort
+			- Replace missing $x$ with $\arg \max \limits_x P(x_j \vert x_{\centernot j}, y)$
+			- Replace missing $y$ with $\arg \max \limits_x P(y \vert x)$

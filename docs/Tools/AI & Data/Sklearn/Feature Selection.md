@@ -148,3 +148,44 @@ fpm = FeaturePermutationMetric(
 fpm.fit_transform(X, y)
 fpm.cv_results_
 ```
+
+## Permutation Feature Similarity
+
+```python
+def permutation_feature_similarity(X, y, n_estimators=100, random_state=42):
+    # Split the data
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=random_state)
+    
+    # Train the random forest model
+    rf = RandomForestClassifier(n_estimators=n_estimators, random_state=random_state)
+    rf.fit(X_train, y_train)
+    
+    # Calculate baseline accuracy
+    baseline_accuracy = accuracy_score(y_test, rf.predict(X_test))
+    
+    n_features = X.shape[1]
+    similarity_matrix = np.zeros((n_features, n_features))
+    
+    # Permute each feature and measure impact
+    for i in range(n_features):
+        X_test_permuted = X_test.copy()
+        X_test_permuted[:, i] = np.random.permutation(X_test_permuted[:, i])
+        permuted_accuracy = accuracy_score(y_test, rf.predict(X_test_permuted))
+        accuracy_drop = baseline_accuracy - permuted_accuracy
+        
+        # Calculate impact on other features
+        for j in range(n_features):
+            if i != j:
+                X_test_double_permuted = X_test_permuted.copy()
+                X_test_double_permuted[:, j] = np.random.permutation(X_test_double_permuted[:, j])
+                double_permuted_accuracy = accuracy_score(y_test, rf.predict(X_test_double_permuted))
+                
+                # Similarity is inversely proportional to additional accuracy drop
+                additional_drop = permuted_accuracy - double_permuted_accuracy
+                similarity = 1 - (additional_drop / accuracy_drop) if accuracy_drop > 0 else 0
+                
+                similarity_matrix[i, j] = similarity
+                similarity_matrix[j, i] = similarity  # Symmetric matrix
+    
+    return similarity_matrix
+```

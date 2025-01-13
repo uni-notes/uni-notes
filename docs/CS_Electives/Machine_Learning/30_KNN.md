@@ -54,3 +54,11 @@ Finding optimal $k$
 ## Distance-Weighted KNN
 
 Closer points are given larger weights for the majority voting scheme
+
+## Efficient KNN LOOCV
+
+- Tie-breaking condition
+	- For all i, j = 1, . . . , n with i ̸= j, we have xi ̸= xj and dX (xℓ, xi) ̸= dX (xℓ, xj ) for all ℓ = 1, . . . , n.
+- Under the tie-breaking condition, the LOOCV estimate of the mean square error for $k$-NN regression is identical to the mean square error of $(k+1)$-NN regression evaluated on the training data, multiplied by the scaling factor $\dfrac{(k+1)^2}{k^2}$
+- Therefore, to compute the LOOCV score, one only needs to fit $(k+1)$-NN regression only once, and does not need to repeat training-validation of $k$-NN regression for the number of training data
+- https://openreview.net/forum?id=SBE2q9qwZj

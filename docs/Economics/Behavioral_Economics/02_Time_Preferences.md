@@ -153,7 +153,7 @@ Consider the following table showing the utilities associated with watching a mo
 
 ## Planning Fallacy
 
-Under-estimation of effort costs of tasks, leading to people always under-performing compared to original plan, even if they are aware of this.
+ Cognitive bias where people underestimate the time, resources, and effort needed to complete a task, even when they have experience with similar tasks that took longer than planned
 
 ## Case Studies
 

@@ -56,6 +56,7 @@ Will mainly focus on the following applications: Speech, Computer Vision, NLP
 - [ ] [TinyML and Efficient Deep Learning Computing | EfficientML.ai - MIT HAN Lab](https://www.youtube.com/playlist?list=PL80kAHvQbh-qGtNc54A6KW4i4bkTPjiRF)
 - [x] [Tiny Machine Learning | UPenn](https://www.youtube.com/playlist?list=PL7rtKJAz_mPe6kAbiH6Ucq02Vpa95qvBJ)
 - [ ] [AutoDL | Applied Deep Learning | Maziar Raissi](https://www.youtube.com/playlist?list=PLoEMreTa9CNnQXiups8QMzmyKe4b3ge6F)
+- [ ] [TinyML - Digikey](https://www.youtube.com/playlist?list=PL2W3vuZhQuqPR6cCrmPkrtFzWkbOlnpLu)
 
 ## Current Video
 

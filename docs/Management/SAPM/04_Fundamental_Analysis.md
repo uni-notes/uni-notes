@@ -57,14 +57,18 @@ Types of shocks
 - Demand
 - Financial market
 
-### PEST
+Do a matrix of PESTEL Factors with SWOT
 
-| Dimension     | Factors                                                      |
-| ------------- | ------------------------------------------------------------ |
-| Political     | Political stability<br />Tax Policy<br />Employment laws<br />Environment regulations<br />Trade restrictions & tariffs |
-| Economic      | Economic growth<br />Interest rates<br />Exchange rates<br />Inflation rate<br />Unemployment |
+### PESTEL
+
+| Dimension     | Factors                                                                                                                                                  |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Political     | Political stability<br />Tax Policy<br />Employment laws<br />Environment regulations<br />Trade restrictions & tariffs                                  |
+| Economic      | Economic growth<br />Interest rates<br />Exchange rates<br />Inflation rate<br />Unemployment                                                            |
 | Social        | Health consciousness<br />Population growth rate<br />Age distribution<br />Career attitudes<br />Emphasis on safety<br />Cultural dimensions of society |
-| Technological | R&D Activity<br />Automation<br />Technological incentives<br />Rate of technological change |
+| Technological | R&D Activity<br />Automation<br />Technological incentives<br />Rate of technological change                                                             |
+| Environmental |                                                                                                                                                          |
+| Legal         |                                                                                                                                                          |
 
 ### SWOT
 
@@ -89,8 +93,9 @@ Identify which phase of the life cycle the industry belongs to
 
 Intensity of competition among firms in the same industry determines its profitability
 
-Michael Porter’s Model: Rivalry among existing competitors depends on
+Porter’s 5 Forces Model
 
+- Competitive rivalry
 - Threat of entry: New supplier
 - Threat of substitution: New industry
 - Bargaining powers of consumers
@@ -175,3 +180,9 @@ $$
 | PEG             | Low       |
 | Capitalization  | Low       |
 
+## IDK
+
+- Porter's Diamond
+- Value chain analysis
+- BCG Matrix
+- Balanced Scorecard

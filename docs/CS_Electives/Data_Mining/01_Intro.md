@@ -10,6 +10,23 @@ Data science is turning raw data into understanding, insight, and knowledge to d
 
 We cannot move away from domain knowledge and solely depend on algorithms
 
+## Stages
+
+1. Theory
+2. ⁠Simulation
+3. ⁠Empirical
+
+Order should not be changed, as otherwise we can make up the story as we wish
+
+## IDK
+
+Always use GUIs for exploration
+- ease
+- ⁠rapid iteration
+Use code to finalize
+- reproducibility
+- ⁠automation
+
 ## Data Professionals
 
 ![img](./assets/data_professionals.jpg)
@@ -97,13 +114,14 @@ Use ML models to discover structural models, and then let the structural models 
 
 ## Types of Analysis
 
-| Type                       | Topic                                     | Nature                   | Time   | Comment                                 | Examples                                                                                                                                                     |
-| -------------------------- | ----------------------------------------- | ------------------------ | ------ | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Descriptive/<br />Positive | **What** is happening?                    | Objective                | Past   | No emotions/explanations if good or bad | Increasing taxes will lower consumer spending<br />Increasing interest rate will lower demand for loans<br />Raising minimum wage will increase unemployment |
-| Normative                  | Is this good or bad?                      | Subjective               | Past   |                                         | "Current inflation is higher than desirable"                                                                                                                 |
-| Diagnostic                 | **Why** is it happening?                  | Objective/<br>Subjective | Past   | Helps in understanding root cause       |                                                                                                                                                              |
-| Predictive                 | **What will happen** if condition happens | Subjective               | Future | Understanding future, using history     |                                                                                                                                                              |
-| Prescriptive               | **What** to do                            | Subjective               | Future | what actions to be taken                | Taxes must be increased                                                                                                                                      |
+| Type                       | Topic                                     | Nature                   | Time   | Comment                                                                             | Examples                                                                                                                                                     |
+| -------------------------- | ----------------------------------------- | ------------------------ | ------ | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Explorative                | ***What*** could be happening             |                          | Past   | Hypothesis testing                                                                  | Explorations of correlations                                                                                                                                 |
+| Descriptive/<br />Positive | **What** is happening?                    | Objective                | Past   | No emotions/explanations if good or bad                                             | Increasing taxes will lower consumer spending<br />Increasing interest rate will lower demand for loans<br />Raising minimum wage will increase unemployment |
+| Normative                  | Is this good or bad?                      | Subjective               | Past   |                                                                                     | "Current inflation is higher than desirable"                                                                                                                 |
+| Diagnostic                 | **Why** is it happening?                  | Objective/<br>Subjective | Past   | Helps in understanding root cause<br><br>Decompose into internal & external factors |                                                                                                                                                              |
+| Predictive                 | **What will happen** if condition happens | Subjective               | Future | Understanding future, using history                                                 |                                                                                                                                                              |
+| Prescriptive               | **What** to do                            | Subjective               | Future | what actions to be taken                                                            | Taxes must be increased                                                                                                                                      |
 
 The complexity increases as we go down the above list, but the value obtained increases as well
 

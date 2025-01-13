@@ -81,7 +81,6 @@ One at a time
 - Multiple responses
   - Overlapping response contour plots
   - Combined cost function
-- PCA can be useful
 
 ## Pitfalls of DOE & RSM
 
@@ -131,16 +130,16 @@ Algorithmic approach to searching the design space and pick values of input vars
 
 ### What to optimize
 
-| Optimality           | Objective                                                    | Uncorrelated Obs<br />Linear Model | Uncorrelated Obs<br />Quadratic Model | Correlated Obs (autoregressive)<br />Linear Model | Correlated Obs  (autoregressive)<br />Quadratic Model |
-| -------------------- | ------------------------------------------------------------ | ---------------------------------- | ------------------------------------- | ------------------------------------------------- | ----------------------------------------------------- |
-| A<br />(Average)     | Min average variance of estimates of model parameters (trace of covariance matrix) |                                    |                                       |                                                   |                                                       |
+| Optimality           | Objective                                                                                                      | Uncorrelated Obs<br />Linear Model | Uncorrelated Obs<br />Quadratic Model | Correlated Obs (autoregressive)<br />Linear Model | Correlated Obs  (autoregressive)<br />Quadratic Model |
+| -------------------- | -------------------------------------------------------------------------------------------------------------- | ---------------------------------- | ------------------------------------- | ------------------------------------------------- | ----------------------------------------------------- |
+| A<br />(Average)     | Min average variance of estimates of model parameters (trace of covariance matrix)                             |                                    |                                       |                                                   |                                                       |
 | C<br />(Combination) | Min variance of predetermined linear combination of model parameters (selected subset of important parameters) |                                    |                                       |                                                   |                                                       |
-| D<br />(Determinant) | Min determinant of covariance matrix<br />Max determinant of information matrix | Dumbbell                           | Equal-Thirds                          | $\approx$ equally-spaced $x$                      | $\approx$ equally-spaced $y$                          |
-| E<br />(Eigenvalue)  | Max the minimum eigenvalue of information matrix<br />Min multi-collinearity |                                    |                                       |                                                   |                                                       |
-| T                    | Max trace of information matrix                              |                                    |                                       |                                                   |                                                       |
-| G                    | Min the maximum $h_{ii}$<br />Min maximum prediction variance |                                    |                                       |                                                   |                                                       |
-| I<br />(Integrated)  | Min average prediction variance over design space            |                                    |                                       |                                                   |                                                       |
-| V<br />Variance      | Min average prediction variance for $m$ specific points      |                                    |                                       |                                                   |                                                       |
+| D<br />(Determinant) | Min determinant of covariance matrix<br />Max determinant of information matrix                                | Dumbbell                           | Equal-Thirds                          | $\approx$ equally-spaced $x$                      | $\approx$ equally-spaced $y$                          |
+| E<br />(Eigenvalue)  | Max the minimum eigenvalue of information matrix<br />Min multi-collinearity                                   |                                    |                                       |                                                   |                                                       |
+| T                    | Max trace of information matrix                                                                                |                                    |                                       |                                                   |                                                       |
+| G                    | Min the maximum $h_{ii}$<br />Min maximum prediction variance                                                  |                                    |                                       |                                                   |                                                       |
+| I<br />(Integrated)  | Min average prediction variance over design space                                                              |                                    |                                       |                                                   |                                                       |
+| V<br />Variance      | Min average prediction variance for $m$ specific points                                                        |                                    |                                       |                                                   |                                                       |
 
 Information matrix $= X^T X$ 
 

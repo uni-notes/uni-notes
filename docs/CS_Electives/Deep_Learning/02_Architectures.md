@@ -26,7 +26,8 @@
 skip connections of inputs
 
 - For structured problems
-	- Like DenseNet architecture
+	- DenseNet architecture
 	- The raw inputs may possess more meaningful information than the linear/non-linear combination
+	- Include concat of non-linear transformations, rather than pre-computing these transformations
 - For unstructured problems
 	- ResNet is better
