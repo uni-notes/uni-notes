@@ -37,20 +37,23 @@ For stable models, not required
 
 ## Learning Techniques
 
-|                     | Single            | B<span style="color:hotpink">agg</span>ing<br />(Boostrap <span style="color:hotpink">agg</span>regation) | Boosting                                                     | Blending/<br />Stacking                     |
-| ------------------- | ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------- |
-| Training sequence   | N/A               | Parallel                                                     | Sequential                                                   | Parallel/Sequential                         |
-|                     |                   |                                                              | Forward stage-wise also to fit an adaptive additive model (adaptive basis functions) | $\hat f = \sum_{m=1}^{M} \alpha_i \hat f_i$ |
-| Individual Learners |                   | Overfitting                                                  | Underfitting<br />Slightly better than average               |                                             |
-| No of learners      | 1                 | $n$                                                          | $n$                                                          | $n$                                         |
-| Training            | Complete training | Random sampling with replacement                             | Random sampling with replacement **over weighted data**      |                                             |
-|                     |                   | <span style="color:hotpink">Agg</span>regage the results at the end |                                                              |                                             |
-|                     |                   |                                                              | Only pass over the mis-classified points<br />We boost the probability of mis-classified points to be picked again |                                             |
-| Preferred for       |                   | Linear Data                                                  | Non-Linear Data                                              |                                             |
-| Example             |                   | Random forest                                                | XGBoost                                                      |                                             |
-| Comment             |                   | - Only effective for low-bias, high-variance models<br />- Only effective if misclassification rate of individual classifiers <0.5 |                                                              |                                             |
-| Advantages          |                   | Fast (parallel training)                                     |                                                              |                                             |
-| Disadvantages       |                   |                                                              | Overfitting<br />Slow to train                               |                                             |
+|                               | Single                         | B<span style="color:hotpink">agg</span>ing<br />(Boostrap <span style="color:hotpink">agg</span>regation)                          | Boosting                                                                                                           | Boosted Bagging                              | Boosted Bagging                                                             | Blending/<br>Stacking/<br>Voting            |
+| ----------------------------- | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------- |
+| Training sequence             | N/A                            | Parallel                                                                                                                           | Sequential                                                                                                         | Sequential+Parallel                          | Parallel+Sequential                                                         | Parallel/<br>Sequential                     |
+|                               |                                |                                                                                                                                    | Forward stage-wise also to fit an adaptive additive model (adaptive basis functions)                               | Sequentially boost parallelly-built forests  | Parallelly bag sequentially-built trees                                     | $\hat f = \sum_{m=1}^{M} \alpha_i \hat f_i$ |
+| Individual Learners           |                                | Overfitting                                                                                                                        | Underfitting<br />Slightly better than average                                                                     |                                              |                                                                             |                                             |
+| No of learners                | 1                              | $p$                                                                                                                                | $q$                                                                                                                | $p \times q$                                 | $q \times p$                                                                | $n$                                         |
+| Training                      | Complete training              | Random sampling with replacement                                                                                                   | Random sampling with replacement **over weighted data**                                                            |                                              |                                                                             |                                             |
+|                               |                                | <span style="color:hotpink">Agg</span>regage the results at the end                                                                |                                                                                                                    |                                              |                                                                             |                                             |
+|                               |                                |                                                                                                                                    | Only pass over the mis-classified points<br />We boost the probability of mis-classified points to be picked again |                                              |                                                                             |                                             |
+| Preferred for                 |                                | Linear Data                                                                                                                        | Non-Linear Data                                                                                                    |                                              |                                                                             |                                             |
+| Example                       |                                | Random forest                                                                                                                      | XGBoost                                                                                                            |                                              |                                                                             |                                             |
+| Comment                       |                                | - Only effective for low-bias, high-variance models<br />- Only effective if misclassification rate of individual classifiers <0.5 |                                                                                                                    |                                              |                                                                             |                                             |
+| Training Speed                | Fast                           | Fast (parallel training)                                                                                                           | Slow<br>(but boosting may require significantly fewer 10 base estimators)                                          |                                              |                                                                             |                                             |
+| Support custom loss functions | ❌                              | ❌                                                                                                                                  | ✅                                                                                                                  | ✅                                            | ✅                                                                           |                                             |
+| Advantages                    |                                |                                                                                                                                    |                                                                                                                    |                                              |                                                                             |                                             |
+| Disadvantages                 | Overfitting<br>Not recommended | Do not support custom loss functions                                                                                               | Overfitting                                                                                                        |                                              |                                                                             |                                             |
+| Example                       | Decision Tree<br>Extra Tree    | Random Forest<br>Extra Trees                                                                                                       | AdaBoost<br>XGBoost<br>LightGBM<br>CatBoost                                                                        | Boosted Random Forest<br>Boosted Extra Trees | Bagging AdaBoost<br>Bagging XGBoost<br>Bagging LightGBM<br>Bagging CatBoost |                                             |
 
 ### Bagging
 
@@ -60,7 +63,7 @@ Bagged classifier’s misclassification rate behaves like a binomial distributio
 
 Bagging a good classifier can improve predictive accuracy, but bagging a bad one hurts
 $$
-\text{MSE}' = \dfrac{1}{k} \text{MSE} + \dfrac{k-1}{k} C
+\text{Variance}' = \dfrac{1}{k} \text{Variance} + \dfrac{k-1}{k} C
 $$
 where $C=$ covariance between each bagging classifier
 
@@ -71,17 +74,19 @@ where $C=$ covariance between each bagging classifier
 | Majority/Hard Vote |            |
 | Soft Voting        |            |
 
-### Training Speed
-
-It **cannot** be said that boosting is slower than bagging, just because it is sequential and bagging is parallel.
-
-This is because, boosting may end in just 10 iterations, but you may need 1000 classifiers for bagging.
-
 ## Random Forest
 
 Bagging with reduced correlation b/w sampled trees, through random selection of input variables $m<<k$ for each split
 
 Usually $m = \sqrt{p}$
+
+### Proximity Matrix
+
+Similarity/Distance matrix can be derived from the individual trees, which can be used for
+- Clustering
+- Anomaly detection
+
+Make sure to specify an appropriate group (hierarchy/target) to effectively calculate average proximity
 
 ## Boosting
 

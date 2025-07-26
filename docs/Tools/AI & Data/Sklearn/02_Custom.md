@@ -544,3 +544,295 @@ class FuzzyTargetClassifier(ClassifierMixin, BaseEstimator):
         results = results.argmax(1)
         return results
 ```
+
+## Tree-Based Proximity
+
+Random Forest Proximity
+
+```python
+class TreeBasedProximity(): # BaseEstimator, TransformerMixin
+  """
+  Create Proximity matrix
+
+  normalization_type = column_wise  : Normalize columns to sum to 1
+  normalization_type = n_trees      : pm / n_trees
+  """
+
+  def __init__(self, estimator, **init_params):
+    self.estimator = estimator
+
+    self.supported_types = {
+      "RandomForest": "a",
+      "XGBoost": "a",
+      "GradientBoosting": "b"
+    }
+    
+    for m, t in self.supported_types.items():
+      if m in self.estimator.__class__.__name__:
+        self.estimator_type = t
+        break
+    else:
+        return Exception("Unsupported estimator")
+    
+    self.n_trees = len(self.estimator.estimators_)
+
+  def fit(self, X, y=None, **fit_params):
+    # Get leaf_indices indices with shape = (x.shape[0], n_trees)
+    if self.estimator_type == "a":
+      leaf_indices = self.estimator.apply(X)
+    elif self.estimator_type == "b":
+      leaf_indices = np.array([tree[0].apply(X) for tree in self.estimator.estimators_]).T
+
+    self.pm_ = (
+        (leaf_indices[:, None, :] == leaf_indices[None, :, :])
+        .sum(axis=-1)
+    )
+    #np.fill_diagonal(self.pm_, 0)
+    return self
+
+  def normalize_(self, pm, normalization="n_trees", ):
+    if normalization == "n_trees":
+        divisor = self.n_trees
+    elif normalization == "col_wise":
+        divisor = pm.sum(axis=0, keepdims=True)
+    else:
+        return Exception("Invalid normalization type")
+    return pm / divisor
+
+  def transform(self, X=None, y=None, metric="similarity", normalization="n_trees", ):
+    pm = self.normalize_(
+        self.pm_,
+        normalization
+    )
+    np.fill_diagonal(pm, 1)
+    
+    if metric=="distance":
+      pm = 1-pm
+    
+    return pm
+```
+
+```python
+model = RandomForestClassifier( # or Regressor
+	n_estimators=100,
+    max_depth=5, # make sure not too deep
+    n_jobs=-1,
+)
+model.fit(X, y)
+
+rfp = TreeBasedProximity(model) # randomforest model
+rfp.fit(X)
+rfp.transform(metric="similarity", normalization="n_trees")
+```
+
+## Pairwise Mutual Information Matrix
+
+```python
+from joblib import Parallel, delayed
+
+class PairwiseMutualInformation():
+  def __init__(self, normalized=True, n_bins=None, sample=None, random_state=None, n_jobs=None, ):
+    self.n_bins = n_bins
+    self.sample = sample
+    self.normalized = normalized
+    self.random_state = random_state
+    self.n_jobs = n_jobs if n_jobs is not None else 1
+
+  def compute_histogram2d(self, i, j, X, n_bins):
+        return np.histogram2d(X[:, i], X[:, j], bins=n_bins)[0]
+
+  def joint_entropies(self, X):
+    histograms2d = np.empty((self.n_variables, self.n_variables, self.n_bins, self.n_bins))
+
+    results = (
+        Parallel(n_jobs=self.n_jobs)
+        (
+            delayed(self.compute_histogram2d)
+            (i, j, X, self.n_bins)
+            for i in range(self.n_variables)
+            for j in range(self.n_variables)
+        )
+    )
+
+    index = 0
+    for i in range(self.n_variables):
+        for j in range(self.n_variables):
+            histograms2d[i, j] = results[index]
+            index += 1
+
+    probs = histograms2d / len(X) + 1e-100
+    joint_entropies = -(probs * np.log2(probs)).sum((2,3))
+    return joint_entropies
+
+  def get_mutual_info_matrix(self, X):
+    j_entropies = self.joint_entropies(X)
+    entropies = j_entropies.diagonal()
+    entropies_tile = np.tile(entropies, (self.n_variables, 1))
+    sum_entropies = entropies_tile + entropies_tile.T
+
+    mi_matrix = sum_entropies - j_entropies
+    if self.normalized:
+        mi_matrix = mi_matrix * 2 / sum_entropies
+    return mi_matrix
+
+  def fit(self, X, y=None):
+    self.columns_ = X.columns
+
+    if self.sample is not None:
+      if type(self.sample) == int:
+        X = df.sample(n=self.sample, random_state=self.random_state)
+      elif type(self.sample) == float:
+        X = df.sample(frac=self.sample, random_state=self.random_state)
+      else:
+        pass
+
+    X = X.to_numpy()
+
+    self.n_variables = X.shape[-1]
+    self.n_samples = X.shape[0]
+
+    if self.n_bins == None:
+        self.n_bins = int((self.n_samples/5)**.5)
+
+    self.mi_matrix_ = self.get_mutual_info_matrix(X)
+    return self
+
+  def transform(self, X, y=None):
+    return pd.DataFrame(self.mi_matrix_, index=self.columns_, columns=self.columns_)
+
+  def fit_transform(self, X, y=None):
+    return self.fit(X, y).transform(X, y)
+```
+
+```python
+matrix_similarity = PairwiseMutualInformation(normalized=True, n_jobs=-1, sample=0.10, random_state=0).fit_transform(df)
+```
+
+## Gradient Regularization
+
+```python
+import numpy as np
+
+def linear_regression_with_gradient_regularization(X, y, lambda_ridge, lambda_second_gradient):
+    """
+    Perform linear regression with gradient regularization.
+    
+    Parameters:
+    X (np.array): Design matrix of shape (n_samples, n_features)
+    y (np.array): Target vector of shape (n_samples,)
+    lambda_ridge (float): Regularization parameter
+    lambda_second_gradient (float): Regularization parameter
+    
+    Returns:
+    beta (np.array): Coefficient vector
+    loss (float): Total loss including regularization
+    """
+    
+    # Compute X^T X
+    XTX = X.T @ X
+    
+    # Compute (X^T X)^2
+    XTX_squared = XTX @ XTX
+    
+    # Compute the regularized matrix
+    reg_ridge = lambda_ridge * np.eye(n_features)
+    reg_second_gradient = 4 * lambda_second_gradient * XTX_squared
+    regularized_matrix = XTX + reg_ridge + reg_second_gradient
+    
+    # Compute X^T y
+    XTy = X.T @ y
+    
+    # Compute the closed-form solution
+    beta = np.linalg.solve(regularized_matrix, XTy)
+    
+    # Compute the loss
+    residuals = y - X @ beta
+    mse = np.mean(residuals**2)
+    reg_term = lambda_ridge * np.sum(beta**2) + lambda_second_gradient * np.sum(XTX**2)
+    total_loss = mse + reg_term
+    
+    return beta, total_loss
+
+# Example usage
+np.random.seed(42)
+n_samples, n_features = 100, 5
+X = np.random.randn(n_samples, n_features)
+true_beta = np.array([1, 2, 3, 4, 5])
+y = X @ true_beta + np.random.randn(n_samples) * 0.1
+
+beta_hat, loss = linear_regression_with_gradient_regularization(X, y, lambda_ridge=1, lambda_second_gradient=1e-4)
+
+print("Estimated coefficients:", beta_hat)
+print("Total loss:", loss)
+
+# Compare with OLS
+beta_ols = np.linalg.solve(X.T @ X, X.T @ y)
+print("\nOLS coefficients:", beta_ols)
+
+```
+
+## Non-Linear Confidence Intervals
+
+```python
+def nlpredict(X, y, model, loss, popt, xnew, alpha=0.05, ub=1e-5, ef=1.05):
+    """Prediction error for a nonlinear fit.
+
+    Parameters
+    ----------
+    model : model function with signature model(x, ...)
+    loss : loss function the model was fitted with loss(...)
+    popt : the optimized paramters
+    xnew : x-values to predict at
+    alpha : confidence level, 95% = 0.05
+    ub : upper bound for smallest allowed Hessian eigenvalue
+    ef : eigenvalue factor for scaling Hessian
+
+    This function uses numdifftools for the Hessian and Jacobian.
+
+    Returns
+    -------
+    y, yint, se
+
+    y : predicted values
+    yint : prediction interval at alpha confidence interval
+    se : standard error of prediction
+    """
+    ypred = model(xnew, *popt)
+
+    hessp = nd.Hessian(lambda p: loss(*p))(popt)
+    # for making the Hessian better conditioned.
+    eps = max(ub, ef * np.linalg.eigvals(hessp).min())
+
+    sse = loss(*popt)
+    n = len(y)
+    mse = sse / n
+    I_fisher = np.linalg.pinv(hessp + np.eye(len(popt)) * eps)
+
+    gprime = nd.Jacobian(lambda p: model(xnew, *p))(popt)
+    
+    temp = np.diag(gprime @ I_fisher @ gprime.T)
+    if interval_type == "confidence":
+	    pass
+	elif interval_type == "prediction":
+		# 1 + comes for the prediction interval, not for confidence interval
+	    # https://online.stat.psu.edu/stat501/lesson/7/7.2
+		temp += 1
+	
+    sigmas = np.sqrt(
+	    mse *
+	    (1 + temp)
+    )
+    
+    tval = t.ppf(1 - alpha / 2, len(y) - len(popt))
+
+    return [
+        ypred,
+        np.array(
+            [
+                ypred + tval * sigmas,
+                ypred - tval * sigmas,
+            ]
+        ).T,
+        sigmas,
+    ]
+```

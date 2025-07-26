@@ -25,5 +25,5 @@
 ## References
 
 - [ ] [Learn TensorFlow and Deep Learning (beginner friendly code) | Daniel Bourke](https://www.youtube.com/playlist?list=PL6vjgQ2-qJFfU2vF6-lG9DlSa4tROkzt9)
-- [ ] [Deep Learning with Keras & TensorFlow | LearnDataa](https://www.youtube.com/playlist?list=PLXovS_5EZGh5mumJObZbMwQsDnscuP-z4)
+- [ ] [Python in Data Science for Advanced - Deep Learning with Keras & TensorFlow | LearnDataa](https://www.youtube.com/playlist?list=PLXovS_5EZGh5mumJObZbMwQsDnscuP-z4)
 - [ ] [Zero to Deployment - Deep Learning | Aladdin Persson](https://www.youtube.com/playlist?list=PLhhyoLH6Ijfwo42qqGo55-xn6p3uoEJeX)

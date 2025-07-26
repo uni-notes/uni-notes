@@ -6,14 +6,16 @@
 
 ## Metrics
 
-| Ratio           |                                             |                                         |
-| --------------- | ------------------------------------------- | --------------------------------------- |
-| Sharpe          | $\dfrac{R_P - R_f}{\sigma_p}$               | Price premium per unit risk             |
-| Sortino         | $\dfrac{R_P - R_f}{{\sigma_\text{semi}}_p}$ | Price premium per unit of downside risk |
-| Treynor         | $\dfrac{R_P-R_f}{\beta_P}$                  | Price premium per unit $\beta$          |
-| Jensen $\alpha$ | $R_p - R_\min$                              | Excess return more than required        |
-| Calmar          | $\dfrac{R_p}{\text{Max Drawdown}}$          |                                         |
-| Sterling        | $\dfrac{R_p}{\text{Max Drawdown} - 10 \%}$  |                                         |
+| Type   | Metric                    |                                                                                                                                                      |                                         | Comment                                                 |
+| ------ | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- | ------------------------------------------------------- |
+| Excess | Inflation Adjusted Return | $\dfrac{1 + R_{P_{t_1, t_2}}}{1+\pi_{t_1, t_2}} - 1$<br><br>$\pi_{t_1, t_2} = \dfrac{\text{CPI}_{t_2} - \text{CPI}_{t_1}}{\text{CPI}_{t_1}}$         | Return corrected for inflation          | Corrects for past, not necessarily indicative of future |
+|        | Jensen $\alpha$           | $R_p - R_\min$                                                                                                                                       | Excess return more than required        |                                                         |
+| Ratio  | Sharpe                    | $\dfrac{R_P - R_f}{\sigma_p}$                                                                                                                        | Price premium per unit risk             |                                                         |
+|        | Sortino                   | $\dfrac{R_P - R_f}{{\sigma_\text{semi}}_p}$                                                                                                          | Price premium per unit of downside risk |                                                         |
+|        | Treynor                   | $\dfrac{R_P-R_f}{\beta_P}$                                                                                                                           | Price premium per unit $\beta$          |                                                         |
+|        | Calmar                    | $\dfrac{R_p}{\text{Max Drawdown}}$                                                                                                                   |                                         |                                                         |
+|        | Sterling                  | $\dfrac{R_p}{\text{Max Drawdown} - 10 \%}$                                                                                                           |                                         |                                                         |
+|        | Omega                     | $\dfrac{P(\text{gain}) \times \mu_\text{gain}}{P(\text{loss}) \times \mu_\text{loss}}$<br><br>$\dfrac{R_p - R_f}{\sum \min \{ w R_{pt} - R_f, 0 \}}$ |                                         |                                                         |
 
 ### Drawdown
 

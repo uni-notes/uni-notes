@@ -28,6 +28,7 @@ program IoT systems and make end-to-end solutions for different applications.
 - [ ] [Introduction to Internet of Things | IIT](https://www.youtube.com/playlist?list=PLJ5C_6qdAvBG7SHg5mLOQq6bzF-sOPu3k)
 - [ ] [Design for internet of things | IIS Bangalore](https://www.youtube.com/playlist?list=PLgMDNELGJ1CaBrefq-0eYatfOnoncW0y-)
 - [ ] [Intro to Industry 4.0 and Industrial Internet of Things | IITK](https://www.youtube.com/playlist?list=PLbRMhDVUMngdcLdH4-YF1uJI4IuhcDZPR)
+- [ ] [Industry 4.0 | IITM](https://www.youtube.com/playlist?list=PLZ2ps__7DhBYMPKbh4tomTEoMiXTq9_3e)
 - [ ] [Advanced IOT Applications | IIS Bangalore](https://www.youtube.com/playlist?list=PLgMDNELGJ1CZoUIF-iKcH9TSVcmG6IBcU)
 - [ ] [IoT Summer School](https://www.youtube.com/playlist?list=PLHih6DnKQaoYQ5PIT3Tp-UrqUguDYWYQu)
 - [ ] [Paul McWhorter | Arduino Tutorials](https://www.youtube.com/playlist?list=PLGs0VKk2DiYw-L-RibttcvK-WBZm8WLEP)

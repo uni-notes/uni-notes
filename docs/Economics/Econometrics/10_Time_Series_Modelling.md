@@ -5,11 +5,17 @@ For all the following models
 - The variable has to be stationary model
     - Else, use non-stationary $\to$ stationary transformation
 - We drop parameters if they are significantly equal to 0
+- Always account for inflation, time value of money
 
 Difficulty
 
 - The underlying data-generating process may change
 	- Solution: Give higher sample weight to recent past
+
+When doing any exploratory analysis, make sure to do in a time-series fashion
+- Rolling mean, median, quantile
+- Rolling std, IQR
+- Rolling correlation, mutual information
 
 ## Uni-Variate vs Causal
 

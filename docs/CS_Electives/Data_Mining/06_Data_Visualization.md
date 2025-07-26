@@ -93,7 +93,7 @@ Widely different distributions can have the same statistical properties
 |                    | Pyramid Histogram                 |                                                                                                                                                                                                                                                                                                                                                                                                                                                              | ![](assets/pyramid_histogram.png)                         |                                                                                                                                                                                         |
 |                    | Violin Plot                       | Smooth version of pyramid histogram                                                                                                                                                                                                                                                                                                                                                                                                                          | ![](assets/violin_plot.png)                               |                                                                                                                                                                                         |
 |                    | Strip                             | Jitter                                                                                                                                                                                                                                                                                                                                                                                                                                                       | ![](assets/strip_plot.png)                                |                                                                                                                                                                                         |
-|                    | Q-Q Plot                          | Quantile-Quantile plot comparing a distribution’s quantiles with quantiles of a known distribution (such as Normal distribution)                                                                                                                                                                                                                                                                                                                             |                                                           |                                                                                                                                                                                         |
+|                    | Q-Q Plot                          | Quantile-Quantile plot comparing a distribution’s quantiles with quantiles of a known distribution (such as Normal distribution)                                                                                                                                                                                                                                                                                                                             | ![](assets/q-q_plot.png)           |                                                                                                                                                                                         |
 |                    | Beeswarm                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                              | ![](assets/beeswarm.png)                                  |                                                                                                                                                                                         |
 |                    | Ridge Plot                        | Multi-variate density plot offsetting the densities                                                                                                                                                                                                                                                                                                                                                                                                          | ![](assets/ridge_plot.png)<br>![](assets/ridge_plots.png) |                                                                                                                                                                                         |
 |                    | Raincloud Plot                    | Jitter plot + Box Plot + Violin Plot                                                                                                                                                                                                                                                                                                                                                                                                                         | ![](assets/raincloud_plot.png)                            |                                                                                                                                                                                         |
@@ -124,6 +124,10 @@ Widely different distributions can have the same statistical properties
 
 ![data_visualization_guide](./assets/data_visualization_guide.svg)
 
+![](assets/graphic_continuum.png)
+
+![](assets/chart_types.png)
+
 ## Uncertainty Visualization
 
 Helps avoid misunderstanding of uncertainty
@@ -148,6 +152,7 @@ Helps avoid misunderstanding of uncertainty
 | Consumer Financial Protection Bureau                          | https://cfpb.github.io/design-system/guidelines/data-visualization-guidelines                                     |
 | Data Design System Collection                                 | https://airtable.com/appmJoE6s8PAWWHaU/shrSvvfZySawZHvQa/tblLVYunaKUqILW3k/viwZ8ay3WHvzmCC6Z?blocks=hide          |
 | Dallas Morning News                                           | https://drive.google.com/file/d/16qdtjdnMPQt_rJDfSCEwr8sUUO555W4I/view                                            |
+| Datavizcatalogue                                              | https://datavizcatalogue.com                                                                                      |
 | DHL                                                           | https://www.dpdhl-brands.com/en/dhl/tables-and-charts                                                             |
 | Elastic                                                       | https://eui.elastic.co/#/elastic-charts/creating-charts                                                           |
 | Finastra                                                      | https://design.fusionfabric.cloud/data-visualization                                                              |
@@ -190,3 +195,67 @@ Helps avoid misunderstanding of uncertainty
 | VTEX                                                          | https://styleguide.vtex.com/#/Components/%F0%9F%91%BB%20Experimental/Charts                                       |
 | World Health Organization                                     | https://apps.who.int/gho/data/design-language/                                                                    |
 
+## IDK
+
+- Human visual system
+	- detects differences, not absolute values
+	- attracted to edges
+		- designer should maximize contrast with background if outlines of shapes are important
+	- perceives surface color base on edge contrast informations
+	- higher contrast sensitivity in luminance than in chrominance 
+	- color recognition is not an automatic process
+		- stoop effect
+
+## Cleveland's Visual Operations of Pattern Perception
+
+1. Detection
+2. Assembly
+3. Estimation
+
+## Gestalt Laws of Perpetual Organization
+
+1. Emergence: mind sees the whole and then the parts. It often sees more than what is specifically states by its individual parts
+2. Invariance: mind recognizes simple objects independent of rotation, translation, scale deformations, and lighting
+3. Proximity: Elements closer together are perceived to be more related than elements farther apart
+4. Similarity: Similar elements that are perceived to be more related than dissimilar elements
+5. Enclosure: Elements enclosed together are perceived as belonging together
+6. Continuity: Mind tries to continue visual, auditory, and kinetic patterns
+7. Closure: Mind perceives set of individual elements as a single, recognizable pattern
+8. Symmetry: Mind perceives objects as symmetrical shapes that form around their center
+9. Figure-ground: elements are perceived as either figures (objects of focus) or ground (rest of the perceptual field)
+10. Connection: Elements connected together (for eg: by a line) are perceived as belonging together
+11. Common-fate: Elements that share a common fate (eg: moving in the same direction) are perceived as belonging together
+
+## Tufte’s design principles for graphical excellence
+
+1. Maximize the data-ink ratio, within reason
+2. Mobilize every graphical element, perhaps several times over, to show the data
+3. Maximize data density and the size of the data matrix, within reason
+4. Establish context
+5. Show cause and effect, where possible
+6. Compare and contrast, utilize layering & separation
+7. Escape flatland, use small multiples, parallel sequencing (reality is multivariate)
+8. Show multiple dimensions
+9. Utilize narratives of space and time
+10. Integrate image, number and text
+
+## Encoding Methods
+
+From most effective to least effective
+
+| Variable Type | Encoding                    |
+| ------------- | --------------------------- |
+| Ordered       | Position on common scale    |
+|               | Position on unaligned scale |
+|               | Length (1D size)            |
+|               | Tilt/Angle/Slope            |
+|               | Area (2D size)              |
+|               | Depth (3D position)         |
+|               | Color Luminance             |
+|               | Color Saturation            |
+|               | Curvature                   |
+|               | Volume (3D Size)            |
+| Unordered     | Spatial region              |
+|               | Color hue                   |
+|               | Motion                      |
+|               | Shape                       |

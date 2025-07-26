@@ -148,6 +148,7 @@ $$
 |                        |                                                               |                   |                             | Contamination: Spillover effect<br><br>Control groups naturally pick up what treatment group is getting<br><br>Causes: Externalities, social interaction, equilibrium effects             | Keep treatment and control groups separate and unaware of each other                   |
 |                        |                                                               |                   |                             | Contamination: Intervening events<br><br>Something happens that affects one of the groups and not the other<br><br>eg: Natural disasters, random events                                   | No fix :/                                                                              |
 |                        |                                                               |                   |                             | Omitted variable bias                                                                                                                                                                     | Include variables                                                                      |
+|                        |                                                               |                   |                             | Endogeneity bias<br>(Simultaneity bias)                                                                                                                                                   | IV                                                                                     |
 |                        |                                                               |                   |                             | Sampling bias<br>Self-Selection bias (who opts-in), Attrition (who opts-out), Time selection bias                                                                                         | Randomize and/or inspect characteristics of who joins, who stays, who leaves, and when |
 |                        |                                                               |                   |                             | Over-controlling<br>(Mediator bias, Collider bias)                                                                                                                                        | Do not over-control                                                                    |
 |                        |                                                               |                   |                             | Trends<br>eg: Child growth                                                                                                                                                                | Use control group to remove trend                                                      |
@@ -158,23 +159,87 @@ $$
 | External               | Generalizability                                              | Other populations |              ✅              | Study volunteers may be W.E.I.R.D.                                                                                                                                                        |                                                                                        |
 |                        |                                                               |                   |                             | Not everyone takes surveys/calls<br><br>People who take surveys are systematically different from general population                                                                      |                                                                                        |
 |                        |                                                               |                   |                             | Different settings and circumstances                                                                                                                                                      |                                                                                        |
+|                        |                                                               |                   |                             | Ecological fallacy                                                                                                                                                                        |                                                                                        |
+|                        |                                                               |                   |                             | Reductionist fallacy                                                                                                                                                                      |                                                                                        |
 
 Causal Biases (bad to worst)
 - Mediator bias
 - Omitted variable bias
-- Confounder bias
-- Collider bias
+- Ecological fallacy
+- Reductionist fallacy
+- Confounder bias/Simpson's paradox
+- Collider bias/Berkson's fallacy
 
-### Sampling Bias
+---
+## Importance of Causal Learning
+
+### Russel’s Chicken
+
+This short story shows how pure reliance on past data is bad.
+
+The chicken assumes that whenever the farmer comes, it is to feed it. However, there will one day, the farmer comes to kill it.
+
+Hence, the lack of understanding **why** something happens might be very dangerous.
+
+### 2008 US Financial Crisis
+
+Default prediction was based on the historical data, in which housing prices were always rising
+
+However, this time, the house pricing were going down
+
+### Simpson’s Paradox
+
+Confounder Bias
+
+This paradox looks at the effectiveness of a drug.
+
+https://youtu.be/ebEkn-BiW5k
+
+[Aggregate Reversal](#Aggregate Reversal)
+
+For example, in this study, the **composition** makes a difference, ie
+
+- in the ‘drug’ group, there are more women than men
+- in the ‘no drug’ group, there are more men than women
+
+This disparity will give an incorrect understanding
+
+Moreover, for this particular disease, **women have a lower recovery rate than men.** That should be taken into account as well.
+
+Let’s take another example. Consider a simple example with 5 cats and 5 humans. Let 1 cat and 4 humans be given the drug. Now, the values in the table show the **recovery rate**.
+
+|         |     Drug      |   No Drug    |
+| ------- | :-----------: | :----------: |
+| Cat     | $1/1 = 100\%$ | $3/4 = 75\%$ |
+| Human   | $1/4 = 25\%$  | $0/1 = 0\%$  |
+| Overall | $2/5 = 40\%$  | $3/5 = 60\%$ |
+
+If we look at individual groups, cats are better off with drugs, and so are the humans.
+
+However, when we look at overall we can see that the population as a whole is better **without the drugs**.
+
+### US Political Support
+
+Similar to [Simpson’s Paradox](#Simpson’s Paradox)
+
+[Aggregate Reversal](#Aggregate Reversal)
+
+| Level      | Richer you are, more likely to be a __ | Reason                                                                                                                                            |
+| ---------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Individual | Republican                             | Republican individuals are richer and want lower taxes                                                                                            |
+| State      | Democrat                               | Richer societies are usually morally ‘modern’; Poorer one are usually conservative and religious<br /><br />Democrats have more ‘modern’ policies |
+
+## Sampling Bias
+
+Also called Sample Selection Bias
+
+Type of sampling bias that arises when we make inference about a larger population from a sample that is drawn from a distinct subpopulation
 
 If data is sampled in biased way, learning will produce a similarly biased outcome; problem for **both** causal and statistical learning
 
-Non-Random Sampling
-
+Cause: Data is missing or sampled non-randomly
 - non-representative sample that is not a random sample of the population we are interested in
-
   or
-
 - study population is different from the target population
 
 #### Case Studies
@@ -203,7 +268,7 @@ Doesn’t work for
 
 - Region with $p(x)=0$ in-sample, but $p(x)>0$ out-of-sample
 
-How? Gaussian estimation/Adversarial validation
+How? Gaussian estimation/Adversarial Validation/Domain Classifier
 
 1. Balancing using only train data
    1. Obtain probability $p$ for each datapoint belonging to the train data
@@ -213,6 +278,53 @@ How? Gaussian estimation/Adversarial validation
    1. Obtain probability $p$ for each datapoint belonging to the train data
    2. Weight these with $1/p$ to be sampled again
 
+#### Trading
+
+Real Estate, Cars, Classifieds
+
+- In a normal market, the real values (i.e., deflated values) of some properties will rise while others may decline
+- If the owners of properties with falling values tend to choose not to sell their properties, while owners of properties with rising values tend to choose to sell (or vice versa), then the sample of transacted properties is clearly not random and is biased towards a particular price outcome
+- It is also plausible that the choices of whether to sell properties with rising and falling values change over the real estate cycle and thus the nature of the sample selection bias will change over time
+- This changing bias results in an estimated transaction-based price index that differs from a theoretical price index that would track market values of the stock of all properties
+
+### Survivorship/Survival Bias
+
+Special type of sample-selection bias
+
+#### Mutual Fund Performance
+
+Suppose we are interested in how the size of assets under management affects a fund’s performance. If we simply look at the relationship between fund size and returns among existing funds, however, there will be what is referred to as a survival bias: we do not observe funds that have closed due to bad performance.
+
+So if fund size negatively affects performance, we may end up under-estimating the magnitude of the effect.
+
+#### Planes in war
+
+The planes that returned from war had lot of spots with bullet shots.
+
+Some person suggested strengthening only those spots. Initially, that makes sense - these are the areas that got shot so we need to strengthen. But, that is wrong.
+
+Another person said that these are the planes that returned **despite** getting shot at these spots. That means that we have to focus on other places, because the planes that got shot there never returned.
+
+Clearly data can be misleading, without understanding the underlying cause
+
+### Wages
+
+![image-20240418221335444](assets/image-20240418221335444.png)
+
+### Credit card default
+
+![image-20240418221506468](assets/image-20240418221506468.png)
+
+We cannot use the relationship between Income, balance, and default status for credit card holders
+to predict default rate **for a random credit card applicant**, since these people part of the available data have been filtered already as potentially good credit card users
+
+Hence, we can only use it predict default for a random person already having a credit card
+
+This is a case of censoring
+
+#### Success Stories
+
+Advice by someone successful
 
 ## Transportability of Results
 

@@ -14,7 +14,11 @@ The first few topics are common to all aspects of machine learning.
   - [ ] [Machine Learning | Gary Holness | Clark University](https://www.youtube.com/playlist?list=PLuflXFChe0K987J-pJP-bM7f78X1LzaZH)
   - [ ] [Machine Learning From Data | Uzma Mushtaque](https://www.youtube.com/playlist?list=PLV7MgHu4-vg27CxbsIGu_1x6nN0PQL7_N)
   - [ ] [Machine Learning From Data | Course Handbook](https://drive.google.com/file/d/1EnBy1z-XLF2LrjA2Z5HSWAKKPFSgOT31/view?usp=drive_link)
+- [ ] Nando de Freitas
+	- [ ] [Undergraduate](https://www.youtube.com/playlist?list=PLE6Wd9FR--Ecf_5nCbnSQMHqORpiChfJf)
+	- [ ] [Graduate](https://www.youtube.com/playlist?list=PLE6Wd9FR--EdyJ5lbFl8UuGjecvVw66F6)
 - [ ] [Quantum Machine Learning | University of Toronto](https://www.youtube.com/playlist?list=PLmRxgFnCIhaMgvot-Xuym_hn69lmzIokg)
+- [ ] [Quantum Machine Learning | Qiskit](https://www.youtube.com/playlist?list=PLOFEBzvs-VvqJwybFxkTiDzhf5E11p8BI)
 - [ ] Machine Learning | Stanford
   - [ ] ~~[Machine Learning| Andrew Ng Coursera](https://www.coursera.org/specializations/machine-learning-introduction)~~ too introductory
   - [ ] [Stanford CS229: Machine Learning | Andrew Ng | 2018](https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU)
@@ -40,6 +44,7 @@ The first few topics are common to all aspects of machine learning.
 - [ ] [Advanced Machine Learning 2020, CSE, IIT Kharagpur](https://www.youtube.com/playlist?list=PLA7cOsDoQDVqOTn_Ci-mpdrRoinOklU9r)
 - [ ] [Introductory Applied Machine Learning | University of Edinburgh | Victor Lavrenko](https://www.youtube.com/@vlavrenko/playlists)
 - [ ] [Gaussian Processes | Imperial College](https://www.youtube.com/watch?v=92-98SYOdlY)
+- [ ] [Gaussian Processes | Modeling, Identification, Control (A. Sala)](https://www.youtube.com/playlist?list=PLUznGnCqeYceFwU7C_VAkYyeVYeZY2VWp)
 - [x] [From Data to Decisions: Measurement, Uncertainty, Analysis and Modeling | Chris Mack | University of Texas](https://www.youtube.com/playlist?list=PLM2eE_hI4gSDnF-mEa9mrIYx7GCLQVN89)
 - [ ] [Learning Theory | Se Young Yun](https://www.youtube.com/playlist?list=PLsQI3WOaT8hgDPRY9k_RV1wnZ9r0W7CW4)
 - [ ] [Machine Learning Explainability | Stanford](https://www.youtube.com/playlist?list=PLoROMvodv4rPh6wa6PGcHH6vMG9sEIPxL)
@@ -61,6 +66,66 @@ The first few topics are common to all aspects of machine learning.
 - [ ] [Machine Learning for Engineers](https://www.youtube.com/playlist?list=PLl4kuMJ32K2r2CUKkZSVVxDnjB4NM335-)
 - [ ] [Machine Learning with R | Equitable Equations](https://www.youtube.com/playlist?list=PLKBUk9FL4nBaHaW7C4_SAQfY_Wf-hupUG)
 - [ ] [Modern Anomaly & Novelty Detection | LLMs Explained](https://www.youtube.com/playlist?list=PLB1nTQo4_y6thcPxdDG_MifQqSMcAq1qv)
-
+- [ ] Machine Learning | Meanxai
+	- [ ] [Part 1](https://www.youtube.com/playlist?list=PLgaemU2xZlTisMjcQUvU8UzOpK4QXcUq-)
+	- [ ] [Part 2](https://www.youtube.com/playlist?list=PLgaemU2xZlTieGRRTAdDlHOgxr-bs6pfr)
+- [ ] [Machine Learning | Caltech](https://www.youtube.com/playlist?list=PLuz4CTPOUNi67hPzb9zJXH1cbeN7LKNiD)
+- [ ] [Reliable Time-Series Forecasting | MLBoost](https://www.youtube.com/playlist?list=PLQkjeU22jN9txTw9gIOM0bHVieGD8fl4x)
+	- It is labelled as time-series forecasting, but this actually covers evaluation metrics common to ML
+- [ ] [Supervised Learning | Zak Varty](https://www.youtube.com/playlist?list=PLBVD-YN3U17BybIN_6drVs9LLmw7f_XvN)
+- [ ] [Regression | Brian Caffo](https://www.youtube.com/playlist?list=PLpl-gQkQivXjqHAJd2t-J_One_fYE55tC)
+- [ ] Computational Science & Engineering | John Kitchin
+	- [ ] [pycse](https://www.youtube.com/playlist?list=PL0sMmOaE_gs2yzwy54kLZk5c1ZH-Nh-62)
+	- [ ] [Research](https://www.youtube.com/playlist?list=PL0sMmOaE_gs2yS_YMwfLGwj19Gs6fzFYp)
+- [ ] [Distribution-Free Uncertainty Quantification | Anastasios Nikolas Angelopoulos](https://www.youtube.com/playlist?list=PLBa0oe-LYIHa68NOJbMxDTMMjT8Is4WkI)
+- [ ] [Statistical learning 2102575 Y2024 | Gabby Suwichaya | Chulalongkorn University](https://www.youtube.com/playlist?list=PLYrwEv08Hccha8FPnJ_0euD7WkUAfq98Z)
+- [ ] [STATS 205 - Hierarchical Linear Models (Spring 2024) | JSB UCLA](https://www.youtube.com/playlist?list=PLAYxx7zX5F1O2HbRr4gORnscbM9EszYbK)
+- [ ] [STATS M254 - Statistical Methods in Computational Biology (Spring 2024) | JSB UCLA](https://www.youtube.com/playlist?list=PLAYxx7zX5F1PieIIeSFc7asuKWRYm6nGy)
+- [ ] [Generalized Linear Model | Andy Field](https://www.youtube.com/playlist?list=PLEzw67WWDg81n3N3yfr_MW7f6cEl_XibX)
+- [ ] [Conformal Prediction | PyLadies Amsterdam](https://www.youtube.com/live/QFtdTyIWrz8)
+- [ ] [Regression Modeling | Amelia McNamara](https://www.youtube.com/playlist?list=PLik6fAQnSI90epRqSCgCCNBFfrywQdu9N)
+- [ ] [Machine Learning | StatQuest](https://www.youtube.com/playlist?list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF)
+- [ ] [Machine Learning for Business Students | Shahin Ashkiani](https://www.youtube.com/playlist?list=PLuX7LSgvML8pLSe9tBsGipSWCau0l4bdR)
+- [ ] [BIOS 6611](https://www.youtube.com/@bios6611)
+- [ ] [Machine Learning Practice | The University of Oklahoma](https://www.youtube.com/@machinelearningpractice2089/playlists)
+- [ ] [Introduction to Data Science| Orange Data Mining](https://www.youtube.com/playlist?list=PLmNPvQr9Tf-b_SuBdoRsuNhTmaHJ0eKab)
+- [ ] [Generalized Linear Models | Julia Wrobel | ColoradoSPH](https://youtube.com/@juliawrobel4127/videos)
+- [ ] [Statistics and Data Science | Lucy Stats](https://youtube.com/@lucystats/videos)
+- [ ] [Statistical Machine Learning | Leslie Myint](https://www.youtube.com/playlist?list=PLtjTgbI6JvXYm0PLf1TLfsjx8drt6prM3)
+- [ ] [Machine Learning Lectures - Deep Understanding of the Theory | AMILE - Machine Learning with Christian Nabert](https://www.youtube.com/playlist?list=PL4gM7rbtgQFsWKJ7fEd-CxvbiBIi4gYgC)
+- [ ] [Intuition for the Algorithms of Machine Learning | Cynthia Rudin](https://www.youtube.com/playlist?list=PLNeXFnYrCJneoY_rKtWJy833YiMrCRi5f)
+- [ ] [Astrostatistics and Machine Learning | Institut Teknologi Bandung (ITB)](https://www.youtube.com/playlist?list=PLV2hbp85JNWR-6khpAFY0uNYgxKT5iLEp)
+- [ ] [Spatial Cluster Analysis | University of Chicago](https://www.youtube.com/playlist?list=PLzREt6r1Nenk3L0ndufhYuwdrrfZqdsIA)
+- [ ] [Statistics and machine learning | yuzaR Data Science](https://www.youtube.com/playlist?list=PLPWcjtBkAf6kKJhii6q8HOSqD2bqFO5NR)
+- [ ] [Checking Error Assumptions for a Linear Regression Model | Joshua French](https://www.youtube.com/playlist?list=PLkrJrLs7xfbV6lhFYBmyM15i56b6bPkHl)
+- [ ] [Data Science Methods and Statistical Learning | Samin Aref](https://www.youtube.com/playlist?list=PLSkGXOii6-CRlwmik1l1h9pG4Uuq0TgeT)
+- [ ] [Machine Learning Observability | Evidently AI](https://www.youtube.com/playlist?list=PL9omX6impEuOpTezeRF-M04BW3VfnPBRF)
+- [ ] [Seminar Data Science for Economics | Tilburg University](https://www.youtube.com/playlist?list=PLeVorc-oIi7RC80LwZ8velMCBub4K0SRv)
+- [ ] [Machine Learning | University of Utah](https://www.youtube.com/playlist?list=PLbuogVdPnkCr-ANNi5GZid3MvSkzm_wnM)
+- [ ] [Machine Learning | Tile Stats](https://www.youtube.com/@tilestats/playlists)
+- [ ] Blogs/Videos
+	- [ ] https://sarem-seitz.com/
+	- [ ] [Winning with Simple, even Linear, Models | Vincent Warmerdam](https://youtu.be/68ABAU_V8qI)
+	- [ ] [Calmcode | Vincent Warmerdam](https://calmcode.io)
+	- [ ] [Mindful Modeler](https://mindfulmodeler.substrack.com)
+- [ ] Certifications
+	- [ ] Basic
+		- [ ] https://www.udemy.com/course/statistics-for-data-science-and-business-analysis/	statistics
+		- [ ] https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/	ML
+		- [ ] https://www.udemy.com/course/machine-learning-regression-and-classification-math-inc/	ML
+		- [ ] https://www.udemy.com/course/ensemble-machine-learning-in-python/	ML
+		- [ ] https://www.udacity.com/course/machine-learning-engineer-nanodegree--nd009t	ML
+		- [ ] https://www.coursera.org/learn/machine-learning	ML by Andrew
+	- [ ] Intermediate
+		- [ ] https://www.coursera.org/specializations/mathematics-machine-learning	ML by Andrew
+		- [ ] https://www.coursera.org/specializations/deep-learning	Deep Learning by Andrew
+- [ ] Papers
+	- [ ] [The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction | Google](https://storage.googleapis.com/gweb-research2023-media/pubtools/4156.pdf)
+	- [ ] [Software Engineering for Machine Learning: A Case Study | Microsoft](https://www.microsoft.com/en-us/research/wp-content/uploads/2019/03/amershi-icse-2019_Software_Engineering_for_Machine_Learning.pdf)
+	- [ ] [A Data Quality-Driven View of MLOps](https://arxiv.org/pdf/2102.07750)
+	- [ ] [How to avoid machine learning pitfalls: a guide for academic researchers](https://arxiv.org/pdf/2108.02497)
+- [ ] Books
+	- [ ] [Interpretable Machine Learning | Christoph Molnar](https://christophm.github.io/interpretable-ml-book)
+	- [ ] [Interpretable Machine Learning with Python | Serg Masis](https://www.amazon.com/Interpretable-Machine-Learning-Python-hands/dp/180323542X)
 ## Current Video
 

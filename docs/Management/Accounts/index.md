@@ -19,3 +19,4 @@ Available in different formats
 
 - [ ] Fundamentals of Finance & Accounting | Dr Asgar Ali | BITS Pilani Dubai Campus
 - [ ] [Introduction to Quantitative Decision | Allan Wesley](https://www.youtube.com/playlist?list=PL5uQVhgbxe6wrKRpQP5zCn9A1YLEW15wy)
+- [ ] [Managerial Accounting | Edspira](https://www.youtube.com/@Edspira)

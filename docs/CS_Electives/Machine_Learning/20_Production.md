@@ -27,7 +27,7 @@ Causes
 | Concept Drift | ❌           | ✅                   |                            | $p(y \vert x)$ | - Give higher sample weight to recent datapoints<br>- Use batch-streaming hybrid<br>  - Works when we have the label associated with every data point, such as in Recommender Systems | Price-elasticity of demand changes | New competitor in your existing market |
 
 Check with
-- Adversarial Validation
+- Adversarial Validation/Domain Classifier
 - Anomaly Detection
 
 - If label and drift happen together and cancel each other out, there is no concept drift.
@@ -39,8 +39,18 @@ Check with
 
 ## Deployment Checklist
 
-### Update Frequency
-Realtime or batch training
+### IDK
+
+| Aspect     | Type                                |                                                              | Advantages                                                                                                                                 | Disadvantages               | Comment                                                                                                                                                                                                                                          |
+| ---------- | ----------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Inference  | Precomputed                         |                                                              | Simple                                                                                                                                     | Computationally-expensive   | Recommendation systems to be used for email marketing campaigns                                                                                                                                                                                  |
+|            | Realtime/<br>Inference-time         |                                                              |                                                                                                                                            |                             |                                                                                                                                                                                                                                                  |
+| Training   | Batch                               | Train the model before inference                             |                                                                                                                                            |                             |                                                                                                                                                                                                                                                  |
+|            | Realtime/<br>Inference-time         | Train the model at inference                                 | - Reduces train cost<br>- Reduces train time<br>- Do not train on observations that will never be required<br>- Improves model performance | - Possible latency          | Useful if your inference use-case only requires a small subset of training dataset<br>- filter at inference time<br>- train at inference time<br>- predict at inference time<br><br>Complexity of model should be based on the amount of samples |
+| Retraining | Full Batch                          | Periodically retrain on entire dataset                       | Simple                                                                                                                                     | - Computationally-expensive |                                                                                                                                                                                                                                                  |
+|            | New Batch                           | Periodically update the existing model with new observations |                                                                                                                                            |                             |                                                                                                                                                                                                                                                  |
+|            | Online/<br>Streaming/<br>On-the-fly | Update model as new observations appear                      | - Computationally-efficient                                                                                                                | - Complex                   |                                                                                                                                                                                                                                                  |
+
 ### Model Location
 
 |                                    | Cloud  | Edge/Browser |

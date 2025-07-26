@@ -183,3 +183,15 @@ Enforced by arbitrageurs: if they observe any deviation, they engage in arbitrag
 
 - Wealth after one period: $W = W_0 (1+R_p)$
 - Expected utility: $E[u(W)] = E[ \ u \Big( W_0(1+R_p) \Big) \ ]$
+
+## IDK
+
+When diversifying, diversify for the worst-case (such as at the event of a crisis), not just in the best-case/average-case
+
+Idea
+- Minimize the correlation in the worst case
+	- returns should be uncorrelated/negatively correlated in worst-case
+- If we don't have data for the worst case
+	- Take a rolling correlation
+	- For every pair of security, the correlation is the highest correlation they ever had
+		- $r_{i,j} = \max \{ {r_{i, j}}_t \vert t \in [1, T] \}$

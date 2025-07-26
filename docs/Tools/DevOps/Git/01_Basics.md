@@ -29,8 +29,10 @@ git sparse-checkout add ./folder/file
 git clone --single-branch --depth=1 --branch main https://github.com/user_or_org/repo_name
 ```
 ## Refresh Repo
+
 Go to repo local folder
 Right-click > `Git Bash here`
+
 ```bash
 git checkout main
 git checkout --orphan last
@@ -50,6 +52,7 @@ git branch -m gh-pages
 git gc --aggressive --prune=all
 git push -f origin gh-pages
 ```
+
 ## Rebase
 ```bash
 git rebase -i HEAD~10

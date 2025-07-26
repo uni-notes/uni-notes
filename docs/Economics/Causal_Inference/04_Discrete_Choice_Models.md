@@ -264,3 +264,47 @@ $$
 | ----- | ------------ | ------------------------------------------- | ------------------------------------------------------------ |
 | Own   | $e_{i}^{jj}$ | $\delta z_{ij}[1- P(y_i = j \vert x_i)]$    | $\dfrac{\partial P(y_i=j \vert x_i)}{\partial z_{ij}} \times \dfrac{z_{ij}}{P(y_i = j \vert x_i)}$ |
 | Cross | $e_{i}^{jk}$ | $-\delta z_{ij} \cdot P(y_i = k \vert x_i)$ | $\dfrac{\partial P(y_i=j \vert x_i)}{\partial z_{ik}} \times \dfrac{z_{ik}}{P(y_i = j \vert x_i)}$ |
+
+## Tobit Regression
+
+![](assets/tobit_regression.png)
+
+Applicable for
+- Censored
+- Truncated: Household expenditure
+- Zero-inflated
+
+$$
+\hat y = \begin{cases}
+\hat f(x), & \hat f(x) > c \\
+c, &\hat f(x) \le c
+\end{cases}
+$$
+
+OLS will be biased and inconsistent with/without removal of the truncated data
+
+### MLE
+
+$$
+\begin{aligned}
+L
+&= \prod_{i=1}^n P(y_i \vert x_i) \\
+&= \cancel{\prod_{i=1 | y_i \le c}^n P(y_i \vert x_i)} \times \prod_{i=1 | y_i = c}^n P(y_i \vert x_i) \times \prod_{i=1 | y_i \ge c}^n P(y_i \vert x_i) \\
+
+\implies \ln L
+&= \cancel{\sum_{i=1 | y_i \le c}^n P(y_i \vert x_i)} + \sum_{i=1 | y_i = c}^n P(y_i \vert x_i) + \sum_{i=1 | y_i \ge c}^n P(y_i \vert x_i) \\
+&= 0 + \ln L_2 + \ln L_3 \\
+\\
+P(y_i \vert x_i)_2 &= \Phi(\text{Distribution}, \hat y, c) = \text{Tobit extra term} \\
+P(y_i \vert x_i)_3 &= \phi(\text{Distribution}, \hat y, y) = \text{Usual minimization}
+\end{aligned}
+$$
+For normal distribution,
+
+$$
+P(y_i \vert x_i)_2 = \dfrac{y_i - C}{\sigma_i}
+$$
+
+## Ordinal Regression
+
+For classifying ordered categories

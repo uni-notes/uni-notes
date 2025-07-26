@@ -2,56 +2,60 @@
 
 ## Types of Uncertainty
 
-| <span style="display:inline-block; text-align:right">Others’ knowledge</span><br /><br />Our knowledge | Known                                                     | Unknown                                                      |
-| ------------------------------------------------------------ | --------------------------------------------------------- | ------------------------------------------------------------ |
-| Known                                                        | Things we are certain of                                  | We know there are things we can’t predict<br />eg: Random Process |
-| Unknown                                                      | Others know but you don’t know<br />eg: Insufficient data | Completely unexpected/unforeseeable events<br />eg: Unknown distribution |
+| <span style="display:inline-block; text-align:right">Others’ knowledge</span><br /><br />Our knowledge | Known                                                     | Unknown                                                                  |
+| ------------------------------------------------------------------------------------------------------ | --------------------------------------------------------- | ------------------------------------------------------------------------ |
+| Known                                                                                                  | Things we are certain of                                  | We know there are things we can’t predict<br />eg: Random Process        |
+| Unknown                                                                                                | Others know but you don’t know<br />eg: Insufficient data | Completely unexpected/unforeseeable events<br />eg: Unknown distribution |
 
-|                                      | Aleatoric                                | Epistemic             |
-| ------------------------------------ | ---------------------------------------- | --------------------- |
-| Uncertainty in                       | Data                                     | Model                 |
-| Cause                                | Noisy input data<br />Measurement errors | Missing training data |
-| Describes confidence in              | Input data                               | Prediction            |
-| Reducible through more training data | ❌                                        | ✅                     |
-| Can be learnt by model               | ✅                                        | ❌                     |
-| Solution                             | Better instruments/measurements          | Get more data         |
+|                                      | Epistemic                                           | Aleatoric                                      |
+| ------------------------------------ | --------------------------------------------------- | ---------------------------------------------- |
+| Uncertainty in                       | Model                                               | Data                                           |
+| Cause                                | - Model misspecification<br>- Missing training data | - Measurement errors<br>- Process random noise |
+| Reducible through more training data | ✅                                                   | ❌                                              |
+| Can be learnt by model???            | ❌                                                   | ✅                                              |
+
+## Uncertainty Quantification Methods
+
+|                                | Concept                          | Assumption                                                                                            | Works for non-linear | Limitations                                                                                                                                                     |
+| ------------------------------ | -------------------------------- | ----------------------------------------------------------------------------------------------------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Asymptotic approach            | Central limit theorem            | - Assumes normal distribution of response residuals<br>- Assumes homoscedascity of response residuals | ❌                    | - Requires large sample size to satisfy asymptotic condition<br>- Requires appropriate formula for calculating standard error (not possible for complex models) |
+| Bootstrapping<br />(preferred) | Random sampling with replacement |                                                                                                       | ✅                    | Higher computation cost                                                                                                                                         |
+| Delta Approach                 |                                  |                                                                                                       | ✅                    |                                                                                                                                                                 |
+| Conformal Prediction           |                                  |                                                                                                       |                      |                                                                                                                                                                 |
 
 ## Uncertainty Intervals
 
-You can obtain uncertainty using
-
-|                                | Concept                          | Limitations                                                  |
-| ------------------------------ | -------------------------------- | ------------------------------------------------------------ |
-| Asymptotic approach            | Central limit theorem            | - Requires large sample size to satisfy asymptotic condition<br />- Assumes normal distribution of errors<br />- Assumes homoscedascity<br />- Requires appropriate formula for calculating standard error (not possible for complex models) |
-| Bootstrapping<br />(preferred) | Random sampling with replacement | Higher computation cost                                      |
-
-$$
-\hat y \pm t_{\alpha/2} \times \text{SE}
-$$
-
-|                                                                                  | Coefficient Confidence Interval                                     | Response Confidence Interval                                                                                                          | Response Prediction Interval                                                                                                                         |
-| -------------------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Denotation                                                                       | $\sigma_{\hat \beta}$                                               | $\sigma\Big(\hat \mu(y \vert x) \Big)$                                                                                                | $\sigma\Big( \hat y \vert x \Big)$                                                                                                                   |
-| The upper and lower bound for estimated __ at a given level of significance      | $\hat \beta$                                                        | $\hat \mu(y \vert x)$                                                                                                                 | $\hat y \vert x$                                                                                                                                     |
-| SE (Standard Error) for Univariate Regression<br /><br />(Asymptotic Approach)   | $\dfrac{\text{RMSE}}{\sqrt{\sum (x_{\text{pred}_\text{cent}} )^2}}$ | $\text{RMSE} \times \sqrt{ \dfrac{1}{n} + \dfrac{(x_{\text{pred}_\text{cent}} )^2}{n \sigma_x^2}}$                                    | $\text{RMSE}  \times \sqrt{ \textcolor{hotpink}{1 +} \dfrac{1}{n} + \dfrac{(x_{\text{pred}_\text{cent}})^2}{n \sigma_x^2}}$                          |
-| SE (Standard Error) for Multivariate Regression<br /><br />(Asymptotic Approach) | ${\text{CovMatrix}_\beta}_{ii}$                                     | $\text{RMSE} \times \sqrt{\dfrac{1}{n} + J'_{{x_\text{pred}}_\text{cent}} \ \text{CovMatrix}_{X} \ J'_{{x_\text{pred}}_\text{cent}}}$ | $\text{RMSE} \times \sqrt{\textcolor{hotpink}{1+} \dfrac{1}{n} + x'_{\text{pred}_\text{cent}} \ \text{CovMatrix}_{X} \ x_{\text{pred}_\text{cent}}}$ |
-
 $$
 \begin{aligned}
-x'_{\text{pred}_\text{cent}} &= x_\text{pred} - \bar X \\
-X_\text{cent} &= X - \bar X \\
-\\
-\text{CovMatrix}_{\beta} &= \text{RMSE} \times \sqrt{\text{CovMatrix}_{X}} \\
-\text{CovMatrix}_{X} &= H^{-1} \\
-H^{-1} &\approx (J' J)^{-1} \\
-J &= X \text{ for degree 1}
+\{y_u, y_l\} &= \hat y \pm \Delta y
 \end{aligned}
 $$
 
-Where
 
+|                      | $\Delta y$                                                      |
+| -------------------- | --------------------------------------------------------------- |
+| Normal Assumption    | $t_{n_\text{cal}, \alpha/2} \times \text{SE}$                   |
+| Conformal Prediction | $S^{-1} \left[ q_{\frac{\lceil (n+1)\alpha \rceil}{n}} \right]$ |
+
+### Normal Assumption
+
+|                                                                             | Coefficient Confidence Interval                                                                                                                                 | Response Confidence Interval                                                                                                              | Response Prediction Interval                                                                                                                      |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Notation                                                                    | $\sigma_{\hat \beta}$                                                                                                                                           | $\sigma \Big[ \hat \mu \vert x_{i, \text{new}} \Big]$                                                                                     | $\sigma \Big[ \hat y_{i, \text{new}} \vert x_{i, \text{new}} \Big]$                                                                               |
+| The upper and lower bound for estimated __ at a given level of significance | $\hat \beta$                                                                                                                                                    | $\hat \mu \vert x_{i, \text{new}}$                                                                                                        | $\hat y \vert x_{i, \text{new}}$<br>$=\hat \mu \vert x_{i, \text{new}} + \hat u \vert x_{i, \text{new}}$                                          |
+| Univariate Linear Regression<br>(Asymptotic Approach)                       | $\left\{ \text{RMSE} \sqrt{\dfrac{1}{n_\text{cal}} + \dfrac{\bar x^2}{n_\text{cal} \sigma^2_x}} , \dfrac{\text{RMSE}}{\sqrt{n_\text{cal} \sigma^2_x} }\right\}$ | $\text{RMSE} \times \sqrt{\dfrac{1}{n_\text{cal}} + \dfrac{(x_{i, \text{new}}- \bar x )^2}{n_\text{cal} \sigma_x^2}}$                     | $\text{RMSE} \times \sqrt{\dfrac{1}{n_\text{cal}} + \dfrac{(x_{i, \text{new}} - \bar x )^2}{n_\text{cal} \sigma_x^2} \ \textcolor{hotpink}{+ 1}}$ |
+| Multivariate Linear Regression<br>(Asymptotic Approach)                     | ${\text{RMSE} \times \sqrt{\text{Cov}_{jj}}}$                                                                                                                   | $\text{RMSE} \times \sqrt{X_{i, \text{new}}^T \cdot \text{Cov} \cdot X_{i, \text{new}} }$                                                 | $\text{RMSE} \times \sqrt{X_{i, \text{new}}^T \cdot \text{Cov} \cdot X_{i, \text{new}}  \ \textcolor{hotpink}{+ 1}}$                              |
+| Multivariate Non-Linear Regression<br>(Asymptotic + Delta Approach)         | ${\text{RMSE} \times \sqrt{\text{IF}_{jj}}}$                                                                                                                    | $\text{RMSE} \times \sqrt{ J_{i, \text{new}}^T \cdot \text{IF} \cdot J_{i, \text{new}} }$<br><br>![](assets/delta_method_uncertainty.png) | $\text{RMSE} \times  \sqrt{J_{i, \text{new}}^T \cdot \text{IF} \cdot J_{i, \text{new}}  \ \textcolor{hotpink}{+ 1} }$                             |
+
+where
+- $\text{Cov}$: Covariance matrix
+	- $\text{Cov} = (X' X)^{-1}$
 - $J$: Jacobean matrix
+	- $J_{i, \text{new}} = \dfrac{\partial \hat y_{i, \text{new}}}{\partial \beta}$
 - $H$: Hessian matrix
+	- $H \approx (J^T J)$
+- $\text{IF}:$ Inverse Fischer
+	- $\text{IF} = H^{-1}$
 
 High values for non-diagonal elements of $\text{Cov}_\beta$ means that the errors of $\beta$ are correlated with each other.
 
@@ -92,7 +96,7 @@ Describes the full probabilistic distribution $\forall x$
 
 ![image-20240522140247341](./assets/image-20240522140247341.png)
 
-## Trajectories/Scena rios
+## Trajectories/Scenarios
 
 Equally-likely samples of multivariate predictive densities
 
@@ -172,3 +176,4 @@ $$
 $$
 
 ![](assets/Wilson%20score%20interval.png)
+

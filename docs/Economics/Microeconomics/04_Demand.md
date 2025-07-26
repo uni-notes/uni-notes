@@ -171,3 +171,9 @@ $$
 - demand for cotton is greater in summer
 - demand for wool is greater in winter
 
+## Jevon's Paradox
+
+When advancements make a resource more efficient to use, per-capita consumption decreases, but aggregate consumption increases due to increased demand from reduction in cost
+
+Applications
+- Efficient cars decrease per-capita consumption but increase aggregate fuel consumption

@@ -13,5 +13,6 @@ Visual recognition using computers
 - [ ] [Introduction to Computer Vision | UC Berkeley](https://www.youtube.com/playlist?list=PLhwIOYE-ldwL6h-peJADfNm8bbO3GlKEy)
 - [ ] [Computer Vision | UC Berkeley](https://www.youtube.com/playlist?list=PLzWRmD0Vi2KVsrCqA4VnztE4t71KnTnP5)
 - [ ] [Photo Forensics: Physics-Based Techniques | UC Berkeley](https://www.youtube.com/playlist?list=PLhwIOYE-ldwKNkco425lUSet1zTGDPF6O)
+- [ ] [Introduction| First Principles of Computer Vision](https://www.youtube.com/playlist?list=PL2zRqk16wsdoz4eycyq7EmeV2KpE6JN76)
 
 ## Current Video

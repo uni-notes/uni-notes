@@ -1,8 +1,36 @@
 # Model
 
+## IDK
+
+### True
+
 $$
-\hat y = \hat f(x) + u \\ 
-\hat f(x) = E[y \vert x]
+\begin{aligned}
+y &= f(X) && \text{True Relationship}
+\end{aligned}
+$$
+### Observed
+
+$$
+\begin{aligned}
+\tilde X &= X + \delta && \text{Observed Input} \\
+\tilde y &= y + \epsilon && \text{Observed Output} \\
+\\
+\implies \tilde y &= \tilde f(\tilde X) && \text{Observed Relationship} \\
+&= f(\tilde X) + \epsilon
+\end{aligned}
+$$
+### Estimated
+$$
+\begin{aligned}
+\hat y &= \hat f_{\small L, C, D, A, O}(\tilde X; \theta) + u \\
+\text{where }
+L &= &&\text{Loss - Functional Form, Weights} \\
+C &= &&\text{Constraints} \\
+D &= \{ \tilde X, \tilde y \} && \text{Train data used (Observed, Noisy)} \\
+A &= &&\text{Learning Algorithm - Functional Form, Hyperparameters, Randomness} \\
+O &= &&\text{Optimization - Algorithm, Hyperparameters, Randomness}
+\end{aligned}
 $$
 
 where
@@ -59,9 +87,14 @@ Attributes of probabilistic forecast quality
 3. Skilled
 4. High resolution
 
-## Note
+## Scope
 
 Every model is only limited to its ‘scope’, which should be clearly documented
+
+- Assumptions
+- Domain: Set of $x$
+- Range: Set of $y$
+- ⁠Density: total no of points, no of points in leaves
 
 ## IDK
 
@@ -213,15 +246,27 @@ where $T=$ treatment/binary var
 
 ### Discrete Var
 
-For $C$ possible values of discrete var, you need to create $(C-1)$ dummy vars, as all zeros is also scenario
+Dummy variable trap
 
-Else, if you have $C$ dummy vars, you will have perfect multi-collinearity (dangerous)
+- For $C$ possible values of discrete var, If you have intercept/constant term and $C$ dummy vars, you will have perfect multi-collinearity (dangerous), as all zeros is also a scenario
 
-## Model Hints
+Solution
+- $C$ dummy variables, but no intercept
+- $C-1$ dummy variables with intercept
+
+## Model Constraints/Hints
 
 Known properties of $f$ that can be used to improve $\hat f$, especially with small datasets
 
-- Monotonicity
+- Monotonic constraints
+	- Warning: does the constraint really makes sense for all possible values of other features?
+		- If your house price model uses the features “number of rooms” and “living area”
+			- then a monotonic constraint on “living area” might make sense (given any number of rooms)
+			- such constraint would be non-sensical for the number of rooms
+				- Because having six rooms in a 1200 square feet home is not necessarily better than having just five rooms in an equally sized home
+- Interaction constraints: prevent non-sensical interactions
+	- Let's say that the causal structure is $E = f(A, B), F = f(C, D), G = g(E, F)$
+	- If this is a hassle to model each independently, then have interactions constraints: $G = f(\{A, B\}, \{C, D\})$
 - Reflexivity
 - Symmetry
 - Rotational invariance
@@ -252,3 +297,45 @@ Can be enforced through
 
 - Computationally-expensive: requires approximations
 
+## General Techniques
+
+Not necessarily for least squares regression
+
+- [Hierarchical](#Hierarchical)
+- Ensembling: Reduce variance
+- Bootstrapping: Robustness, confidence intervals
+- RANSAC (RANdom Sample Consensus): Robustness
+	- Disadvantage: Requires hyper-parameter tuning
+- Weighted
+- Localized/Locally-Weighted
+	- Query similar records, either by no of records or by KNN distance
+- Randomness aggregation: average models across multiple randomness-inducing hyperparameters
+	- Random seed
+	- Random samples
+	- Learning rate
+- Iteratively ReWeighted
+- Online learning
+- Rolling
+	- rolling apply function
+	- ⁠ function returns coefs
+	- ⁠ split coef into different cols
+
+## Hierarchical
+
+If there are multiple independent hierarchies, then run a model for each hierarchy
+- simple model for each hierarchy is better than one complex model for each group
+- especially useful for imbalanced hierarchies
+
+Complexity of atomic model for each hierarchy should be based on the amount of data available for that hierarchy
+- create a meta-estimator to conditionally apply a model
+
+## Classification Threshold
+
+$$
+p_\text{threshold} =
+\dfrac{
+c(\text{FP}) - c(\text{TN})
+}{
+\Bigg( c(\text{FN}) + c(\text{FP}) \Bigg) - \Bigg(c(\text{TN}) + c(\text{TP}) \Bigg)
+}
+$$

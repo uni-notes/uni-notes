@@ -43,6 +43,12 @@ Better to fit for Gamma than Poisson
 
 ## Uncertainty
 
+### Delta Method
+
+[Delta Method](17_Uncertainty.md#Uncertainty Quantification Methods)
+
+### Transformation Method
+
 Generalized linear model: https://fromthebottomoftheheap.net/2018/12/10/confidence-intervals-for-glms/
 
 Exponential regression confidence intervals will use similar logic
@@ -72,3 +78,11 @@ Finally, back-transform each statistic **independently** to response scale
 
 - $y = a e^x$
 	- $Q(y, q) = a e^{Q(x, q)}$
+
+## Bias Correction
+
+All 
+- transformed targets fitted using OLS (whether or not for GLM)
+- optimizing for logarithmic loss functions
+
+Require bias correction for mean, as only median is maintained for monotonically-increasing Link functions

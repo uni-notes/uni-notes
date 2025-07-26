@@ -136,10 +136,18 @@ nn.Sequential(
 )
 ```
 
-### Save Model
+### Save/Load Model
 
 ```python
-torch.save(model, "model.pkl")
+# Method 1 - official recommended
+torch.save(model.state_dict(), 'model-parameters.pt')
+
+model = NN(*args, **kwargs)
+the_model.load_state_dict(torch.load('model-parameters.pt'))
+
+# Method 2
+torch.save(model, 'model.pt')
+model = torch.load('model.pt')
 ```
 
 ### View Parameters
@@ -198,4 +206,3 @@ for i, d in enumerate(train_loader):
 
 > [!WARNING]
 > Torchserve Shelltorch exploit
-

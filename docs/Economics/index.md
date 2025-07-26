@@ -45,7 +45,6 @@ Economic models are not like scientific laws
 
 ## Movies
 
-- [x] The Big Short
 - [x] the good the bad the ugly
 - [x] coach carter movie
 - [x] the beautiful mind

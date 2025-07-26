@@ -26,3 +26,5 @@ Suggest a proposal to UN about possible conflict, with sufficient reasons
 - [ ] International Relations | Dr. Devika Sharma | BITS Pilani Dubai Campus
 - [ ] [International Relations | Brian Urlacher](https://www.youtube.com/playlist?list=PLxzz0tls2X9B6iUlbn9KZJqlU9zWD_b5C)
 - [ ] [International Security | Brian Urlacher](https://www.youtube.com/playlist?list=PLxzz0tls2X9CyG3EjuHFWNyYkWVszbDd0)
+- [ ] [The Story of "Civilization" | Predictive History Jiang Xueqin](https://www.youtube.com/playlist?list=PLREQ8S3NPaQvNTsYrqph8T4hn7KAHb1si)
+- [ ] [Geo-Strategy: Predicting the Future | Predictive History Jiang Xueqin](https://www.youtube.com/playlist?list=PLREQ8S3NPaQt3JX33DN0QdGgtBJtAcTYQ)

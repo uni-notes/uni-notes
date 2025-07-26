@@ -59,6 +59,35 @@ $$
 
 2. Solve for $r$
 
+### Disadvantages
+
+- multiple solutions can be found for the same project
+- assumes that positive cash flows are reinvested at the IRR, which is considered impractical in practice
+
+## MIRR
+
+Modified Internal Rate of Return
+
+The modified internal rate of return (MIRR) is a measure of the profitability of a project or other investment.
+
+It assumes that positive cash flows are reinvested at the firm's cost of capital and that the initial outlays are financed at the firm's financing cost. The MIRR, therefore, more accurately reflects the cost and profitability of a project
+
+$$
+\begin{aligned}
+\text{MIRR} &=
+\Bigg(
+\dfrac{\text{FV}(\text{Positive cash flows} \times \text{Cost of capital})}{\text{PV}(\text{Initial outlays} \times \text{Financing cost})}
+\Bigg)
+^{1/n} - 1
+\\
+\textbf{where }
+
+\text{FVCF}(c) &= \text{the future value of positive cash flows at the cost of capital} \\
+\text{PVCF}(fc) &= \text{the present value of negative cash flows at the financing cost} \\
+n &= \text{number of periods}
+\end{aligned}
+$$
+
 ## Profitability Index (Secondary)
 
 $$

@@ -1,5 +1,31 @@
 # Performance Optimization
 
+## Pre-Load into RAM
+
+```python
+class Sentinel2Dataset(Dataset):
+    def __init__(self, file_paths, labels, transform=None):
+        self.file_paths = file_paths
+        self.images = []
+        for file_path in tqdm(self.file_paths):
+            image = load_and_convert_tiff(file_path)
+            self.images.append(image)
+
+        self.labels = labels
+        self.transform = transform
+
+    def __len__(self):
+        return len(self.file_paths)
+
+    def __getitem__(self, idx):
+        img_path = self.file_paths[idx]
+        image = self.images[idx]
+        if self.transform is not None:
+            image = self.transform(image)
+        label = self.labels[idx]
+        return image, label
+```
+
 ## Compile
 
 |                    | Type    | Control Flow<br>Supported? |
@@ -36,7 +62,9 @@ model = torch.quantization.fuse_modules(
 	[['conv', 'bn', 'relu']],
 )
 ```
+
 ### Fuse Operators
+
 ```python
 @torch.jit.trace # or torch.jit.script or torch.compile
 def gelu(x):
@@ -47,6 +75,7 @@ def gelu(x):
 ```
 
 ## Mobile
+
 ```python
 from torch.utils.mobile_optimizer import optimize_for_mobile
 
@@ -354,3 +383,87 @@ for x, y in tqdm(iter(dl)):
 # 100%|██████████| 782/782 [00:11<00:00, 71.03it/s]
 ```
 
+## IDK
+
+1. use Numpy Memmap to load array and say goodbye to HDF5.
+    
+    I used to relay on HDF5 to read/write data, especially when loading only sub-part of all data. Yet that was before I realized how fast and charming Numpy Memmapfile is. In short, Memmapfile does not load in the whole array at open, and only later "lazily" load in the parts that are required for real operations.
+    
+    Sometimes I may want to copy the full array to memory at once, as it makes later operations faster. Using Memmapfile is still much faster than HDF5. Just do `array = numpy.array(memmap_file)`. It reduces the several minutes with HDF5 to several seconds. Pretty impressive, isn't it!
+    
+    A usefully tool to check out is [sharearray](https://github.com/bshillingford/python-sharearray). It hides for you the verbose details of creating memmap file.
+    
+    If you want to create memmap array that is too large to reside in your memory, use `numpy.memmap()`.
+    
+2. `torch.from_numpy()` to avoid extra copy.
+    
+    While `torch.Tensor` make a copy of the passing-in numpy array. `torch.from_numpy()` use the same storage as the numpy array.
+    
+3. `torch.utils.data.DataLoader` for multithread loading.
+    
+    I think most people are aware of it. With DataLoader, a optional argument `num_workers` can be passed in to set how many threads to create for loading data.
+    
+4. A simple trick to overlap data-copy time and GPU Time.
+    
+    Copying data to GPU can be relatively slow, you would want to overlap I/O and GPU time to hide the latency. Unfortunatly, PyTorch does not provide a handy tools to do it. Here is a simple snippet to hack around it with `DataLoader`, `pin_memory` and `.cuda(async=True)`.
+    
+
+```python
+from torch.utils.data import DataLoader
+
+# some code
+
+loader = DataLoader(your_dataset, ..., pin_memory=True)
+data_iter = iter(loader)
+
+next_batch = data_iter.next() # start loading the first batch
+next_batch = [ _.cuda(non_blocking=True) for _ in next_batch ]  # with pin_memory=True and non_blocking=True, this will copy data to GPU non blockingly
+
+for i in range(len(loader)):
+    batch = next_batch 
+    if i + 2 != len(loader): 
+        # start copying data of next batch
+        next_batch = data_iter.next()
+        next_batch = [ _.cuda(async=True) for _ in next_batch]
+    
+    # training code
+```
+
+## IDK
+
+https://www.thekerneltrip.com/deep-learning/optimize-pytorch-code/
+
+https://gist.github.com/ZijiaLewisLu/eabdca955110833c0ce984d34eb7ff39
+
+https://www.linkedin.com/pulse/revolutionize-your-pytorch-workflow-how-speed-up-deep-jozsef-szalma
+
+https://towardsdatascience.com/better-data-loading-20x-pytorch-speed-up-for-tabular-data-e264b9e34352
+
+https://github.com/hcarlens/pytorch-tabular/blob/master/fast_tensor_data_loader.py
+
+https://discuss.pytorch.org/t/use-case-for-loading-the-entire-dataset-into-ram/165070/5
+
+https://github.com/AhmedThahir/stochastic-caching
+
+https://discuss.pytorch.org/t/dataloader-resets-dataset-state/27960/4
+(move caching to get item so that dataloader will cache with multiple workers)
+
+
+Do operations as much as possible
+- in bulk
+- on gpu
+
+Solution:
+
+move to GPU asap
+Perform all operations in bulk
+
+Solution
+- loaf entire dataset into GPU directly (dataset)
+- load entire batch in GPU directly (dataloader)
+- load entire dataset into CPU directly (dataset)
+- load entire batch into CPU (dataloader)
+
+
+Based on folder sizes: os.path.size
+Based on available ram
