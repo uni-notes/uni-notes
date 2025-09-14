@@ -1,7 +1,7 @@
 {
   "name" : "Uni Notes",
-  "short_name" : "Notes",
-  "description" : "Ahmed Thahir's Open University Notes",
+  "short_name" : "Thahir",
+  "description" : "Ahmed Thahir's Personal Blog",
   "start_url" : "./",
   "scope" : "/",
   "display" : "standalone",
