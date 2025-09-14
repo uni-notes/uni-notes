@@ -1,7 +1,5 @@
 # Introduction
 
-This introductory page is a big long, but that's because all the below concepts are common to every upcoming topic.
-
 ## Machine Learning
 
 > Field of study that enables computers to learn without being explicitly programmed; machine learns how to perform task $T$ from experience $E$ with performance measure $P$.
