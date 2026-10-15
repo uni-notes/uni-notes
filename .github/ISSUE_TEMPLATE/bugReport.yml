@@ -7,7 +7,7 @@ body:
       value:
         ## Thanks for taking the time to fill out this bug report!
         
-        "We're sorry that you've encountered an issue. If you need real-time help, join the [Discussions Forum](https://github.com/uni-notes/uni-notes/discussions)"
+        "We're sorry that you've encountered an issue. If you need real-time help, join the [Discussions Forum](https://github.com/uni-notes/uni-notes.github.io/discussions)"
         
   - type: checkboxes 
     id: terms 
@@ -15,7 +15,7 @@ body:
       label: Project Contribution
       description: This project has Contribution Guidelines that all participants are expected to understand and follow.
       options:
-        - label: "I have read and agree to the project's [Contribution Guidelines](https://github.com/uni-notes/uni-notes/blob/main/contributing_guidlines.md)📜"
+        - label: "I have read and agree to the project's [Contribution Guidelines](https://github.com/uni-notes/uni-notes.github.io/blob/main/contributing_guidlines.md)📜"
           required: true 
   - type: textarea 
     id: what-happened 

@@ -1,24 +1,16 @@
 # 👋 Welcome!
 
-<div style="text-align:center; margin:auto; overflow:hidden; border-radius:100%; height:20vh; width:20vh; background: hsla(0, 0%, 30%, 15%);">
-  <img src="./assets/header_img.jpg" style="object-fit:cover; max-height:100%; width:100%;" loading="eager">
-</div>
-
-Hi, I'm Thahir - I work with Data & Machine Learning to identify patterns, drive decisions and improve products, currently exporing Trustworthy AI.
-
-Over the last 2 years, I've worked in airlines, FMCG, and e-commerce - excelling at balancing algorithmic metrics and business objectives at both regional and global markets.
-
-The tools I primarily work with are:
-
-- Analytics: Python, SQL, PowerBI, Tableau
-- Machine Learning: Scikit-learn, PyTorch
-- Excel/Google Sheets, PowerPoint/Google Slides
-
-## About this repo
-
 This page serves as a knowledge base - a collection on Math, Computer and much more. Feel free to share with everyone you know! Check out the [📱 Installation Guide](#installation-guide) to install now.
 
 ### ✨ Contributions
+
+**2026 - Present**
+
+<a href="https://github.com/uni-notes/uni-notes.github.io/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=uni-notes/uni-notes.github.io" loading="lazy" />
+</a>
+
+**2022 - 2025**
 
 <a href="https://github.com/AhmedThahir/AhmedThahir.github.io/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=AhmedThahir/AhmedThahir.github.io" loading="lazy" />
@@ -47,4 +39,5 @@ A big thank you to all contributors, as this initiative would not be possible wi
 
 ### License
 
-[Open Source Licence](https://github.com/uni-notes/uni-notes/blob/0e642d1e5922c11d8e80ab89f8f4849668338f7c/license#L1-L10)
+[Open Source Licence](https://github.com/uni-notes/uni-notes.github.io/blob/7ca111b1dba12d950525549e4e9bc56a59cb00c6/license#L1-L10)
+
