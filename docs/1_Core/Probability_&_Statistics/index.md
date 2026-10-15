@@ -1,0 +1,36 @@
+# Probability & Statistics
+
+This is an introductory course into Probability, Distributions, and Statistics
+
+## References
+
+- [ ] [Statistics Review | Chris Mack | University of Texas](https://www.youtube.com/playlist?list=PLM2eE_hI4gSDshnKbPiPBLt-P5ytHSocO)
+- [ ] [MIT RES.6-012 Introduction to Probability](https://www.youtube.com/playlist?list=PLUl4u3cNGP60hI9ATjSFgLZpbNJ7myAg6)
+- [ ] [6.041 Probabilistic Systems Analysis and Applied Probability](https://www.youtube.com/playlist?list=PLUl4u3cNGP61MdtwGTqZA0MreSaDybji8)
+- [ ] [MIT 18.650 Statistics for Applications, Fall 2016](https://www.youtube.com/playlist?list=PLUl4u3cNGP60uVBMaoNERc6knT_MgPKS0)
+- [ ] [Stanford CS109 Introduction to Probability for Computer Scientists](https://www.youtube.com/playlist?list=PLoROMvodv4rOpr_A7B9SriE_iZmkanvUg)
+- [ ] [A Student's Guide to Bayesian Statistics | Ben Lambert](https://www.youtube.com/playlist?list=PLwJRxp3blEvZ8AKMXOy0fc0cqT61GsKCG)
+- [ ] [Bayesian Statistics | Ben Lambert | Oxford](https://www.youtube.com/playlist?list=PLFDbGp5YzjqXQ4oE4w9GVWdiokWB9gEpm)
+- [ ] [Statistics Courses | Penn State University](https://online.stat.psu.edu/statprogram/graduate-programs)
+- [ ] [Nonparametric Statistics | FourthZ](https://www.youtube.com/@FourthZ/playlists)
+- [ ] [Bayesian Statistics | Jingchen Monika Hu](https://www.youtube.com/playlist?list=PL_lWxa4iVNt2GBPOVZMVKD4jYl9Q7hs2K)
+- [ ] [Statistical Testing and Experiments | Applied AI Course](https://www.youtube.com/playlist?list=PLupD_xFct8mHMRMmUCHF1cy91gajfubHr)
+- [ ] [Statistics as a Career | University of Nebraska-Lincoln](https://www.youtube.com/playlist?list=PLugR2r-GFd_ASkVtqCJ1VSdMIdAu8XPwO)
+- [ ] [Bootstrap Methods and Their Application | Chris Bilder](https://www.youtube.com/playlist?list=PLugR2r-GFd_CqEuNQDwus26EoZHmONoQ8)
+- [ ] [Computational Statistics | Chris Bilder](https://www.youtube.com/playlist?list=PLugR2r-GFd_DJJmUaxUjsn67oPotvFweM)
+- [ ] [Mathematical Statistics | Chris Bilder](https://www.youtube.com/playlist?list=PLugR2r-GFd_AJikQnTJUsR1AAQ2Udt_S7)
+- [ ] [Extreme Value Statistics](https://www.youtube.com/playlist?list=PLh35GyCXlQaTJtTq4OQGzMblwEcVIWW9n)
+- [ ] [Probability & Measure | Cache Lack Math & Stats Lectures](https://www.youtube.com/playlist?list=PL0vEWJI_pj7RZ51zecINlzWxpFv83r8RE)
+- [ ] [Extreme Value Theory | Zak Varty](https://www.youtube.com/playlist?list=PLBVD-YN3U17Ce7tO3bkJqgJT_JrgkFgA5)
+- [ ] [Statistical Inference | Brian Caffo](https://www.youtube.com/playlist?list=PLpl-gQkQivXiBmGyzLrUjzsblmQsLtkzJ)
+- [ ] [Math Biostat Boot Camp 1 | Brian Caffo](https://www.youtube.com/playlist?list=PLpl-gQkQivXhk6qSyiNj51qamjAtZISJ-)
+- [ ] [Math Biostat Boot Camp 2 | Brian Caffo](https://www.youtube.com/playlist?list=PLpl-gQkQivXhwOsKPQ4fbCBYOWjvdzrSM)
+- [ ] [Statistics | Christian Møller Pedersen](https://www.youtube.com/playlist?list=PLF7M9YMTWyNmSDeTbIQ1YBEiqMM7WQb0h)
+- [ ] [STATS 203 - Large Sample Theory (Fall 2020) | JSB UCLA](https://www.youtube.com/playlist?list=PLAYxx7zX5F1NKukTVwMADi1D5dbufWJkz)
+- [ ] [Introductory Statistics | Amelia McNamara](https://www.youtube.com/playlist?list=PLik6fAQnSI93nwznK95c0U81w61344H4c)
+- [ ] [Statistics Fundamentals | StatQuest](https://www.youtube.com/playlist?list=PLblh5JKOoLUK0FLuzwntyYI10UQFUhsY9)
+- [ ] [The Metalog Distributions](https://www.youtube.com/@themetalogdistributions5754/playlists)
+- [ ] [Rare event estimation | Patrick Laub](https://www.youtube.com/playlist?list=PLKsJFg6SO0Ujr6tZHSImQ50vuNPoZ3NOl)
+- [ ] [Algorithms for Rare event simulation | Patrick Laub](https://www.youtube.com/playlist?list=PLKsJFg6SO0UgQD2erzgNKrJEnsnpKcBxX)
+- [ ] [Bayesian Stats | Frank Edwards](https://www.youtube.com/@frankalready/videos)
+- [ ] [Probability and Statistics | University of Utah](https://www.youtube.com/playlist?list=PLbuogVdPnkCpeVcOLv7QEZT1E55qdUKpn)

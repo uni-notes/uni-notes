@@ -1,0 +1,39 @@
+- [x] First line of SOP
+	- [x] "We are probably in The Matrix", my biology professor stated as he explained how even the mitochondria in our cells were very likely an organism of their own. This got me thinking
+- [x] explore the domain
+- [x] However, I was still not convinced of the domain to specialize in, and did not want to rush into a masters program as it meant committing to a new step in my academic journey without being mindful
+- [x] research facilities;
+- [x] ~~I would obtain exposure that was not possible during my time in Dubai.~~ I would obtain exposure beyond what was possible during my time in Dubai.
+- [x] ~~the interaction with students from other majors will provide a different experience from the one at BITS which only had engineering students~~ 
+- [x] ~~Finally, I plan on joining the CompSoc and OUBbC clubs to ensure a well-rounded experience~~ Additionally
+- [x] ~~such as Google DeepMind, IBM, and OpenAI~~ or OpenAI
+- [x] Secondly, my dedication to continuous learning and improvement whereby I have completed various online courses in the past four years purely out of interest.
+- [ ] ~~from being a starter in the university basketball team, juggling injuries, leading multiple clubs, co-curricular, social and charitable activities~~ from being a starter in the university basketball team ==and== juggling injuries ==to== leading multiple clubs, co-curricular, social and charitable activities
+- [x] highest award in BITS==,==
+- [x] Economics and Finance
+- [x] while being mindful of social ~~consequences~~ outcome
+- [ ] ~~however, it has always been my hard~~ 
+	- [ ] my continued emphasis on hard work
+- [x] I am aware of the challenges I would face in terms of coursework, people, time-management and also adapting to a life in a country with a completely different culture and norms.
+	- Simplify
+- How you can contribute to Oxford?
+	- Clubs
+	- actively contribute
+
+
+- Language Test Waiver
+	- University on KHDA Dubai website
+	- Dubai, UAE Government
+- OCIS
+	- other regions ~~(especially the Western world)~~
+	- This really induced a feel-good factor knowing that my work improved products that impact humans, which I aim to continue further and focus on leveraging AI/ML in even more human-centric domains such as Healthcare, Drug Discovery, Energy, Environment Management, Forecasting, and Investing.
+		- remove drug discovery
+		- welfare
+		- livelihood
+		- community upliftment
+		- Islamic finance
+		- transform lives
+	- deal career to develop over the next ten years.
+		- expertise
+	- ~~In contrast to others,~~
+	- either way

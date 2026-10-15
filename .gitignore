@@ -1,0 +1,21 @@
+.cache
+.DS_Store
+# File types to ignore
+*.exe
+*.bin
+*.jar
+*.war
+*.mp3
+*.mp4
+*.bkp
+# Directories to ignore
+target/
+.build/
+.env/
+
+
+# Obsidian
+docs/.obsidian/**/*.*
+!docs/.obsidian/snippets/*
+!docs/.obsidian/hotkeys.json
+!docs/.obsidian/app.json
